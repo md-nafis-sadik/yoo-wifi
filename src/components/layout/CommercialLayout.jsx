@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 function CommercialLayout() {
   return (
     <div>
+      
       <Outlet />
     </div>
   );
