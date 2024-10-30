@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { corporateRoutes } from "@/services";
 import { useNavigate } from "react-router-dom";
 import PerfectPackages from "./PerfectPackages";
+import WhyYoowifi from "./WhyYoowifi";
 
 function Home() {
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ function Home() {
         </Button>
       </div>
       <PerfectPackages />
+      <WhyYoowifi />
     </div>
   );
 }
