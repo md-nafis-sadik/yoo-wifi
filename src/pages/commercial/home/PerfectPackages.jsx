@@ -1,0 +1,40 @@
+import { Button } from "@/components/ui/button";
+import PackageCards from "./PackageCards";
+
+const PerfectPackages = () => {
+    return (
+        <section className="sec_common bg-neutral-50">
+            <h2 className="title">Perfect Internet Packages</h2>
+            <p className="text-xs md:text-lg !leading-[1.4] text-center text-black-600">
+                Choose Your Dream Destination and Perfect Package Now
+            </p>
+
+            <div className="containerX flex_center flex-col">
+                <form className="w-full max-w-[420px] bg-neutral-100 rounded-xl mt-6 lg:mt-10 mb-6 md:mb-8 ring-1 ring-neutral-300">
+                    <label
+                        htmlFor="searchCountry"
+                        className="flex items-center gap-[10px] w-full py-2 pl-4 sm:pl-6 pr-2 bg-transparent rounded-xl"
+                    >
+                        <input
+                            id="searchCountry"
+                            type="text"
+                            placeholder="Search country.."
+                            className="flex-1 h-full w-[100px] bg-transparent border-none outline-none text-black placeholder:text-black-600 text-base"
+                        />
+                        <Button className={"font-medium"} size={"sm"}>Search</Button>
+                    </label>
+                </form>
+
+                <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    {Array(6)
+                        .fill(1)
+                        .map((_, index) => (
+                            <PackageCards key={index} />
+                        ))}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default PerfectPackages;

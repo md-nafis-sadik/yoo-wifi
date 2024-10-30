@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .containerX {
+    @apply mx-auto max-w-[1176px] self-center px-4 sm:px-[20px] md:px-[40px] xl:px-0;
+  }
+
+  .absolute_center {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .fixed_center {
+    @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .flex_center {
+    @apply flex items-center justify-center;
+  }
+
+  .title {
+    @apply text-2xl md:text-4xl lg:text-[64px] font-bold !leading-[1.2] text-black-900 tracking-tight text-center;
+  }
+
+  .sec_common {
+    @apply py-6 md:py-10 lg:py-20;
+  }
+
+  .tranistion_common {
+    @apply transition-all duration-300 ease-linear;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}

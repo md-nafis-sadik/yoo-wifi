@@ -73,7 +73,10 @@ export default {
         },
       },
       fontFamily: {
-        dmsans: ["dmsans", "sans-serif"],
+        dmsans: ["DMSans", "sans-serif"],
+      },
+      boxShadow: {
+        "card-primary": "0px 15px 24px 0px rgba(0, 0, 0, 0.12)",
       },
       backgroundImage: {
         login: "url('./assets/images/loginBg.png')",

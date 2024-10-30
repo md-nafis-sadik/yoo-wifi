@@ -1,18 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { corporateRoutes } from "@/services";
 import { useNavigate } from "react-router-dom";
+import PerfectPackages from "./PerfectPackages";
 
 function Home() {
   const navigate = useNavigate();
   const handleNavigate = () => {
     navigate(corporateRoutes.home.path);
   };
+
   return (
     <div className="">
-      Home
-      <Button type="button" onClick={handleNavigate}>
-        Navigate to corporate
-      </Button>
+      <div className="flex_center py-4">
+        <Button type="button" onClick={handleNavigate}>
+          Navigate to corporate
+        </Button>
+      </div>
+      <PerfectPackages />
     </div>
   );
 }
