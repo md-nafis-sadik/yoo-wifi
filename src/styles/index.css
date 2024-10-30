@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer components {
+  .container2X {
+    @apply max-w-full 2xl:max-w-[1392px] self-center mx-[10px] lg:mx-4 2xl:mx-auto px-4 sm:px-[20px] md:px-[40px] xl:px-0;
+  }
+
   .containerX {
     @apply mx-auto max-w-[1176px] self-center px-4 sm:px-[20px] md:px-[40px] xl:px-0;
   }

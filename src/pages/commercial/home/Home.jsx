@@ -3,6 +3,7 @@ import { corporateRoutes } from "@/services";
 import { useNavigate } from "react-router-dom";
 import PerfectPackages from "./PerfectPackages";
 import WhyYoowifi from "./WhyYoowifi";
+import StayConnectedRegions from "./StayConnectedRegions";
 
 function Home() {
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ function Home() {
       </div>
       <PerfectPackages />
       <WhyYoowifi />
+      <StayConnectedRegions />
     </div>
   );
 }

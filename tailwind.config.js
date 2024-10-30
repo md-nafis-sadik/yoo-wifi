@@ -77,6 +77,7 @@ export default {
       },
       boxShadow: {
         "card-primary": "0px 15px 24px 0px rgba(0, 0, 0, 0.12)",
+        "card-secondary": "0px 4px 12.1px 0px rgba(13, 13, 13, 0.06)",
       },
       backgroundImage: {
         login: "url('./assets/images/loginBg.png')",
