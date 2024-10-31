@@ -1,6 +1,3 @@
-import InternetPackage from "@/components/commercial/home/InternetPackage";
-import StayConnectedRegions from "@/components/commercial/home/StayConnectedRegions";
-import WhyYoowifi from "@/components/commercial/home/WhyYoowifi";
 import { Button } from "@/components/ui/button";
 import { corporateRoutes } from "@/services";
 import { useNavigate } from "react-router-dom";
@@ -17,9 +14,6 @@ function Home() {
           Navigate to corporate
         </Button>
       </div>
-      <InternetPackage />
-      <WhyYoowifi />
-      <StayConnectedRegions />
     </div>
   );
 }
