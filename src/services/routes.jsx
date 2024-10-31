@@ -1,4 +1,4 @@
-import CommercialHome from "@/pages/commercial/home/Home";
+import Home from "@/pages/commercial/Home";
 import CorporateHome from "@/pages/corporate/Home";
 
 const comercialRoutes = {
@@ -6,7 +6,7 @@ const comercialRoutes = {
     path: "/",
     name: "Home",
     activePath: "home",
-    element: <CommercialHome />,
+    element: <Home />,
   },
 };
 

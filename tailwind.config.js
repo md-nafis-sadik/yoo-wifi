@@ -72,10 +72,16 @@ export default {
           alert: "#FECA57",
         },
       },
+      fontSize: {
+        xxs: "0.665rem",
+        "2xml": "1.75rem",
+      },
       fontFamily: {
         dmsans: ["DMSans", "sans-serif"],
+        gilroy: ["Gilroy", "sans-serif"],
       },
       boxShadow: {
+        mid: "0px -8px 24px 0px rgba(0, 0, 0, 0.10)",
         "card-primary": "0px 15px 24px 0px rgba(0, 0, 0, 0.12)",
         "card-secondary": "0px 4px 12.1px 0px rgba(13, 13, 13, 0.06)",
       },

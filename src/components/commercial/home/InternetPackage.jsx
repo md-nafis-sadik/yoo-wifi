@@ -1,15 +1,14 @@
+import PackageCard from "@/components/shared/cards/PackageCard";
+import SectionHeader from "@/components/shared/others/SectionHeader";
 import { Button } from "@/components/ui/button";
-import PackageCards from "./PackageCards";
-import HeadingWithSubHeading from "@/components/shared/HeadingWithSubHeading";
 
-const PerfectPackages = () => {
+function InternetPackage() {
   return (
-    <section className="sec_common bg-neutral-50">
-      <HeadingWithSubHeading
+    <div>
+      <SectionHeader
         heading={"Perfect Internet Packages"}
         subHeading={"Choose Your Dream Destination and Perfect Package Now"}
       />
-
       <div className="containerX flex_center flex-col">
         <form className="w-full max-w-[420px] bg-neutral-100 rounded-xl mt-6 lg:mt-10 mb-6 md:mb-8 ring-1 ring-neutral-300">
           <label
@@ -27,17 +26,16 @@ const PerfectPackages = () => {
             </Button>
           </label>
         </form>
-
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {Array(6)
             .fill(1)
             .map((_, index) => (
-              <PackageCards key={index} />
+              <PackageCard key={index} />
             ))}
         </div>
       </div>
-    </section>
+    </div>
   );
-};
+}
 
-export default PerfectPackages;
+export default InternetPackage;
