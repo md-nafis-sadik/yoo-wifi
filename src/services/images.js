@@ -10,10 +10,12 @@ import europeRegionBlack from "@/assets/images/europe-region-black.png";
 import googlePlay from "@/assets/images/google-play.png";
 import middleEast from "@/assets/images/middle-east.png";
 import pocketWifiSimRed from "@/assets/images/pocket-wifi-sim-red.png";
+import airtelIndia from "@/assets/images/airtel-india.png";
 import qrcode from "@/assets/images/qrcode.png";
 
 export {
   africaRegionBlack,
+  airtelIndia,
   americaRegionBlack,
   appStore,
   asiaRegionBlack,

@@ -2,6 +2,10 @@ import CartDeviceCard from "@/components/shared/cards/CartDeviceCard";
 import CartLocationCard from "@/components/shared/cards/CartLocationCard";
 import CartPaymentCard from "@/components/shared/cards/CartPaymentCard";
 import CartShippingCard from "@/components/shared/cards/CartShippingCard";
+import ConnectCard from "@/components/shared/cards/ConnectCard";
+import CustomerCard from "@/components/shared/cards/CustomerCard";
+import ProductCard from "@/components/shared/cards/ProductCard";
+import CollaborateMarquee from "@/components/shared/CollaborateMarquee";
 import FeatureCard from "@/components/shared/cards/FeatureCard";
 import InfoCard from "@/components/shared/cards/InfoCard";
 import PackageCard from "@/components/shared/cards/PackageCard";
@@ -29,6 +33,23 @@ function Home() {
       </div>
 
       <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-3">
+          <p>ProductCard</p>
+          <ProductCard />
+        </div>
+        <div className="flex flex-col gap-3">
+          <p>CustomerCard</p>
+          <CustomerCard />
+        </div>
+        <div className="flex flex-col gap-3">
+          <p>ConnectCard</p>
+          <ConnectCard />
+        </div>
+        <div className="flex flex-col gap-3">
+          <p>Collaborate Marquee</p>
+          <CollaborateMarquee />
+        </div>
+
         <div className="flex flex-col gap-3">
           <p>CartPaymentCard</p>
           <CartPaymentCard />
