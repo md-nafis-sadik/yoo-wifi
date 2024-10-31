@@ -31,8 +31,12 @@
     @apply py-6 md:py-10 lg:py-20;
   }
 
-  .tranistion_common {
+  .transition_common {
     @apply transition-all duration-300 ease-linear;
+  }
+
+  .tag {
+    @apply text-[0.625rem] px-3 py-1 text-black-700 bg-neutral-200 rounded-full uppercase;
   }
 }
 

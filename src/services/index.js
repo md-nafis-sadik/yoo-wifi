@@ -1,5 +1,5 @@
-export * from "./constants";
+export * as constants from "./constants";
 export * from "./helpers";
-export * from "./images";
+export * as images from "./images";
 export * from "./routes";
 export * from "./svgs";

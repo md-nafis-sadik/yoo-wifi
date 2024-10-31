@@ -1,13 +1,8 @@
 import { Button } from "@/components/ui/button";
-import {
-  DollarLabelIcon,
-  EarthIcon,
-  pocketWifiSimRed,
-  SignalIcon,
-} from "@/services";
+import { DollarLabelIcon, EarthIcon, images, SignalIcon } from "@/services";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-const WhyYoowifi = () => {
+const AboutYoowifi = () => {
   const featuresData = [
     {
       _id: 1,
@@ -31,7 +26,7 @@ const WhyYoowifi = () => {
       <div className="containerX flex flex-col-reverse md:flex-row gap-6 md:gap-10 lg:gap-[60px]">
         <div className="w-full md:w-1/2 min-[950px]:w-2/5 overflow-visible">
           <LazyLoadImage
-            src={pocketWifiSimRed}
+            src={images.pocketWifiSimRed}
             height={2000}
             width={2000}
             alt="why choose us"
@@ -64,4 +59,4 @@ const WhyYoowifi = () => {
   );
 };
 
-export default WhyYoowifi;
+export default AboutYoowifi;
