@@ -5,3 +5,20 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+/* 
+.country-select .stdropdown-container {
+  font-family: "DMSans" !important;
+} */
+
+.country-select .stdropdown-container {
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+}
+
+.country-select .stdropdown-input {
+  padding: 8px;
+}
+
+.country-select .stdropdown-item span {
+  padding: 8px;
+}

@@ -63,6 +63,7 @@ export default {
           200: "#EEEEEE",
           100: "#F5F5F5",
           50: "#FAFAFA",
+          rgb: "rgba(207, 207, 207, 0.20)",
         },
         status: {
           error: "#DE3737",

@@ -6,8 +6,14 @@ import ConnectCard from "@/components/shared/cards/ConnectCard";
 import CustomerCard from "@/components/shared/cards/CustomerCard";
 import ProductCard from "@/components/shared/cards/ProductCard";
 import CollaborateMarquee from "@/components/shared/CollaborateMarquee";
+import FeatureCard from "@/components/shared/cards/FeatureCard";
+import InfoCard from "@/components/shared/cards/InfoCard";
+import PackageCard from "@/components/shared/cards/PackageCard";
+import ServiceCard from "@/components/shared/cards/ServiceCard";
 import CartFooter from "@/components/shared/navigation/CartFooter";
 import CartQuantity from "@/components/shared/others/CartQuantity";
+import DownloadYoowifi from "@/components/shared/others/DownloadYoowifi";
+import ProductGallery from "@/components/shared/others/ProductGallery";
 import { Button } from "@/components/ui/button";
 import { corporateRoutes } from "@/services";
 import { CountrySelect } from "react-country-state-city";
@@ -71,7 +77,35 @@ function Home() {
         </div>
         <div className="flex flex-col gap-3">
           <p>CountrySelect</p>
-          <CountrySelect />
+          <CountrySelect
+            containerClassName="country-select bg-neutral-50"
+            inputClassName="!border-none !outline-none bg-transparent"
+            placeHolder="Select Country"
+          />
+        </div>
+        <div className="flex flex-col gap-3">
+          <p>CountrySelect</p>
+          <InfoCard />
+        </div>
+        <div className="flex flex-col gap-3">
+          <p>FeatureCard</p>
+          <FeatureCard />
+        </div>
+        <div className="flex flex-col gap-3">
+          <p>PackageCard</p>
+          <PackageCard />
+        </div>
+        <div className="flex flex-col gap-3">
+          <p>ProductGallery</p>
+          <ProductGallery />
+        </div>
+        <div className="flex flex-col gap-3">
+          <p>ServiceCard</p>
+          <ServiceCard />
+        </div>
+        <div className="flex flex-col gap-3">
+          <p>DownloadYoowifi</p>
+          <DownloadYoowifi />
         </div>
       </div>
     </div>
