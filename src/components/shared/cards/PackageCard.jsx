@@ -1,39 +1,29 @@
-import { Button } from "@/components/ui/button";
-import { images } from "@/services";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-
-const PackageCard = () => {
+function PackageCard({ item = {}, ...props }) {
   return (
-    <div className="bg-white rounded-2xl md:rounded-3xl p-4 ring-[2px] ring-neutral-200 hover:ring-0 hover:shadow-card-primary tranistion_common">
-      <div className="w-full aspect-[1.06/1] relative overflow-hidden rounded-lg md:rounded-2xl">
-        <LazyLoadImage
-          src={images.middleEast}
-          alt={"middel east"}
-          height={1000}
-          width={2000}
-          className="absolute_center min-h-full min-w-full object-cover"
+    <div className="px-4 py-5 rounded-xl border border-neutral-400 flex items-start gap-5">
+      <div className="w-14 aspect-square bg-main-50 rounded-lg flex items-center  justify-center">
+        <img
+          src={item?.icon}
+          alt="icon"
+          className="w-full h-full object-contain"
         />
       </div>
-
-      <h2 className="text-base md:text-[28px] !leading-[1.1] font-bold text-center mt-4">
-        Middle East
-      </h2>
-
-      <hr className="my-4 h-[1px] bg-neutral-100" />
-
-      <div className="flex justify-between items-center gap-4">
-        <div className="felx flex-col">
-          <p className="text-xs md:text-base text-black-700 !leading-normal">
-            From
-          </p>
-          <h2 className="text-lg md:text-2xl lg:text-[28px] text-black-700 font-bold !leading-[1.1]">
-            SGD 25.49
-          </h2>
+      <div className="w-full flex items-end gap-2">
+        <div className="w-full">
+          <h3 className="text-2xl font-bold text-black-700">
+            Global 50GB with Device
+          </h3>
+          <p className="text-base text-black-700">Keep Yoowifi Device</p>
+          <p className="text-base text-black-700">Top-up Plan only</p>
+          <p className="text-base text-black-700">365 Days Validity</p>
+          <p className="text-base text-black-700"> Covers 90 Countries</p>
         </div>
-        <Button>Find Out More</Button>
+        <h4 className="text-2xl font-bold text-black-700 whitespace-nowrap">
+          SGD 79
+        </h4>
       </div>
     </div>
   );
-};
+}
 
 export default PackageCard;

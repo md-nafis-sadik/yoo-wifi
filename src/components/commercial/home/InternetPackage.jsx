@@ -1,4 +1,4 @@
-import PackageCard from "@/components/shared/cards/PackageCard";
+import InternetPackageCard from "@/components/shared/cards/InternetPackageCard";
 import SectionHeader from "@/components/shared/others/SectionHeader";
 import { Button } from "@/components/ui/button";
 
@@ -30,7 +30,7 @@ function InternetPackage() {
           {Array(6)
             .fill(1)
             .map((_, index) => (
-              <PackageCard key={index} />
+              <InternetPackageCard key={index} />
             ))}
         </div>
       </div>
