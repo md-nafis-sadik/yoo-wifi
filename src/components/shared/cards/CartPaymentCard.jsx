@@ -1,11 +1,33 @@
-import React from 'react'
+import { cn } from "@/lib/utils";
+import { VisaIcon } from "@/services";
 
-function CartPaymentCard() {
+function CartPaymentCard({ item = {}, ...props }) {
+  const cardNumber = "1234567891234567";
+  const numbers = cardNumber.match(/.{1,4}/g);
   return (
-    <div>
-      
+    <div
+      className={cn(
+        "w-full flex flex-col gap-y-14 py-6 px-4 rounded-[10.629px] bg-main-600 text-white font-gilroy"
+      )}
+      {...props}
+    >
+      <div className="flex justify-between">
+        <span className="font-bold text-xxs">Credit Card</span>
+        <VisaIcon />
+      </div>
+      <div className="flex items-center gap-4">
+        {numbers?.map((number, index) => (
+          <span className="font-base font-medium" key={index}>
+            {number}
+          </span>
+        ))}
+      </div>
+      <div className="flex justify-between">
+        <span className="font-medium text-xxs">Jack Lewis</span>
+        <span className="font-medium text-xxs">06/21</span>
+      </div>
     </div>
-  )
+  );
 }
 
-export default CartPaymentCard
+export default CartPaymentCard;
