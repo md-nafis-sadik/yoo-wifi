@@ -1,5 +1,5 @@
 import { apiSlice } from "../api/apiSlice";
-import { saveAuthData } from "./authSlice";
+import { saveAuthData } from "./slice";
 
 const authApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({

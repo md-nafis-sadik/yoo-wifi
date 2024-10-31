@@ -4,6 +4,11 @@ const initialState = {
   activePath: "",
   showSidebar: false,
   submenuOpen: {},
+  packages: [
+    {
+      
+    }
+  ]
 };
 
 const sharedSlice = createSlice({
