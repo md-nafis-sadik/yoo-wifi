@@ -2,3 +2,4 @@ export * from "./constants";
 export * from "./helpers";
 export * from "./images";
 export * from "./routes";
+export * from "./svgs";

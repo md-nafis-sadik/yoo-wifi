@@ -4,7 +4,7 @@ import { routes } from "./routes/Router";
 
 function App() {
   return (
-    <div className="font-inter">
+    <div className="font-dmsans">
       <RouterProvider router={routes} />
     </div>
   );
