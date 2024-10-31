@@ -31,7 +31,7 @@
     @apply py-6 md:py-10 lg:py-20;
   }
 
-  .tranistion_common {
+  .transition_common {
     @apply transition-all duration-300 ease-linear;
   }
 
