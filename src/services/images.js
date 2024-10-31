@@ -7,9 +7,11 @@ import australiaRegionBlack from "@/assets/images/australia-region-black.png";
 import europeRegionBlack from "@/assets/images/europe-region-black.png";
 import middleEast from "@/assets/images/middle-east.png";
 import pocketWifiSimRed from "@/assets/images/pocket-wifi-sim-red.png";
+import airtelIndia from "@/assets/images/airtel-india.png";
 
 export {
   africaRegionBlack,
+  airtelIndia,
   americaRegionBlack,
   asiaRegionBlack,
   australiaRegionBlack,
