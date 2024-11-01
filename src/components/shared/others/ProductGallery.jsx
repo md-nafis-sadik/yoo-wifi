@@ -60,11 +60,11 @@ function ProductGallery({
           )}
         </Item>
 
-        <div className="flex gap-2">
+        <div className="grid grid-cols-4 gap-2">
           {gallery.map((item, index) => (
             <div
               key={index}
-              className="w-[100px] aspect-square bg-neutral-100c rounded-lg flex items-center justify-center border border-neutral-500 cursor-pointer"
+              className="w-full aspect-square bg-neutral-100c rounded-lg flex items-center justify-center border border-neutral-500 cursor-pointer px-2"
               onClick={() => setActiveItem(item)}
             >
               <img
@@ -94,7 +94,7 @@ function ProductGallery({
             >
               {({ ref, open }) => (
                 <div
-                  className="w-[100px] aspect-square bg-neutral-100c flex items-center justify-center border border-neutral-200 rounded-lg cursor-pointer"
+                  className="w-full aspect-square bg-neutral-100c flex items-center justify-center border border-neutral-200 rounded-lg cursor-pointer"
                   ref={ref}
                   onClick={open}
                 >
