@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 import { commercialRoutes, corporateRoutes } from "@/services";
+import Footer from "../shared/Footer";
 
 function CommercialLayout() {
   const navigate = useNavigate();
@@ -32,7 +33,9 @@ function CommercialLayout() {
         </Button>
       </div>
       {/* Removable */}
+
       <Outlet />
+      <Footer />
     </main>
   );
 }
