@@ -1,5 +1,12 @@
+import CorporateHero from "@/components/corporate/home/CorporateHero";
+import { Fragment } from "react";
+
 function Home() {
-  return <div>Home</div>;
+  return (
+    <Fragment>
+      <CorporateHero />
+    </Fragment>
+  );
 }
 
 export default Home;

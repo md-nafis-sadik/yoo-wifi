@@ -7,6 +7,15 @@ export default {
   ],
   theme: {
     extend: {
+      margin: {
+        15: "3.75rem",
+      },
+      padding: {
+        15: "3.75rem",
+      },
+      gap: {
+        15: "3.75rem",
+      },
       screens: {
         xs: "380px",
       },
@@ -40,6 +49,7 @@ export default {
           200: "#FFC9CA",
           100: "#FFE1E1",
           50: "#FEF2F2",
+          10: "#FFF1F1",
         },
         black: {
           900: "#191919",
@@ -74,8 +84,11 @@ export default {
         },
       },
       fontSize: {
-        xxs: "0.665rem",
-        "2xml": "1.75rem",
+        xxs: "0.665rem", // 10.64 px
+        "2xml": "1.75rem", // 28px
+        "3xml": "1.875rem", // 30px
+        "6xml": "4rem", // 64px
+        "7xml": "5rem", // 80px
       },
       fontFamily: {
         dmsans: ["DMSans", "sans-serif"],

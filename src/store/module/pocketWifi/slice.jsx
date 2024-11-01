@@ -1,3 +1,10 @@
+import {
+  BatteryIcon,
+  CloudIcon,
+  GlobDataIcon,
+  LteSpeedIcon,
+  ShareGroupIcon,
+} from "@/services";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -79,7 +86,7 @@ const initialState = {
         alt: "Pocket Wifi device front view",
       },
       {
-        url: "https://imi-link.com/wp-content/uploads/2020/09/MiFi-4G-Router-1.jpg",
+        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSskzXnZfymqU-VhKuUhNF-Bsc4BtoHudI0pg&s",
         alt: "Pocket Wifi device side view",
       },
       {
@@ -100,6 +107,185 @@ const initialState = {
       },
     ],
   },
+  recomandedPackages: [
+    {
+      title: "Basic Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "365 Days Validity",
+        "Covers 90 Countries",
+      ],
+      price: {
+        currency: "SGD",
+        amount: 30,
+      },
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+    },
+    {
+      title: "Traveler Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "365 Days Validity",
+        "Covers 90 Countries",
+      ],
+      price: {
+        currency: "SGD",
+        amount: 50,
+      },
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+    },
+    {
+      title: "Extended Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "365 Days Validity",
+        "Covers 90 Countries",
+      ],
+      price: {
+        currency: "SGD",
+        amount: 100,
+      },
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+    },
+    {
+      title: "Unlimited Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "365 Days Validity",
+        "Covers 90 Countries",
+      ],
+      price: {
+        currency: "SGD",
+        amount: 150,
+      },
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+    },
+    {
+      title: "Lite Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "180 Days Validity",
+        "Covers 60 Countries",
+      ],
+      price: {
+        currency: "SGD",
+        amount: 20,
+      },
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+    },
+    {
+      title: "Business Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "365 Days Validity",
+        "Priority support",
+        "Covers 100 Countries",
+      ],
+      price: {
+        currency: "SGD",
+        amount: 200,
+      },
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+    },
+    {
+      title: "Premium Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "365 Days Validity",
+        "Unlimited data in selected countries",
+        "Covers 90 Countries",
+      ],
+      price: {
+        currency: "SGD",
+        amount: 250,
+      },
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+    },
+    {
+      title: "Family Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "365 Days Validity",
+        "Connect up to 10 devices",
+        "Covers 90 Countries",
+      ],
+      price: {
+        currency: "SGD",
+        amount: 180,
+      },
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+    },
+    {
+      title: "Traveler Plus Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "180 Days Validity",
+        "Extended data for heavy users",
+        "Covers 80 Countries",
+      ],
+      price: {
+        currency: "SGD",
+        amount: 120,
+      },
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+    },
+    {
+      title: "Global Unlimited Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "365 Days Validity",
+        "Unlimited data globally",
+        "Covers 100 Countries",
+      ],
+      price: {
+        currency: "SGD",
+        amount: 300,
+      },
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+    },
+  ],
+  features: [
+    {
+      icon: <LteSpeedIcon />,
+      title: "Up To 4G \n LTE Speed",
+    },
+    {
+      icon: <GlobDataIcon />,
+      title: "Flexible Data option",
+    },
+    {
+      icon: <CloudIcon />,
+      title: "Cloud SIM Technology",
+    },
+    {
+      icon: <ShareGroupIcon />,
+      title: "Share up to \n 8 devices",
+    },
+    {
+      icon: <BatteryIcon />,
+      title: "12 Hour Battery Life",
+    },
+  ],
 };
 
 const pocketWifiSlice = createSlice({
