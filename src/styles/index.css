@@ -4,11 +4,15 @@
 
 @layer components {
   .container2X {
-    @apply max-w-full 2xl:max-w-[1392px] self-center mx-[10px] lg:mx-4 2xl:mx-auto px-4 sm:px-[20px] md:px-[40px] xl:px-0;
+    @apply w-full max-w-[1220px] mx-auto;
+  }
+
+  .container3X {
+    @apply w-full max-w-[1392px] mx-auto;
   }
 
   .containerX {
-    @apply mx-auto max-w-[1176px] self-center px-4 sm:px-[20px] md:px-[40px] xl:px-0;
+    @apply w-full max-w-[1176px] mx-auto;
   }
 
   .absolute_center {
@@ -27,7 +31,15 @@
     @apply text-2xl md:text-4xl lg:text-[64px] font-bold !leading-[1.2] text-black-900 tracking-tight text-center;
   }
 
-  .sec_common {
+  .sec_common_40_60 {
+    @apply py-6 md:pt-8 md:pb-10 lg:pt-10 lg:pb-15;
+  }
+
+  .sec_common_60 {
+    @apply py-6 md:py-10 lg:py-15;
+  }
+
+  .sec_common_80 {
     @apply py-6 md:py-10 lg:py-20;
   }
 

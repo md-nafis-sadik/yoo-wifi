@@ -32,7 +32,7 @@ const StayConnectedRegions = () => {
   ];
 
   return (
-    <section className="container2X sec_common rounded-2xl md:rounded-3xl bg-[#ececec]">
+    <section className="container3X sec_common_60 rounded-2xl md:rounded-3xl bg-[#ececec]">
       <HeadingWithSubHeading
         heading={"Stay Connected Everywhere"}
         subHeading={"Choose Your Dream Destination and Perfect Package Now"}

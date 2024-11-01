@@ -2,7 +2,6 @@ import CustomerTestimonial from "@/components/commercial/home/CustomerTestimonia
 import InternetPackage from "@/components/commercial/home/InternetPackage";
 import StayConnectedRegions from "@/components/commercial/home/StayConnectedRegions";
 import WhyYoowifi from "@/components/commercial/home/WhyYoowifi";
-import { Fragment } from "react";
 
 function Home() {
   return (
