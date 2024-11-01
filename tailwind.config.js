@@ -13,6 +13,9 @@ export default {
       padding: {
         15: "3.75rem",
       },
+      gap: {
+        15: "3.75rem",
+      },
       screens: {
         xs: "380px",
       },
@@ -84,7 +87,8 @@ export default {
       fontSize: {
         xxs: "0.665rem", // 10.64 px
         "2xml": "1.75rem", // 28px
-        "3xml": "1.875rem", // 28px
+        "3xml": "1.875rem", // 30px
+        "6xml": "4rem", // 64px
         "7xml": "5rem", // 80px
       },
       fontFamily: {

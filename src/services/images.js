@@ -1,28 +1,36 @@
 import notFound from "@/assets/images/404.png";
 import error from "@/assets/images/505.png";
 import africaRegionBlack from "@/assets/images/africa-region-black.png";
+import airtelIndia from "@/assets/images/airtel-india.png";
 import americaRegionBlack from "@/assets/images/america-region-black.png";
 import appStore from "@/assets/images/apple-store.png";
 import asiaRegionBlack from "@/assets/images/asia-region-black.png";
 import australiaRegionBlack from "@/assets/images/australia-region-black.png";
+import battery from "@/assets/images/battery.png";
+import charging from "@/assets/images/charging.png";
+import corporateHero from "@/assets/images/corporate-hero.png";
 import download from "@/assets/images/download.png";
 import europeRegionBlack from "@/assets/images/europe-region-black.png";
 import googlePlay from "@/assets/images/google-play.png";
 import middleEast from "@/assets/images/middle-east.png";
 import pocketWifiSimRed from "@/assets/images/pocket-wifi-sim-red.png";
-import airtelIndia from "@/assets/images/airtel-india.png";
+import pocketWifiSimRed2 from "@/assets/images/pocket-wifi-sim-red-2.png";
 import qrcode from "@/assets/images/qrcode.png";
 import corporateHero from "@/assets/images/corporate-hero.png";
 import appLogo from "@/assets/images/app-logo.png";
 
 export {
   appLogo,
+  pocketWifiSimRed2,
   africaRegionBlack,
   airtelIndia,
   americaRegionBlack,
   appStore,
   asiaRegionBlack,
   australiaRegionBlack,
+  battery,
+  charging,
+  corporateHero,
   download,
   error,
   europeRegionBlack,
@@ -31,5 +39,4 @@ export {
   notFound,
   pocketWifiSimRed,
   qrcode,
-  corporateHero,
 };

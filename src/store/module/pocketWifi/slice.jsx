@@ -1,3 +1,10 @@
+import {
+  BatteryIcon,
+  CloudIcon,
+  GlobDataIcon,
+  LteSpeedIcon,
+  ShareGroupIcon,
+} from "@/services";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -255,6 +262,28 @@ const initialState = {
       },
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+    },
+  ],
+  features: [
+    {
+      icon: <LteSpeedIcon />,
+      title: "Up To 4G \n LTE Speed",
+    },
+    {
+      icon: <GlobDataIcon />,
+      title: "Flexible Data option",
+    },
+    {
+      icon: <CloudIcon />,
+      title: "Cloud SIM Technology",
+    },
+    {
+      icon: <ShareGroupIcon />,
+      title: "Share up to \n 8 devices",
+    },
+    {
+      icon: <BatteryIcon />,
+      title: "12 Hour Battery Life",
     },
   ],
 };
