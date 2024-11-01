@@ -1,7 +1,7 @@
 import Home from "@/pages/commercial/Home";
 import CorporateHome from "@/pages/corporate/Home";
 
-const comercialRoutes = {
+const commercialRoutes = {
   home: {
     path: "/",
     name: "Home",
@@ -19,4 +19,4 @@ const corporateRoutes = {
   },
 };
 
-export { comercialRoutes, corporateRoutes };
+export { commercialRoutes, corporateRoutes };
