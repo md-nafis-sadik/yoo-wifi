@@ -11,7 +11,7 @@ import PocketWifiSelfPickup from "@/pages/commercial/pocketWifi/PocketWifiSelfPi
 import PocketWifiShippingOption from "@/pages/commercial/pocketWifi/PocketWifiShippingOption";
 import CorporateHome from "@/pages/corporate/Home";
 
-const comercialRoutes = {
+const commercialRoutes = {
   commercialLayout: {
     path: "/",
     name: "Home",
@@ -91,4 +91,4 @@ const corporateRoutes = {
   },
 };
 
-export { comercialRoutes, corporateRoutes };
+export { commercialRoutes, corporateRoutes };

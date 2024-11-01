@@ -1,4 +1,4 @@
-import { comercialRoutes as routes } from "@/services";
+import { commercialRoutes as routes } from "@/services";
 
 const {
   commercialLayout,
