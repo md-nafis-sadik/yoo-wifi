@@ -2,16 +2,19 @@ import CustomerTestimonial from "@/components/commercial/home/CustomerTestimonia
 import InternetPackage from "@/components/commercial/home/InternetPackage";
 import StayConnectedRegions from "@/components/commercial/home/StayConnectedRegions";
 import WhyYoowifi from "@/components/commercial/home/WhyYoowifi";
-import { Fragment } from "react";
+import CollaborateMarquee from "@/components/shared/CollaborateMarquee";
+import DownloadYoowifi from "@/components/shared/others/DownloadYoowifi";
 
 function Home() {
   return (
-    <Fragment>
+    <div className="overflow-hidden w-full">
       <InternetPackage />
       <WhyYoowifi />
       <StayConnectedRegions />
       <CustomerTestimonial />
-    </Fragment>
+      <CollaborateMarquee />
+      <DownloadYoowifi />
+    </div>
   );
 }
 
