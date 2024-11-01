@@ -2,6 +2,8 @@ import CustomerTestimonial from "@/components/commercial/home/CustomerTestimonia
 import InternetPackage from "@/components/commercial/home/InternetPackage";
 import StayConnectedRegions from "@/components/commercial/home/StayConnectedRegions";
 import WhyYoowifi from "@/components/commercial/home/WhyYoowifi";
+import CollaborateMarquee from "@/components/shared/CollaborateMarquee";
+import DownloadYoowifi from "@/components/shared/others/DownloadYoowifi";
 
 function Home() {
   return (
@@ -10,6 +12,8 @@ function Home() {
       <WhyYoowifi />
       <StayConnectedRegions />
       <CustomerTestimonial />
+      <CollaborateMarquee />
+      <DownloadYoowifi />
     </div>
   );
 }
