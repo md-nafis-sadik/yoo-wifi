@@ -1,19 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { comercialRoutes } from "@/services";
-import { useNavigate } from "react-router-dom";
+import CorporateHero from "@/components/corporate/home/CorporateHero";
+import { Fragment } from "react";
 
 function Home() {
-  const navigate = useNavigate();
-  const handleNavigate = () => {
-    navigate(comercialRoutes.home.path);
-  };
   return (
-    <div>
-      Home
-      <Button type="button" onClick={handleNavigate}>
-        Navigate to commercial
-      </Button>
-    </div>
+    <Fragment>
+      <CorporateHero />
+    </Fragment>
   );
 }
 
