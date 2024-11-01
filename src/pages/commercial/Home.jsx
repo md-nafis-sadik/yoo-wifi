@@ -6,12 +6,12 @@ import { Fragment } from "react";
 
 function Home() {
   return (
-    <Fragment>
+    <div className="overflow-hidden w-full">
       <InternetPackage />
       <WhyYoowifi />
       <StayConnectedRegions />
       <CustomerTestimonial />
-    </Fragment>
+    </div>
   );
 }
 
