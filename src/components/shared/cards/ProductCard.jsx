@@ -4,8 +4,8 @@ import { CallMadeIcon } from "@/services";
 import { useState } from "react";
 
 const ProductCard = ({
-  title,
-  description,
+  title = "",
+  description = "",
   containerClassName = "",
   titleClassName = "",
   descriptionClassName = "",
@@ -27,8 +27,10 @@ const ProductCard = ({
       {/* 1 */}
       <div
         className={cn(
-          selected ? "flex-col w-full md:w-2/3" : "flex-col md:flex-row w-full",
-          "flex gap-x-4 gap-y-3"
+          selected
+            ? "flex-col w-full md:w-2/3"
+            : "flex-col md:flex-row w-full items-center",
+          "flex  gap-x-4 gap-y-3"
         )}
       >
         <h4
@@ -36,11 +38,11 @@ const ProductCard = ({
             selected
               ? "text-base md:text-xl lg:text-[28px] text-main-600 w-auto"
               : "text-2xl md:text-[28px] lg:text-4xl text-black-700 w-full md:w-2/5",
-            "font-bold !leading-[1.1] group-hover:text-main-600 transition_common",
+            "font-bold !leading-[1.1] group-hover:text-main-600 transition_common shrink-0",
             titleClassName
           )}
         >
-          Pocket WIFI
+          {title}
         </h4>
 
         <p

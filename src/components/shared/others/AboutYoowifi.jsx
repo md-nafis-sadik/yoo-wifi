@@ -22,7 +22,7 @@ const AboutYoowifi = () => {
   ];
 
   return (
-    <section className="sec_common bg-white">
+    <section className="sec_common_60 bg-white">
       <div className="containerX flex flex-col-reverse md:flex-row gap-6 md:gap-10 lg:gap-[60px]">
         <div className="w-full md:w-1/2 min-[950px]:w-2/5 overflow-visible">
           <LazyLoadImage
