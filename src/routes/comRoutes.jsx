@@ -1,4 +1,4 @@
-import { comercialRoutes as routes } from "@/services";
+import { commercialRoutes as routes } from "@/services";
 import CommercialLayout from "../components/layout/CommercialLayout";
 
 const { home } = routes || {};
