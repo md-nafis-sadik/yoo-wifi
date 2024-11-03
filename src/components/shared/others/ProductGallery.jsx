@@ -29,7 +29,7 @@ function ProductGallery({ items = [] }) {
               <div
                 ref={ref}
                 onClick={open}
-                className="w-full h-[532px] bg-neutral-rgb rounded-[20px] flex items-center justify-center p-14 cursor-zoom-in"
+                className="w-full h-[328px]  sm:h-[420px] lg:h-[532px] bg-neutral-rgb rounded-[20px] flex items-center justify-center p-7 sm:p-10 md:p-12 lg:p-14 cursor-zoom-in"
               >
                 <img
                   src={activeItem?.url}
@@ -40,7 +40,7 @@ function ProductGallery({ items = [] }) {
             )}
           </Item>
 
-          <div className="grid grid-cols-5 gap-2">
+          <div className="grid grid-cols-5 gap-1.5 sm:gap-2">
             {gallery.map((item, index) => (
               <div
                 key={index}
@@ -74,7 +74,7 @@ function ProductGallery({ items = [] }) {
               >
                 {({ ref, open }) => (
                   <div
-                    className="w-full aspect-square bg-neutral-100c flex items-center justify-center border border-neutral-200 rounded-lg cursor-pointer"
+                    className="w-full aspect-square bg-neutral-100c flex items-center justify-center border border-neutral-200 rounded-lg cursor-pointer text-xxs sm:text-xs md:text-base p-0.5"
                     ref={ref}
                     onClick={open}
                   >

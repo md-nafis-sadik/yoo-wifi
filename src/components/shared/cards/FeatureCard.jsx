@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-function FeatureCard({ icon, title, ...props }) {
+function FeatureCard({ icon, svg = null, title = "", ...props }) {
   return (
     <div
       className={cn(
@@ -9,10 +9,14 @@ function FeatureCard({ icon, title, ...props }) {
       {...props}
     >
       <div className="w-[60px] aspect-square flex items-center justify-center">
-        <img src={icon} alt="icon" className="w-full h-full object-contain" />
+        {svg ? (
+          svg
+        ) : (
+          <img src={icon} alt="icon" className="w-full h-full object-contain" />
+        )}
       </div>
-      <h3 className="text-black-900 text-lg font-semibold">
-        Up To 4G LTE Speed
+      <h3 className="text-black-900 text-lg font-semibold text-center whitespace-pre-wrap">
+        {title}
       </h3>
     </div>
   );

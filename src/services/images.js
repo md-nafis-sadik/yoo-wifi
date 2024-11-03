@@ -15,12 +15,17 @@ import qrcode from "@/assets/images/qrcode.webp";
 import corporateHero from "@/assets/images/corporate-hero.webp";
 
 export {
+  appLogo,
+  pocketWifiSimRed2,
   africaRegionBlack,
   airtelIndia,
   americaRegionBlack,
   appStore,
   asiaRegionBlack,
   australiaRegionBlack,
+  battery,
+  charging,
+  corporateHero,
   download,
   error,
   europeRegionBlack,
@@ -29,5 +34,4 @@ export {
   notFound,
   pocketWifiSimRed,
   qrcode,
-  corporateHero,
 };

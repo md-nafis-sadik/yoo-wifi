@@ -5,7 +5,7 @@ function Description() {
   const { product } = useSelector((state) => state.pocketWifi);
   console.log();
   return (
-    <div className="pt-12  pb-[60px]">
+    <div className="pt-12  pb-15">
       <div className="containerX">
         <Tabs defaultValue={product?.tabs[0]?.title} className="w-full">
           <TabsList>

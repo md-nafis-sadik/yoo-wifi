@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 @layer components {
-  .container2X {
-    @apply w-full max-w-[1220px] mx-auto;
-  }
-
   .container3X {
     @apply w-full max-w-[1392px] mx-auto;
+  }
+
+  .container2X {
+    @apply w-full max-w-[1220px] mx-auto;
   }
 
   .containerX {
@@ -28,7 +28,7 @@
   }
 
   .title {
-    @apply text-2xl md:text-4xl lg:text-[64px] font-bold !leading-[1.2] text-black-900 tracking-tight text-center;
+    @apply text-2xl md:text-4xl lg:text-6xml font-bold !leading-[1.2] text-black-900 tracking-tight text-center;
   }
 
   .sec_common_40_60 {
@@ -41,6 +41,10 @@
 
   .sec_common_80 {
     @apply py-6 md:py-10 lg:py-20;
+  }
+
+  .sec_common_40 {
+    @apply py-6 md:py-10;
   }
 
   .transition_common {
