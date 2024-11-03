@@ -3,10 +3,7 @@ import { InvertedQuotesIcon } from "@/services";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const CustomerCard = ({
-  author = "",
-  designation = "",
-  image = "",
-  description = "",
+  item,
   hovered = false,
   containerClassName,
   ...props
@@ -30,7 +27,7 @@ const CustomerCard = ({
       <p
         className={cn("text-sm md:text-2xl !leading-[1.4] mt-4 text-black-900")}
       >
-        {description}
+        {item?.description}
       </p>
 
       <hr className="h-[1px] w-full bg-[#d7d7d7] my-4 md:my-6" />
@@ -38,8 +35,8 @@ const CustomerCard = ({
       <div className="flex items-center gap-3">
         <div className="h-12 w-12 md:h-[52px] md:w-[52px] rounded-full overflow-hidden relative">
           <LazyLoadImage
-            src={image}
-            alt={name}
+            src={item?.image}
+            alt={item?.author}
             height={1000}
             width={1000}
             className="absolute_center min-w-full min-h-full object-cover"
@@ -47,9 +44,11 @@ const CustomerCard = ({
         </div>
         <div className="">
           <p className="text-base md:text-xl font-medium tracking-[-0.5px]">
-            {author}
+            {item?.author}
           </p>
-          <p className="text-xs md:text-base !leading-normal">{designation}</p>
+          <p className="text-xs md:text-base !leading-normal">
+            {item?.designation}
+          </p>
         </div>
       </div>
     </div>

@@ -12,7 +12,11 @@ const CollaborateMarquee = () => {
         Operators We Collaborate With
       </p>
 
-      <Marquee className="flex transition-all duration-300 items-center justify-between overflow-y-hidden !select-none mt-6 md:mt-8">
+      <Marquee
+        className="flex transition-transform duration-300 items-center justify-between overflow-hidden !select-none mt-6 md:mt-8 h-20 md:h-24 lg:h-28"
+        gradient={false}
+        speed={50}
+      >
         {Array(6)
           .fill({ image: images.airtelIndia, alt: "airtel" })
           .map(({ image, alt }, index) => (

@@ -29,23 +29,18 @@ const CustomerTestimonial = () => {
       <div className="container2X px-4 min-[1176px]:px-0  w-full overflow-visible mt-6 sm:mt-10 md:mt-20">
         <div className="w-full" ref={emblaRef}>
           <div className="flex gap-3 md:gap-6 lg:gap-8 me-4 md:me-8 lg:me-10 py-4">
-            {testimonials.map(
-              ({ author, designation, image, description }, index) => (
-                <CustomerCard
-                  author={author}
-                  designation={designation}
-                  image={image}
-                  description={description}
-                  containerClassName={
-                    "relative min-w-[344px] md:min-w-[573px] max-w-[573px]"
-                  }
-                  hovered={hoveredIndex === index}
-                  key={`customer_feedback_${index}`}
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                />
-              )
-            )}
+            {testimonials.map((item, index) => (
+              <CustomerCard
+                item={item}
+                containerClassName={
+                  "relative min-w-[272px] md:min-w-[573px] max-w-[573px]"
+                }
+                hovered={hoveredIndex === index}
+                key={`customer_feedback_${index}`}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              />
+            ))}
           </div>
         </div>
       </div>

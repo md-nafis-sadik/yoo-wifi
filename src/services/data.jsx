@@ -43,26 +43,31 @@ export const regionsData = [
     _id: 1,
     image: images.asiaRegionBlack,
     title: "Asia",
+    link: "/",
   },
   {
     _id: 2,
     image: images.americaRegionBlack,
     title: "America",
+    link: "/",
   },
   {
     _id: 3,
     image: images.africaRegionBlack,
     title: "Africa",
+    link: "/",
   },
   {
     _id: 4,
     image: images.australiaRegionBlack,
     title: "Australia",
+    link: "/",
   },
   {
     _id: 5,
     image: images.europeRegionBlack,
     title: "Europe",
+    link: "/",
   },
 ];
 

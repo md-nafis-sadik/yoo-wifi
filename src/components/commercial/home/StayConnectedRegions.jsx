@@ -18,7 +18,6 @@ const StayConnectedRegions = () => {
               item={region}
               index={index}
               key={index}
-              isActive={index === 0}
               className={cn(
                 index > 2 &&
                   "lg:col-span-3 last:col-span-full last:lg:col-span-3",
