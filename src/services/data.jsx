@@ -1,24 +1,38 @@
-import { DollarLabelIcon, EarthIcon, images, SignalIcon } from ".";
+import {
+  DollarLabelIcon,
+  EarthIcon,
+  images,
+  LocationMarkerIcon,
+  RentIcon,
+  ReturnIcon,
+  SignalIcon,
+} from ".";
+
+// h
 
 // p
+
 export const productCardsData = [
   {
     title: "Pocket WIFI",
     description:
       "Stay connected on the go with our high-speed Pocket WIFI. Perfect for travel and remote work.",
     offer: "50% OFF",
+    link: "/",
   },
   {
     title: "Router",
     description:
       "Experience seamless and reliable internet connectivity at home with our advanced routers.",
     offer: "30% OFF",
+    link: "/",
   },
   {
     title: "SIM/eSIM",
     description:
       "Get instant connectivity with our SIM and eSIM options, suitable for all your devices.",
     offer: "20% OFF",
+    link: "/",
   },
 ];
 

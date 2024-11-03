@@ -1,4 +1,5 @@
 import CustomerTestimonial from "@/components/commercial/home/CustomerTestimonial";
+import HowItWorks from "@/components/commercial/home/HowItWorks";
 import InternetPackage from "@/components/commercial/home/InternetPackage";
 import Products from "@/components/commercial/home/Products";
 import StayConnectedRegions from "@/components/commercial/home/StayConnectedRegions";
@@ -14,6 +15,7 @@ function Home() {
       <WhyYoowifi />
       <StayConnectedRegions />
       <CustomerTestimonial />
+      <HowItWorks />
       <CollaborateMarquee />
       <DownloadYoowifi />
     </div>

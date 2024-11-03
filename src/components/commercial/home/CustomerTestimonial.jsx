@@ -26,7 +26,7 @@ const CustomerTestimonial = () => {
       />
 
       {/* CAROUSEL */}
-      <div className="container2X px-0 w-full overflow-visible mt-6 sm:mt-10 md:mt-20">
+      <div className="container2X px-4 min-[1176px]:px-0  w-full overflow-visible mt-6 sm:mt-10 md:mt-20">
         <div className="w-full" ref={emblaRef}>
           <div className="flex gap-3 md:gap-6 lg:gap-8 me-4 md:me-8 lg:me-10 py-4">
             {testimonials.map(
@@ -56,7 +56,7 @@ const CustomerTestimonial = () => {
           <button
             aria-label="slide change dot button"
             type="button"
-            className={`h-1 md:h-[10px] rounded-full duration-300 ${
+            className={`h-1 md:h-[10px] rounded-full duration-300 select-none cursor-default ${
               index == selectedIndex
                 ? "w-4 md:w-12 bg-secondary-650"
                 : "w-1 md:w-[10px] bg-neutral-300"

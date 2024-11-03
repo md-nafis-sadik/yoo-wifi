@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { CallMadeIcon } from "@/services";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({
   item,
@@ -61,16 +62,18 @@ const ProductCard = ({
               {item.offer}
             </p>
           )}
-          <Button
-            size="lg"
-            className="text-base"
-            onClick={(event) => {
-              event.stopPropagation();
-            }}
-          >
-            Buy Now{" "}
-            <CallMadeIcon color="#FAFAFA" className={"!h-6 !w-6 shrink-0"} />
-          </Button>
+          <Link to={item.link}>
+            <Button
+              size="lg"
+              className="text-base"
+              onClick={(event) => {
+                event.stopPropagation();
+              }}
+            >
+              Buy Now{" "}
+              <CallMadeIcon color="#FAFAFA" className={"!h-6 !w-6 shrink-0"} />
+            </Button>
+          </Link>
         </div>
       )}
     </div>
