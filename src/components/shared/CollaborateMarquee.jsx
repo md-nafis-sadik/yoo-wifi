@@ -5,15 +5,19 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 const CollaborateMarquee = () => {
   return (
     <div
-      className="w-full mb-10 lg:mb-20 bg-primary-darkDAD bg-[#FFFBEC]"
+      className="w-full bg-[#FFFBEC] pb-6 pt-6 md:pb-[60px] md:pt-10"
       id={"companies"}
     >
-      <Marquee className="flex transition-all duration-300 items-center h-[92px] md:h-[112px] lg:h-[128px] !select-none">
+      <p className="text-center text-black-700 text-base md:text-2xl !leading-[1.4]">
+        Operators We Collaborate With
+      </p>
+
+      <Marquee className="flex transition-all duration-300 items-center justify-between overflow-y-hidden !select-none mt-6 md:mt-8">
         {Array(6)
           .fill({ image: images.airtelIndia, alt: "airtel" })
           .map(({ image, alt }, index) => (
             <div
-              className="flex items-center justify-center mx-8 md:mx-16 h-full"
+              className="flex items-center justify-center mx-10 md:mx-16 lg:mx-20 h-full"
               key={`${alt}_${index}`}
             >
               <LazyLoadImage
@@ -21,7 +25,7 @@ const CollaborateMarquee = () => {
                 alt={alt}
                 height={200}
                 width={400}
-                className="h-auto w-full object-contain"
+                className="h-6 md:h-10 lg:h-12 w-full object-contain grayscale"
               />
             </div>
           ))}

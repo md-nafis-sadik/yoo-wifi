@@ -16,8 +16,11 @@ import middleEast from "@/assets/images/middle-east.png";
 import pocketWifiSimRed from "@/assets/images/pocket-wifi-sim-red.png";
 import pocketWifiSimRed2 from "@/assets/images/pocket-wifi-sim-red-2.png";
 import qrcode from "@/assets/images/qrcode.png";
+import corporateHero from "@/assets/images/corporate-hero.png";
+import appLogo from "@/assets/images/app-logo.png";
 
 export {
+  appLogo,
   pocketWifiSimRed2,
   africaRegionBlack,
   airtelIndia,
