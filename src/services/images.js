@@ -8,7 +8,6 @@ import asiaRegionBlack from "@/assets/images/asia-region-black.png";
 import australiaRegionBlack from "@/assets/images/australia-region-black.png";
 import battery from "@/assets/images/battery.png";
 import charging from "@/assets/images/charging.png";
-import corporateHero from "@/assets/images/corporate-hero.png";
 import download from "@/assets/images/download.png";
 import europeRegionBlack from "@/assets/images/europe-region-black.png";
 import googlePlay from "@/assets/images/google-play.png";

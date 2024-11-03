@@ -1,4 +1,14 @@
-export const footerdata = {
+export const footerData = {
+  contact: [
+    {
+      type: "Call",
+      value: "111 222 3456",
+    },
+    {
+      type: "Mail",
+      value: "info@demo.com",
+    },
+  ],
   legals: [
     { title: "Terms of use", path: "#" },
     { title: "Privacy policy", path: "#" },
