@@ -14,5 +14,18 @@ export const store = configureStore({
     testimonials: testimonialsSlice,
   },
   middleware: (getDefaultMiddlewares) =>
-    getDefaultMiddlewares().concat(apiSlice.middleware),
+    getDefaultMiddlewares({
+      serializableCheck: {
+        ignoredActions: [
+          // "api/executeQuery/fulfilled",
+        ],
+        ignoredActionPaths: [
+          "meta.baseQueryMeta.request",
+          "meta.arg.originalArgs.data",
+          "meta.baseQueryMeta.response",
+          "payload",
+        ],
+        ignoredPaths: ["pocketWifi.features", "pocketWifi.cart.startDate"],
+      },
+    }).concat(apiSlice.middleware),
 });

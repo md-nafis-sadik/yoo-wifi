@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { addZeroToNumber, MinusIcon, PlusIcon } from "@/services";
 import { useState } from "react";
 
-function CartQuantity({ max = 1, setter = () => {} }) {
-  const [count, setCount] = useState(1);
+function CartQuantity({ max = 1, defaultValue = 1, setter = () => {} }) {
+  const [count, setCount] = useState(defaultValue);
 
   // TODO: add quantity logic
   const handleQuantity = (type = "increment") => {

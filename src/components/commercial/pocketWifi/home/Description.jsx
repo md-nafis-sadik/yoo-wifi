@@ -7,7 +7,7 @@ function Description() {
   const options = { align: "start" };
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   return (
-    <div className="pt-12  pb-15">
+    <div className="pt-12 pb-15 px-4 md:px-10 lg:px-16">
       <div className="containerX">
         <Tabs defaultValue={product?.tabs[0]?.title} className="w-full">
           <div ref={emblaRef} className="max-w-full overflow-hidden">
