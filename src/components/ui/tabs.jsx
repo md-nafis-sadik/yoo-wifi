@@ -8,7 +8,7 @@ const Tabs = TabsPrimitive.Root;
 const TabsList = React.forwardRef(({ className, ...props }, ref) => (
   <TabsPrimitive.List
     ref={ref}
-    className={cn("w-full flex gap-6", className)}
+    className={cn("w-full flex gap-3 sm:gap-4 md:gap-6", className)}
     {...props}
   />
 ));
@@ -18,7 +18,7 @@ const TabsTrigger = React.forwardRef(({ className, ...props }, ref) => (
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
-      "w-full px-10 py-4 border border-neutral-400 rounded-lg text-base font-semibold text-black-700 transition-all disabled:pointer-events-none disabled:opacity-50 data-[state=active]:border-main-600 data-[state=active]:text-main-600",
+      "w-full px-3 py-2 sm:px-6 sm:py-3 md:px-10 md:py-4 border border-neutral-400 rounded-lg text-sm sm:text-base font-semibold text-black-700 transition-all disabled:pointer-events-none disabled:opacity-50 data-[state=active]:border-main-600 data-[state=active]:text-main-600 whitespace-nowrap",
       className
     )}
     {...props}

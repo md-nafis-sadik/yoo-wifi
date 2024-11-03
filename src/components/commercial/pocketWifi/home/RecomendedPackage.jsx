@@ -32,7 +32,7 @@ function RecomendedPackage() {
           subHeading="Discover Our Recommended Packages for Your Needs"
           containerClassName="gap-4"
         />
-        <div className="grid sm:grid-cols-2 gap-5 mt-15 text-8xl">
+        <div className="grid md:grid-cols-2 gap-3 sm:gap-4 md:gap-5 mt-6 sm:mt-8 md:mt-15 text-8xl">
           {packages?.map((item, index) => (
             <PackageCard key={index} item={item} />
           ))}
