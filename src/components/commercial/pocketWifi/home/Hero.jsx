@@ -1,13 +1,20 @@
 import ProductGallery from "@/components/shared/others/ProductGallery";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { DollarLabelIcon, GlobIcon, WifiIcon } from "@/services";
+import {
+  commercialRoutes,
+  DollarLabelIcon,
+  GlobIcon,
+  WifiIcon,
+} from "@/services";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function Hero() {
   const { product } = useSelector((state) => state.pocketWifi);
   const [activeColor, setActiveColor] = useState(product?.colors[0]);
+  const navigate = useNavigate();
   return (
     <section className="pt-10 px-4 sm:px-8">
       <div className="containerX">
@@ -83,6 +90,7 @@ function Hero() {
               <Button
                 className="w-full sm:max-w-max text-base font-semibold leading-[120%]"
                 type="button"
+                onClick={() => navigate(commercialRoutes.pocketWifiRegion.path)}
               >
                 View Plans
               </Button>
