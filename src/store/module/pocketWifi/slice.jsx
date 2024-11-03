@@ -109,6 +109,7 @@ const initialState = {
   },
   recomandedPackages: [
     {
+      id: 1,
       title: "Basic Package",
       features: [
         "Keep Yoowifi Device",
@@ -122,8 +123,16 @@ const initialState = {
       },
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "daily",
+      planCode: "plan_1",
+      dataSize: 3,
+      price: 10,
+      validity: 30,
+      desc: "GB",
     },
     {
+      id: 2,
+
       title: "Traveler Package",
       features: [
         "Keep Yoowifi Device",
@@ -137,8 +146,16 @@ const initialState = {
       },
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "daily",
+      planCode: "plan_1",
+      dataSize: 3,
+      price: 10,
+      validity: 30,
+      desc: "GB",
     },
     {
+      id: 3,
+
       title: "Extended Package",
       features: [
         "Keep Yoowifi Device",
@@ -152,8 +169,16 @@ const initialState = {
       },
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "daily",
+      planCode: "plan_1",
+      dataSize: 3,
+      price: 10,
+      validity: 30,
+      desc: "GB",
     },
     {
+      id: 4,
+
       title: "Unlimited Package",
       features: [
         "Keep Yoowifi Device",
@@ -167,8 +192,16 @@ const initialState = {
       },
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "daily",
+      planCode: "plan_1",
+      dataSize: 3,
+      price: 10,
+      validity: 30,
+      desc: "GB",
     },
     {
+      id: 5,
+
       title: "Lite Package",
       features: [
         "Keep Yoowifi Device",
@@ -182,8 +215,16 @@ const initialState = {
       },
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "monthly",
+      planCode: "plan_1",
+      dataSize: 3,
+      price: 10,
+      validity: 30,
+      desc: "GB",
     },
     {
+      id: 6,
+
       title: "Business Package",
       features: [
         "Keep Yoowifi Device",
@@ -198,8 +239,21 @@ const initialState = {
       },
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "volumn",
+      planCode: "plan_1",
+      dataSize: 3,
+      price: 10,
+      validity: 30,
+      desc: "GB",
+      planCode: "plan_1",
+      dataSize: 3,
+      price: 10,
+      validity: 30,
+      desc: "GB",
     },
     {
+      id: 7,
+
       title: "Premium Package",
       features: [
         "Keep Yoowifi Device",
@@ -214,8 +268,11 @@ const initialState = {
       },
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "daily",
     },
     {
+      id: 8,
+
       title: "Family Package",
       features: [
         "Keep Yoowifi Device",
@@ -230,8 +287,11 @@ const initialState = {
       },
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "volumn",
     },
     {
+      id: 9,
+
       title: "Traveler Plus Package",
       features: [
         "Keep Yoowifi Device",
@@ -246,8 +306,11 @@ const initialState = {
       },
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "monthly",
     },
     {
+      id: 10,
+
       title: "Global Unlimited Package",
       features: [
         "Keep Yoowifi Device",
@@ -262,37 +325,75 @@ const initialState = {
       },
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "daily",
     },
   ],
   features: [
     {
-      icon: <LteSpeedIcon />,
+      icon: () => <LteSpeedIcon />,
       title: "Up To 4G \n LTE Speed",
     },
     {
-      icon: <GlobDataIcon />,
+      icon: () => <GlobDataIcon />,
       title: "Flexible Data option",
     },
     {
-      icon: <CloudIcon />,
+      icon: () => <CloudIcon />,
       title: "Cloud SIM Technology",
     },
     {
-      icon: <ShareGroupIcon />,
+      icon: () => <ShareGroupIcon />,
       title: "Share up to \n 8 devices",
     },
     {
-      icon: <BatteryIcon />,
+      icon: () => <BatteryIcon />,
       title: "12 Hour Battery Life",
     },
   ],
+  topupPlans: [
+    {
+      planCode: "plan_1",
+      dataSize: 3,
+      price: 10,
+      validity: 30,
+      desc: "GB",
+    },
+    {
+      planCode: "plan_2",
+      dataSize: 10,
+      price: 20,
+      validity: 30,
+      desc: "GB",
+    },
+  ],
+  cart: {
+    color: {},
+    promoCode: null,
+    memberId: null,
+    productCountry: null,
+    package: {},
+    topup: {},
+    device: {},
+    cartType: "rental",
+    quantity: 1,
+    startDate: null,
+    endDate: null,
+  },
 };
 
 const pocketWifiSlice = createSlice({
   name: "pocketWifiSlice",
   initialState,
-  reducers: {},
+  reducers: {
+    setPocketWifiCartData: (state, action) => {
+      state.cart = { ...state.cart, ...action?.payload };
+    },
+    handleNextPocketWifiCart: (state) => {
+      localStorage.setItem("procket_wifi_cart", JSON.stringify(state.cart));
+    },
+  },
 });
 
-export const { saveAuthData, logout } = pocketWifiSlice.actions;
+export const { setPocketWifiCartData, handleNextPocketWifiCart } =
+  pocketWifiSlice.actions;
 export default pocketWifiSlice.reducer;

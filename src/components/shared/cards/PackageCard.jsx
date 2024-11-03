@@ -1,6 +1,14 @@
-function PackageCard({ item = {}, ...props }) {
+import { cn } from "@/lib/utils";
+
+function PackageCard({ item = {}, wrapperClass = "", ...props }) {
   return (
-    <div className="px-4 py-5 rounded-xl border border-neutral-400 flex flex-col md:flex-row items-start gap-4 sm:gap-5">
+    <div
+      className={cn(
+        "px-4 py-5 rounded-xl border border-neutral-400 flex flex-col md:flex-row items-start gap-4 sm:gap-5",
+        wrapperClass
+      )}
+      {...props}
+    >
       <div className="w-14 aspect-square bg-main-50 p-1 rounded-lg flex items-center  justify-center">
         <img
           src={item?.image}

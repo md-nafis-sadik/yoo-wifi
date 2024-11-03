@@ -7,9 +7,12 @@ function CartDeviceCard({ item = {}, isActive = false, ...props }) {
         "p-4 flex flex-col gap-2.5 rounded-xl cursor-pointer bg-neutral-50 border",
         isActive ? "border-main-600" : "border-neutral-200"
       )}
+      {...props}
     >
-      <p className="text-lg font-semibold text-black-700">Wifi Device</p>
-      <p className="text-lg font-semibold text-black-700">ID: 55775254747523</p>
+      <p className="text-lg font-semibold text-black-700">{item?.name}</p>
+      <p className="text-lg font-semibold text-black-700">
+        ID: {item?.deviceId}
+      </p>
     </div>
   );
 }
