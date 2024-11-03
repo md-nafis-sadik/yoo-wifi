@@ -18,8 +18,12 @@ import { Button } from "@/components/ui/button";
 import { CountrySelect } from "react-country-state-city";
 import { useNavigate } from "react-router-dom";
 import { commercialRoutes, corporateRoutes } from "@/services";
+import { productCardsData } from "@/services/data";
+import { useState } from "react";
 
 const SharedElements = () => {
+  const [selectedCard, setSelectedCard] = useState(null);
+
   const navigate = useNavigate();
   const handleNavigate = (path) => {
     navigate(path);
@@ -53,7 +57,14 @@ const SharedElements = () => {
       <div className="flex flex-col gap-10">
         <div className="flex flex-col gap-3">
           <p>ProductCard</p>
-          <ProductCard />
+          {productCardsData.slice(0, 1).map((item, index) => (
+            <ProductCard
+              key={index}
+              item={item}
+              eventHandler={() => setSelectedCard(index)}
+              selected={selectedCard === index}
+            />
+          ))}
         </div>
         <div className="flex flex-col gap-3">
           <p>CustomerCard</p>
