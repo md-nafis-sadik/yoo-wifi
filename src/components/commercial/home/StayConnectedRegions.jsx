@@ -1,39 +1,11 @@
 import RegionCard from "@/components/shared/cards/RegionCard";
 import HeadingWithSubHeading from "@/components/shared/HeadingWithSubHeading";
 import { cn } from "@/lib/utils";
-import { images } from "@/services";
+import { regionsData } from "@/services/data";
 
 const StayConnectedRegions = () => {
-  const regionsData = [
-    {
-      _id: 1,
-      image: images.asiaRegionBlack,
-      title: "Asia",
-    },
-    {
-      _id: 2,
-      image: images.americaRegionBlack,
-      title: "America",
-    },
-    {
-      _id: 3,
-      image: images.africaRegionBlack,
-      title: "Africa",
-    },
-    {
-      _id: 4,
-      image: images.australiaRegionBlack,
-      title: "Australia",
-    },
-    {
-      _id: 5,
-      image: images.europeRegionBlack,
-      title: "Europe",
-    },
-  ];
-
   return (
-    <section className="px-4 min-[1320px]:px-0">
+    <section className="px-4 min-[1320px]:px-0 sec_common_80">
       <div className="sec_common_60 container3X rounded-2xl md:rounded-3xl bg-[#ececec] px-3 md:px-6 min-[1320px]:px-0">
         <HeadingWithSubHeading
           heading={"Stay Connected Everywhere"}

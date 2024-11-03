@@ -14,6 +14,7 @@ import download from "@/assets/images/download.webp";
 import europeRegionBlack from "@/assets/images/europe-region-black.webp";
 import googlePlay from "@/assets/images/google-play.webp";
 import middleEast from "@/assets/images/middle-east.webp";
+import pocketWifiNewUpdate from "@/assets/images/pocket-wifi-new-update.webp";
 import pocketWifiSimRed2 from "@/assets/images/pocket-wifi-sim-red-2.webp";
 import pocketWifiSimRed from "@/assets/images/pocket-wifi-sim-red.webp";
 import qrcode from "@/assets/images/qrcode.webp";
@@ -35,6 +36,7 @@ export {
   googlePlay,
   middleEast,
   notFound,
+  pocketWifiNewUpdate,
   pocketWifiSimRed,
   pocketWifiSimRed2,
   qrcode,

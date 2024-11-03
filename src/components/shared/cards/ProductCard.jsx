@@ -1,19 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { CallMadeIcon } from "@/services";
-import { useState } from "react";
 
 const ProductCard = ({
-  title = "",
-  description = "",
+  item,
   containerClassName = "",
   titleClassName = "",
   descriptionClassName = "",
-  //   selected = false, //Enable it when needed
+  eventHandler = () => {},
+  selected = false,
   ...props
 }) => {
-  const [selected, setSelected] = useState(false);
-
   return (
     <div
       className={cn(
@@ -21,7 +18,7 @@ const ProductCard = ({
         "ring-1 w-full h-fit rounded-lg md:rounded-2xl p-4 md:p-5 flex flex-col md:flex-row gap-6 md:gap-10 hover:ring-main-600 group transition_common",
         containerClassName
       )}
-      onClick={() => setSelected((prev) => !prev)} //Please remove when added to page
+      onClick={eventHandler}
       {...props}
     >
       {/* 1 */}
@@ -42,28 +39,35 @@ const ProductCard = ({
             titleClassName
           )}
         >
-          {title}
+          {item.title}
         </h4>
 
         <p
           className={cn(
+            selected ? "select-text" : "select-none",
             "text-sm md:text-base text-black-700 !leading-normal flex-grow",
             descriptionClassName
           )}
         >
-          Small device, big connectivity! Enjoy high-speed internet access,
-          without worrying about expensive roaming charges or unreliable hotel
-          wifi.
+          {item.description}
         </p>
       </div>
 
       {/* 2 */}
       {selected && (
-        <div className="flex flex-col items-end gap-4 w-full md:w-1/3">
-          <p className="text-black-900 text-base md:text-xl !leading-[1.4] font-bold italic w-fit">
-            50% OFF
-          </p>
-          <Button size="lg" className="text-base">
+        <div className="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-start gap-4 w-full md:w-1/3">
+          {item.offer && (
+            <p className="text-black-900 text-base md:text-xl !leading-[1.4] font-bold italic w-fit">
+              {item.offer}
+            </p>
+          )}
+          <Button
+            size="lg"
+            className="text-base"
+            onClick={(event) => {
+              event.stopPropagation();
+            }}
+          >
             Buy Now{" "}
             <CallMadeIcon color="#FAFAFA" className={"!h-6 !w-6 shrink-0"} />
           </Button>
