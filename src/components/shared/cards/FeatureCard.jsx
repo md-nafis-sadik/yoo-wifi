@@ -4,18 +4,18 @@ function FeatureCard({ icon, svg = null, title = "", ...props }) {
   return (
     <div
       className={cn(
-        "py-8 px-4 bg-white rounded-2xl flex flex-col items-center justify-center gap-6"
+        "py-5 sm:py-6 md:py-8 px-4 bg-white rounded-2xl flex flex-col items-center justify-center gap-2 sm:gap-4 md:gap-6"
       )}
       {...props}
     >
-      <div className="w-[60px] aspect-square flex items-center justify-center">
+      <div className="w-8 sm:w-12 md:w-[60px] aspect-square flex items-center justify-center">
         {svg ? (
           svg
         ) : (
           <img src={icon} alt="icon" className="w-full h-full object-contain" />
         )}
       </div>
-      <h3 className="text-black-900 text-lg font-semibold text-center whitespace-pre-wrap">
+      <h3 className="text-black-900 text-base sm:text-lg font-semibold text-center sm:whitespace-pre-wrap">
         {title}
       </h3>
     </div>
