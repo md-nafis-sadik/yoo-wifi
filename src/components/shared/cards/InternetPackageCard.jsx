@@ -23,14 +23,20 @@ const InternetPackageCard = () => {
 
       <div className="flex justify-between items-center gap-4">
         <div className="felx flex-col">
-          <p className="text-xs md:text-base text-black-700 !leading-normal">
+          <p className="text-[10px] sm:text-sm md:text-base text-black-700 !leading-normal">
             From
           </p>
-          <h2 className="text-lg md:text-2xl lg:text-[28px] text-black-700 font-bold !leading-[1.1]">
+          <h2 className="text-[10px] sm:text-sm md:text-2xl lg:text-[28px] text-black-700 font-semibold md:font-bold !leading-[1.2] md:!leading-[1.1]">
             SGD 25.49
           </h2>
         </div>
-        <Button>Find Out More</Button>
+        <Button
+          className={
+            "px-2 py-[5px] md:px-6 md:py-4 !leading-normal rounded-sm md:rounded-xl"
+          }
+        >
+          Find Out More
+        </Button>
       </div>
     </div>
   );
