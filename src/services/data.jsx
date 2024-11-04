@@ -38,7 +38,7 @@ export const productCardsData = [
 
 // r
 
-export const regionsData = [
+export const regionsData = () => [
   {
     _id: 1,
     image: images.asiaRegionBlack,

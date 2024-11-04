@@ -2,8 +2,11 @@ import RegionCard from "@/components/shared/cards/RegionCard";
 import HeadingWithSubHeading from "@/components/shared/HeadingWithSubHeading";
 import { cn } from "@/lib/utils";
 import { regionsData } from "@/services/data";
+import { useMemo } from "react";
 
 const StayConnectedRegions = () => {
+  const regions = useMemo(() => regionsData(), []);
+
   return (
     <section className="px-4 min-[1320px]:px-0 sec_common_80">
       <div className="sec_common_60 container3X rounded-2xl md:rounded-3xl bg-[#ececec] px-3 md:px-6 min-[1320px]:px-0">
@@ -13,7 +16,7 @@ const StayConnectedRegions = () => {
         />
 
         <div className="containerX grid grid-cols-6 gap-2 md:gap-6 mt-6 md:mt-10 lg:mt-20">
-          {regionsData.map((region, index) => (
+          {regions.map((region, index) => (
             <RegionCard
               item={region}
               index={index}
