@@ -10,14 +10,16 @@ function CartShippingCard({ item = {}, isActive = false, ...props }) {
       {...props}
     >
       <div className="flex w-full items-end gap-2">
-        <div className="flex-1">
-          <h2 className="text-lg font-semibold text-black-900">Self Pickup</h2>
-          <p className="text-base text-black-700">Choose your location</p>
-          <p className="text-base text-black-700">
-            Device Collection: 5 days before travel
-          </p>
+        <div className="flex-1 flex flex-col gap-2">
+          <h2 className="text-lg font-semibold text-black-900">
+            {item?.title}
+          </h2>
+          {item?.subtitle && (
+            <p className="text-base text-black-700">{item?.subtitle}</p>
+          )}
+          <p className="text-base text-black-700">{item?.description}</p>
         </div>
-        <span className="text-2xl font-bold text-main-600">Free</span>
+        <span className="text-2xl font-bold text-main-600">{item?.price}</span>
       </div>
     </div>
   );

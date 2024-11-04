@@ -31,6 +31,7 @@ function DataSize({}) {
       <h2 className="text-base font-semibold text-black-700">Data Size</h2>
       {cart?.cartType == "rental" ? (
         <Button
+          type="button"
           className={cn(
             "hover:bg-main-600 hover:text-white text-white font-semibold"
           )}
@@ -44,6 +45,7 @@ function DataSize({}) {
             <div className="flex items-center gap-4 mb-6">
               {topupPlans?.map((item, index) => (
                 <Button
+                  type="button"
                   className={cn(
                     "hover:bg-main-600 hover:text-white",
                     cart?.topup?.planCode == item?.planCode

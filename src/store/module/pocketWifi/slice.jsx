@@ -378,6 +378,7 @@ const initialState = {
     quantity: 1,
     startDate: null,
     endDate: null,
+    shipping: {},
   },
 };
 

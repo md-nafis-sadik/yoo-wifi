@@ -8,14 +8,18 @@ function PocketWifiPlanSummery() {
   const { cart } = useSelector((state) => state.pocketWifi);
   const date = new Date(cart?.startDate);
   const formattedDate = date.toISOString().split("T")[0];
-  console.log(cart);
 
   const handlePrev = () => {
     navigate(commercialRoutes.pocketWifiCartService.path);
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    navigate(commercialRoutes.pocketWifiShippingOption.path);
+  };
+
   return (
-    <div className="w-full">
+    <form action="#" onSubmit={handleSubmit} className="w-full">
       <div className="w-full py-6 px-4 sm:p-8 md:p-10 bg-neutral-100 rounded-2xl">
         <h4 className="text-black-900 text-2xl font-bold">Plan Summary</h4>
         <div className="mt-3 sm:mt-6 md:mt-12 pb-5 flex flex-col gap-4">
@@ -60,7 +64,7 @@ function PocketWifiPlanSummery() {
         </div>
       </div>
       <PocketWifiCartFooter prevHandler={handlePrev} isActive={true} />
-    </div>
+    </form>
   );
 }
 
