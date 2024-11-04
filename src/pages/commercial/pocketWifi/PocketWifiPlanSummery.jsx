@@ -13,13 +13,12 @@ function PocketWifiPlanSummery() {
     navigate(commercialRoutes.pocketWifiCartService.path);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleNext = () => {
     navigate(commercialRoutes.pocketWifiShippingOption.path);
   };
 
   return (
-    <form action="#" onSubmit={handleSubmit} className="w-full">
+    <div className="w-full">
       <div className="w-full py-6 px-4 sm:p-8 md:p-10 bg-neutral-100 rounded-2xl">
         <h4 className="text-black-900 text-2xl font-bold">Plan Summary</h4>
         <div className="mt-3 sm:mt-6 md:mt-12 pb-5 flex flex-col gap-4">
@@ -28,16 +27,15 @@ function PocketWifiPlanSummery() {
               Chosen Plan
             </span>
             <span className="text-base sm:text-lg text-black-700">
-              Chosen Plan
+              {cart?.package?.title} {cart?.package?.dataSize}{" "}
+              {cart?.package?.desc}
             </span>
           </div>
           <div className="flex items-center justify-between gap-3">
             <span className="text-base sm:text-lg text-black-700">
               Data Available
             </span>
-            <span className="text-base sm:text-lg text-black-700">
-              Chosen Plan
-            </span>
+            <span className="text-base sm:text-lg text-black-700">1GB/Day</span>
           </div>
           <div className="flex items-center justify-between gap-3">
             <span className="text-base sm:text-lg text-black-700">
@@ -60,11 +58,17 @@ function PocketWifiPlanSummery() {
           <span className="text-lg text-black-900 font-semibold">
             Total Amount
           </span>
-          <span className="text-lg text-black-900 font-semibold">SGD 79</span>
+          <span className="text-lg text-black-900 font-semibold">
+            SGD {cart?.package?.packPrice}
+          </span>
         </div>
       </div>
-      <PocketWifiCartFooter prevHandler={handlePrev} isActive={true} />
-    </form>
+      <PocketWifiCartFooter
+        prevHandler={handlePrev}
+        nextHandler={handleNext}
+        isActive={true}
+      />
+    </div>
   );
 }
 

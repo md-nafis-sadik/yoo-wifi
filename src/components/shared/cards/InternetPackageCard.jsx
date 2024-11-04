@@ -4,8 +4,8 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const InternetPackageCard = () => {
   return (
-    <div className="bg-white rounded-2xl md:rounded-3xl p-4 ring-[2px] ring-neutral-200 hover:ring-0 hover:shadow-card-primary tranistion_common">
-      <div className="w-full aspect-[1.06/1] relative overflow-hidden rounded-lg md:rounded-2xl">
+    <div className="bg-white rounded-[8px] md:rounded-3xl p-2 md:p-4 ring-[2px] ring-neutral-200 hover:ring-0 hover:shadow-card-primary tranistion_common">
+      <div className="w-full aspect-[1.06/1] relative overflow-hidden rounded-[4px] md:rounded-2xl">
         <LazyLoadImage
           src={images.middleEast}
           alt={"middel east"}
@@ -15,11 +15,11 @@ const InternetPackageCard = () => {
         />
       </div>
 
-      <h2 className="text-base md:text-[28px] !leading-[1.1] font-bold text-center mt-4">
+      <h2 className="text-base md:text-[28px] !leading-[1.1] font-bold text-center mt-2 md:mt-4">
         Middle East
       </h2>
 
-      <hr className="my-4 h-[1px] bg-neutral-100" />
+      <hr className="my-1 md:my-4 h-[1px] bg-neutral-100" />
 
       <div className="flex justify-between items-center gap-4">
         <div className="felx flex-col">
@@ -32,7 +32,7 @@ const InternetPackageCard = () => {
         </div>
         <Button
           className={
-            "px-2 py-[5px] md:px-6 md:py-4 !leading-normal rounded-sm md:rounded-xl"
+            "!px-2 !py-[5px] md:!px-6 md:!py-4 text-[10px] md:text-base !leading-[1.2] rounded-sm md:rounded-xl"
           }
         >
           Find Out More

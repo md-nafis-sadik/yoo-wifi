@@ -1,10 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { apiSlice } from "./module/api/apiSlice";
 import authSlice from "./module/auth/slice";
+import howItWorksReducer from "./module/howItWorks/HowItWorksSlice";
 import pocketWifiSlice from "./module/pocketWifi/slice";
 import sharedSlice from "./module/shared/sharedSlice";
 import testimonialsSlice from "./module/testimonials/testimonialsSlice";
-import howItWorksReducer from "./module/howItWorks/HowItWorksSlice";
+import aboutSlice from "./module/about/aboutSlice";
 
 export const store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ export const store = configureStore({
     shared: sharedSlice,
     testimonials: testimonialsSlice,
     howItWorks: howItWorksReducer,
+    about: aboutSlice,
   },
   middleware: (getDefaultMiddlewares) =>
     getDefaultMiddlewares({
@@ -27,7 +29,11 @@ export const store = configureStore({
           "meta.baseQueryMeta.response",
           "payload",
         ],
-        ignoredPaths: ["pocketWifi.features", "pocketWifi.cart.startDate"],
+        ignoredPaths: [
+          "pocketWifi.features",
+          "pocketWifi.cart.startDate",
+          "howItWorks",
+        ],
       },
     }).concat(apiSlice.middleware),
 });

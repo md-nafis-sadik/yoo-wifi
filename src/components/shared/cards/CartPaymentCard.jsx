@@ -2,8 +2,7 @@ import { cn } from "@/lib/utils";
 import { VisaIcon } from "@/services";
 
 function CartPaymentCard({ item = {}, ...props }) {
-  const cardNumber = "1234567891234567";
-  const numbers = cardNumber.match(/.{1,4}/g);
+  const numbers = item?.cardNumber?.match(/.{1,4}/g);
   return (
     <div
       className={cn(
@@ -23,8 +22,8 @@ function CartPaymentCard({ item = {}, ...props }) {
         ))}
       </div>
       <div className="flex justify-between">
-        <span className="font-medium text-xxs">Jack Lewis</span>
-        <span className="font-medium text-xxs">06/21</span>
+        <span className="font-medium text-xxs">{item?.username}</span>
+        <span className="font-medium text-xxs">{item?.expireDate}</span>
       </div>
     </div>
   );

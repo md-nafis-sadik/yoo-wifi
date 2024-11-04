@@ -19,14 +19,17 @@ function InternetPackage() {
               id="searchCountry"
               type="text"
               placeholder="Search country.."
-              className="flex-1 h-full w-[100px] bg-transparent border-none outline-none text-black placeholder:text-black-600 text-base"
+              className="flex-1 h-full w-[100px] bg-transparent border-none outline-none text-sm md:text-base text-black placeholder:text-black-600"
             />
-            <Button className={"font-medium"} size={"sm"}>
+            <Button
+              className={"font-medium text-sm max-h-8 md:max-h-9"}
+              size={"sm"}
+            >
               Search
             </Button>
           </label>
         </form>
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-8">
           {Array(6)
             .fill(1)
             .map((_, index) => (

@@ -6,7 +6,7 @@ const ConnectCard = ({ item, containerClassName, ...props }) => {
   return (
     <div
       className={cn(
-        "rounded-2xl md:rounded-3xl bg-white py-6 md:py-10 px-4 md:px-6 shadow-card-secondary w-full",
+        "rounded-2xl md:rounded-3xl bg-white py-6 md:py-10 px-4 md:px-6 shadow-card-secondary w-full border border-neutral-200",
         containerClassName
       )}
       {...props}
