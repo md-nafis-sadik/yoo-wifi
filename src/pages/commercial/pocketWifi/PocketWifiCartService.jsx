@@ -81,6 +81,8 @@ function PocketWifiCartService() {
           </div>
         </div>
       </div>
+
+      {/* data size : for select or change data plan. this will work   */}
       <DataSize />
       <ServiceDate />
       <CartQuantity
