@@ -15,10 +15,7 @@ function PocketWifiRegion() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isActive =
-    cart?.productCountry?.id &&
-    cart?.color?.hex &&
-    cart?.promoCode &&
-    cart?.memberId
+    cart?.productCountry?.id && cart?.color?.hex && cart?.memberId
       ? true
       : false;
 
