@@ -1,14 +1,15 @@
-import React from "react";
-import { Outlet, useNavigate } from "react-router-dom";
-import { Button } from "../ui/button";
+import useSetLocalData from "@/hooks/useSetLocalData";
 import { commercialRoutes, corporateRoutes } from "@/services";
+import { Outlet, useNavigate } from "react-router-dom";
 import Footer from "../shared/Footer";
+import { Button } from "../ui/button";
 
 function CommercialLayout() {
   const navigate = useNavigate();
   const handleNavigate = (path) => {
     navigate(path);
   };
+  useSetLocalData("commercialLayout");
   return (
     <main>
       {/* Removable */}

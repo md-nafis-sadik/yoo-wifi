@@ -2,6 +2,18 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   auth: {},
+  wifiDevices: [
+    {
+      id: 1,
+      name: "Wifi Device",
+      deviceId: "55775254747523",
+    },
+    {
+      id: 2,
+      name: "Wifi Device",
+      deviceId: "55775254222892",
+    },
+  ],
 };
 
 const authSlice = createSlice({

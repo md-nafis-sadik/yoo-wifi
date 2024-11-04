@@ -15,7 +15,7 @@ function KeyFeatures() {
           />
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 px-4 mt-15">
             {features?.map((item, index) => (
-              <FeatureCard svg={item?.icon} title={item?.title} key={index} />
+              <FeatureCard svg={item?.icon()} title={item?.title} key={index} />
             ))}
           </div>
         </div>
