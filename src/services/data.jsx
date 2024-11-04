@@ -1,19 +1,37 @@
-import { DollarLabelIcon, EarthIcon, images, SignalIcon } from ".";
+import {
+  commercialRoutes,
+  DollarLabelIcon,
+  EarthIcon,
+  images,
+  SignalIcon,
+} from ".";
 
 // h
 
 // n
 
-export const navBarData = {
+export const navBarData = () => ({
   commercialNavItems: [
-    { _id: 1, label: "Home", path: "/" },
-    { _id: 2, label: "Pocket WIFI", path: "/pocket-wifi" },
+    {
+      _id: 1,
+      label: commercialRoutes.home.name,
+      path: commercialRoutes.home.path,
+    },
+    {
+      _id: 2,
+      label: commercialRoutes.pocketWifi.name,
+      path: commercialRoutes.pocketWifi.path,
+    },
     { _id: 3, label: "Router", path: "/router" },
     { _id: 4, label: "SIM/eSIM", path: "/sim-esim" },
     { _id: 5, label: "Contact Us", path: "/contact" },
-    { _id: 6, label: "About Us", path: "/about" },
+    {
+      _id: 6,
+      label: commercialRoutes.aboutUs.name,
+      path: commercialRoutes.aboutUs.path,
+    },
   ],
-};
+});
 
 // p
 

@@ -12,9 +12,8 @@ const buttonVariants = cva(
         default: "bg-main-600 text-white shadow hover:bg-main-500/70",
         secondary: "bg-secondary-500 hover:bg-secondary-500/70 text-black-900",
         alert: "bg-secondary-500 text-black-900",
-        outline:
-          "border border-zinc-200 bg-white shadow-sm hover:bg-zinc-100 text-black-700",
-        ghost: "hover:bg-zinc-100 hover:text-zinc-900 ",
+        outline: "border border-neutral-200 hover:opacity-70",
+        ghost: "hover:opacity-70",
         cancel:
           "border border-neutral-300 bg-neutral-100 shadow-sm hover:bg-neutral-100 text-black-700",
         link: "text-zinc-900 underline-offset-4 hover:underline",

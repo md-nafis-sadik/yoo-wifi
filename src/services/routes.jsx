@@ -1,5 +1,6 @@
 import CommercialLayout from "@/components/layout/CommercialLayout";
 import PocketWifiLayout from "@/components/layout/PocketWifiLayout";
+import AboutUs from "@/pages/commercial/AboutUs";
 import Home from "@/pages/commercial/Home";
 import PocketWifi from "@/pages/commercial/pocketWifi/PocketWifi";
 import PocketWifiCartService from "@/pages/commercial/pocketWifi/PocketWifiCartService";
@@ -79,6 +80,14 @@ const commercialRoutes = {
     name: "Pocket Wifi",
     activePath: "pocketWifi",
     element: <PocketWifiOrderSummery />,
+  },
+
+  // about us
+  aboutUs: {
+    path: "/about-us",
+    name: "About Us",
+    activePath: "aboutUs",
+    element: <AboutUs />,
   },
 };
 
