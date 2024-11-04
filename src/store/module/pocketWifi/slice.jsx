@@ -365,6 +365,7 @@ const initialState = {
     shippingAddress: {},
     pickupCountry: null,
     pickupLocation: {},
+    paymentCard: {},
   },
   pickupLocations: [
     {
@@ -441,7 +442,6 @@ const pocketWifiSlice = createSlice({
   initialState,
   reducers: {
     setPocketWifiCartData: (state, action) => {
-      console.log(action?.payload);
       state.cart = { ...state.cart, ...action?.payload };
     },
     handleNextPocketWifiCart: (state) => {

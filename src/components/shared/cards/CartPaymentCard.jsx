@@ -1,12 +1,13 @@
 import { cn } from "@/lib/utils";
 import { VisaIcon } from "@/services";
 
-function CartPaymentCard({ item = {}, ...props }) {
+function CartPaymentCard({ item = {}, wrapperClass = "", ...props }) {
   const numbers = item?.cardNumber?.match(/.{1,4}/g);
   return (
     <div
       className={cn(
-        "w-full flex flex-col gap-y-14 py-6 px-4 rounded-[10.629px] bg-main-600 text-white font-gilroy"
+        "w-full flex flex-col gap-y-14 py-6 px-4 rounded-[10.629px] bg-main-600 text-white font-gilroy cursor-pointer",
+        wrapperClass
       )}
       {...props}
     >

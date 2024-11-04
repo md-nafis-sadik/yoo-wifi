@@ -9,8 +9,9 @@ import {
 } from "@/components/ui/dialog";
 import { Switch } from "@/components/ui/switch";
 import { commercialRoutes, PlusIcon, SuccessIcon } from "@/services";
+import { setPocketWifiCartData } from "@/store/module/pocketWifi/slice";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 function PocketWifiOrderSummery() {
@@ -20,9 +21,15 @@ function PocketWifiOrderSummery() {
   const [showForm, setShowForm] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const dispatch = useDispatch();
+  const isActive = isChecked && cart?.paymentCard?.id ? true : false;
 
   const handlePrev = () => {
     navigate(commercialRoutes.pocketWifiCartService.path);
+  };
+
+  const handlePaymentCardSelect = (item) => {
+    dispatch(setPocketWifiCartData({ paymentCard: item }));
   };
 
   const handleNext = () => {
@@ -133,7 +140,14 @@ function PocketWifiOrderSummery() {
           {userPaymentCards?.length > 0 && (
             <div className="mt-4 sm:mt-6 grid lg:grid-cols-2 gap-4">
               {userPaymentCards?.map((item, index) => (
-                <CartPaymentCard item={item} key={index} />
+                <CartPaymentCard
+                  wrapperClass={
+                    cart?.paymentCard?.id == item?.id ? "bg-main-700" : ""
+                  }
+                  item={item}
+                  key={index}
+                  onClick={() => handlePaymentCardSelect(item)}
+                />
               ))}
 
               <button
@@ -204,7 +218,7 @@ function PocketWifiOrderSummery() {
       <PocketWifiCartFooter
         prevHandler={handlePrev}
         nextHandler={handleNext}
-        isActive={isChecked}
+        isActive={isActive}
       />
     </div>
   );
