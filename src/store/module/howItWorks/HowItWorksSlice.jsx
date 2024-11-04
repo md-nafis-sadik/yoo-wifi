@@ -5,9 +5,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = [
   {
     _id: 1,
-    icon: (
-      <LocationMarkerIcon className={"h-10 w-10 md:h-[60px] md:w-[60px]"} />
-    ),
+    icon: <RentIcon className={"h-10 w-10 md:h-[60px] md:w-[60px]"} />,
     title: "How To Rent",
     description:
       "Stay connected with Yoowifi in just 3 simple steps! Download the app, choose your destination, and select the package that fits your needs.",
@@ -15,7 +13,10 @@ const initialState = [
   },
   {
     _id: 2,
-    icon: <RentIcon className={"h-10 w-10 md:h-[60px] md:w-[60px]"} />,
+
+    icon: (
+      <LocationMarkerIcon className={"h-10 w-10 md:h-[60px] md:w-[60px]"} />
+    ),
     title: "How To Return",
     description:
       "Choose easy returns with Singpost drop-off or visit locations islandwide for hassle-free service.",

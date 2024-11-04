@@ -17,12 +17,15 @@ import ProductGallery from "@/components/shared/others/ProductGallery";
 import { Button } from "@/components/ui/button";
 import { CountrySelect } from "react-country-state-city";
 import { useNavigate } from "react-router-dom";
-import { commercialRoutes, corporateRoutes } from "@/services";
-import { productCardsData } from "@/services/data";
-import { useState } from "react";
+import { commercialRoutes, corporateRoutes, productsData } from "@/services";
+import { useMemo, useState } from "react";
+import { useSelector } from "react-redux";
 
 const SharedElements = () => {
   const [selectedCard, setSelectedCard] = useState(null);
+  const products = useMemo(() => productsData(), []);
+
+  const howItWorksData = useSelector((state) => state.howItWorks);
 
   const navigate = useNavigate();
   const handleNavigate = (path) => {
@@ -57,7 +60,7 @@ const SharedElements = () => {
       <div className="flex flex-col gap-10">
         <div className="flex flex-col gap-3">
           <p>ProductCard</p>
-          {productCardsData.slice(0, 1).map((item, index) => (
+          {products.cardData.slice(0, 1).map((item, index) => (
             <ProductCard
               key={index}
               item={item}
@@ -72,7 +75,9 @@ const SharedElements = () => {
         </div>
         <div className="flex flex-col gap-3">
           <p>ConnectCard</p>
-          <ConnectCard />
+          {howItWorksData.slice(0, 1).map((item, index) => (
+            <ConnectCard key={index} item={item} />
+          ))}
         </div>
         <div className="flex flex-col gap-3">
           <p>Collaborate Marquee</p>

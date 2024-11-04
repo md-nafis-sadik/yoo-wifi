@@ -1,40 +1,52 @@
-import {
-  DollarLabelIcon,
-  EarthIcon,
-  images,
-  LocationMarkerIcon,
-  RentIcon,
-  ReturnIcon,
-  SignalIcon,
-} from ".";
+import { DollarLabelIcon, EarthIcon, images, SignalIcon } from ".";
 
 // h
 
+// n
+
+export const navBarData = {
+  commercialNavItems: [
+    { _id: 1, label: "Home", path: "/" },
+    { _id: 2, label: "Pocket WIFI", path: "/pocket-wifi" },
+    { _id: 3, label: "Router", path: "/router" },
+    { _id: 4, label: "SIM/eSIM", path: "/sim-esim" },
+    { _id: 5, label: "Contact Us", path: "/contact" },
+    { _id: 6, label: "About Us", path: "/about" },
+  ],
+};
+
 // p
 
-export const productCardsData = [
-  {
-    title: "Pocket WIFI",
-    description:
-      "Stay connected on the go with our high-speed Pocket WIFI. Perfect for travel and remote work.",
-    offer: "50% OFF",
-    link: "/",
-  },
-  {
-    title: "Router",
-    description:
-      "Experience seamless and reliable internet connectivity at home with our advanced routers.",
-    offer: "30% OFF",
-    link: "/",
-  },
-  {
-    title: "SIM/eSIM",
-    description:
-      "Get instant connectivity with our SIM and eSIM options, suitable for all your devices.",
-    offer: "20% OFF",
-    link: "/",
-  },
-];
+export const productsData = () => ({
+  productImages: [
+    images.pocketWifiNewUpdate,
+    images.routerWhite,
+    images.pocketWifiSimRed2,
+  ],
+  cardData: [
+    {
+      title: "Pocket WIFI",
+      description:
+        "Stay connected on the go with our high-speed Pocket WIFI. Perfect for travel and remote work.",
+      offer: "50% OFF",
+      link: "/",
+    },
+    {
+      title: "Router",
+      description:
+        "Experience seamless and reliable internet connectivity at home with our advanced routers.",
+      offer: "30% OFF",
+      link: "/",
+    },
+    {
+      title: "SIM/eSIM",
+      description:
+        "Get instant connectivity with our SIM and eSIM options, suitable for all your devices.",
+      offer: "20% OFF",
+      link: "/",
+    },
+  ],
+});
 
 // r
 

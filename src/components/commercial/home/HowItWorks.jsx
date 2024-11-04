@@ -8,7 +8,7 @@ const HowItWorks = () => {
   const howItWorksData = useSelector((state) => state.howItWorks);
 
   return (
-    <section className="containerX px-4 min-[1176px]:px-0 sec_common_60 flex flex-col items-center gap-6 md:gap-10 lg:gap-20">
+    <section className="containerX sec_common_60 flex flex-col items-center gap-6 md:gap-10 lg:gap-20">
       <HeadingWithSubHeading
         heading="Stay Connected Anywhere, Anytime"
         subHeading="Discover what our valued customers have to say about their experiences with our services"
