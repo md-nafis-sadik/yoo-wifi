@@ -16,6 +16,12 @@ function CommercialLayout() {
       <div className="flex_center flex-col md:flex-row gap-4 py-4">
         <Button
           type="button"
+          onClick={() => handleNavigate(commercialRoutes.pocketWifi.path)}
+        >
+          Navigate to pocket wifi
+        </Button>
+        <Button
+          type="button"
           onClick={() => handleNavigate(commercialRoutes.home.path)}
         >
           Navigate to commercial
