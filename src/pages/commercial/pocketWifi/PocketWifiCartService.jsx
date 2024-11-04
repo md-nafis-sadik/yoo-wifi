@@ -19,19 +19,21 @@ function PocketWifiCartService() {
   const options = { align: "start" };
   const [emblaRef] = useEmblaCarousel(options);
   const navigate = useNavigate();
+  
   const isActivePackage = Boolean(cart?.package?.id || cart?.topup?.planCode);
   const deviceSelect =
     cart?.cartType === "topup" ? Boolean(cart?.device?.deviceId) : true;
   const isCountryAvailable = Boolean(cart?.productCountry?.id);
   const isStartDateAvailable = Boolean(cart?.startDate);
+
+
   const isActive =
     isActivePackage &&
     deviceSelect &&
     isCountryAvailable &&
     isStartDateAvailable;
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleNext = () => {
     navigate(commercialRoutes.pocketWifiPlanSummery.path);
     dispatch(handleNextPocketWifiCart());
   };
@@ -49,11 +51,7 @@ function PocketWifiCartService() {
   };
 
   return (
-    <form
-      action="#"
-      onSubmit={handleSubmit}
-      className="w-full flex flex-col gap-6"
-    >
+    <div className="w-full flex flex-col gap-6">
       <div className="w-full flex flex-col gap-4">
         <h2 className="text-base font-semibold text-black-700">Service</h2>
         <div ref={emblaRef} className="w-full max-w-full overflow-hidden">
@@ -90,8 +88,12 @@ function PocketWifiCartService() {
         defaultValue={cart?.quantity}
         setter={handleCartQuantity}
       />
-      <PocketWifiCartFooter prevHandler={handlePrev} isActive={isActive} />
-    </form>
+      <PocketWifiCartFooter
+        prevHandler={handlePrev}
+        nextHandler={handleNext}
+        isActive={isActive}
+      />
+    </div>
   );
 }
 

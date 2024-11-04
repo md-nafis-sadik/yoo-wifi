@@ -18,8 +18,10 @@ import pocketWifiNewUpdate from "@/assets/images/pocket-wifi-new-update.webp";
 import pocketWifiSimRed2 from "@/assets/images/pocket-wifi-sim-red-2.webp";
 import pocketWifiSimRed from "@/assets/images/pocket-wifi-sim-red.webp";
 import qrcode from "@/assets/images/qrcode.webp";
+import locationMap from "@/assets/images/location-map.webp"
 
 export {
+  locationMap,
   africaRegionBlack,
   airtelIndia,
   americaRegionBlack,

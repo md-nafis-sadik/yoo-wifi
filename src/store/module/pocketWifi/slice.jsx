@@ -117,16 +117,12 @@ const initialState = {
         "365 Days Validity",
         "Covers 90 Countries",
       ],
-      price: {
-        currency: "SGD",
-        amount: 30,
-      },
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
       category: "daily",
       planCode: "plan_1",
       dataSize: 3,
-      price: 10,
+      packPrice: 10,
       validity: 30,
       desc: "GB",
     },
@@ -140,16 +136,13 @@ const initialState = {
         "365 Days Validity",
         "Covers 90 Countries",
       ],
-      price: {
-        currency: "SGD",
-        amount: 50,
-      },
+
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
       category: "daily",
-      planCode: "plan_1",
+      planCode: "plan_2",
       dataSize: 3,
-      price: 10,
+      packPrice: 10,
       validity: 30,
       desc: "GB",
     },
@@ -163,16 +156,13 @@ const initialState = {
         "365 Days Validity",
         "Covers 90 Countries",
       ],
-      price: {
-        currency: "SGD",
-        amount: 100,
-      },
+
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
       category: "daily",
-      planCode: "plan_1",
+      planCode: "plan_3",
       dataSize: 3,
-      price: 10,
+      packPrice: 10,
       validity: 30,
       desc: "GB",
     },
@@ -186,16 +176,13 @@ const initialState = {
         "365 Days Validity",
         "Covers 90 Countries",
       ],
-      price: {
-        currency: "SGD",
-        amount: 150,
-      },
+
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
       category: "daily",
-      planCode: "plan_1",
+      planCode: "plan_4",
       dataSize: 3,
-      price: 10,
+      packPrice: 10,
       validity: 30,
       desc: "GB",
     },
@@ -209,16 +196,13 @@ const initialState = {
         "180 Days Validity",
         "Covers 60 Countries",
       ],
-      price: {
-        currency: "SGD",
-        amount: 20,
-      },
+
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
       category: "monthly",
-      planCode: "plan_1",
+      planCode: "plan_5",
       dataSize: 3,
-      price: 10,
+      packPrice: 10,
       validity: 30,
       desc: "GB",
     },
@@ -233,21 +217,13 @@ const initialState = {
         "Priority support",
         "Covers 100 Countries",
       ],
-      price: {
-        currency: "SGD",
-        amount: 200,
-      },
+
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
       category: "volumn",
-      planCode: "plan_1",
+      planCode: "plan_6",
       dataSize: 3,
-      price: 10,
-      validity: 30,
-      desc: "GB",
-      planCode: "plan_1",
-      dataSize: 3,
-      price: 10,
+      packPrice: 10,
       validity: 30,
       desc: "GB",
     },
@@ -262,13 +238,15 @@ const initialState = {
         "Unlimited data in selected countries",
         "Covers 90 Countries",
       ],
-      price: {
-        currency: "SGD",
-        amount: 250,
-      },
+
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
       category: "daily",
+      planCode: "plan_7",
+      dataSize: 3,
+      packPrice: 10,
+      validity: 30,
+      desc: "GB",
     },
     {
       id: 8,
@@ -281,13 +259,15 @@ const initialState = {
         "Connect up to 10 devices",
         "Covers 90 Countries",
       ],
-      price: {
-        currency: "SGD",
-        amount: 180,
-      },
+
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
       category: "volumn",
+      planCode: "plan_8",
+      dataSize: 3,
+      packPrice: 10,
+      validity: 30,
+      desc: "GB",
     },
     {
       id: 9,
@@ -300,13 +280,15 @@ const initialState = {
         "Extended data for heavy users",
         "Covers 80 Countries",
       ],
-      price: {
-        currency: "SGD",
-        amount: 120,
-      },
+
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
       category: "monthly",
+      planCode: "plan_9",
+      dataSize: 3,
+      packPrice: 10,
+      validity: 30,
+      desc: "GB",
     },
     {
       id: 10,
@@ -319,13 +301,14 @@ const initialState = {
         "Unlimited data globally",
         "Covers 100 Countries",
       ],
-      price: {
-        currency: "SGD",
-        amount: 300,
-      },
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
       category: "daily",
+      planCode: "plan_10",
+      dataSize: 3,
+      packPrice: 10,
+      validity: 30,
+      desc: "GB",
     },
   ],
   features: [
@@ -354,7 +337,7 @@ const initialState = {
     {
       planCode: "plan_1",
       dataSize: 3,
-      price: 10,
+      packPrice: 10,
       validity: 30,
       desc: "GB",
     },
@@ -379,7 +362,78 @@ const initialState = {
     startDate: null,
     endDate: null,
     shipping: {},
+    shippingAddress: {},
+    pickupCountry: null,
+    pickupLocation: {},
   },
+  pickupLocations: [
+    {
+      name: "Albert Village Court Hotel",
+      location: {
+        city: "Singapore",
+        address: {
+          street: "180 Albert St",
+          postal_code: "189971",
+        },
+      },
+      code: "SG-ALBERT-VILLAGE",
+    },
+    {
+      name: "Marina Bay Grand",
+      location: {
+        city: "Singapore",
+        address: {
+          street: "10 Bayfront Ave",
+          postal_code: "018956",
+        },
+      },
+      code: "SG-MARINA-BAY",
+    },
+    {
+      name: "The Orchard Palace",
+      location: {
+        city: "Singapore",
+        address: {
+          street: "442 Orchard Rd",
+          postal_code: "238879",
+        },
+      },
+      code: "SG-ORCHARD-PALACE",
+    },
+    {
+      name: "Riverside Elegance Hotel",
+      location: {
+        city: "Singapore",
+        address: {
+          street: "1 Fullerton Rd",
+          postal_code: "049213",
+        },
+      },
+      code: "SG-RIVERSIDE-ELEGANCE",
+    },
+    {
+      name: "Sentosa Seaside Resort",
+      location: {
+        city: "Singapore",
+        address: {
+          street: "101 Siloso Rd",
+          postal_code: "098970",
+        },
+      },
+      code: "SG-SENTOSA-SEASIDE",
+    },
+    {
+      name: "Clarke Quay Luxury Suites",
+      location: {
+        city: "Singapore",
+        address: {
+          street: "3 River Valley Rd",
+          postal_code: "179024",
+        },
+      },
+      code: "SG-CLARKE-QUAY",
+    },
+  ],
 };
 
 const pocketWifiSlice = createSlice({
@@ -387,6 +441,7 @@ const pocketWifiSlice = createSlice({
   initialState,
   reducers: {
     setPocketWifiCartData: (state, action) => {
+      console.log(action?.payload);
       state.cart = { ...state.cart, ...action?.payload };
     },
     handleNextPocketWifiCart: (state) => {

@@ -30,8 +30,7 @@ function PocketWifiPlan() {
     dispatch(setPocketWifiCartData({ package: item }));
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleNext = () => {
     navigate(commercialRoutes.pocketWifiCartService.path);
     dispatch(handleNextPocketWifiCart());
   };
@@ -41,7 +40,7 @@ function PocketWifiPlan() {
   };
 
   return (
-    <form action="#" onSubmit={handleSubmit} className="w-full">
+    <div className="w-full">
       <div className="w-full flex flex-col gap-5">
         <h2>Select a Plan</h2>
         <div ref={emblaRef} className="w-full max-w-full overflow-hidden">
@@ -101,8 +100,12 @@ function PocketWifiPlan() {
           />
         ))}
       </div>
-      <PocketWifiCartFooter prevHandler={handlePrev} isActive={isActive} />
-    </form>
+      <PocketWifiCartFooter
+        prevHandler={handlePrev}
+        nextHandler={handleNext}
+        isActive={isActive}
+      />
+    </div>
   );
 }
 

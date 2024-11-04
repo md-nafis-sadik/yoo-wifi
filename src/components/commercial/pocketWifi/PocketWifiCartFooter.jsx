@@ -4,7 +4,6 @@ import { setPocketWifiCartData } from "@/store/module/pocketWifi/slice";
 import { useDispatch, useSelector } from "react-redux";
 
 function PocketWifiCartFooter({
-  packageName = "SGD 0.00",
   isActive = false,
   prevHandler = () => {},
   nextHandler = () => {},
@@ -51,7 +50,7 @@ function PocketWifiCartFooter({
             </div>
           )}
           <h3 className="text-black-900 text-base sm:text-lg md:text-2xml font-bold whitespace-nowrap">
-            {packageName}
+            SGD {cart?.package?.packPrice || "0.00"}
           </h3>
         </div>
         <div className="w-full md:max-w-max">
@@ -64,7 +63,7 @@ function PocketWifiCartFooter({
               Previous
             </Button>
             <Button
-              type="submit"
+              type="button"
               className={cn("w-full min-w-[140px] font-semibold")}
               disabled={!isActive}
               onClick={nextHandler}
@@ -73,55 +72,6 @@ function PocketWifiCartFooter({
             </Button>
           </div>
         </div>
-        {/* <div className="w-full">
-          <h2 className="hidden  sm:block sm:text-base md:text-2xml text-black-900 font-bold">
-            {product?.name}
-          </h2>
-        </div>
-        <div className="flex items-center gap-20">
-          {product?.colors?.length > 0 && (
-            <div className="flex items-center gap-2">
-              <span className="text-base sm:text-lg md:text-2xl font-bold text-black-700">
-                Color
-              </span>
-              <div className="flex items-center gap-4">
-                {product?.colors?.map((color, index) => (
-                  <div
-                    key={index}
-                    className={cn(
-                      "w-7 aspect-square rounded-full cursor-pointer border",
-                      color?.hex == cart?.color?.hex
-                        ? "border-secondary-500"
-                        : "border-transparent"
-                    )}
-                    onClick={() => handleColorChange(color)}
-                    style={{ background: color?.hex }}
-                  ></div>
-                ))}
-              </div>
-            </div>
-          )}
-          <h3 className="text-black-900 text-2xml font-bold whitespace-nowrap">
-            {packageName}
-          </h3>
-          <div className="flex items-center gap-5">
-            <Button
-              variant="outline"
-              className={"min-w-[140px] font-semibold"}
-              onClick={prevHandler}
-            >
-              Previous
-            </Button>
-            <Button
-              type="submit"
-              className={cn("min-w-[140px] font-semibold")}
-              disabled={!isActive}
-              onClick={nextHandler}
-            >
-              Next
-            </Button>
-          </div>
-        </div> */}
       </div>
     </div>
   );
