@@ -10,7 +10,7 @@ function KeyFeatures() {
         <div>
           <SectionHeader
             heading="Key Features"
-            subHeading="Don’t let slow internet tie you down! Switch to our portable solutions to experience connectivity without boundaries."
+            subHeading="Don't let slow internet tie you down! Switch to our portable solutions to experience connectivity without boundaries."
             containerClassName="gap-4"
           />
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 px-4 mt-15">

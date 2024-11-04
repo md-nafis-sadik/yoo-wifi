@@ -7,8 +7,8 @@ import { ChevronRight } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-black px-6 min-[1320px]:px-0">
-      <div className="container2X sec_common_80 grid grid-cols-1 md:grid-cols-10 gap-10 md:gap-20">
+    <footer className="bg-black">
+      <div className="container2X sec_common_80 lg:px-4 grid grid-cols-1 md:grid-cols-10 gap-10 md:gap-20">
         {/* CONTACT/LOGO */}
         <div className="col-span-1 md:col-span-5 min-[1320px]:col-span-4">
           <LazyLoadImage
@@ -66,7 +66,7 @@ const Footer = () => {
         ))}
       </div>
 
-      <div className="container2X sec_common_40 flex flex-col md:flex-row gap-2 justify-between md:items-center">
+      <div className="container2X sec_common_40 lg:px-4 flex flex-col md:flex-row gap-2 justify-between md:items-center">
         <p className="text-sm md:text-base text-white !leading-[1.4]">
           ©2024 <span className="font-semibold">Yoowifi</span>. All Rights
           Reserved.

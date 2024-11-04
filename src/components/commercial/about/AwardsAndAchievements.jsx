@@ -1,6 +1,4 @@
-import { LazyLoadImage } from "react-lazy-load-image-component";
-
-const WhoWeAre = ({ data = {} }) => {
+const AwardsAndAchievements = ({ data = {} }) => {
   return (
     <div className="container2X sec_common_60 xl:px-0 flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-10">
       <div className="w-full md:w-1/2">
@@ -22,4 +20,4 @@ const WhoWeAre = ({ data = {} }) => {
   );
 };
 
-export default WhoWeAre;
+export default AwardsAndAchievements;

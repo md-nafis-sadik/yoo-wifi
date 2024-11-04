@@ -4,6 +4,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 import Footer from "../shared/navigation/Footer";
 import NavBar from "../shared/navigation/NavBar";
+import DownloadYoowifi from "../shared/others/DownloadYoowifi";
 
 function CommercialLayout() {
   const navigate = useNavigate();
@@ -43,6 +44,7 @@ function CommercialLayout() {
       {/* Removable */}
       <NavBar />
       <Outlet />
+      <DownloadYoowifi />
       <Footer />
     </main>
   );
