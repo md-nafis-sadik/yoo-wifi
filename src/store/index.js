@@ -5,6 +5,7 @@ import howItWorksReducer from "./module/howItWorks/HowItWorksSlice";
 import pocketWifiSlice from "./module/pocketWifi/slice";
 import sharedSlice from "./module/shared/sharedSlice";
 import testimonialsSlice from "./module/testimonials/testimonialsSlice";
+import aboutSlice from "./module/about/aboutSlice";
 
 export const store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ export const store = configureStore({
     shared: sharedSlice,
     testimonials: testimonialsSlice,
     howItWorks: howItWorksReducer,
+    about: aboutSlice,
   },
   middleware: (getDefaultMiddlewares) =>
     getDefaultMiddlewares({

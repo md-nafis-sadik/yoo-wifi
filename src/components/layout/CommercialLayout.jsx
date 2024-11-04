@@ -1,8 +1,9 @@
 import useSetLocalData from "@/hooks/useSetLocalData";
 import { commercialRoutes, corporateRoutes } from "@/services";
 import { Outlet, useNavigate } from "react-router-dom";
-import Footer from "../shared/Footer";
 import { Button } from "../ui/button";
+import Footer from "../shared/navigation/Footer";
+import NavBar from "../shared/navigation/NavBar";
 
 function CommercialLayout() {
   const navigate = useNavigate();
@@ -40,7 +41,7 @@ function CommercialLayout() {
         </Button>
       </div>
       {/* Removable */}
-
+      <NavBar />
       <Outlet />
       <Footer />
     </main>
