@@ -1,28 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { DollarLabelIcon, EarthIcon, images, SignalIcon } from "@/services";
+import { images } from "@/services";
+import { servicesData } from "@/services/data";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const WhyYoowifi = () => {
-  const featuresData = [
-    {
-      _id: 1,
-      icon: <SignalIcon className={"h-6 w-6"} />,
-      title: "Stay Connected Anywhere",
-    },
-    {
-      _id: 2,
-      icon: <EarthIcon className={"h-6 w-6"} />,
-      title: "Save BIG on International Roaming",
-    },
-    {
-      _id: 3,
-      icon: <DollarLabelIcon className={"h-6 w-6"} />,
-      title: "Unbeatable Pricing Guarantee",
-    },
-  ];
-
   return (
-    <section className="sec_common_60 bg-white">
+    <section className="sec_common_60 bg-white px-4 min-[1176px]:px-0">
       <div className="containerX flex flex-col-reverse md:flex-row gap-6 md:gap-10 lg:gap-[60px]">
         <div className="w-full md:w-1/2 min-[950px]:w-2/5 overflow-visible">
           <LazyLoadImage
@@ -34,13 +17,13 @@ const WhyYoowifi = () => {
           />
         </div>
 
-        <div className="w-full md:w-1/2 min-[950px]:w-3/5 flex flex-col justify-center items-center md:items-start gap-6 md:gap-9">
+        <div className="w-full md:w-1/2 min-[950px]:w-3/5 flex flex-col justify-center items-start gap-6 md:gap-9">
           <h2 className="title text-start">Why Yoowifi?</h2>
 
           <div className="flex flex-col gap-4">
-            {featuresData.map(({ _id, icon, title }) => (
+            {servicesData().map(({ _id, icon, title }) => (
               <div key={_id} className="flex items-center gap-4">
-                <div className="flex_center bg-[#FFF1F1] rounded-full h-11 w-11">
+                <div className="flex_center bg-[#FFF1F1] rounded-full h-8 w-8 md:h-11 md:w-11">
                   {icon}
                 </div>
                 <p className="text-sm md:text-lg !leading-[1.4] text-black-700">
