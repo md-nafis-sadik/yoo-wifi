@@ -57,7 +57,7 @@ function Hero() {
             </div>
             <div className="flex flex-col md:items-end gap-4">
               <div className="w-full mt-4 sm:mt-7 md:mt-12 flex flex-col md:flex-row md:items-center justify-between gap-2">
-                <div className="flex md:flex-row gap-2 md:gap-0">
+                <div className="flex md:flex-row gap-2 md:gap-4">
                   <h3 className="text-2xl text-black-700 font-bold leading-[140%]">
                     Color
                   </h3>

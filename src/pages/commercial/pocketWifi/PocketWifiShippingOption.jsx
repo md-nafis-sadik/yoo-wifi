@@ -7,19 +7,26 @@ import {
   setPocketWifiCartData,
 } from "@/store/module/pocketWifi/slice";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function PocketWifiShippingOption() {
   const { shippingOptions } = useSelector((state) => state.shared);
   const { cart } = useSelector((state) => state.pocketWifi);
   const dispatch = useDispatch();
-  const isActive = cart?.shipping?.shippingId ? true : false;
+  const isActive =
+    cart?.shipping &&
+    (cart?.shipping?.title == "Self Pickup" || cart?.shippingAddress?.id);
+  const navigate = useNavigate()
 
   const handleSelectCard = (item) => {
     dispatch(setPocketWifiCartData({ shipping: item }));
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleLocationSelect = (item) => {
+    dispatch(setPocketWifiCartData({ shippingAddress: item }));
+  };
+
+  const handleNext = () => {
     if (cart?.shipping?.title == "Self Pickup") {
       navigate(commercialRoutes.pocketWifiSelfPickup.path);
     } else {
@@ -33,7 +40,7 @@ function PocketWifiShippingOption() {
   };
 
   return (
-    <form action="#" onSubmit={handleSubmit} className="w-full">
+    <div action="#" className="w-full">
       <h2 className="text-base sm:text-lg md:text-2xl font-semibold sm:font-bold text-black-900">
         Select Shipping Option
       </h2>
@@ -46,10 +53,19 @@ function PocketWifiShippingOption() {
             isActive={cart?.shipping?.shippingId == item?.shippingId}
           />
         ))}
-        <DeliveryAddress />
+        {cart?.shipping?.title && cart?.shipping?.title !== "Self Pickup" && (
+          <DeliveryAddress
+            selectedItem={cart?.shippingAddress}
+            handleSelect={handleLocationSelect}
+          />
+        )}
       </div>
-      <PocketWifiCartFooter prevHandler={handlePrev} isActive={true} />
-    </form>
+      <PocketWifiCartFooter
+        prevHandler={handlePrev}
+        nextHandler={handleNext}
+        isActive={isActive}
+      />
+    </div>
   );
 }
 

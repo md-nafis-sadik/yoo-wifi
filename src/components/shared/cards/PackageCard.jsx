@@ -28,7 +28,7 @@ function PackageCard({ item = {}, wrapperClass = "", ...props }) {
           ))}
         </div>
         <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-black-700 whitespace-nowrap">
-          {item?.price?.currency} {item?.price?.amount}
+          SGD {item?.packPrice}
         </h4>
       </div>
     </div>
