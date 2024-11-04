@@ -59,6 +59,7 @@ function PocketWifiCartService() {
         <div ref={emblaRef} className="w-full max-w-full overflow-hidden">
           <div className="flex items-center gap-4">
             <Button
+              type="button"
               className={cn(
                 "hover:bg-main-600 hover:text-white",
                 cart?.cartType == "rental" ? "text-white font-semibold" : ""
@@ -69,6 +70,7 @@ function PocketWifiCartService() {
               Rental
             </Button>
             <Button
+              type="button"
               className={cn(
                 "hover:bg-main-600 hover:text-white",
                 cart?.cartType == "topup" ? "text-white font-semibold" : ""
