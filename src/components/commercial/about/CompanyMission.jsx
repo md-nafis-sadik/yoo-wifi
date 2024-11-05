@@ -1,6 +1,6 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-const CompanyMission = ({ data }) => {
+const CompanyMission = ({ data = {} }) => {
   return (
     <div className="container2X sec_common_60 xl:px-0">
       <h2 className="title text-center">{data.title}</h2>
