@@ -7,7 +7,7 @@ const KeyFeatures = ({ data = [], wrapperClass = "" }) => {
       <div className="container3X sec_common_80 bg-neutral-100 rounded-3xl lg:px-12 xl:px-15">
         <div
           className={cn(
-            "grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 xl:px-10",
+            "containerX grid md:grid-cols-2 lg:grid-cols-4 gap-4",
             wrapperClass
           )}
         >
