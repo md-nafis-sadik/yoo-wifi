@@ -1,5 +1,5 @@
 import RegionCard from "@/components/shared/cards/RegionCard";
-import HeadingWithSubHeading from "@/components/shared/HeadingWithSubHeading";
+import SectionHeader from "@/components/shared/others/SectionHeader";
 import { cn } from "@/lib/utils";
 import { regionsData } from "@/services/data";
 import { useMemo } from "react";
@@ -10,7 +10,7 @@ const StayConnectedRegions = () => {
   return (
     <section className="px-4 min-[1320px]:px-0 sec_common_80">
       <div className="sec_common_60 container3X rounded-2xl md:rounded-3xl bg-[#ececec] px-3 md:px-6 min-[1320px]:px-0">
-        <HeadingWithSubHeading
+        <SectionHeader
           heading={"Stay Connected Everywhere"}
           subHeading={"Choose Your Dream Destination and Perfect Package Now"}
         />

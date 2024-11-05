@@ -9,8 +9,8 @@ const AwardsAndAchievements = ({ data = {} }) => {
     <div className="container2X sec_common_60 xl:px-0 ">
       <h2 className="title">Our Awards & Achievements</h2>
 
-      <div className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-10 mt-4 md:mt-6 lg:mt-12">
-        <div className="w-full md:w-2/5 flex flex-col">
+      <div className="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-10 mt-4 md:mt-6 lg:mt-12">
+        <div className="w-full lg:w-2/5 flex flex-col">
           {data.details?.map((item, index) => (
             <div
               className="w-full py-3 md:py-4 border-b border-neutral-200 cursor-default"
@@ -37,7 +37,7 @@ const AwardsAndAchievements = ({ data = {} }) => {
           ))}
         </div>
 
-        <div className="w-full md:w-3/5 flex_center">
+        <div className="w-full lg:w-3/5 flex_center">
           <div className="aspect-[1.41/1] w-full relative overflow-hidden rounded-xl md:rounded-s-3xl">
             <LazyLoadImage
               src={data.images[selectedAward] || ""}

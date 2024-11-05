@@ -1,5 +1,7 @@
 import AwardsAndAchievements from "@/components/commercial/about/AwardsAndAchievements";
 import CompanyMission from "@/components/commercial/about/CompanyMission";
+import ForBusiness from "@/components/commercial/about/ForBusiness";
+import ForPersonal from "@/components/commercial/about/ForPersonal";
 import KeyFeatures from "@/components/commercial/about/KeyFeatures";
 import WhatWeDo from "@/components/commercial/about/WhatWeDo";
 import WhoWeAre from "@/components/commercial/about/WhoWeAre";
@@ -15,6 +17,8 @@ const AboutUs = () => {
     companyMission,
     awardsAndAchievements,
     whatWeDo,
+    personal,
+    business,
   } = useSelector((state) => state.about);
 
   return (
@@ -25,6 +29,8 @@ const AboutUs = () => {
       <AwardsAndAchievements data={awardsAndAchievements} />
       <WhatWeDo data={whatWeDo} />
       <KeyFeatures data={features} />
+      <ForPersonal data={personal} />
+      <ForBusiness data={business} />
       <CustomerTestimonial />
     </div>
   );
