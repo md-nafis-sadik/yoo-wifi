@@ -76,3 +76,40 @@
   font-weight: 400;
   font-style: normal;
 }
+
+/* gilroy  */
+
+@font-face {
+  font-family: "SansPro";
+  src: url("../assets/fonts/SourceSansPro-Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SansPro";
+  src: url("../assets/fonts/SourceSansPro-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SansPro";
+  src: url("../assets/fonts/SourceSansPro-Semibold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SansPro";
+  src: url("../assets/fonts/SourceSansPro-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SansPro";
+  src: url("../assets/fonts/SourceSansPro-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
