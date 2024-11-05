@@ -1,5 +1,6 @@
 import ContactUs from "@/components/corporate/home/ContactUs";
 import CorporateHero from "@/components/corporate/home/CorporateHero";
+import Services from "@/components/corporate/home/Services";
 import { Fragment } from "react";
 
 function Home() {
@@ -7,6 +8,7 @@ function Home() {
     <Fragment>
       <CorporateHero />
       <ContactUs />
+      <Services />
     </Fragment>
   );
 }
