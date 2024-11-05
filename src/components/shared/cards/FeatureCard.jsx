@@ -12,7 +12,11 @@ function FeatureCard({ icon, svg = null, title = "", ...props }) {
         {svg ? (
           svg
         ) : (
-          <img src={icon} alt="icon" className="w-full h-full object-contain" />
+          <img
+            src={icon}
+            alt="icon"
+            className={cn("w-full h-full object-contain")}
+          />
         )}
       </div>
       <h3 className="text-black-900 text-base sm:text-lg font-semibold text-center sm:whitespace-pre-wrap">

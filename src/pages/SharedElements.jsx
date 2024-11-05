@@ -20,6 +20,7 @@ import { useNavigate } from "react-router-dom";
 import { commercialRoutes, corporateRoutes, productsData } from "@/services";
 import { useMemo, useState } from "react";
 import { useSelector } from "react-redux";
+import DevFAB from "@/components/shared/others/DevFab";
 
 const SharedElements = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -35,26 +36,7 @@ const SharedElements = () => {
   return (
     <div className="p-10">
       {/* Removable */}
-      <div className="flex_center flex-col md:flex-row gap-4 py-4">
-        <Button
-          type="button"
-          onClick={() => handleNavigate(commercialRoutes.home.path)}
-        >
-          Navigate to commercial
-        </Button>
-        <Button
-          type="button"
-          onClick={() => handleNavigate(corporateRoutes.home.path)}
-        >
-          Navigate to corporate
-        </Button>
-        <Button
-          type="button"
-          onClick={() => handleNavigate("/shared-elements")}
-        >
-          Navigate to s-components
-        </Button>
-      </div>
+      <DevFAB />
       {/* Removable */}
 
       <div className="flex flex-col gap-10">

@@ -1,7 +1,7 @@
 import {
   BatteryIcon,
   CloudIcon,
-  GlobDataIcon,
+  GlobeDataIcon,
   LteSpeedIcon,
   ShareGroupIcon,
 } from "@/services";
@@ -317,7 +317,7 @@ const initialState = {
       title: "Up To 4G \n LTE Speed",
     },
     {
-      icon: () => <GlobDataIcon />,
+      icon: () => <GlobeDataIcon />,
       title: "Flexible Data option",
     },
     {

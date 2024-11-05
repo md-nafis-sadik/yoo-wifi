@@ -1,3 +1,10 @@
+import {
+  ConnectionsIcon,
+  CustomerServiceIcon,
+  GlobeIcon,
+  WifiIcon,
+  WifiSecondaryIcon,
+} from "@/services";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -24,6 +31,30 @@ const initialState = {
         "https://plus.unsplash.com/premium_photo-1661274209157-118069b926f3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   },
+  features: [
+    {
+      icon: () => (
+        <WifiSecondaryIcon className="h-10 w-10 md:h-[60px] md:w-[60px]" />
+      ),
+      title: "Reliable WiFi, anywhere you go",
+    },
+    {
+      icon: () => <GlobeIcon className="h-10 w-10 md:h-[60px] md:w-[60px]" />,
+      title: "Covers more than 160 Countries",
+    },
+    {
+      icon: () => (
+        <CustomerServiceIcon className="h-10 w-10 md:h-[60px] md:w-[60px]" />
+      ),
+      title: "24/7 Customer Support",
+    },
+    {
+      icon: () => (
+        <ConnectionsIcon className="h-10 w-10 md:h-[60px] md:w-[60px]" />
+      ),
+      title: "Local presence in over 10 countries",
+    },
+  ],
 };
 
 const aboutSlice = createSlice({
