@@ -501,6 +501,38 @@ const initialState = {
       code: "SG-CLARKE-QUAY",
     },
   ],
+  whatWeDo: [
+    {
+      _id: 1,
+      title: "Business Continuity Plan",
+      content: "Yoowifi offer a technological solution that provides a robust and highly redundant platform to keep your business connected and continue operating despite uncertainties.",
+    },
+    {
+      _id: 2,
+      title: "In-vehicle Connectivity",
+      content: "Yoowifi supply the necessary bandwidth for secure transmission and receipt of data, whether it is being transmitted in-state or across different countries.",
+    },
+    {
+      _id: 3,
+      title: "Remote Working",
+      content: "Utilizing cloud-managed mobile devices that are easy to deploy, we can offer the required connectivity quickly to maintain business resilience while operating remotely.",
+    },
+    {
+      _id: 4,
+      title: "Connectivity for Events",
+      content: "We provide reliable event internet services, including live streaming and Wi-Fi for guests, with guest analytics to better understand your audience for future events.",
+    },
+    {
+      _id: 5,
+      title: "Travel Agency Solutions",
+      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    },
+    {
+      _id: 6,
+      title: "Hotels",
+      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    },
+  ]
 };
 
 const pocketWifiSlice = createSlice({
@@ -516,6 +548,9 @@ const pocketWifiSlice = createSlice({
   },
 });
 
-export const { setPocketWifiCartData, handleNextPocketWifiCart } =
-  pocketWifiSlice.actions;
+export const {
+  setPocketWifiCartData,
+  handleNextPocketWifiCart
+} = pocketWifiSlice.actions;
+
 export default pocketWifiSlice.reducer;
