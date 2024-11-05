@@ -1,6 +1,7 @@
 import CommercialLayout from "@/components/layout/CommercialLayout";
 import PocketWifiLayout from "@/components/layout/PocketWifiLayout";
 import AboutUs from "@/pages/commercial/AboutUs";
+import Contact from "@/pages/commercial/Contact";
 import Home from "@/pages/commercial/Home";
 import PocketWifi from "@/pages/commercial/pocketWifi/Home";
 import PocketWifiCartService from "@/pages/commercial/pocketWifi/PocketWifiCartService";
@@ -88,6 +89,12 @@ const commercialRoutes = {
     name: "About Us",
     activePath: "aboutUs",
     element: <AboutUs />,
+  },
+  contact: {
+    path: "/contact",
+    name: "Contact Us",
+    activePath: "contact",
+    element: <Contact />,
   },
 };
 

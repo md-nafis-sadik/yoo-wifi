@@ -15,6 +15,7 @@ import companyMission1 from "@/assets/images/company-mission-1.webp";
 import download from "@/assets/images/download.webp";
 import dataPlan from "@/assets/images/data-plan.webp";
 import europeRegionBlack from "@/assets/images/europe-region-black.webp";
+import email from "@/assets/images/email.webp";
 import googlePlay from "@/assets/images/google-play.webp";
 import middleEast from "@/assets/images/middle-east.webp";
 import network from "@/assets/images/network.webp";
@@ -29,6 +30,7 @@ import routerWhite from "@/assets/images/router-white.webp";
 import tour from "@/assets/images/tour.webp";
 import locationMap from "@/assets/images/location-map.webp";
 import whoWeAre1 from "@/assets/images/who-we-are-1.webp";
+import whatsapp from "@/assets/images/whatsapp.webp";
 
 export {
   locationMap,
@@ -43,8 +45,10 @@ export {
   charging,
   corporateHero,
   download,
+  dataPlan,
   error,
   europeRegionBlack,
+  email,
   googlePlay,
   middleEast,
   notFound,
@@ -61,5 +65,5 @@ export {
   companyMission1,
   tour,
   network,
-  dataPlan,
+  whatsapp,
 };
