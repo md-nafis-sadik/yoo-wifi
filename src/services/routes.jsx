@@ -10,7 +10,13 @@ import PocketWifiPlanSummery from "@/pages/commercial/pocketWifi/PocketWifiPlanS
 import PocketWifiRegion from "@/pages/commercial/pocketWifi/PocketWifiRegion";
 import PocketWifiSelfPickup from "@/pages/commercial/pocketWifi/PocketWifiSelfPickup";
 import PocketWifiShippingOption from "@/pages/commercial/pocketWifi/PocketWifiShippingOption";
+import Commercial from "@/pages/corporate/Commercial";
 import CorporateHome from "@/pages/corporate/Home";
+import Hotel from "@/pages/corporate/Hotel";
+import Iot from "@/pages/corporate/Iot";
+import MaritimeInternet from "@/pages/corporate/MaritimeInternet";
+import Office from "@/pages/corporate/Office";
+import TravelAgency from "@/pages/corporate/TravelAgency";
 
 const commercialRoutes = {
   commercialLayout: {
@@ -97,6 +103,42 @@ const corporateRoutes = {
     name: "Home",
     activePath: "home",
     element: <CorporateHome />,
+  },
+  iot: {
+    path: "iot",
+    name: "IOT",
+    activePath: "iot",
+    element: <Iot />,
+  },
+  hotel: {
+    path: "hotel",
+    name: "Hotel",
+    activePath: "hotel",
+    element: <Hotel />,
+  },
+  travelAgency: {
+    path: "travel-agency",
+    name: "Travel Agency",
+    activePath: "travelAgency",
+    element: <TravelAgency />,
+  },
+  maritimeInternet: {
+    path: "maritime-internet",
+    name: "MARITIME INTERNET",
+    activePath: "maritimeInternet",
+    element: <MaritimeInternet />,
+  },
+  office: {
+    path: "office",
+    name: "Office",
+    activePath: "office",
+    element: <Office />,
+  },
+  commercial: {
+    path: "commercial",
+    name: "Commercial",
+    activePath: "commercial",
+    element: <Commercial />,
   },
 };
 

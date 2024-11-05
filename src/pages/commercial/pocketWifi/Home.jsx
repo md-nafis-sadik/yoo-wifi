@@ -8,7 +8,7 @@ import OtherProducts from "@/components/commercial/pocketWifi/home/OtherProducts
 import PlanTopUp from "@/components/commercial/pocketWifi/home/PlanTopUp";
 import RecomendedPackage from "@/components/commercial/pocketWifi/home/RecomendedPackage";
 import ReturnDevice from "@/components/commercial/pocketWifi/home/ReturnDevice";
-import KeyFeatures from "@/components/shared/sections/KeyFeatures";
+import KeyFeatures from "@/components/commercial/pocketWifi/home/KeyFeatures";
 import { useSelector } from "react-redux";
 
 function Home() {

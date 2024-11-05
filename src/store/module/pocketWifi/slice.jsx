@@ -1,8 +1,16 @@
 import {
+  AppCustomizationIcon,
   BatteryIcon,
   CloudIcon,
-  GlobDataIcon,
+  CustomSolutionIcon,
+  EmployeeIcon,
+  InternetCoverageIcon,
   LteSpeedIcon,
+  MoneyIcon,
+  MultihomingNetwrokIcon,
+  OrganizationIcon,
+  PartnershipIcon,
+  ProjectIcon,
   ShareGroupIcon,
 } from "@/services";
 import { createSlice } from "@reduxjs/toolkit";
@@ -317,7 +325,7 @@ const initialState = {
       title: "Up To 4G \n LTE Speed",
     },
     {
-      icon: () => <GlobDataIcon />,
+      icon: () => <GlobeDataIcon />,
       title: "Flexible Data option",
     },
     {
@@ -367,6 +375,64 @@ const initialState = {
     pickupLocation: {},
     paymentCard: {},
   },
+  aboutUs: [
+    {
+      _id: 1,
+      title: "About Us",
+      icon: () => <EmployeeIcon className="w-8 h-8 lg:w-[60px] lg:h-[60px]" />,
+      content: "Reliable and secure internet connectivity for businesses On-The-Go",
+    },
+    {
+      _id: 2,
+      title: "Partnerships",
+      icon: () => <PartnershipIcon className="w-8 h-8 lg:w-[60px] lg:h-[60px]" />,
+      content: "Explore long lasting partnership opportunities with our services",
+    },
+    {
+      _id: 3,
+      title: "Custom Solutions",
+      icon: () => <CustomSolutionIcon className="w-8 h-8 lg:w-[60px] lg:h-[60px]" />,
+      content: "Designed to meet your needs and requirements with high-speed internet access and cost-effective solution",
+    },
+  ],
+  services: [
+    {
+      _id: 1,
+      icon: () => <InternetCoverageIcon />,
+      title: "Global Coverage",
+      content: "Stay connected across 160 countries, no matter where your journey takes you with Yoowifi's travel wifi services.",
+    },
+    {
+      _id: 2,
+      icon: () => <MultihomingNetwrokIcon />,
+      title: "Multihoming Network",
+      content: "We stay connected by partnering with multiple telcos, ensuring uninterrupted service availability in any location.",
+    },
+    {
+      _id: 3,
+      icon: () => <OrganizationIcon />,
+      title: "Zero Touch on Demand",
+      content: "Our cloud-based portal preconfigures and deploys services for zero-touch on-demand connectivity, technical expertise required on-site.",
+    },
+    {
+      _id: 4,
+      icon: () => <MoneyIcon />,
+      title: "Cost Efficient Service",
+      content: "Our vSIM tech offers affordable data services by switching SIMs as you cross borders, eliminating roaming charges and reducing telecom expenses.",
+    },
+    {
+      _id: 5,
+      icon: () => <ProjectIcon />,
+      title: "Management Portal",
+      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    },
+    {
+      _id: 6,
+      icon: () => <AppCustomizationIcon />,
+      title: "App Customization",
+      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    },
+  ],
   pickupLocations: [
     {
       name: "Albert Village Court Hotel",
@@ -435,6 +501,38 @@ const initialState = {
       code: "SG-CLARKE-QUAY",
     },
   ],
+  whatWeDo: [
+    {
+      _id: 1,
+      title: "Business Continuity Plan",
+      content: "Yoowifi offer a technological solution that provides a robust and highly redundant platform to keep your business connected and continue operating despite uncertainties.",
+    },
+    {
+      _id: 2,
+      title: "In-vehicle Connectivity",
+      content: "Yoowifi supply the necessary bandwidth for secure transmission and receipt of data, whether it is being transmitted in-state or across different countries.",
+    },
+    {
+      _id: 3,
+      title: "Remote Working",
+      content: "Utilizing cloud-managed mobile devices that are easy to deploy, we can offer the required connectivity quickly to maintain business resilience while operating remotely.",
+    },
+    {
+      _id: 4,
+      title: "Connectivity for Events",
+      content: "We provide reliable event internet services, including live streaming and Wi-Fi for guests, with guest analytics to better understand your audience for future events.",
+    },
+    {
+      _id: 5,
+      title: "Travel Agency Solutions",
+      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    },
+    {
+      _id: 6,
+      title: "Hotels",
+      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    },
+  ]
 };
 
 const pocketWifiSlice = createSlice({
@@ -450,6 +548,9 @@ const pocketWifiSlice = createSlice({
   },
 });
 
-export const { setPocketWifiCartData, handleNextPocketWifiCart } =
-  pocketWifiSlice.actions;
+export const {
+  setPocketWifiCartData,
+  handleNextPocketWifiCart
+} = pocketWifiSlice.actions;
+
 export default pocketWifiSlice.reducer;
