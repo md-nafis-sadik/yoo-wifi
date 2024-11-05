@@ -11,7 +11,7 @@ const ContactUs = () => {
       <div className="container2X ">
 
         <div className="grid md:grid-cols-3 gap-6 lg:gap-10">
-          {aboutUs.map((item, index) => (<div key={index} className="lg:py-10 lg:px-6 py-5 px-3 border-2 border-neutral-200 rounded-3xl">
+          {aboutUs.map((item, index) => (<article key={index} className="lg:py-10 lg:px-6 py-5 px-3 border-2 border-neutral-200 rounded-3xl">
 
             <div className="p-4 lg:p-[26.67px] bg-main-50 w-max rounded-[21.33px]">
               {item.icon()}
@@ -25,7 +25,7 @@ const ContactUs = () => {
               {item.content}
             </p>
 
-          </div>))}
+          </article>))}
         </div>
 
         <div className="mt-6 lg:mt-10 flex justify-center">
