@@ -1,11 +1,17 @@
 import {
+  AppCustomizationIcon,
   BatteryIcon,
   CloudIcon,
   CustomSolutionIcon,
   EmployeeIcon,
   GlobDataIcon,
+  InternetCoverageIcon,
   LteSpeedIcon,
+  MoneyIcon,
+  MultihomingNetwrokIcon,
+  OrganizationIcon,
   PartnershipIcon,
+  ProjectIcon,
   ShareGroupIcon,
 } from "@/services";
 import { createSlice } from "@reduxjs/toolkit";
@@ -389,6 +395,44 @@ const initialState = {
       title: "Custom Solutions",
       icon: () => <CustomSolutionIcon className="w-8 h-8 lg:w-[60px] lg:h-[60px]" />,
       content: "Designed to meet your needs and requirements with high-speed internet access and cost-effective solution",
+    },
+  ],
+  services: [
+    {
+      _id: 1,
+      icon: () => <InternetCoverageIcon />,
+      title: "Global Coverage",
+      content: "Stay connected across 160 countries, no matter where your journey takes you with Yoowifi's travel wifi services.",
+    },
+    {
+      _id: 2,
+      icon: () => <MultihomingNetwrokIcon />,
+      title: "Multihoming Network",
+      content: "We stay connected by partnering with multiple telcos, ensuring uninterrupted service availability in any location.",
+    },
+    {
+      _id: 3,
+      icon: () => <OrganizationIcon />,
+      title: "Zero Touch on Demand",
+      content: "Our cloud-based portal preconfigures and deploys services for zero-touch on-demand connectivity, technical expertise required on-site.",
+    },
+    {
+      _id: 4,
+      icon: () => <MoneyIcon />,
+      title: "Cost Efficient Service",
+      content: "Our vSIM tech offers affordable data services by switching SIMs as you cross borders, eliminating roaming charges and reducing telecom expenses.",
+    },
+    {
+      _id: 5,
+      icon: () => <ProjectIcon />,
+      title: "Management Portal",
+      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    },
+    {
+      _id: 6,
+      icon: () => <AppCustomizationIcon />,
+      title: "App Customization",
+      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
     },
   ]
 };
