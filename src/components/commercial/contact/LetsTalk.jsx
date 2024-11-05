@@ -1,12 +1,24 @@
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const LetsTalk = ({ data = [] }) => {
+  const [text, setText] = useState("");
+  const maxChars = 250;
+
+  const handleTextChange = (e) => {
+    if (e.target.value.length <= maxChars) {
+      setText(e.target.value);
+    }
+  };
+
   return (
     <div className="containerX xl:px-0">
-      <div className="sec_common_80 xl:px-0 flex flex-col md:flex-row gap-4 md:gap-8 lg:gap-[60px]">
+      <div className="sec_common_80 xl:px-0 flex flex-col lg:flex-row gap-4 md:gap-8 lg:gap-[60px]">
         {/* LEFT PORTION */}
-        <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-6 lg:gap-12">
+        <div className="w-full lg:w-1/2 flex flex-col gap-4 md:gap-6 lg:gap-12">
           <h2 className="title text-start">Let's Talk</h2>
           <p className="p_common text-black-700">
             If you have any questions or concerns, just fill out the form, and
@@ -34,34 +46,55 @@ const LetsTalk = ({ data = [] }) => {
         </div>
 
         {/* RIGHT PORTION */}
-        <div className="w-full md:w-1/2 grid grid-cols-2 h-fit gap-x-[28px] gap-y-6">
-          <Input
-            label="Name"
-            placeholder="Enter your name"
-            name="name"
-            required
-          />
-          <Input
-            label="Phone Number"
-            placeholder="Enter phone number"
-            name="phone"
-            type="number"
-            required
-          />
-          <Input
-            label="Email Address"
-            placeholder="Enter email address"
-            name="email"
-            type="email"
-            required
-          />
-          <Input
-            label="Subject"
-            placeholder="Write a subject"
-            name="name"
-            required
-          />
-        </div>
+        <form className="w-full lg:w-1/2">
+          <div className="w-full grid grid-cols-2 h-fit gap-x-[28px] gap-y-6">
+            <Input
+              label="Name"
+              placeholder="Enter your name"
+              name="name"
+              wrapperClass={"col-span-2 md:col-span-1"}
+              required
+            />
+            <Input
+              label="Phone Number"
+              placeholder="Enter phone number"
+              name="phone"
+              type="number"
+              wrapperClass={"col-span-2 md:col-span-1"}
+              className="no-spinner"
+              required
+            />
+            <Input
+              label="Email Address"
+              placeholder="Enter email address"
+              name="email"
+              type="email"
+              wrapperClass={"col-span-2"}
+              required
+            />
+            <Input
+              label="Subject"
+              placeholder="Write a subject"
+              name="name"
+              wrapperClass={"col-span-2"}
+              required
+            />
+            <Textarea
+              label="Message"
+              placeholder="Tell us about your queries.."
+              name="message"
+              wrapperClass={"col-span-2"}
+              value={text}
+              onChange={handleTextChange}
+              maxChars={maxChars}
+              required
+            />
+          </div>
+
+          <Button type="submit" size={"lg"} className="mt-6">
+            Submit
+          </Button>
+        </form>
       </div>
     </div>
   );

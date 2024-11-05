@@ -11,7 +11,7 @@ const HeroCommon = ({
 }) => {
   return (
     <section className="w-full bg-main-600 px-4 md:px-6 xl:px-0 py-6 md:py-10 lg:py-[94px] relative overflow-hidden">
-      <YooWifiLogoIcon className="absolute top-1/2 right-0 -translate-y-1/2 z-[1] w-[326px] md:w-[880px] h-auto" />
+      <YooWifiLogoIcon className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-[20%] z-[1] w-[326px] md:w-[880px] h-auto" />
       {children ? (
         children
       ) : (

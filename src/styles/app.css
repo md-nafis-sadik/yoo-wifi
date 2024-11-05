@@ -22,3 +22,15 @@ html {
 .country-select .stdropdown-item span {
   padding: 8px;
 }
+
+/* Hide the spinner in number inputs for Webkit browsers (Chrome, Safari, Edge) */
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide the spinner in number inputs for Firefox */
+.no-spinner[type="number"] {
+  -moz-appearance: textfield;
+}
