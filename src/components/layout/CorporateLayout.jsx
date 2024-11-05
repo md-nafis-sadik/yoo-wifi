@@ -1,6 +1,5 @@
 import { Outlet, useNavigate } from "react-router-dom";
-import NavBar from "../shared/navigation/NavBar";
-import DevFAB from "../shared/others/DevFab";
+import DevFAB from "../shared/others/DevFAB";
 
 function CorporateLayout() {
   const navigate = useNavigate();
