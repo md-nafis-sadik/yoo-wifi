@@ -1,5 +1,5 @@
 import ConnectCard from "@/components/shared/cards/ConnectCard";
-import HeadingWithSubHeading from "@/components/shared/HeadingWithSubHeading";
+import SectionHeader from "@/components/shared/others/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -9,7 +9,7 @@ const HowItWorks = () => {
 
   return (
     <section className="containerX sec_common_60 px-4 md:px-6 xl:px-0 flex flex-col items-center gap-6 md:gap-10 lg:gap-20">
-      <HeadingWithSubHeading
+      <SectionHeader
         heading="Stay Connected Anywhere, Anytime"
         subHeading="Discover what our valued customers have to say about their experiences with our services"
       />

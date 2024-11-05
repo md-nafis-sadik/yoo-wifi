@@ -3,6 +3,7 @@ import PocketWifiLayout from "@/components/layout/PocketWifiLayout";
 import RouterLayout from "@/components/layout/RouterLayout";
 import SimLayout from "@/components/layout/SimLayout";
 import AboutUs from "@/pages/commercial/AboutUs";
+import Contact from "@/pages/commercial/Contact";
 import Home from "@/pages/commercial/Home";
 import PocketWifiHome from "@/pages/commercial/pocketWifi/Home";
 import PocketWifiCartService from "@/pages/commercial/pocketWifi/PocketWifiCartService";
@@ -12,6 +13,7 @@ import PocketWifiPlanSummery from "@/pages/commercial/pocketWifi/PocketWifiPlanS
 import PocketWifiRegion from "@/pages/commercial/pocketWifi/PocketWifiRegion";
 import PocketWifiSelfPickup from "@/pages/commercial/pocketWifi/PocketWifiSelfPickup";
 import PocketWifiShippingOption from "@/pages/commercial/pocketWifi/PocketWifiShippingOption";
+import Commercial from "@/pages/corporate/Commercial";
 import RouterHome from "@/pages/commercial/router/Home";
 import RouterCartService from "@/pages/commercial/router/RouterCartService";
 import RouterOrderSummery from "@/pages/commercial/router/RouterOrderSummery";
@@ -29,6 +31,11 @@ import SimRegion from "@/pages/commercial/sim/SimRegion";
 import SimSelfPickup from "@/pages/commercial/sim/SimSelfPickup";
 import SimShippingOption from "@/pages/commercial/sim/SimShippingOption";
 import CorporateHome from "@/pages/corporate/Home";
+import Hotel from "@/pages/corporate/Hotel";
+import Iot from "@/pages/corporate/Iot";
+import MaritimeInternet from "@/pages/corporate/MaritimeInternet";
+import Office from "@/pages/corporate/Office";
+import TravelAgency from "@/pages/corporate/TravelAgency";
 
 const commercialRoutes = {
   commercialLayout: {
@@ -221,6 +228,12 @@ const commercialRoutes = {
     activePath: "aboutUs",
     element: <AboutUs />,
   },
+  contact: {
+    path: "/contact",
+    name: "Contact Us",
+    activePath: "contact",
+    element: <Contact />,
+  },
 };
 
 const corporateRoutes = {
@@ -229,6 +242,42 @@ const corporateRoutes = {
     name: "Corporate",
     activePath: "home",
     element: <CorporateHome />,
+  },
+  iot: {
+    path: "iot",
+    name: "IOT",
+    activePath: "iot",
+    element: <Iot />,
+  },
+  hotel: {
+    path: "hotel",
+    name: "Hotel",
+    activePath: "hotel",
+    element: <Hotel />,
+  },
+  travelAgency: {
+    path: "travel-agency",
+    name: "Travel Agency",
+    activePath: "travelAgency",
+    element: <TravelAgency />,
+  },
+  maritimeInternet: {
+    path: "maritime-internet",
+    name: "MARITIME INTERNET",
+    activePath: "maritimeInternet",
+    element: <MaritimeInternet />,
+  },
+  office: {
+    path: "office",
+    name: "Office",
+    activePath: "office",
+    element: <Office />,
+  },
+  commercial: {
+    path: "commercial",
+    name: "Commercial",
+    activePath: "commercial",
+    element: <Commercial />,
   },
 };
 

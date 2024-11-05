@@ -7,7 +7,7 @@ const CompanyMission = ({ data = {} }) => {
 
       <div className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-10 mt-4 md:mt-6 lg:mt-12">
         <div className="w-full md:w-1/2 flex_center">
-          <div className="h-[218px] md:h-[290px] lg:h-[384px] w-full relative overflow-hidden rounded-xl md:rounded-s-3xl">
+          <div className="aspect-[1.5/1] w-full relative overflow-hidden rounded-xl md:rounded-s-3xl">
             <LazyLoadImage
               src={data.mission.image || ""}
               alt={data.mission.title}
@@ -19,7 +19,7 @@ const CompanyMission = ({ data = {} }) => {
           <p className="text-[28px] md:text-5xl !leading-[1.28] md:leading-[1.1] mt-3 font-extrabold md:font-bold text-black-900">
             {data.mission.year}
           </p>
-          <p className="text-lg md:text-4xl font-semibold md:font-bold mt-1 md:mt-3">
+          <p className="text-lg md:text-4xl font-semibold md:font-bold !leading-[1.4] mt-1 md:mt-6">
             {data.mission.title}
           </p>
           <hr className="w-full h-[1px] bg-neutral-200 my-3 md:my-4" />

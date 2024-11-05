@@ -1,6 +1,6 @@
 import {
   CloudIcon,
-  GlobDataIcon,
+  GlobeDataIcon,
   GlobMapIcon,
   images,
   LteSpeedIcon,
@@ -288,7 +288,7 @@ const initialState = {
       title: "Up To 4G \n LTE Speed",
     },
     {
-      icon: () => <GlobDataIcon />,
+      icon: () => <GlobeDataIcon />,
       title: "Flexible Data option",
     },
     {

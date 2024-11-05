@@ -1,5 +1,6 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import NavBar from "../shared/navigation/NavBar";
+import DevFAB from "../shared/others/DevFab";
 
 function CorporateLayout() {
   const navigate = useNavigate();
@@ -8,7 +9,9 @@ function CorporateLayout() {
   };
   return (
     <main>
-      <NavBar />
+      {/* Removable */}
+      <DevFAB />
+      {/* Removable */}
       <Outlet />
     </main>
   );

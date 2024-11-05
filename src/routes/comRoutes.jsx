@@ -3,6 +3,7 @@ import { commercialRoutes as routes } from "@/services";
 const {
   aboutUs,
   commercialLayout,
+  contact,
   home,
   pocketWifiLayout,
   pocketWifiHome,
@@ -57,6 +58,10 @@ export const comRoutes = [
       {
         path: aboutUs.path,
         element: aboutUs.element,
+      },
+      {
+        path: contact.path,
+        element: contact.element,
       },
     ],
   },

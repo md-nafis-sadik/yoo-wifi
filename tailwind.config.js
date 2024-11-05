@@ -102,6 +102,7 @@ export default {
       fontFamily: {
         dmsans: ["DMSans", "sans-serif"],
         gilroy: ["Gilroy", "sans-serif"],
+        sansPro: ["SansPro", "sans-serif"],
       },
       boxShadow: {
         mid: "0px -8px 24px 0px rgba(0, 0, 0, 0.10)",

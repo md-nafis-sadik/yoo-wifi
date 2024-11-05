@@ -40,7 +40,7 @@ export const navBarData = () => ({
       path: commercialRoutes.aboutUs.path,
     },
     {
-      _id: 6,
+      _id: 7,
       label: corporateRoutes.home.name,
       path: corporateRoutes.home.path,
     },
