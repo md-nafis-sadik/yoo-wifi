@@ -15,7 +15,7 @@ function PocketWifiRegion() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isActive =
-    cart?.productCountry?.id && cart?.promoCode && cart?.memberId
+    cart?.productCountry?.id && cart?.color?.hex && cart?.memberId
       ? true
       : false;
 
@@ -29,8 +29,7 @@ function PocketWifiRegion() {
     dispatch(setPocketWifiCartData({ [name]: value }));
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleNext = () => {
     navigate(commercialRoutes.pocketWifiPlan.path);
     dispatch(handleNextPocketWifiCart());
   };
@@ -41,7 +40,7 @@ function PocketWifiRegion() {
 
   return (
     <div className="w-full flex flex-col gap-6 sm:gap-8 md:gap-12">
-      <form onSubmit={handleSubmit} className="w-full">
+      <div className="w-full">
         <div className="w-full flex flex-col gap-4 sm:gap-6">
           <div className="flex flex-col gap-2">
             <span className="label">Country</span>
@@ -70,9 +69,13 @@ function PocketWifiRegion() {
             onChange={handleInputChange}
             defaultValue={cart?.memberId}
           />
-          <PocketWifiCartFooter prevHandler={handlePrev} isActive={isActive} />
+          <PocketWifiCartFooter
+            prevHandler={handlePrev}
+            nextHandler={handleNext}
+            isActive={isActive}
+          />
         </div>
-      </form>
+      </div>
       <DiscountDownloadApp />
     </div>
   );

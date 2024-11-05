@@ -1,0 +1,137 @@
+import {
+  BankIcon,
+  Communications2Icon,
+  ConnectionsIcon,
+  CustomerServiceIcon,
+  GlobeIcon,
+  images,
+  InternetAccessIcon,
+  OrganizationIcon,
+  WifiSecondaryIcon,
+} from "@/services";
+import { createSlice } from "@reduxjs/toolkit";
+import { data } from "autoprefixer";
+
+const initialState = {
+  header: {
+    title: "About Us",
+    description:
+      "Yoowifi is a Singapore-based company that provides pocket wifi rental services for travelers. We offer a wide range of pocket wifi devices with unlimited data plans to keep you connected wherever you go.",
+  },
+  whoWeAre: {
+    title: "Who We Are",
+    description:
+      "UR Communications Pte Ltd, operating under the renowned brand name Yoowifi, introduces an advanced solution for effortless global connectivity via its intuitive mobile application. With a commitment to enriching travel journeys and fostering global communication, Yoowifi App delivers unmatched convenience, dependability, and cost-effectiveness. \n\nOur aspiration is to establish a world where telecom experts and travelers can effortlessly stay linked across countries, free from concerns about excessive data roaming fees. Our mission revolves around building a company that offers accessible, trustworthy, and boundary-free mobile services, empowering individuals to stay connected with their dear ones while exploring diverse corners of the globe.",
+    image:
+      "https://plus.unsplash.com/premium_photo-1661274209157-118069b926f3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  companyMission: {
+    title: "Our Company Mission",
+    mission: {
+      title: "Our journey of innovation and growth",
+      year: "2021",
+      description:
+        "UR Communications Pte Ltd, operating under the renowned brand name Yoowifi, introduces an advanced solution for effortless global connectivity via its intuitive mobile application. With a commitment to enriching travel journeys and fostering global communication, Yoowifi App delivers unmatched convenience, dependability, and cost-effectiveness",
+      image:
+        "https://plus.unsplash.com/premium_photo-1661274209157-118069b926f3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+  },
+  awardsAndAchievements: {
+    details: [
+      {
+        year: "2020",
+        title: "Royal Gold Medal",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      },
+      {
+        year: "2021",
+        title: "Royal Gold Medal",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      },
+      {
+        year: "2022",
+        title: "Royal Gold Medal",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      },
+      {
+        year: "2023",
+        title: "Royal Gold Medal",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      },
+    ],
+    images: [
+      images.awards1,
+      images.whoWeAre1,
+      images.companyMission1,
+      images.whoWeAre1,
+    ],
+  },
+  features: [
+    {
+      icon: () => (
+        <WifiSecondaryIcon className="h-10 w-10 md:h-[60px] md:w-[60px]" />
+      ),
+      title: "Reliable WiFi, anywhere you go",
+    },
+    {
+      icon: () => <GlobeIcon className="h-10 w-10 md:h-[60px] md:w-[60px]" />,
+      title: "Covers more than 160 Countries",
+    },
+    {
+      icon: () => (
+        <CustomerServiceIcon className="h-10 w-10 md:h-[60px] md:w-[60px]" />
+      ),
+      title: "24/7 Customer Support",
+    },
+    {
+      icon: () => (
+        <ConnectionsIcon className="h-10 w-10 md:h-[60px] md:w-[60px]" />
+      ),
+      title: "Local presence in over 10 countries",
+    },
+  ],
+  whatWeDo: [
+    {
+      icon: () => (
+        <InternetAccessIcon className="h-10 w-10 md:h-[60px] md:w-[60px]" />
+      ),
+      title: "Internet Access",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been .",
+    },
+    {
+      icon: () => (
+        <Communications2Icon className="h-10 w-10 md:h-[60px] md:w-[60px]" />
+      ),
+      title: "Mobile general solutions",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ",
+    },
+    {
+      icon: () => (
+        <OrganizationIcon className="h-10 w-10 md:h-[60px] md:w-[60px]" />
+      ),
+      title: "Custom solutions",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ",
+    },
+    {
+      icon: () => <BankIcon className="h-10 w-10 md:h-[60px] md:w-[60px]" />,
+      title: "Events & Roadshows",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ",
+    },
+  ],
+};
+
+const aboutSlice = createSlice({
+  name: "about",
+  initialState,
+  reducers: {},
+});
+
+export default aboutSlice.reducer;

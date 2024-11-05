@@ -29,7 +29,7 @@ function ProductGallery({ items = [] }) {
               <div
                 ref={ref}
                 onClick={open}
-                className="w-full h-[328px]  sm:h-[420px] lg:h-[532px] bg-neutral-rgb rounded-[20px] flex items-center justify-center p-7 sm:p-10 md:p-12 lg:p-14 cursor-zoom-in"
+                className="w-full h-[328px]  sm:h-[420px] lg:h-[532px] bg-neutral-rgb rounded-[20px] flex items-center justify-center cursor-zoom-in"
               >
                 <img
                   src={activeItem?.url}

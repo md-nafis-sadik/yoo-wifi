@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import {
   commercialRoutes,
   DollarLabelIcon,
-  GlobIcon,
+  GlobeIcon,
   WifiIcon,
 } from "@/services";
 import { useState } from "react";
@@ -40,7 +40,7 @@ function Hero() {
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-9 md:w-11 aspect-square bg-main-10 rounded-full flex items-center justify-center">
-                  <GlobIcon />
+                  <GlobeIcon />
                 </div>
                 <span className="text-sm sm:text-base">
                   Save BIG on International Roaming
@@ -57,7 +57,7 @@ function Hero() {
             </div>
             <div className="flex flex-col md:items-end gap-4">
               <div className="w-full mt-4 sm:mt-7 md:mt-12 flex flex-col md:flex-row md:items-center justify-between gap-2">
-                <div className="flex md:flex-row gap-2 md:gap-0">
+                <div className="flex md:flex-row gap-2 md:gap-4">
                   <h3 className="text-2xl text-black-700 font-bold leading-[140%]">
                     Color
                   </h3>

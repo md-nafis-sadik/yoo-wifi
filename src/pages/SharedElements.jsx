@@ -17,9 +17,17 @@ import ProductGallery from "@/components/shared/others/ProductGallery";
 import { Button } from "@/components/ui/button";
 import { CountrySelect } from "react-country-state-city";
 import { useNavigate } from "react-router-dom";
-import { commercialRoutes, corporateRoutes } from "@/services";
+import { commercialRoutes, corporateRoutes, productsData } from "@/services";
+import { useMemo, useState } from "react";
+import { useSelector } from "react-redux";
+import DevFAB from "@/components/shared/others/DevFab";
 
 const SharedElements = () => {
+  const [selectedCard, setSelectedCard] = useState(null);
+  const products = useMemo(() => productsData(), []);
+
+  const howItWorksData = useSelector((state) => state.howItWorks);
+
   const navigate = useNavigate();
   const handleNavigate = (path) => {
     navigate(path);
@@ -28,32 +36,20 @@ const SharedElements = () => {
   return (
     <div className="p-10">
       {/* Removable */}
-      <div className="flex_center flex-col md:flex-row gap-4 py-4">
-        <Button
-          type="button"
-          onClick={() => handleNavigate(commercialRoutes.home.path)}
-        >
-          Navigate to commercial
-        </Button>
-        <Button
-          type="button"
-          onClick={() => handleNavigate(corporateRoutes.home.path)}
-        >
-          Navigate to corporate
-        </Button>
-        <Button
-          type="button"
-          onClick={() => handleNavigate("/shared-elements")}
-        >
-          Navigate to s-components
-        </Button>
-      </div>
+      <DevFAB />
       {/* Removable */}
 
       <div className="flex flex-col gap-10">
         <div className="flex flex-col gap-3">
           <p>ProductCard</p>
-          <ProductCard />
+          {products.cardData.slice(0, 1).map((item, index) => (
+            <ProductCard
+              key={index}
+              item={item}
+              eventHandler={() => setSelectedCard(index)}
+              selected={selectedCard === index}
+            />
+          ))}
         </div>
         <div className="flex flex-col gap-3">
           <p>CustomerCard</p>
@@ -61,7 +57,9 @@ const SharedElements = () => {
         </div>
         <div className="flex flex-col gap-3">
           <p>ConnectCard</p>
-          <ConnectCard />
+          {howItWorksData.slice(0, 1).map((item, index) => (
+            <ConnectCard key={index} item={item} />
+          ))}
         </div>
         <div className="flex flex-col gap-3">
           <p>Collaborate Marquee</p>

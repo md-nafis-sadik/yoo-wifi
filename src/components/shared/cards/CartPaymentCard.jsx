@@ -1,13 +1,13 @@
 import { cn } from "@/lib/utils";
 import { VisaIcon } from "@/services";
 
-function CartPaymentCard({ item = {}, ...props }) {
-  const cardNumber = "1234567891234567";
-  const numbers = cardNumber.match(/.{1,4}/g);
+function CartPaymentCard({ item = {}, wrapperClass = "", ...props }) {
+  const numbers = item?.cardNumber?.match(/.{1,4}/g);
   return (
     <div
       className={cn(
-        "w-full flex flex-col gap-y-14 py-6 px-4 rounded-[10.629px] bg-main-600 text-white font-gilroy"
+        "w-full flex flex-col gap-y-14 py-6 px-4 rounded-[10.629px] bg-main-600 text-white font-gilroy cursor-pointer",
+        wrapperClass
       )}
       {...props}
     >
@@ -23,8 +23,8 @@ function CartPaymentCard({ item = {}, ...props }) {
         ))}
       </div>
       <div className="flex justify-between">
-        <span className="font-medium text-xxs">Jack Lewis</span>
-        <span className="font-medium text-xxs">06/21</span>
+        <span className="font-medium text-xxs">{item?.username}</span>
+        <span className="font-medium text-xxs">{item?.expireDate}</span>
       </div>
     </div>
   );

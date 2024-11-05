@@ -1,7 +1,11 @@
 import ProductCard from "@/components/shared/cards/ProductCard";
-import { images } from "@/services";
+import { images, productsData } from "@/services";
+import { useMemo, useState } from "react";
 
 function OtherProducts() {
+  const [selectedCard, setSelectedCard] = useState(0);
+  const products = useMemo(() => productsData(), []);
+
   return (
     <section className="pt-15 pb-10 sm:pb-16 md:pb-[120px] px-4 md:px-10 lg:px-16">
       <div className="containerX">
@@ -9,15 +13,15 @@ function OtherProducts() {
           Other products you may like
         </h2>
         <div className="flex flex-col md:flex-row justify-between gap-6 mt-6 sm:mt-10 md:mt-20 lg:mt-32">
-          <div className="w-full flex flex-col gap-4  md:max-w-[622px] order-2 md:order-1">
-            <ProductCard
-              title="Router"
-              description="Seamless, speedy browsing starts with our top-notch routers. Take your internet experience to new heights with us!"
-            />
-            <ProductCard
-              title=" SIM/eSIM"
-              description="Seamless, speedy browsing starts with our top-notch routers. Take your internet experience to new heights with us!"
-            />
+          <div className="w-full flex flex-col gap-4 max-w-[622px] order-2 md:order-1">
+            {products.cardData.slice(0, 2).map((item, index) => (
+              <ProductCard
+                key={index}
+                item={item}
+                eventHandler={() => setSelectedCard(index)}
+                selected={selectedCard === index}
+              />
+            ))}
           </div>
           <div className="w-full max-w-[8.5rem] sm:max-w-max mx-auto md:-mb-24 order-1 md:order-2">
             <img src={images.pocketWifiSimRed2} />

@@ -8,10 +8,13 @@ function PocketWifiPlanSummery() {
   const { cart } = useSelector((state) => state.pocketWifi);
   const date = new Date(cart?.startDate);
   const formattedDate = date.toISOString().split("T")[0];
-  console.log(cart);
 
   const handlePrev = () => {
     navigate(commercialRoutes.pocketWifiCartService.path);
+  };
+
+  const handleNext = () => {
+    navigate(commercialRoutes.pocketWifiShippingOption.path);
   };
 
   return (
@@ -24,16 +27,15 @@ function PocketWifiPlanSummery() {
               Chosen Plan
             </span>
             <span className="text-base sm:text-lg text-black-700">
-              Chosen Plan
+              {cart?.package?.title} {cart?.package?.dataSize}{" "}
+              {cart?.package?.desc}
             </span>
           </div>
           <div className="flex items-center justify-between gap-3">
             <span className="text-base sm:text-lg text-black-700">
               Data Available
             </span>
-            <span className="text-base sm:text-lg text-black-700">
-              Chosen Plan
-            </span>
+            <span className="text-base sm:text-lg text-black-700">1GB/Day</span>
           </div>
           <div className="flex items-center justify-between gap-3">
             <span className="text-base sm:text-lg text-black-700">
@@ -56,10 +58,16 @@ function PocketWifiPlanSummery() {
           <span className="text-lg text-black-900 font-semibold">
             Total Amount
           </span>
-          <span className="text-lg text-black-900 font-semibold">SGD 79</span>
+          <span className="text-lg text-black-900 font-semibold">
+            SGD {cart?.package?.packPrice}
+          </span>
         </div>
       </div>
-      <PocketWifiCartFooter prevHandler={handlePrev} isActive={true} />
+      <PocketWifiCartFooter
+        prevHandler={handlePrev}
+        nextHandler={handleNext}
+        isActive={true}
+      />
     </div>
   );
 }
