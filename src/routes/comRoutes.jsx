@@ -5,7 +5,7 @@ const {
   commercialLayout,
   home,
   pocketWifiLayout,
-  pocketWifi,
+  pocketWifiHome,
   pocketWifiRegion,
   pocketWifiPlan,
   pocketWifiCartService,
@@ -13,6 +13,15 @@ const {
   pocketWifiOrderSummery,
   pocketWifiSelfPickup,
   pocketWifiShippingOption,
+  routerHome,
+  routerLayout,
+  routerRegion,
+  routerPlan,
+  routerCartService,
+  routerPlanSummery,
+  routerShippingOption,
+  routerSelfPickup,
+  routerOrderSummery,
 } = routes || {};
 
 export const comRoutes = [
@@ -25,8 +34,12 @@ export const comRoutes = [
         element: home.element,
       },
       {
-        path: pocketWifi.path,
-        element: pocketWifi.element,
+        path: pocketWifiHome.path,
+        element: pocketWifiHome.element,
+      },
+      {
+        path: routerHome.path,
+        element: routerHome.element,
       },
       {
         path: aboutUs.path,
@@ -65,6 +78,40 @@ export const comRoutes = [
       {
         path: pocketWifiOrderSummery.path,
         element: pocketWifiOrderSummery.element,
+      },
+    ],
+  },
+  {
+    path: routerLayout.path,
+    element: routerLayout.element,
+    children: [
+      {
+        path: routerRegion.path,
+        element: routerRegion.element,
+      },
+      {
+        path: routerPlan.path,
+        element: routerPlan.element,
+      },
+      {
+        path: routerCartService.path,
+        element: routerCartService.element,
+      },
+      {
+        path: routerPlanSummery.path,
+        element: routerPlanSummery.element,
+      },
+      {
+        path: routerShippingOption.path,
+        element: routerShippingOption.element,
+      },
+      {
+        path: routerSelfPickup.path,
+        element: routerSelfPickup.element,
+      },
+      {
+        path: routerOrderSummery.path,
+        element: routerOrderSummery.element,
       },
     ],
   },

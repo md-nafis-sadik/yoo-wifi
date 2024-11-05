@@ -19,10 +19,14 @@ export const navBarData = () => ({
     },
     {
       _id: 2,
-      label: commercialRoutes.pocketWifi.name,
-      path: commercialRoutes.pocketWifi.path,
+      label: commercialRoutes.pocketWifiHome.name,
+      path: commercialRoutes.pocketWifiHome.path,
     },
-    { _id: 3, label: "Router", path: "/router" },
+    {
+      _id: 3,
+      label: commercialRoutes.routerHome.name,
+      path: commercialRoutes.routerHome.path,
+    },
     { _id: 4, label: "SIM/eSIM", path: "/sim-esim" },
     { _id: 5, label: "Contact Us", path: "/contact" },
     {

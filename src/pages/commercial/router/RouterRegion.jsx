@@ -1,41 +1,38 @@
-import PocketWifiCartFooter from "@/components/commercial/pocketWifi/PocketWifiCartFooter";
+import RouterCartFooter from "@/components/commercial/router/RouterCartFooter";
 import DiscountDownloadApp from "@/components/shared/others/DiscountDownloadApp";
 import { Input } from "@/components/ui/input";
 import { commercialRoutes } from "@/services";
 import {
-  handleNextPocketWifiCart,
-  setPocketWifiCartData,
-} from "@/store/module/pocketWifi/slice";
+  handleNextRouterCart,
+  setRouterCartData,
+} from "@/store/module/router/slice";
 import { CountrySelect } from "react-country-state-city";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-function PocketWifiRegion() {
-  const { cart } = useSelector((state) => state.pocketWifi);
+function RouterRegion() {
+  const { cart } = useSelector((state) => state.router);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const isActive =
-    cart?.productCountry?.id && cart?.color?.hex && cart?.memberId
-      ? true
-      : false;
+  const isActive = cart?.productCountry?.id && cart?.memberId ? true : false;
 
   const handleCountrySelect = (value) => {
-    dispatch(setPocketWifiCartData({ productCountry: value }));
+    dispatch(setRouterCartData({ productCountry: value }));
   };
 
   const handleInputChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    dispatch(setPocketWifiCartData({ [name]: value }));
+    dispatch(setRouterCartData({ [name]: value }));
   };
 
   const handleNext = () => {
-    navigate(commercialRoutes.pocketWifiPlan.path);
-    dispatch(handleNextPocketWifiCart());
+    navigate(commercialRoutes.routerPlan.path);
+    dispatch(handleNextRouterCart());
   };
 
   const handlePrev = () => {
-    navigate(commercialRoutes.pocketWifiHome.path);
+    navigate(commercialRoutes.routerHome.path);
   };
 
   return (
@@ -69,7 +66,7 @@ function PocketWifiRegion() {
             onChange={handleInputChange}
             defaultValue={cart?.memberId}
           />
-          <PocketWifiCartFooter
+          <RouterCartFooter
             prevHandler={handlePrev}
             nextHandler={handleNext}
             isActive={isActive}
@@ -81,4 +78,4 @@ function PocketWifiRegion() {
   );
 }
 
-export default PocketWifiRegion;
+export default RouterRegion;

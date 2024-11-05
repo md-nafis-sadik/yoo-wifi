@@ -14,7 +14,6 @@ const initialState = {
       deviceId: "55775254222892",
     },
   ],
-
   userLocations: [
     {
       id: 1,
@@ -67,11 +66,11 @@ const authSlice = createSlice({
   reducers: {
     saveAuthData: (state, action) => {
       state.auth = { ...state.auth, ...action?.payload };
-      localStorage.setItem("netrosystems_admin", JSON.stringify(state.auth));
+      localStorage.setItem("yoowifi_admin", JSON.stringify(state.auth));
     },
     logout: (state) => {
       state.auth = {};
-      localStorage.removeItem("netrosystems_admin");
+      localStorage.removeItem("yoowifi_admin");
     },
     setUserLocation: (state, action) => {
       state.userLocations = [...state.userLocations, action?.payload];

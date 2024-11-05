@@ -1,26 +1,22 @@
 import {
-  BatteryIcon,
   CloudIcon,
   GlobDataIcon,
+  GlobMapIcon,
+  images,
   LteSpeedIcon,
-  ShareGroupIcon,
+  ShareNetworkIcon,
 } from "@/services";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   product: {
-    name: "Pocket Wifi",
+    name: "Router",
     description:
-      "The Yoowifi Pocket Wifi device offers fast and reliable internet access wherever you go. Perfect for travelers and remote workers, it allows you to connect up to 8 devices simultaneously. Yoowifi provides a variety of data plans tailored to your needs, whether you're heading out for a weekend or traveling for an extended period. With coverage in multiple countries, it's the ideal travel companion.",
+      "Lorem Ipsum is simply dummy text of the printing and typeset industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     features: [
       "Stay Connected Anywhere",
       "Save BIG on International Roaming",
       "Unbeatable Pricing Guarantee",
-    ],
-    colors: [
-      { name: "Red", hex: "#7d0907" },
-      { name: "Purple", hex: "#541553" },
-      { name: "Blue", hex: "#34547d" },
     ],
     price: {
       currency: "SGD",
@@ -37,7 +33,7 @@ const initialState = {
       {
         title: "Descriptions",
         content:
-          "It is easy to use and boasts a sleek, minimalist design. Simply turn it on, connect your devices, and you're good to go! No more worrying about complicated setup processes or bulky equipment. But that's not all — our Pocket Wifi devices also offer strong and reliable connectivity, ensuring that you stay connected no matter where you are. Whether you're on a business trip or a family vacation, you can enjoy high-speed internet without any interruptions.",
+          "It is easy to use and boasts a sleek, minimalist design. Simply turn it on, connect your devices, and you’re good to go! No more worrying about complicated setup processes or bulky equipment. But that’s not all – our Pocket WiFi devices also offer strong and reliable connectivity, ensuring that you stay connected no matter where you are. Whether you’re on a business trip or a family vacation, you can enjoy high-speed internet without any interruptions.",
       },
       {
         title: "Specifications",
@@ -57,28 +53,28 @@ const initialState = {
     ],
     images: [
       {
-        url: "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
-        alt: "Pocket Wifi device front view",
+        url: images.router1,
+        alt: "Router Wifi device front view",
       },
       {
-        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSskzXnZfymqU-VhKuUhNF-Bsc4BtoHudI0pg&s",
-        alt: "Pocket Wifi device side view",
+        url: images.router2,
+        alt: "Router Wifi device side view",
       },
       {
-        url: "https://media.e-valy.com/cms/products/images/bbe4a836-5bb6-4518-892d-6a9f1209f4ca",
-        alt: "Pocket Wifi device top view",
+        url: images.router3,
+        alt: "Router Wifi device top view",
       },
       {
-        url: "https://i5.walmartimages.com/asr/f4800de2-17a0-4da3-bf6e-8be2a937007f.b3c36da4108836973cdb96d091f57a7e.jpeg",
-        alt: "Pocket Wifi device bottom view",
+        url: images.router4,
+        alt: "Router Wifi device bottom view",
       },
       {
-        url: "https://electronics.mrinmoy.com.bd/wp-content/uploads/2024/01/22.jpg",
-        alt: "Pocket Wifi device with case",
+        url: images.router5,
+        alt: "Router Wifi device with case",
       },
       {
-        url: "https://alflip.com/uploads/all/1701333936_4G%20Pocket%20Wifi%20with%2010000mAh%20Power%20Bank0.webp",
-        alt: "Pocket Wifi device with case",
+        url: images.router6,
+        alt: "Router Wifi device with case",
       },
     ],
   },
@@ -300,12 +296,12 @@ const initialState = {
       title: "Cloud SIM Technology",
     },
     {
-      icon: () => <ShareGroupIcon />,
-      title: "Share up to \n 8 devices",
+      icon: () => <ShareNetworkIcon />,
+      title: "Share across\n multiple devices",
     },
     {
-      icon: () => <BatteryIcon />,
-      title: "12 Hour Battery Life",
+      icon: () => <GlobMapIcon />,
+      title: "Greater Coverage\n and Stability",
     },
   ],
   topupPlans: [
@@ -412,19 +408,18 @@ const initialState = {
   ],
 };
 
-const pocketWifiSlice = createSlice({
-  name: "pocketWifiSlice",
+const routerSlice = createSlice({
+  name: "routerSlice",
   initialState,
   reducers: {
-    setPocketWifiCartData: (state, action) => {
+    setRouterCartData: (state, action) => {
       state.cart = { ...state.cart, ...action?.payload };
     },
-    handleNextPocketWifiCart: (state) => {
-      localStorage.setItem("pocket_wifi_cart", JSON.stringify(state.cart));
+    handleNextRouterCart: (state) => {
+      localStorage.setItem("router_cart", JSON.stringify(state.cart));
     },
   },
 });
 
-export const { setPocketWifiCartData, handleNextPocketWifiCart } =
-  pocketWifiSlice.actions;
-export default pocketWifiSlice.reducer;
+export const { setRouterCartData, handleNextRouterCart } = routerSlice.actions;
+export default routerSlice.reducer;

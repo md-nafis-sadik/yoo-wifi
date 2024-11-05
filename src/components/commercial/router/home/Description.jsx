@@ -3,7 +3,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { useSelector } from "react-redux";
 
 function Description() {
-  const { product } = useSelector((state) => state.pocketWifi);
+  const { product } = useSelector((state) => state.router);
   const options = { align: "start" };
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   return (

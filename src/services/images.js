@@ -13,16 +13,21 @@ import corporateHero from "@/assets/images/corporate-hero.webp";
 import download from "@/assets/images/download.webp";
 import europeRegionBlack from "@/assets/images/europe-region-black.webp";
 import googlePlay from "@/assets/images/google-play.webp";
+import locationMap from "@/assets/images/location-map.webp";
 import middleEast from "@/assets/images/middle-east.webp";
 import pocketWifiNewUpdate from "@/assets/images/pocket-wifi-new-update.webp";
 import pocketWifiSimRed2 from "@/assets/images/pocket-wifi-sim-red-2.webp";
 import pocketWifiSimRed from "@/assets/images/pocket-wifi-sim-red.webp";
 import qrcode from "@/assets/images/qrcode.webp";
 import routerWhite from "@/assets/images/router-white.webp";
-import locationMap from "@/assets/images/location-map.webp"
+import router1 from "@/assets/images/router/router-1.webp";
+import router2 from "@/assets/images/router/router-2.webp";
+import router3 from "@/assets/images/router/router-3.webp";
+import router4 from "@/assets/images/router/router-4.webp";
+import router5 from "@/assets/images/router/router-5.webp";
+import router6 from "@/assets/images/router/router-6.webp";
 
 export {
-  locationMap,
   africaRegionBlack,
   airtelIndia,
   americaRegionBlack,
@@ -37,11 +42,18 @@ export {
   error,
   europeRegionBlack,
   googlePlay,
+  locationMap,
   middleEast,
   notFound,
   pocketWifiNewUpdate,
   pocketWifiSimRed,
   pocketWifiSimRed2,
   qrcode,
+  router1,
+  router2,
+  router3,
+  router4,
+  router5,
+  router6,
   routerWhite,
 };
