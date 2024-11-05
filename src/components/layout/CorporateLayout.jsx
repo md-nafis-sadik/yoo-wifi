@@ -1,6 +1,5 @@
 import { Outlet, useNavigate } from "react-router-dom";
-import { Button } from "../ui/button";
-import { commercialRoutes, corporateRoutes } from "@/services";
+import NavBar from "../shared/navigation/NavBar";
 import DevFAB from "../shared/others/DevFab";
 
 function CorporateLayout() {

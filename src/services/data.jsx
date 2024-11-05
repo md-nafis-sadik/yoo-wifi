@@ -1,5 +1,6 @@
 import {
   commercialRoutes,
+  corporateRoutes,
   DollarLabelIcon,
   EarthIcon,
   images,
@@ -19,16 +20,29 @@ export const navBarData = () => ({
     },
     {
       _id: 2,
-      label: commercialRoutes.pocketWifi.name,
-      path: commercialRoutes.pocketWifi.path,
+      label: commercialRoutes.pocketWifiHome.name,
+      path: commercialRoutes.pocketWifiHome.path,
     },
-    { _id: 3, label: "Router", path: "/router" },
-    { _id: 4, label: "SIM/eSIM", path: "/sim-esim" },
+    {
+      _id: 3,
+      label: commercialRoutes.routerHome.name,
+      path: commercialRoutes.routerHome.path,
+    },
+    {
+      _id: 4,
+      label: commercialRoutes.simHome.name,
+      path: commercialRoutes.simHome.path,
+    },
     { _id: 5, label: "Contact Us", path: "/contact" },
     {
       _id: 6,
       label: commercialRoutes.aboutUs.name,
       path: commercialRoutes.aboutUs.path,
+    },
+    {
+      _id: 7,
+      label: corporateRoutes.home.name,
+      path: corporateRoutes.home.path,
     },
   ],
 });
@@ -47,21 +61,21 @@ export const productsData = () => ({
       description:
         "Stay connected on the go with our high-speed Pocket WIFI. Perfect for travel and remote work.",
       offer: "50% OFF",
-      link: "/",
+      link: commercialRoutes.pocketWifiHome.path,
     },
     {
       title: "Router",
       description:
         "Experience seamless and reliable internet connectivity at home with our advanced routers.",
       offer: "30% OFF",
-      link: "/",
+      link: commercialRoutes.routerHome.path,
     },
     {
       title: "SIM/eSIM",
       description:
         "Get instant connectivity with our SIM and eSIM options, suitable for all your devices.",
       offer: "20% OFF",
-      link: "/",
+      link: commercialRoutes.simHome.path,
     },
   ],
 });

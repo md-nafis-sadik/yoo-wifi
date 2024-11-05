@@ -9,14 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-main-600 text-white shadow hover:bg-main-500/70",
-        secondary: "bg-secondary-500 hover:bg-secondary-500/70 text-black-900",
+        default: "bg-main-600 text-white shadow hover:bg-main-500",
+        secondary: "bg-secondary-500 hover:bg-secondary-400 text-black-900",
         alert: "bg-secondary-500 text-black-900",
-        outline: "border border-neutral-200 hover:opacity-70",
-        ghost: "hover:opacity-70",
+        outline:
+          "border border-neutral-400 hover:border-main-600 hover:bg-main-600 hover:text-white",
+        ghost: "hover:bg-main-500 hover:text-black-900",
         cancel:
           "border border-neutral-300 bg-neutral-100 shadow-sm hover:bg-neutral-100 text-black-700",
         link: "text-zinc-900 underline-offset-4 hover:underline",
+        black: "bg-black text-white py-4 px-10",
       },
       size: {
         default: "px-6 py-4",

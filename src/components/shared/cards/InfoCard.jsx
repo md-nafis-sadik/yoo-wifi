@@ -3,6 +3,8 @@ import { cn } from "@/lib/utils";
 function InfoCard({
   title = "",
   icon = "",
+  wrapperClass = "",
+  titleClass="",
   description = "",
   children,
   ...props
@@ -10,7 +12,8 @@ function InfoCard({
   return (
     <div
       className={cn(
-        "flex items-center gap-4 sm:gap-6 md:gap-10 bg-neutral-100 rounded-2xl p-6"
+        "flex items-center gap-4 sm:gap-6 md:gap-10 bg-neutral-100 rounded-2xl p-6",
+        wrapperClass
       )}
       {...props}
     >
@@ -22,11 +25,16 @@ function InfoCard({
         </div>
       )}
       <div>
-        <h3 className="text-black-900 text-lg sm:text-xl md:text-2xl font-bold">
+        <h3 className={cn("text-black-900 text-lg sm:text-xl md:text-2xl font-bold",titleClass)}>
           {title}
         </h3>
         {description && (
-          <p className="text-black-600 text-sm sm:text-base md:text-lg mt-2 sm:mt-4">
+          <p
+            className={cn(
+              "text-black-600 text-sm sm:text-base md:text-lg",
+              title ? " mt-2 sm:mt-4" : ""
+            )}
+          >
             {description}
           </p>
         )}

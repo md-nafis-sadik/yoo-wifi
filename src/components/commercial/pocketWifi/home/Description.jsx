@@ -21,7 +21,7 @@ function Description() {
           </div>
           {product?.tabs?.map((item, index) => (
             <TabsContent key={index} value={item?.title}>
-              <p className="text-lg text-black-600 leading-[140%]">
+              <p className="text-lg text-black-600 leading-[140%] whitespace-pre-wrap">
                 {item?.content}
               </p>
             </TabsContent>
