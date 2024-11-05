@@ -26,6 +26,8 @@ import router3 from "@/assets/images/router/router-3.webp";
 import router4 from "@/assets/images/router/router-4.webp";
 import router5 from "@/assets/images/router/router-5.webp";
 import router6 from "@/assets/images/router/router-6.webp";
+import simSettingPhone from "@/assets/images/sim-setting-phone.webp";
+import sim1 from "@/assets/images/sim/sim-1.webp";
 
 export {
   africaRegionBlack,
@@ -56,4 +58,6 @@ export {
   router5,
   router6,
   routerWhite,
+  sim1,
+  simSettingPhone,
 };

@@ -6,6 +6,7 @@ import howItWorksReducer from "./module/howItWorks/HowItWorksSlice";
 import pocketWifiSlice from "./module/pocketWifi/slice";
 import routerSlice from "./module/router/slice";
 import sharedSlice from "./module/shared/sharedSlice";
+import simSlice from "./module/sim/slice";
 import testimonialsSlice from "./module/testimonials/testimonialsSlice";
 
 export const store = configureStore({
@@ -14,6 +15,7 @@ export const store = configureStore({
     auth: authSlice,
     pocketWifi: pocketWifiSlice,
     router: routerSlice,
+    sim: simSlice,
     shared: sharedSlice,
     testimonials: testimonialsSlice,
     howItWorks: howItWorksReducer,
@@ -34,7 +36,9 @@ export const store = configureStore({
         ignoredPaths: [
           "pocketWifi.features",
           "router.features",
+          "sim.features",
           "router.cart.startDate",
+          "sim.cart.startDate",
           "pocketWifi.cart.startDate",
           "howItWorks",
         ],

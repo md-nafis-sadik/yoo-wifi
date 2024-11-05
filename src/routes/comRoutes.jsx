@@ -22,6 +22,15 @@ const {
   routerShippingOption,
   routerSelfPickup,
   routerOrderSummery,
+  simHome,
+  simLayout,
+  simRegion,
+  simPlan,
+  simCartService,
+  simPlanSummery,
+  simShippingOption,
+  simSelfPickup,
+  simOrderSummery,
 } = routes || {};
 
 export const comRoutes = [
@@ -40,6 +49,10 @@ export const comRoutes = [
       {
         path: routerHome.path,
         element: routerHome.element,
+      },
+      {
+        path: simHome.path,
+        element: simHome.element,
       },
       {
         path: aboutUs.path,
@@ -112,6 +125,40 @@ export const comRoutes = [
       {
         path: routerOrderSummery.path,
         element: routerOrderSummery.element,
+      },
+    ],
+  },
+  {
+    path: simLayout.path,
+    element: simLayout.element,
+    children: [
+      {
+        path: simRegion.path,
+        element: simRegion.element,
+      },
+      {
+        path: simPlan.path,
+        element: simPlan.element,
+      },
+      {
+        path: simCartService.path,
+        element: simCartService.element,
+      },
+      {
+        path: simPlanSummery.path,
+        element: simPlanSummery.element,
+      },
+      {
+        path: simShippingOption.path,
+        element: simShippingOption.element,
+      },
+      {
+        path: simSelfPickup.path,
+        element: simSelfPickup.element,
+      },
+      {
+        path: simOrderSummery.path,
+        element: simOrderSummery.element,
       },
     ],
   },

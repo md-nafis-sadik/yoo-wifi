@@ -1,0 +1,51 @@
+import ActiveSimCard from "@/components/shared/cards/ActiveSimCard";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { useSelector } from "react-redux";
+
+function StepToActiveSim() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const { activateSteps } = useSelector((state) => state.sim);
+  return (
+    <section className="sec_common_60 bg-neutral-50">
+      <div className="containerX">
+        <div className="flex flex-col sm:flex-row items-center gap-4">
+          <h2 className="text-center sm:text-left text-2xml sm:text-3xl md:text-5xl font-bold text-black-900 flex-1 leading-[110%]">
+            Easy Steps to Activate Your eSIM
+          </h2>
+          <div className="flex items-center gap-2">
+            <Button
+              type="button"
+              className="min-w-[100px] sm:min-w-[140px] py-5"
+              variant={activeIndex === 0 ? "default" : "outline"}
+              onClick={() => setActiveIndex(0)}
+            >
+              iOS
+            </Button>
+            <Button
+              type="button"
+              className="min-w-[100px] sm:min-w-[140px] py-5"
+              variant={activeIndex === 1 ? "default" : "outline"}
+              onClick={() => setActiveIndex(1)}
+            >
+              Android
+            </Button>
+          </div>
+        </div>
+        <div className="mt-6 sm:mt-10 md:mt-16 lg:gap-20 flex flex-col gap-6 sm:gap-10 md:gap-15">
+          {activateSteps[activeIndex]?.deviceSteps?.map((item, index) => (
+            <ActiveSimCard
+              wrapperClass={
+                index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
+              }
+              item={item}
+              key={index}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default StepToActiveSim;

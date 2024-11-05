@@ -1,6 +1,7 @@
 import CommercialLayout from "@/components/layout/CommercialLayout";
 import PocketWifiLayout from "@/components/layout/PocketWifiLayout";
 import RouterLayout from "@/components/layout/RouterLayout";
+import SimLayout from "@/components/layout/SimLayout";
 import AboutUs from "@/pages/commercial/AboutUs";
 import Home from "@/pages/commercial/Home";
 import PocketWifiHome from "@/pages/commercial/pocketWifi/Home";
@@ -19,6 +20,14 @@ import RouterPlanSummery from "@/pages/commercial/router/RouterPlanSummery";
 import RouterRegion from "@/pages/commercial/router/RouterRegion";
 import RouterSelfPickup from "@/pages/commercial/router/RouterSelfPickup";
 import RouterShippingOption from "@/pages/commercial/router/RouterShippingOption";
+import SimHome from "@/pages/commercial/sim/Home";
+import SimCartService from "@/pages/commercial/sim/SimCartService";
+import SimOrderSummery from "@/pages/commercial/sim/SimOrderSummery";
+import SimPlan from "@/pages/commercial/sim/SimPlan";
+import SimPlanSummery from "@/pages/commercial/sim/SimPlanSummery";
+import SimRegion from "@/pages/commercial/sim/SimRegion";
+import SimSelfPickup from "@/pages/commercial/sim/SimSelfPickup";
+import SimShippingOption from "@/pages/commercial/sim/SimShippingOption";
 import CorporateHome from "@/pages/corporate/Home";
 
 const commercialRoutes = {
@@ -45,6 +54,12 @@ const commercialRoutes = {
     name: "Router",
     activePath: "router",
     element: <RouterHome />,
+  },
+  simHome: {
+    path: "/product/sim",
+    name: "SIM/eSIM",
+    activePath: "sim",
+    element: <SimHome />,
   },
 
   // pocket wifi
@@ -148,6 +163,57 @@ const commercialRoutes = {
     element: <RouterOrderSummery />,
   },
 
+  // router
+  simLayout: {
+    path: "/sim",
+    name: "Sim/eSim",
+    activePath: "sim",
+    element: <SimLayout />,
+  },
+
+  simRegion: {
+    path: "/sim/region",
+    name: "Router Region",
+    activePath: "router",
+    element: <SimRegion />,
+  },
+  simPlan: {
+    path: "/sim/sim-plan",
+    name: "Sim Plan",
+    activePath: "sim",
+    element: <SimPlan />,
+  },
+  simCartService: {
+    path: "/sim/cart-service",
+    name: "Sim Cart Service",
+    activePath: "sim",
+    element: <SimCartService />,
+  },
+  simPlanSummery: {
+    path: "/sim/sim-plan-summery",
+    name: "Sim Plan Summery",
+    activePath: "sim",
+    element: <SimPlanSummery />,
+  },
+  simShippingOption: {
+    path: "/sim/shipping-option",
+    name: "Sim Shipping Option",
+    activePath: "sim",
+    element: <SimShippingOption />,
+  },
+  simSelfPickup: {
+    path: "/sim/shipping-option/self-pickup",
+    name: "Sim Self Pickup",
+    activePath: "sim",
+    element: <SimSelfPickup />,
+  },
+  simOrderSummery: {
+    path: "/sim/order-summery",
+    name: "Sim Order Summery",
+    activePath: "sim",
+    element: <SimOrderSummery />,
+  },
+
   // about us
   aboutUs: {
     path: "/about-us",
@@ -160,7 +226,7 @@ const commercialRoutes = {
 const corporateRoutes = {
   home: {
     path: "/corporate",
-    name: "Home",
+    name: "Corporate",
     activePath: "home",
     element: <CorporateHome />,
   },
