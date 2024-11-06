@@ -10,15 +10,6 @@ import australiaRegionBlack from "@/assets/images/australia-region-black.webp";
 import awards1 from "@/assets/images/awards-1.webp";
 import battery from "@/assets/images/battery.webp";
 import charging from "@/assets/images/charging.webp";
-import companyMission1 from "@/assets/images/company-mission-1.webp";
-import corporateHero from "@/assets/images/corporate-hero.webp";
-import dataPlan from "@/assets/images/data-plan.webp";
-import download from "@/assets/images/download.webp";
-import email from "@/assets/images/email.webp";
-import europeRegionBlack from "@/assets/images/europe-region-black.webp";
-import googlePlay from "@/assets/images/google-play.webp";
-import locationMap from "@/assets/images/location-map.webp";
-import middleEast from "@/assets/images/middle-east.webp";
 import collaborator1 from "@/assets/images/collaborators/1.webp";
 import collaborator2 from "@/assets/images/collaborators/2.webp";
 import collaborator3 from "@/assets/images/collaborators/3.webp";
@@ -26,6 +17,18 @@ import collaborator4 from "@/assets/images/collaborators/4.webp";
 import collaborator5 from "@/assets/images/collaborators/5.webp";
 import collaborator6 from "@/assets/images/collaborators/6.webp";
 import collaborator7 from "@/assets/images/collaborators/7.webp";
+import companyMission1 from "@/assets/images/company-mission-1.webp";
+import corporateHero from "@/assets/images/corporate-hero.webp";
+import dataPlan from "@/assets/images/data-plan.webp";
+import discount from "@/assets/images/discount.webp";
+import download from "@/assets/images/download.webp";
+import email from "@/assets/images/email.webp";
+import europeRegionBlack from "@/assets/images/europe-region-black.webp";
+import googlePlay from "@/assets/images/google-play.webp";
+import heroConnected from "@/assets/images/heroConnected.webp";
+import heroDiscover from "@/assets/images/heroDiscover.webp";
+import locationMap from "@/assets/images/location-map.webp";
+import middleEast from "@/assets/images/middle-east.webp";
 import network from "@/assets/images/network.webp";
 import person1 from "@/assets/images/person-1.webp";
 import person2 from "@/assets/images/person-2.webp";
@@ -58,8 +61,6 @@ export {
   awards1,
   battery,
   charging,
-  companyMission1,
-  corporateHero,
   collaborator1,
   collaborator2,
   collaborator3,
@@ -67,12 +68,17 @@ export {
   collaborator5,
   collaborator6,
   collaborator7,
+  companyMission1,
+  corporateHero,
   dataPlan,
+  discount,
   download,
   email,
   error,
   europeRegionBlack,
   googlePlay,
+  heroConnected,
+  heroDiscover,
   locationMap,
   middleEast,
   network,

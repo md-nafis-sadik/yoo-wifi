@@ -1,3 +1,9 @@
+import {
+  commercialRoutes,
+  PocketWifiIcon,
+  RouterMiniIcon,
+  SimMiniIcon,
+} from "@/services";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -35,7 +41,23 @@ const initialState = {
       price: "SGD 20",
     },
   ],
-  
+  products: [
+    {
+      name: "Pocket Wifi",
+      path: commercialRoutes.pocketWifiHome.path,
+      icon: () => <PocketWifiIcon />,
+    },
+    {
+      name: "Router",
+      path: commercialRoutes.routerHome.path,
+      icon: () => <RouterMiniIcon />,
+    },
+    {
+      name: "SIM/eSIM",
+      path: commercialRoutes.simHome.path,
+      icon: () => <SimMiniIcon />,
+    },
+  ],
 };
 
 const sharedSlice = createSlice({
