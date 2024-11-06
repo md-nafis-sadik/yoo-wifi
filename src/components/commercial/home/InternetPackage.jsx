@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 function InternetPackage() {
   return (
-    <div className="sec_common_80 px-4 min-[1176px]:px-0">
+    <div className="sec_common_80 px-4 min-[1176px]:px-0 bg-neutral-50">
       <SectionHeader
         heading={"Perfect Internet Packages"}
         subHeading={"Choose Your Dream Destination and Perfect Package Now"}
