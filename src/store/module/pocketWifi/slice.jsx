@@ -379,19 +379,19 @@ const initialState = {
     {
       _id: 1,
       title: "About Us",
-      icon: () => <EmployeeIcon className="w-8 h-8 lg:w-[60px] lg:h-[60px]" />,
+      icon: () => <EmployeeIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       content: "Reliable and secure internet connectivity for businesses On-The-Go",
     },
     {
       _id: 2,
       title: "Partnerships",
-      icon: () => <PartnershipIcon className="w-8 h-8 lg:w-[60px] lg:h-[60px]" />,
+      icon: () => <PartnershipIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       content: "Explore long lasting partnership opportunities with our services",
     },
     {
       _id: 3,
       title: "Custom Solutions",
-      icon: () => <CustomSolutionIcon className="w-8 h-8 lg:w-[60px] lg:h-[60px]" />,
+      icon: () => <CustomSolutionIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       content: "Designed to meet your needs and requirements with high-speed internet access and cost-effective solution",
     },
   ],
