@@ -15,9 +15,9 @@ const CorporateHero = () => {
             to enriching travel journeys and fostering global communication,
             Yoowifi App delivers unmatched convenience, dependability, and
             cost-effectiveness."
-            containerClassName="pb-[60px]"
-            headingClassName="text-[5rem]"
-            subHeadingClassName=""
+            containerClassName="pb-10 mb:pb-[60px]"
+            headingClassName="md:text-[5rem]"
+            subHeadingClassName="text-sm md:text-base"
           ></SectionHeader>
           <div className="containerX">
             <img src={corporateHero} alt="hero image"></img>

@@ -1,7 +1,5 @@
 import { Outlet, useNavigate } from "react-router-dom";
-import { Button } from "../ui/button";
-import { commercialRoutes, corporateRoutes } from "@/services";
-import DevFAB from "../shared/others/DevFab";
+import DevFAB from "../shared/others/DevFAB";
 
 function CorporateLayout() {
   const navigate = useNavigate();
