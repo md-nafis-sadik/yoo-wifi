@@ -30,6 +30,7 @@
     "react-day-picker": "^8.10.1",
     "react-dom": "^18.3.1",
     "react-fast-marquee": "^1.6.5",
+    "react-international-phone": "^4.3.0",
     "react-lazy-load-image-component": "^1.6.2",
     "react-photoswipe-gallery": "^3.0.2",
     "react-redux": "^9.1.2",

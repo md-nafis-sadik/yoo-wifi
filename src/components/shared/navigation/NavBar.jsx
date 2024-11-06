@@ -9,7 +9,9 @@ import {
   commercialRoutes as routes,
   SearchIcon,
 } from "@/services";
+import { useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import AuthDialog from "./AuthDialog";
 
 const NavItem = ({ to, label, isActive }) => {
   return (
@@ -29,6 +31,8 @@ const NavItem = ({ to, label, isActive }) => {
 };
 
 const NavBar = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   const location = useLocation();
   const currentPath = location.pathname;
 
@@ -53,24 +57,33 @@ const NavBar = () => {
         <div className="hidden min-[1360px]:flex flex-row gap-3">
           <Link to={"/"}>
             <Button
-              className={"px-6 md:py-2 rounded-[10px] min-h-full"}
+              className={
+                "h-10 w-[160px] px-6 md:py-2 rounded-[10px] min-h-full"
+              }
               variant="outline"
             >
-              <SearchIcon className="w-6 h-6 shrink-0" />
-              <span>Search country</span>
+              <SearchIcon className="w-6 h-6 shrink-0" color="#757575" />
+              <span className="text-xs font-normal !leading-[1.2] text-black-600">
+                Search country
+              </span>
             </Button>
           </Link>
           <Link to={"/"}>
-            <Button className={"px-6 md:py-3 rounded-[10px]"}>
-              <CellphoneIcon className="w-5 h-5 shrink-0" />
+            <Button
+              className={"h-10 w-[160px] px-6 md:py-3 rounded-[10px] gap-1"}
+            >
+              <CellphoneIcon className="!w-5 !h-5 shrink-0" />
               <span>Download APP</span>
             </Button>
           </Link>
-          <Link to={"/"}>
-            <Button className={"w-10 h-10 rounded-[10px]"} variant="secondary">
-              <PersonIcon className="h-6 w-6 shrink-0" />
-            </Button>
-          </Link>
+          <Button
+            className={"w-10 h-10 rounded-[10px]"}
+            size="icon"
+            variant="secondary"
+            onClick={() => setIsDialogOpen(true)}
+          >
+            <PersonIcon className="!h-6 !w-6 shrink-0" />
+          </Button>
         </div>
 
         <div className="flex min-[1360px]:hidden items-center justify-end gap-4">
@@ -85,6 +98,8 @@ const NavBar = () => {
           </Button>
         </div>
       </div>
+
+      <AuthDialog isOpen={isDialogOpen} setIsOpen={setIsDialogOpen} />
     </nav>
   );
 };
