@@ -1,3 +1,4 @@
+import Benefits from '@/components/corporate/commercial/Benefits';
 import CorporateBanner from '@/components/shared/others/CorporateBanner';
 import React, { Fragment } from 'react';
 
@@ -7,6 +8,7 @@ const Commercial = () => {
             <CorporateBanner
                 isShowBannerBottom={false}
             />
+            <Benefits />
         </Fragment>
     );
 };
