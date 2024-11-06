@@ -19,6 +19,13 @@ import europeRegionBlack from "@/assets/images/europe-region-black.webp";
 import googlePlay from "@/assets/images/google-play.webp";
 import locationMap from "@/assets/images/location-map.webp";
 import middleEast from "@/assets/images/middle-east.webp";
+import collaborator1 from "@/assets/images/collaborators/1.webp";
+import collaborator2 from "@/assets/images/collaborators/2.webp";
+import collaborator3 from "@/assets/images/collaborators/3.webp";
+import collaborator4 from "@/assets/images/collaborators/4.webp";
+import collaborator5 from "@/assets/images/collaborators/5.webp";
+import collaborator6 from "@/assets/images/collaborators/6.webp";
+import collaborator7 from "@/assets/images/collaborators/7.webp";
 import network from "@/assets/images/network.webp";
 import person1 from "@/assets/images/person-1.webp";
 import person2 from "@/assets/images/person-2.webp";
@@ -53,6 +60,13 @@ export {
   charging,
   companyMission1,
   corporateHero,
+  collaborator1,
+  collaborator2,
+  collaborator3,
+  collaborator4,
+  collaborator5,
+  collaborator6,
+  collaborator7,
   dataPlan,
   download,
   email,

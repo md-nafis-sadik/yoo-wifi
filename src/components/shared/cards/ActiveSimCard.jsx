@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 
 function ActiveSimCard({ item = {}, wrapperClass = "" }) {
-  console.log(item);
   return (
     <div
       className={cn(

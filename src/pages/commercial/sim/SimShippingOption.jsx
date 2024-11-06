@@ -2,16 +2,13 @@ import RouterCartFooter from "@/components/commercial/router/RouterCartFooter";
 import CartShippingCard from "@/components/shared/cards/CartShippingCard";
 import DeliveryAddress from "@/components/shared/others/DeliveryAddress";
 import { commercialRoutes } from "@/services";
-import {
-  handleNextRouterCart,
-  setRouterCartData,
-} from "@/store/module/router/slice";
+import { handleNextSimCart, setSimCartData } from "@/store/module/sim/slice";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 function SimShippingOption() {
   const { shippingOptions } = useSelector((state) => state.shared);
-  const { cart } = useSelector((state) => state.router);
+  const { cart } = useSelector((state) => state.sim);
   const dispatch = useDispatch();
   const isActive =
     cart?.shipping &&
@@ -19,20 +16,20 @@ function SimShippingOption() {
   const navigate = useNavigate();
 
   const handleSelectCard = (item) => {
-    dispatch(setRouterCartData({ shipping: item }));
+    dispatch(setSimCartData({ shipping: item }));
   };
 
   const handleLocationSelect = (item) => {
-    dispatch(setRouterCartData({ shippingAddress: item }));
+    dispatch(setSimCartData({ shippingAddress: item }));
   };
 
   const handleNext = () => {
     if (cart?.shipping?.title == "Self Pickup") {
-      navigate(commercialRoutes.routerSelfPickup.path);
+      navigate(commercialRoutes.simSelfPickup.path);
     } else {
-      navigate(commercialRoutes.routerOrderSummery.path);
+      navigate(commercialRoutes.simOrderSummery.path);
     }
-    dispatch(handleNextRouterCart());
+    dispatch(handleNextSimCart());
   };
 
   const handlePrev = () => {

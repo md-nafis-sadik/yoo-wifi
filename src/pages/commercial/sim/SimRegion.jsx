@@ -1,38 +1,34 @@
-import RouterCartFooter from "@/components/commercial/router/RouterCartFooter";
-import DiscountDownloadApp from "@/components/shared/others/DiscountDownloadApp";
+import RouterCartFooter from "@/components/commercial/sim/RouterCartFooter";
 import { Input } from "@/components/ui/input";
 import { commercialRoutes } from "@/services";
-import {
-  handleNextRouterCart,
-  setRouterCartData,
-} from "@/store/module/router/slice";
+import { handleNextSimCart, setSimCartData } from "@/store/module/sim/slice";
 import { CountrySelect } from "react-country-state-city";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 function SimRegion() {
-  const { cart } = useSelector((state) => state.router);
+  const { cart } = useSelector((state) => state.sim);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const isActive = cart?.productCountry?.id && cart?.memberId ? true : false;
+  const isActive = cart?.productCountry?.id ? true : false;
 
   const handleCountrySelect = (value) => {
-    dispatch(setRouterCartData({ productCountry: value }));
+    dispatch(setSimCartData({ productCountry: value }));
   };
 
   const handleInputChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    dispatch(setRouterCartData({ [name]: value }));
+    dispatch(setSimCartData({ [name]: value }));
   };
 
   const handleNext = () => {
-    navigate(commercialRoutes.routerPlan.path);
-    dispatch(handleNextRouterCart());
+    navigate(commercialRoutes.simPlan.path);
+    dispatch(handleNextSimCart());
   };
 
   const handlePrev = () => {
-    navigate(commercialRoutes.routerHome.path);
+    navigate(commercialRoutes.simHome.path);
   };
 
   return (
@@ -73,7 +69,6 @@ function SimRegion() {
           />
         </div>
       </div>
-      <DiscountDownloadApp />
     </div>
   );
 }

@@ -1,9 +1,10 @@
 import LetsTalk from "@/components/commercial/contact/LetsTalk";
+import SupportAndFAQ from "@/components/commercial/contact/SupportAndFAQ";
 import HeroCommon from "@/components/shared/others/HeroCommon";
 import { useSelector } from "react-redux";
 
 const Contact = () => {
-  const { contact } = useSelector((state) => state.contact);
+  const { contact, faqs } = useSelector((state) => state.contact);
 
   return (
     <div>
@@ -14,6 +15,7 @@ const Contact = () => {
         }
       />
       <LetsTalk data={contact} />
+      <SupportAndFAQ data={faqs} />
     </div>
   );
 };

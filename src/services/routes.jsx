@@ -228,6 +228,8 @@ const commercialRoutes = {
     activePath: "aboutUs",
     element: <AboutUs />,
   },
+
+  // contact
   contact: {
     path: "/contact",
     name: "Contact Us",
