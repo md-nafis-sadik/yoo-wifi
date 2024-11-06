@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { BreadcrumbIcon, CheckIcon } from '@/services';
+import { BreadcrumbIcon, BreadcrumbSmallIcon, CheckIcon } from '@/services';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -76,8 +76,9 @@ const CorporateBanner = ({
                     )}
                 </div>
 
-                <div className='absolute right-0 top-0 z-0 w-[220px] h-[247px] lg:w-max lg:h-full'>
-                    <BreadcrumbIcon />
+                <div className='absolute right-0 top-0 z-0'>
+                    <BreadcrumbIcon className='hidden lg:block' />
+                    <BreadcrumbSmallIcon className='block lg:hidden' />
                 </div>
             </div>
 
