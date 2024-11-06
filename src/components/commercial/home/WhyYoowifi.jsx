@@ -33,7 +33,7 @@ const WhyYoowifi = () => {
             ))}
           </div>
 
-          <Button variant={"secondary"} size={"lg"} className={"md:h-[52px]"}>
+          <Button variant={"secondary"} size={"lg"} className={"md:h-[52px] !text-base"}>
             About Us
           </Button>
         </div>

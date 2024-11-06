@@ -1,20 +1,16 @@
-import PocketWifiCartFooter from "@/components/commercial/pocketWifi/PocketWifiCartFooter";
 import RouterCartFooter from "@/components/commercial/router/RouterCartFooter";
 import PackageCard from "@/components/shared/cards/PackageCard";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { commercialRoutes } from "@/services";
-import {
-  handleNextRouterCart,
-  setRouterCartData,
-} from "@/store/module/router/slice";
+import { handleNextSimCart, setSimCartData } from "@/store/module/sim/slice";
 import useEmblaCarousel from "embla-carousel-react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 function SimPlan() {
-  const { recomandedPackages, cart } = useSelector((state) => state.router);
+  const { recomandedPackages, cart } = useSelector((state) => state.sim);
   const [activeTab, setActiveTab] = useState("all");
   const dispatch = useDispatch();
   const isActive = cart?.package?.id ? true : false;
@@ -28,22 +24,24 @@ function SimPlan() {
   };
 
   const handleSelectPlan = (item) => {
-    dispatch(setRouterCartData({ package: item }));
+    dispatch(setSimCartData({ package: item }));
   };
 
   const handleNext = () => {
-    navigate(commercialRoutes.routerCartService.path);
-    dispatch(handleNextRouterCart());
+    navigate(commercialRoutes.simCartService.path);
+    dispatch(handleNextSimCart());
   };
 
   const handlePrev = () => {
-    navigate(commercialRoutes.routerRegion.path);
+    navigate(commercialRoutes.simRegion.path);
   };
 
   return (
     <div className="w-full">
       <div className="w-full flex flex-col gap-5">
-        <h2>Select a Plan</h2>
+        <h2 className="text-base sm:text-xl md:text-2xl font-semibold md:font-bold text-black-900">
+          Select a Plan
+        </h2>
         <div ref={emblaRef} className="w-full max-w-full overflow-hidden">
           <div className="flex items-center gap-4">
             <Button

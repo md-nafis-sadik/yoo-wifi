@@ -1,4 +1,3 @@
-import PocketWifiCartFooter from "@/components/commercial/pocketWifi/PocketWifiCartFooter";
 import RouterCartFooter from "@/components/commercial/router/RouterCartFooter";
 import { commercialRoutes } from "@/services";
 import { useSelector } from "react-redux";
@@ -6,16 +5,20 @@ import { useNavigate } from "react-router-dom";
 
 function SimPlanSummery() {
   const navigate = useNavigate();
-  const { cart } = useSelector((state) => state.router);
+  const { cart } = useSelector((state) => state.sim);
   const date = new Date(cart?.startDate);
   const formattedDate = date.toISOString().split("T")[0];
 
   const handlePrev = () => {
-    navigate(commercialRoutes.routerCartService.path);
+    navigate(commercialRoutes.simCartService.path);
   };
 
   const handleNext = () => {
-    navigate(commercialRoutes.routerShippingOption.path);
+    if (cart?.cartType === "sim") {
+      navigate(commercialRoutes.simShippingOption.path);
+    } else {
+      navigate(commercialRoutes.simOrderSummery.path);
+    }
   };
 
   return (
@@ -34,9 +37,11 @@ function SimPlanSummery() {
           </div>
           <div className="flex items-center justify-between gap-3">
             <span className="text-base sm:text-lg text-black-700">
-              Data Available
+              Sim Type
             </span>
-            <span className="text-base sm:text-lg text-black-700">1GB/Day</span>
+            <span className="text-base sm:text-lg text-black-700 uppercase">
+              {cart?.cartType}
+            </span>
           </div>
           <div className="flex items-center justify-between gap-3">
             <span className="text-base sm:text-lg text-black-700">

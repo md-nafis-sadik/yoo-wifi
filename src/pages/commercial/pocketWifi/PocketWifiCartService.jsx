@@ -1,5 +1,6 @@
 import DataSize from "@/components/commercial/pocketWifi/cartService/DataSize";
 import ServiceDate from "@/components/commercial/pocketWifi/cartService/ServiceDate";
+import WifiDevices from "@/components/commercial/pocketWifi/cartService/WifiDevices";
 import PocketWifiCartFooter from "@/components/commercial/pocketWifi/PocketWifiCartFooter";
 import CartQuantity from "@/components/shared/others/CartQuantity";
 import { Button } from "@/components/ui/button";
@@ -19,13 +20,14 @@ function PocketWifiCartService() {
   const options = { align: "start" };
   const [emblaRef] = useEmblaCarousel(options);
   const navigate = useNavigate();
-  
+
+  console.log(cart);
+
   const isActivePackage = Boolean(cart?.package?.id || cart?.topup?.planCode);
   const deviceSelect =
     cart?.cartType === "topup" ? Boolean(cart?.device?.deviceId) : true;
   const isCountryAvailable = Boolean(cart?.productCountry?.id);
   const isStartDateAvailable = Boolean(cart?.startDate);
-
 
   const isActive =
     isActivePackage &&
@@ -82,8 +84,7 @@ function PocketWifiCartService() {
         </div>
       </div>
 
-      {/* data size : for select or change data plan. this will work   */}
-      <DataSize />
+      {cart?.cartType == "rental" ? <DataSize /> : <WifiDevices />}
       <ServiceDate />
       <CartQuantity
         max={10}

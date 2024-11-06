@@ -1,6 +1,8 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import DevFAB from "../shared/others/DevFAB";
 import useScrollToTop from "@/hooks/useScrollToTop";
+import DownloadYoowifi from "../shared/others/DownloadYoowifi";
+import Footer from "../shared/navigation/Footer";
 
 function CorporateLayout() {
   const navigate = useNavigate();
@@ -15,6 +17,8 @@ function CorporateLayout() {
       <DevFAB />
       {/* Removable */}
       <Outlet />
+      <DownloadYoowifi />
+      <Footer />
     </main>
   );
 }
