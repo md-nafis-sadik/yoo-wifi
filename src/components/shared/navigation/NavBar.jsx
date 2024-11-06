@@ -19,7 +19,7 @@ const NavItem = ({ to, label, isActive }) => {
         isActive
           ? "font-semibold active-link border-b-2 border-main-650"
           : "font-normal border-none",
-        "relative px-4 py-2 hover:text-main-600 text-black-900"
+        "text-sm relative px-2 py-2 hover:text-main-600 text-black-900"
       )}
     >
       {label}
@@ -34,12 +34,12 @@ const NavBar = () => {
 
   return (
     <nav className="bg-transparent">
-      <div className="flex flex-row items-center justify-between h-14 md:h-20 max-w-[1312px] mx-auto px-4 md:px-10 min-[1360px]:px-0 w-full">
+      <div className="flex flex-row items-center justify-between gap-4 h-14 md:h-20 max-w-[1312px] mx-auto px-4 md:px-10 min-[1344px]:px-0 w-full">
         <Link to={routes.home.path}>
           <img src={images.appLogo} alt="app logo" className="h-10 w-auto" />
         </Link>
 
-        <ul className="hidden min-[1360px]:flex space-x-3">
+        <ul className="hidden min-[1360px]:flex gap-3">
           {navBarData().commercialNavItems.map(({ _id, label, path }) => (
             <NavItem
               key={_id}

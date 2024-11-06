@@ -5,6 +5,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { ArrowUpRightIcon } from "@/services";
 import { useEffect, useState } from "react";
 
 const SupportAndFAQ = ({ data }) => {
@@ -34,13 +37,13 @@ const SupportAndFAQ = ({ data }) => {
           containerClassName={"gap-4 md:gap-[18px]"}
         />
 
-        <div className="containerX xl:px-0 grid md:grid-cols-2 gap-y-4 md:gap-10 mt-4 md:mt-8 lg:mt-[60px]">
+        <div className="containerX xl:px-0 grid md:grid-cols-2 gap-y-3 md:gap-10 mt-4 md:mt-8 lg:mt-[60px]">
           <Accordion
             type="single"
             collapsible
             value={openItem}
             onValueChange={handleOpenChange}
-            className="space-y-4 md:space-y-6"
+            className={cn("space-y-3 md:space-y-6 rounded-xl")}
           >
             {firstHalf?.map((faq, index) => (
               <AccordionItem
@@ -48,7 +51,7 @@ const SupportAndFAQ = ({ data }) => {
                 className="h-fit bg-white"
                 key={index}
               >
-                <AccordionTrigger className="text-start gap-6">
+                <AccordionTrigger className="text-start px-4 md:px-6 py-4 text-black-900">
                   {faq?.question}
                 </AccordionTrigger>
                 <AccordionContent>{faq?.answer}</AccordionContent>
@@ -60,7 +63,7 @@ const SupportAndFAQ = ({ data }) => {
             collapsible
             value={openItem}
             onValueChange={handleOpenChange}
-            className="space-y-4 md:space-y-6"
+            className={cn("space-y-3 md:space-y-6 rounded-xl")}
           >
             {secondHalf?.map((faq, index) => (
               <AccordionItem
@@ -68,13 +71,36 @@ const SupportAndFAQ = ({ data }) => {
                 className="h-fit bg-white"
                 key={index}
               >
-                <AccordionTrigger className="text-start gap-6">
+                <AccordionTrigger className="text-start px-4 md:px-6 py-4 text-black-900">
                   {faq?.question}
                 </AccordionTrigger>
                 <AccordionContent>{faq?.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
+        </div>
+
+        <div className="flex flex-col items-center mt-4 md:mt-8 lg:mt-[60px]">
+          <h2 className="text-main-600 text-2xl md:text-5xl font-bold !leading-[1.4] md:!leading-[1.1] text-center">
+            Still have questions?
+          </h2>
+          <p className="p_common mt-[18px] text-center">
+            Can't find the answer you're looking for? Feel free to chat with our
+            friendly team!
+          </p>
+
+          <div className="flex gap-3 mt-6">
+            <Button
+              variant="secondary"
+              size="lg"
+              className={"text-base font-semibold !leading-[1.2]"}
+            >
+              Get In Touch
+            </Button>
+            <Button color="white" className={"h-[52px] w-[52px]"}>
+              <ArrowUpRightIcon className={"shrink-0 !h-6 !w-6"} />
+            </Button>
+          </div>
         </div>
       </div>
     </div>
