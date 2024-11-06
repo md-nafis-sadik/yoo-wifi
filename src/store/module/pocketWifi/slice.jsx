@@ -528,19 +528,19 @@ const initialState = {
       _id: 1,
       title: "Dedicated Application",
       content: "Take charge of your connectivity needs with our online management portal, empowering you with control for a smooth and effortless experience.",
-      icon: () => <HandPhoneIcon className="lg:w-[80px] lg:h-[80px]" />
+      icon: () => <HandPhoneIcon className="w-[48px] h-[48px] lg:w-[80px] lg:h-[80px]" />
     },
     {
       _id: 2,
       title: "Cost Efficient",
       content: "Experience affordable and hassle-free connectivity with Yoowifi's vSIM technology, eliminating costly roaming charges for budget-friendly data services.",
-      icon: () => <MoneyIcon className="lg:w-[80px] lg:h-[80px]" />
+      icon: () => <MoneyIcon className="w-[48px] h-[48px] lg:w-[80px] lg:h-[80px]" />
     },
     {
       _id: 3,
       title: "Customisable Data Plans",
       content: "Tailor your data package to meet your specific needs and scale as your business grows.",
-      icon: () => <GlobePhoneIcon className="lg:w-[80px] lg:h-[80px]" />
+      icon: () => <GlobePhoneIcon className="w-[48px] h-[48px] lg:w-[80px] lg:h-[80px]" />
     },
   ]
 };
