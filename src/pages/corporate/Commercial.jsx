@@ -17,6 +17,7 @@ const Commercial = () => {
                 isShowBannerBottom={false}
                 pageTitle="Commercial"
                 description='Take your productivity to the next level with our seamless connectivity! We provide a gateway to the digital world that will make your day as smooth as possible.'
+                bannerStyle={2}
             />
             <Benefits />
             <Products />
