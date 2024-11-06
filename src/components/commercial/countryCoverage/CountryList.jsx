@@ -42,7 +42,7 @@ const CountryList = () => {
                             key={index}
                             className='p-3 bg-neutral-100 rounded-xl flex gap-2 items-center'
                         >
-                            <img src={country.image} alt={country.name} className='w-12 h-8 md:w-20 md:h-14' />
+                            <img src={country.image} alt={country.name} className='w-12 h-8 md:w-20 md:h-14 object-contain' />
                             <p className='text-sm lg:text-[18px] font-semibold'>
                                 {country.name}
                             </p>
