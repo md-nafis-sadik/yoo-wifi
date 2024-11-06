@@ -4,7 +4,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const CorporateBanner = ({
-    pageTitle = "IOT", description = "", featureList = [], path = "#"
+    pageTitle = "IOT", description = "", featureList = [], path = "#", isShowBannerBottom = true
 }) => {
 
     const navigate = useNavigate();
@@ -19,7 +19,7 @@ const CorporateBanner = ({
                     <div className='relative z-10 flex flex-col xl:flex-row gap-y-[16.5px] xl:gap-y-0 gap-x-[88.5px]'>
 
                         <div>
-                            <h1 className='text-[28px] xl:text-6xl font-bold leading-[110%] xl:leading-[140%] font-dmsans xl:font-sansPro'>
+                            <h1 className='text-[28px] xl:text-6xl font-bold leading-[110%] xl:leading-[140%] font-dmsans xl:font-sansPro break-all'>
                                 Travel Connected
                             </h1>
 
@@ -59,7 +59,7 @@ const CorporateBanner = ({
             </div>
 
             {/* bottom part */}
-            <div className='containerX '>
+            {isShowBannerBottom && (<div className='containerX '>
                 <div className='flex flex-col lg:flex-row gap-4 lg:gap-6 sec_common_80 xl:!px-0'>
                     <h2 className='text-[28px] lg:text-6xl font-bold leading-[110%] lg:leading-[120%] text-black-900 w-full md:w-[392px]'>
                         {pageTitle}
@@ -89,7 +89,7 @@ const CorporateBanner = ({
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>)}
         </>
     );
 };

@@ -521,9 +521,6 @@ const initialState = {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
     },
   ],
-  iotFeatureList: [
-    "Size of Data", "Operator-specific", "Managing platform and Monitoring", "Single or Multiple Countries"
-  ]
 };
 
 const pocketWifiSlice = createSlice({
