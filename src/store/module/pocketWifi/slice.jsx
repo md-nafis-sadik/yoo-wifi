@@ -398,37 +398,37 @@ const initialState = {
   services: [
     {
       _id: 1,
-      icon: () => <InternetCoverageIcon />,
+      icon: () => <InternetCoverageIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "Global Coverage",
       content: "Stay connected across 160 countries, no matter where your journey takes you with Yoowifi's travel wifi services.",
     },
     {
       _id: 2,
-      icon: () => <MultihomingNetwrokIcon />,
+      icon: () => <MultihomingNetwrokIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "Multihoming Network",
       content: "We stay connected by partnering with multiple telcos, ensuring uninterrupted service availability in any location.",
     },
     {
       _id: 3,
-      icon: () => <OrganizationIcon />,
+      icon: () => <OrganizationIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "Zero Touch on Demand",
       content: "Our cloud-based portal preconfigures and deploys services for zero-touch on-demand connectivity, technical expertise required on-site.",
     },
     {
       _id: 4,
-      icon: () => <MoneyIcon />,
+      icon: () => <MoneyIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "Cost Efficient Service",
       content: "Our vSIM tech offers affordable data services by switching SIMs as you cross borders, eliminating roaming charges and reducing telecom expenses.",
     },
     {
       _id: 5,
-      icon: () => <ProjectIcon />,
+      icon: () => <ProjectIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "Management Portal",
       content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
     },
     {
       _id: 6,
-      icon: () => <AppCustomizationIcon />,
+      icon: () => <AppCustomizationIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "App Customization",
       content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
     },
