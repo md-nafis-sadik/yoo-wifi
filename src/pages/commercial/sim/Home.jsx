@@ -1,4 +1,5 @@
 import Description from "@/components/commercial/sim/home/Description";
+import DeviceCompability from "@/components/commercial/sim/home/DeviceCompability";
 import Hero from "@/components/commercial/sim/home/Hero";
 import HowToSetup from "@/components/commercial/sim/home/HowToSetup";
 import HowToTopUp from "@/components/commercial/sim/home/HowToTopUp";
@@ -14,7 +15,7 @@ function Home() {
       <KeyFeatures />
       <HowToSetup />
       <StepToActiveSim />
-      {/* <DeviceCompability />   */}
+      <DeviceCompability />  
       <HowToTopUp />
       <OtherProducts />
     </section>

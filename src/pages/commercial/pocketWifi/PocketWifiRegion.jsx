@@ -14,10 +14,7 @@ function PocketWifiRegion() {
   const { cart } = useSelector((state) => state.pocketWifi);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const isActive =
-    cart?.productCountry?.id && cart?.color?.hex && cart?.memberId
-      ? true
-      : false;
+  const isActive = cart?.productCountry?.id && cart?.color?.hex ? true : false;
 
   const handleCountrySelect = (value) => {
     dispatch(setPocketWifiCartData({ productCountry: value }));

@@ -14,6 +14,18 @@ const initialState = {
       deviceId: "55775254222892",
     },
   ],
+  sims: [
+    {
+      id: 1,
+      name: "My Sim",
+      deviceId: "55775254747523",
+    },
+    {
+      id: 2,
+      name: "My eSim",
+      deviceId: "55775254222892",
+    },
+  ],
   userLocations: [
     {
       id: 1,

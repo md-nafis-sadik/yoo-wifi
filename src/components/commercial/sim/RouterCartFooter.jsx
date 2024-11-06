@@ -8,7 +8,7 @@ function RouterCartFooter({
   nextHandler = () => {},
   ...props
 }) {
-  const { product, cart } = useSelector((state) => state.router);
+  const { product, cart } = useSelector((state) => state.sim);
 
   return (
     <div
