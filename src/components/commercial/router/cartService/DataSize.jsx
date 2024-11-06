@@ -1,52 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { setSimCartData } from "@/store/module/sim/slice";
-import useEmblaCarousel from "embla-carousel-react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 function DataSize({}) {
-  const options = { align: "start" };
-  const [emblaRef] = useEmblaCarousel(options);
-  const { cart, recomandedPackages } = useSelector((state) => state.sim);
-  const dispatch = useDispatch();
-
-  const handlePackSelect = (item) => {
-    dispatch(setSimCartData({ package: item }));
-  };
-
-  const filterByTab = (item) => {
-    return item?.tags?.includes(cart?.cartType);
-  };
+  const { cart } = useSelector((state) => state.router);
 
   return (
     <div className="w-full flex flex-col gap-4">
       <h2 className="text-base font-semibold text-black-700">Data Size</h2>
-      <div className="w-full">
-        <div ref={emblaRef} className="max-w-full overflow-hidden ">
-          <div className="flex  gap-4 ">
-            {recomandedPackages?.filter(filterByTab)?.map((item, index) => (
-              <Button
-                type="button"
-                className={cn(
-                  "hover:bg-main-600 hover:text-white",
-                  cart?.package?.planCode == item?.planCode
-                    ? "text-white font-semibold"
-                    : ""
-                )}
-                variant={
-                  cart?.package?.planCode == item?.planCode
-                    ? "default"
-                    : "cancel"
-                }
-                onClick={() => handlePackSelect(item)}
-                key={index}
-              >
-                {item?.dataSize} {item?.desc}
-              </Button>
-            ))}
-          </div>
-        </div>
-      </div>
+      <Button
+        type="button"
+        className={cn(
+          "hover:bg-main-600 hover:text-white text-white font-semibold"
+        )}
+        variant="default"
+      >
+        {cart?.package?.dataSize} {cart?.package?.desc}
+      </Button>
     </div>
   );
 }

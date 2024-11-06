@@ -1,19 +1,18 @@
 import DatePicker from "@/components/shared/others/DatePicker";
 import { setRouterCartData } from "@/store/module/router/slice";
-import { setSimCartData } from "@/store/module/sim/slice";
 import { CountrySelect } from "react-country-state-city";
 import { useDispatch, useSelector } from "react-redux";
 
 function ServiceDate() {
   const dispatch = useDispatch();
-  const { cart } = useSelector((state) => state.sim);
+  const { cart } = useSelector((state) => state.router);
 
   const handleCountrySelect = (value) => {
-    dispatch(setSimCartData({ productCountry: value }));
+    dispatch(setRouterCartData({ productCountry: value }));
   };
 
   const handleStartDate = (value) => {
-    dispatch(setSimCartData({ startDate: value }));
+    dispatch(setRouterCartData({ startDate: value }));
   };
   return (
     <div className="px-4 py-6 bg-neutral-100 rounded-xl">

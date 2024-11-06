@@ -55,16 +55,48 @@ function SimOrderSummery() {
               title="Plan Name"
               description={`${cart?.package?.title} ${cart?.package?.dataSize} ${cart?.package?.desc}`}
             />
-          </div>
-          {/*  */}
-          <div className="pb-5 flex flex-col gap-4  pt-5">
-            <OrderSingleItem title="SIM Type" description={cart?.cartType} />
+            <OrderSingleItem
+              title="SIM Type"
+              description={cart?.cartType}
+              descriptionClass="uppercase"
+            />
           </div>
           {/*  */}
           <div className="pb-5 flex flex-col gap-4  pt-5">
             <OrderSingleItem
-              title="Plan Name"
-              description={`${cart?.package?.title} ${cart?.package?.dataSize} ${cart?.package?.desc}`}
+              title="Minimum Charges"
+              description="SGD 79.00"
+              descriptionClass="uppercase"
+            />
+            <OrderSingleItem
+              title="Deposit"
+              description="SGD 00"
+              descriptionClass="uppercase"
+            />
+            <OrderSingleItem
+              title="Sub-total"
+              description="SGD 79.00"
+              descriptionClass="uppercase"
+            />
+            <OrderSingleItem
+              title="Quantity"
+              description={cart?.quantity}
+              descriptionClass="uppercase"
+            />
+          </div>
+          {/*  */}
+          <div className="pb-5 flex flex-col gap-4  pt-5">
+            <OrderSingleItem
+              title="Self pick-up delivery fee"
+              description="FREE"
+            />
+            <OrderSingleItem
+              title="Return drop-off fee"
+              description="FREE"
+            />
+            <OrderSingleItem
+              title="Total Delivery Charges"
+              description="SGD 0.00"
             />
           </div>
           {/*  */}

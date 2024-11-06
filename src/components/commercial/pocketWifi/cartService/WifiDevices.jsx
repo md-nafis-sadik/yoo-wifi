@@ -5,17 +5,17 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { setRouterCartData } from "@/store/module/router/slice";
+import { setPocketWifiCartData } from "@/store/module/pocketWifi/slice";
 import { useDispatch, useSelector } from "react-redux";
 
 function WifiDevices() {
-  const { cart } = useSelector((state) => state.router);
+  const { cart } = useSelector((state) => state.pocketWifi);
   const { wifiDevices } = useSelector((state) => state?.auth);
 
   const dispatch = useDispatch();
 
   const handleDeviceSelect = (item) => {
-    dispatch(setRouterCartData({ device: item }));
+    dispatch(setPocketWifiCartData({ device: item }));
   };
   return (
     <div>

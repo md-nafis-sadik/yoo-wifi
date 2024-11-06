@@ -1,8 +1,24 @@
-function OrderSingleItem({ title = "", description = "" }) {
+import { cn } from "@/lib/utils";
+
+function OrderSingleItem({
+  title = "",
+  description = "",
+  wrapperClass = "",
+  titleClass = "",
+  descriptionClass = "",
+}) {
   return (
-    <div className="flex items-center justify-between gap-3">
-      <span className="text-base sm:text-lg text-black-700">{title}</span>
-      <span className="text-base sm:text-lg text-black-700">{description}</span>
+    <div
+      className={cn("flex items-center justify-between gap-3", wrapperClass)}
+    >
+      <span className={cn("text-base sm:text-lg text-black-700", titleClass)}>
+        {title}
+      </span>
+      <span
+        className={cn("text-base sm:text-lg text-black-700", descriptionClass)}
+      >
+        {description}
+      </span>
     </div>
   );
 }
