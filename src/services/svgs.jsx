@@ -368,6 +368,12 @@ export const Communications2Icon = ({ className = "", color = "#D81F22" }) => (
   </svg>
 );
 
+export const CheckIcon = ({ className = "", color = "#56AD7E" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none" className={className}>
+    <path d="M8.44152 16.7304L8.79491 17.0838L9.14846 16.7306L19.3849 6.50381L20.088 7.20687L8.79508 18.4998L3.91344 13.6181L4.62383 12.9127L8.44152 16.7304Z" fill="black" stroke={color} />
+  </svg>
+);
+
 // components start with D
 
 export const DollarLabelIcon = ({ className = "", color = "#E41F26" }) => (
