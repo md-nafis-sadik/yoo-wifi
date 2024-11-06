@@ -35,7 +35,7 @@ function PocketWifiRegion() {
   };
 
   const handlePrev = () => {
-    navigate(commercialRoutes.pocketWifi.path);
+    navigate(commercialRoutes.pocketWifiHome.path);
   };
 
   return (

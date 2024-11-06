@@ -4,6 +4,7 @@ import {
   CloudIcon,
   CustomSolutionIcon,
   EmployeeIcon,
+  GlobeDataIcon,
   InternetCoverageIcon,
   LteSpeedIcon,
   MoneyIcon,
@@ -49,43 +50,18 @@ const initialState = {
       },
       {
         title: "Specifications",
-        content: [
-          "Enjoy High-Speed Internet Access Immediately",
-          "Connect up to 8 Devices",
-          "4G Internet Speed",
-          "Up to 12 hours of device battery",
-          "Yoowifi 24/7 Customer Support",
-          "Comes with Pocket Wifi Device, Charging Cable, Pouch",
-          "Extend the days or add plans anytime",
-          "Website: https://yoowifi",
-        ],
+        content:
+          "CPU: SC8310LTE-FDD：Bands 1 / 2 / 3 / 4 / 5 / 7 / 8 / 12 / 13 / 17 / 18 / 20 / 25 / 26 /28 / 66\nLTE-TDD：Bands 34 / 38 / 39 / 40 / 41 (194M)\n WCDMA：Bands 1 / 2 / 4 / 5 / 8 \nTD-SCDMA：NO CDMA：NO\nEVDO：NO\nGSM：850 / 900 / 1800 / 1900 \nMax speed：Download 150Mbps  /  Upload 50Mbps \nWi-Fi：2.4GHz  802.11 b / g / n 1T1R \nMax WiFi Connection：8\nBattery：3000mAh \nPorts：Type-C  USB\nInput： 5V – 1A \nItem size：120mm x 64.6mm x 12mm\nItem weight：112g\nShell Material：Plastics",
       },
       {
         title: "Country Coverage",
-        content: [
-          "Algeria",
-          "Anguilla",
-          "Antigua and Barbuda",
-          "Argentina",
-          "Aruba",
-          "Azerbaijan",
-          "Bolivia",
-          "Brazil",
-          "British Virgin Islands",
-          "Chile",
-          "Colombia",
-          "Costa Rica",
-        ],
+        content:
+          "Albania, Andorra, Armenia, Australia, Austria, Bahrain, Bangladesh, Belgium, Bosnia and Herzegovina, Brunei, Bulgaria, Cambodia, Canada, China, Croatia, Cyprus, Czech Republic, Denmark, Egypt, Estonia, Finland, France, Georgia, Germany, Gibraltar, Greece, Guernsey, Hong Kong, Hungary, Iceland, India, Indonesia, Ireland, Isle of Man, Israel, Italy, Japan, Jersey, Jordan, Kazakhstan, Kuwait, Laos, Latvia, Liechtenstein Lithuania, Luxembourg, Macau, Macedonia, Malaysia, Malta, Mexico, Monaco, Montenegro, Myanmar, Netherlands, New Zealand, Norway, Oman, Pakistan, Philippines, Poland, Portugal, Qatar, Reunion, Romania, Russia, San Marino, Saudi Arabia, Serbia, Slovakia, Slovenia, South Korea, Spain, Sri Lanka, Sweden, Switzerland, Taiwan, Thailand, Turkey, UAE, Ukraine, United Kingdom, USA, Uzbekistan, Vatican, Vietnam",
       },
       {
         title: "Terms & Conditions",
-        content: [
-          "50GB global data is applicable to 90 countries.",
-          "Speed of service is dependent on the mobile network partner.",
-          "For order cancellation, a charge of 10% of the order will apply.",
-          "General terms and conditions apply.",
-          "Yoowifi reserves the right to make changes anytime.",
-        ],
+        content:
+          "50GB global data is applicable to 90 countries.\nSpeed of service is dependent on the mobile network partner.\nFor order cancellation, a charge of 10% of the order will apply.\nGeneral terms and conditions apply.\nYoowifi reserved the rights to make changes anytime.",
       },
     ],
     images: [
@@ -400,37 +376,43 @@ const initialState = {
       _id: 1,
       icon: () => <InternetCoverageIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "Global Coverage",
-      content: "Stay connected across 160 countries, no matter where your journey takes you with Yoowifi's travel wifi services.",
+      content:
+        "Stay connected across 160 countries, no matter where your journey takes you with Yoowifi's travel wifi services.",
     },
     {
       _id: 2,
       icon: () => <MultihomingNetwrokIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "Multihoming Network",
-      content: "We stay connected by partnering with multiple telcos, ensuring uninterrupted service availability in any location.",
+      content:
+        "We stay connected by partnering with multiple telcos, ensuring uninterrupted service availability in any location.",
     },
     {
       _id: 3,
       icon: () => <OrganizationIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "Zero Touch on Demand",
-      content: "Our cloud-based portal preconfigures and deploys services for zero-touch on-demand connectivity, technical expertise required on-site.",
+      content:
+        "Our cloud-based portal preconfigures and deploys services for zero-touch on-demand connectivity, technical expertise required on-site.",
     },
     {
       _id: 4,
       icon: () => <MoneyIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "Cost Efficient Service",
-      content: "Our vSIM tech offers affordable data services by switching SIMs as you cross borders, eliminating roaming charges and reducing telecom expenses.",
+      content:
+        "Our vSIM tech offers affordable data services by switching SIMs as you cross borders, eliminating roaming charges and reducing telecom expenses.",
     },
     {
       _id: 5,
       icon: () => <ProjectIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "Management Portal",
-      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+      content:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
     },
     {
       _id: 6,
       icon: () => <AppCustomizationIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "App Customization",
-      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+      content:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
     },
   ],
   pickupLocations: [
@@ -505,34 +487,40 @@ const initialState = {
     {
       _id: 1,
       title: "Business Continuity Plan",
-      content: "Yoowifi offer a technological solution that provides a robust and highly redundant platform to keep your business connected and continue operating despite uncertainties.",
+      content:
+        "Yoowifi offer a technological solution that provides a robust and highly redundant platform to keep your business connected and continue operating despite uncertainties.",
     },
     {
       _id: 2,
       title: "In-vehicle Connectivity",
-      content: "Yoowifi supply the necessary bandwidth for secure transmission and receipt of data, whether it is being transmitted in-state or across different countries.",
+      content:
+        "Yoowifi supply the necessary bandwidth for secure transmission and receipt of data, whether it is being transmitted in-state or across different countries.",
     },
     {
       _id: 3,
       title: "Remote Working",
-      content: "Utilizing cloud-managed mobile devices that are easy to deploy, we can offer the required connectivity quickly to maintain business resilience while operating remotely.",
+      content:
+        "Utilizing cloud-managed mobile devices that are easy to deploy, we can offer the required connectivity quickly to maintain business resilience while operating remotely.",
     },
     {
       _id: 4,
       title: "Connectivity for Events",
-      content: "We provide reliable event internet services, including live streaming and Wi-Fi for guests, with guest analytics to better understand your audience for future events.",
+      content:
+        "We provide reliable event internet services, including live streaming and Wi-Fi for guests, with guest analytics to better understand your audience for future events.",
     },
     {
       _id: 5,
       title: "Travel Agency Solutions",
-      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+      content:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
     },
     {
       _id: 6,
       title: "Hotels",
-      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+      content:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
     },
-  ]
+  ],
 };
 
 const pocketWifiSlice = createSlice({
@@ -543,14 +531,12 @@ const pocketWifiSlice = createSlice({
       state.cart = { ...state.cart, ...action?.payload };
     },
     handleNextPocketWifiCart: (state) => {
-      localStorage.setItem("procket_wifi_cart", JSON.stringify(state.cart));
+      localStorage.setItem("pocket_wifi_cart", JSON.stringify(state.cart));
     },
   },
 });
 
-export const {
-  setPocketWifiCartData,
-  handleNextPocketWifiCart
-} = pocketWifiSlice.actions;
+export const { setPocketWifiCartData, handleNextPocketWifiCart } =
+  pocketWifiSlice.actions;
 
 export default pocketWifiSlice.reducer;

@@ -1,10 +1,10 @@
 import CustomerCard from "@/components/shared/cards/CustomerCard";
-import HeadingWithSubHeading from "@/components/shared/HeadingWithSubHeading";
 import useEmblaCarouselDotButtons from "@/hooks/useEmblaCarouselDotButtons";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import SectionHeader from "./SectionHeader";
 
 const CustomerTestimonial = () => {
   // STATES
@@ -20,7 +20,7 @@ const CustomerTestimonial = () => {
 
   return (
     <section className="sec_common_60">
-      <HeadingWithSubHeading
+      <SectionHeader
         heading="What Our Customers Say"
         subHeading="Discover what our valued customers have to say about their experiences with our services"
       />
