@@ -1,3 +1,4 @@
+import CountryList from '@/components/commercial/countryCoverage/CountryList';
 import CorporateBanner from '@/components/shared/others/CorporateBanner';
 import React from 'react';
 
@@ -7,6 +8,7 @@ const CountryCoverage = () => {
             <CorporateBanner
                 isShowBannerBottom={false}
             />
+            <CountryList />
         </div>
     );
 };
