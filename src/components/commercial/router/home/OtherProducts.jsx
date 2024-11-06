@@ -14,7 +14,7 @@ function OtherProducts() {
         <h2 className="text-2xml sm:text-3xl md:text-5xl lg:text-6xml text-center md:text-left font-bold text-black-900 leading-[120%]">
           Other products you may like
         </h2>
-        <div className="flex flex-col md:flex-row justify-between gap-6 mt-6 sm:mt-10 md:mt-20 lg:mt-32">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 mt-6 sm:mt-10 md:mt-20">
           <div className="w-full flex flex-col gap-4 max-w-[622px] order-2 md:order-1">
             {newProducts?.map((item, index) => (
               <ProductCard
@@ -25,8 +25,18 @@ function OtherProducts() {
               />
             ))}
           </div>
-          <div className="w-full max-w-[8.5rem] sm:max-w-max mx-auto md:-mb-24 order-1 md:order-2">
-            <img src={images.pocketWifiSimRed2} />
+          <div className="w-full max-w-[12rem] md:max-w-max mx-auto md:-mb-24 order-1 md:order-2">
+            {selectedCard == 0 ? (
+              <img
+                src={images.pocketWifiNewUpdate}
+                className="w-full h-full object-contain"
+              />
+            ) : (
+              <img
+                src={images.pocketWifiSimRed2}
+                className="w-full h-full object-contain"
+              />
+            )}
           </div>
         </div>
       </div>
