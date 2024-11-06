@@ -8,7 +8,7 @@ import { ChevronRight } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="bg-black">
-      <div className="container2X sec_common_80 lg:px-4 grid grid-cols-1 md:grid-cols-10 gap-10 md:gap-20">
+      <div className="container2X sec_common_80 xl:px-0 grid grid-cols-1 md:grid-cols-10 gap-10 md:gap-20">
         {/* CONTACT/LOGO */}
         <div className="col-span-1 md:col-span-5 min-[1320px]:col-span-4">
           <LazyLoadImage

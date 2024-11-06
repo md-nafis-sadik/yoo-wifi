@@ -9,7 +9,7 @@ const Products = () => {
 
   return (
     <section className="sec_common_80 bg-main-20">
-      <div className="containerX overflow-visible px-4 min-[1176px]:px-0">
+      <div className="containerX overflow-visible">
         <h2 className="title text-center md:text-start">Our Products</h2>
 
         <div className="flex flex-col-reverse md:flex-row gap-4 md:gap-8 lg:gap-[60px] trasition_common mt-6 md:mt-10 lg:mt-[60px]">

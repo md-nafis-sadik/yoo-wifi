@@ -3,10 +3,10 @@ import { appStore, googlePlay, qrcode } from "@/services/images";
 
 function DownloadYoowifi() {
   return (
-    <section className="py-9 md:py-[60px] pt-0 px-4 bg-main-600 relative overflow-hidden">
+    <section className="bg-main-600 relative overflow-hidden">
       <YooWifiLogoIcon className="absolute top-1/2 left-0 -translate-y-1/2 z-[1] w-[326px] md:w-[880px] h-full" />
-      <div className="w-full max-w-[1220px] mx-auto relative z-[3]">
-        <div className="w-full max-w-[650px] sec_common_60 px-0 md:px-10 lg:px-0">
+      <div className="w-full max-w-[1220px] mx-auto relative z-[3] sec_common_60 xl:px-0">
+        <div className="w-full max-w-[400px] md:max-w-[650px] mb-9 md:mb-0 px-0 relative z-[3]">
           <h2 className="text-base md:text-3xl md:font-semibold text-status-alert leading-[120%] md:uppercase">
             Download the
           </h2>
@@ -43,9 +43,13 @@ function DownloadYoowifi() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="absolute bottom-0 right-[-5%] h-auto w-3/5 sm:w-1/2 md:w-2/5 lg:w-1/2 z-[2]">
-        <img src={images.download} alt="" />
+        <div className="absolute bottom-0 right-[1%] min-[1176px]:right-[0%] h-auto w-3/5 min-[500px]:w-1/2 md:w-2/5 lg:w-[40%] z-[2]">
+          <img
+            src={images.download}
+            alt=""
+            className="max-w-[531px] h-full w-full"
+          />
+        </div>
       </div>
     </section>
   );
