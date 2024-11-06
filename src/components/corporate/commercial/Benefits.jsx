@@ -7,7 +7,7 @@ const Benefits = () => {
     const { benefitsData } = useSelector((state) => state.pocketWifi);
 
     return (
-        <div className='containerX sec_common_80'>
+        <div className='containerX sec_common_80 lg:!px-0'>
             <SectionHeader
                 heading="Benefits"
                 subHeading="Don’t let slow internet tie you down! Switch to our portable solutions to experience connectivity without boundaries."
