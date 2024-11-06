@@ -5,7 +5,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const CorporateBanner = ({
-    pageTitle = "IOT", description = "", featureList = [], path = "#", isShowBannerBottom = true
+    pageTitle = "IOT", description = "", featureList = [], path = "#", isShowBannerBottom = true, bannerStyle = 1
 }) => {
 
     const navigate = useNavigate();
@@ -16,10 +16,10 @@ const CorporateBanner = ({
             {/* banner main part */}
             <div className={cn(
                 ' bg-main-600  text-white cursor-default relative overflow-hidden',
-                isShowBannerBottom ? "pt-[16.5px] pb-[30px] lg:pt-20 lg:pb-[56px]" : "py-6 lg:py-[60.5px]"
+                bannerStyle === 1 ? "pt-[16.5px] pb-[30px] lg:pt-20 lg:pb-[56px]" : "py-6 lg:py-[60.5px]"
             )}>
-                <div className={cn(isShowBannerBottom ? 'containerHeader' : 'containerX', "px-4 xl:px-0")}>
-                    {isShowBannerBottom ? (
+                <div className={cn(bannerStyle === 1 ? 'containerHeader' : 'containerX', "px-4 xl:px-0")}>
+                    {bannerStyle === 1 ? (
                         <div className='relative z-10 flex flex-col xl:flex-row gap-y-[16.5px] xl:gap-y-0 gap-x-[88.5px]'>
                             <div>
                                 <h1 className='text-[28px] xl:text-6xl font-bold leading-[110%] xl:leading-[140%] font-dmsans xl:font-sansPro break-all'>
