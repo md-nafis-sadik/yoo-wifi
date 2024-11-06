@@ -12,7 +12,7 @@ function HeroChildSlides() {
             </h6>
           </div>
           <p className="text-xs sm:text-sm max-w-48">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
+            Lorem Ipsum is simpl y dummy text of the printing and typesetting
             industry.
           </p>
         </div>
