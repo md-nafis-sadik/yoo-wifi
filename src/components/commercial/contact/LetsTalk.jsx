@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-const LetsTalk = ({ data = [] }) => {
+const LetsTalk = ({ data = [], socialLinks = [] }) => {
   const [text, setText] = useState("");
   const maxChars = 250;
 
@@ -26,7 +27,9 @@ const LetsTalk = ({ data = [] }) => {
           </p>
 
           {data?.map((item, index) => (
-            <div key={index} className="flex flex-row items-center gap-6">
+            <div key={index} className={cn(
+              "flex flex-row items-center gap-6", index === 1 && "mt-2 md:mt-0"
+            )}>
               <LazyLoadImage
                 src={item?.image}
                 alt={item?.title}
@@ -43,6 +46,12 @@ const LetsTalk = ({ data = [] }) => {
               </div>
             </div>
           ))}
+
+          {socialLinks.length > 0 && (<div className="flex items-center gap-x-5 mt-2 md:mt-0">
+            {socialLinks.map((item, index) => (<a href={item.link} target="_blank" key={index}>
+              {item.icon()}
+            </a>))}
+          </div>)}
         </div>
 
         {/* RIGHT PORTION */}
@@ -88,6 +97,7 @@ const LetsTalk = ({ data = [] }) => {
               onChange={handleTextChange}
               maxChars={maxChars}
               required
+              className="resize-none"
             />
           </div>
 

@@ -49,6 +49,16 @@ import sim1 from "@/assets/images/sim/sim-1.webp";
 import tour from "@/assets/images/tour.webp";
 import whatsapp from "@/assets/images/whatsapp.webp";
 import whoWeAre1 from "@/assets/images/who-we-are-1.webp";
+import SpainFlag from "@/assets/images/country-coverage/Spain.png";
+import BelgiumFlag from "@/assets/images/country-coverage/Belgium.png";
+import CroatiaFlag from "@/assets/images/country-coverage/Croatia.png";
+import FranceFlag from "@/assets/images/country-coverage/France.png";
+import GermanyFlag from "@/assets/images/country-coverage/Germany.png";
+import GreeceFlag from "@/assets/images/country-coverage/Greece.png";
+import IrelandFlag from "@/assets/images/country-coverage/Ireland.png";
+import ItalyFlag from "@/assets/images/country-coverage/Italy.png";
+import SwedenFlag from "@/assets/images/country-coverage/Sweden.png";
+import SwitzerlandFlag from "@/assets/images/country-coverage/Switzerland.png";
 
 export {
   africaRegionBlack,
@@ -102,4 +112,14 @@ export {
   tour,
   whatsapp,
   whoWeAre1,
+  SpainFlag,
+  BelgiumFlag,
+  CroatiaFlag,
+  FranceFlag,
+  GermanyFlag,
+  GreeceFlag,
+  IrelandFlag,
+  ItalyFlag,
+  SwedenFlag,
+  SwitzerlandFlag,
 };

@@ -1,4 +1,4 @@
-import { images } from "@/services";
+import { FacebookIcon, images, InstagramIcon, LinkedInIcon, XIcon, YoutubeIcon } from "@/services";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -58,6 +58,38 @@ const initialState = {
         "The number of devices you need depends on your travel itinerary. Typically, one device per region or country with specific data coverage would be recommended.",
     },
   ],
+  socialLinks: [
+    {
+      _id: 1,
+      name: "Facebook",
+      link: "#",
+      icon: () => <FacebookIcon className="w-6 h-6 lg:w-8 lg:h-8" />
+    },
+    {
+      _id: 2,
+      name: "Youtube",
+      link: "#",
+      icon: () => <YoutubeIcon className="w-6 h-6 lg:w-8 lg:h-8" />
+    },
+    {
+      _id: 3,
+      name: "LinkedIn",
+      link: "#",
+      icon: () => <LinkedInIcon className="w-6 h-6 lg:w-8 lg:h-8" />
+    },
+    {
+      _id: 4,
+      name: "Instagram",
+      link: "#",
+      icon: () => <InstagramIcon className="w-6 h-6 lg:w-8 lg:h-8" />
+    },
+    {
+      _id: 5,
+      name: "X",
+      link: "#",
+      icon: () => <XIcon className="w-6 h-6 lg:w-8 lg:h-8" />
+    },
+  ]
 };
 
 const contactSlice = createSlice({
