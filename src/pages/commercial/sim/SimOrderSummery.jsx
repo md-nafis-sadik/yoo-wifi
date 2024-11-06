@@ -1,6 +1,6 @@
-import PocketWifiCartFooter from "@/components/commercial/pocketWifi/PocketWifiCartFooter";
 import RouterCartFooter from "@/components/commercial/router/RouterCartFooter";
 import CartPaymentCard from "@/components/shared/cards/CartPaymentCard";
+import OrderSingleItem from "@/components/shared/others/OrderSingleItem";
 import UserPaymentForm from "@/components/shared/others/UserPaymentForm";
 import {
   Dialog,
@@ -10,14 +10,14 @@ import {
 } from "@/components/ui/dialog";
 import { Switch } from "@/components/ui/switch";
 import { commercialRoutes, PlusIcon, SuccessIcon } from "@/services";
-import { setRouterCartData } from "@/store/module/router/slice";
+import { setSimCartData } from "@/store/module/sim/slice";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 function SimOrderSummery() {
   const navigate = useNavigate();
-  const { cart } = useSelector((state) => state.router);
+  const { cart } = useSelector((state) => state.sim);
   const { userPaymentCards } = useSelector((state) => state.auth);
   const [showForm, setShowForm] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
@@ -26,11 +26,11 @@ function SimOrderSummery() {
   const isActive = isChecked && cart?.paymentCard?.id ? true : false;
 
   const handlePrev = () => {
-    navigate(commercialRoutes.routerShippingOption.path);
+    navigate(commercialRoutes.simShippingOption.path);
   };
 
   const handlePaymentCardSelect = (item) => {
-    dispatch(setRouterCartData({ paymentCard: item }));
+    dispatch(setSimCartData({ paymentCard: item }));
   };
 
   const handleNext = () => {
@@ -51,73 +51,53 @@ function SimOrderSummery() {
         <div className=" bg-neutral-100 rounded-2xl py-6 px-4 sm:p-8 md:p-10 divide-y divide-neutral-300 mt-4 sm:mt-6">
           {/*  */}
           <div className="pb-5 flex flex-col gap-4">
-            <div className="flex items-center justify-between gap-3">
-              <span className="text-base sm:text-lg text-black-700">
-                Plan Name
-              </span>
-              <span className="text-base sm:text-lg text-black-700">
-                {cart?.package?.title} {cart?.package?.dataSize}{" "}
-                {cart?.package?.desc}
-              </span>
-            </div>
+            <OrderSingleItem
+              title="Plan Name"
+              description={`${cart?.package?.title} ${cart?.package?.dataSize} ${cart?.package?.desc}`}
+            />
+            <OrderSingleItem
+              title="SIM Type"
+              description={cart?.cartType}
+              descriptionClass="uppercase"
+            />
           </div>
           {/*  */}
           <div className="pb-5 flex flex-col gap-4  pt-5">
-            <div className="flex items-center justify-between gap-3">
-              <span className="text-base sm:text-lg text-black-700">
-                Minimum Charges
-              </span>
-              <span className="text-base sm:text-lg text-black-700">
-                SGD 79.00
-              </span>
-            </div>
-            <div className="flex items-center justify-between gap-3">
-              <span className="text-base sm:text-lg text-black-700">
-                Deposit
-              </span>
-              <span className="text-base sm:text-lg text-black-700">
-                SGD 00
-              </span>
-            </div>
-            <div className="flex items-center justify-between gap-3">
-              <span className="text-base sm:text-lg text-black-700">
-                Sub-total
-              </span>
-              <span className="text-base sm:text-lg text-black-700">
-                SGD 79.00
-              </span>
-            </div>
-            <div className="flex items-center justify-between gap-3">
-              <span className="text-base sm:text-lg text-black-700">
-                Quantity
-              </span>
-              <span className="text-base sm:text-lg text-black-700">
-                {cart?.quantity}
-              </span>
-            </div>
+            <OrderSingleItem
+              title="Minimum Charges"
+              description="SGD 79.00"
+              descriptionClass="uppercase"
+            />
+            <OrderSingleItem
+              title="Deposit"
+              description="SGD 00"
+              descriptionClass="uppercase"
+            />
+            <OrderSingleItem
+              title="Sub-total"
+              description="SGD 79.00"
+              descriptionClass="uppercase"
+            />
+            <OrderSingleItem
+              title="Quantity"
+              description={cart?.quantity}
+              descriptionClass="uppercase"
+            />
           </div>
           {/*  */}
           <div className="pb-5 flex flex-col gap-4  pt-5">
-            <div className="flex items-center justify-between gap-3">
-              <span className="text-base sm:text-lg text-black-700">
-                Self pick-up delivery fee
-              </span>
-              <span className="text-base sm:text-lg text-black-700">FREE</span>
-            </div>
-            <div className="flex items-center justify-between gap-3">
-              <span className="text-base sm:text-lg text-black-700">
-                Return drop-off fee
-              </span>
-              <span className="text-base sm:text-lg text-black-700">FREE</span>
-            </div>
-            <div className="flex items-center justify-between gap-3">
-              <span className="text-base sm:text-lg text-black-700">
-                Total Delivery Charges
-              </span>
-              <span className="text-base sm:text-lg text-black-700">
-                SGD 0.00
-              </span>
-            </div>
+            <OrderSingleItem
+              title="Self pick-up delivery fee"
+              description="FREE"
+            />
+            <OrderSingleItem
+              title="Return drop-off fee"
+              description="FREE"
+            />
+            <OrderSingleItem
+              title="Total Delivery Charges"
+              description="SGD 0.00"
+            />
           </div>
           {/*  */}
           <div className="flex items-center justify-between gap-3 pt-5">

@@ -50,6 +50,220 @@ const initialState = {
       },
     ],
   },
+  recomandedPackages: [
+    {
+      id: 1,
+      title: "Basic Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "365 Days Validity",
+        "Covers 90 Countries",
+      ],
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "daily",
+      planCode: "plan_1",
+      dataSize: 1,
+      packPrice: 10,
+      validity: 30,
+      desc: "GB",
+      tags: ["sim", "topup"],
+    },
+    {
+      id: 2,
+
+      title: "Traveler Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "365 Days Validity",
+        "Covers 90 Countries",
+      ],
+
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "daily",
+      planCode: "plan_2",
+      dataSize: 2,
+      packPrice: 10,
+      validity: 30,
+      desc: "GB",
+      tags: ["topup", "esim", "sim"],
+    },
+    {
+      id: 3,
+
+      title: "Extended Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "365 Days Validity",
+        "Covers 90 Countries",
+      ],
+
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "daily",
+      planCode: "plan_3",
+      dataSize: 3,
+      packPrice: 10,
+      validity: 30,
+      desc: "GB",
+      tags: ["sim", "esim", "topup"],
+    },
+    {
+      id: 4,
+
+      title: "Unlimited Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "365 Days Validity",
+        "Covers 90 Countries",
+      ],
+
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "daily",
+      planCode: "plan_4",
+      dataSize: 4,
+      packPrice: 10,
+      validity: 30,
+      desc: "GB",
+      tags: ["sim", "esim", "topup"],
+    },
+    {
+      id: 5,
+
+      title: "Lite Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "180 Days Validity",
+        "Covers 60 Countries",
+      ],
+
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "monthly",
+      planCode: "plan_5",
+      dataSize: 1,
+      packPrice: 10,
+      validity: 30,
+      desc: "GB",
+      tags: ["sim", "topup"],
+    },
+    {
+      id: 6,
+
+      title: "Business Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "365 Days Validity",
+        "Priority support",
+        "Covers 100 Countries",
+      ],
+
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "monthly",
+      planCode: "plan_6",
+      dataSize: 2,
+      packPrice: 10,
+      validity: 30,
+      desc: "GB",
+      tags: ["topup", "esim", "sim"],
+    },
+    {
+      id: 7,
+
+      title: "Premium Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "365 Days Validity",
+        "Unlimited data in selected countries",
+        "Covers 90 Countries",
+      ],
+
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "daily",
+      planCode: "plan_7",
+      dataSize: 5,
+      packPrice: 10,
+      validity: 30,
+      desc: "GB",
+      tags: ["sim", "esim"],
+    },
+    {
+      id: 8,
+
+      title: "Family Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "365 Days Validity",
+        "Connect up to 10 devices",
+        "Covers 90 Countries",
+      ],
+
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "monthly",
+      planCode: "plan_8",
+      dataSize: 3,
+      packPrice: 10,
+      validity: 30,
+      desc: "GB",
+      tags: ["sim", "esim"],
+    },
+    {
+      id: 9,
+
+      title: "Traveler Plus Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "180 Days Validity",
+        "Extended data for heavy users",
+        "Covers 80 Countries",
+      ],
+
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "monthly",
+      planCode: "plan_9",
+      dataSize: 4,
+      packPrice: 10,
+      validity: 30,
+      desc: "GB",
+      tags: ["sim", "esim"],
+    },
+    {
+      id: 10,
+
+      title: "Global Unlimited Package",
+      features: [
+        "Keep Yoowifi Device",
+        "Top-up Plan only",
+        "365 Days Validity",
+        "Unlimited data globally",
+        "Covers 100 Countries",
+      ],
+      image:
+        "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
+      category: "daily",
+      planCode: "plan_10",
+      dataSize: 2,
+      packPrice: 10,
+      validity: 30,
+      desc: "GB",
+      tags: ["sim", "esim"],
+    },
+  ],
   features: [
     {
       icon: () => <LteSpeedIcon />,
@@ -266,7 +480,7 @@ const initialState = {
 
         {
           name: "Google Pixel 7 Series (2022)",
-          versions: ["Pixel 7", "Pixel 7 Pro", "", "", "", "", ""],
+          versions: ["Pixel 7", "Pixel 7 Pro"],
         },
 
         {
@@ -348,7 +562,7 @@ const initialState = {
           versions: ["Oppo A55s 5G (2022) "],
         },
       ],
-      note: "",
+      note: "eSIM functionality can vary by model and region. Please contact your local carrier for confirmation.",
     },
     {
       title: "Xiaomi",
@@ -478,6 +692,7 @@ const initialState = {
       desc: "GB",
     },
   ],
+  packDates: [1, 3, 5, 7, 10, 15, 20, 30],
   cart: {
     color: {},
     promoCode: null,
@@ -486,11 +701,12 @@ const initialState = {
     package: {},
     topup: {},
     device: {},
-    cartType: "rental",
+    cartType: "sim",
     quantity: 1,
     startDate: null,
     endDate: null,
     shipping: {},
+    numberOfDays: 1,
     shippingAddress: {},
     pickupCountry: null,
     pickupLocation: {},

@@ -2,13 +2,13 @@ import { configureStore } from "@reduxjs/toolkit";
 import aboutSlice from "./module/about/aboutSlice";
 import { apiSlice } from "./module/api/apiSlice";
 import authSlice from "./module/auth/slice";
+import contactSlice from "./module/contact/contactSlice";
 import howItWorksReducer from "./module/howItWorks/HowItWorksSlice";
 import pocketWifiSlice from "./module/pocketWifi/slice";
 import routerSlice from "./module/router/slice";
 import sharedSlice from "./module/shared/sharedSlice";
 import simSlice from "./module/sim/slice";
 import testimonialsSlice from "./module/testimonials/testimonialsSlice";
-import contactSlice from "./module/contact/contactSlice";
 
 export const store = configureStore({
   reducer: {
@@ -41,6 +41,11 @@ export const store = configureStore({
           "sim.features",
           "router.cart.startDate",
           "sim.cart.startDate",
+          "pocketWifi.aboutUs",
+          "pocketWifi.services",
+          "sim.setupInstructions",
+          "about.features",
+          "about.whatWeDo",
           "pocketWifi.cart.startDate",
           "howItWorks",
         ],

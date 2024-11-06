@@ -5,6 +5,8 @@ import {
   CustomSolutionIcon,
   EmployeeIcon,
   GlobeDataIcon,
+  GlobePhoneIcon,
+  HandPhoneIcon,
   InternetCoverageIcon,
   LteSpeedIcon,
   MoneyIcon,
@@ -355,68 +357,61 @@ const initialState = {
     {
       _id: 1,
       title: "About Us",
-      icon: () => <EmployeeIcon className="w-8 h-8 lg:w-[60px] lg:h-[60px]" />,
-      content:
-        "Reliable and secure internet connectivity for businesses On-The-Go",
+      icon: () => <EmployeeIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
+      content: "Reliable and secure internet connectivity for businesses On-The-Go",
     },
     {
       _id: 2,
       title: "Partnerships",
-      icon: () => (
-        <PartnershipIcon className="w-8 h-8 lg:w-[60px] lg:h-[60px]" />
-      ),
-      content:
-        "Explore long lasting partnership opportunities with our services",
+      icon: () => <PartnershipIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
+      content: "Explore long lasting partnership opportunities with our services",
     },
     {
       _id: 3,
       title: "Custom Solutions",
-      icon: () => (
-        <CustomSolutionIcon className="w-8 h-8 lg:w-[60px] lg:h-[60px]" />
-      ),
-      content:
-        "Designed to meet your needs and requirements with high-speed internet access and cost-effective solution",
+      icon: () => <CustomSolutionIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
+      content: "Designed to meet your needs and requirements with high-speed internet access and cost-effective solution",
     },
   ],
   services: [
     {
       _id: 1,
-      icon: () => <InternetCoverageIcon />,
+      icon: () => <InternetCoverageIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "Global Coverage",
       content:
         "Stay connected across 160 countries, no matter where your journey takes you with Yoowifi's travel wifi services.",
     },
     {
       _id: 2,
-      icon: () => <MultihomingNetwrokIcon />,
+      icon: () => <MultihomingNetwrokIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "Multihoming Network",
       content:
         "We stay connected by partnering with multiple telcos, ensuring uninterrupted service availability in any location.",
     },
     {
       _id: 3,
-      icon: () => <OrganizationIcon />,
+      icon: () => <OrganizationIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "Zero Touch on Demand",
       content:
         "Our cloud-based portal preconfigures and deploys services for zero-touch on-demand connectivity, technical expertise required on-site.",
     },
     {
       _id: 4,
-      icon: () => <MoneyIcon />,
+      icon: () => <MoneyIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "Cost Efficient Service",
       content:
         "Our vSIM tech offers affordable data services by switching SIMs as you cross borders, eliminating roaming charges and reducing telecom expenses.",
     },
     {
       _id: 5,
-      icon: () => <ProjectIcon />,
+      icon: () => <ProjectIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "Management Portal",
       content:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
     },
     {
       _id: 6,
-      icon: () => <AppCustomizationIcon />,
+      icon: () => <AppCustomizationIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "App Customization",
       content:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
@@ -528,6 +523,26 @@ const initialState = {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
     },
   ],
+  benefitsData: [
+    {
+      _id: 1,
+      title: "Dedicated Application",
+      content: "Take charge of your connectivity needs with our online management portal, empowering you with control for a smooth and effortless experience.",
+      icon: () => <HandPhoneIcon className="w-[48px] h-[48px] lg:w-[80px] lg:h-[80px]" />
+    },
+    {
+      _id: 2,
+      title: "Cost Efficient",
+      content: "Experience affordable and hassle-free connectivity with Yoowifi's vSIM technology, eliminating costly roaming charges for budget-friendly data services.",
+      icon: () => <MoneyIcon className="w-[48px] h-[48px] lg:w-[80px] lg:h-[80px]" />
+    },
+    {
+      _id: 3,
+      title: "Customisable Data Plans",
+      content: "Tailor your data package to meet your specific needs and scale as your business grows.",
+      icon: () => <GlobePhoneIcon className="w-[48px] h-[48px] lg:w-[80px] lg:h-[80px]" />
+    },
+  ]
 };
 
 const pocketWifiSlice = createSlice({

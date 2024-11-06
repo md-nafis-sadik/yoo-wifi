@@ -16,7 +16,7 @@ const ProductCard = ({
     <div
       className={cn(
         selected ? "ring-main-600" : "ring-black-600",
-        "ring-1 w-full h-fit rounded-lg md:rounded-2xl p-4 md:p-5 flex flex-col md:flex-row gap-6 md:gap-10 hover:ring-main-600 group transition_common",
+        "ring-1 w-full h-fit rounded-lg md:rounded-2xl p-4 md:p-5 flex flex-col min-[1176px]:flex-row gap-6 md:gap-10 hover:ring-main-600 group transition_common",
         containerClassName
       )}
       onClick={eventHandler}
@@ -26,8 +26,8 @@ const ProductCard = ({
       <div
         className={cn(
           selected
-            ? "flex-col w-full md:w-2/3"
-            : "flex-col md:flex-row w-full items-center",
+            ? "flex-col w-full min-[1176px]:w-2/3"
+            : "flex-col min-[1176px]:flex-row w-full items-center",
           "flex  gap-x-4 gap-y-3"
         )}
       >
@@ -35,7 +35,7 @@ const ProductCard = ({
           className={cn(
             selected
               ? "text-base md:text-xl lg:text-[28px] text-main-600 w-auto"
-              : "text-2xl md:text-[28px] lg:text-4xl text-black-700 w-full md:w-2/5",
+              : "text-2xl md:text-[28px] lg:text-4xl text-black-700 w-full min-[1176px]:w-2/5",
             "font-bold !leading-[1.1] group-hover:text-main-600 transition_common shrink-0",
             titleClassName
           )}
@@ -46,7 +46,7 @@ const ProductCard = ({
         <p
           className={cn(
             selected ? "select-text" : "select-none",
-            "text-sm md:text-base text-black-700 !leading-normal flex-grow",
+            "text-sm md:text-base text-black-700 !leading-normal flex-grow w-full text-start",
             descriptionClassName
           )}
         >
@@ -56,7 +56,7 @@ const ProductCard = ({
 
       {/* 2 */}
       {selected && (
-        <div className="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-start gap-4 w-full md:w-1/3">
+        <div className="flex flex-row min-[1176px]:flex-col items-center min-[1176px]:items-end justify-between min-[1176px]:justify-start gap-4 w-full min-[1176px]:w-1/3">
           {item.offer && (
             <p className="text-black-900 text-base md:text-xl !leading-[1.4] font-bold italic w-fit">
               {item.offer}

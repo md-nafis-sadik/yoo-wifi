@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-function CartDeviceCard({ item = {}, isActive = false, ...props }) {
+function CartDeviceCard({ item = {}, isActive = false, id = "ID:", ...props }) {
   return (
     <div
       className={cn(
@@ -11,7 +11,7 @@ function CartDeviceCard({ item = {}, isActive = false, ...props }) {
     >
       <p className="text-lg font-semibold text-black-700">{item?.name}</p>
       <p className="text-lg font-semibold text-black-700">
-        ID: {item?.deviceId}
+        {id} {item?.deviceId}
       </p>
     </div>
   );

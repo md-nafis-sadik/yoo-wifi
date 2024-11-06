@@ -10,14 +10,14 @@ const ContactUs = () => {
     <section className="sec_common_60 ">
       <div className="container2X ">
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-10">
-          {aboutUs.map((item, index) => (<article key={index} className="lg:py-10 lg:px-6 py-5 px-3 border-2 border-neutral-200 rounded-3xl">
+        <div className="grid md:grid-cols-3 gap-3 lg:gap-10">
+          {aboutUs.map((item, index) => (<article key={index} className="lg:py-10 lg:px-6 p-3 border-2 border-neutral-200 rounded-xl lg:rounded-3xl">
 
-            <div className="p-4 lg:p-[26.67px] bg-main-50 w-max rounded-[21.33px]">
+            <div className="p-3 lg:p-[10px] bg-main-50 w-max rounded-[21.33px]">
               {item.icon()}
             </div>
 
-            <h4 className="mt-6 mb-3 text-black-900 text-xl lg:text-[28px] font-bold leading-[110%]">
+            <h4 className="mt-6 mb-2 md:mb-3 text-black-900 text-[18px] lg:text-[28px] font-semibold lg:font-bold leading-[140%] lg:leading-[110%]">
               {item.title}
             </h4>
 

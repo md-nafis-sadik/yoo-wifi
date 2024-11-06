@@ -1,4 +1,3 @@
-import PocketWifiCartFooter from "@/components/commercial/pocketWifi/PocketWifiCartFooter";
 import RouterCartFooter from "@/components/commercial/router/RouterCartFooter";
 import CartLocationCard from "@/components/shared/cards/CartLocationCard";
 import {
@@ -8,16 +7,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { commercialRoutes, images } from "@/services";
-import {
-  handleNextRouterCart,
-  setRouterCartData,
-} from "@/store/module/router/slice";
+import { handleNextSimCart, setSimCartData } from "@/store/module/sim/slice";
 import { CountrySelect } from "react-country-state-city";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 function SimSelfPickup() {
-  const { pickupLocations, cart } = useSelector((state) => state.router);
+  const { pickupLocations, cart } = useSelector((state) => state.sim);
   const dispatch = useDispatch();
 
   const navigate = useNavigate();
@@ -26,20 +22,20 @@ function SimSelfPickup() {
     cart?.pickupCountry?.id && cart?.pickupLocation?.code ? true : false;
 
   const handleNext = () => {
-    navigate(commercialRoutes.routerOrderSummery.path);
-    dispatch(handleNextRouterCart());
+    navigate(commercialRoutes.simOrderSummery.path);
+    dispatch(handleNextSimCart());
   };
 
   const handlePrev = () => {
-    navigate(commercialRoutes.routerShippingOption.path);
+    navigate(commercialRoutes.simShippingOption.path);
   };
 
   const handleLocationSelect = (item) => {
-    dispatch(setRouterCartData({ pickupLocation: item }));
+    dispatch(setSimCartData({ pickupLocation: item }));
   };
 
   const handleCountrySelect = (item) => {
-    dispatch(setRouterCartData({ pickupCountry: item }));
+    dispatch(setSimCartData({ pickupCountry: item }));
   };
 
   return (

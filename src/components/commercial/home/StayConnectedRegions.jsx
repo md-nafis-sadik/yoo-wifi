@@ -8,8 +8,8 @@ const StayConnectedRegions = () => {
   const regions = useMemo(() => regionsData(), []);
 
   return (
-    <section className="px-4 min-[1320px]:px-0 sec_common_80">
-      <div className="sec_common_60 container3X rounded-2xl md:rounded-3xl bg-[#ececec] px-3 md:px-6 min-[1320px]:px-0">
+    <section className="px-4 2xl:px-0 sec_common_80">
+      <div className="sec_common_60 container3X rounded-2xl md:rounded-3xl bg-[#ececec] pb-3 md:pb-10 lg:pb-20 px-3 md:px-6 min-[1320px]:px-0">
         <SectionHeader
           heading={"Stay Connected Everywhere"}
           subHeading={"Choose Your Dream Destination and Perfect Package Now"}

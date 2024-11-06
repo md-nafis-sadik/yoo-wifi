@@ -14,7 +14,7 @@ function RouterRegion() {
   const { cart } = useSelector((state) => state.router);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const isActive = cart?.productCountry?.id && cart?.memberId ? true : false;
+  const isActive = cart?.productCountry?.id ? true : false;
 
   const handleCountrySelect = (value) => {
     dispatch(setRouterCartData({ productCountry: value }));

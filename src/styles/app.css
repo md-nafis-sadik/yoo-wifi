@@ -23,6 +23,9 @@ html {
   padding: 8px;
 }
 
+.country-select .stdropdown-menu {
+  max-height: 380px;
+}
 /* Hide the spinner in number inputs for Webkit browsers (Chrome, Safari, Edge) */
 .no-spinner::-webkit-outer-spin-button,
 .no-spinner::-webkit-inner-spin-button {
@@ -33,27 +36,4 @@ html {
 /* Hide the spinner in number inputs for Firefox */
 .no-spinner[type="number"] {
   -moz-appearance: textfield;
-}
-
-*::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-  border-radius: 24px;
-}
-
-*::-webkit-scrollbar-track {
-  background: #212121;
-  border-radius: 24px;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #f24144;
-  /* border-radius: 24px; */
-  transition: all 0.3s ease-in-out;
-  border-radius: 24px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #f24144;
-  border-radius: 24px;
 }

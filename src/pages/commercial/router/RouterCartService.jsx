@@ -1,6 +1,6 @@
-import PocketWifiCartFooter from "@/components/commercial/pocketWifi/PocketWifiCartFooter";
 import DataSize from "@/components/commercial/router/cartService/DataSize";
 import ServiceDate from "@/components/commercial/router/cartService/ServiceDate";
+import WifiDevices from "@/components/commercial/router/cartService/WifiDevices";
 import RouterCartFooter from "@/components/commercial/router/RouterCartFooter";
 import CartQuantity from "@/components/shared/others/CartQuantity";
 import { Button } from "@/components/ui/button";
@@ -84,8 +84,7 @@ function RouterCartService() {
         </div>
       </div>
 
-      {/* data size : for select or change data plan. this will work   */}
-      <DataSize />
+      {cart?.cartType == "rental" ? <DataSize /> : <WifiDevices />}
       <ServiceDate />
       <CartQuantity
         max={10}

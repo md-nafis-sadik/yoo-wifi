@@ -6,8 +6,10 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { ArrowDownIcon } from "@/services";
+import { useSelector } from "react-redux";
 
 function DeviceCompability() {
+  const { deviceCompatibilities } = useSelector((state) => state.sim);
   return (
     <section className="sec_common_60">
       <div className="containerX">
@@ -16,19 +18,44 @@ function DeviceCompability() {
           subHeading="If you are using eSIM for the first time, you may need to check if your device supports eSlM. And we would like to help you With just that. Select your device brand and see if your models are listed. You can confirm further by checking the Settings page of your device."
           containerClassName="gap-4"
         />
-
-        <div>
-          <Popover>
-            <PopoverTrigger asChild>
-              <Button variant="black" className="w-full">
-                <span>Apple</span>
-                <ArrowDownIcon />
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="w-80 bg-black text-white rounded-3xl pb-2 custom pl-10 pr-6 pt-8 ">
-              <div className="grid gap-4 pr-4 max-h-[411px] overflow-auto"></div>
-            </PopoverContent>
-          </Popover>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6 mt-6 sm:mt-10 md:mt-15">
+          {deviceCompatibilities?.map((item, index) => (
+            <Popover key={index}>
+              <PopoverTrigger asChild>
+                <Button
+                  variant="black"
+                  className="w-full justify-between text-lg sm:text-xl md:text-2xl font-semibold md:font-bold leading-[140%]"
+                >
+                  <span>{item?.title}</span>
+                  <ArrowDownIcon className="shrink-0 !w-6 !h-6" />
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-full max-w-[290px] sm:max-w-[376px] bg-black text-white rounded-3xl pb-2 custom pl-6 sm:pl-8 md:pl-10 pr-4 sm:pr-6 pt-4 sm:pt-6 md:pt-8 border-none mt-2">
+                <div className="grid gap-4 pr-4 max-h-[411px] overflow-auto custom-scrollbar">
+                  <div className="flex flex-col gap-4">
+                    {item?.devices?.map((device, dIndx) => (
+                      <div key={dIndx} className="flex flex-col gap-3">
+                        <h4 className="text-base font-semibold">
+                          {device?.name}
+                        </h4>
+                        <ul className="list-disc pl-5 text-base">
+                          {device?.versions?.map((version, vIndx) => (
+                            <li key={vIndx}>{version}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                    {item?.note && (
+                      <p className="text-sm">
+                        <span className="font-semibold">Note:</span>
+                        {item?.note}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </PopoverContent>
+            </Popover>
+          ))}
         </div>
       </div>
     </section>
