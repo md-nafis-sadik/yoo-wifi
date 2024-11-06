@@ -1,7 +1,15 @@
+import LetsTalk from '@/components/commercial/contact/LetsTalk';
+import Products from '@/components/commercial/home/Products';
+import CollaborateMarquee from '@/components/shared/CollaborateMarquee';
 import CorporateBanner from '@/components/shared/others/CorporateBanner';
+import CustomerTestimonial from '@/components/shared/others/CustomerTestimonial';
 import React, { Fragment } from 'react';
+import { useSelector } from 'react-redux';
 
 const MaritimeInternet = () => {
+
+    const { contact, socialLinks } = useSelector((state) => state.contact);
+
     return (
         <Fragment>
             <CorporateBanner
@@ -11,6 +19,13 @@ const MaritimeInternet = () => {
                     "Single or Multiple Countries", "Fast deployment", "Customized solution to keep your team globally connected"
                 ]}
                 path='#'
+            />
+            <Products />
+            <CustomerTestimonial />
+            <CollaborateMarquee />
+            <LetsTalk
+                data={contact}
+                socialLinks={socialLinks}
             />
         </Fragment>
     );
