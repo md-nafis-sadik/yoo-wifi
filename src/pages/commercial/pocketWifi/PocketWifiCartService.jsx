@@ -21,7 +21,6 @@ function PocketWifiCartService() {
   const [emblaRef] = useEmblaCarousel(options);
   const navigate = useNavigate();
 
-  console.log(cart);
 
   const isActivePackage = Boolean(cart?.package?.id || cart?.topup?.planCode);
   const deviceSelect =

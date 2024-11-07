@@ -45,17 +45,31 @@ const initialState = {
     {
       name: "Pocket Wifi",
       path: commercialRoutes.pocketWifiHome.path,
-      icon: () => <PocketWifiIcon />,
+      icon: ({ pocketWifiColor = "", routerColor = "", simColor = "" }) => {
+        return pocketWifiColor ? (
+          <PocketWifiIcon color={pocketWifiColor} />
+        ) : (
+          <PocketWifiIcon />
+        );
+      },
     },
     {
       name: "Router",
       path: commercialRoutes.routerHome.path,
-      icon: () => <RouterMiniIcon />,
+      icon: ({ pocketWifiColor = "", routerColor = "", simColor = "" }) => {
+        return routerColor ? (
+          <RouterMiniIcon color={routerColor} />
+        ) : (
+          <RouterMiniIcon />
+        );
+      },
     },
     {
       name: "SIM/eSIM",
       path: commercialRoutes.simHome.path,
-      icon: () => <SimMiniIcon />,
+      icon: ({ pocketWifiColor = "", routerColor = "", simColor = "" }) => {
+        return simColor ? <SimMiniIcon color={simColor} /> : <SimMiniIcon />;
+      },
     },
   ],
 };

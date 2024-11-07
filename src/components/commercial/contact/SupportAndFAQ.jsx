@@ -23,7 +23,6 @@ const SupportAndFAQ = ({ data }) => {
 
   const handleOpenChange = (value) => {
     setOpenItem(value === openItem ? null : value);
-    console.log(value);
   };
 
   return (
