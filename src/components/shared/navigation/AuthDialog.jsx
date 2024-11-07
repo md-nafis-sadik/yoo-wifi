@@ -73,6 +73,7 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
   const [name, setName] = useState({ firstName: "", lastName: "" });
   const [email, setEmail] = useState("");
 
+  // SETS THE DISABLED STATE OF THE CONTINUE BUTTON BASED ON THE CURRENT STAGE
   useEffect(() => {
     if (signInStage === 1) {
       setIsButtonDisabled(phone.length <= 5);
@@ -83,18 +84,24 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
         name.firstName.length < 3 || name.lastName.length < 3
       );
     } else if (signUpStage === 2) {
-      setIsButtonDisabled(!email || !validateEmail(email) || phone.length <= 5);
+      console.log(validateEmail(email));
+      setIsButtonDisabled(!validateEmail(email) || phone.length <= 5);
     }
-  }, [signInStage, phone, otp, name, email]);
+  }, [signInStage, signUpStage, phone, otp, name, email]);
 
+  // EVENT HANDLER TO HANDLE NEXT/CONTINUE BUTTON PRESS. IT DEFINES THE FLOW OF THE DIALOG
   const handleContinuePress = () => {
-    if (signInStage === 1) {
+    if (signInStage === 1 && phone.length > 5) {
       setSignInStage(2);
-    } else if (signInStage === 2) {
+    } else if (signInStage === 2 && otp.length === 6) {
       setSignInStage(3);
-    } else if (signUpStage === 1) {
+    } else if (
+      signUpStage === 1 &&
+      name.firstName.length >= 3 &&
+      name.lastName.length >= 3
+    ) {
       setSignUpStage(2);
-    } else if (signUpStage === 2) {
+    } else if (signUpStage === 2 && validateEmail(email) && phone.length > 5) {
       setSignUpStage(3);
     } else if (signUpStage === 3) {
       setSignUpStage(4);
@@ -105,22 +112,88 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={() => setIsOpen(!isOpen)}>
-      <div className="px-4">
-        <DialogContent
-          showCloseIcon={true}
-          className={cn(
-            "w-full max-w-[540px] h-auto min-h-[286px] sm:min-h-[438px] rounded-xl md:rounded-3xl flex flex_center flex-col px-4 md:px-8 lg:px-[60px] pt-10 md:pt-[60px] pb-6 md:pb-[60px] gap-6 md:gap-12",
-            signInStage === 3 || signUpStage === 4 ? "bg-main-50" : "bg-white"
-          )}
-        >
-          <DialogTitle className={"hidden"} />
-          {signInStage === 1 && (
-            <Fragment>
-              <DialogHeader
-                title="Welcome Back!"
-                text="We're glad to see you again. Let's dive into your courses."
-              />
+      <DialogContent
+        showCloseIcon={true}
+        className={cn(
+          "w-[calc(100vw-32px)] max-w-[540px] h-auto min-h-[286px] sm:min-h-[438px] rounded-xl md:rounded-3xl flex flex_center flex-col px-4 md:px-8 lg:px-[60px] pt-10 md:pt-[60px] pb-6 md:pb-[60px] gap-6 md:gap-12",
+          signInStage === 3 || signUpStage === 4 ? "bg-main-50" : "bg-white"
+        )}
+      >
+        <DialogTitle className={"hidden"} />
 
+        {/* SIGN IN FLOW */}
+        {signInStage === 1 && (
+          <Fragment>
+            <DialogHeader
+              title="Welcome Back!"
+              text="We're glad to see you again. Let's dive into your courses."
+            />
+
+            <PhoneInput
+              defaultCountry="us"
+              value={phone}
+              className={cn(
+                "text-sm md:text-base !mt-0 font-normal !leading-normal w-full bg-white"
+              )}
+              onChange={(phone) => setPhone(phone)}
+              style={{
+                "--react-international-phone-flag-background-color":
+                  "transparent rounded-[20px]",
+              }}
+            />
+          </Fragment>
+        )}
+        {(signInStage === 2 || signUpStage === 3) && (
+          <Fragment>
+            <DialogHeader
+              title="Verification"
+              text="A confirmation code has been sent to your email & phone number."
+            />
+
+            <OTPInput setOtp={setOtp} />
+          </Fragment>
+        )}
+
+        {/* SIGN UP FLOW */}
+        {signUpStage === 1 && (
+          <Fragment>
+            <DialogHeader
+              title="Sign Up"
+              text="Its super fun to Register. Get started!"
+            />
+            <div className="flex flex-col gap-2 md:gap-3 w-full">
+              <Input
+                placeholder="First Name"
+                name="firstName"
+                onChange={(e) =>
+                  setName({ ...name, firstName: e.target.value })
+                }
+                required
+              />
+              <Input
+                placeholder="Last Name"
+                name="lastName"
+                onChange={(e) => setName({ ...name, lastName: e.target.value })}
+                required
+              />
+            </div>
+          </Fragment>
+        )}
+        {signUpStage === 2 && (
+          <Fragment>
+            <DialogHeader
+              title="Sign Up"
+              text="Its super fun to Register. Get started!"
+            />
+            <div className="flex flex-col gap-2 md:gap-3 w-full">
+              <Input
+                placeholder="Email"
+                name="email"
+                onChange={(e) =>
+                  setEmail(e.target.value.replace(/\s/g, "").toLowerCase())
+                }
+                required
+              />
               <PhoneInput
                 defaultCountry="us"
                 value={phone}
@@ -133,144 +206,75 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
                     "transparent rounded-[20px]",
                 }}
               />
-            </Fragment>
+            </div>
+          </Fragment>
+        )}
+
+        {/* SUCCESS MODAL */}
+        {(signInStage === 3 || signUpStage === 4) && (
+          <div className="flex flex-col gap-6">
+            <div className="flex items-center justify-center">
+              <SuccessIcon className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28" />
+            </div>
+            <DialogHeader
+              title={signInStage ? "Log In Successful!" : "Sign up Successful!"}
+              text={
+                signInStage
+                  ? "Welcome back! Ready to continue?"
+                  : "Thank you for joining us! Your account is ready"
+              }
+            />
+          </div>
+        )}
+
+        {/* EVENT HANDLER BUTTON WITH BOTTOM TEXT AND NAVIGATION */}
+        <div className="w-full flex_center flex-col">
+          <Button
+            size="lg"
+            className={cn(
+              "h-11 md:h-[52px] text-base font-semibold !leading-[1.2] rounded-xl select-none",
+              isButtonDisabled && "bg-disabled",
+              signInStage === 3 || signUpStage === 4 ? "w-fit" : "w-full"
+            )}
+            disabled={isButtonDisabled}
+            onClick={handleContinuePress}
+          >
+            {(signInStage === 1 || signUpStage === 2) && "Continue"}
+            {(signInStage === 2 || signUpStage === 3) && "Verify"}
+            {(signInStage === 3 || signUpStage === 4) && "Continue"}
+            {signUpStage === 1 && "Next"}
+          </Button>
+          {signInStage && signInStage === 1 && (
+            <BottomTextLink
+              text="Don't have an account?"
+              linkText="Register Now"
+              onClick={() => {
+                setSignUpStage(1);
+                setSignInStage(null);
+              }}
+            />
+          )}
+          {signUpStage && signUpStage <= 2 && (
+            <BottomTextLink
+              text="Already Have an account?"
+              linkText="Login"
+              onClick={() => {
+                setSignInStage(1);
+                setSignUpStage(null);
+              }}
+            />
           )}
           {(signInStage === 2 || signUpStage === 3) && (
-            <Fragment>
-              <DialogHeader
-                title="Verification"
-                text="A confirmation code has been sent to your email & phone number."
-              />
-
-              <OTPInput setOtp={setOtp} />
-            </Fragment>
+            <BottomTextLink
+              text="Didn't receive any OTP?"
+              linkText="Resend Code"
+              onClick={() => {
+                // Function to send otp
+              }}
+            />
           )}
-
-          {/* SIGN UP FLOW */}
-          {signUpStage === 1 && (
-            <Fragment>
-              <DialogHeader
-                title="Sign Up"
-                text="Its super fun to Register. Get started!"
-              />
-              <div className="flex flex-col gap-2 md:gap-3 w-full">
-                <Input
-                  placeholder="First Name"
-                  name="firstName"
-                  onChange={(e) =>
-                    setName({ ...name, firstName: e.target.value })
-                  }
-                  required
-                />
-                <Input
-                  placeholder="Last Name"
-                  name="lastName"
-                  onChange={(e) =>
-                    setName({ ...name, lastName: e.target.value })
-                  }
-                  required
-                />
-              </div>
-            </Fragment>
-          )}
-          {signUpStage === 2 && (
-            <Fragment>
-              <DialogHeader
-                title="Sign Up"
-                text="Its super fun to Register. Get started!"
-              />
-              <div className="flex flex-col gap-2 md:gap-3 w-full">
-                <Input
-                  placeholder="Email"
-                  name="email"
-                  onChange={(e) =>
-                    setEmail(e.target.value.replace(/\s/g, "").toLowerCase())
-                  }
-                  required
-                />
-                <PhoneInput
-                  defaultCountry="us"
-                  value={phone}
-                  className={cn(
-                    "text-sm md:text-base !mt-0 font-normal !leading-normal w-full bg-white"
-                  )}
-                  onChange={(phone) => setPhone(phone)}
-                  style={{
-                    "--react-international-phone-flag-background-color":
-                      "transparent rounded-[20px]",
-                  }}
-                />
-              </div>
-            </Fragment>
-          )}
-
-          {/* SUCCESS FLOW */}
-          {(signInStage === 3 || signUpStage === 4) && (
-            <div className="flex flex-col gap-6">
-              <div className="flex items-center justify-center">
-                <SuccessIcon className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28" />
-              </div>
-              <DialogHeader
-                title={
-                  signInStage ? "Log In Successful!" : "Sign up Successful!"
-                }
-                text={
-                  signInStage
-                    ? "Welcome back! Ready to continue?"
-                    : "Thank you for joining us! Your account is ready"
-                }
-              />
-            </div>
-          )}
-
-          <div className="w-full flex_center flex-col">
-            <Button
-              size="lg"
-              className={cn(
-                "h-11 md:h-[52px] text-base font-semibold !leading-[1.2] rounded-xl select-none",
-                isButtonDisabled && "bg-disabled",
-                signInStage === 3 || signUpStage === 4 ? "w-fit" : "w-full"
-              )}
-              disabled={isButtonDisabled}
-              onClick={handleContinuePress}
-            >
-              {(signInStage === 1 || signUpStage === 2) && "Continue"}
-              {(signInStage === 2 || signUpStage === 3) && "Verify"}
-              {(signInStage === 3 || signUpStage === 4) && "Continue"}
-              {signUpStage === 1 && "Next"}
-            </Button>
-            {signInStage && signInStage === 1 && (
-              <BottomTextLink
-                text="Don't have an account?"
-                linkText="Register Now"
-                onClick={() => {
-                  setSignUpStage(1);
-                  setSignInStage(null);
-                }}
-              />
-            )}
-            {signUpStage && signUpStage <= 2 && (
-              <BottomTextLink
-                text="Already Have an account?"
-                linkText="Login"
-                onClick={() => {
-                  setSignInStage(1);
-                  setSignUpStage(null);
-                }}
-              />
-            )}
-            {(signInStage === 2 || signUpStage === 3) && (
-              <BottomTextLink
-                text="Didn't receive any OTP?"
-                linkText="Resend Code"
-                onClick={() => {
-                  // Function to send your otp
-                }}
-              />
-            )}
-          </div>
-        </DialogContent>
-      </div>
+        </div>
+      </DialogContent>
     </Dialog>
   );
 };
