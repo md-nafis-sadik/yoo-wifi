@@ -14,6 +14,29 @@ const PackageFilterList = () => {
     const [selectedCountries, setSelectedCountries] = useState([]);
     const [selectedProduct, setSelectedProduct] = useState([]);
     const [selectedPlan, setSelectedPlan] = useState([]);
+    const [searchText, setSearchText] = useState('');
+
+    console.log(selectedRegions);
+
+    // Filter packages based on searchText, selectedRegions, selectedCountries, selectedProduct, and selectedPlan
+    const filteredPackages = packages.filter((pkg) => {
+
+        // Check if any filter is active
+        const isAnyFilterActive = selectedRegions.length > 0 || selectedCountries.length > 0 || selectedProduct.length > 0 || selectedPlan.length > 0 || searchText !== '';
+        if (!isAnyFilterActive)
+            return true;
+
+        // At least one filter is active, apply all filters
+        const matchesSearchText = searchText === '' || pkg.name.toLowerCase().includes(searchText.toLowerCase());
+        const matchesRegion = selectedRegions.length === 0 || selectedRegions.includes(pkg.region);
+        const matchesCountry = selectedCountries.length === 0 || selectedCountries.includes(pkg.country);
+        const matchesProduct = selectedProduct.length === 0 || selectedProduct.includes(pkg.type);
+        const matchesPlan = selectedPlan.length === 0 || selectedPlan.includes(pkg.plan);
+
+        // Return true only if all active filter conditions are met
+        return matchesSearchText && matchesRegion && matchesCountry && matchesProduct && matchesPlan;
+    });
+
 
     return (
         <section className="containerX">
@@ -24,19 +47,18 @@ const PackageFilterList = () => {
                     subHeading='Roam the world with confidence! Stay connected and data-ready, anytime, anywhere!'
                 />
 
-
                 <div className='flex gap-8 mt-10'>
-
                     <FilterSidebar
-                        className="w-[304px] "
+                        className="w-[304px]"
                         selectedRegions={selectedRegions} setSelectedRegions={setSelectedRegions}
                         selectedCountries={selectedCountries} setSelectedCountries={setSelectedCountries}
                         selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct}
                         selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan}
+                        searchText={searchText} setSearchText={setSearchText}
                     />
 
-                    <div className='flex-1 grid grid-cols-2 gap-x-5 gap-y-4'>
-                        {packages.map((data, index) => (
+                    <div className='flex-1 grid grid-cols-2 gap-x-5 gap-y-4 h-max'>
+                        {filteredPackages.map((data, index) => (
                             <InternetPackageCard
                                 key={index}
                                 data={data}
@@ -55,7 +77,7 @@ export default PackageFilterList;
 
 // filter sidebar component
 const FilterSidebar = ({
-    className, selectedRegions, setSelectedRegions, selectedCountries, setSelectedCountries, selectedProduct, setSelectedProduct, selectedPlan, setSelectedPlan
+    className, selectedRegions, setSelectedRegions, selectedCountries, setSelectedCountries, selectedProduct, setSelectedProduct, selectedPlan, setSelectedPlan, searchText, setSearchText
 }) => {
 
     const { regionList, countries } = useSelector(state => state.country);
@@ -76,6 +98,8 @@ const FilterSidebar = ({
             <div className='my-8'>
                 <input
                     type="text"
+                    value={searchText}
+                    onChange={(e) => setSearchText(e.target.value)}
                     placeholder='Search anything...'
                     className='w-full p-4 rounded-xl border border-neutral-300 outline-none bg-neutral-100 placeholder:text-black-600 text-black-900'
                 />
@@ -184,9 +208,12 @@ const FilterList = ({
             </ul>
 
             {/* more button */}
-            {(activeIsMoreButton && (datas.length > totalDataShow)) && (
+            {(activeIsMoreButton && (datas.length > totalDataShow) && isOpen) && (
                 <button
-                    className='px-6 py-3 border border-black-900 rounded-xl w-max text-sm font-medium'
+                    className={cn(
+                        'px-6 py-3 border border-black-900 rounded-xl w-max text-sm font-medium',
+                        isOpen ? 'opacity-100' : 'opacity-0'
+                    )}
                     onClick={() => setTotalDataShow((prev) => prev + 5)}
                 >
                     More
