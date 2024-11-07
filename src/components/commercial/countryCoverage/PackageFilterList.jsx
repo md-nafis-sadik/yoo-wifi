@@ -12,6 +12,8 @@ const PackageFilterList = () => {
 
     const [selectedRegions, setSelectedRegions] = useState([]);
     const [selectedCountries, setSelectedCountries] = useState([]);
+    const [selectedProduct, setSelectedProduct] = useState([]);
+    const [selectedPlan, setSelectedPlan] = useState([]);
 
     return (
         <section className="containerX">
@@ -29,6 +31,8 @@ const PackageFilterList = () => {
                         className="w-[304px] "
                         selectedRegions={selectedRegions} setSelectedRegions={setSelectedRegions}
                         selectedCountries={selectedCountries} setSelectedCountries={setSelectedCountries}
+                        selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct}
+                        selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan}
                     />
 
                     <div className='flex-1 grid grid-cols-2 gap-x-5 gap-y-4'>
@@ -49,15 +53,19 @@ const PackageFilterList = () => {
 
 export default PackageFilterList;
 
-
+// filter sidebar component
 const FilterSidebar = ({
-    className, selectedRegions, setSelectedRegions, selectedCountries, setSelectedCountries
+    className, selectedRegions, setSelectedRegions, selectedCountries, setSelectedCountries, selectedProduct, setSelectedProduct, selectedPlan, setSelectedPlan
 }) => {
 
     const { regionList, countries } = useSelector(state => state.country);
 
     const [isRegionListOpen, setIsRegionListOpen] = useState(true);
     const [isCountryListOpen, setIsCountryListOpen] = useState(true);
+    const [isProductListOpen, setIsProductListOpen] = useState(true);
+    const [isPlanTypeListOpen, setIsPlanTypeListOpen] = useState(true);
+
+    const [totalCountryShow, setTotalCountryShow] = useState(5);
 
     return (
         <div className={cn('p-6 border border-neutral-200 rounded-2xl', className)}>
@@ -91,14 +99,46 @@ const FilterSidebar = ({
                     datas={countries}
                     selected={selectedCountries}
                     setSelected={setSelectedCountries}
+                    activeIsMoreButton={true}
+                    totalDataShow={totalCountryShow}
+                    setTotalDataShow={setTotalCountryShow}
+                />
+
+                <FilterList
+                    title="Products"
+                    isOpen={isProductListOpen}
+                    setIsOpen={setIsProductListOpen}
+                    datas={[
+                        { _id: 1, name: 'Pocket Wifi', value: 'pocket-wifi' },
+                        { _id: 2, name: 'Sim', value: 'sim' },
+                        { _id: 3, name: 'eSim', value: 'esim' },
+                    ]}
+                    selected={selectedProduct}
+                    setSelected={setSelectedProduct}
+                />
+
+                <FilterList
+                    title="Plan Type"
+                    isOpen={isPlanTypeListOpen}
+                    setIsOpen={setIsPlanTypeListOpen}
+                    datas={[
+                        { _id: 1, name: '5GB 7 days', value: '5gb-7days' },
+                        { _id: 2, name: '10GB 10 days', value: '10gb-10days' },
+                        { _id: 3, name: '15GB 15 days', value: '15gb-15days' },
+                        { _id: 4, name: '20GB 20 days', value: '20gb-20days' },
+                        { _id: 5, name: 'BASIC Daypass', value: 'basic-daypass' },
+                    ]}
+                    selected={selectedPlan}
+                    setSelected={setSelectedPlan}
                 />
             </div>
         </div>
     )
 }
 
+// FilterList component for re-using
 const FilterList = ({
-    isOpen, setIsOpen, datas, title, selected, setSelected
+    isOpen, setIsOpen, datas, title, selected, setSelected, key = "value", activeIsMoreButton = false, totalDataShow, setTotalDataShow,
 }) => {
 
     // Toggle list
@@ -129,19 +169,29 @@ const FilterList = ({
                 "space-y-4 transition-all duration-300 ",
                 isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
             )}>
-                {datas.map((data, index) => (
+                {datas.slice(0, totalDataShow).map((data, index) => (
                     <li key={index} className="text-black-700 flex gap-2 items-center">
                         <Checkbox
                             type="checkbox"
-                            checked={selected.includes(data.name)}
-                            onCheckedChange={() => toggle(data.name, setSelected)}
+                            checked={selected.includes(data[key])}
+                            onCheckedChange={() => toggle(data[key], setSelected)}
                         />
-                        <span onClick={() => toggle(data.name, setSelected)} className='cursor-pointer'>
+                        <span onClick={() => toggle(data[key], setSelected)} className='cursor-pointer '>
                             {data.name}
                         </span>
                     </li>
                 ))}
             </ul>
+
+            {/* more button */}
+            {(activeIsMoreButton && (datas.length > totalDataShow)) && (
+                <button
+                    className='px-6 py-3 border border-black-900 rounded-xl w-max text-sm font-medium'
+                    onClick={() => setTotalDataShow((prev) => prev + 5)}
+                >
+                    More
+                </button>
+            )}
         </div>
     )
 }
