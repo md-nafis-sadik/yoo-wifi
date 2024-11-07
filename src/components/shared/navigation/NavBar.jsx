@@ -38,7 +38,7 @@ function NavBar() {
             isWhite ? "text-white" : "text-white xl:text-black-700"
           )}
         >
-          <div className="flex items-center justify-between">
+          <div className="flex w-full xl:w-auto items-center justify-between">
             <Link to={commercialRoutes.home.path}>
               <LogoIcon color={isWhite ? "#fff" : "#E41F26"} />
             </Link>
@@ -49,7 +49,7 @@ function NavBar() {
               <MenuIcon />
             </button>
           </div>
-          <div className="flex-1 flex flex-col xl:flex-row xl:items-center xl:justify-between text-lg xl:text-sm font-semibold fixed xl:relative top-0 left-0 w-full bg-black h-screen xl:bg-transparent xl:h-auto p-4 xl:p-0 overflow-auto">
+          <div className="flex-1 hidden xl:flex flex-col xl:flex-row xl:items-center xl:justify-between text-lg xl:text-sm font-semibold fixed xl:relative top-0 left-0 w-full bg-black h-screen xl:bg-transparent xl:h-auto p-4 xl:p-0 overflow-auto">
             <ul className="flex flex-col xl:flex-row xl:items-center 2xl:gap-3">
               <li>
                 <Link
