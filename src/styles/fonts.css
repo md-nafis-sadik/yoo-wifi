@@ -113,3 +113,12 @@
   font-weight: 300;
   font-style: normal;
 }
+
+/* Miedinger-W01-Bold */
+
+@font-face {
+  font-family: "Miedinger";
+  src: url("../assets/fonts/Miedinger-W01-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
