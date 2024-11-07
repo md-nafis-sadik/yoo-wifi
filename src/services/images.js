@@ -56,6 +56,12 @@ import IrelandFlag from "@/assets/images/country-coverage/Ireland.png";
 import ItalyFlag from "@/assets/images/country-coverage/Italy.png";
 import SwedenFlag from "@/assets/images/country-coverage/Sweden.png";
 import SwitzerlandFlag from "@/assets/images/country-coverage/Switzerland.png";
+import country1 from "@/assets/images/country-coverage/country-1.webp";
+import country2 from "@/assets/images/country-coverage/country-2.webp";
+import country3 from "@/assets/images/country-coverage/country-3.webp";
+import country4 from "@/assets/images/country-coverage/country-4.webp";
+import country5 from "@/assets/images/country-coverage/country-5.webp";
+import country6 from "@/assets/images/country-coverage/country-6.webp";
 
 export {
   africaRegionBlack,
@@ -116,4 +122,10 @@ export {
   ItalyFlag,
   SwedenFlag,
   SwitzerlandFlag,
+  country1,
+  country2,
+  country3,
+  country4,
+  country5,
+  country6,
 };

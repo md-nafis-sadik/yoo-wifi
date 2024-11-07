@@ -1,8 +1,12 @@
 import InternetPackageCard from "@/components/shared/cards/InternetPackageCard";
 import SectionHeader from "@/components/shared/others/SectionHeader";
 import { Button } from "@/components/ui/button";
+import { useSelector } from "react-redux";
 
 function InternetPackage() {
+
+  const { packages } = useSelector(state => state.country);
+
   return (
     <div className="sec_common_80 px-4 min-[1176px]:px-0 bg-neutral-50">
       <SectionHeader
@@ -30,11 +34,9 @@ function InternetPackage() {
           </label>
         </form>
         <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-8">
-          {Array(6)
-            .fill(1)
-            .map((_, index) => (
-              <InternetPackageCard key={index} />
-            ))}
+          {packages.map((data, index) => (
+            <InternetPackageCard key={index} data={data} />
+          ))}
         </div>
       </div>
     </div>
