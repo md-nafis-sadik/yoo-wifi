@@ -33,6 +33,7 @@ const {
   simSelfPickup,
   simOrderSummery,
   countryCoverage,
+  countryCoverageFilter,
 } = routes || {};
 
 export const comRoutes = [
@@ -170,6 +171,10 @@ export const comRoutes = [
   },
   {
     path: countryCoverage.path,
-    element: countryCoverage.element
-  }
+    element: countryCoverage.element,
+  },
+  {
+    path: countryCoverageFilter.path,
+    element: countryCoverageFilter.element,
+  },
 ];
