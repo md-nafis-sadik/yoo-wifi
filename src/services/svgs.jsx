@@ -381,6 +381,12 @@ export const CheckIcon = ({ className = "", color = "#56AD7E" }) => (
   </svg>
 );
 
+export const CloseIcon = ({ className = "", color = "#FFF" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" className={className}>
+    <path d="M24.4 7.61329C23.88 7.09329 23.04 7.09329 22.52 7.61329L16 14.12L9.47996 7.59996C8.95996 7.07996 8.11996 7.07996 7.59996 7.59996C7.07996 8.11996 7.07996 8.95996 7.59996 9.47996L14.12 16L7.59996 22.52C7.07996 23.04 7.07996 23.88 7.59996 24.4C8.11996 24.92 8.95996 24.92 9.47996 24.4L16 17.88L22.52 24.4C23.04 24.92 23.88 24.92 24.4 24.4C24.92 23.88 24.92 23.04 24.4 22.52L17.88 16L24.4 9.47996C24.9066 8.97329 24.9066 8.11996 24.4 7.61329Z" fill={color} />
+  </svg>
+);
+
 // components start with D
 
 export const DollarLabelIcon = ({ className = "", color = "#E41F26" }) => (
@@ -523,6 +529,12 @@ export const FacebookIcon = ({ className = "", color = "#D81F22" }) => (
         <rect width="32" height="32" fill="white" />
       </clipPath>
     </defs>
+  </svg>
+);
+
+export const FilterIcon = ({ className = "", color = "#181A20" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" className={className}>
+    <path d="M11 18H13C13.55 18 14 17.55 14 17C14 16.45 13.55 16 13 16H11C10.45 16 10 16.45 10 17C10 17.55 10.45 18 11 18ZM3 7C3 7.55 3.45 8 4 8H20C20.55 8 21 7.55 21 7C21 6.45 20.55 6 20 6H4C3.45 6 3 6.45 3 7ZM7 13H17C17.55 13 18 12.55 18 12C18 11.45 17.55 11 17 11H7C6.45 11 6 11.45 6 12C6 12.55 6.45 13 7 13Z" fill={color} />
   </svg>
 );
 

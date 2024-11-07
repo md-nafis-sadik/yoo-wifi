@@ -4,7 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/components/ui/pagination';
 import { cn } from '@/lib/utils';
-import { HorizontalLineIcon } from '@/services';
+import { CloseIcon, FilterIcon, HorizontalLineIcon } from '@/services';
+import { PanelTopCloseIcon } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
@@ -18,6 +19,7 @@ const PackageFilterList = () => {
     const [selectedProduct, setSelectedProduct] = useState([]);
     const [selectedPlan, setSelectedPlan] = useState([]);
     const [searchText, setSearchText] = useState('');
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
 
     // Reset the current page whenever the filters change
     useEffect(() => {
@@ -48,9 +50,8 @@ const PackageFilterList = () => {
     const totalPages = Math.ceil(filteredPackages.length / itemsPerPage);
     const paginatedPackages = filteredPackages.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
-    const handlePageChange = (pageNumber) => {
-        setCurrentPage(pageNumber);
-    };
+    const handlePageChange = (pageNumber) => setCurrentPage(pageNumber);
+    const toggleFilterDrawer = () => setIsFilterOpen(!isFilterOpen);
 
     return (
         <section className="containerX">
@@ -61,9 +62,38 @@ const PackageFilterList = () => {
                     subHeading='Roam the world with confidence! Stay connected and data-ready, anytime, anywhere!'
                 />
 
-                <div className='flex gap-8 mt-10'>
+                {/* mobile searbox & filter active menu */}
+                <div className='my-4 flex gap-2'>
+                    <SearchBox searchText={searchText} setSearchText={setSearchText} />
+
+                    <button className='shrink-0 w-11 h-11 flex justify-center items-center border boder-[#E0E0E0] rounded-lg' onClick={toggleFilterDrawer}>
+                        <FilterIcon />
+                    </button>
+                </div>
+
+                <div
+                    className={cn(
+                        isFilterOpen ? 'translate-x-0' : 'translate-x-full',
+                        "fixed top-0 right-0 w-full max-w-[250px] bg-white shadow z-50 transform transition-transform duration-500 ease-in-out h-screen overlow-y-auto",
+                    )}
+                >
                     <FilterSidebar
-                        className="w-[304px]"
+                        selectedRegions={selectedRegions} setSelectedRegions={setSelectedRegions}
+                        selectedCountries={selectedCountries} setSelectedCountries={setSelectedCountries}
+                        selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct}
+                        selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan}
+                        searchText={searchText} setSearchText={setSearchText}
+                    />
+                    <button onClick={toggleFilterDrawer} className="absolute top-4 right-4 text-black">
+                        <CloseIcon color="#191919" className='w-5 h-5' />
+                    </button>
+                </div>
+                {/* end mobile sidebar */}
+
+                {/* main part */}
+                <div className='flex lg:gap-4 xl:gap-8 lg:mt-10'>
+                    <FilterSidebar
+                        className="hidden lg:block w-[260px] xl:w-[304px]"
                         selectedRegions={selectedRegions} setSelectedRegions={setSelectedRegions}
                         selectedCountries={selectedCountries} setSelectedCountries={setSelectedCountries}
                         selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct}
@@ -72,7 +102,7 @@ const PackageFilterList = () => {
                     />
 
                     <div className='flex-1 '>
-                        <div className='grid grid-cols-2 gap-x-5 gap-y-4 h-max'>
+                        <div className='grid grid-cols-2 gap-2 md:gap-3 xl:gap-x-5 xl:gap-y-4 h-max'>
                             {paginatedPackages.map((data, index) => (
                                 <InternetPackageCard
                                     key={index}
@@ -143,22 +173,19 @@ const FilterSidebar = ({
     }
 
     return (
-        <div className={cn('p-6 border border-neutral-200 rounded-2xl h-max', className)}>
-            <h4 className='text-black-900 text-[28px] font-extrabold leading-[120%]'>
+        <div className={cn('p-3 lg:p-6 border border-neutral-200 lg:rounded-2xl h-max', className)}>
+            <h4 className='text-black-900 text-xl lg:text-[28px] font-extrabold leading-[120%]'>
                 Filters
             </h4>
 
-            <div className='my-8'>
-                <input
-                    type="text"
-                    value={searchText}
-                    onChange={(e) => setSearchText(e.target.value)}
-                    placeholder='Search anything...'
-                    className='w-full p-4 rounded-xl border border-neutral-300 outline-none bg-neutral-100 placeholder:text-black-600 text-black-900'
+            <div className='my-4 xl:my-8'>
+                <SearchBox
+                    searchText={searchText}
+                    setSearchText={setSearchText}
                 />
             </div>
 
-            <div className='flex flex-col gap-12'>
+            <div className='flex flex-col gap-6 md:gap-8 lg:gap-12 h-max overflow-y-auto'>
 
                 <FilterList
                     title="Region"
@@ -238,26 +265,25 @@ const FilterList = ({
     };
 
     return (
-        <div className='flex flex-col gap-4'>
-            <div className='flex justify-between gap-4'>
-                <p className='text-black-900 text-[18px] leading-[140%] font-semibold'>
+        <div className='flex flex-col gap-2 lg:gap-4'>
+            <div className='flex justify-between gap-x-4'>
+                <p className='text-black-900 text-sm lg:text-[18px] font-semibold'>
                     {title}:
                 </p>
 
                 <button onClick={() => setIsOpen(!isOpen)}>
                     <HorizontalLineIcon />
                 </button>
-
             </div>
 
             <div className='border-b border-[#EEE]'></div>
 
             <ul className={cn(
-                "space-y-4 transition-all duration-300 ",
+                "space-y-2 lg:space-y-4 transition-all duration-300 ",
                 isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
             )}>
                 {datas.slice(0, totalDataShow).map((data, index) => (
-                    <li key={index} className="text-black-700 flex gap-2 items-center">
+                    <li key={index} className="text-black-700 flex gap-2 items-center text-xs lg:text-base">
                         <Checkbox
                             type="checkbox"
                             checked={selected.includes(data[key])}
@@ -274,7 +300,7 @@ const FilterList = ({
             {(activeIsMoreButton && (datas.length > totalDataShow) && isOpen) && (
                 <button
                     className={cn(
-                        'px-6 py-3 border border-black-900 rounded-xl w-max text-sm font-medium',
+                        'px-4 lg:px-6 py-2 lg:py-3 border border-black-900 rounded lg:rounded-xl w-max text-xs lg:text-sm font-medium',
                         isOpen ? 'opacity-100' : 'opacity-0'
                     )}
                     onClick={() => setTotalDataShow((prev) => prev + 5)}
@@ -283,5 +309,17 @@ const FilterList = ({
                 </button>
             )}
         </div>
+    )
+}
+
+const SearchBox = ({ searchText, setSearchText }) => {
+    return (
+        <input
+            type="text"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+            placeholder='Search anything...'
+            className='w-full h-11 lg:h-[52px] px-4 rounded-xl border border-neutral-300 outline-none bg-neutral-100 placeholder:text-black-600 text-black-900'
+        />
     )
 }
