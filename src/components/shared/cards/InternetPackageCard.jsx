@@ -40,7 +40,7 @@ const InternetPackageCard = ({ data, type = 1 }) => {
             "text-[10px] md:text-base !leading-[1.2] rounded-sm md:rounded-xl"
           )}
           onClick={() => navigate(
-            type === 1 ? `/country-coverage` : `#`
+            type === 1 ? `/country-coverage` : `/country-coverage/details/${data?._id}`
           )}
         >
           {type === 1 ? "Find Out More" : "See Details"}

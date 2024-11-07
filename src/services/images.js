@@ -66,6 +66,8 @@ import country3 from "@/assets/images/country-coverage/country-3.webp";
 import country4 from "@/assets/images/country-coverage/country-4.webp";
 import country5 from "@/assets/images/country-coverage/country-5.webp";
 import country6 from "@/assets/images/country-coverage/country-6.webp";
+import rgbPocketWifi from "@/assets/images/rgb-pocket-wifi.webp";
+import cloud from "@/assets/images/cloud.png";
 
 export {
   BelgiumFlag,
@@ -136,4 +138,6 @@ export {
   country4,
   country5,
   country6,
+  rgbPocketWifi,
+  cloud,
 };
