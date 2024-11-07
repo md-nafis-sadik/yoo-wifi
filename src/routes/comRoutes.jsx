@@ -65,6 +65,14 @@ export const comRoutes = [
         path: contact.path,
         element: contact.element,
       },
+      {
+        path: countryCoverage.path,
+        element: countryCoverage.element,
+      },
+      {
+        path: countryCoverageFilter.path,
+        element: countryCoverageFilter.element,
+      },
     ],
   },
   {
@@ -168,13 +176,5 @@ export const comRoutes = [
         element: simOrderSummery.element,
       },
     ],
-  },
-  {
-    path: countryCoverage.path,
-    element: countryCoverage.element,
-  },
-  {
-    path: countryCoverageFilter.path,
-    element: countryCoverageFilter.element,
   },
 ];
