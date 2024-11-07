@@ -3,7 +3,7 @@ import React from 'react';
 
 const CountryCoverageFilter = () => {
     return (
-        <div>
+        <div className="overflow-hidden w-full">
             <PackageFilterList />
         </div>
     );

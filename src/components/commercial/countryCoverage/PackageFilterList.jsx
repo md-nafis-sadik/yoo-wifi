@@ -5,7 +5,6 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/components/ui/pagination';
 import { cn } from '@/lib/utils';
 import { CloseIcon, FilterIcon, HorizontalLineIcon } from '@/services';
-import { PanelTopCloseIcon } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
@@ -63,18 +62,17 @@ const PackageFilterList = () => {
                 />
 
                 {/* mobile searbox & filter active menu */}
-                <div className='my-4 flex gap-2'>
+                <div className='my-4 flex gap-2 lg:hidden'>
                     <SearchBox searchText={searchText} setSearchText={setSearchText} />
 
                     <button className='shrink-0 w-11 h-11 flex justify-center items-center border boder-[#E0E0E0] rounded-lg' onClick={toggleFilterDrawer}>
                         <FilterIcon />
                     </button>
                 </div>
-
                 <div
                     className={cn(
                         isFilterOpen ? 'translate-x-0' : 'translate-x-full',
-                        "fixed top-0 right-0 w-full max-w-[250px] bg-white shadow z-50 transform transition-transform duration-500 ease-in-out h-screen overlow-y-auto",
+                        "fixed top-0 right-0 w-full max-w-[250px] lg:max-w-[350px] bg-white shadow z-50 transform transition-transform duration-500 ease-in-out h-full overflow-y-auto lg:hidden"
                     )}
                 >
                     <FilterSidebar
@@ -88,6 +86,7 @@ const PackageFilterList = () => {
                         <CloseIcon color="#191919" className='w-5 h-5' />
                     </button>
                 </div>
+
                 {/* end mobile sidebar */}
 
                 {/* main part */}
@@ -140,9 +139,7 @@ const PackageFilterList = () => {
                         </div>
 
                     </div>
-
                 </div>
-
             </div>
         </section>
     );
@@ -237,10 +234,10 @@ const FilterSidebar = ({
                 />
             </div>
 
-            <div className='mt-5'>
+            <div className='mt-4 lg:mt-5'>
                 <Button
                     variant='secondary'
-                    className="!text-base !py-4 w-full !font-semibold"
+                    className="!text-sm lg:!text-base !py-2 lg:!py-4 w-full !font-semibold rounded lg:rounded-xl"
                     onClick={handleClear}
                 >
                     Clear
