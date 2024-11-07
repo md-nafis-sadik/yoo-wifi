@@ -36,6 +36,7 @@ import Iot from "@/pages/corporate/Iot";
 import MaritimeInternet from "@/pages/corporate/MaritimeInternet";
 import Office from "@/pages/corporate/Office";
 import TravelAgency from "@/pages/corporate/TravelAgency";
+import CountryCoverage from "@/pages/commercial/countryCoverage/CountryCoverage";
 
 const commercialRoutes = {
   commercialLayout: {
@@ -235,6 +236,14 @@ const commercialRoutes = {
     name: "Contact Us",
     activePath: "contact",
     element: <Contact />,
+  },
+
+  // country coverage
+  countryCoverage: {
+    path: "/country-coverage",
+    name: "Country Coverage",
+    activePath: "countryCoverage",
+    element: <CountryCoverage />,
   },
 };
 
