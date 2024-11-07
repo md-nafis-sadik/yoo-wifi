@@ -3,13 +3,13 @@ import aboutSlice from "./module/about/aboutSlice";
 import { apiSlice } from "./module/api/apiSlice";
 import authSlice from "./module/auth/slice";
 import contactSlice from "./module/contact/contactSlice";
+import countrySlice from "./module/country/countrySlice";
 import howItWorksReducer from "./module/howItWorks/HowItWorksSlice";
 import pocketWifiSlice from "./module/pocketWifi/slice";
 import routerSlice from "./module/router/slice";
 import sharedSlice from "./module/shared/sharedSlice";
 import simSlice from "./module/sim/slice";
 import testimonialsSlice from "./module/testimonials/testimonialsSlice";
-import countrySlice from "./module/country/countrySlice";
 
 export const store = configureStore({
   reducer: {
@@ -48,6 +48,9 @@ export const store = configureStore({
           "sim.setupInstructions",
           "about.features",
           "about.whatWeDo",
+          "pocketWifi.benefitsData",
+          "shared.products",
+          "contact.socialLinks",
           "pocketWifi.cart.startDate",
           "howItWorks",
         ],

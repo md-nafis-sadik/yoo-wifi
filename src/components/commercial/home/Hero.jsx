@@ -1,7 +1,9 @@
 import useEmblaCarouselDotButtons from "@/hooks/useEmblaCarouselDotButtons";
 import { cn } from "@/lib/utils";
+import { setHeroIndex } from "@/store/module/shared/sharedSlice";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
+import { useDispatch } from "react-redux";
 import HeroConnected from "./HeroConnected";
 import HeroDiscover from "./HeroDiscover";
 import HeroTravel from "./HeroTravel";
@@ -11,7 +13,14 @@ function Hero() {
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
     Autoplay({ delay: 7000 }),
   ]);
-  const { selectedIndex, scrollSnaps } = useEmblaCarouselDotButtons(emblaApi);
+  const dispatch = useDispatch();
+  const handleUpdateHeroSelectedIndex = (index) => {
+    dispatch(setHeroIndex(index));
+  };
+  const { selectedIndex, scrollSnaps } = useEmblaCarouselDotButtons(
+    emblaApi,
+    handleUpdateHeroSelectedIndex
+  );
 
   return (
     <section className="w-full relative">

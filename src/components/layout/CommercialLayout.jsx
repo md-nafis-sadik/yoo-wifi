@@ -13,7 +13,7 @@ function CommercialLayout() {
       {/* Removable */}
       <DevFAB />
       {/* Removable */}
-      {/* <NavBar /> */}
+      <NavBar />
       <Outlet />
       <DownloadYoowifi />
       <Footer />
