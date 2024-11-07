@@ -22,7 +22,8 @@ function useGteNavbarStatus() {
 
   return {
     isScrolled,
-    isWhite: selectedHeroIndex != 2 && !isScrolled && isHome,
+    isWhite: selectedHeroIndex != 2 && !isScrolled && isHome ? true : false,
+    isRedBorder: selectedHeroIndex != 1 && !isScrolled && isHome ? true : false,
   };
 }
 
