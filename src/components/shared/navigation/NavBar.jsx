@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { commercialRoutes, LogoIcon } from "@/services";
-import { Link } from "react-router-dom";
 
 function NavBar() {
   return (

@@ -14,6 +14,7 @@ const {
   pocketWifiOrderSummery,
   pocketWifiSelfPickup,
   pocketWifiShippingOption,
+  pocketWifiDetails,
   routerHome,
   routerLayout,
   routerRegion,
@@ -63,6 +64,10 @@ export const comRoutes = [
       {
         path: contact.path,
         element: contact.element,
+      },
+      {
+        path: pocketWifiDetails.path,
+        element: pocketWifiDetails.element,
       },
     ],
   },
@@ -170,6 +175,6 @@ export const comRoutes = [
   },
   {
     path: countryCoverage.path,
-    element: countryCoverage.element
-  }
+    element: countryCoverage.element,
+  },
 ];

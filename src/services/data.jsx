@@ -62,6 +62,7 @@ export const productsData = () => ({
         "Stay connected on the go with our high-speed Pocket WIFI. Perfect for travel and remote work.",
       offer: "50% OFF",
       link: commercialRoutes.pocketWifiHome.path,
+      deadline: Math.floor(Date.now() / 1000) + 3 * 24 * 60 * 60,
     },
     {
       title: "Router",
@@ -69,6 +70,7 @@ export const productsData = () => ({
         "Experience seamless and reliable internet connectivity at home with our advanced routers.",
       offer: "30% OFF",
       link: commercialRoutes.routerHome.path,
+      deadline: Math.floor(Date.now() / 1000) + 3 * 24 * 60 * 60,
     },
     {
       title: "SIM/eSIM",
@@ -76,6 +78,7 @@ export const productsData = () => ({
         "Get instant connectivity with our SIM and eSIM options, suitable for all your devices.",
       offer: "20% OFF",
       link: commercialRoutes.simHome.path,
+      deadline: Math.floor(Date.now() / 1000) + 3 * 24 * 60 * 60,
     },
   ],
 });

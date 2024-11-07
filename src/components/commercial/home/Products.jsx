@@ -1,14 +1,15 @@
 import ProductCard from "@/components/shared/cards/ProductCard";
+import { cn } from "@/lib/utils";
 import { images, productsData } from "@/services";
 import { useMemo, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-const Products = () => {
+const Products = ({ showProductDeadline = false, className, ...props }) => {
   const [selectedCard, setSelectedCard] = useState(0);
   const products = useMemo(() => productsData(), []);
 
   return (
-    <section className="sec_common_80 bg-main-20">
+    <section className={cn("sec_common_80 bg-main-20", className)} {...props}>
       <div className="containerX overflow-visible">
         <h2 className="title text-center md:text-start">Our Products</h2>
 
@@ -21,6 +22,7 @@ const Products = () => {
                   item={item}
                   eventHandler={() => setSelectedCard(index)}
                   selected={selectedCard === index}
+                  showCountDown={showProductDeadline}
                 />
               ))}
             </div>
