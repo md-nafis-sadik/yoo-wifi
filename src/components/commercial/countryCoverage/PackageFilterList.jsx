@@ -1,5 +1,6 @@
 import InternetPackageCard from '@/components/shared/cards/InternetPackageCard';
 import SectionHeader from '@/components/shared/others/SectionHeader';
+import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/components/ui/pagination';
 import { cn } from '@/lib/utils';
@@ -133,8 +134,16 @@ const FilterSidebar = ({
 
     const [totalCountryShow, setTotalCountryShow] = useState(5);
 
+    const handleClear = () => {
+        setSelectedRegions([]);
+        setSelectedCountries([]);
+        setSelectedProduct([]);
+        setSelectedPlan([]);
+        setSearchText('');
+    }
+
     return (
-        <div className={cn('p-6 border border-neutral-200 rounded-2xl', className)}>
+        <div className={cn('p-6 border border-neutral-200 rounded-2xl h-max', className)}>
             <h4 className='text-black-900 text-[28px] font-extrabold leading-[120%]'>
                 Filters
             </h4>
@@ -199,6 +208,16 @@ const FilterSidebar = ({
                     selected={selectedPlan}
                     setSelected={setSelectedPlan}
                 />
+            </div>
+
+            <div className='mt-5'>
+                <Button
+                    variant='secondary'
+                    className="!text-base !py-4 w-full !font-semibold"
+                    onClick={handleClear}
+                >
+                    Clear
+                </Button>
             </div>
         </div>
     )
