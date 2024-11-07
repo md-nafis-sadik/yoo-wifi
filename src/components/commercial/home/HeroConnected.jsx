@@ -1,0 +1,68 @@
+import { images } from "@/services";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import HeroChildSlides from "./HeroChildSlides";
+import ProductRouteCard from "./ProductRouteCard";
+
+function HeroConnected() {
+  const { products } = useSelector((state) => state.shared);
+  const navigate = useNavigate();
+  return (
+    <div className="bg-black text-white pt-20 sm:pt-28 xl:pt-40 px-4 sm:px-10 md:px-16 overflow-hidden">
+      <div className="w-full max-w-[1190px] mx-auto">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl xl:text-[7.5rem] leading-[115%] xl:!leading-[94px] font-sansPro uppercase font-extrabold text-center lg:text-left">
+          Stay Connected <br /> Anytime, Anywhere
+        </h1>
+
+        <div className="mt-4 sm:mt-6 md:mt-7 ">
+          <div className="flex flex-col gap-10 sm:gap-12 md:gap-14 w-full">
+            <p className="text-sm sm:text-lg md:text-2xl text-black-200 text-center lg:text-left">
+              Stay Connected Anytime, Anywhere
+            </p>
+            <div className="grid grid-cols-3 w-full max-w-[460px] mx-auto lg:mx-0 gap-2 sm:gap-3">
+              {products?.map((item, index) => (
+                <ProductRouteCard
+                  key={index}
+                  item={item}
+                  onClick={() => navigate(item?.path)}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className="w-full flex flex-col-reverse lg:flex-row justify-between">
+            <HeroChildSlides />
+            <div className="w-full max-w-[328px] sm:max-w-[420px] lg:max-w-[620px] mx-auto lg:mx-0 lg:mr-16 mt-10 lg:-mt-[314px] relative">
+              <img
+                src={images.heroConnected}
+                alt=""
+                className="w-full object-contain"
+              />
+
+              <img
+                src={images.discount}
+                alt=""
+                className="w-24 sm:w-28 lg:w-32 absolute top-6 sm:top-10 left-14 sm:left-12 md:left-auto md:-right-12"
+              />
+            </div>
+          </div>
+          {/* <div className="w-full max-w-[328px] sm:max-w-[420px] lg:max-w-[620px] mx-auto lg:mx-0 lg:-mt-16 relative">
+            <img
+              src={images.heroConnected}
+              alt=""
+              className="w-full object-contain"
+            />
+
+            <img
+              src={images.discount}
+              alt=""
+              className="w-24 sm:w-28 lg:w-32 absolute top-0 left-12 sm:left-auto sm:-right-12"
+            />
+          </div> */}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default HeroConnected;
