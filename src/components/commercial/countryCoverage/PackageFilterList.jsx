@@ -1,22 +1,27 @@
 import InternetPackageCard from '@/components/shared/cards/InternetPackageCard';
 import SectionHeader from '@/components/shared/others/SectionHeader';
 import { Checkbox } from '@/components/ui/checkbox';
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/components/ui/pagination';
 import { cn } from '@/lib/utils';
 import { HorizontalLineIcon } from '@/services';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 const PackageFilterList = () => {
 
     const { packages } = useSelector(state => state.country);
 
+    const [currentPage, setCurrentPage] = useState(1);
     const [selectedRegions, setSelectedRegions] = useState([]);
     const [selectedCountries, setSelectedCountries] = useState([]);
     const [selectedProduct, setSelectedProduct] = useState([]);
     const [selectedPlan, setSelectedPlan] = useState([]);
     const [searchText, setSearchText] = useState('');
 
-    console.log(selectedRegions);
+    // Reset the current page whenever the filters change
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [selectedRegions, selectedCountries, selectedProduct, selectedPlan, searchText]);
 
     // Filter packages based on searchText, selectedRegions, selectedCountries, selectedProduct, and selectedPlan
     const filteredPackages = packages.filter((pkg) => {
@@ -37,6 +42,14 @@ const PackageFilterList = () => {
         return matchesSearchText && matchesRegion && matchesCountry && matchesProduct && matchesPlan;
     });
 
+    // Paginate the packages
+    const itemsPerPage = 5;
+    const totalPages = Math.ceil(filteredPackages.length / itemsPerPage);
+    const paginatedPackages = filteredPackages.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+
+    const handlePageChange = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    };
 
     return (
         <section className="containerX">
@@ -57,15 +70,46 @@ const PackageFilterList = () => {
                         searchText={searchText} setSearchText={setSearchText}
                     />
 
-                    <div className='flex-1 grid grid-cols-2 gap-x-5 gap-y-4 h-max'>
-                        {filteredPackages.map((data, index) => (
-                            <InternetPackageCard
-                                key={index}
-                                data={data}
-                                type={2}
-                            />
-                        ))}
+                    <div className='flex-1 '>
+                        <div className='grid grid-cols-2 gap-x-5 gap-y-4 h-max'>
+                            {paginatedPackages.map((data, index) => (
+                                <InternetPackageCard
+                                    key={index}
+                                    data={data}
+                                    type={2}
+                                />
+                            ))}
+                        </div>
+
+                        <div className="mt-8  w-full">
+                            <Pagination className="flex justify-end">
+                                <PaginationPrevious
+                                    onClick={() => handlePageChange(currentPage - 1)}
+                                    className="mx-2"
+                                    disabled={currentPage === 1}
+                                />
+                                <PaginationContent>
+                                    {Array.from({ length: totalPages }, (_, i) => (
+                                        <PaginationItem key={i}>
+                                            <PaginationLink
+                                                isActive={currentPage === i + 1}
+                                                onClick={() => handlePageChange(i + 1)}
+                                            >
+                                                {i + 1}
+                                            </PaginationLink>
+                                        </PaginationItem>
+                                    ))}
+                                </PaginationContent>
+                                <PaginationNext
+                                    onClick={() => handlePageChange(currentPage + 1)}
+                                    className="mx-2"
+                                    disabled={currentPage === totalPages}
+                                />
+                            </Pagination>
+                        </div>
+
                     </div>
+
                 </div>
 
             </div>

@@ -1212,6 +1212,13 @@ export const PowerAdapterIcon = ({ className = "", color = "#D81F22" }) => (
   </svg>
 );
 
+export const PaginationLeftChevronIcon = ({ className = "", color = "#B8B8B8" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" className={className}>
+    <path d="M11.3335 4.66797L8.66683 8.0013L11.3335 11.3346" stroke="#B8B8B8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M7.3335 4.66797L4.66683 8.0013L7.3335 11.3346" stroke="#B8B8B8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
 // components start with R
 
 export const RouterIcon = ({ className = "", color = "#D81F22" }) => (

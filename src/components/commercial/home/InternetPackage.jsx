@@ -34,7 +34,7 @@ function InternetPackage() {
           </label>
         </form>
         <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-8">
-          {packages.map((data, index) => (
+          {packages.slice(0, 6).map((data, index) => (
             <InternetPackageCard key={index} data={data} />
           ))}
         </div>
