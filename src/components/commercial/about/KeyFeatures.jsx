@@ -12,7 +12,12 @@ const KeyFeatures = ({ data = [], wrapperClass = "" }) => {
           )}
         >
           {data?.map((item, index) => (
-            <FeatureCard svg={item?.icon()} title={item?.title} key={index} />
+            <FeatureCard
+              svg={item?.icon()}
+              title={item?.title}
+              key={index}
+              className="border border-main-600"
+            />
           ))}
         </div>
       </div>

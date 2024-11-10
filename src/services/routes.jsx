@@ -43,6 +43,8 @@ import PackageDetails from "@/pages/commercial/PackageDetails";
 import HowItWorks from "@/pages/commercial/howItWorks/HowItWorks";
 import Affiliate from "@/pages/commercial/Affiliate";
 import PickDropLocation from "@/pages/commercial/PickDropLocation";
+import HowToSetupSim from "@/pages/commercial/HowToSetupSim";
+import HowToConnectPocketWifi from "@/pages/commercial/HowToConnectPocketWifi";
 
 const commercialRoutes = {
   commercialLayout: {
@@ -293,6 +295,20 @@ const commercialRoutes = {
     name: "Pick Drop Location",
     activePath: "pickDropLocation",
     element: <PickDropLocation />,
+  },
+
+  // how to
+  howToSetupSim: {
+    path: "/how-to-setup-sim",
+    name: "How to Setup Sim",
+    activePath: "howToSetupSim",
+    element: <HowToSetupSim />,
+  },
+  howToConnectPocketWifi: {
+    path: "/how-to-connect-pocket-wifi",
+    name: "How to Connect PocketWifi",
+    activePath: "howToConnectPocketWifi",
+    element: <HowToConnectPocketWifi />,
   },
 };
 
