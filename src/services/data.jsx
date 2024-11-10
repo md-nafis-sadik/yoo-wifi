@@ -264,3 +264,22 @@ export const rentServicesData = [
     icon: () => <GlobalRawIcon className="w-12 h-12 md:w-10 md:h-10" />,
   }
 ];
+
+
+export const selfReturnData = [
+  {
+    _id: 1,
+    title: "Login to Yoowifi App",
+    description: "Start by visiting any of our 20+ pickup and return locations. On the app, go to 'My Data', select the device you wish to return, and tap on 'Return Device'.",
+  },
+  {
+    _id: 2,
+    title: "Scan Location QR Code",
+    description: "Next, scan the location QR code provided by the staff.",
+  },
+  {
+    _id: 3,
+    title: "Scan Device QR Code",
+    description: "Scan the QR code located at the back of the device to complete the return.",
+  },
+];
