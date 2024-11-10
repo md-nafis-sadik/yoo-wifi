@@ -30,7 +30,7 @@ const SelfReturn = () => {
                                 </div>
 
                                 <div className='border border-neutral-300 rounded-xl md:rounded-3xl p-4 md:p-6 space-y-4 md:space-y-3 flex-1'>
-                                    <h5 className='text-2xl font-bold text-black-900 leading-[140%]'>
+                                    <h5 className='text-[18px] md:text-2xl font-semibold md:font-bold text-black-900 leading-[140%]'>
                                         {item.title}
                                     </h5>
 

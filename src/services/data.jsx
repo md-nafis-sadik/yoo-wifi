@@ -283,3 +283,21 @@ export const selfReturnData = [
     description: "Scan the QR code located at the back of the device to complete the return.",
   },
 ];
+
+export const topUpData = [
+  {
+    _id: 1,
+    title: "Select Your Device",
+    description: "Open the Yoowifi app, go to My Data, and select the device you want to top up.",
+  },
+  {
+    _id: 2,
+    title: "Choose Your Plan",
+    description: "Click on Add Data, select your desired country and plan, then set the start and end dates.",
+  },
+  {
+    _id: 3,
+    title: "Proceed to Checkout",
+    description: "Confirm your selections and proceed to checkout.",
+  },
+];
