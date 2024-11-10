@@ -8,7 +8,7 @@ import { CloseIcon, FilterIcon, HorizontalLineIcon } from '@/services';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
-const PackageFilterList = () => {
+const PackageFilterList = ({ params }) => {
 
     const { packages } = useSelector(state => state.country);
 
@@ -19,6 +19,18 @@ const PackageFilterList = () => {
     const [selectedPlan, setSelectedPlan] = useState([]);
     const [searchText, setSearchText] = useState('');
     const [isFilterOpen, setIsFilterOpen] = useState(false);
+
+    // Set the selected regions and countries based on the query parameters
+    useEffect(() => {
+        if (params.regionQuery) {
+            setSelectedRegions([params.regionQuery]);
+        }
+        if (params.countryQuery) {
+            setSelectedCountries([params.countryQuery]);
+        }
+    }, [params.regionQuery, params.countryQuery]);
+
+    console.log(selectedRegions);
 
     // Reset the current page whenever the filters change
     useEffect(() => {

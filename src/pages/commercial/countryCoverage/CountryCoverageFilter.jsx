@@ -3,11 +3,22 @@ import StayConnectedEverywhere from '@/components/commercial/countryCoverage/Sta
 import HowItWorks from '@/components/commercial/home/HowItWorks';
 import CustomerTestimonial from '@/components/shared/others/CustomerTestimonial';
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 const CountryCoverageFilter = () => {
+
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+
+    // Get the value of the "region" query parameter
+    const regionQuery = searchParams.get('region');
+    const countryQuery = searchParams.get('country');
+
+    console.log(regionQuery, countryQuery);
+
     return (
         <div className="overflow-hidden w-full">
-            <PackageFilterList />
+            <PackageFilterList params={{ regionQuery, countryQuery }} />
             <CustomerTestimonial />
             <StayConnectedEverywhere />
             <HowItWorks />
