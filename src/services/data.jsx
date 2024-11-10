@@ -2,9 +2,16 @@ import {
   commercialRoutes,
   corporateRoutes,
   DollarLabelIcon,
+  DownloadFillIcon,
   EarthIcon,
+  GlobalElipseIcon,
+  GlobalRawIcon,
   images,
+  MailerBugIcon,
+  MapLocatedIcon,
+  MobileWifiIcon,
   SignalIcon,
+  YoutubeThumbnailIcon,
 } from ".";
 
 // h
@@ -190,3 +197,134 @@ export const footerData = {
     },
   ],
 };
+
+
+export const howItWorksData = [
+  {
+    _id: 1,
+    type: "Local",
+    typeSuffix: "",
+    duration: "3-4 Business day",
+    price: 0,
+  },
+
+  {
+    _id: 2,
+    type: "Express",
+    typeSuffix: "(Order by 10am)",
+    duration: "3-4 Business day",
+    price: 7,
+  }, {
+    _id: 3,
+    type: "Super Express",
+    typeSuffix: "(Order by 10am)",
+    duration: "3-4 Business day",
+    price: 20,
+  },
+  {
+    _id: 4,
+    type: "Standard International",
+    typeSuffix: "",
+    duration: "3-4 Business day",
+    price: 25,
+  },
+]
+
+export const rentWifiData = [
+  {
+    step: "Step-1",
+    title: "Get Yoowifi App",
+    description: "Download Yoowifi App (first Timer only)",
+    buttonText: "Download Yoowifi",
+    icon: () => <DownloadFillIcon className="w-4 h-4 md:w-6 md:h-6" />,
+  },
+  {
+    step: "Step-2",
+    title: "Select Your Plan",
+    description: "On the app, search for your destination country, choose the data size, and set your start and end dates.",
+  },
+  {
+    step: "Step-3",
+    title: "Complete Your Booking",
+    description: "Select your preferred shipping method and proceed to checkout.",
+  }
+];
+
+export const rentServicesData = [
+  {
+    _id: 1,
+    title: "Local return mailer bag",
+    description: "Simply pack the device and its accessories into the prepaid and return mailer bag any SingPost mailbox",
+    icon: () => <MailerBugIcon className="w-12 h-12 md:w-10 md:h-10" />,
+  },
+  {
+    _id: 2,
+    title: "Self-Return",
+    description: "Simply pack the device and its accessories and you may return at any pickup/Return location.",
+    icon: () => <MapLocatedIcon className="w-12 h-12 md:w-10 md:h-10" />,
+  },
+  {
+    _id: 3,
+    title: "International Courier",
+    description: "Contact Local DHL to pickup device if you have a return mailer bag / arrange your own Courier",
+    icon: () => <GlobalRawIcon className="w-12 h-12 md:w-10 md:h-10" />,
+  }
+];
+
+
+export const selfReturnData = [
+  {
+    _id: 1,
+    title: "Login to Yoowifi App",
+    description: "Start by visiting any of our 20+ pickup and return locations. On the app, go to 'My Data', select the device you wish to return, and tap on 'Return Device'.",
+  },
+  {
+    _id: 2,
+    title: "Scan Location QR Code",
+    description: "Next, scan the location QR code provided by the staff.",
+  },
+  {
+    _id: 3,
+    title: "Scan Device QR Code",
+    description: "Scan the QR code located at the back of the device to complete the return.",
+  },
+];
+
+export const topUpData = [
+  {
+    _id: 1,
+    title: "Select Your Device",
+    description: "Open the Yoowifi app, go to My Data, and select the device you want to top up.",
+  },
+  {
+    _id: 2,
+    title: "Choose Your Plan",
+    description: "Click on Add Data, select your desired country and plan, then set the start and end dates.",
+  },
+  {
+    _id: 3,
+    title: "Proceed to Checkout",
+    description: "Confirm your selections and proceed to checkout.",
+  },
+];
+
+export const affiliateServiceData = [
+  {
+    _id: 1,
+    title: "Select Your Device",
+    description: "Open the Yoowifi app, go to My Data, and select the device you want to top up.",
+    icon: () => <GlobalElipseIcon className="w-12 h-12 md:w-10 md:h-10" />
+  },
+  {
+    _id: 2,
+    title: "Choose Your Plan",
+    description: "Click on Add Data, select your desired country and plan, then set the start and end dates.",
+    icon: () => <MobileWifiIcon className="w-12 h-12 md:w-10 md:h-10" />
+  },
+  {
+    _id: 3,
+    title: "Proceed to Checkout",
+    description: "Confirm your selections and proceed to checkout.",
+    icon: () => <YoutubeThumbnailIcon className="w-12 h-12 md:w-10 md:h-10" />
+  },
+];

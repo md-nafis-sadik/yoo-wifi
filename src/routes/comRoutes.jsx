@@ -37,6 +37,9 @@ const {
   countryCoverage,
   countryCoverageFilter,
   howToConnectPocketWifi,
+  packageDetails,
+  howItWorks,
+  affiliate,
   pickDropLocation,
 } = routes || {};
 
@@ -80,6 +83,18 @@ export const comRoutes = [
       {
         path: countryCoverageFilter.path,
         element: countryCoverageFilter.element,
+      },
+      {
+        path: packageDetails.path,
+        element: packageDetails.element,
+      },
+      {
+        path: howItWorks.path,
+        element: howItWorks.element,
+      },
+      {
+        path: affiliate.path,
+        element: affiliate.element,
       },
       {
         path: pickDropLocation.path,
