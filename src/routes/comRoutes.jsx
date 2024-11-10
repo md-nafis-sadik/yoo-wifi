@@ -34,7 +34,7 @@ const {
   simOrderSummery,
   countryCoverage,
   countryCoverageFilter,
-  packageDetails, howItWorks,
+  packageDetails, howItWorks, affiliate,
 } = routes || {};
 
 export const comRoutes = [
@@ -81,6 +81,10 @@ export const comRoutes = [
       {
         path: howItWorks.path,
         element: howItWorks.element,
+      },
+      {
+        path: affiliate.path,
+        element: affiliate.element,
       },
     ],
   },

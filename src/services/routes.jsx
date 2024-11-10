@@ -40,6 +40,7 @@ import CountryCoverage from "@/pages/commercial/countryCoverage/CountryCoverage"
 import CountryCoverageFilter from "@/pages/commercial/countryCoverage/CountryCoverageFilter";
 import PackageDetails from "@/pages/commercial/PackageDetails";
 import HowItWorks from "@/pages/commercial/howItWorks/HowItWorks";
+import Affiliate from "@/pages/commercial/Affiliate";
 
 const commercialRoutes = {
   commercialLayout: {
@@ -268,6 +269,13 @@ const commercialRoutes = {
     name: "How It Works",
     activePath: "howItWorks",
     element: <HowItWorks />,
+  },
+
+  affiliate: {
+    path: "/affiliate",
+    name: "Affiliate",
+    activePath: "affiliate",
+    element: <Affiliate />,
   },
 };
 
