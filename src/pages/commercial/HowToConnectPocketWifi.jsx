@@ -1,5 +1,6 @@
 import HowToConnect from "@/components/commercial/connectPocketWifi/HowToConnect";
 import ReturnDevice from "@/components/commercial/connectPocketWifi/ReturnDevice";
+import TopUpPlan from "@/components/commercial/connectPocketWifi/TopUpPlan";
 import { Fragment } from "react";
 
 const HowToConnectPocketWifi = () => {
@@ -9,6 +10,7 @@ const HowToConnectPocketWifi = () => {
         link={{ to: "/pocketwifi/how-to-connect", text: "Buy Pocket Wifi" }}
       />
       <ReturnDevice />
+      <TopUpPlan />
     </Fragment>
   );
 };
