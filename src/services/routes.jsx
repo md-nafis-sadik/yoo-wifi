@@ -40,6 +40,8 @@ import CountryCoverage from "@/pages/commercial/countryCoverage/CountryCoverage"
 import PocketWifiDetails from "@/pages/commercial/PocketWifiDetails";
 import CountryCoverageFilter from "@/pages/commercial/countryCoverage/CountryCoverageFilter";
 import PickDropLocation from "@/pages/commercial/PickDropLocation";
+import HowToSetupSim from "@/pages/commercial/HowToSetupSim";
+import HowToConnectPocketWifi from "@/pages/commercial/HowToConnectPocketWifi";
 
 const commercialRoutes = {
   commercialLayout: {
@@ -269,6 +271,20 @@ const commercialRoutes = {
     name: "Pick Drop Location",
     activePath: "pickDropLocation",
     element: <PickDropLocation />,
+  },
+
+  // how to
+  howToSetupSim: {
+    path: "/how-to-setup-sim",
+    name: "How to Setup Sim",
+    activePath: "howToSetupSim",
+    element: <HowToSetupSim />,
+  },
+  howToConnectPocketWifi: {
+    path: "/how-to-connect-pocket-wifi",
+    name: "How to Connect PocketWifi",
+    activePath: "howToConnectPocketWifi",
+    element: <HowToConnectPocketWifi />,
   },
 };
 
