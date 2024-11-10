@@ -6,8 +6,8 @@ const initialState = {
     {
       plan: "Hong Kong, Indonesia, Japan, Macau, Malaysia, Philippines, South Korea, Taiwan, Thailand, Vietnam 1 Day",
       data: [
-        { limit: "1GB/day", price: "S$ 1.50" },
-        { limit: "5GB/day", price: "S$ 2.50" },
+        { limit: "1GB/day", price: "fr S$ 1.50" },
+        { limit: "5GB/day", price: "fr S$ 2.50" },
       ],
     },
     {
@@ -22,6 +22,15 @@ const initialState = {
       data: [
         { limit: "1GB/day", price: "S$ 3.90" },
         { limit: "5GB/day", price: "S$ 6.90" },
+      ],
+    },
+  ],
+  restOfTheWorldDayPass: [
+    {
+      plan: "Algeria, Anguilla, Antigua and Barbuda, Argentina, Aruba, Azerbaijan, Bolivia, Brazil, British Virgin Islands, Chile, Colombia, Costa Rica, Dominican Republic, Ecuador, El Salvador, Fiji, French Antilles(Martinique), French Sint Maarten, Grenada, Guadeloupe, Guatemala, Guyana, Haiti, Jamaica, Kyrgyzstan, Maldives, Mongolia, Myanmar, Netherlands Antilles(Curacao), Nicaragua, Panama, Paraguay, Peru, Puerto Rico, Saint Vincent and the Grenadines, Suriname, Tahiti, Tajikistan, the CaymanIslands, Trinidad and Tobago Turks and Caicos Islands, Uruguay, Venezuela",
+      data: [
+        { limit: "1GB/day", price: "fr S$ 1.50" },
+        { limit: "5GB/day", price: "fr S$ 2.50" },
       ],
     },
   ],

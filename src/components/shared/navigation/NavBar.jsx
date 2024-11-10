@@ -19,7 +19,6 @@ import {
 } from "@/services";
 import { MenuIcon } from "lucide-react";
 import { Link } from "react-router-dom";
-import { commercialRoutes, LogoIcon } from "@/services";
 
 function NavBar() {
   const { isScrolled, isWhite, isRedBorder } = useGteNavbarStatus();
