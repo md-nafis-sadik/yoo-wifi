@@ -1,4 +1,5 @@
 import SectionHeader from '@/components/shared/others/SectionHeader';
+import VideoPlayer from '@/components/shared/others/VideoPlayer';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { rentWifiData } from '@/services';
@@ -14,10 +15,10 @@ const RentYooWifi = () => {
                 />
 
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-[76px] mt-10'>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-6'>
+                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-6 order-2 lg:order-1'>
                         {rentWifiData.map(({ step, title, description, buttonText, icon }, index) => (
                             <div key={index} className={cn(
-                                'border border-neutral-300 rounded-xl p-6', index === 0 && 'lg:col-span-2'
+                                'border border-neutral-300 rounded-xl md:rounded-3xl px-4 py-6 md:px-6', index === 0 && 'lg:col-span-2'
                             )}>
                                 <div className='flex items-start justify-between'>
                                     <div>
@@ -44,8 +45,11 @@ const RentYooWifi = () => {
                             </div>
                         ))}
                     </div>
-                    <div>
 
+                    <div className='order-1 lg:order-2'>
+                        <VideoPlayer
+                            videoUrl={'https://www.youtube.com/embed/Vr9WoWXkKeE?si=HhDVOC3LF3MK2DE7'}
+                        />
                     </div>
                 </div>
             </div>
