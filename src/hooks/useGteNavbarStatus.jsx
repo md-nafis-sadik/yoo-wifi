@@ -21,9 +21,16 @@ function useGteNavbarStatus() {
   }, [location]);
 
   return {
+    isHome,
     isScrolled,
-    isWhite: selectedHeroIndex != 2 && !isScrolled && isHome ? true : false,
+    isWhite: selectedHeroIndex == 2 && !isScrolled && isHome ? true : false,
     isRedBorder: selectedHeroIndex != 1 && !isScrolled && isHome ? true : false,
+    isBlack:
+      selectedHeroIndex == 0 || selectedHeroIndex == 1
+        ? isHome || isScrolled
+          ? true
+          : false
+        : false,
   };
 }
 

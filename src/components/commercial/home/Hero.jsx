@@ -11,7 +11,7 @@ import HeroTravel from "./HeroTravel";
 function Hero() {
   const options = { axis: "y", loop: true };
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
-    Autoplay({ delay: 7000 }),
+    Autoplay({ delay: 6000 }),
   ]);
   const dispatch = useDispatch();
   const handleUpdateHeroSelectedIndex = (index) => {
@@ -29,7 +29,7 @@ function Hero() {
           className={cn(
             "flex touch-pinch-zoom  flex-col",
             selectedIndex == 0 &&
-              "h-[886px] sm:h-[640px] md:h-[1165px] lg:h-[920px]",
+              "h-[886px] sm:h-[640px] md:h-[1190px] lg:h-[920px]",
             selectedIndex == 1 &&
               "h-[740px] sm:h-[948px] md:h-[1008px] lg:h-[920px]",
             selectedIndex == 2 &&

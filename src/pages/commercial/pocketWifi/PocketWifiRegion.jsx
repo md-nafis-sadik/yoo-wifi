@@ -66,14 +66,14 @@ function PocketWifiRegion() {
             onChange={handleInputChange}
             defaultValue={cart?.memberId}
           />
-          <PocketWifiCartFooter
-            prevHandler={handlePrev}
-            nextHandler={handleNext}
-            isActive={isActive}
-          />
         </div>
       </div>
       <DiscountDownloadApp />
+      <PocketWifiCartFooter
+        prevHandler={handlePrev}
+        nextHandler={handleNext}
+        isActive={isActive}
+      />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import useEmblaCarouselDotButtons from "@/hooks/useEmblaCarouselDotButtons";
 import { cn } from "@/lib/utils";
+import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 
 function HeroChildSlides({
@@ -7,8 +8,10 @@ function HeroChildSlides({
   selectedClass = "bg-main-750",
   defaultClass = "bg-main-60",
 }) {
-  const options = { align: "start", loop: false, draggable: false };
-  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const options = { align: "start", loop: false, draggable: false, loop: true };
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
+    Autoplay({ delay: 2000 }),
+  ]);
   const { selectedIndex, scrollSnaps } = useEmblaCarouselDotButtons(emblaApi);
   return (
     <div
