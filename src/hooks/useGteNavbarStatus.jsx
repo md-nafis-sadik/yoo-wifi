@@ -1,3 +1,4 @@
+import { commercialRoutes } from "@/services";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
@@ -7,6 +8,9 @@ function useGteNavbarStatus() {
   const [isScrolled, setIsScrolled] = useState(false);
   const { selectedHeroIndex } = useSelector((state) => state.shared);
   const isHome = location?.pathname === "/";
+  const isBannerRoutes = location?.pathname?.includes(
+    commercialRoutes.contact.path
+  );
 
   function handleScroll() {
     setIsScrolled(window.scrollY > 0);
@@ -21,16 +25,17 @@ function useGteNavbarStatus() {
   }, [location]);
 
   return {
-    isHome,
+    isHome: isHome,
     isScrolled,
     isWhite: selectedHeroIndex == 2 && !isScrolled && isHome ? true : false,
     isRedBorder: selectedHeroIndex != 1 && !isScrolled && isHome ? true : false,
     isBlack:
       selectedHeroIndex == 0 || selectedHeroIndex == 1
-        ? isHome || isScrolled
+        ? isHome || isScrolled || isBannerRoutes
           ? true
           : false
         : false,
+    isBannerRoutes,
   };
 }
 

@@ -27,7 +27,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function NavBar() {
-  const { isScrolled, isWhite, isRedBorder, isHome, isBlack } =
+  const { isScrolled, isWhite, isRedBorder, isHome, isBlack, isBannerRoutes } =
     useGteNavbarStatus();
   const [isShowMenu, setIsShowMenu] = useState(false);
   const [showMegaMenu, setShowMegaMenu] = useState(false);
@@ -38,7 +38,7 @@ function NavBar() {
       className={cn(
         "fixed top-0 left-0 w-full z-[999] duration-300",
         isScrolled || showMegaMenu ? "bg-black" : "",
-        !isHome ? "border-b border-neutral-200" : ""
+        !isHome && !isBannerRoutes ? "border-b border-neutral-200" : ""
       )}
     >
       <div className="w-full max-w-[1392px] mx-auto relative">
@@ -259,6 +259,7 @@ function NavBar() {
                     ? "xl:text-secondary-500"
                     : "xl:text-main-600"
                 )}
+                to="/"
               >
                 Corporate
               </Link>
@@ -273,7 +274,7 @@ function NavBar() {
                       "pr-3 pl-10  py-2 border outline-none  bg-transparent rounded-lg",
                       isRedBorder
                         ? "border-neutral-800 placeholder:text-black-600"
-                        : isScrolled || !isHome
+                        : isScrolled || (!isHome && !isBannerRoutes)
                         ? "border-neutral-800 placeholder:text-black-600"
                         : "border-neutral-50 placeholder:text-black-100"
                     )}
@@ -284,7 +285,7 @@ function NavBar() {
                     color={
                       isRedBorder
                         ? "#757575"
-                        : isScrolled || !isHome
+                        : isScrolled || (!isHome && !isBannerRoutes)
                         ? "#757575"
                         : "#FAFAFA"
                     }
