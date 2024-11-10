@@ -111,6 +111,8 @@ const initialState = {
       packPrice: 10,
       validity: 30,
       desc: "GB",
+      coverage:
+        "Algeria, Anguilla, Antigua and Barbuda, Argentina, Aruba, Azerbaijan, Bolivia, Brazil, British Virgin Islands, Chile, Colombia, Costa Rica",
     },
     {
       id: 2,
@@ -356,41 +358,47 @@ const initialState = {
   aboutUs: [
     {
       _id: 1,
-      title: "About Us",
+      title: "Enterprise Solutions",
       icon: () => <EmployeeIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
-      content: "Reliable and secure internet connectivity for businesses On-The-Go",
+      content: "Reliable, secure internet connectivity for businesses on-the-go, with scalable, efficient solutions that ensure seamless integration and smooth operations anywhere",
     },
     {
       _id: 2,
       title: "Partnerships",
       icon: () => <PartnershipIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
-      content: "Explore long lasting partnership opportunities with our services",
+      content: "Our partnerships are built on trust and collaboration, working together to drive innovation, expand opportunities, and create mutual success",
     },
     {
       _id: 3,
       title: "Custom Solutions",
       icon: () => <CustomSolutionIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
-      content: "Designed to meet your needs and requirements with high-speed internet access and cost-effective solution",
+      content: "Discover our custom solutions tailored to meet your unique needs. We work closely with you to design innovative, flexible services that drive success and enhance your business outcomes",
     },
   ],
   services: [
     {
       _id: 1,
-      icon: () => <InternetCoverageIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
+      icon: () => (
+        <InternetCoverageIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />
+      ),
       title: "Global Coverage",
       content:
         "Stay connected across 160 countries, no matter where your journey takes you with Yoowifi's travel wifi services.",
     },
     {
       _id: 2,
-      icon: () => <MultihomingNetwrokIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
+      icon: () => (
+        <MultihomingNetwrokIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />
+      ),
       title: "Multihoming Network",
       content:
-        "We stay connected by partnering with multiple telcos, ensuring uninterrupted service availability in any location.",
+        "Ensure uninterrupted connectivity with our multi-homing network, offering multiple connections for enhanced reliability and performance",
     },
     {
       _id: 3,
-      icon: () => <OrganizationIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
+      icon: () => (
+        <OrganizationIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />
+      ),
       title: "Zero Touch on Demand",
       content:
         "Our cloud-based portal preconfigures and deploys services for zero-touch on-demand connectivity, technical expertise required on-site.",
@@ -400,21 +408,23 @@ const initialState = {
       icon: () => <MoneyIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "Cost Efficient Service",
       content:
-        "Our vSIM tech offers affordable data services by switching SIMs as you cross borders, eliminating roaming charges and reducing telecom expenses.",
+        "Enjoy high-quality services at competitive prices, designed to deliver maximum value while staying cost-effective",
     },
     {
       _id: 5,
       icon: () => <ProjectIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
       title: "Management Portal",
       content:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+        "Our management portal provides a user-friendly platform for seamless control and monitoring, empowering you to manage services efficiently",
     },
     {
       _id: 6,
-      icon: () => <AppCustomizationIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
+      icon: () => (
+        <AppCustomizationIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />
+      ),
       title: "App Customization",
       content:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+        "Customize your app for a personalized experience, tailored to your brand and goals",
     },
   ],
   pickupLocations: [
@@ -502,47 +512,56 @@ const initialState = {
       _id: 3,
       title: "Remote Working",
       content:
-        "Utilizing cloud-managed mobile devices that are easy to deploy, we can offer the required connectivity quickly to maintain business resilience while operating remotely.",
+        "Our remote working solutions ensure uninterrupted connectivity, allowing teams to collaborate efficiently and stay productive, regardless of location.",
     },
     {
       _id: 4,
       title: "Connectivity for Events",
       content:
-        "We provide reliable event internet services, including live streaming and Wi-Fi for guests, with guest analytics to better understand your audience for future events.",
+        "Ensure flawless event experiences with our reliable connectivity solutions, offering fast, secure internet that keeps your event running smoothly from start to finish",
     },
     {
       _id: 5,
       title: "Travel Agency Solutions",
       content:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+        "We partner with travel agencies to provide the best internet solutions, ensuring seamless connectivity for travelers and enhancing the overall travel experience",
     },
     {
       _id: 6,
       title: "Hotels",
       content:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+        "We offer customized internet solutions for hotels, ensuring fast, reliable connectivity that enhances guest satisfaction and supports efficient hotel operations",
     },
   ],
   benefitsData: [
     {
       _id: 1,
       title: "Dedicated Application",
-      content: "Take charge of your connectivity needs with our online management portal, empowering you with control for a smooth and effortless experience.",
-      icon: () => <HandPhoneIcon className="w-[48px] h-[48px] lg:w-[80px] lg:h-[80px]" />
+      content:
+        "Take charge of your connectivity needs with our online management portal, empowering you with control for a smooth and effortless experience.",
+      icon: () => (
+        <HandPhoneIcon className="w-[48px] h-[48px] lg:w-[80px] lg:h-[80px]" />
+      ),
     },
     {
       _id: 2,
       title: "Cost Efficient",
-      content: "Experience affordable and hassle-free connectivity with Yoowifi's vSIM technology, eliminating costly roaming charges for budget-friendly data services.",
-      icon: () => <MoneyIcon className="w-[48px] h-[48px] lg:w-[80px] lg:h-[80px]" />
+      content:
+        "Experience affordable and hassle-free connectivity with Yoowifi's vSIM technology, eliminating costly roaming charges for budget-friendly data services.",
+      icon: () => (
+        <MoneyIcon className="w-[48px] h-[48px] lg:w-[80px] lg:h-[80px]" />
+      ),
     },
     {
       _id: 3,
       title: "Customisable Data Plans",
-      content: "Tailor your data package to meet your specific needs and scale as your business grows.",
-      icon: () => <GlobePhoneIcon className="w-[48px] h-[48px] lg:w-[80px] lg:h-[80px]" />
+      content:
+        "Tailor your data package to meet your specific needs and scale as your business grows.",
+      icon: () => (
+        <GlobePhoneIcon className="w-[48px] h-[48px] lg:w-[80px] lg:h-[80px]" />
+      ),
     },
-  ]
+  ],
 };
 
 const pocketWifiSlice = createSlice({

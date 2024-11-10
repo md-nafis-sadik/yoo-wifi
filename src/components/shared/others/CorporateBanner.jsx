@@ -5,7 +5,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const CorporateBanner = ({
-    pageTitle = "IOT", description = "", featureList = [], path = "#", isShowBannerBottom = true, bannerStyle = 1
+    pageTitle = "IOT", description = "", featureList = [], path = "#", isShowBannerBottom = true, bannerStyle = 1, bannerStyle2ColumnBased = false
 }) => {
 
     const navigate = useNavigate();
@@ -54,24 +54,32 @@ const CorporateBanner = ({
                                 </Button>
                             </div>
                         </div>) : (
-                        <div className='relative z-10 flex flex-col lg:flex-row gap-2 lg:gap-6 items-start lg:items-center px-4'>
-                            <h1 className='text-[28px] xl:text-6xl font-bold leading-[110%] xl:leading-[140%] font-dmsans xl:font-sansPro break-all uppercase flex-1'>
+                        <div className={cn(
+                            'relative z-10 flex items-start px-4',
+                            bannerStyle2ColumnBased ? 'flex-col' : 'flex-col lg:flex-row lg:items-center gap-2 lg:gap-6'
+                        )}>
+                            <h1 className={cn(
+                                'text-[28px] xl:text-6xl font-bold font-dmsans xl:font-sansPro break-all uppercase flex-1',
+                                bannerStyle2ColumnBased ? "leading-[104%]" : "leading-[110%] xl:leading-[140%]"
+                            )}>
                                 {pageTitle}
                             </h1>
-
-                            <div className='space-y-3 lg:space-y-6 flex-1'>
-                                <p className='text-sm lg:text-[18px] leading-[140%] text-white'>
-                                    {description}
-                                </p>
-
-                                <Button
-                                    variant='secondary'
-                                    className="!text-base hover:!bg-secondary-400 rounded-xl lg:px-[87.5px] lg:py-4 px-6 py-[12.5px] !font-semibold"
-                                    navigate={`#`}
-                                >
-                                    Contact Us
-                                </Button>
+                            {bannerStyle2ColumnBased ? (<div>
+                                <DescriptionButton
+                                    descriptionCls='lg:text-2xl mt-2 md:mt-4 w-full md:max-w-[408px] lg:max-w-[608px]'
+                                    buttonCls='mt-3 md:mt-10 !w-[135px] !h-11 md:!w-[167px] md:!h-[51px]'
+                                    description={description}
+                                />
                             </div>
+                            ) : (
+                                <div className='space-y-3 lg:space-y-6 flex-1'>
+                                    <DescriptionButton
+                                        descriptionCls='lg:text-[18px]'
+                                        buttonCls='!w-[135px] !h-11 md:!w-[262px] md:!h-[52px]'
+                                        description={description}
+                                    />
+                                </div>
+                            )}
                         </div>
                     )}
                 </div>
@@ -119,3 +127,24 @@ const CorporateBanner = ({
 };
 
 export default CorporateBanner;
+
+// reusable components
+const DescriptionButton = ({ descriptionCls, buttonCls, description }) => {
+    return (
+        <>
+            <p className={cn(
+                'text-sm leading-[140%] text-white', descriptionCls
+            )}>
+                {description}
+            </p>
+
+            <Button
+                variant='secondary'
+                className={`"!text-base hover:!bg-secondary-400 rounded-xl !font-semibold" ${buttonCls}`}
+                navigate={`/contact`}
+            >
+                Contact Us
+            </Button>
+        </>
+    )
+}

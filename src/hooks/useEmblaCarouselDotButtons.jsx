@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 
-const useEmblaCarouselDotButtons = (emblaApi) => {
+const useEmblaCarouselDotButtons = (emblaApi, setter = () => {}) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
 
@@ -18,6 +18,7 @@ const useEmblaCarouselDotButtons = (emblaApi) => {
 
   const onSelect = useCallback((emblaApi) => {
     setSelectedIndex(emblaApi.selectedScrollSnap());
+    setter(emblaApi.selectedScrollSnap());
   }, []);
 
   useEffect(() => {

@@ -23,12 +23,11 @@ const SupportAndFAQ = ({ data }) => {
 
   const handleOpenChange = (value) => {
     setOpenItem(value === openItem ? null : value);
-    console.log(value);
   };
 
   return (
-    <div className="px-4 min-[1320px]:px-0 sec_common_80">
-      <div className="sec_common_60 container3X rounded-2xl md:rounded-3xl bg-[#ececec] px-3 md:px-6 min-[1320px]:px-0">
+    <div className="px-4 2xl:px-0 sec_common_80">
+      <div className="sec_common_60 pb-3 md:pb-10 lg:pb-20 container3X rounded-2xl md:rounded-3xl bg-[#ececec] px-3 md:px-6 min-[1320px]:px-0">
         <SectionHeader
           heading={"Support & FAQ"}
           subHeading={
@@ -48,13 +47,19 @@ const SupportAndFAQ = ({ data }) => {
             {firstHalf?.map((faq, index) => (
               <AccordionItem
                 value={`item-${index + 1}`}
-                className="h-fit bg-white"
+                className="h-fit bg-white px-4 md:px-6 py-4"
                 key={index}
               >
-                <AccordionTrigger className="text-start px-4 md:px-6 py-4 text-black-900">
+                <AccordionTrigger className="text-start text-black-900 text-base md:text-lg font-semibold !leading-[1.2] md:!leading-[1.4]">
                   {faq?.question}
                 </AccordionTrigger>
-                <AccordionContent>{faq?.answer}</AccordionContent>
+                <AccordionContent
+                  className={
+                    "text-xs md:text-lg font-normal !leading-[1.2] md:!leading-[1.4] text-black-600"
+                  }
+                >
+                  {faq?.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
@@ -68,13 +73,19 @@ const SupportAndFAQ = ({ data }) => {
             {secondHalf?.map((faq, index) => (
               <AccordionItem
                 value={`item-${index + 1 + firstHalf.length}`}
-                className="h-fit bg-white"
+                className="h-fit bg-white px-4 md:px-6 py-4"
                 key={index}
               >
-                <AccordionTrigger className="text-start px-4 md:px-6 py-4 text-black-900">
+                <AccordionTrigger className="text-start text-black-900 text-base md:text-lg font-semibold !leading-[1.2] md:!leading-[1.4]">
                   {faq?.question}
                 </AccordionTrigger>
-                <AccordionContent>{faq?.answer}</AccordionContent>
+                <AccordionContent
+                  className={
+                    "text-xs md:text-lg font-normal !leading-[1.2] md:!leading-[1.4] text-black-600"
+                  }
+                >
+                  {faq?.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

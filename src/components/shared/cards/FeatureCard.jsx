@@ -4,7 +4,7 @@ function FeatureCard({ icon, svg = null, title = "", ...props }) {
   return (
     <div
       className={cn(
-        "py-5 sm:py-6 md:py-8 px-4 bg-white rounded-2xl flex flex-col items-center justify-center gap-2 sm:gap-4 md:gap-6"
+        "py-5 sm:py-6 md:py-8 px-4 bg-white rounded-2xl flex flex-col items-center justify-center gap-2 sm:gap-4 md:gap-6 border border-main-600"
       )}
       {...props}
     >

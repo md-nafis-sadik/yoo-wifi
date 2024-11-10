@@ -4,9 +4,11 @@ import Footer from "../shared/navigation/Footer";
 import NavBar from "../shared/navigation/NavBar";
 import DevFAB from "../shared/others/DevFAB";
 import DownloadYoowifi from "../shared/others/DownloadYoowifi";
+import useScrollToTop from "@/hooks/useScrollToTop";
 
 function CommercialLayout() {
   useSetLocalData("commercialLayout");
+  useScrollToTop();
 
   return (
     <main>

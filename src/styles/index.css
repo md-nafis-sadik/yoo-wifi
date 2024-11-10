@@ -19,6 +19,10 @@
     @apply w-full max-w-[1176px] mx-auto;
   }
 
+  .menuItem {
+    @apply relative inline-block w-full p-3 rounded-lg xl:rounded-none hover:bg-main-600 xl:w-auto xl:max-w-none xl:p-0 xl:hover:text-inherit xl:hover:bg-transparent hover:text-white xl:px-2 after:absolute after:content-[''] xl:after:h-0.5 xl:after:w-full after:scale-x-0 after:left-0 after:-bottom-1 hover:after:scale-x-100 after:duration-300 after:origin-center duration-300;
+  }
+
   .label {
     @apply text-base text-black-700 font-medium leading-[120%];
   }

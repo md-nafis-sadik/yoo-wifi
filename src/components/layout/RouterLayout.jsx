@@ -16,7 +16,7 @@ function RouterLayout() {
   return (
     <main>
       <NavBar />
-      <div className="px-4 md:px-10 lg:px-16  relative">
+      <div className="px-4 md:px-10 lg:px-16 pt-24 md:pt-28  relative">
         <div className="containerX">
           <div className="flex flex-col md:flex-row gap-6 sm:gap-10 md:gap-15 pt-6 sm:pt-8 md:pt-10 pb-40 lg:pb-28">
             <div className="w-full max-w-max">

@@ -16,7 +16,7 @@ function Hero() {
   const [activeColor, setActiveColor] = useState(product?.colors[0]);
   const navigate = useNavigate();
   return (
-    <section className="pt-10 px-4 sm:px-8">
+    <section className="pt-28 md:pt-32 px-4 sm:px-8">
       <div className="containerX">
         <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 md:gap-10 lg:gap-15">
           <div className="w-full lg:max-w-[532px]">

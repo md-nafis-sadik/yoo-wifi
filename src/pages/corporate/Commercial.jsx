@@ -4,7 +4,7 @@ import Benefits from '@/components/corporate/commercial/Benefits';
 import CollaborateMarquee from '@/components/shared/CollaborateMarquee';
 import CorporateBanner from '@/components/shared/others/CorporateBanner';
 import CustomerTestimonial from '@/components/shared/others/CustomerTestimonial';
-import React, { Fragment } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 
 const Commercial = () => {
@@ -12,7 +12,7 @@ const Commercial = () => {
     const { contact, socialLinks } = useSelector((state) => state.contact);
 
     return (
-        <Fragment>
+        <div className="overflow-hidden w-full">
             <CorporateBanner
                 isShowBannerBottom={false}
                 pageTitle="Commercial"
@@ -27,7 +27,7 @@ const Commercial = () => {
                 data={contact}
                 socialLinks={socialLinks}
             />
-        </Fragment>
+        </div>
     );
 };
 

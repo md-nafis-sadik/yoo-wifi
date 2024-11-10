@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const ContactUs = () => {
 
+  const navigate = useNavigate();
   const { aboutUs } = useSelector((state) => state.pocketWifi);
 
   return (
@@ -29,7 +31,7 @@ const ContactUs = () => {
         </div>
 
         <div className="mt-6 lg:mt-10 flex justify-center">
-          <Button size="lg">
+          <Button size="lg" onClick={() => navigate(`/contact`)}>
             Contact Us
           </Button>
         </div>
