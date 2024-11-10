@@ -47,6 +47,8 @@ function NavBar() {
             "w-full duration-300 flex items-center lg:gap-10 2xl:gap-15 justify-between px-4 py-2 sm:py-4",
             isBlack || isScrolled
               ? "text-white"
+              : isBannerRoutes
+              ? "text-white"
               : "text-white xl:text-black-700"
           )}
         >
@@ -54,7 +56,7 @@ function NavBar() {
             <Link to={commercialRoutes.home.path}>
               <LogoIcon
                 className="max-w-[100px] sm:max-w-[112px]"
-                color={isBlack ? "#fff" : "#E41F26"}
+                color={isBlack || isBannerRoutes ? "#fff" : "#E41F26"}
               />
             </Link>
             <div className="w-full max-w-[200px] xs:max-w-full  items-center justify-end xs:gap-1 flex xl:hidden">
@@ -239,9 +241,9 @@ function NavBar() {
                     <span>Others</span>
                     <ArrowDownIcon
                       pathClass={
-                        isWhite && !isScrolled
+                        isWhite && !isScrolled && !isBannerRoutes
                           ? "fill-neutral-black"
-                          : isHome || isScrolled
+                          : isHome || isScrolled || isBannerRoutes
                           ? "fill-white"
                           : "fill-white xl:fill-neutral-black"
                       }
@@ -253,9 +255,9 @@ function NavBar() {
               <Link
                 className={cn(
                   "menuItem p-3 xl:p-0 text-white ",
-                  isRedBorder
+                  isRedBorder && !isBannerRoutes
                     ? "xl:text-main-600"
-                    : isHome
+                    : isHome || isBannerRoutes
                     ? "xl:text-secondary-500"
                     : "xl:text-main-600"
                 )}
@@ -310,14 +312,16 @@ function NavBar() {
                 <Button
                   className={cn(
                     "px-6 md:py-3 rounded-[10px] w-full max-w-[320px] xl:w-auto",
-                    !isRedBorder && !isScrolled && isHome
+                    (!isRedBorder && !isScrolled && isHome) || isBannerRoutes
                       ? "bg-main-600 text-white xl:bg-white xl:text-black-900"
                       : "bg-main-600 text-white"
                   )}
                 >
                   <CellphoneIcon
                     color={
-                      !isRedBorder && !isScrolled && isHome ? "#212121" : "#fff"
+                      (!isRedBorder && !isScrolled && isHome) || isBannerRoutes
+                        ? "#212121"
+                        : "#fff"
                     }
                     className="w-5 h-5 shrink-0"
                   />

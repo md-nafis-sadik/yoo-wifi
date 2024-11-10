@@ -8,10 +8,12 @@ function useGteNavbarStatus() {
   const [isScrolled, setIsScrolled] = useState(false);
   const { selectedHeroIndex } = useSelector((state) => state.shared);
   const isHome = location?.pathname === "/";
-  const isBannerRoutes = location?.pathname?.includes(
-    commercialRoutes.contact.path
-  );
-
+  const bannerPaths = [
+    commercialRoutes.contact.path,
+    commercialRoutes.aboutUs.path,
+    commercialRoutes.countryCoverage.path
+  ];
+  const isBannerRoutes = bannerPaths?.includes(location?.pathname);
   function handleScroll() {
     setIsScrolled(window.scrollY > 0);
   }
