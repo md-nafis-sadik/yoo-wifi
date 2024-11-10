@@ -3,10 +3,12 @@ import {
   Communications2Icon,
   ConnectionsIcon,
   CustomerServiceIcon,
+  EventIcon,
   GlobeIcon,
   images,
   InternetAccessIcon,
   OrganizationIcon,
+  SettingsCustomnIcon,
   WifiSecondaryIcon,
 } from "@/services";
 import { createSlice } from "@reduxjs/toolkit";
@@ -21,51 +23,36 @@ const initialState = {
   whoWeAre: {
     title: "Who We Are",
     description:
-      "UR Communications Pte Ltd, operating under the renowned brand name Yoowifi, introduces an advanced solution for effortless global connectivity via its intuitive mobile application. With a commitment to enriching travel journeys and fostering global communication, Yoowifi App delivers unmatched convenience, dependability, and cost-effectiveness. \n\nOur aspiration is to establish a world where telecom experts and travelers can effortlessly stay linked across countries, free from concerns about excessive data roaming fees. Our mission revolves around building a company that offers accessible, trustworthy, and boundary-free mobile services, empowering individuals to stay connected with their dear ones while exploring diverse corners of the globe.",
+      "UR Communications Pte Ltd, operating under the renowned brand name Yoowifi, introduces an advanced solution for effortless global connectivity via its intuitive mobile application. With a commitment to enriching travel journeys and fostering global communication, Yoowifi App delivers unmatched convenience, dependability, and cost-effectiveness. \n\nOur aspiration is to establish a world where telecom experts and travelers can effortlessly stay linked across countries, free from concerns about excessive data roaming fees.",
     image: images.whoWeAre1,
   },
   companyMission: {
     title: "Our Company Mission",
     mission: {
-      title: "Our journey of innovation and growth",
+      title: "Stay Connected Anytime, Anywhere",
       year: "2001",
       description:
-        "UR Communications Pte Ltd, operating under the renowned brand name Yoowifi, introduces an advanced solution for effortless global connectivity via its intuitive mobile application. With a commitment to enriching travel journeys and fostering global communication, Yoowifi App delivers unmatched convenience, dependability, and cost-effectiveness",
+        "Our mission is to deliver accessible, reliable, and boundary-free data services. We strive to empower individuals to stay seamlessly connected with their loved ones while exploring new cultures, experiencing adventures, and navigating diverse corners of the globe, ensuring a seamless and enriching connectivity experience.",
       image: images.companyMission1,
     },
   },
   awardsAndAchievements: {
     details: [
       {
-        year: "2020",
-        title: "Royal Gold Medal",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        year: "2024",
+        title: "Most Innovative Travel Wi-Fi Solutions Company 2024",
+        description: "Awarded by AI Business Excellence Awards",
       },
       {
-        year: "2021",
-        title: "Royal Gold Medal",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      },
-      {
-        year: "2022",
-        title: "Royal Gold Medal",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      },
-      {
-        year: "2023",
-        title: "Royal Gold Medal",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        year: "2024",
+        title: "Singapore's Fastest Growing Companies 2024",
+        description: "Awarded by The Straits Times & Statista",
       },
     ],
     images: [
       images.awards1,
-      images.whoWeAre1,
       images.companyMission1,
-      images.whoWeAre1,
+      // images.whoWeAre1,
     ],
   },
   features: [
@@ -97,9 +84,9 @@ const initialState = {
       icon: () => (
         <InternetAccessIcon className="h-10 w-10 md:h-[60px] md:w-[60px]" />
       ),
-      title: "Internet Access",
+      title: "Management Portal",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been .",
+        "Our management portal provides a user-friendly platform for seamless control and monitoring, empowering you to manage services efficiently.",
     },
     {
       icon: () => (
@@ -107,21 +94,21 @@ const initialState = {
       ),
       title: "Mobile general solutions",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ",
+        "Our mobile solutions offer reliable, flexible, and cutting-edge services to keep you connected anytime, anywhere, tailored for both personal and business use.",
     },
     {
       icon: () => (
-        <OrganizationIcon className="h-10 w-10 md:h-[60px] md:w-[60px]" />
+        <SettingsCustomnIcon className="h-10 w-10 md:h-[60px] md:w-[60px]" />
       ),
       title: "Custom solutions",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ",
+        "Discover our custom solutions tailored to meet your unique needs. We work closely with you to design innovative, flexible services that drive success and enhance your business outcomes.",
     },
     {
-      icon: () => <BankIcon className="h-10 w-10 md:h-[60px] md:w-[60px]" />,
+      icon: () => <EventIcon className="h-10 w-10 md:h-[60px] md:w-[60px]" />,
       title: "Events & Roadshows",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ",
+        "Join us at our exciting events and roadshows, where we present innovative solutions, engage with customers, and shape the future of seamless communication.",
     },
   ],
   personal: [
@@ -129,21 +116,21 @@ const initialState = {
       _id: 1,
       title: "Global Coverage",
       description:
-        "Hassle-free global connectivity in over 160 countries! Travelers can choose from a variety of connections. Includes portable hotspot, eSIM, and SIM card",
+        "Stay connected across 160 countries, no matter where your journey takes you with Yoowifi's travel wifi services.",
       image: images.person1,
     },
     {
       _id: 2,
       title: "Flexible Data Plans",
       description:
-        "Range of flexible data plans to suit every traveler's needs. Whether you need high-speed data for streaming and video calls or a more economical option for casual browsing.",
+        "Choose from a variety of flexible data options, allowing you to select the perfect plan based on your usage needs.",
       image: images.person2,
     },
     {
       _id: 3,
       title: "Hassle-Free Delivery",
       description:
-        "Whether you're planning in advance or need last-minute connectivity, we've got you covered! Get your device delivered to your doorstep or choose convinient pickup at selected locations.",
+        "Enjoy hassle-free delivery with fast, reliable service that gets your order to you with ease and convenience.",
       image: images.person3,
     },
   ],
@@ -152,21 +139,21 @@ const initialState = {
       _id: 1,
       title: "Zero Touch On Demand",
       description:
-        "Hassle-free global connectivity in over 160 countries! Travelers can choose from a variety of connections. Includes portable hotspot, eSIM, and SIM card",
+        "Enjoy seamless, effortless zero-touch, on-demand service tailored to your needs.",
       image: images.tour,
     },
     {
       _id: 2,
       title: "Flexible Data Plans",
       description:
-        "Range of flexible data plans to suit every traveler's needs. Whether you need high-speed data for streaming and video calls or a more economical option for casual browsing.",
+        "Flexible data plans for businesses, designed to fit your company's unique needs and usage.",
       image: images.dataPlan,
     },
     {
       _id: 3,
       title: "Multi-homing network",
       description:
-        "Whether you're planning in advance or need last-minute connectivity, we've got you covered! Get your device delivered to your doorstep or choose convinient pickup at selected locations.",
+        "Ensure uninterrupted connectivity with our multi-homing network, offering multiple connections for enhanced reliability and performance.",
       image: images.network,
     },
   ],
