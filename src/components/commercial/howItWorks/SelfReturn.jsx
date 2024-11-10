@@ -3,8 +3,12 @@ import VideoPlayer from '@/components/shared/others/VideoPlayer';
 import { Button } from '@/components/ui/button';
 import { selfReturnData } from '@/services';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SelfReturn = () => {
+
+    const navigate = useNavigate();
+
     return (
         <section className='containerX'>
             <div className='sec_common_60'>
@@ -13,35 +17,35 @@ const SelfReturn = () => {
                     subHeading="With Yoowifi, easily pick up your device at any designated location and return it at one of 20+ drop-off points across the island. Enjoy a hassle-free experience and stay connected wherever your travels take you!"
                 />
 
-                <div className='mt-10 grid grid-cols-2 gap-[76px]'>
+                <div className='mt-4 md:mt-10 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-10 xl:gap-[76px]'>
                     <VideoPlayer
                         videoUrl={'https://www.youtube.com/embed/Vr9WoWXkKeE?si=HhDVOC3LF3MK2DE7'}
                     />
 
                     <div>
-                        <div className='space-y-6'>
-                            {selfReturnData.map((item, index) => (<article key={index} className='flex items-center gap-8'>
+                        <div className='space-y-3 md:space-y-6'>
+                            {selfReturnData.map((item, index) => (<article key={index} className='flex items-center gap-2 md:gap-4 lg:gap-8'>
                                 <div className='shirnk-0 w-10 h-10 rounded-[100px] border border-neutral-300 flex items-center justify-center font-semibold text-main-600'>
                                     {index + 1}
                                 </div>
 
-                                <div className='border border-neutral-300 rounded-3xl p-6 space-y-3 flex-1'>
+                                <div className='border border-neutral-300 rounded-xl md:rounded-3xl p-4 md:p-6 space-y-4 md:space-y-3 flex-1'>
                                     <h5 className='text-2xl font-bold text-black-900 leading-[140%]'>
                                         {item.title}
                                     </h5>
 
-                                    <p className='text-black-600 text-[18px] leading-[140%]'>
+                                    <p className='text-black-600 text-sm md:text-[18px] leading-[140%]'>
                                         {item.description}
                                     </p>
                                 </div>
                             </article>))}
                         </div>
 
-                        <div className='mt-8 flex gap-x-4 ml-[72px]'>
-                            <Button className="!h-[52px] flex-1">
+                        <div className='mt-4 md:mt-8 flex gap-x-4 md:ml-[72px]'>
+                            <Button className="!h-11 md:!h-[52px] flex-1">
                                 Drop Off Locations
                             </Button>
-                            <Button variant="secondary" className="!h-[52px] flex-1">
+                            <Button variant="secondary" className="!h-11 md:!h-[52px] flex-1" onClick={() => navigate('/contact')}>
                                 Contact Us
                             </Button>
                         </div>
