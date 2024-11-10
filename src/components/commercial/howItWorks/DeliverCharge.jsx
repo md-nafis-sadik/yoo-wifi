@@ -16,7 +16,7 @@ const DeliverCharge = () => {
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mt-4 md:mt-10'>
                     {howItWorksData.map((item, index) => (<article
                         key={index}
-                        className='md:p-6 p-4 border border-neutral-300 rounded-3xl md:min-h-[200px] flex justify-between flex-row md:flex-col items-end md:items-start'
+                        className='md:p-6 p-4 border border-neutral-300 rounded-xl md:rounded-3xl md:min-h-[200px] flex justify-between flex-row md:flex-col items-end md:items-start'
                     >
                         <div>
                             <p className='text-base md:text-[18px] font-semibold leading-[140%] text-black-900'>

@@ -2,6 +2,7 @@ import {
   commercialRoutes,
   corporateRoutes,
   DollarLabelIcon,
+  DownloadFillIcon,
   EarthIcon,
   images,
   SignalIcon,
@@ -219,3 +220,23 @@ export const howItWorksData = [
     price: 25,
   },
 ]
+
+export const rentWifiData = [
+  {
+    step: "Step-1",
+    title: "Get Yoowifi App",
+    description: "Download Yoowifi App (first Timer only)",
+    buttonText: "Download Yoowifi",
+    icon: () => <DownloadFillIcon className="w-4 h-4 md:w-6 md:h-6" />,
+  },
+  {
+    step: "Step-2",
+    title: "Select Your Plan",
+    description: "On the app, search for your destination country, choose the data size, and set your start and end dates.",
+  },
+  {
+    step: "Step-3",
+    title: "Complete Your Booking",
+    description: "Select your preferred shipping method and proceed to checkout.",
+  }
+];
