@@ -11,8 +11,10 @@ import {
 } from "../ui/accordion";
 
 function RouterLayout() {
+
   useSetLocalData("router");
   const { product } = useSelector((state) => state.router);
+
   return (
     <main>
       <NavBar />
@@ -27,34 +29,14 @@ function RouterLayout() {
                   className="flex flex-col gap-4"
                   collapsible
                 >
-                  <AccordionItem value="item-1">
-                    <AccordionTrigger>Information</AccordionTrigger>
+                  {product.tabs.map((tab, index) => (<AccordionItem value={`item-${index + 1}`} key={index}>
+                    <AccordionTrigger>
+                      {tab.title}
+                    </AccordionTrigger>
                     <AccordionContent>
-                      Enjoy High-Speed Internet Access Immediate Connect up to B
-                      Devices 4G Internet Speed Up to 12 hours of device battery
-                      Ycxywifi 24/7 Customer Support Cornes Pocket Wifi Device,
-                      Charging Cable, Pouch Extend the days or add plans anytime
-                      https-/&oowifi
+                      {tab.content}
                     </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="item-2">
-                    <AccordionTrigger>Countries Covered</AccordionTrigger>
-                    <AccordionContent>
-                      Algeria, Anguilla, Antigua and Barbuda, Argentina, Aruba,
-                      Azerbaijan, Bolivia, Brazil, British Virgin Islands,
-                      Chile, Colombia, Costa Rica
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="item-3">
-                    <AccordionTrigger>Terms & Conditions</AccordionTrigger>
-                    <AccordionContent>
-                      50GB global data is applicable to 90 countries. Speed of
-                      service is dependent on the mobile network partner. For
-                      order cancellation, a charge of 10% of the order will
-                      apply. General terms and conditions apply. Yoowifi
-                      reserved the rights to make changes anytime.
-                    </AccordionContent>
-                  </AccordionItem>
+                  </AccordionItem>))}
                 </Accordion>
               </div>
             </div>
