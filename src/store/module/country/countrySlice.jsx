@@ -112,6 +112,65 @@ const initialState = {
             region: 'europe',
             type: "pocket-wifi",
             plan: "basic-daypass",
+            details: [
+                {
+                    title: "Description",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+                {
+                    title: "Information",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+                {
+                    title: "Terms & Conditions",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+            ]
         },
         {
             _id: 2,
@@ -123,6 +182,65 @@ const initialState = {
             country: "italy",
             type: "pocket-wifi",
             plan: "5gb-7days",
+            details: [
+                {
+                    title: "Description",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+                {
+                    title: "Information",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+                {
+                    title: "Terms & Conditions",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+            ]
         },
         {
             _id: 3,
@@ -134,6 +252,65 @@ const initialState = {
             country: "france",
             type: "pocket-wifi",
             plan: "20gb-20days",
+            details: [
+                {
+                    title: "Description",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+                {
+                    title: "Information",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+                {
+                    title: "Terms & Conditions",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+            ]
         },
         {
             _id: 4,
@@ -145,6 +322,65 @@ const initialState = {
             country: "greece",
             type: "pocket-wifi",
             plan: "basic-daypass",
+            details: [
+                {
+                    title: "Description",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+                {
+                    title: "Information",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+                {
+                    title: "Terms & Conditions",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+            ]
         },
         {
             _id: 5,
@@ -156,6 +392,65 @@ const initialState = {
             country: "ireland",
             type: "pocket-wifi",
             plan: "5gb-7days",
+            details: [
+                {
+                    title: "Description",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+                {
+                    title: "Information",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+                {
+                    title: "Terms & Conditions",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+            ]
         },
         {
             _id: 6,
@@ -167,6 +462,65 @@ const initialState = {
             country: "germany",
             type: "pocket-wifi",
             plan: "20gb-20days",
+            details: [
+                {
+                    title: "Description",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+                {
+                    title: "Information",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+                {
+                    title: "Terms & Conditions",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+            ]
         },
     ]
 };

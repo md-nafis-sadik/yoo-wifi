@@ -30,8 +30,6 @@ const PackageFilterList = ({ params }) => {
         }
     }, [params.regionQuery, params.countryQuery]);
 
-    console.log(selectedRegions);
-
     // Reset the current page whenever the filters change
     useEffect(() => {
         setCurrentPage(1);

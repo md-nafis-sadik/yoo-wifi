@@ -14,8 +14,6 @@ const CountryCoverageFilter = () => {
     const regionQuery = searchParams.get('region');
     const countryQuery = searchParams.get('country');
 
-    console.log(regionQuery, countryQuery);
-
     return (
         <div className="overflow-hidden w-full">
             <PackageFilterList params={{ regionQuery, countryQuery }} />
