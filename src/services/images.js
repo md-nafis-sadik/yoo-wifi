@@ -60,6 +60,14 @@ import sim1 from "@/assets/images/sim/sim-1.webp";
 import tour from "@/assets/images/tour.webp";
 import whatsapp from "@/assets/images/whatsapp.webp";
 import whoWeAre1 from "@/assets/images/who-we-are-1.webp";
+import country1 from "@/assets/images/country-coverage/country-1.webp";
+import country2 from "@/assets/images/country-coverage/country-2.webp";
+import country3 from "@/assets/images/country-coverage/country-3.webp";
+import country4 from "@/assets/images/country-coverage/country-4.webp";
+import country5 from "@/assets/images/country-coverage/country-5.webp";
+import country6 from "@/assets/images/country-coverage/country-6.webp";
+import rgbPocketWifi from "@/assets/images/rgb-pocket-wifi.webp";
+import cloud from "@/assets/images/cloud.png";
 
 export {
   BelgiumFlag,
@@ -124,4 +132,12 @@ export {
   tour,
   whatsapp,
   whoWeAre1,
+  country1,
+  country2,
+  country3,
+  country4,
+  country5,
+  country6,
+  rgbPocketWifi,
+  cloud,
 };

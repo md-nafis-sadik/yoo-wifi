@@ -34,6 +34,7 @@ const {
   simSelfPickup,
   simOrderSummery,
   countryCoverage,
+  countryCoverageFilter,
 } = routes || {};
 
 export const comRoutes = [
@@ -68,6 +69,14 @@ export const comRoutes = [
       {
         path: pocketWifiDetails.path,
         element: pocketWifiDetails.element,
+      },
+      {
+        path: countryCoverage.path,
+        element: countryCoverage.element,
+      },
+      {
+        path: countryCoverageFilter.path,
+        element: countryCoverageFilter.element,
       },
     ],
   },
@@ -172,9 +181,5 @@ export const comRoutes = [
         element: simOrderSummery.element,
       },
     ],
-  },
-  {
-    path: countryCoverage.path,
-    element: countryCoverage.element,
   },
 ];

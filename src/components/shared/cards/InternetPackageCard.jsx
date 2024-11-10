@@ -1,13 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { images } from "@/services";
+import { cn } from "@/lib/utils";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useNavigate } from "react-router-dom";
 
-const InternetPackageCard = () => {
+const InternetPackageCard = ({ data, type = 1 }) => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="bg-white rounded-[8px] md:rounded-3xl p-2 md:p-4 ring-[2px] ring-neutral-200 hover:ring-0 shadow-none hover:shadow-card-primary transition_common">
       <div className="w-full aspect-[1.06/1] relative overflow-hidden rounded-[4px] md:rounded-2xl">
         <LazyLoadImage
-          src={images.middleEast}
+          src={data?.image}
           alt={"middel east"}
           height={1000}
           width={2000}
@@ -16,7 +20,7 @@ const InternetPackageCard = () => {
       </div>
 
       <h2 className="text-base md:text-[28px] !leading-[1.1] font-bold text-center mt-2 md:mt-4">
-        Middle East
+        {type === 1 ? "Middle East" : data?.name}
       </h2>
 
       <hr className="my-1 md:my-4 h-[1px] bg-neutral-100" />
@@ -27,15 +31,19 @@ const InternetPackageCard = () => {
             From
           </p>
           <h2 className="text-[10px] sm:text-sm md:text-2xl lg:text-[28px] text-black-700 font-semibold md:font-bold !leading-[1.2] md:!leading-[1.1]">
-            SGD 25.49
+            SGD {data?.priceStart}
           </h2>
         </div>
         <Button
-          className={
-            "!px-2 !py-[5px] md:!px-6 md:!py-4 text-[10px] md:text-base !leading-[1.2] rounded-sm md:rounded-xl"
-          }
+          className={cn(
+            type === 1 ? "!px-2 !py-[5px] md:!px-6 md:!py-4" : "text-base !px-2 !py-1 md:!px-6 md:!py-4",
+            "text-[10px] md:text-base !leading-[1.2] rounded-sm md:rounded-xl"
+          )}
+          onClick={() => navigate(
+            type === 1 ? `/country-coverage` : `/country-coverage/details/${data?._id}`
+          )}
         >
-          Find Out More
+          {type === 1 ? "Find Out More" : "See Details"}
         </Button>
       </div>
     </div>
