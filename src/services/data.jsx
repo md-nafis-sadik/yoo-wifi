@@ -4,7 +4,10 @@ import {
   DollarLabelIcon,
   DownloadFillIcon,
   EarthIcon,
+  GlobalRawIcon,
   images,
+  MailerBugIcon,
+  MapLocatedIcon,
   SignalIcon,
 } from ".";
 
@@ -238,5 +241,26 @@ export const rentWifiData = [
     step: "Step-3",
     title: "Complete Your Booking",
     description: "Select your preferred shipping method and proceed to checkout.",
+  }
+];
+
+export const rentServicesData = [
+  {
+    _id: 1,
+    title: "Local return mailer bag",
+    description: "Simply pack the device and its accessories into the prepaid and return mailer bag any SingPost mailbox",
+    icon: () => <MailerBugIcon className="w-12 h-12 md:w-10 md:h-10" />,
+  },
+  {
+    _id: 2,
+    title: "Self-Return",
+    description: "Simply pack the device and its accessories and you may return at any pickup/Return location.",
+    icon: () => <MapLocatedIcon className="w-12 h-12 md:w-10 md:h-10" />,
+  },
+  {
+    _id: 3,
+    title: "International Courier",
+    description: "Contact Local DHL to pickup device if you have a return mailer bag / arrange your own Courier",
+    icon: () => <GlobalRawIcon className="w-12 h-12 md:w-10 md:h-10" />,
   }
 ];
