@@ -39,6 +39,9 @@ import TravelAgency from "@/pages/corporate/TravelAgency";
 import CountryCoverage from "@/pages/commercial/countryCoverage/CountryCoverage";
 import PocketWifiDetails from "@/pages/commercial/PocketWifiDetails";
 import CountryCoverageFilter from "@/pages/commercial/countryCoverage/CountryCoverageFilter";
+import PackageDetails from "@/pages/commercial/PackageDetails";
+import HowItWorks from "@/pages/commercial/howItWorks/HowItWorks";
+import Affiliate from "@/pages/commercial/Affiliate";
 import PickDropLocation from "@/pages/commercial/PickDropLocation";
 
 const commercialRoutes = {
@@ -261,6 +264,27 @@ const commercialRoutes = {
     name: "Country Coverage Filter",
     activePath: "countryCoverageFilter",
     element: <CountryCoverageFilter />,
+  },
+
+  packageDetails: {
+    path: "/package/details/:packageId",
+    name: "Package Details",
+    activePath: "packageDetails",
+    element: <PackageDetails />,
+  },
+
+  howItWorks: {
+    path: "/how-it-works",
+    name: "How It Works",
+    activePath: "howItWorks",
+    element: <HowItWorks />,
+  },
+
+  affiliate: {
+    path: "/affiliate",
+    name: "Affiliate",
+    activePath: "affiliate",
+    element: <Affiliate />,
   },
 
   // pick drop location
