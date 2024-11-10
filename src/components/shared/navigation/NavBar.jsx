@@ -390,7 +390,7 @@ export const MobileMegaMenu = ({ isWhite = false }) => {
                     <li>
                       <Link
                         className="text-white text-lg font-normal p-3 flex"
-                        to={commercialRoutes.home.path}
+                        to={commercialRoutes.pocketWifiDetails.path}
                       >
                         Pocket Wifi Details
                       </Link>
@@ -658,7 +658,7 @@ export const DesktopMegaMenu = ({ isShow = false }) => {
                 </span>
                 <div className="text-sm flex flex-col gap-3 mt-3">
                   <Link
-                    to={commercialRoutes.home.path}
+                    to={commercialRoutes.pocketWifiDetails.path}
                     className="hover:text-main-500 duration-300"
                   >
                     Pocket Wifi Details
@@ -683,31 +683,31 @@ export const DesktopMegaMenu = ({ isShow = false }) => {
                 </span>
                 <div className="text-sm flex flex-col gap-3 mt-3">
                   <Link
-                    to={commercialRoutes.home.path}
+                    to={commercialRoutes.countryCoverage.path}
                     className="hover:text-main-500 duration-300"
                   >
                     Asia
                   </Link>
                   <Link
-                    to={commercialRoutes.home.path}
+                    to={commercialRoutes.countryCoverage.path}
                     className="hover:text-main-500 duration-300"
                   >
                     Europe
                   </Link>
                   <Link
-                    to={commercialRoutes.home.path}
+                    to={commercialRoutes.countryCoverage.path}
                     className="hover:text-main-500 duration-300"
                   >
                     America
                   </Link>
                   <Link
-                    to={commercialRoutes.home.path}
+                    to={commercialRoutes.countryCoverage.path}
                     className="hover:text-main-500 duration-300"
                   >
                     Australia
                   </Link>
                   <Link
-                    to={commercialRoutes.home.path}
+                    to={commercialRoutes.countryCoverage.path}
                     className="hover:text-main-500 duration-300"
                   >
                     Africa
