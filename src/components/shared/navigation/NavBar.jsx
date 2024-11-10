@@ -13,6 +13,7 @@ import {
   CheckSlideIcon,
   CloseIcon,
   commercialRoutes,
+  corporateRoutes,
   GroupAffiliateIcon,
   InfoIcon,
   LogoIcon,
@@ -261,7 +262,7 @@ function NavBar() {
                     ? "xl:text-secondary-500"
                     : "xl:text-main-600"
                 )}
-                to="/"
+                to={corporateRoutes.home.path}
               >
                 Corporate
               </Link>
