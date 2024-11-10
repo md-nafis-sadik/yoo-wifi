@@ -25,10 +25,10 @@ const AboutUs = () => {
     <div className="overflow-hidden w-full">
       <HeroCommon title={header.title} description={header.description} />
       <WhoWeAre data={whoWeAre} />
+      <KeyFeatures data={features} />
       <CompanyMission data={companyMission} />
       <AwardsAndAchievements data={awardsAndAchievements} />
       <WhatWeDo data={whatWeDo} />
-      <KeyFeatures data={features} />
       <ForPersonal data={personal} />
       <ForBusiness data={business} />
       <CustomerTestimonial />

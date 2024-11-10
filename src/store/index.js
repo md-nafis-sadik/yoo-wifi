@@ -10,6 +10,7 @@ import routerSlice from "./module/router/slice";
 import sharedSlice from "./module/shared/sharedSlice";
 import simSlice from "./module/sim/slice";
 import testimonialsSlice from "./module/testimonials/testimonialsSlice";
+import dataPlanSlice from "./module/dataPlan/dataPlanSlice";
 
 export const store = configureStore({
   reducer: {
@@ -24,6 +25,7 @@ export const store = configureStore({
     about: aboutSlice,
     contact: contactSlice,
     country: countrySlice,
+    dataPlan: dataPlanSlice,
   },
   middleware: (getDefaultMiddlewares) =>
     getDefaultMiddlewares({

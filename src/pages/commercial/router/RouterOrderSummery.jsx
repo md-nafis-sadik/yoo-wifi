@@ -193,7 +193,7 @@ function RouterOrderSummery() {
       <Dialog open={isSuccess}>
         <DialogContent
           showCloseIcon={false}
-          className="w-full max-w-[800px] h-full max-h-[400px] sm:max-h-[500px] flex items-center justify-center p-10 bg-main-50"
+          className="w-[calc(100vw-32px)] max-w-[800px] h-full max-h-[400px] sm:max-h-[500px] flex items-center justify-center p-10 bg-main-50"
         >
           <div className="flex flex-col gap-6">
             <div className="flex items-center justify-center">

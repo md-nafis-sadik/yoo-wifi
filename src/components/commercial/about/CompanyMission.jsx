@@ -7,7 +7,7 @@ const CompanyMission = ({ data = {} }) => {
 
       <div className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-10 mt-4 md:mt-6 lg:mt-12">
         <div className="w-full md:w-1/2 flex_center">
-          <div className="aspect-[1.5/1] w-full relative overflow-hidden rounded-xl md:rounded-s-3xl">
+          <div className="aspect-[1.5/1] w-full relative overflow-hidden rounded-xl md:rounded-3xl">
             <LazyLoadImage
               src={data.mission.image || ""}
               alt={data.mission.title}
@@ -15,10 +15,10 @@ const CompanyMission = ({ data = {} }) => {
             />
           </div>
         </div>
-        <div className="w-full md:w-1/2">
-          <p className="text-[28px] md:text-5xl !leading-[1.28] md:leading-[1.1] mt-3 font-extrabold md:font-bold text-black-900">
+        <div className="w-full md:w-1/2 flex_center flex-col">
+          {/* <p className="text-[28px] md:text-5xl !leading-[1.28] md:leading-[1.1] mt-3 font-extrabold md:font-bold text-black-900">
             {data.mission.year}
-          </p>
+          </p> */}
           <p className="text-lg md:text-4xl font-semibold md:font-bold !leading-[1.4] mt-1 md:mt-6">
             {data.mission.title}
           </p>

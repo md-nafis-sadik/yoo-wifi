@@ -14,6 +14,7 @@ const {
   pocketWifiOrderSummery,
   pocketWifiSelfPickup,
   pocketWifiShippingOption,
+  pocketWifiDetails,
   routerHome,
   routerLayout,
   routerRegion,
@@ -34,6 +35,7 @@ const {
   simOrderSummery,
   countryCoverage,
   countryCoverageFilter,
+  pickDropLocation,
 } = routes || {};
 
 export const comRoutes = [
@@ -66,12 +68,20 @@ export const comRoutes = [
         element: contact.element,
       },
       {
+        path: pocketWifiDetails.path,
+        element: pocketWifiDetails.element,
+      },
+      {
         path: countryCoverage.path,
         element: countryCoverage.element,
       },
       {
         path: countryCoverageFilter.path,
         element: countryCoverageFilter.element,
+      },
+      {
+        path: pickDropLocation.path,
+        element: pickDropLocation.element,
       },
     ],
   },

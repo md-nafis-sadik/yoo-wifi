@@ -37,7 +37,9 @@ import MaritimeInternet from "@/pages/corporate/MaritimeInternet";
 import Office from "@/pages/corporate/Office";
 import TravelAgency from "@/pages/corporate/TravelAgency";
 import CountryCoverage from "@/pages/commercial/countryCoverage/CountryCoverage";
+import PocketWifiDetails from "@/pages/commercial/PocketWifiDetails";
 import CountryCoverageFilter from "@/pages/commercial/countryCoverage/CountryCoverageFilter";
+import PickDropLocation from "@/pages/commercial/PickDropLocation";
 
 const commercialRoutes = {
   commercialLayout: {
@@ -119,6 +121,13 @@ const commercialRoutes = {
     name: "Pocket Wifi",
     activePath: "pocketWifi",
     element: <PocketWifiOrderSummery />,
+  },
+
+  pocketWifiDetails: {
+    path: "/pocket-wifi-details",
+    name: "Pocket Wifi Details",
+    activePath: "pocketWifi",
+    element: <PocketWifiDetails />,
   },
 
   // router
@@ -252,6 +261,14 @@ const commercialRoutes = {
     name: "Country Coverage Filter",
     activePath: "countryCoverageFilter",
     element: <CountryCoverageFilter />,
+  },
+
+  // pick drop location
+  pickDropLocation: {
+    path: "/pick-drop-location",
+    name: "Pick Drop Location",
+    activePath: "pickDropLocation",
+    element: <PickDropLocation />,
   },
 };
 

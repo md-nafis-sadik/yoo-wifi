@@ -23,4 +23,9 @@ function validateCardDetails({ cardNumber = "", cvc = "", expireDate = "" }) {
   return { error: null };
 }
 
-export { addZeroToNumber, validateCardDetails };
+const validateEmail = (email) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+
+export { addZeroToNumber, validateCardDetails, validateEmail };

@@ -4,10 +4,10 @@ import { cn } from "@/lib/utils";
 const KeyFeatures = ({ data = [], wrapperClass = "" }) => {
   return (
     <section className="sec_common_60 px-4">
-      <div className="container3X sec_common_80 bg-neutral-100 rounded-3xl lg:px-12 xl:px-15">
+      <div className="container3X sec_common_80 bg-transparent rounded-3xl lg:px-12 xl:px-15">
         <div
           className={cn(
-            "containerX grid md:grid-cols-2 lg:grid-cols-4 gap-4",
+            "containerX grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6",
             wrapperClass
           )}
         >

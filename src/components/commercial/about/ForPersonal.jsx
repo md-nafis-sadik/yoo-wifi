@@ -6,7 +6,7 @@ const ForPersonal = ({ data }) => {
     <div className="containerX sec_common_60 xl:px-0">
       <SectionHeader
         heading="For Personal"
-        subHeading="Choose Your Dream Destination and Perfect Package Now"
+        subHeading="Reliable Solutions for Your Personal Connectivity"
       />
 
       <div className="mt-4 md:mt-8 lg:mt-[60px]">
