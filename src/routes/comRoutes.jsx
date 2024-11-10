@@ -35,6 +35,7 @@ const {
   simOrderSummery,
   countryCoverage,
   countryCoverageFilter,
+  pickDropLocation,
 } = routes || {};
 
 export const comRoutes = [
@@ -77,6 +78,10 @@ export const comRoutes = [
       {
         path: countryCoverageFilter.path,
         element: countryCoverageFilter.element,
+      },
+      {
+        path: pickDropLocation.path,
+        element: pickDropLocation.element,
       },
     ],
   },
