@@ -187,3 +187,35 @@ export const footerData = {
     },
   ],
 };
+
+
+export const howItWorksData = [
+  {
+    _id: 1,
+    type: "Local",
+    typeSuffix: "",
+    duration: "3-4 Business day",
+    price: 0,
+  },
+
+  {
+    _id: 2,
+    type: "Express",
+    typeSuffix: "(Order by 10am)",
+    duration: "3-4 Business day",
+    price: 7,
+  }, {
+    _id: 3,
+    type: "Super Express",
+    typeSuffix: "(Order by 10am)",
+    duration: "3-4 Business day",
+    price: 20,
+  },
+  {
+    _id: 4,
+    type: "Standard International",
+    typeSuffix: "",
+    duration: "3-4 Business day",
+    price: 25,
+  },
+]

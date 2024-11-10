@@ -39,6 +39,7 @@ import TravelAgency from "@/pages/corporate/TravelAgency";
 import CountryCoverage from "@/pages/commercial/countryCoverage/CountryCoverage";
 import CountryCoverageFilter from "@/pages/commercial/countryCoverage/CountryCoverageFilter";
 import PackageDetails from "@/pages/commercial/PackageDetails";
+import HowItWorks from "@/pages/commercial/howItWorks/HowItWorks";
 
 const commercialRoutes = {
   commercialLayout: {
@@ -260,6 +261,13 @@ const commercialRoutes = {
     name: "Package Details",
     activePath: "packageDetails",
     element: <PackageDetails />,
+  },
+
+  howItWorks: {
+    path: "/how-it-works",
+    name: "How It Works",
+    activePath: "howItWorks",
+    element: <HowItWorks />,
   },
 };
 
