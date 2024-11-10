@@ -1,7 +1,7 @@
-import { rentServicesData } from '@/services';
+import { affiliateServiceData } from '@/services';
 import React from 'react';
 
-const RentServices = () => {
+const AffiliateService = () => {
     return (
         <section className='container3X sec_common_80 xl:!px-0'>
             <div className='bg-[#ECECEC] rounded-xl md:rounded-3xl'>
@@ -9,7 +9,7 @@ const RentServices = () => {
                     <div className='containerX'>
 
                         <div className='grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6'>
-                            {rentServicesData.map((data, index) => (<article key={index} className='px-4 py-8 md:py-6  bg-white rounded-2xl'>
+                            {affiliateServiceData.map((data, index) => (<article key={index} className='px-4 py-8 md:py-6 bg-white rounded-2xl'>
                                 <span className='shrink-0 flex justify-center'>
                                     {data.icon()}
                                 </span>
@@ -32,4 +32,4 @@ const RentServices = () => {
     );
 };
 
-export default RentServices;
+export default AffiliateService;
