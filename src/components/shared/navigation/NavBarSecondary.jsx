@@ -185,7 +185,9 @@ const NavBarSecondary = () => {
                         showMegaMenu ? "-rotate-180" : "-rotate-0",
                         "transform transition_common duration-150"
                       )}
-                      pathClass={"fill-neutral-black"}
+                      pathClass={
+                        isScrolled ? "fill-white" : "fill-neutral-black"
+                      }
                     />
                   </div>
                 </li>
