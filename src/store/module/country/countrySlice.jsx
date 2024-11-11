@@ -779,9 +779,9 @@ const initialState = {
 };
 
 const countrySlice = createSlice({
-    name: "country",
-    initialState,
-    reducers: {},
+  name: "country",
+  initialState,
+  reducers: {},
 });
 
 export default countrySlice.reducer;

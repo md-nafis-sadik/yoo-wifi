@@ -67,7 +67,6 @@ function PocketWifiPlan() {
           </div>
         </div>
       </div>
-
       <div className="flex flex-col gap-3 sm:gap-4 md:gap-6 mt-6 sm:mt-8 md:mt-12">
         {/* coverage accordion */}
         <Accordion type="single" collapsible="true" defaultValue="item-1">

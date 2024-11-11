@@ -7,6 +7,9 @@ export default {
   ],
   theme: {
     extend: {
+      flex: {
+        full: "0 0 100%",
+      },
       margin: {
         15: "3.75rem",
       },
@@ -31,6 +34,7 @@ export default {
         },
         white: {
           DEFAULT: "#ffffff",
+          rgb: "rgba(255, 255, 255, 0.60)",
         },
         secondary: {
           100: "#FFFCC5",
@@ -48,6 +52,7 @@ export default {
           10: "#FFF1F1",
           20: "#FFF2F2",
           50: "#FEF2F2",
+          60: "#E2CACA",
           100: "#FFE1E1",
           200: "#FFC9CA",
           300: "#FEA3A4",
@@ -56,6 +61,7 @@ export default {
           650: "#E41F26",
           600: "#D81F22",
           700: "#BC191C",
+          750: "#E52226",
           800: "#9B191B",
           900: "#811B1D",
           950: "#46090A",
@@ -84,6 +90,9 @@ export default {
           black: "#181A20",
           rgb: "rgba(207, 207, 207, 0.20)",
         },
+        yellow: {
+          400: "#F7D259",
+        },
         status: {
           error: "#DE3737",
           success: "#56AD7E",
@@ -103,6 +112,7 @@ export default {
         dmsans: ["DMSans", "sans-serif"],
         gilroy: ["Gilroy", "sans-serif"],
         sansPro: ["SansPro", "sans-serif"],
+        meid: ["Miedinger", "sans-serif"],
       },
       boxShadow: {
         mid: "0px -8px 24px 0px rgba(0, 0, 0, 0.10)",
@@ -111,6 +121,8 @@ export default {
       },
       backgroundImage: {
         login: "url('./assets/images/loginBg.png')",
+        mainGradient:
+          "linear-gradient(1deg, #D33739 0.75%, #D33739 30.9%, rgba(211, 55, 57, 0.00) 89.76%)",
       },
       borderRadius: {
         lg: "var(--radius)",

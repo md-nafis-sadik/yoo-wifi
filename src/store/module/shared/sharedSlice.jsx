@@ -1,3 +1,4 @@
+import { PocketWifiIcon, RouterMiniIcon, SimMiniIcon } from "@/services";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -35,7 +36,39 @@ const initialState = {
       price: "SGD 20",
     },
   ],
-  
+  products: [
+    {
+      name: "Pocket Wifi",
+      path: "/product/pocket-wifi",
+      icon: ({ pocketWifiColor = "", routerColor = "", simColor = "" }) => {
+        return pocketWifiColor ? (
+          <PocketWifiIcon color={pocketWifiColor} />
+        ) : (
+          <PocketWifiIcon />
+        );
+      },
+    },
+
+    {
+      name: "Router",
+      path: "/product/router",
+      icon: ({ pocketWifiColor = "", routerColor = "", simColor = "" }) => {
+        return routerColor ? (
+          <RouterMiniIcon color={routerColor} />
+        ) : (
+          <RouterMiniIcon />
+        );
+      },
+    },
+    {
+      name: "SIM/eSIM",
+      path: "/product/sim",
+      icon: ({ pocketWifiColor = "", routerColor = "", simColor = "" }) => {
+        return simColor ? <SimMiniIcon color={simColor} /> : <SimMiniIcon />;
+      },
+    },
+  ],
+  selectedHeroIndex: 0,
 };
 
 const sharedSlice = createSlice({
@@ -45,8 +78,11 @@ const sharedSlice = createSlice({
     setActivePath: (state, action) => {
       state.activePath = action.payload;
     },
+    setHeroIndex: (state, action) => {
+      state.selectedHeroIndex = action.payload;
+    },
   },
 });
 
-export const { setActivePath } = sharedSlice.actions;
+export const { setActivePath, setHeroIndex } = sharedSlice.actions;
 export default sharedSlice.reducer;

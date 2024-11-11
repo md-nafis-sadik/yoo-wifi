@@ -10,15 +10,6 @@ import australiaRegionBlack from "@/assets/images/australia-region-black.webp";
 import awards1 from "@/assets/images/awards-1.webp";
 import battery from "@/assets/images/battery.webp";
 import charging from "@/assets/images/charging.webp";
-import companyMission1 from "@/assets/images/company-mission-1.webp";
-import corporateHero from "@/assets/images/corporate-hero.webp";
-import dataPlan from "@/assets/images/data-plan.webp";
-import download from "@/assets/images/download.webp";
-import email from "@/assets/images/email.webp";
-import europeRegionBlack from "@/assets/images/europe-region-black.webp";
-import googlePlay from "@/assets/images/google-play.webp";
-import locationMap from "@/assets/images/location-map.webp";
-import middleEast from "@/assets/images/middle-east.webp";
 import collaborator1 from "@/assets/images/collaborators/1.webp";
 import collaborator2 from "@/assets/images/collaborators/2.webp";
 import collaborator3 from "@/assets/images/collaborators/3.webp";
@@ -26,6 +17,29 @@ import collaborator4 from "@/assets/images/collaborators/4.webp";
 import collaborator5 from "@/assets/images/collaborators/5.webp";
 import collaborator6 from "@/assets/images/collaborators/6.webp";
 import collaborator7 from "@/assets/images/collaborators/7.webp";
+import companyMission1 from "@/assets/images/company-mission-1.webp";
+import corporateHero from "@/assets/images/corporate-hero.webp";
+import BelgiumFlag from "@/assets/images/country-coverage/Belgium.png";
+import CroatiaFlag from "@/assets/images/country-coverage/Croatia.png";
+import FranceFlag from "@/assets/images/country-coverage/France.png";
+import GermanyFlag from "@/assets/images/country-coverage/Germany.png";
+import GreeceFlag from "@/assets/images/country-coverage/Greece.png";
+import IrelandFlag from "@/assets/images/country-coverage/Ireland.png";
+import ItalyFlag from "@/assets/images/country-coverage/Italy.png";
+import SpainFlag from "@/assets/images/country-coverage/Spain.png";
+import SwedenFlag from "@/assets/images/country-coverage/Sweden.png";
+import SwitzerlandFlag from "@/assets/images/country-coverage/Switzerland.png";
+import dataPlan from "@/assets/images/data-plan.webp";
+import discount from "@/assets/images/discount.webp";
+import download from "@/assets/images/download.webp";
+import email from "@/assets/images/email.webp";
+import europeRegionBlack from "@/assets/images/europe-region-black.webp";
+import googlePlay from "@/assets/images/google-play.webp";
+import heroConnected from "@/assets/images/heroConnected.webp";
+import heroDiscover from "@/assets/images/heroDiscover.webp";
+import heroTravel from "@/assets/images/heroTravel.webp";
+import locationMap from "@/assets/images/location-map.webp";
+import middleEast from "@/assets/images/middle-east.webp";
 import network from "@/assets/images/network.webp";
 import person1 from "@/assets/images/person-1.webp";
 import person2 from "@/assets/images/person-2.webp";
@@ -41,21 +55,12 @@ import router3 from "@/assets/images/router/router-3.webp";
 import router4 from "@/assets/images/router/router-4.webp";
 import router5 from "@/assets/images/router/router-5.webp";
 import router6 from "@/assets/images/router/router-6.webp";
+import redSimRedShadow from "@/assets/images/sim/red-sim-red-shadow.webp";
 import simSettingPhone from "@/assets/images/sim-setting-phone.webp";
 import sim1 from "@/assets/images/sim/sim-1.webp";
 import tour from "@/assets/images/tour.webp";
 import whatsapp from "@/assets/images/whatsapp.webp";
 import whoWeAre1 from "@/assets/images/who-we-are-1.webp";
-import SpainFlag from "@/assets/images/country-coverage/Spain.png";
-import BelgiumFlag from "@/assets/images/country-coverage/Belgium.png";
-import CroatiaFlag from "@/assets/images/country-coverage/Croatia.png";
-import FranceFlag from "@/assets/images/country-coverage/France.png";
-import GermanyFlag from "@/assets/images/country-coverage/Germany.png";
-import GreeceFlag from "@/assets/images/country-coverage/Greece.png";
-import IrelandFlag from "@/assets/images/country-coverage/Ireland.png";
-import ItalyFlag from "@/assets/images/country-coverage/Italy.png";
-import SwedenFlag from "@/assets/images/country-coverage/Sweden.png";
-import SwitzerlandFlag from "@/assets/images/country-coverage/Switzerland.png";
 import country1 from "@/assets/images/country-coverage/country-1.webp";
 import country2 from "@/assets/images/country-coverage/country-2.webp";
 import country3 from "@/assets/images/country-coverage/country-3.webp";
@@ -66,6 +71,16 @@ import rgbPocketWifi from "@/assets/images/rgb-pocket-wifi.webp";
 import cloud from "@/assets/images/cloud.png";
 
 export {
+  BelgiumFlag,
+  CroatiaFlag,
+  FranceFlag,
+  GermanyFlag,
+  GreeceFlag,
+  IrelandFlag,
+  ItalyFlag,
+  SpainFlag,
+  SwedenFlag,
+  SwitzerlandFlag,
   africaRegionBlack,
   airtelIndia,
   americaRegionBlack,
@@ -76,8 +91,6 @@ export {
   awards1,
   battery,
   charging,
-  companyMission1,
-  corporateHero,
   collaborator1,
   collaborator2,
   collaborator3,
@@ -85,12 +98,18 @@ export {
   collaborator5,
   collaborator6,
   collaborator7,
+  companyMission1,
+  corporateHero,
   dataPlan,
+  discount,
   download,
   email,
   error,
   europeRegionBlack,
   googlePlay,
+  heroConnected,
+  heroDiscover,
+  heroTravel,
   locationMap,
   middleEast,
   network,
@@ -109,21 +128,12 @@ export {
   router5,
   router6,
   routerWhite,
+  redSimRedShadow,
   sim1,
   simSettingPhone,
   tour,
   whatsapp,
   whoWeAre1,
-  SpainFlag,
-  BelgiumFlag,
-  CroatiaFlag,
-  FranceFlag,
-  GermanyFlag,
-  GreeceFlag,
-  IrelandFlag,
-  ItalyFlag,
-  SwedenFlag,
-  SwitzerlandFlag,
   country1,
   country2,
   country3,

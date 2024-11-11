@@ -17,7 +17,7 @@ function ServiceCard({ item = {}, ...props }) {
       <h3 className="text-lg font-semibold text-black-900 leading-[140%] text-center">
         {item?.title}
       </h3>
-      <p className="text-base text-black-600 text-center">
+      <p className="text-base text-black-600 text-center line-clamp-5">
         {item?.description}
       </p>
     </div>

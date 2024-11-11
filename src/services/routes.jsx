@@ -37,10 +37,14 @@ import MaritimeInternet from "@/pages/corporate/MaritimeInternet";
 import Office from "@/pages/corporate/Office";
 import TravelAgency from "@/pages/corporate/TravelAgency";
 import CountryCoverage from "@/pages/commercial/countryCoverage/CountryCoverage";
+import PocketWifiDetails from "@/pages/commercial/PocketWifiDetails";
 import CountryCoverageFilter from "@/pages/commercial/countryCoverage/CountryCoverageFilter";
 import PackageDetails from "@/pages/commercial/PackageDetails";
 import HowItWorks from "@/pages/commercial/howItWorks/HowItWorks";
 import Affiliate from "@/pages/commercial/Affiliate";
+import PickDropLocation from "@/pages/commercial/PickDropLocation";
+import HowToSetupSim from "@/pages/commercial/HowToSetupSim";
+import HowToConnectPocketWifi from "@/pages/commercial/HowToConnectPocketWifi";
 
 const commercialRoutes = {
   commercialLayout: {
@@ -122,6 +126,13 @@ const commercialRoutes = {
     name: "Pocket Wifi",
     activePath: "pocketWifi",
     element: <PocketWifiOrderSummery />,
+  },
+
+  pocketWifiDetails: {
+    path: "/pocket-wifi-details",
+    name: "Pocket Wifi Details",
+    activePath: "pocketWifi",
+    element: <PocketWifiDetails />,
   },
 
   // router
@@ -276,6 +287,28 @@ const commercialRoutes = {
     name: "Affiliate",
     activePath: "affiliate",
     element: <Affiliate />,
+  },
+
+  // pick drop location
+  pickDropLocation: {
+    path: "/pick-drop-location",
+    name: "Pick Drop Location",
+    activePath: "pickDropLocation",
+    element: <PickDropLocation />,
+  },
+
+  // how to
+  howToSetupSim: {
+    path: "/how-to-setup-sim",
+    name: "How to Setup Sim",
+    activePath: "howToSetupSim",
+    element: <HowToSetupSim />,
+  },
+  howToConnectPocketWifi: {
+    path: "/how-to-connect-pocket-wifi",
+    name: "How to Connect PocketWifi",
+    activePath: "howToConnectPocketWifi",
+    element: <HowToConnectPocketWifi />,
   },
 };
 

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { CallMadeIcon } from "@/services";
 import { Link } from "react-router-dom";
+import CountDown from "../others/CountDown";
 
 const ProductCard = ({
   item,
@@ -10,12 +11,13 @@ const ProductCard = ({
   descriptionClassName = "",
   eventHandler = () => {},
   selected = false,
+  showCountDown,
   ...props
 }) => {
   return (
     <div
       className={cn(
-        selected ? "ring-main-600" : "ring-black-600",
+        selected ? "ring-main-600 bg-main-50" : "ring-black-600",
         "ring-1 w-full h-fit rounded-lg md:rounded-2xl p-4 md:p-5 flex flex-col min-[1176px]:flex-row gap-6 md:gap-10 hover:ring-main-600 group transition_common",
         containerClassName
       )}
@@ -40,7 +42,7 @@ const ProductCard = ({
             titleClassName
           )}
         >
-          {item.title}
+          {item?.title}
         </h4>
 
         <p
@@ -50,19 +52,30 @@ const ProductCard = ({
             descriptionClassName
           )}
         >
-          {item.description}
+          {item?.description}
         </p>
       </div>
 
       {/* 2 */}
       {selected && (
         <div className="flex flex-row min-[1176px]:flex-col items-center min-[1176px]:items-end justify-between min-[1176px]:justify-start gap-4 w-full min-[1176px]:w-1/3">
-          {item.offer && (
-            <p className="text-black-900 text-base md:text-xl !leading-[1.4] font-bold italic w-fit">
-              {item.offer}
+          {item?.offer && (
+            <p className="text-black-900 text-base md:text-xl !leading-[1.4] font-bold italic w-fit flex flex-col min-[1176px]:flex-row min-[1176px]:whitespace-nowrap">
+              <span>{item?.offer}</span>
+              {showCountDown && (
+                <>
+                  <span className="hidden min-[1176px]:inline-block">
+                    ,&nbsp;
+                  </span>{" "}
+                  <CountDown
+                    className={"!font-normal !text-xs min-[1176px]:!text-xl"}
+                    targetUnixTime={item?.deadline}
+                  />
+                </>
+              )}
             </p>
           )}
-          <Link to={item.link}>
+          <Link to={item?.link}>
             <Button
               size="lg"
               className="text-base"
