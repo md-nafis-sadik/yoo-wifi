@@ -12,8 +12,47 @@ import {
 } from "@/services";
 import { MenuIcon } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import AuthDialog from "./AuthDialog";
+import useActiveMenuItem from "@/hooks/useActiveMenuItem";
+
+export const corporateMenuItems = [
+  {
+    name: "Iot",
+    path: corporateRoutes.iot.path,
+    activePath: corporateRoutes.iot.activePath,
+  },
+  {
+    name: "Hotel",
+    path: corporateRoutes.hotel.path,
+    activePath: corporateRoutes.hotel.activePath,
+  },
+  {
+    name: "Travel Agency",
+    path: corporateRoutes.travelAgency.path,
+    activePath: corporateRoutes.travelAgency.activePath,
+  },
+  {
+    name: "Maritime Internet",
+    path: corporateRoutes.maritimeInternet.path,
+    activePath: corporateRoutes.maritimeInternet.activePath,
+  },
+  {
+    name: "Office/Roadshow Events",
+    path: corporateRoutes.office.path,
+    activePath: corporateRoutes.office.activePath,
+  },
+  {
+    name: "About Us",
+    path: commercialRoutes.aboutUs.path,
+    activePath: commercialRoutes.aboutUs.activePath,
+  },
+  {
+    name: "Commercial",
+    path: commercialRoutes.aboutUs.path,
+    activePath: commercialRoutes.aboutUs.activePath,
+  },
+];
 
 function CorporateNavbar() {
   const { isScrolled, isRedBorder, isHome, isBlack, isBannerRoutes } =
@@ -21,6 +60,8 @@ function CorporateNavbar() {
   const [isShowMenu, setIsShowMenu] = useState(false);
   const [showSearchbar, setShowSearchbar] = useState(false);
   const [isAuthDialogOpen, setIsAuthDialogOpen] = useState(false);
+
+  const menuItems = useActiveMenuItem(corporateMenuItems);
 
   return (
     <header
@@ -32,7 +73,7 @@ function CorporateNavbar() {
       <div className="w-full max-w-[1392px] mx-auto relative">
         <nav
           className={cn(
-            "w-full duration-300 flex items-center lg:gap-10 2xl:gap-15 justify-between px-4 py-2 sm:py-4",
+            "w-full duration-300 flex items-center lg:gap-10 justify-between px-4 py-2 sm:py-4",
             isScrolled ? "text-white" : "text-white xl:text-black-700"
           )}
         >
@@ -121,63 +162,22 @@ function CorporateNavbar() {
                   <CloseIcon />
                 </button>
               </div>
-              <ul className="flex flex-col xl:flex-row xl:items-center 2xl:gap-3">
-                {/* Iot
-                Hotel
-                Travel Agency
-Maritime Internet 
-Office/Roadshow Events
-About Us
-Commercial
-*/}
-                <li>
-                  <Link
-                    className={cn("menuItem hover:after:bg-main-600")}
-                    to={corporateRoutes.iot.path}
-                  >
-                    Iot
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn("menuItem hover:after:bg-main-600")}
-                    to={corporateRoutes.hotel.path}
-                  >
-                    Hotel
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn("menuItem hover:after:bg-main-600")}
-                    to={corporateRoutes.maritimeInternet.path}
-                  >
-                    Maritime Internet
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn("menuItem hover:after:bg-main-600")}
-                    to={corporateRoutes.office.path}
-                  >
-                    Office/Roadshow Events
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn("menuItem hover:after:bg-main-600")}
-                    to={commercialRoutes.aboutUs.path}
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn("menuItem hover:after:bg-main-600")}
-                    to={commercialRoutes.aboutUs.path}
-                  >
-                    Commercial
-                  </Link>
-                </li>
+              <ul className="flex flex-col xl:flex-row xl:items-center 2xl:gap-1">
+                {menuItems.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      className={cn(
+                        "menuItem font-normal hover:after:bg-main-600",
+                        item.isActive
+                          ? "after:scale-x-100 font-semibold after:bg-main-600"
+                          : ""
+                      )}
+                      to={item.path}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
               </ul>
               <Link
                 className={cn(

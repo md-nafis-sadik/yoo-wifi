@@ -36,6 +36,15 @@ function NavBar() {
   const [showSearchbar, setShowSearchbar] = useState(false);
   const [isAuthDialogOpen, setIsAuthDialogOpen] = useState(false);
 
+  const menuItems = [
+    { name: "Home", path: commercialRoutes.home.path },
+    { name: "Pocket WIFI", path: commercialRoutes.pocketWifiHome.path },
+    { name: "Router", path: commercialRoutes.routerHome.path },
+    { name: "SIM/eSIM", path: commercialRoutes.simHome.path },
+    { name: "Contact Us", path: commercialRoutes.contact.path },
+    { name: "About Us", path: commercialRoutes.aboutUs.path },
+  ];
+
   return (
     <header
       className={cn(
@@ -156,85 +165,23 @@ function NavBar() {
                   <CloseIcon />
                 </button>
               </div>
-              <ul className="flex flex-col xl:flex-row xl:items-center 2xl:gap-3">
-                <li>
-                  <Link
-                    className={cn(
-                      "menuItem",
-                      !isRedBorder && isHome
-                        ? "hover:after:bg-white"
-                        : "hover:after:bg-main-600"
-                    )}
-                    to={commercialRoutes.home.path}
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn(
-                      "menuItem",
-                      !isRedBorder && isHome
-                        ? "hover:after:bg-white"
-                        : "hover:after:bg-main-600"
-                    )}
-                    to={commercialRoutes.pocketWifiHome.path}
-                  >
-                    Pocket WIFI
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn(
-                      "menuItem",
-                      !isRedBorder && isHome
-                        ? "hover:after:bg-white"
-                        : "hover:after:bg-main-600"
-                    )}
-                    to={commercialRoutes.routerHome.path}
-                  >
-                    Router
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn(
-                      "menuItem",
-                      !isRedBorder && isHome
-                        ? "hover:after:bg-white"
-                        : "hover:after:bg-main-600"
-                    )}
-                    to={commercialRoutes.simHome.path}
-                  >
-                    SIM/eSIM
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn(
-                      "menuItem",
-                      !isRedBorder && isHome
-                        ? "hover:after:bg-white"
-                        : "hover:after:bg-main-600"
-                    )}
-                    to={commercialRoutes.contact.path}
-                  >
-                    Contact Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn(
-                      "menuItem",
-                      !isRedBorder && isHome
-                        ? "hover:after:bg-white"
-                        : "hover:after:bg-main-600"
-                    )}
-                    to={commercialRoutes.aboutUs.path}
-                  >
-                    About Us
-                  </Link>
-                </li>
+              <ul className="flex flex-col xl:flex-row xl:items-center gap-3">
+                {menuItems.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      className={cn(
+                        index === 0 && "menuItem",
+                        !isRedBorder && isHome
+                          ? "hover:after:bg-white after:bg-white after:scale-x-100"
+                          : "hover:after:bg-main-600 after:bg-main-600 after:scale-x-100"
+                      )}
+                      to={item.path}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+
                 {/* mega menu  */}
                 <li className="hidden xl:block">
                   <div

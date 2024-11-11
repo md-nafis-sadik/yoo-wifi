@@ -16,6 +16,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { DesktopMegaMenu, MobileMegaMenu } from "./NavBar";
 import AuthDialog from "./AuthDialog";
+import useActiveMenuItem from "@/hooks/useActiveMenuItem";
 
 const NavBarSecondary = () => {
   const { isScrolled, isRedBorder, isHome, isBlack, isBannerRoutes } =
@@ -24,6 +25,41 @@ const NavBarSecondary = () => {
   const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [showSearchbar, setShowSearchbar] = useState(false);
   const [isAuthDialogOpen, setIsAuthDialogOpen] = useState(false);
+
+  const commercialMenuItems = [
+    {
+      name: "Home",
+      path: commercialRoutes.home.path,
+      activePath: commercialRoutes.home.activePath,
+    },
+    {
+      name: "Pocket WIFI",
+      path: commercialRoutes.pocketWifiHome.path,
+      activePath: commercialRoutes.pocketWifiHome.activePath,
+    },
+    {
+      name: "Router",
+      path: commercialRoutes.routerHome.path,
+      activePath: commercialRoutes.routerHome.activePath,
+    },
+    {
+      name: "SIM/eSIM",
+      path: commercialRoutes.simHome.path,
+      activePath: commercialRoutes.simHome.activePath,
+    },
+    {
+      name: "Contact Us",
+      path: commercialRoutes.contact.path,
+      activePath: commercialRoutes.contact.activePath,
+    },
+    {
+      name: "About Us",
+      path: commercialRoutes.aboutUs.path,
+      activePath: commercialRoutes.aboutUs.activePath,
+    },
+  ];
+
+  const menuItems = useActiveMenuItem(commercialMenuItems);
 
   return (
     <header
@@ -124,55 +160,22 @@ const NavBarSecondary = () => {
                   <CloseIcon />
                 </button>
               </div>
-              <ul className="flex flex-col xl:flex-row xl:items-center 2xl:gap-3">
-                <li>
-                  <Link
-                    className={cn("menuItem hover:after:bg-main-600")}
-                    to={commercialRoutes.home.path}
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn("menuItem hover:after:bg-main-600")}
-                    to={commercialRoutes.pocketWifiHome.path}
-                  >
-                    Pocket WIFI
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn("menuItem hover:after:bg-main-600")}
-                    to={commercialRoutes.routerHome.path}
-                  >
-                    Router
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn("menuItem hover:after:bg-main-600")}
-                    to={commercialRoutes.simHome.path}
-                  >
-                    SIM/eSIM
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn("menuItem hover:after:bg-main-600")}
-                    to={commercialRoutes.contact.path}
-                  >
-                    Contact Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn("menuItem hover:after:bg-main-600")}
-                    to={commercialRoutes.aboutUs.path}
-                  >
-                    About Us
-                  </Link>
-                </li>
+              <ul className="flex flex-col xl:flex-row xl:items-center gap-3">
+                {menuItems.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      className={cn(
+                        "menuItem hover:after:bg-main-600",
+                        item.isActive
+                          ? "after:scale-x-100 font-semibold after:bg-main-600"
+                          : ""
+                      )}
+                      to={item.path}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
                 {/* mega menu  */}
                 <li className="hidden xl:block">
                   <div

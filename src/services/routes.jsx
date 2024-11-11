@@ -62,7 +62,7 @@ const commercialRoutes = {
   pocketWifiHome: {
     path: "/product/pocket-wifi",
     name: "Pocket Wifi",
-    activePath: "pocketWifi",
+    activePath: "pocket-wifi",
     element: <PocketWifiHome />,
   },
   routerHome: {
@@ -241,7 +241,7 @@ const commercialRoutes = {
   aboutUs: {
     path: "/about-us",
     name: "About Us",
-    activePath: "aboutUs",
+    activePath: "about-us",
     element: <AboutUs />,
   },
 
@@ -334,13 +334,13 @@ const corporateRoutes = {
   travelAgency: {
     path: "travel-agency",
     name: "Travel Agency",
-    activePath: "travelAgency",
+    activePath: "travel-agency",
     element: <TravelAgency />,
   },
   maritimeInternet: {
     path: "maritime-internet",
     name: "MARITIME INTERNET",
-    activePath: "maritimeInternet",
+    activePath: "maritime-internet",
     element: <MaritimeInternet />,
   },
   office: {
