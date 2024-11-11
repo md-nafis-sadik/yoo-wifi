@@ -96,6 +96,9 @@ const initialState = {
       packPrice: 10,
       validity: 30,
       desc: "GB",
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
     {
       id: 2,
@@ -116,6 +119,9 @@ const initialState = {
       packPrice: 10,
       validity: 30,
       desc: "GB",
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
     {
       id: 3,
@@ -136,6 +142,9 @@ const initialState = {
       packPrice: 10,
       validity: 30,
       desc: "GB",
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
     {
       id: 4,
@@ -156,6 +165,9 @@ const initialState = {
       packPrice: 10,
       validity: 30,
       desc: "GB",
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
     {
       id: 5,
@@ -176,6 +188,9 @@ const initialState = {
       packPrice: 10,
       validity: 30,
       desc: "GB",
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
     {
       id: 6,
@@ -197,6 +212,9 @@ const initialState = {
       packPrice: 10,
       validity: 30,
       desc: "GB",
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
     {
       id: 7,
@@ -218,6 +236,9 @@ const initialState = {
       packPrice: 10,
       validity: 30,
       desc: "GB",
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
     {
       id: 8,
@@ -239,6 +260,9 @@ const initialState = {
       packPrice: 10,
       validity: 30,
       desc: "GB",
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
     {
       id: 9,
@@ -260,6 +284,9 @@ const initialState = {
       packPrice: 10,
       validity: 30,
       desc: "GB",
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
     {
       id: 10,
@@ -280,6 +307,9 @@ const initialState = {
       packPrice: 10,
       validity: 30,
       desc: "GB",
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
   ],
   features: [

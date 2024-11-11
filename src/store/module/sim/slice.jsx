@@ -69,6 +69,9 @@ const initialState = {
       validity: 30,
       desc: "GB",
       tags: ["sim", "topup"],
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
     {
       id: 2,
@@ -90,6 +93,9 @@ const initialState = {
       validity: 30,
       desc: "GB",
       tags: ["topup", "esim", "sim"],
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
     {
       id: 3,
@@ -111,6 +117,9 @@ const initialState = {
       validity: 30,
       desc: "GB",
       tags: ["sim", "esim", "topup"],
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
     {
       id: 4,
@@ -132,6 +141,9 @@ const initialState = {
       validity: 30,
       desc: "GB",
       tags: ["sim", "esim", "topup"],
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
     {
       id: 5,
@@ -153,6 +165,9 @@ const initialState = {
       validity: 30,
       desc: "GB",
       tags: ["sim", "topup"],
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
     {
       id: 6,
@@ -175,6 +190,9 @@ const initialState = {
       validity: 30,
       desc: "GB",
       tags: ["topup", "esim", "sim"],
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
     {
       id: 7,
@@ -197,6 +215,9 @@ const initialState = {
       validity: 30,
       desc: "GB",
       tags: ["sim", "esim"],
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
     {
       id: 8,
@@ -219,6 +240,9 @@ const initialState = {
       validity: 30,
       desc: "GB",
       tags: ["sim", "esim"],
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
     {
       id: 9,
@@ -241,6 +265,9 @@ const initialState = {
       validity: 30,
       desc: "GB",
       tags: ["sim", "esim"],
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
     {
       id: 10,
@@ -262,6 +289,9 @@ const initialState = {
       validity: 30,
       desc: "GB",
       tags: ["sim", "esim"],
+      coverage: [
+        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+      ],
     },
   ],
   features: [

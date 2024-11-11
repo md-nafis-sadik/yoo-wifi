@@ -1,6 +1,6 @@
 import ProductCard from "@/components/shared/cards/ProductCard";
 import { cn } from "@/lib/utils";
-import { images, productsData } from "@/services";
+import { productsData } from "@/services";
 import { useMemo, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 

@@ -27,7 +27,7 @@ const initialState = [
     icon: <ReturnIcon className={"h-10 w-10 md:h-[60px] md:w-[60px]"} />,
     title: "Pickup & Drop Off Locations",
     description:
-      "With 30+ pick-up and drop-off locations, we make it easy for you to get your pocket wifi and stay connected hassle-free.",
+      "With 20+ pick-up and drop-off locations, we make it easy for you to get your pocket wifi and stay connected hassle-free.",
     link: "/",
   },
 ];

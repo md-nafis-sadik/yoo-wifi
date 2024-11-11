@@ -44,7 +44,7 @@ function ProductGallery({ items = [] }) {
             {gallery.map((item, index) => (
               <div
                 key={index}
-                className="w-full aspect-square bg-neutral-100c rounded-lg flex items-center justify-center border border-neutral-500 cursor-pointer px-2"
+                className="w-full aspect-square bg-neutral-100c rounded-lg flex items-center justify-center border border-neutral-500 cursor-pointer px-2 bg-[rgba(207,207,207,0.20)]"
                 onClick={() => setActiveItem(item)}
               >
                 <img
