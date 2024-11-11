@@ -1,5 +1,6 @@
 import RouterCartFooter from "@/components/commercial/router/RouterCartFooter";
 import PackageCard from "@/components/shared/cards/PackageCard";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { commercialRoutes } from "@/services";
@@ -8,6 +9,8 @@ import useEmblaCarousel from "embla-carousel-react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+
+const tabs = ["all", "daily", "monthly", "volume"];
 
 function SimPlan() {
   const { recomandedPackages, cart } = useSelector((state) => state.sim);
@@ -44,55 +47,50 @@ function SimPlan() {
         </h2>
         <div ref={emblaRef} className="w-full max-w-full overflow-hidden">
           <div className="flex items-center gap-4">
-            <Button
-              className={cn(
-                "w-full hover:bg-secondary-500",
-                activeTab == "all" ? "text-black-900 font-semibold" : ""
-              )}
-              variant={activeTab == "all" ? "secondary" : "outline"}
-              onClick={() => setActiveTab("all")}
-            >
-              All
-            </Button>
-            <Button
-              className={cn(
-                "w-full hover:bg-secondary-500",
-                activeTab == "daily" ? "text-black-900 font-semibold" : ""
-              )}
-              variant={activeTab == "daily" ? "secondary" : "outline"}
-              onClick={() => setActiveTab("daily")}
-            >
-              Daily
-            </Button>
-            <Button
-              className={cn(
-                "w-full hover:bg-secondary-500",
-                activeTab == "monthly" ? "text-black-900 font-semibold" : ""
-              )}
-              variant={activeTab == "monthly" ? "secondary" : "outline"}
-              onClick={() => setActiveTab("monthly")}
-            >
-              Monthly
-            </Button>
-            <Button
-              className={cn(
-                "w-full hover:bg-secondary-500",
-                activeTab == "volumn" ? "text-black-900 font-semibold" : ""
-              )}
-              variant={activeTab == "volumn" ? "secondary" : "outline"}
-              onClick={() => setActiveTab("volumn")}
-            >
-              Volume
-            </Button>
+            {tabs.map((tab) => (
+              <Button
+                key={tab}
+                className={cn(
+                  "w-full hover:bg-secondary-500",
+                  activeTab === tab ? "text-black-900 font-semibold" : ""
+                )}
+                variant={activeTab === tab ? "secondary" : "outline"}
+                onClick={() => setActiveTab(tab)}
+              >
+                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              </Button>
+            ))}
           </div>
         </div>
       </div>
+
       <div className="flex flex-col gap-3 sm:gap-4 md:gap-6 mt-6 sm:mt-8 md:mt-12">
+        {/* coverage accordion */}
+        <Accordion type="single" collapsible="true" defaultValue="item-1">
+          <AccordionItem value={`item-1`} className="">
+            <AccordionTrigger className="!text-sm md:!text-base !font-bold text-black-700">
+              Country Coverage
+            </AccordionTrigger>
+            <AccordionContent className="!text-xs md:!text-base !leading-[120%] md:!leading-[150%] text-black-700">
+              {cart && cart.package.coverage ? (
+                cart.package.coverage.map((item, index) => (
+                  <span key={index}>
+                    {item}
+                    {index < cart.package.coverage.length - 1 && ", "}
+                  </span>
+                ))
+              ) : (
+                <span>*Select a package first</span>
+              )}
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+
+        {/* packages */}
         {recomandedPackages?.filter(filterByCategory)?.map((item, index) => (
           <PackageCard
-            wrapperClass={`cursor-pointer ${
-              cart?.package?.id == item?.id ? "border-main-600" : ""
-            }`}
+            wrapperClass={`cursor-pointer ${cart?.package?.id == item?.id ? "border-main-600" : ""
+              }`}
             item={item}
             key={index}
             onClick={() => handleSelectPlan(item)}

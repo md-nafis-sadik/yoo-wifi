@@ -203,7 +203,7 @@ function PocketWifiOrderSummery() {
                 Order Confirmed!
               </DialogTitle>
               <p className="text-base text-black-700">
-                We're glad to see you again. Let's dive into your courses.
+                Get ready for seamless connectivity wherever you go.
               </p>
             </div>
             <DialogClose
