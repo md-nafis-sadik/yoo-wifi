@@ -1,5 +1,4 @@
 import {
-  BankIcon,
   Communications2Icon,
   ConnectionsIcon,
   CustomerServiceIcon,
@@ -7,12 +6,10 @@ import {
   GlobeIcon,
   images,
   InternetAccessIcon,
-  OrganizationIcon,
   SettingsCustomnIcon,
   WifiSecondaryIcon,
 } from "@/services";
 import { createSlice } from "@reduxjs/toolkit";
-import { data } from "autoprefixer";
 
 const initialState = {
   header: {
@@ -23,7 +20,7 @@ const initialState = {
   whoWeAre: {
     title: "Who We Are",
     description:
-      "UR Communications Pte Ltd, operating under the renowned brand name Yoowifi, introduces an advanced solution for effortless global connectivity via its intuitive mobile application. With a commitment to enriching travel journeys and fostering global communication, Yoowifi App delivers unmatched convenience, dependability, and cost-effectiveness. \n\nOur aspiration is to establish a world where telecom experts and travelers can effortlessly stay linked across countries, free from concerns about excessive data roaming fees.",
+      "UR Communications Pte Ltd, operating under the renowned brand name Yoowifi, introduces an advanced solution for effortless global connectivity via its intuitive mobile application. With a commitment to enriching travel journeys and fostering global communication, Yoowifi App delivers unmatched convenience, dependability, and cost-effectiveness. \n\nOur aspiration is to establish a world where telecom experts and travelers can effortlessly stay linked across countries, free from concerns about excessive data roaming fees. Our mission revolves around building a company that offers accessible, trustworthy, and boundary-free mobile services, empowering individuals to stay connected with their dear ones while exploring diverse corners of the globe.",
     image: images.whoWeAre1,
   },
   companyMission: {
