@@ -320,7 +320,24 @@ const initialState = {
                         </ul>
                     </>
                 },
-            ]
+            ],
+            id: 1,
+            title: "Basic Package",
+            features: [
+                "Keep Yoowifi Device",
+                "Top-up Plan only",
+                "365 Days Validity",
+                "Covers 90 Countries",
+            ],
+            category: "daily",
+            planCode: "plan_1",
+            dataSize: 3,
+            packPrice: 10,
+            validity: 30,
+            desc: "GB",
+            coverage: [
+                "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+            ],
         },
         {
             _id: 2,
@@ -390,7 +407,24 @@ const initialState = {
                         </ul>
                     </>
                 },
-            ]
+            ],
+            id: 2,
+            title: "Traveler Package",
+            features: [
+                "Keep Yoowifi Device",
+                "Top-up Plan only",
+                "365 Days Validity",
+                "Covers 90 Countries",
+            ],
+            category: "daily",
+            planCode: "plan_2",
+            dataSize: 3,
+            packPrice: 10,
+            validity: 30,
+            desc: "GB",
+            coverage: [
+                "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+            ],
         },
         {
             _id: 3,
@@ -460,7 +494,24 @@ const initialState = {
                         </ul>
                     </>
                 },
-            ]
+            ],
+            id: 3,
+            title: "Extended Package",
+            features: [
+                "Keep Yoowifi Device",
+                "Top-up Plan only",
+                "365 Days Validity",
+                "Covers 90 Countries",
+            ],
+            category: "daily",
+            planCode: "plan_3",
+            dataSize: 3,
+            packPrice: 10,
+            validity: 30,
+            desc: "GB",
+            coverage: [
+                "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+            ],
         },
         {
             _id: 4,
@@ -530,7 +581,24 @@ const initialState = {
                         </ul>
                     </>
                 },
-            ]
+            ],
+            id: 4,
+            title: "Unlimited Package",
+            features: [
+                "Keep Yoowifi Device",
+                "Top-up Plan only",
+                "365 Days Validity",
+                "Covers 90 Countries",
+            ],
+            category: "daily",
+            planCode: "plan_4",
+            dataSize: 3,
+            packPrice: 10,
+            validity: 30,
+            desc: "GB",
+            coverage: [
+                "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+            ],
         },
         {
             _id: 5,
@@ -600,7 +668,24 @@ const initialState = {
                         </ul>
                     </>
                 },
-            ]
+            ],
+            id: 5,
+            title: "Lite Package",
+            features: [
+                "Keep Yoowifi Device",
+                "Top-up Plan only",
+                "180 Days Validity",
+                "Covers 60 Countries",
+            ],
+            category: "monthly",
+            planCode: "plan_5",
+            dataSize: 3,
+            packPrice: 10,
+            validity: 30,
+            desc: "GB",
+            coverage: [
+                "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+            ],
         },
         {
             _id: 6,
@@ -670,7 +755,25 @@ const initialState = {
                         </ul>
                     </>
                 },
-            ]
+            ],
+            id: 6,
+            title: "Business Package",
+            features: [
+                "Keep Yoowifi Device",
+                "Top-up Plan only",
+                "365 Days Validity",
+                "Priority support",
+                "Covers 100 Countries",
+            ],
+            category: "volumn",
+            planCode: "plan_6",
+            dataSize: 3,
+            packPrice: 10,
+            validity: 30,
+            desc: "GB",
+            coverage: [
+                "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+            ],
         },
     ]
 };
