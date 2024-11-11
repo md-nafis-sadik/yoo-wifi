@@ -34,10 +34,6 @@ const SharedElements = () => {
 
   return (
     <div className="p-10">
-      {/* Removable */}
-      <DevFAB />
-      {/* Removable */}
-
       <div className="flex flex-col gap-10">
         <div className="flex flex-col gap-3">
           <p>ProductCard</p>

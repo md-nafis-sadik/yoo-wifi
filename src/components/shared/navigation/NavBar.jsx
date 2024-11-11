@@ -26,6 +26,7 @@ import {
 import { MenuIcon } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import AuthDialog from "./AuthDialog";
 
 function NavBar() {
   const { isScrolled, isWhite, isRedBorder, isHome, isBlack, isBannerRoutes } =
@@ -33,11 +34,21 @@ function NavBar() {
   const [isShowMenu, setIsShowMenu] = useState(false);
   const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [showSearchbar, setShowSearchbar] = useState(false);
+  const [isAuthDialogOpen, setIsAuthDialogOpen] = useState(false);
+
+  const menuItems = [
+    { name: "Home", path: commercialRoutes.home.path },
+    { name: "Pocket WIFI", path: commercialRoutes.pocketWifiHome.path },
+    { name: "Router", path: commercialRoutes.routerHome.path },
+    { name: "SIM/eSIM", path: commercialRoutes.simHome.path },
+    { name: "Contact Us", path: commercialRoutes.contact.path },
+    { name: "About Us", path: commercialRoutes.aboutUs.path },
+  ];
 
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 w-full z-[999] duration-300",
+        "fixed top-0 left-0 w-full z-40 duration-300",
         isScrolled || showMegaMenu ? "bg-black" : "",
         !isHome && !isBannerRoutes ? "border-b border-neutral-200" : ""
       )}
@@ -154,85 +165,23 @@ function NavBar() {
                   <CloseIcon />
                 </button>
               </div>
-              <ul className="flex flex-col xl:flex-row xl:items-center 2xl:gap-3">
-                <li>
-                  <Link
-                    className={cn(
-                      "menuItem",
-                      !isRedBorder && isHome
-                        ? "hover:after:bg-white"
-                        : "hover:after:bg-main-600"
-                    )}
-                    to={commercialRoutes.home.path}
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn(
-                      "menuItem",
-                      !isRedBorder && isHome
-                        ? "hover:after:bg-white"
-                        : "hover:after:bg-main-600"
-                    )}
-                    to={commercialRoutes.pocketWifiHome.path}
-                  >
-                    Pocket WIFI
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn(
-                      "menuItem",
-                      !isRedBorder && isHome
-                        ? "hover:after:bg-white"
-                        : "hover:after:bg-main-600"
-                    )}
-                    to={commercialRoutes.routerHome.path}
-                  >
-                    Router
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn(
-                      "menuItem",
-                      !isRedBorder && isHome
-                        ? "hover:after:bg-white"
-                        : "hover:after:bg-main-600"
-                    )}
-                    to={commercialRoutes.simHome.path}
-                  >
-                    SIM/eSIM
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn(
-                      "menuItem",
-                      !isRedBorder && isHome
-                        ? "hover:after:bg-white"
-                        : "hover:after:bg-main-600"
-                    )}
-                    to={commercialRoutes.contact.path}
-                  >
-                    Contact Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={cn(
-                      "menuItem",
-                      !isRedBorder && isHome
-                        ? "hover:after:bg-white"
-                        : "hover:after:bg-main-600"
-                    )}
-                    to={commercialRoutes.aboutUs.path}
-                  >
-                    About Us
-                  </Link>
-                </li>
+              <ul className="flex flex-col xl:flex-row xl:items-center gap-3">
+                {menuItems.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      className={cn(
+                        index === 0 && "menuItem",
+                        !isRedBorder && isHome
+                          ? "hover:after:bg-white after:bg-white after:scale-x-100"
+                          : "hover:after:bg-main-600 after:bg-main-600 after:scale-x-100"
+                      )}
+                      to={item.path}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+
                 {/* mega menu  */}
                 <li className="hidden xl:block">
                   <div
@@ -241,6 +190,10 @@ function NavBar() {
                   >
                     <span>Others</span>
                     <ArrowDownIcon
+                      className={cn(
+                        showMegaMenu ? "-rotate-180" : "-rotate-0",
+                        "transform transition_common duration-150"
+                      )}
                       pathClass={
                         isWhite && !isScrolled && !isBannerRoutes
                           ? "fill-neutral-black"
@@ -329,10 +282,13 @@ function NavBar() {
                   <span>Download APP</span>
                 </Button>
                 <Button
-                  className={"w-10 h-10 rounded-[10px] hidden xl:flex"}
+                  className={
+                    "min-w-10 min-h-10 p-0 rounded-[10px] hidden xl:flex"
+                  }
                   variant="secondary"
+                  onClick={() => setIsAuthDialogOpen(true)}
                 >
-                  <PersonIcon className="h-6 w-6 shrink-0" />
+                  <PersonIcon className="!h-6 !w-6 shrink-0" />
                 </Button>
               </div>
             </div>
@@ -340,6 +296,7 @@ function NavBar() {
         </nav>
       </div>
       <DesktopMegaMenu isShow={showMegaMenu} />
+      <AuthDialog isOpen={isAuthDialogOpen} setIsOpen={setIsAuthDialogOpen} />
     </header>
   );
 }
@@ -640,7 +597,7 @@ export const DesktopMegaMenu = ({ isShow = false }) => {
   return (
     <div
       className={cn(
-        "bg-neutral-black text-white hidden xl:block overflow-hidden duration-300",
+        "bg-neutral-black text-white hidden xl:block overflow-hidden duration-300 absolute w-full left-0",
         isShow ? "max-h-[280px]" : "max-h-0"
       )}
     >

@@ -9,15 +9,15 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
+import NavBarSecondary from "../shared/navigation/NavBarSecondary";
 
 function RouterLayout() {
-
   useSetLocalData("router");
   const { product } = useSelector((state) => state.router);
 
   return (
     <main>
-      <NavBar />
+      <NavBarSecondary />
       <div className="px-4 md:px-10 lg:px-16 pt-24 md:pt-28  relative">
         <div className="containerX">
           <div className="flex flex-col md:flex-row gap-6 sm:gap-10 md:gap-15 pt-6 sm:pt-8 md:pt-10 pb-40 lg:pb-28">
@@ -29,14 +29,12 @@ function RouterLayout() {
                   className="flex flex-col gap-4"
                   collapsible
                 >
-                  {product.tabs.map((tab, index) => (<AccordionItem value={`item-${index + 1}`} key={index}>
-                    <AccordionTrigger>
-                      {tab.title}
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      {tab.content}
-                    </AccordionContent>
-                  </AccordionItem>))}
+                  {product.tabs.map((tab, index) => (
+                    <AccordionItem value={`item-${index + 1}`} key={index}>
+                      <AccordionTrigger>{tab.title}</AccordionTrigger>
+                      <AccordionContent>{tab.content}</AccordionContent>
+                    </AccordionItem>
+                  ))}
                 </Accordion>
               </div>
             </div>

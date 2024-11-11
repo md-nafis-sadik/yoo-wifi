@@ -11,9 +11,6 @@ function CorporateLayout() {
   return (
     <main>
       <CorporateNavbar />
-      {/* Removable */}
-      <DevFAB />
-      {/* Removable */}
       <Outlet />
       <DownloadYoowifi />
       <Footer />

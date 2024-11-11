@@ -12,11 +12,7 @@ const ForBusiness = ({ data = [] }) => {
       <div className="mt-4 md:mt-8 lg:mt-[60px]">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5 lg:gap-8">
           {data?.map((item, index) => (
-            <DetailsCard
-              item={item}
-              key={index}
-              descriptionClassName={"text-center"}
-            />
+            <DetailsCard item={item} key={index} />
           ))}
         </div>
       </div>

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import useGteNavbarStatus from "@/hooks/useGteNavbarStatus";
 import { cn } from "@/lib/utils";
 import {
+  ArrowDownIcon,
   CellphoneIcon,
   CloseIcon,
   commercialRoutes,
@@ -12,56 +13,53 @@ import {
 } from "@/services";
 import { MenuIcon } from "lucide-react";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { DesktopMegaMenu, MobileMegaMenu } from "./NavBar";
 import AuthDialog from "./AuthDialog";
 import useActiveMenuItem from "@/hooks/useActiveMenuItem";
 
-export const corporateMenuItems = [
-  {
-    name: "Iot",
-    path: corporateRoutes.iot.path,
-    activePath: corporateRoutes.iot.activePath,
-  },
-  {
-    name: "Hotel",
-    path: corporateRoutes.hotel.path,
-    activePath: corporateRoutes.hotel.activePath,
-  },
-  {
-    name: "Travel Agency",
-    path: corporateRoutes.travelAgency.path,
-    activePath: corporateRoutes.travelAgency.activePath,
-  },
-  {
-    name: "Maritime Internet",
-    path: corporateRoutes.maritimeInternet.path,
-    activePath: corporateRoutes.maritimeInternet.activePath,
-  },
-  {
-    name: "Office/Roadshow Events",
-    path: corporateRoutes.office.path,
-    activePath: corporateRoutes.office.activePath,
-  },
-  {
-    name: "About Us",
-    path: commercialRoutes.aboutUs.path,
-    activePath: commercialRoutes.aboutUs.activePath,
-  },
-  {
-    name: "Commercial",
-    path: commercialRoutes.aboutUs.path,
-    activePath: commercialRoutes.aboutUs.activePath,
-  },
-];
-
-function CorporateNavbar() {
+const NavBarSecondary = () => {
   const { isScrolled, isRedBorder, isHome, isBlack, isBannerRoutes } =
     useGteNavbarStatus();
   const [isShowMenu, setIsShowMenu] = useState(false);
+  const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [showSearchbar, setShowSearchbar] = useState(false);
   const [isAuthDialogOpen, setIsAuthDialogOpen] = useState(false);
 
-  const menuItems = useActiveMenuItem(corporateMenuItems);
+  const commercialMenuItems = [
+    {
+      name: "Home",
+      path: commercialRoutes.home.path,
+      activePath: commercialRoutes.home.activePath,
+    },
+    {
+      name: "Pocket WIFI",
+      path: commercialRoutes.pocketWifiHome.path,
+      activePath: commercialRoutes.pocketWifiHome.activePath,
+    },
+    {
+      name: "Router",
+      path: commercialRoutes.routerHome.path,
+      activePath: commercialRoutes.routerHome.activePath,
+    },
+    {
+      name: "SIM/eSIM",
+      path: commercialRoutes.simHome.path,
+      activePath: commercialRoutes.simHome.activePath,
+    },
+    {
+      name: "Contact Us",
+      path: commercialRoutes.contact.path,
+      activePath: commercialRoutes.contact.activePath,
+    },
+    {
+      name: "About Us",
+      path: commercialRoutes.aboutUs.path,
+      activePath: commercialRoutes.aboutUs.activePath,
+    },
+  ];
+
+  const menuItems = useActiveMenuItem(commercialMenuItems);
 
   return (
     <header
@@ -73,7 +71,7 @@ function CorporateNavbar() {
       <div className="w-full max-w-[1392px] mx-auto relative">
         <nav
           className={cn(
-            "w-full duration-300 flex items-center lg:gap-10 justify-between px-4 py-2 sm:py-4",
+            "w-full duration-300 flex items-center lg:gap-10 2xl:gap-15 justify-between px-4 py-2 sm:py-4",
             isScrolled ? "text-white" : "text-white xl:text-black-700"
           )}
         >
@@ -162,12 +160,12 @@ function CorporateNavbar() {
                   <CloseIcon />
                 </button>
               </div>
-              <ul className="flex flex-col xl:flex-row xl:items-center 2xl:gap-1">
+              <ul className="flex flex-col xl:flex-row xl:items-center gap-3">
                 {menuItems.map((item, index) => (
                   <li key={index}>
                     <Link
                       className={cn(
-                        "menuItem font-normal hover:after:bg-main-600",
+                        "menuItem hover:after:bg-main-600",
                         item.isActive
                           ? "after:scale-x-100 font-semibold after:bg-main-600"
                           : ""
@@ -178,14 +176,34 @@ function CorporateNavbar() {
                     </Link>
                   </li>
                 ))}
+                {/* mega menu  */}
+                <li className="hidden xl:block">
+                  <div
+                    className="flex items-center justify-between xl:justify-start cursor-pointer w-full max-w-[320px] p-3 rounded-lg xl:rounded-none hover:bg-main-600 xl:w-auto xl:max-w-none xl:p-0 xl:hover:text-inherit xl:hover:bg-transparent hover:text-white"
+                    onClick={() => setShowMegaMenu(!showMegaMenu)}
+                  >
+                    <span>Others</span>
+                    <ArrowDownIcon
+                      className={cn(
+                        showMegaMenu ? "-rotate-180" : "-rotate-0",
+                        "transform transition_common duration-150"
+                      )}
+                      pathClass={
+                        isScrolled ? "fill-white" : "fill-neutral-black"
+                      }
+                    />
+                  </div>
+                </li>
+                <MobileMegaMenu />
               </ul>
+
               <Link
                 className={cn(
                   "menuItem p-3 xl:p-0 text-white xl:text-main-600"
                 )}
                 to={corporateRoutes.home.path}
               >
-                For Yoo
+                Corporate
               </Link>
               <div className="flex flex-col xl:flex-row xl:items-center gap-3 w-full xl:w-auto flex-1 xl:flex-none justify-end xl:justify-center mt-6 xl:mt-0">
                 <label
@@ -234,7 +252,7 @@ function CorporateNavbar() {
                     "min-w-10 min-h-10 p-0 rounded-[10px] hidden xl:flex"
                   }
                   variant="secondary"
-                  onClick={() => setIsAuthDialogOpen(true)}
+                  onClick={() => setIsAuthDialogOpen(!isAuthDialogOpen)}
                 >
                   <PersonIcon className="!h-6 !w-6 shrink-0" />
                 </Button>
@@ -244,9 +262,10 @@ function CorporateNavbar() {
         </nav>
       </div>
 
+      <DesktopMegaMenu isShow={showMegaMenu} />
       <AuthDialog isOpen={isAuthDialogOpen} setIsOpen={setIsAuthDialogOpen} />
     </header>
   );
-}
+};
 
-export default CorporateNavbar;
+export default NavBarSecondary;

@@ -13,7 +13,7 @@ const AwardsAndAchievements = ({ data = {} }) => {
         <div className="w-full lg:w-2/5 flex flex-col">
           {data.details?.map((item, index) => (
             <div
-              className="w-full py-3 md:py-4 border-b border-neutral-200 cursor-default"
+              className="w-full py-3 md:py-4 border-b border-neutral-200 cursor-pointer"
               key={index}
               onClick={() => setSelectedAward(index)}
             >

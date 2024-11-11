@@ -47,7 +47,7 @@ const CountryWiseLocation = () => {
               />
             ))}
           </div>
-          <div className="w-full md:w-full flex-grow min-h-[180px] sm:min-h-[240px] md:min-h-full relative mt-4 md:mt-0 overflow-hidden rounded-s-xl rounded-e-xl md:rounded-s-none border border-neutral-300">
+          <div className="w-full md:w-full flex-grow min-h-[180px] sm:min-h-[240px] md:min-h-full relative mt-4 md:mt-0 overflow-hidden rounded-s-xl rounded-e-xl md:rounded-s-none md:rounded-e-3xl border border-neutral-300">
             <img
               src={images.locationMap}
               alt=""

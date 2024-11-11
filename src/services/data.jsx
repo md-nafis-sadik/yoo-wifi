@@ -14,6 +14,8 @@ import {
   YoutubeThumbnailIcon,
 } from ".";
 
+// c
+
 // h
 
 // n
@@ -177,10 +179,10 @@ export const footerData = {
     {
       title: "FOR YOO",
       links: [
-        { label: "Travel Data", path: "/travel-data" },
+        { label: "Travel Data", path: "/pocket-wifi-details" },
         { label: "Country Coverage", path: "/country-coverage" },
         { label: "Local Data", path: "/local-data" },
-        { label: "Pickup /drop off locations", path: "/pickup-drop-off" },
+        { label: "Pickup /drop off locations", path: "/pick-drop-location" },
         { label: "Products", path: "/products" },
         { label: "How it works", path: "/how-it-works" },
       ],
@@ -198,7 +200,6 @@ export const footerData = {
   ],
 };
 
-
 export const howItWorksData = [
   {
     _id: 1,
@@ -214,7 +215,8 @@ export const howItWorksData = [
     typeSuffix: "(Order by 10am)",
     duration: "3-4 Business day",
     price: 7,
-  }, {
+  },
+  {
     _id: 3,
     type: "Super Express",
     typeSuffix: "(Order by 10am)",
@@ -228,7 +230,7 @@ export const howItWorksData = [
     duration: "3-4 Business day",
     price: 25,
   },
-]
+];
 
 export const rentWifiData = [
   {
@@ -241,42 +243,47 @@ export const rentWifiData = [
   {
     step: "Step-2",
     title: "Select Your Plan",
-    description: "On the app, search for your destination country, choose the data size, and set your start and end dates.",
+    description:
+      "On the app, search for your destination country, choose the data size, and set your start and end dates.",
   },
   {
     step: "Step-3",
     title: "Complete Your Booking",
-    description: "Select your preferred shipping method and proceed to checkout.",
-  }
+    description:
+      "Select your preferred shipping method and proceed to checkout.",
+  },
 ];
 
 export const rentServicesData = [
   {
     _id: 1,
     title: "Local return mailer bag",
-    description: "Simply pack the device and its accessories into the prepaid and return mailer bag any SingPost mailbox",
+    description:
+      "Simply pack the device and its accessories into the prepaid and return mailer bag any SingPost mailbox",
     icon: () => <MailerBugIcon className="w-12 h-12 md:w-10 md:h-10" />,
   },
   {
     _id: 2,
     title: "Self-Return",
-    description: "Simply pack the device and its accessories and you may return at any pickup/Return location.",
+    description:
+      "Simply pack the device and its accessories and you may return at any pickup/Return location.",
     icon: () => <MapLocatedIcon className="w-12 h-12 md:w-10 md:h-10" />,
   },
   {
     _id: 3,
     title: "International Courier",
-    description: "Contact Local DHL to pickup device if you have a return mailer bag / arrange your own Courier",
+    description:
+      "Contact Local DHL to pickup device if you have a return mailer bag / arrange your own Courier",
     icon: () => <GlobalRawIcon className="w-12 h-12 md:w-10 md:h-10" />,
-  }
+  },
 ];
-
 
 export const selfReturnData = [
   {
     _id: 1,
     title: "Login to Yoowifi App",
-    description: "Start by visiting any of our 20+ pickup and return locations. On the app, go to 'My Data', select the device you wish to return, and tap on 'Return Device'.",
+    description:
+      "Start by visiting any of our 20+ pickup and return locations. On the app, go to 'My Data', select the device you wish to return, and tap on 'Return Device'.",
   },
   {
     _id: 2,
@@ -286,7 +293,8 @@ export const selfReturnData = [
   {
     _id: 3,
     title: "Scan Device QR Code",
-    description: "Scan the QR code located at the back of the device to complete the return.",
+    description:
+      "Scan the QR code located at the back of the device to complete the return.",
   },
 ];
 
@@ -294,12 +302,14 @@ export const topUpData = [
   {
     _id: 1,
     title: "Select Your Device",
-    description: "Open the Yoowifi app, go to My Data, and select the device you want to top up.",
+    description:
+      "Open the Yoowifi app, go to My Data, and select the device you want to top up.",
   },
   {
     _id: 2,
     title: "Choose Your Plan",
-    description: "Click on Add Data, select your desired country and plan, then set the start and end dates.",
+    description:
+      "Click on Add Data, select your desired country and plan, then set the start and end dates.",
   },
   {
     _id: 3,
@@ -312,19 +322,21 @@ export const affiliateServiceData = [
   {
     _id: 1,
     title: "Select Your Device",
-    description: "Open the Yoowifi app, go to My Data, and select the device you want to top up.",
-    icon: () => <GlobalElipseIcon className="w-12 h-12 md:w-10 md:h-10" />
+    description:
+      "Open the Yoowifi app, go to My Data, and select the device you want to top up.",
+    icon: () => <GlobalElipseIcon className="w-12 h-12 md:w-10 md:h-10" />,
   },
   {
     _id: 2,
     title: "Choose Your Plan",
-    description: "Click on Add Data, select your desired country and plan, then set the start and end dates.",
-    icon: () => <MobileWifiIcon className="w-12 h-12 md:w-10 md:h-10" />
+    description:
+      "Click on Add Data, select your desired country and plan, then set the start and end dates.",
+    icon: () => <MobileWifiIcon className="w-12 h-12 md:w-10 md:h-10" />,
   },
   {
     _id: 3,
     title: "Proceed to Checkout",
     description: "Confirm your selections and proceed to checkout.",
-    icon: () => <YoutubeThumbnailIcon className="w-12 h-12 md:w-10 md:h-10" />
+    icon: () => <YoutubeThumbnailIcon className="w-12 h-12 md:w-10 md:h-10" />,
   },
 ];

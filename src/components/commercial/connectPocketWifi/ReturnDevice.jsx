@@ -32,7 +32,11 @@ const ReturnDevice = () => {
               title={card.title}
               description={card.description}
               buttonText={card.buttonText}
-              stepsButton={{ to: "/locations", text: "View steps" }}
+              stepsButton={
+                index === 1
+                  ? { to: "/how-it-works/#self-return", text: "View steps" }
+                  : null
+              }
             />
           ))}
         </div>
