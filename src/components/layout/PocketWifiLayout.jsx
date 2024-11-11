@@ -27,17 +27,15 @@ function PocketWifiLayout() {
                   className="flex flex-col gap-4"
                   collapsible
                 >
-                  <AccordionItem value="item-1">
-                    <AccordionTrigger>Information</AccordionTrigger>
+                  {product.tabs.map((tab, index) => (<AccordionItem value={`item-${index + 1}`} key={index}>
+                    <AccordionTrigger>
+                      {tab.title}
+                    </AccordionTrigger>
                     <AccordionContent>
-                      Enjoy High-Speed Internet Access Immediate Connect up to B
-                      Devices 4G Internet Speed Up to 12 hours of device battery
-                      Ycxywifi 24/7 Customer Support Cornes Pocket Wifi Device,
-                      Charging Cable, Pouch Extend the days or add plans anytime
-                      https-/&oowifi
+                      {tab.content}
                     </AccordionContent>
-                  </AccordionItem>
-      
+                  </AccordionItem>))}
+
                 </Accordion>
               </div>
             </div>
