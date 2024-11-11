@@ -39,7 +39,7 @@ function NavBar() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 w-full z-[999] duration-300",
+        "fixed top-0 left-0 w-full z-40 duration-300",
         isScrolled || showMegaMenu ? "bg-black" : "",
         !isHome && !isBannerRoutes ? "border-b border-neutral-200" : ""
       )}
@@ -243,6 +243,10 @@ function NavBar() {
                   >
                     <span>Others</span>
                     <ArrowDownIcon
+                      className={cn(
+                        showMegaMenu ? "-rotate-180" : "-rotate-0",
+                        "transform transition_common duration-150"
+                      )}
                       pathClass={
                         isWhite && !isScrolled && !isBannerRoutes
                           ? "fill-neutral-black"
@@ -331,11 +335,13 @@ function NavBar() {
                   <span>Download APP</span>
                 </Button>
                 <Button
-                  className={"w-10 h-10 rounded-[10px] hidden xl:flex"}
+                  className={
+                    "min-w-10 min-h-10 p-0 rounded-[10px] hidden xl:flex"
+                  }
                   variant="secondary"
                   onClick={() => setIsAuthDialogOpen(true)}
                 >
-                  <PersonIcon className="h-6 w-6 shrink-0" />
+                  <PersonIcon className="!h-6 !w-6 shrink-0" />
                 </Button>
               </div>
             </div>
@@ -644,7 +650,7 @@ export const DesktopMegaMenu = ({ isShow = false }) => {
   return (
     <div
       className={cn(
-        "bg-neutral-black text-white hidden xl:block overflow-hidden duration-300",
+        "bg-neutral-black text-white hidden xl:block overflow-hidden duration-300 absolute w-full left-0",
         isShow ? "max-h-[280px]" : "max-h-0"
       )}
     >

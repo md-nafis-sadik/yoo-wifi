@@ -25,7 +25,7 @@ function CorporateNavbar() {
   return (
     <header
       className={cn(
-        "sticky top-0 left-0 w-full z-[999] duration-300 border-b border-neutral-200",
+        "sticky top-0 left-0 w-full z-40 duration-300 border-b border-neutral-200",
         isScrolled ? "bg-black border-black-900" : ""
       )}
     >
@@ -230,11 +230,13 @@ Commercial
                   <span>Download APP</span>
                 </Button>
                 <Button
-                  className={"w-10 h-10 rounded-[10px] hidden xl:flex"}
+                  className={
+                    "min-w-10 min-h-10 p-0 rounded-[10px] hidden xl:flex"
+                  }
                   variant="secondary"
                   onClick={() => setIsAuthDialogOpen(true)}
                 >
-                  <PersonIcon className="h-6 w-6 shrink-0" />
+                  <PersonIcon className="!h-6 !w-6 shrink-0" />
                 </Button>
               </div>
             </div>
