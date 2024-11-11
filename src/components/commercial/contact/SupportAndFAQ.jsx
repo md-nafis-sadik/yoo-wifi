@@ -47,15 +47,15 @@ const SupportAndFAQ = ({ data }) => {
             {firstHalf?.map((faq, index) => (
               <AccordionItem
                 value={`item-${index + 1}`}
-                className="h-fit bg-white px-4 md:px-6 py-4"
+                className="h-fit bg-white py-4"
                 key={index}
               >
-                <AccordionTrigger className="text-start text-black-900 text-base md:text-lg font-semibold !leading-[1.2] md:!leading-[1.4] px-0">
+                <AccordionTrigger className="text-start text-black-900 text-base md:text-lg font-semibold !leading-[1.2] md:!leading-[1.4] px-4 md:px-6">
                   {faq?.question}
                 </AccordionTrigger>
                 <AccordionContent
                   className={
-                    "text-xs md:text-lg font-normal !leading-[1.2] md:!leading-[1.4] text-black-600"
+                    "text-xs md:text-lg font-normal !leading-[1.2] md:!leading-[1.4] text-black-600 px-4 md:px-6"
                   }
                 >
                   {faq?.answer}
@@ -73,15 +73,15 @@ const SupportAndFAQ = ({ data }) => {
             {secondHalf?.map((faq, index) => (
               <AccordionItem
                 value={`item-${index + 1 + firstHalf.length}`}
-                className="h-fit bg-white px-4 md:px-6 py-4"
+                className="h-fit bg-white py-4"
                 key={index}
               >
-                <AccordionTrigger className="text-start text-black-900 text-base md:text-lg font-semibold !leading-[1.2] md:!leading-[1.4] px-0">
+                <AccordionTrigger className="text-start text-black-900 text-base md:text-lg font-semibold !leading-[1.2] md:!leading-[1.4] px-4 md:px-6">
                   {faq?.question}
                 </AccordionTrigger>
                 <AccordionContent
                   className={
-                    "text-xs md:text-lg font-normal !leading-[1.2] md:!leading-[1.4] text-black-600"
+                    "text-xs md:text-lg font-normal !leading-[1.2] md:!leading-[1.4] text-black-600 px-4 md:px-6"
                   }
                 >
                   {faq?.answer}

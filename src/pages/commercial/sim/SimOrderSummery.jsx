@@ -46,7 +46,7 @@ function SimOrderSummery() {
     <div className="w-full">
       <div className="w-full  ">
         <h4 className="text-black-900 text-base sm:text-lg md:text-2xl font-bold">
-          Plan Summary
+          Order Summary
         </h4>
         <div className=" bg-neutral-100 rounded-2xl py-6 px-4 sm:p-8 md:p-10 divide-y divide-neutral-300 mt-4 sm:mt-6">
           {/*  */}

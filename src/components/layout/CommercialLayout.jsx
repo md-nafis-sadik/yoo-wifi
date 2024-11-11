@@ -1,21 +1,25 @@
 import useSetLocalData from "@/hooks/useSetLocalData";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Footer from "../shared/navigation/Footer";
 import NavBar from "../shared/navigation/NavBar";
 import DevFAB from "../shared/others/DevFAB";
 import DownloadYoowifi from "../shared/others/DownloadYoowifi";
 import useScrollToTop from "@/hooks/useScrollToTop";
+import NavBarSecondary from "../shared/navigation/NavBarSecondary";
 
 function CommercialLayout() {
   useSetLocalData("commercialLayout");
   useScrollToTop();
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   return (
     <main>
       {/* Removable */}
       <DevFAB />
       {/* Removable */}
-      <NavBar />
+      {isHome ? <NavBar /> : <NavBarSecondary />}
+
       <Outlet />
       <DownloadYoowifi />
       <Footer />
