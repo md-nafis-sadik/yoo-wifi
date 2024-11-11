@@ -15,6 +15,7 @@ import { MenuIcon } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { DesktopMegaMenu, MobileMegaMenu } from "./NavBar";
+import AuthDialog from "./AuthDialog";
 
 const NavBarSecondary = () => {
   const { isScrolled, isRedBorder, isHome, isBlack, isBannerRoutes } =
@@ -22,6 +23,7 @@ const NavBarSecondary = () => {
   const [isShowMenu, setIsShowMenu] = useState(false);
   const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [showSearchbar, setShowSearchbar] = useState(false);
+  const [isAuthDialogOpen, setIsAuthDialogOpen] = useState(false);
 
   return (
     <header
@@ -237,6 +239,7 @@ const NavBarSecondary = () => {
                 <Button
                   className={"w-10 h-10 rounded-[10px] hidden xl:flex"}
                   variant="secondary"
+                  onClick={() => setIsAuthDialogOpen(!isAuthDialogOpen)}
                 >
                   <PersonIcon className="h-6 w-6 shrink-0" />
                 </Button>
@@ -247,6 +250,7 @@ const NavBarSecondary = () => {
       </div>
 
       <DesktopMegaMenu isShow={showMegaMenu} />
+      <AuthDialog isOpen={isAuthDialogOpen} setIsOpen={setIsAuthDialogOpen} />
     </header>
   );
 };

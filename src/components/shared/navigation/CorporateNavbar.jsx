@@ -13,12 +13,14 @@ import {
 import { MenuIcon } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import AuthDialog from "./AuthDialog";
 
 function CorporateNavbar() {
   const { isScrolled, isRedBorder, isHome, isBlack, isBannerRoutes } =
     useGteNavbarStatus();
   const [isShowMenu, setIsShowMenu] = useState(false);
   const [showSearchbar, setShowSearchbar] = useState(false);
+  const [isAuthDialogOpen, setIsAuthDialogOpen] = useState(false);
 
   return (
     <header
@@ -230,6 +232,7 @@ Commercial
                 <Button
                   className={"w-10 h-10 rounded-[10px] hidden xl:flex"}
                   variant="secondary"
+                  onClick={() => setIsAuthDialogOpen(true)}
                 >
                   <PersonIcon className="h-6 w-6 shrink-0" />
                 </Button>
@@ -238,6 +241,8 @@ Commercial
           </div>
         </nav>
       </div>
+
+      <AuthDialog isOpen={isAuthDialogOpen} setIsOpen={setIsAuthDialogOpen} />
     </header>
   );
 }
