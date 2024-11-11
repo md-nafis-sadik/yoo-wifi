@@ -4,8 +4,8 @@ import { useSelector } from "react-redux";
 
 function RouterCartFooter({
   isActive = false,
-  prevHandler = () => {},
-  nextHandler = () => {},
+  prevHandler = () => { },
+  nextHandler = () => { },
   ...props
 }) {
   const { product, cart } = useSelector((state) => state.router);

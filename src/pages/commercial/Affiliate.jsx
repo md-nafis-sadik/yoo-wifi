@@ -1,9 +1,14 @@
 import AffiliateService from '@/components/commercial/affiliate/AffiliateService';
+import LetsTalk from '@/components/commercial/contact/LetsTalk';
 import CorporateBanner from '@/components/shared/others/CorporateBanner';
 import SectionHeader from '@/components/shared/others/SectionHeader';
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 const Affiliate = () => {
+
+    const { contact, socialLinks } = useSelector((state) => state.contact);
+
     return (
         <div>
             <CorporateBanner
@@ -25,6 +30,11 @@ const Affiliate = () => {
             </section>
 
             <AffiliateService />
+
+            <LetsTalk
+                data={contact}
+                socialLinks={socialLinks}
+            />
         </div>
     );
 };

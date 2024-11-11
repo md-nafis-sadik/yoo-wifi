@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 function PocketWifiCartFooter({
   isActive = false,
-  prevHandler = () => {},
-  nextHandler = () => {},
+  prevHandler = () => { },
+  nextHandler = () => { },
   ...props
 }) {
   const { product, cart } = useSelector((state) => state.pocketWifi);
@@ -18,7 +18,7 @@ function PocketWifiCartFooter({
   return (
     <div
       className={cn(
-        "w-full py-4 px-4 sm:px-8 lg:px-16 bg-white shadow-mid fixed bottom-0 left-0 z-10"
+        "w-full py-4 px-4 sm:px-8 lg:px-16 bg-white shadow-mid fixed bottom-0 left-0 z-20"
       )}
       {...props}
     >

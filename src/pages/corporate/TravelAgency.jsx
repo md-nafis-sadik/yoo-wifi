@@ -11,7 +11,7 @@ const TravelAgency = () => {
     const { contact, socialLinks } = useSelector((state) => state.contact);
 
     return (
-        <Fragment>
+        <div className="overflow-hidden w-full">
             <CorporateBanner
                 pageTitle="TRAVEL AGENCY"
                 description="Draw up information for your clients at the speed of lightning through our WiFi solutions. Communicate effectively with partners and avoid the frustration of a weak connection or an unreliable signal strength."
@@ -27,7 +27,7 @@ const TravelAgency = () => {
                 data={contact}
                 socialLinks={socialLinks}
             />
-        </Fragment>
+        </div>
     );
 };
 
