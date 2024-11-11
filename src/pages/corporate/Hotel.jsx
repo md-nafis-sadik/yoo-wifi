@@ -11,7 +11,7 @@ const Hotel = () => {
     const { contact, socialLinks } = useSelector((state) => state.contact);
 
     return (
-        <Fragment>
+        <div className="overflow-hidden w-full">
             <CorporateBanner
                 pageTitle="HOTEL"
                 description="Turn your hotel into a home away from home with our top-speed internet connectivity! Your guests can remain productive no matter where they are, and your business can stand out from the competition."
@@ -27,7 +27,7 @@ const Hotel = () => {
                 data={contact}
                 socialLinks={socialLinks}
             />
-        </Fragment>
+        </div>
     );
 };
 
