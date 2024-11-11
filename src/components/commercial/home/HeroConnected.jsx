@@ -8,16 +8,16 @@ function HeroConnected() {
   const { products } = useSelector((state) => state.shared);
   const navigate = useNavigate();
   return (
-    <div className="flex-full min-h-full flex items-end bg-black text-white pt-20 sm:pt-28 xl:pt-40 px-4 sm:px-10 md:px-16 ">
+    <div className="flex-full min-h-full flex items-end bg-black text-white pt-16 sm:pt-28 xl:pt-40 px-4 sm:px-10 md:px-16 ">
       <div className="w-full max-w-[1190px] mx-auto">
         <h1 className="text-3xl sm:text-5xl md:text-7xl xl:text-[7.5rem] leading-[115%] xl:!leading-[94px] font-sansPro uppercase font-extrabold text-center lg:text-left">
           Stay Connected <br /> Anytime, Anywhere
         </h1>
 
         <div className="mt-4 sm:mt-6 md:mt-7 ">
-          <div className="flex flex-col gap-10 sm:gap-12 md:gap-14 w-full">
-            <p className="text-sm sm:text-lg md:text-2xl text-black-200 text-center lg:text-left">
-              Stay Connected Anytime, Anywhere
+          <div className="flex flex-col gap-6 sm:gap-12 md:gap-14 w-full">
+            <p className="text-sm sm:text-lg md:text-2xl text-black-200 text-center lg:text-left hidden sm:block">
+              Seamless Connectivity, Anytime, Anywhere
             </p>
             <div className="grid grid-cols-3 w-full max-w-[460px] mx-auto lg:mx-0 gap-2 sm:gap-3">
               {products?.map((item, index) => (
@@ -31,14 +31,14 @@ function HeroConnected() {
           </div>
 
           <div className="w-full flex flex-col-reverse lg:flex-row justify-between items-center lg:items-end">
-            <HeroChildSlides />
-            <div className="w-full max-w-[328px] sm:max-w-[420px] lg:max-w-[620px] mx-auto lg:mx-0 lg:mr-16 mt-10 lg:-mt-[314px] relative">
+            <HeroChildSlides wrapperClass="pt-6 sm:pt-10 lg:pt-16" />
+            <div className="w-full max-w-[210px] sm:max-w-[420px] lg:max-w-[620px] mx-auto lg:mx-0 lg:mr-16 mt-6 sm:mt-10 lg:-mt-[314px] relative">
               <img src={images.heroConnected} alt="" className="w-full" />
 
               <img
                 src={images.discount}
                 alt=""
-                className="w-24 sm:w-28 lg:w-32 absolute top-6 sm:top-10 left-14 sm:left-12 md:left-auto md:-right-12"
+                className="w-12 sm:w-28 lg:w-32 absolute top-6 sm:top-10 left-14 sm:left-12 md:left-auto md:-right-12"
               />
             </div>
           </div>

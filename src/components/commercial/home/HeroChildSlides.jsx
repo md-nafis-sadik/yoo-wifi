@@ -8,7 +8,7 @@ function HeroChildSlides({
   selectedClass = "bg-main-750",
   defaultClass = "bg-main-60",
 }) {
-  const options = { align: "start", loop: false, draggable: false, loop: true };
+  const options = { align: "start", loop: true, watchDrag: false };
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
     Autoplay({ delay: 2000 }),
   ]);

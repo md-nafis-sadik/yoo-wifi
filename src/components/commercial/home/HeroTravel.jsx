@@ -15,7 +15,7 @@ function HeroTravel() {
         </h1>
 
         <div className="flex flex-col-reverse lg:flex-col gap-20 lg:gap-0">
-          <div className="w-[380px] sm:w-[520px] lg:max-w-[720px] -mt-14 mx-auto relative duration-300 z-20">
+          <div className="w-[380px] sm:w-[520px] lg:max-w-[720px] -mt-10 xl:-mt-14 mx-auto relative duration-300 z-20">
             <img
               src={images.heroTravel}
               alt=""

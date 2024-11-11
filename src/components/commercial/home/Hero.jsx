@@ -9,7 +9,11 @@ import HeroDiscover from "./HeroDiscover";
 import HeroTravel from "./HeroTravel";
 
 function Hero() {
-  const options = { axis: "y", loop: true };
+  const options = {
+    axis: "y",
+    loop: true,
+    watchDrag: false,
+  };
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
     Autoplay({ delay: 6000 }),
   ]);
@@ -29,7 +33,7 @@ function Hero() {
           className={cn(
             "flex touch-pinch-zoom  flex-col",
             selectedIndex == 0 &&
-              "h-[886px] sm:h-[640px] md:h-[1190px] lg:h-[920px]",
+              "h-[740px] sm:h-[640px] md:h-[1190px] lg:h-[920px]",
             selectedIndex == 1 &&
               "h-[740px] sm:h-[948px] md:h-[1008px] lg:h-[920px]",
             selectedIndex == 2 &&
