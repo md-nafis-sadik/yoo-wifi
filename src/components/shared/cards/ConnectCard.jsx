@@ -15,11 +15,11 @@ const ConnectCard = ({ item, containerClassName, ...props }) => {
         {item.icon}
       </div>
 
-      <h2 className="text-black-700 text-base md:text-2xl !leading-[1.4] mt-6 md:mt-12 lg:mt-[60px] font-bold line-clamp-1" title={item.title}>
+      <h2 className="text-black-700 text-[18px] md:text-2xl !leading-[1.4] mt-6 md:mt-12 lg:mt-[60px] font-bold line-clamp-1" title={item.title}>
         {item.title}
       </h2>
 
-      <p className="text-base md:text-lg text-black-600 !leading-[1.4] mt-3">
+      <p className="text-sm md:text-[18px] text-black-600 !leading-[1.4] mt-2 md:mt-3">
         {item.description}
       </p>
 
