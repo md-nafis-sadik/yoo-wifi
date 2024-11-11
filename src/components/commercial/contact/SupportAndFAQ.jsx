@@ -50,7 +50,7 @@ const SupportAndFAQ = ({ data }) => {
                 className="h-fit bg-white px-4 md:px-6 py-4"
                 key={index}
               >
-                <AccordionTrigger className="text-start text-black-900 text-base md:text-lg font-semibold !leading-[1.2] md:!leading-[1.4]">
+                <AccordionTrigger className="text-start text-black-900 text-base md:text-lg font-semibold !leading-[1.2] md:!leading-[1.4] px-0">
                   {faq?.question}
                 </AccordionTrigger>
                 <AccordionContent
@@ -76,7 +76,7 @@ const SupportAndFAQ = ({ data }) => {
                 className="h-fit bg-white px-4 md:px-6 py-4"
                 key={index}
               >
-                <AccordionTrigger className="text-start text-black-900 text-base md:text-lg font-semibold !leading-[1.2] md:!leading-[1.4]">
+                <AccordionTrigger className="text-start text-black-900 text-base md:text-lg font-semibold !leading-[1.2] md:!leading-[1.4] px-0">
                   {faq?.question}
                 </AccordionTrigger>
                 <AccordionContent

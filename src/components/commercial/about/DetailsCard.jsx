@@ -33,7 +33,7 @@ const DetailsCard = ({ item, titleClassName, descriptionClassName }) => {
         {item?.description}
       </p>
 
-      <Button className={"mt-3 md:mt-4 w-full md:w-fit h-11 md:h-[51px]"}>
+      <Button className={"mt-3 md:mt-6 w-full md:w-fit h-11 md:h-[51px]"}>
         <span>Explore Products</span>
         <ArrowUpRightIcon className={"!h-6 !w-6 shrink-0"} />
       </Button>
