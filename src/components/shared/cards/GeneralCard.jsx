@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowUpRightIcon } from "@/services";
+import { Link } from "react-router-dom";
 
 const GeneralCard = ({
   title,
   description,
   buttonText = "View Locations",
+  stepsButton,
   onClick = () => {},
   className = "",
 }) => (
@@ -23,13 +25,23 @@ const GeneralCard = ({
         {description}
       </p>
     </div>
-    <Button
-      className="p-2.5 sm:px-4 md:px-6 sm:py-3 md:py-4 rounded sm:rounded-xl"
-      onClick={onClick}
-    >
-      <span>{buttonText}</span>
-      <ArrowUpRightIcon />
-    </Button>
+
+    <div className="flex items-center gap-4">
+      <Button
+        className="p-2.5 sm:px-4 md:px-6 sm:py-3 md:py-4 rounded sm:rounded-xl"
+        onClick={onClick}
+      >
+        <span>{buttonText}</span>
+        <ArrowUpRightIcon />
+      </Button>
+      {stepsButton && (
+        <Link to={stepsButton.to}>
+          <Button variant="secondary" className={"px-6 md:px-8"}>
+            {stepsButton.text}
+          </Button>
+        </Link>
+      )}
+    </div>
   </div>
 );
 

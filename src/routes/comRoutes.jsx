@@ -5,6 +5,7 @@ const {
   commercialLayout,
   contact,
   home,
+  howToSetupSim,
   pocketWifiLayout,
   pocketWifiHome,
   pocketWifiRegion,
@@ -35,7 +36,10 @@ const {
   simOrderSummery,
   countryCoverage,
   countryCoverageFilter,
-  packageDetails, howItWorks, affiliate,
+  howToConnectPocketWifi,
+  packageDetails,
+  howItWorks,
+  affiliate,
   pickDropLocation,
 } = routes || {};
 
@@ -95,6 +99,14 @@ export const comRoutes = [
       {
         path: pickDropLocation.path,
         element: pickDropLocation.element,
+      },
+      {
+        path: howToSetupSim.path,
+        element: howToSetupSim.element,
+      },
+      {
+        path: howToConnectPocketWifi.path,
+        element: howToConnectPocketWifi.element,
       },
     ],
   },

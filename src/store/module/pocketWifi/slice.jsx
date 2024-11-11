@@ -46,9 +46,9 @@ const initialState = {
     ],
     tabs: [
       {
-        title: "Descriptions",
+        title: "Description",
         content:
-          "It is easy to use and boasts a sleek, minimalist design. Simply turn it on, connect your devices, and you're good to go! No more worrying about complicated setup processes or bulky equipment. But that's not all — our Pocket Wifi devices also offer strong and reliable connectivity, ensuring that you stay connected no matter where you are. Whether you're on a business trip or a family vacation, you can enjoy high-speed internet without any interruptions.",
+          "It is easy to use and boasts a sleek, minimalist design. Simply turn it on, connect your devices, and you’re good to go! No more worrying about complicated setup processes or bulky equipment. But that’s not all – our Pocket WiFi devices also offer strong and reliable connectivity, ensuring that you stay connected no matter where you are. Whether you’re on a business trip or a family vacation, you can enjoy high-speed internet without any interruptions.",
       },
       {
         title: "Specifications",
@@ -56,14 +56,14 @@ const initialState = {
           "CPU: SC8310LTE-FDD：Bands 1 / 2 / 3 / 4 / 5 / 7 / 8 / 12 / 13 / 17 / 18 / 20 / 25 / 26 /28 / 66\nLTE-TDD：Bands 34 / 38 / 39 / 40 / 41 (194M)\n WCDMA：Bands 1 / 2 / 4 / 5 / 8 \nTD-SCDMA：NO CDMA：NO\nEVDO：NO\nGSM：850 / 900 / 1800 / 1900 \nMax speed：Download 150Mbps  /  Upload 50Mbps \nWi-Fi：2.4GHz  802.11 b / g / n 1T1R \nMax WiFi Connection：8\nBattery：3000mAh \nPorts：Type-C  USB\nInput： 5V – 1A \nItem size：120mm x 64.6mm x 12mm\nItem weight：112g\nShell Material：Plastics",
       },
       {
-        title: "Country Coverage",
+        title: "What's Included",
         content:
-          "Albania, Andorra, Armenia, Australia, Austria, Bahrain, Bangladesh, Belgium, Bosnia and Herzegovina, Brunei, Bulgaria, Cambodia, Canada, China, Croatia, Cyprus, Czech Republic, Denmark, Egypt, Estonia, Finland, France, Georgia, Germany, Gibraltar, Greece, Guernsey, Hong Kong, Hungary, Iceland, India, Indonesia, Ireland, Isle of Man, Israel, Italy, Japan, Jersey, Jordan, Kazakhstan, Kuwait, Laos, Latvia, Liechtenstein Lithuania, Luxembourg, Macau, Macedonia, Malaysia, Malta, Mexico, Monaco, Montenegro, Myanmar, Netherlands, New Zealand, Norway, Oman, Pakistan, Philippines, Poland, Portugal, Qatar, Reunion, Romania, Russia, San Marino, Saudi Arabia, Serbia, Slovakia, Slovenia, South Korea, Spain, Sri Lanka, Sweden, Switzerland, Taiwan, Thailand, Turkey, UAE, Ukraine, United Kingdom, USA, Uzbekistan, Vatican, Vietnam",
+          "50GB global data is applicable to 90 countries.\nSpeed of service is dependent on the mobile network partner.\nFor order cancellation, a charge of 10% of the order will apply.\nGeneral terms and conditions apply.\nYoowifi reserved the rights to make changes anytime.",
       },
       {
         title: "Terms & Conditions",
         content:
-          "50GB global data is applicable to 90 countries.\nSpeed of service is dependent on the mobile network partner.\nFor order cancellation, a charge of 10% of the order will apply.\nGeneral terms and conditions apply.\nYoowifi reserved the rights to make changes anytime.",
+          "Albania, Andorra, Armenia, Australia, Austria, Bahrain, Bangladesh, Belgium, Bosnia and Herzegovina, Brunei, Bulgaria, Cambodia, Canada, China, Croatia, Cyprus, Czech Republic, Denmark, Egypt, Estonia, Finland, France, Georgia, Germany, Gibraltar, Greece, Guernsey, Hong Kong, Hungary, Iceland, India, Indonesia, Ireland, Isle of Man, Israel, Italy, Japan, Jersey, Jordan, Kazakhstan, Kuwait, Laos, Latvia, Liechtenstein Lithuania, Luxembourg, Macau, Macedonia, Malaysia, Malta, Mexico, Monaco, Montenegro, Myanmar, Netherlands, New Zealand, Norway, Oman, Pakistan, Philippines, Poland, Portugal, Qatar, Reunion, Romania, Russia, San Marino, Saudi Arabia, Serbia, Slovakia, Slovenia, South Korea, Spain, Sri Lanka, Sweden, Switzerland, Taiwan, Thailand, Turkey, UAE, Ukraine, United Kingdom, USA, Uzbekistan, Vatican, Vietnam",
       },
     ],
     images: [

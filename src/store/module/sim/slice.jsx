@@ -33,7 +33,7 @@ const initialState = {
     ],
     tabs: [
       {
-        title: "Descriptions",
+        title: "Description",
         content:
           "Our Sim/E-Sim is perfect for those who value convenience and ease of use. You can activate it within minutes and start enjoying all the benefits that come with it. Whether you’re a student, a working professional, or anyone who needs a reliable telecommunications service, our Sim/E-Sim is the perfect solution for you. We offer competitive pricing, flexible plans, and excellent customer support to ensure that you get the best value for your money!",
       },
