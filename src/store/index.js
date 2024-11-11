@@ -4,13 +4,13 @@ import { apiSlice } from "./module/api/apiSlice";
 import authSlice from "./module/auth/slice";
 import contactSlice from "./module/contact/contactSlice";
 import countrySlice from "./module/country/countrySlice";
+import dataPlanSlice from "./module/dataPlan/dataPlanSlice";
 import howItWorksReducer from "./module/howItWorks/HowItWorksSlice";
 import pocketWifiSlice from "./module/pocketWifi/slice";
 import routerSlice from "./module/router/slice";
 import sharedSlice from "./module/shared/sharedSlice";
 import simSlice from "./module/sim/slice";
 import testimonialsSlice from "./module/testimonials/testimonialsSlice";
-import dataPlanSlice from "./module/dataPlan/dataPlanSlice";
 
 export const store = configureStore({
   reducer: {
@@ -53,6 +53,7 @@ export const store = configureStore({
           "pocketWifi.benefitsData",
           "shared.products",
           "contact.socialLinks",
+          "country.packages",
           "pocketWifi.cart.startDate",
           "howItWorks",
         ],
