@@ -15,9 +15,6 @@ function CommercialLayout() {
 
   return (
     <main>
-      {/* Removable */}
-      <DevFAB />
-      {/* Removable */}
       {isHome ? <NavBar /> : <NavBarSecondary />}
 
       <Outlet />
