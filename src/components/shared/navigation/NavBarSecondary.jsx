@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 import { DesktopMegaMenu, MobileMegaMenu } from "./NavBar";
 import AuthDialog from "./AuthDialog";
 import useActiveMenuItem from "@/hooks/useActiveMenuItem";
+import LoginRequiredDialog from "./LoginRequiredDialog";
 
 const NavBarSecondary = () => {
   const { isScrolled, isRedBorder, isHome, isBlack, isBannerRoutes } =
@@ -25,6 +26,7 @@ const NavBarSecondary = () => {
   const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [showSearchbar, setShowSearchbar] = useState(false);
   const [isAuthDialogOpen, setIsAuthDialogOpen] = useState(false);
+  const [loginRequiredDialogOpen, setLoginRequiredDialogOpen] = useState(false);
 
   const commercialMenuItems = [
     {
@@ -243,6 +245,7 @@ const NavBarSecondary = () => {
                   className={cn(
                     "px-6 md:py-3 rounded-[10px] w-full max-w-[320px] xl:w-auto bg-main-600 text-white"
                   )}
+                  onClick={() => setLoginRequiredDialogOpen(true)}
                 >
                   <CellphoneIcon color="#fff" className="w-5 h-5 shrink-0" />
                   <span>Download APP</span>
@@ -264,6 +267,11 @@ const NavBarSecondary = () => {
 
       <DesktopMegaMenu isShow={showMegaMenu} />
       <AuthDialog isOpen={isAuthDialogOpen} setIsOpen={setIsAuthDialogOpen} />
+      <LoginRequiredDialog
+        isOpen={loginRequiredDialogOpen}
+        setIsOpen={setLoginRequiredDialogOpen}
+        setIsAuthDialogOpen={setIsAuthDialogOpen}
+      />
     </header>
   );
 };
