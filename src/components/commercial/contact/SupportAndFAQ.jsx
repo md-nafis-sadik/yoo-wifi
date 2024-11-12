@@ -101,16 +101,20 @@ const SupportAndFAQ = ({ data }) => {
           </p>
 
           <div className="flex gap-3 mt-6">
-            <Button
-              variant="secondary"
-              size="lg"
-              className={"text-base font-semibold !leading-[1.2]"}
-            >
-              Get In Touch
-            </Button>
-            <Button color="white" className={"h-[52px] w-[52px]"}>
-              <ArrowUpRightIcon className={"shrink-0 !h-6 !w-6"} />
-            </Button>
+            <a href="https://tidycal.com/netrosystems/discussion" target="_blank">
+              <Button
+                variant="secondary"
+                className={"!text-base font-semibold !leading-[1.2] w-[177px] h-[52px]"}
+              >
+                Get In Touch
+              </Button>
+            </a>
+
+            <a href="https://tidycal.com/netrosystems/discussion" target="_blank">
+              <Button color="white" className={"h-[52px] w-[52px]"}>
+                <ArrowUpRightIcon className={"shrink-0 !h-6 !w-6"} />
+              </Button>
+            </a>
           </div>
         </div>
       </div>
