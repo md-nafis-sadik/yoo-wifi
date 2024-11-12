@@ -1,4 +1,4 @@
-import { LocationMarkerIcon, RentIcon, ReturnIcon } from "@/services";
+import { commercialRoutes, LocationMarkerIcon, RentIcon, ReturnIcon } from "@/services";
 import { createSlice } from "@reduxjs/toolkit";
 
 // Initial state with data
@@ -9,7 +9,7 @@ const initialState = [
     title: "How To Rent",
     description:
       "Stay connected with Yoowifi in just 3 simple steps! Download the app, choose your destination, and select the package that fits your needs.",
-    link: "/",
+    link: commercialRoutes.howItWorks.path,
   },
   {
     _id: 2,
@@ -20,7 +20,7 @@ const initialState = [
     title: "How To Return",
     description:
       "Choose easy returns with Singpost drop-off or visit locations islandwide for hassle-free service.",
-    link: "/",
+    link: commercialRoutes.pickDropLocation.path,
   },
   {
     _id: 3,
@@ -28,7 +28,7 @@ const initialState = [
     title: "Pickup & Drop Off Locations",
     description:
       "With 20+ pick-up and drop-off locations, we make it easy for you to get your pocket wifi and stay connected hassle-free.",
-    link: "/",
+    link: commercialRoutes.pickDropLocation.path,
   },
 ];
 

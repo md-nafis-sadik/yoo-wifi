@@ -51,8 +51,11 @@ const PaginationPrevious = ({
     aria-label="Go to previous page"
     size="default"
     className={cn("gap-1 pl-2.5", className, disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer")}
-    {...props}>
-    <PaginationLeftChevronIcon className="h-4 w-4" />
+    {...props}
+  >
+    <button disabled={disabled} className="disabled:cursor-not-allowed">
+      <PaginationLeftChevronIcon className="h-4 w-4" />
+    </button>
   </PaginationLink>
 )
 PaginationPrevious.displayName = "PaginationPrevious"
@@ -65,7 +68,10 @@ const PaginationNext = ({
     size="default"
     className={cn("gap-1 pr-2.5", className, disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer")}
     {...props}>
-    <PaginationLeftChevronIcon className="h-4 w-4 rotate-180" />
+    <button disabled={disabled} className="disabled:cursor-not-allowed">
+      <PaginationLeftChevronIcon className="h-4 w-4 rotate-180" />
+    </button>
+
   </PaginationLink>
 )
 PaginationNext.displayName = "PaginationNext"

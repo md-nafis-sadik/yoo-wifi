@@ -14,22 +14,20 @@ function StepToActiveSim() {
             Easy Steps to Activate Your eSIM
           </h2>
           <div className="flex items-center gap-2">
-            <Button
-              type="button"
-              className="min-w-[100px] sm:min-w-[140px] py-5"
-              variant={activeIndex === 0 ? "default" : "outline"}
-              onClick={() => setActiveIndex(0)}
-            >
-              iOS
-            </Button>
-            <Button
-              type="button"
-              className="min-w-[100px] sm:min-w-[140px] py-5"
-              variant={activeIndex === 1 ? "default" : "outline"}
-              onClick={() => setActiveIndex(1)}
-            >
-              Android
-            </Button>
+            {[
+              { id: 0, label: "iOS" },
+              { id: 1, label: "Android" },
+            ].map(({ id, label }) => (
+              <Button
+                key={id}
+                type="button"
+                className="min-w-[100px] sm:min-w-[140px] py-5 h-9 md:h-[51px] !text-sm md:!text-base"
+                variant={activeIndex === id ? "default" : "outline"}
+                onClick={() => setActiveIndex(id)}
+              >
+                {label}
+              </Button>
+            ))}
           </div>
         </div>
         <div className="mt-6 sm:mt-10 md:mt-16 lg:gap-20 flex flex-col gap-6 sm:gap-10 md:gap-15">

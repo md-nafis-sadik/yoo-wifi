@@ -40,9 +40,17 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
                 <p className="p_common text-black-600 uppercase">
                   {item?.text}
                 </p>
-                <p className="text-lg md:text-2xl font-semibold md:font-bold !leading-[1.4]">
+                <a
+                  href={
+                    item.type === 'email'
+                      ? `mailto:${item.value}`
+                      : `https://wa.me/${item.value.replace(/\D/g, '')}`
+                  }
+                  target="_blank"
+                  className="text-lg md:text-2xl font-semibold md:font-bold !leading-[1.4]"
+                >
                   {item?.value}
-                </p>
+                </a>
               </div>
             </div>
           ))}

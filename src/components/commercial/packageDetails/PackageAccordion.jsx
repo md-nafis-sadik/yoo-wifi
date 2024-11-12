@@ -14,11 +14,6 @@ const PackageAccordion = ({ data }) => {
     const { countries } = useSelector(state => state.country);
     const selectedCountry = countries.find(country => country.value.toLowerCase() === data.country.toLowerCase());
 
-    console.log(data);
-    console.log(selectedCountry);
-
-    // const 
-
     return (
         <section className='containerX'>
             <div className='sec_common_80 xl:!px-0'>
@@ -37,7 +32,7 @@ const PackageAccordion = ({ data }) => {
                     <Accordion type="multiple" collapsible="true">
                         {data.details.map((item, index) => (<div key={index}>
                             <AccordionItem value={`item-${index + 1}`} className="!bg-white !border-0">
-                                <AccordionTrigger className="!p-0 !text-[18px] md:!text-2xl !font-bold text-black-700" iconCls="!text-main-600">
+                                <AccordionTrigger className="!p-0 !text-[18px] md:!text-2xl !font-bold text-black-700" iconClass="!text-main-600">
                                     {item.title}
                                 </AccordionTrigger>
                                 <AccordionContent className="!mt-6 !text-xs md:!text-[18px] !leading-[120%] md:!leading-[140%]">

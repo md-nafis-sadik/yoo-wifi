@@ -99,31 +99,36 @@ export const regionsData = () => [
     _id: 1,
     image: images.asiaRegionBlack,
     title: "Asia",
-    link: "/",
+    value: "asia",
+    link: "/country-coverage?region=asia",
   },
   {
     _id: 2,
     image: images.americaRegionBlack,
     title: "America",
-    link: "/",
+    value: "america",
+    link: "/country-coverage?region=america",
   },
   {
     _id: 3,
     image: images.africaRegionBlack,
     title: "Africa",
-    link: "/",
+    value: "africa",
+    link: "/country-coverage?region=africa",
   },
   {
     _id: 4,
     image: images.australiaRegionBlack,
     title: "Australia",
-    link: "/",
+    value: "australia",
+    link: "/country-coverage?region=australia",
   },
   {
     _id: 5,
     image: images.europeRegionBlack,
     title: "Europe",
-    link: "/",
+    value: "europe",
+    link: "/country-coverage?region=europe",
   },
 ];
 
@@ -260,21 +265,21 @@ export const rentServicesData = [
     title: "Local return mailer bag",
     description:
       "Simply pack the device and its accessories into the prepaid and return mailer bag any SingPost mailbox",
-    icon: () => <MailerBugIcon className="w-12 h-12 md:w-10 md:h-10" />,
+    icon: () => <MailerBugIcon className="w-12 h-12 md:w-15 md:h-15" />,
   },
   {
     _id: 2,
     title: "Self-Return",
     description:
       "Simply pack the device and its accessories and you may return at any pickup/Return location.",
-    icon: () => <MapLocatedIcon className="w-12 h-12 md:w-10 md:h-10" />,
+    icon: () => <MapLocatedIcon className="w-12 h-12 md:w-15 md:h-15" />,
   },
   {
     _id: 3,
     title: "International Courier",
     description:
       "Contact Local DHL to pickup device if you have a return mailer bag / arrange your own Courier",
-    icon: () => <GlobalRawIcon className="w-12 h-12 md:w-10 md:h-10" />,
+    icon: () => <GlobalRawIcon className="w-12 h-12 md:w-15 md:h-15" />,
   },
 ];
 

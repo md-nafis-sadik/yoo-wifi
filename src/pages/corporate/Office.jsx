@@ -18,7 +18,7 @@ const Office = () => {
                 featureList={[
                     "Fast and reliable connectivity", "Dedicated support", "Reasonable cost or Sponsorship"
                 ]}
-                path='#'
+                path='/view-more'
             />
             <Products />
             <CustomerTestimonial />

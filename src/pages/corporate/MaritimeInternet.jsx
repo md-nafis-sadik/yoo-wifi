@@ -18,7 +18,7 @@ const MaritimeInternet = () => {
                 featureList={[
                     "Single or Multiple Countries", "Fast deployment", "Customized solution to keep your team globally connected"
                 ]}
-                path='#'
+                path='/view-more'
             />
             <Products />
             <CustomerTestimonial />

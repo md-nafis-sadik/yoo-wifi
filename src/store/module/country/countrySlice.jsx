@@ -250,6 +250,270 @@ const initialState = {
             "longitude": "8.00000000",
             "emoji": "🇨🇭"
         },
+        {
+            _id: 11,
+            name: "Bangladesh",
+            image: images.SwitzerlandFlag,
+            region: "Asia",
+            value: "bangladesh",
+            "id": 19,
+            "iso3": "BGD",
+            "iso2": "BD",
+            "numeric_code": "050",
+            "phone_code": "880",
+            "capital": "Dhaka",
+            "currency": "BDT",
+            "currency_name": "Bangladeshi taka",
+            "currency_symbol": "৳",
+            "tld": ".bd",
+            "native": "Bangladesh",
+            "subregion": "Southern Asia",
+            "latitude": "24.00000000",
+            "longitude": "90.00000000",
+            "emoji": "🇧🇩"
+        },
+        {
+            _id: 12,
+            name: "India",
+            image: images.SwedenFlag,
+            region: "Asia",
+            value: "india",
+            "id": 101,
+            "iso3": "IND",
+            "iso2": "IN",
+            "numeric_code": "356",
+            "phone_code": "91",
+            "capital": "New Delhi",
+            "currency": "INR",
+            "currency_name": "Indian rupee",
+            "currency_symbol": "₹",
+            "tld": ".in",
+            "native": "भारत",
+            "subregion": "Southern Asia",
+            "latitude": "20.00000000",
+            "longitude": "77.00000000",
+            "emoji": "🇮🇳"
+        },
+        {
+            _id: 13,
+            name: "Canada",
+            image: images.SwitzerlandFlag,
+            region: "America",
+            value: "canada",
+            "id": 39,
+            "iso3": "CAN",
+            "iso2": "CA",
+            "numeric_code": "124",
+            "phone_code": "1",
+            "capital": "Ottawa",
+            "currency": "CAD",
+            "currency_name": "Canadian dollar",
+            "currency_symbol": "$",
+            "tld": ".ca",
+            "native": "Canada",
+            "subregion": "Northern America",
+            "latitude": "60.00000000",
+            "longitude": "-95.00000000",
+            "emoji": "🇨🇦"
+        },
+        {
+            _id: 14,
+            name: "Mexico",
+            image: images.SwitzerlandFlag,
+            region: "America",
+            value: "mexico",
+            "id": 142,
+            "iso3": "MEX",
+            "iso2": "MX",
+            "numeric_code": "484",
+            "phone_code": "52",
+            "capital": "Ciudad de México",
+            "currency": "MXN",
+            "currency_name": "Mexican peso",
+            "currency_symbol": "$",
+            "tld": ".mx",
+            "native": "México",
+            "subregion": "Central America",
+            "latitude": "23.00000000",
+            "longitude": "-102.00000000",
+            "emoji": "🇲🇽"
+        },
+        {
+            _id: 15,
+            name: "Samoa",
+            image: images.SwitzerlandFlag,
+            region: "Australia",
+            value: "samoa",
+            "id": 191,
+            "iso3": "WSM",
+            "iso2": "WS",
+            "numeric_code": "882",
+            "phone_code": "685",
+            "capital": "Apia",
+            "currency": "WST",
+            "currency_name": "Samoan tālā",
+            "currency_symbol": "SAT",
+            "tld": ".ws",
+            "native": "Samoa",
+            "subregion": "Polynesia",
+            "latitude": "-13.58333333",
+            "longitude": "-172.33333333",
+            "emoji": "🇼🇸"
+        },
+        {
+            _id: 16,
+            name: "Algeria",
+            image: images.SwitzerlandFlag,
+            region: "Africa",
+            value: "algeria",
+            "id": 4,
+            "iso3": "DZA",
+            "iso2": "DZ",
+            "numeric_code": "012",
+            "phone_code": "213",
+            "capital": "Algiers",
+            "currency": "DZD",
+            "currency_name": "Algerian dinar",
+            "currency_symbol": "دج",
+            "tld": ".dz",
+            "native": "الجزائر",
+            "subregion": "Northern Africa",
+            "latitude": "28.00000000",
+            "longitude": "3.00000000",
+            "emoji": "🇩🇿"
+        },
+        {
+            _id: 17,
+            name: "Cameroon",
+            image: images.IrelandFlag,
+            region: "Africa",
+            value: "cameroon",
+            "id": 38,
+            "iso3": "CMR",
+            "iso2": "CM",
+            "numeric_code": "120",
+            "phone_code": "237",
+            "capital": "Yaounde",
+            "currency": "XAF",
+            "currency_name": "Central African CFA franc",
+            "currency_symbol": "FCFA",
+            "tld": ".cm",
+            "native": "Cameroon",
+            "subregion": "Middle Africa",
+            "latitude": "6.00000000",
+            "longitude": "12.00000000",
+            "emoji": "🇨🇲"
+        },
+        {
+            _id: 17,
+            name: "Chad",
+            image: images.ItalyFlag,
+            region: "Africa",
+            value: "chad",
+            "id": 43,
+            "iso3": "TCD",
+            "iso2": "TD",
+            "numeric_code": "148",
+            "phone_code": "235",
+            "capital": "N'Djamena",
+            "currency": "XAF",
+            "currency_name": "Central African CFA franc",
+            "currency_symbol": "FCFA",
+            "tld": ".td",
+            "native": "Tchad",
+            "subregion": "Middle Africa",
+            "latitude": "15.00000000",
+            "longitude": "19.00000000",
+            "emoji": "🇹🇩"
+        },
+        {
+            _id: 18,
+            name: "Egypt",
+            image: images.GreeceFlag,
+            region: "Africa",
+            value: "egypt",
+            "id": 65,
+            "iso3": "EGY",
+            "iso2": "EG",
+            "numeric_code": "818",
+            "phone_code": "20",
+            "capital": "Cairo",
+            "currency": "EGP",
+            "currency_name": "Egyptian pound",
+            "currency_symbol": "ج.م",
+            "tld": ".eg",
+            "native": "مصر‎",
+            "subregion": "Northern Africa",
+            "latitude": "27.00000000",
+            "longitude": "30.00000000",
+            "emoji": "🇪🇬"
+        },
+        {
+            _id: 19,
+            name: "China",
+            image: images.GreeceFlag,
+            region: "Asia",
+            value: "china",
+            "id": 45,
+            "iso3": "CHN",
+            "iso2": "CN",
+            "numeric_code": "156",
+            "phone_code": "86",
+            "capital": "Beijing",
+            "currency": "CNY",
+            "currency_name": "Chinese yuan",
+            "currency_symbol": "¥",
+            "tld": ".cn",
+            "native": "中国",
+            "subregion": "Eastern Asia",
+            "latitude": "35.00000000",
+            "longitude": "105.00000000",
+            "emoji": "🇨🇳"
+        },
+        {
+            _id: 20,
+            name: "Japan",
+            image: images.GermanyFlag,
+            region: "Asia",
+            value: "japan",
+            "id": 109,
+            "iso3": "JPN",
+            "iso2": "JP",
+            "numeric_code": "392",
+            "phone_code": "81",
+            "capital": "Tokyo",
+            "currency": "JPY",
+            "currency_name": "Japanese yen",
+            "currency_symbol": "¥",
+            "tld": ".jp",
+            "native": "日本",
+            "subregion": "Eastern Asia",
+            "latitude": "36.00000000",
+            "longitude": "138.00000000",
+            "emoji": "🇯🇵"
+        },
+        {
+            _id: 21,
+            name: "Indonesia",
+            image: images.CroatiaFlag,
+            region: "Asia",
+            value: "indonesia",
+            "id": 102,
+            "iso3": "IDN",
+            "iso2": "ID",
+            "numeric_code": "360",
+            "phone_code": "62",
+            "capital": "Jakarta",
+            "currency": "IDR",
+            "currency_name": "Indonesian rupiah",
+            "currency_symbol": "Rp",
+            "tld": ".id",
+            "native": "Indonesia",
+            "subregion": "South-Eastern Asia",
+            "latitude": "-5.00000000",
+            "longitude": "120.00000000",
+            "emoji": "🇮🇩"
+        },
     ],
     packages: [
         {
@@ -775,13 +1039,101 @@ const initialState = {
                 "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
             ],
         },
+        {
+            _id: 7,
+            name: "Sweden - Pocket Wifi",
+            image: images.country6,
+            priceStart: 5.49,
+            priceEnd: 20.49,
+            region: 'europe',
+            country: "sweden",
+            type: "pocket-wifi",
+            plan: "20gb-20days",
+            details: [
+                {
+                    title: "Description",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+                {
+                    title: "Information",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+                {
+                    title: "Terms & Conditions",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+            ],
+            id: 6,
+            title: "Business Package",
+            features: [
+                "Keep Yoowifi Device",
+                "Top-up Plan only",
+                "365 Days Validity",
+                "Priority support",
+                "Covers 100 Countries",
+            ],
+            category: "volumn",
+            planCode: "plan_6",
+            dataSize: 5,
+            packPrice: 15,
+            validity: 7,
+            desc: "GB",
+            coverage: [
+                "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+            ],
+        },
     ]
 };
 
 const countrySlice = createSlice({
-  name: "country",
-  initialState,
-  reducers: {},
+    name: "country",
+    initialState,
+    reducers: {},
 });
 
 export default countrySlice.reducer;
