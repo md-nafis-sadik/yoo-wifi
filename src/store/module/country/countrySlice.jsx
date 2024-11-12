@@ -277,7 +277,7 @@ const initialState = {
             name: "India",
             image: images.SwedenFlag,
             region: "Asia",
-            value: "India",
+            value: "india",
             "id": 101,
             "iso3": "IND",
             "iso2": "IN",
