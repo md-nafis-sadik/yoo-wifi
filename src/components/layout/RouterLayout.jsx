@@ -10,16 +10,18 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 import NavBarSecondary from "../shared/navigation/NavBarSecondary";
+import useModal from "@/hooks/useModal";
 import AppDownloadDialog from "../shared/navigation/AppDownloadDialog";
 
 function RouterLayout() {
   useSetLocalData("router");
   const { product } = useSelector((state) => state.router);
+  const { authModal, loginModal } = useModal();
 
   return (
     <main>
       <NavBarSecondary />
-      <div className="px-4 md:px-10 lg:px-16 pt-24 md:pt-28  relative">
+      <div className="px-4 md:px-10 lg:px-16 relative">
         <div className="containerX">
           <div className="flex flex-col md:flex-row gap-6 sm:gap-10 md:gap-15 pt-6 sm:pt-8 md:pt-10 pb-40 lg:pb-28">
             <div className="w-full max-w-max">
@@ -43,6 +45,8 @@ function RouterLayout() {
           </div>
         </div>
       </div>
+      {authModal}
+      {loginModal}
 
       <AppDownloadDialog />
     </main>

@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
+import useActiveMenuItem from "@/hooks/useActiveMenuItem";
 import useGteNavbarStatus from "@/hooks/useGteNavbarStatus";
+import useModal from "@/hooks/useModal";
 import { cn } from "@/lib/utils";
 import {
   ArrowDownIcon,
@@ -15,11 +17,6 @@ import { MenuIcon } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { DesktopMegaMenu, MobileMegaMenu } from "./NavBar";
-import AuthDialog from "./AuthDialog";
-import useActiveMenuItem from "@/hooks/useActiveMenuItem";
-import LoginRequiredDialog from "./LoginRequiredDialog";
-import { useDispatch } from "react-redux";
-import { setDownloadAppDialogOpen } from "@/store/module/shared/sharedSlice";
 
 const NavBarSecondary = () => {
   const { isScrolled, isRedBorder, isHome, isBlack, isBannerRoutes } =
@@ -27,10 +24,7 @@ const NavBarSecondary = () => {
   const [isShowMenu, setIsShowMenu] = useState(false);
   const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [showSearchbar, setShowSearchbar] = useState(false);
-  const [isAuthDialogOpen, setIsAuthDialogOpen] = useState(false);
-  const [loginRequiredDialogOpen, setLoginRequiredDialogOpen] = useState(false);
-
-  const dispatch = useDispatch();
+  const { setIsAuthDialogOpen, setLoginRequiredDialogOpen } = useModal();
 
   const commercialMenuItems = [
     {
@@ -67,6 +61,15 @@ const NavBarSecondary = () => {
 
   const menuItems = useActiveMenuItem(commercialMenuItems);
 
+  const handleModalOpen = (name = "auth", value) => {
+    if (name == "auth") {
+      setIsAuthDialogOpen(value);
+    } else {
+      setLoginRequiredDialogOpen(value);
+    }
+    setIsShowMenu(false);
+  };
+
   return (
     <header
       className={cn(
@@ -100,7 +103,9 @@ const NavBarSecondary = () => {
                   type="text"
                   className={cn(
                     "pr-3 pl-10 w-full text-sm py-2 border outline-none  bg-transparent rounded-lg placeholder:text-black-600 font-normal",
-                    isScrolled ? "border-neutral-800" : "border-neutral-200"
+                    isScrolled
+                      ? "border-neutral-800"
+                      : "border-neutral-200 text-black-900"
                   )}
                   placeholder="Search country"
                 />
@@ -166,16 +171,17 @@ const NavBarSecondary = () => {
                   <CloseIcon />
                 </button>
               </div>
-              <ul className="flex flex-col xl:flex-row xl:items-center gap-3">
+              <ul className="flex flex-col xl:flex-row xl:items-center gap-y-1 gap-x-2">
                 {menuItems.map((item, index) => (
                   <li key={index}>
                     <Link
                       className={cn(
                         "menuItem hover:after:bg-main-600",
                         item.isActive
-                          ? "after:scale-x-100 font-semibold after:bg-main-600"
+                          ? "after:scale-x-100 font-semibold after:bg-main-600 bg-main-600 xl:bg-transparent"
                           : ""
                       )}
+                      onClick={() => setIsShowMenu(false)}
                       to={item.path}
                     >
                       {item.name}
@@ -200,7 +206,7 @@ const NavBarSecondary = () => {
                     />
                   </div>
                 </li>
-                <MobileMegaMenu />
+                <MobileMegaMenu setIsShowMenu={setIsShowMenu} />
               </ul>
 
               <Link
@@ -242,6 +248,7 @@ const NavBarSecondary = () => {
                   className={
                     "px-6 md:py-3 bg-transparent border-main-600 text-main-600 hover:bg-main-600 hover:text-white rounded-[10px] w-full max-w-[320px] xl:w-auto xl:hidden"
                   }
+                  onClick={() => handleModalOpen("auth", true)}
                 >
                   <span>Login</span>
                 </Button>
@@ -249,7 +256,7 @@ const NavBarSecondary = () => {
                   className={cn(
                     "px-6 md:py-3 rounded-[10px] w-full max-w-[320px] xl:w-auto bg-main-600 text-white"
                   )}
-                  onClick={() => dispatch(setDownloadAppDialogOpen(true))}
+                  onClick={() => handleModalOpen("login", true)}
                 >
                   <CellphoneIcon color="#fff" className="w-5 h-5 shrink-0" />
                   <span>Download APP</span>
@@ -259,7 +266,7 @@ const NavBarSecondary = () => {
                     "min-w-10 min-h-10 p-0 rounded-[10px] hidden xl:flex"
                   }
                   variant="secondary"
-                  onClick={() => setIsAuthDialogOpen(!isAuthDialogOpen)}
+                  onClick={() => handleModalOpen("auth", true)}
                 >
                   <PersonIcon className="!h-6 !w-6 shrink-0" />
                 </Button>
@@ -270,12 +277,6 @@ const NavBarSecondary = () => {
       </div>
 
       <DesktopMegaMenu isShow={showMegaMenu} />
-      <AuthDialog isOpen={isAuthDialogOpen} setIsOpen={setIsAuthDialogOpen} />
-      <LoginRequiredDialog
-        isOpen={loginRequiredDialogOpen}
-        setIsOpen={setLoginRequiredDialogOpen}
-        setIsAuthDialogOpen={setIsAuthDialogOpen}
-      />
     </header>
   );
 };
