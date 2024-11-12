@@ -27,9 +27,13 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
           </p>
 
           {data?.map((item, index) => (
-            <div key={index} className={cn(
-              "flex flex-row items-center gap-6", index === 1 && "mt-2 md:mt-0"
-            )}>
+            <div
+              key={index}
+              className={cn(
+                "flex flex-row items-center gap-6",
+                index === 1 && "mt-2 md:mt-0"
+              )}
+            >
               <LazyLoadImage
                 src={item?.image}
                 alt={item?.title}
@@ -42,9 +46,9 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
                 </p>
                 <a
                   href={
-                    item.type === 'email'
+                    item.type === "email"
                       ? `mailto:${item.value}`
-                      : `https://wa.me/${item.value.replace(/\D/g, '')}`
+                      : `https://wa.me/${item.value.replace(/\D/g, "")}`
                   }
                   target="_blank"
                   className="text-lg md:text-2xl font-semibold md:font-bold !leading-[1.4]"
@@ -55,11 +59,15 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
             </div>
           ))}
 
-          {socialLinks.length > 0 && (<div className="flex items-center gap-x-5 mt-2 md:mt-0">
-            {socialLinks.map((item, index) => (<a href={item.link} target="_blank" key={index}>
-              {item.icon()}
-            </a>))}
-          </div>)}
+          {socialLinks.length > 0 && (
+            <div className="flex items-center gap-x-5 mt-2 md:mt-0">
+              {socialLinks.map((item, index) => (
+                <a href={item.link} target="_blank" key={index}>
+                  {item.icon()}
+                </a>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* RIGHT PORTION */}
@@ -69,6 +77,7 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
               label="Name"
               placeholder="Enter your name"
               name="name"
+              type="text"
               wrapperClass={"col-span-2 md:col-span-1"}
               required
             />
@@ -92,7 +101,8 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
             <Input
               label="Subject"
               placeholder="Write a subject"
-              name="name"
+              name="subject"
+              type="text"
               wrapperClass={"col-span-2"}
               required
             />

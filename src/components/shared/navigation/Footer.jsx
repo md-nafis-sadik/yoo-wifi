@@ -1,11 +1,19 @@
 import { footerData } from "@/services/data";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { images } from "@/services";
+import { images, validateEmail } from "@/services";
 import { ChevronRight } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const Footer = () => {
+  const [userEmail, setUserEmail] = useState("");
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+
+  useEffect(() => {
+    setIsButtonDisabled(!validateEmail(userEmail));
+  }, [userEmail]);
+
   return (
     <footer className="bg-black">
       <div className="container2X sec_common_80 xl:px-0 grid grid-cols-1 md:grid-cols-10 gap-10 md:gap-20">
@@ -30,17 +38,27 @@ const Footer = () => {
             Subscribe newsletter!
           </p>
 
-          <form className="flex items-center bg-neutral-900 rounded-[8px] md:rounded-[20px] p-2 shadow-md mt-3 md:mt-4 border border-neutral-800 max-w-[348px]">
+          <div className="flex items-center bg-neutral-900 rounded-[8px] md:rounded-[20px] p-2 shadow-md mt-3 md:mt-4 border border-neutral-800 max-w-[348px]">
             <input
               type="email"
               placeholder="Ex: user@website.com"
               className="text-sm md:text-base bg-transparent text-white placeholder-black-600 focus:outline-none w-full px-4 font-semibold"
+              onChange={(e) => setUserEmail(e.target.value)}
               required
             />
-            <button className="h-8 w-8 md:h-[52px] md:w-[52px] shrink-0 bg-main-600 hover:bg-red-500 text-white rounded-[8px] md:rounded-2xl p-2 flex items-center justify-center ml-2">
+            <button
+              className={cn(
+                "h-8 w-8 md:h-[52px] md:w-[52px] shrink-0 bg-main-600 text-white rounded-[8px] md:rounded-2xl p-2 flex items-center justify-center ml-2",
+                isButtonDisabled
+                  ? "opacity-50 cursor-not-allowed"
+                  : "hover:bg-red-500"
+              )}
+              onClick={() => alert(`Thank you! Your email is ${userEmail}`)}
+              disabled={isButtonDisabled}
+            >
               <ChevronRight className="w-6 h-6" />
             </button>
-          </form>
+          </div>
         </div>
 
         {/* ESSENTIAL LINKS */}

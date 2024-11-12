@@ -84,7 +84,6 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
         name.firstName.length < 3 || name.lastName.length < 3
       );
     } else if (signUpStage === 2) {
-      console.log(validateEmail(email));
       setIsButtonDisabled(!validateEmail(email) || phone.length <= 5);
     }
   }, [signInStage, signUpStage, phone, otp, name, email]);
@@ -165,6 +164,7 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
               <Input
                 placeholder="First Name"
                 name="firstName"
+                type="text"
                 onChange={(e) =>
                   setName({ ...name, firstName: e.target.value })
                 }
@@ -173,6 +173,7 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
               <Input
                 placeholder="Last Name"
                 name="lastName"
+                type="text"
                 onChange={(e) => setName({ ...name, lastName: e.target.value })}
                 required
               />
@@ -189,6 +190,7 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
               <Input
                 placeholder="Email"
                 name="email"
+                type="email"
                 onChange={(e) =>
                   setEmail(e.target.value.replace(/\s/g, "").toLowerCase())
                 }
