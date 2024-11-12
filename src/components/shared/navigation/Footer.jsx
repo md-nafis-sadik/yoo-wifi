@@ -2,7 +2,12 @@ import { footerData } from "@/services/data";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { images, validateEmail } from "@/services";
+import {
+  commercialRoutes,
+  corporateRoutes,
+  images,
+  validateEmail,
+} from "@/services";
 import { ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
