@@ -2,8 +2,9 @@ import SectionHeader from '@/components/shared/others/SectionHeader';
 import VideoPlayer from '@/components/shared/others/VideoPlayer';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { rentWifiData } from '@/services';
+import { commercialRoutes, rentWifiData } from '@/services';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const RentYooWifi = () => {
     return (
@@ -25,11 +26,12 @@ const RentYooWifi = () => {
                                         <p className='text-sm md:text-base font-semibold leading-[120%] text-main-600'>{step}</p>
                                         <h5 className='text-[18px] md:text-2xl font-semibold md:font-bold leading-[140%] mt-2 md:mt-4'>{title}</h5>
                                     </div>
-                                    {buttonText && (
+                                    {buttonText && (<a href="https://play.google.com/store/apps/details?id=com.netrocreative.flypers&hl=en" target='_blank'>
                                         <Button className="!w-[180px] !h-[40px] !text-sm !font-medium items-center gap-x-1 hidden md:flex">
                                             {buttonText}
                                             {icon()}
                                         </Button>
+                                    </a>
                                     )}
                                 </div>
 
@@ -44,6 +46,21 @@ const RentYooWifi = () => {
 
                             </div>
                         ))}
+
+                        <div className='flex flex-col md:flex-row items-center gap-2 md:gap-6 w-full lg:col-span-2 mt-2 lg:mt-0'>
+                            <Link to={commercialRoutes.pickDropLocation.path} className='flex-1 w-full'>
+                                <Button className="w-full h-11 md:h-[52px]">
+                                    Drop Off Locations
+                                </Button>
+                            </Link>
+
+                            <Link to={commercialRoutes.contact.path} className='flex-1 w-full'>
+                                <Button className="w-full h-11 md:h-[52px]" variant="secondary">
+                                    Contact Us
+                                </Button>
+                            </Link>
+                        </div>
+
                     </div>
 
                     <div className='order-1 lg:order-2'>

@@ -9,7 +9,7 @@ import React, { Fragment } from 'react';
 const HowItWorks = () => {
     return (
         <Fragment>
-            <CorporateBanner isShowBannerBottom={false} />
+            <CorporateBanner isShowBannerBottom={false} path='/view-more' />
             <RentYooWifi />
             <DeliverCharge />
             <RentServices />

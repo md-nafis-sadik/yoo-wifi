@@ -1,9 +1,9 @@
 import SectionHeader from "@/components/shared/others/SectionHeader";
 import VideoPlayer from "@/components/shared/others/VideoPlayer";
 import { Button } from "@/components/ui/button";
-import { selfReturnData } from "@/services";
+import { commercialRoutes, selfReturnData } from "@/services";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SelfReturn = () => {
   const navigate = useNavigate();
@@ -48,16 +48,20 @@ const SelfReturn = () => {
             </div>
 
             <div className="mt-4 md:mt-8 flex gap-x-4 md:ml-[72px]">
-              <Button className="!h-11 md:!h-[52px] flex-1">
-                Drop Off Locations
-              </Button>
-              <Button
-                variant="secondary"
-                className="!h-11 md:!h-[52px] flex-1"
-                onClick={() => navigate("/contact")}
-              >
-                Contact Us
-              </Button>
+              <Link to={commercialRoutes.pickDropLocation.path} className="flex-1">
+                <Button className="!h-11 md:!h-[52px] w-full">
+                  Drop Off Locations
+                </Button>
+              </Link>
+              <Link to={commercialRoutes.pickDropLocation.path} className="flex-1">
+                <Button
+                  variant="secondary"
+                  className="!h-11 md:!h-[52px] w-full"
+                  onClick={() => navigate("/contact")}
+                >
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
