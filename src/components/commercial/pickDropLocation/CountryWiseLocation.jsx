@@ -18,7 +18,7 @@ const CountryWiseLocation = () => {
   };
 
   return (
-    <div className="w-full containerX sec_common_60 xl:px-0">
+    <div className="w-full containerX sec_common_60 xl:px-0" id="view-location">
       <div className="flex flex-col gap-2 relative z-10">
         <span className="label">Country</span>
         <CountrySelect

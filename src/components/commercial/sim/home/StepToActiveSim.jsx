@@ -3,11 +3,6 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 
-const tabs = [
-  { id: 0, label: "iOS" },
-  { id: 1, label: "Android" },
-];
-
 function StepToActiveSim() {
   const [activeIndex, setActiveIndex] = useState(0);
   const { activateSteps } = useSelector((state) => state.sim);
@@ -19,7 +14,10 @@ function StepToActiveSim() {
             Easy Steps to Activate Your eSIM
           </h2>
           <div className="flex items-center gap-2">
-            {tabs.map(({ id, label }) => (
+            {[
+              { id: 0, label: "iOS" },
+              { id: 1, label: "Android" },
+            ].map(({ id, label }) => (
               <Button
                 key={id}
                 type="button"
