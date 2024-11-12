@@ -1,12 +1,17 @@
 import SectionHeader from "@/components/shared/others/SectionHeader";
 import VideoPlayer from "@/components/shared/others/VideoPlayer";
 import { Button } from "@/components/ui/button";
+import useModal from "@/hooks/useModal";
 import { cn } from "@/lib/utils";
-import { rentWifiData } from "@/services";
+import React from "react";
+import { commercialRoutes, rentWifiData } from "@/services";
+import { Link } from "react-router-dom";
 
 const RentYooWifi = () => {
+  const { setAppDownloadDialogOpen } = useModal();
+
   return (
-    <section className="containerX" id="rent">
+    <section id="rent" className="containerX">
       <div className="sec_common_80 xl:!px-0">
         <SectionHeader
           heading="Rent Yoowifi Pocket WiFi in 3 Easy Steps!"
@@ -34,7 +39,10 @@ const RentYooWifi = () => {
                       </h5>
                     </div>
                     {buttonText && (
-                      <Button className="!w-[180px] !h-[40px] !text-sm !font-medium items-center gap-x-1 hidden md:flex">
+                      <Button
+                        className="!w-[180px] !h-[40px] !text-sm !font-medium items-center gap-x-1 hidden md:flex"
+                        onClick={() => setAppDownloadDialogOpen(true)}
+                      >
                         {buttonText}
                         {icon()}
                       </Button>
@@ -46,7 +54,10 @@ const RentYooWifi = () => {
                   </p>
 
                   {buttonText && (
-                    <Button className="!w-[167px] !h-[32px] !text-sm !font-medium items-center gap-x-1 flex md:hidden mt-4">
+                    <Button
+                      className="!w-[167px] !h-[32px] !text-sm !font-medium items-center gap-x-1 flex md:hidden mt-4"
+                      onClick={() => setAppDownloadDialogOpen(true)}
+                    >
                       {buttonText}
                       {icon()}
                     </Button>
@@ -54,6 +65,26 @@ const RentYooWifi = () => {
                 </div>
               )
             )}
+
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-6 w-full lg:col-span-2 mt-2 lg:mt-0">
+              <Link
+                to={commercialRoutes.pickDropLocation.path}
+                className="flex-1 w-full"
+              >
+                <Button className="w-full h-11 md:h-[52px]">
+                  Drop Off Locations
+                </Button>
+              </Link>
+
+              <Link
+                to={commercialRoutes.contact.path}
+                className="flex-1 w-full"
+              >
+                <Button className="w-full h-11 md:h-[52px]" variant="secondary">
+                  Contact Us
+                </Button>
+              </Link>
+            </div>
           </div>
 
           <div className="order-1 lg:order-2">

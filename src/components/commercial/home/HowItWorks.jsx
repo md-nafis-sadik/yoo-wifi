@@ -1,6 +1,7 @@
 import ConnectCard from "@/components/shared/cards/ConnectCard";
 import SectionHeader from "@/components/shared/others/SectionHeader";
 import { Button } from "@/components/ui/button";
+import { commercialRoutes } from "@/services";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -20,7 +21,7 @@ const HowItWorks = () => {
         ))}
       </div>
 
-      <Link to="/">
+      <Link to={commercialRoutes.howItWorks.path}>
         <Button size="lg" variant="secondary">
           How it Works
         </Button>
