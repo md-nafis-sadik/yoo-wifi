@@ -1,24 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { commercialRoutes, images } from "@/services";
+import { Link } from "react-router-dom";
 
-const NotFound = () => {
+function NotFound() {
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-9xl font-bold text-gray-800 animate-bounce">404</h1>
-        <p className="text-2xl font-semibold text-gray-600 mt-4">Page Not Found</p>
-        <p className="text-gray-500 mt-2 px-4 md:px-0">
-          Sorry, the page you are looking for does not exist.
-        </p>
-        <Link
-          to="/"
-          className="mt-8 inline-block bg-main-600 hover:bg-main-500 text-white px-6 py-3 rounded-md font-semibold transition duration-300"
-        >
-          Go Back Home
-        </Link>
+    <section className="h-screen w-full flex items-center justify-center">
+      <div>
+        <div className="flex flex-col items-center justify-center gap-6 sm:gap-10">
+          <div className="w-full max-w-[640px] mx-auto">
+            <img src={images.notFoundPage} alt="" className="w-full" />
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold">Page Not Found</h2>
+          <Link
+            to={commercialRoutes.home.path}
+            className="px-6 py-3 bg-main-600 text-white font-medium rounded-full"
+          >
+            Back to Dashboard
+          </Link>
+        </div>
       </div>
-    </div>
+    </section>
   );
-};
+}
 
 export default NotFound;

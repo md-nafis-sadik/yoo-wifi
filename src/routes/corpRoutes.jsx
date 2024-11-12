@@ -1,7 +1,16 @@
 import { corporateRoutes as routes } from "@/services";
 import CorporateLayout from "../components/layout/CorporateLayout";
 
-const { home, iot, hotel, travelAgency, maritimeInternet, office, commercial } = routes || {};
+const {
+  home,
+  iot,
+  hotel,
+  travelAgency,
+  maritimeInternet,
+  office,
+  commercial,
+  aboutUs,
+} = routes || {};
 
 export const corpRoutes = [
   {
@@ -31,6 +40,10 @@ export const corpRoutes = [
       {
         path: office.path,
         element: office.element,
+      },
+      {
+        path: aboutUs.path,
+        element: aboutUs.element,
       },
       {
         path: commercial.path,

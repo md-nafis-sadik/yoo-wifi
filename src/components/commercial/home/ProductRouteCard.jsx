@@ -1,3 +1,4 @@
+import useModal from "@/hooks/useModal";
 import { cn } from "@/lib/utils";
 import { ArrowUpRightIcon } from "@/services";
 
@@ -9,6 +10,7 @@ function ProductRouteCard({
   simColor = "",
   ...props
 }) {
+
   return (
     <div
       className={cn(

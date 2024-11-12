@@ -1,3 +1,4 @@
+import useModal from "@/hooks/useModal";
 import { images } from "@/services";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -7,8 +8,19 @@ import ProductRouteCard from "./ProductRouteCard";
 function HeroConnected() {
   const { products } = useSelector((state) => state.shared);
   const navigate = useNavigate();
+  const { setLoginRequiredDialogOpen } = useModal();
+
+  const handleNavigate = (path) => {
+    // if (auth?.token) {
+    //   navigate(path)
+    // }else{
+    // setLoginRequiredDialogOpen(true);
+    // }
+    setLoginRequiredDialogOpen(true);
+  };
+
   return (
-    <div className="flex-full min-h-full flex items-end bg-black text-white pt-16 sm:pt-28 xl:pt-40 px-4 sm:px-10 md:px-16 ">
+    <div className="flex-full min-h-full flex items-end bg-black text-white pt-16 sm:pt-28 xl:pt-40 px-4 sm:px-10 md:px-16 overflow-hidden">
       <div className="w-full max-w-[1190px] mx-auto">
         <h1 className="text-3xl sm:text-5xl md:text-7xl xl:text-[7.5rem] leading-[115%] xl:!leading-[94px] font-sansPro uppercase font-extrabold text-center lg:text-left">
           Stay Connected <br /> Anytime, Anywhere
@@ -24,7 +36,7 @@ function HeroConnected() {
                 <ProductRouteCard
                   key={index}
                   item={item}
-                  onClick={() => navigate(item?.path)}
+                  onClick={() => handleNavigate(item?.path)}
                 />
               ))}
             </div>

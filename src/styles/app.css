@@ -26,6 +26,46 @@ html {
 .country-select .stdropdown-menu {
   max-height: 380px;
 }
+
+.country-search .stdropdown-container {
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.country-search.blackSearch .stdropdown-container {
+  border: 1px solid #424242;
+}
+
+.country-search .stsearch-box input::placeholder {
+  color: #eee;
+  font-weight: 400;
+}
+
+.country-search.blackSearch .stsearch-box input::placeholder {
+  color: #727272;
+}
+
+.country-search .stsearch-box input {
+  padding-left: 32px;
+  font-weight: 400;
+}
+
+.country-search.blackSearch .stsearch-box input {
+  color: #fff;
+}
+
+.country-search.whiteText .stsearch-box input {
+  color: #191919;
+}
+
+.country-search .stdropdown-menu {
+  color: #191919;
+}
+
+.country-search .stdropdown-tools {
+  display: none;
+}
+
 /* Hide the spinner in number inputs for Webkit browsers (Chrome, Safari, Edge) */
 .no-spinner::-webkit-outer-spin-button,
 .no-spinner::-webkit-inner-spin-button {

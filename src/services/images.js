@@ -10,6 +10,7 @@ import australiaRegionBlack from "@/assets/images/australia-region-black.webp";
 import awards1 from "@/assets/images/awards-1.webp";
 import battery from "@/assets/images/battery.webp";
 import charging from "@/assets/images/charging.webp";
+import cloud from "@/assets/images/cloud.png";
 import collaborator1 from "@/assets/images/collaborators/1.webp";
 import collaborator2 from "@/assets/images/collaborators/2.webp";
 import collaborator3 from "@/assets/images/collaborators/3.webp";
@@ -20,6 +21,12 @@ import collaborator7 from "@/assets/images/collaborators/7.webp";
 import companyMission1 from "@/assets/images/company-mission-1.webp";
 import corporateHero from "@/assets/images/corporate-hero.webp";
 import BelgiumFlag from "@/assets/images/country-coverage/Belgium.png";
+import country1 from "@/assets/images/country-coverage/country-1.webp";
+import country2 from "@/assets/images/country-coverage/country-2.webp";
+import country3 from "@/assets/images/country-coverage/country-3.webp";
+import country4 from "@/assets/images/country-coverage/country-4.webp";
+import country5 from "@/assets/images/country-coverage/country-5.webp";
+import country6 from "@/assets/images/country-coverage/country-6.webp";
 import CroatiaFlag from "@/assets/images/country-coverage/Croatia.png";
 import FranceFlag from "@/assets/images/country-coverage/France.png";
 import GermanyFlag from "@/assets/images/country-coverage/Germany.png";
@@ -41,6 +48,7 @@ import heroTravel from "@/assets/images/heroTravel.webp";
 import locationMap from "@/assets/images/location-map.webp";
 import middleEast from "@/assets/images/middle-east.webp";
 import network from "@/assets/images/network.webp";
+import notFoundPage from "@/assets/images/notFound.webp";
 import person1 from "@/assets/images/person-1.webp";
 import person2 from "@/assets/images/person-2.webp";
 import person3 from "@/assets/images/person-3.webp";
@@ -48,6 +56,7 @@ import pocketWifiNewUpdate from "@/assets/images/pocket-wifi-new-update.webp";
 import pocketWifiSimRed2 from "@/assets/images/pocket-wifi-sim-red-2.webp";
 import pocketWifiSimRed from "@/assets/images/pocket-wifi-sim-red.webp";
 import qrcode from "@/assets/images/qrcode.webp";
+import rgbPocketWifi from "@/assets/images/rgb-pocket-wifi.webp";
 import routerWhite from "@/assets/images/router-white.webp";
 import router1 from "@/assets/images/router/router-1.webp";
 import router2 from "@/assets/images/router/router-2.webp";
@@ -55,20 +64,12 @@ import router3 from "@/assets/images/router/router-3.webp";
 import router4 from "@/assets/images/router/router-4.webp";
 import router5 from "@/assets/images/router/router-5.webp";
 import router6 from "@/assets/images/router/router-6.webp";
-import redSimRedShadow from "@/assets/images/sim/red-sim-red-shadow.webp";
 import simSettingPhone from "@/assets/images/sim-setting-phone.webp";
+import redSimRedShadow from "@/assets/images/sim/red-sim-red-shadow.webp";
 import sim1 from "@/assets/images/sim/sim-1.webp";
 import tour from "@/assets/images/tour.webp";
 import whatsapp from "@/assets/images/whatsapp.webp";
 import whoWeAre1 from "@/assets/images/who-we-are-1.webp";
-import country1 from "@/assets/images/country-coverage/country-1.webp";
-import country2 from "@/assets/images/country-coverage/country-2.webp";
-import country3 from "@/assets/images/country-coverage/country-3.webp";
-import country4 from "@/assets/images/country-coverage/country-4.webp";
-import country5 from "@/assets/images/country-coverage/country-5.webp";
-import country6 from "@/assets/images/country-coverage/country-6.webp";
-import rgbPocketWifi from "@/assets/images/rgb-pocket-wifi.webp";
-import cloud from "@/assets/images/cloud.png";
 
 export {
   BelgiumFlag,
@@ -91,6 +92,7 @@ export {
   awards1,
   battery,
   charging,
+  cloud,
   collaborator1,
   collaborator2,
   collaborator3,
@@ -100,6 +102,12 @@ export {
   collaborator7,
   companyMission1,
   corporateHero,
+  country1,
+  country2,
+  country3,
+  country4,
+  country5,
+  country6,
   dataPlan,
   discount,
   download,
@@ -114,6 +122,7 @@ export {
   middleEast,
   network,
   notFound,
+  notFoundPage,
   person1,
   person2,
   person3,
@@ -121,6 +130,8 @@ export {
   pocketWifiSimRed,
   pocketWifiSimRed2,
   qrcode,
+  redSimRedShadow,
+  rgbPocketWifi,
   router1,
   router2,
   router3,
@@ -128,18 +139,9 @@ export {
   router5,
   router6,
   routerWhite,
-  redSimRedShadow,
   sim1,
   simSettingPhone,
   tour,
   whatsapp,
   whoWeAre1,
-  country1,
-  country2,
-  country3,
-  country4,
-  country5,
-  country6,
-  rgbPocketWifi,
-  cloud,
 };

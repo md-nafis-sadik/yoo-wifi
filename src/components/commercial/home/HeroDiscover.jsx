@@ -1,3 +1,4 @@
+import useModal from "@/hooks/useModal";
 import { images } from "@/services";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -7,6 +8,16 @@ import ProductRouteCard from "./ProductRouteCard";
 function HeroDiscover() {
   const { products } = useSelector((state) => state.shared);
   const navigate = useNavigate();
+  const { setLoginRequiredDialogOpen } = useModal();
+
+  const handleNavigate = (path) => {
+    // if (auth?.token) {
+    //   navigate(path)
+    // }else{
+    // setLoginRequiredDialogOpen(true);
+    // }
+    setLoginRequiredDialogOpen(true);
+  };
   return (
     <div className="flex-full flex items-end bg-yellow-400 text-black-900 pt-20 sm:pt-28 xl:pt-40 px-4 sm:px-10 md:px-16 overflow-hidden relative">
       <div className="w-full max-w-[1190px] mx-auto relative z-50">
@@ -21,7 +32,7 @@ function HeroDiscover() {
                 <ProductRouteCard
                   key={index}
                   item={item}
-                  onClick={() => navigate(item?.path)}
+                  onClick={() => handleNavigate(item?.path)}
                   wrapperClass="bg-white-rgb"
                   simColor="#000"
                 />
