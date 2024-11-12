@@ -44,6 +44,7 @@ const Footer = () => {
               placeholder="Ex: user@website.com"
               className="text-sm md:text-base bg-transparent text-white placeholder-black-600 focus:outline-none w-full px-4 font-semibold"
               onChange={(e) => setUserEmail(e.target.value)}
+              value={userEmail}
               required
             />
             <button
@@ -53,7 +54,7 @@ const Footer = () => {
                   ? "opacity-50 cursor-not-allowed"
                   : "hover:bg-red-500"
               )}
-              onClick={() => alert(`Thank you! Your email is ${userEmail}`)}
+              onClick={() => setUserEmail("")}
               disabled={isButtonDisabled}
             >
               <ChevronRight className="w-6 h-6" />

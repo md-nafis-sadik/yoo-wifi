@@ -2,17 +2,26 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
+import { handleNumericInput } from "@/services";
 import { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const LetsTalk = ({ data = [], socialLinks = [] }) => {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
   const [text, setText] = useState("");
   const maxChars = 250;
 
-  const handleTextChange = (e) => {
-    if (e.target.value.length <= maxChars) {
-      setText(e.target.value);
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Submit data", { name, phone, email, subject, text });
+    setName("");
+    setPhone("");
+    setEmail("");
+    setSubject("");
+    setText("");
   };
 
   return (
@@ -71,50 +80,51 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
         </div>
 
         {/* RIGHT PORTION */}
-        <form className="w-full lg:w-1/2">
+        <form className="w-full lg:w-1/2" onSubmit={handleSubmit}>
           <div className="w-full grid grid-cols-2 h-fit gap-x-[28px] gap-y-6">
             <Input
               label="Name"
               placeholder="Enter your name"
               name="name"
-              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               wrapperClass={"col-span-2 md:col-span-1"}
-              required
             />
             <Input
               label="Phone Number"
               placeholder="Enter phone number"
               name="phone"
-              type="number"
               wrapperClass={"col-span-2 md:col-span-1"}
               className="no-spinner"
-              required
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              onKeyDown={handleNumericInput}
+              onPaste={handleNumericInput}
             />
             <Input
               label="Email Address"
               placeholder="Enter email address"
               name="email"
-              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               wrapperClass={"col-span-2"}
-              required
             />
             <Input
               label="Subject"
               placeholder="Write a subject"
               name="subject"
-              type="text"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
               wrapperClass={"col-span-2"}
-              required
             />
             <Textarea
               label="Message"
               placeholder="Tell us about your queries.."
-              name="message"
               wrapperClass={"col-span-2"}
+              name="text"
               value={text}
-              onChange={handleTextChange}
+              onChange={(e) => setText(e.target.value)}
               maxChars={maxChars}
-              required
               className="resize-none"
             />
           </div>
