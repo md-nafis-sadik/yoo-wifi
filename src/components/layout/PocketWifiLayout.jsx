@@ -15,7 +15,7 @@ import AppDownloadDialog from "../shared/navigation/AppDownloadDialog";
 function PocketWifiLayout() {
   useSetLocalData("pocketWifi");
   const { product } = useSelector((state) => state.pocketWifi);
-  const { authModal, loginModal } = useModal();
+  const { authModal, loginModal, appDownloadModal } = useModal();
 
   return (
     <main>
@@ -46,8 +46,7 @@ function PocketWifiLayout() {
       </div>
       {authModal}
       {loginModal}
-
-      <AppDownloadDialog />
+      {appDownloadModal}
     </main>
   );
 }

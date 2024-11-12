@@ -1,23 +1,10 @@
-import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
-import { WarningIcon } from "@/services";
 import { appStore, googlePlay, qrcode } from "@/services/images";
-import { setDownloadAppDialogOpen } from "@/store/module/shared/sharedSlice";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 
-const AppDownloadDialog = () => {
-  const { downloadAppDialogOpen } = useSelector((state) => state.shared);
-  const dispatch = useDispatch();
-
+const AppDownloadDialog = ({ isOpen, setIsOpen }) => {
   return (
-    <Dialog
-      open={downloadAppDialogOpen}
-      onOpenChange={() =>
-        dispatch(setDownloadAppDialogOpen(!downloadAppDialogOpen))
-      }
-    >
+    <Dialog open={isOpen} onOpenChange={() => setIsOpen(!isOpen)}>
       <DialogContent
         showCloseIcon={true}
         className={cn(

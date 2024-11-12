@@ -35,7 +35,11 @@ function NavBar() {
   const [isShowMenu, setIsShowMenu] = useState(false);
   const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [showSearchbar, setShowSearchbar] = useState(false);
-  const { setIsAuthDialogOpen, setLoginRequiredDialogOpen } = useModal();
+  const {
+    setIsAuthDialogOpen,
+    setLoginRequiredDialogOpen,
+    setAppDownloadDialogOpen,
+  } = useModal();
 
   const commercialMenuItems = [
     {
@@ -75,6 +79,8 @@ function NavBar() {
   const handleModalOpen = (name = "auth", value) => {
     if (name == "auth") {
       setIsAuthDialogOpen(value);
+    } else if (name == "download") {
+      setAppDownloadDialogOpen(value);
     } else {
       setLoginRequiredDialogOpen(value);
     }
@@ -304,7 +310,7 @@ function NavBar() {
                       ? "bg-main-600 text-white xl:bg-white xl:text-black-900"
                       : "bg-main-600 text-white"
                   )}
-                  onClick={() => handleModalOpen("login", true)}
+                  onClick={() => handleModalOpen("download", true)}
                 >
                   <CellphoneIcon
                     color={

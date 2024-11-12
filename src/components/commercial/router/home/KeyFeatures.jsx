@@ -8,7 +8,7 @@ function KeyFeatures({ wrapperClass = "" }) {
 
   return (
     <section className="px-4">
-      <div className="container3X sec_common_80 bg-neutral-100 rounded-3xl lg:px-12 xl:px-15">
+      <div className="container3X sec_common_80 bg-neutral-250 rounded-3xl lg:px-12 xl:px-15">
         <div>
           <SectionHeader
             heading="Key Features"

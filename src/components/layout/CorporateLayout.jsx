@@ -9,7 +9,7 @@ import AppDownloadDialog from "../shared/navigation/AppDownloadDialog";
 
 function CorporateLayout() {
   useScrollToTop();
-  const { authModal, loginModal } = useModal();
+  const { authModal, loginModal, appDownloadModal } = useModal();
 
   return (
     <main>
@@ -19,8 +19,7 @@ function CorporateLayout() {
       <Footer />
       {authModal}
       {loginModal}
-
-      <AppDownloadDialog />
+      {appDownloadModal}
     </main>
   );
 }

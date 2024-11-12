@@ -15,7 +15,7 @@ import AppDownloadDialog from "../shared/navigation/AppDownloadDialog";
 function SimLayout() {
   useSetLocalData("sim");
   const { product } = useSelector((state) => state.sim);
-  const { authModal, loginModal } = useModal();
+  const { authModal, loginModal, appDownloadModal } = useModal();
 
   return (
     <main>
@@ -46,8 +46,7 @@ function SimLayout() {
       </div>
       {authModal}
       {loginModal}
-
-      <AppDownloadDialog />
+      {appDownloadModal}
     </main>
   );
 }
