@@ -27,6 +27,7 @@ import { MenuIcon } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import AuthDialog from "./AuthDialog";
+import LoginRequiredDialog from "./LoginRequiredDialog";
 
 function NavBar() {
   const { isScrolled, isWhite, isRedBorder, isHome, isBlack, isBannerRoutes } =
@@ -35,6 +36,7 @@ function NavBar() {
   const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [showSearchbar, setShowSearchbar] = useState(false);
   const [isAuthDialogOpen, setIsAuthDialogOpen] = useState(false);
+  const [loginRequiredDialogOpen, setLoginRequiredDialogOpen] = useState(false);
 
   const menuItems = [
     { name: "Home", path: commercialRoutes.home.path },
@@ -270,6 +272,7 @@ function NavBar() {
                       ? "bg-main-600 text-white xl:bg-white xl:text-black-900"
                       : "bg-main-600 text-white"
                   )}
+                  onClick={() => setLoginRequiredDialogOpen(true)}
                 >
                   <CellphoneIcon
                     color={
@@ -297,6 +300,11 @@ function NavBar() {
       </div>
       <DesktopMegaMenu isShow={showMegaMenu} />
       <AuthDialog isOpen={isAuthDialogOpen} setIsOpen={setIsAuthDialogOpen} />
+      <LoginRequiredDialog
+        isOpen={loginRequiredDialogOpen}
+        setIsOpen={setLoginRequiredDialogOpen}
+        setIsAuthDialogOpen={setIsAuthDialogOpen}
+      />
     </header>
   );
 }

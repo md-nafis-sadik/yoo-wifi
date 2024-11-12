@@ -15,6 +15,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import AuthDialog from "./AuthDialog";
 import useActiveMenuItem from "@/hooks/useActiveMenuItem";
+import LoginRequiredDialog from "./LoginRequiredDialog";
 
 export const corporateMenuItems = [
   {
@@ -60,6 +61,7 @@ function CorporateNavbar() {
   const [isShowMenu, setIsShowMenu] = useState(false);
   const [showSearchbar, setShowSearchbar] = useState(false);
   const [isAuthDialogOpen, setIsAuthDialogOpen] = useState(false);
+  const [loginRequiredDialogOpen, setLoginRequiredDialogOpen] = useState(false);
 
   const menuItems = useActiveMenuItem(corporateMenuItems);
 
@@ -225,6 +227,7 @@ function CorporateNavbar() {
                   className={cn(
                     "px-6 md:py-3 rounded-[10px] w-full max-w-[320px] xl:w-auto bg-main-600 text-white"
                   )}
+                  onClick={() => setLoginRequiredDialogOpen(true)}
                 >
                   <CellphoneIcon color="#fff" className="w-5 h-5 shrink-0" />
                   <span>Download APP</span>
@@ -245,6 +248,11 @@ function CorporateNavbar() {
       </div>
 
       <AuthDialog isOpen={isAuthDialogOpen} setIsOpen={setIsAuthDialogOpen} />
+      <LoginRequiredDialog
+        isOpen={loginRequiredDialogOpen}
+        setIsOpen={setLoginRequiredDialogOpen}
+        setIsAuthDialogOpen={setIsAuthDialogOpen}
+      />
     </header>
   );
 }
