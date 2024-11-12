@@ -4,7 +4,6 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useNavigate } from "react-router-dom";
 
 const InternetPackageCard = ({ data, type = 1 }) => {
-
   const navigate = useNavigate();
 
   return (
@@ -25,8 +24,8 @@ const InternetPackageCard = ({ data, type = 1 }) => {
 
       <hr className="my-1 md:my-4 h-[1px] bg-neutral-100" />
 
-      <div className="flex justify-between items-center gap-4">
-        <div className="felx flex-col">
+      <div className="flex justify-between items-center gap-2 md:gap-4">
+        <div className="flex flex-col">
           <p className="text-[10px] sm:text-sm md:text-base text-black-700 !leading-normal">
             From
           </p>
@@ -36,12 +35,16 @@ const InternetPackageCard = ({ data, type = 1 }) => {
         </div>
         <Button
           className={cn(
-            type === 1 ? "!px-2 !py-[5px] md:!px-6 md:!py-4" : "text-base !px-2 !py-1 md:!px-6 md:!py-4",
+            type === 1
+              ? "!px-2 !py-[5px] md:!px-6 md:!py-4"
+              : "text-base !px-2 !py-1 md:!px-6 md:!py-4",
             "text-[10px] md:text-base !leading-[1.2] rounded-sm md:rounded-xl"
           )}
-          onClick={() => navigate(
-            type === 1 ? `/country-coverage` : `/package/details/${data?._id}`
-          )}
+          onClick={() =>
+            navigate(
+              type === 1 ? `/country-coverage` : `/package/details/${data?._id}`
+            )
+          }
         >
           {type === 1 ? "Find Out More" : "See Details"}
         </Button>
