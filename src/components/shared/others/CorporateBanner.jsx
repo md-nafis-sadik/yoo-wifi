@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { BreadcrumbIcon, BreadcrumbSmallIcon, CheckIcon } from '@/services';
+import { BreadcrumbIcon, BreadcrumbSmallIcon, CheckIcon, YooWifiLogoIcon } from '@/services';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -85,8 +85,9 @@ const CorporateBanner = ({
                 </div>
 
                 <div className='absolute right-0 top-0 z-0'>
-                    <BreadcrumbIcon className='hidden lg:block' />
-                    <BreadcrumbSmallIcon className='block lg:hidden' />
+                    <YooWifiLogoIcon className='relative -right-20 -top-4 md:-right-36 lg:-top-20 lg:-right-44 w-[245px] h-[223px] md:w-[500px] lg:w-full lg:h-full' />
+                    {/* <BreadcrumbIcon className='hidden lg:block h-full' />
+                    <BreadcrumbSmallIcon className='block lg:hidden' /> */}
                 </div>
             </div>
 
