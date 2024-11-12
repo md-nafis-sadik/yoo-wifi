@@ -11,7 +11,7 @@ const RentYooWifi = () => {
   const { setAppDownloadDialogOpen } = useModal();
 
   return (
-    <section className="containerX">
+    <section id="rent" className="containerX">
       <div className="sec_common_80 xl:!px-0">
         <SectionHeader
           heading="Rent Yoowifi Pocket WiFi in 3 Easy Steps!"

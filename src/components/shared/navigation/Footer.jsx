@@ -7,6 +7,71 @@ import { ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Footer = () => {
+  const footerData = {
+    contact: [
+      {
+        type: "Call",
+        value: "111 222 3456",
+      },
+      {
+        type: "Mail",
+        value: "info@demo.com",
+      },
+    ],
+    legals: [
+      { title: "Terms of use", path: "#" },
+      { title: "Privacy policy", path: "#" },
+    ],
+    menuData: [
+      {
+        title: "YOOWIFI",
+        links: [
+          { label: "About Us", path: commercialRoutes.aboutUs.path },
+          { label: "FAQ", path: commercialRoutes.faq.path },
+          { label: "Download the app", path: "/download" },
+          { label: "Contact Us", path: commercialRoutes.contact.path },
+          { label: "Terms of service", path: "/terms-of-service" },
+          { label: "Privacy Policy", path: "/privacy-policy" },
+        ],
+      },
+      {
+        title: "FOR YOO",
+        links: [
+          {
+            label: "Travel Data",
+            path: commercialRoutes.pocketWifiDetails.path,
+          },
+          {
+            label: "Country Coverage",
+            path: commercialRoutes.countryCoverage.path,
+          },
+          { label: "Local Data", path: "/local-data" },
+          {
+            label: "Pickup /drop off locations",
+            path: commercialRoutes.pickDropLocation.path,
+          },
+          { label: "Products", path: commercialRoutes.countryCoverage.path },
+          { label: "How it works", path: commercialRoutes.howItWorks.path },
+        ],
+      },
+      {
+        title: "CORPORATE",
+        links: [
+          { label: "Iot", path: corporateRoutes.iot.path },
+          { label: "Hotel", path: corporateRoutes.hotel.path },
+          { label: "Travel Agency", path: corporateRoutes.travelAgency.path },
+          {
+            label: "Maritime Internet",
+            path: corporateRoutes.maritimeInternet.path,
+          },
+          {
+            label: "Offices/Roadshow&Event",
+            path: corporateRoutes.office.path,
+          },
+        ],
+      },
+    ],
+  };
   const [userEmail, setUserEmail] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
