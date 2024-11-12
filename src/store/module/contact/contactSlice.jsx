@@ -64,31 +64,31 @@ const initialState = {
     {
       _id: 1,
       name: "Facebook",
-      link: "#",
+      link: "https://www.facebook.com/yoowifi/",
       icon: () => <FacebookIcon className="w-6 h-6 lg:w-8 lg:h-8" />
     },
     {
       _id: 2,
       name: "Youtube",
-      link: "#",
+      link: "https://youtube.com/@yoowifi",
       icon: () => <YoutubeIcon className="w-6 h-6 lg:w-8 lg:h-8" />
     },
     {
       _id: 3,
       name: "LinkedIn",
-      link: "#",
+      link: "https://www.linkedin.com/company/yoowifi/?originalSubdomain=sg",
       icon: () => <LinkedInIcon className="w-6 h-6 lg:w-8 lg:h-8" />
     },
     {
       _id: 4,
       name: "Instagram",
-      link: "#",
+      link: "https://www.instagram.com/yoowifi.co/?hl=en",
       icon: () => <InstagramIcon className="w-6 h-6 lg:w-8 lg:h-8" />
     },
     {
       _id: 5,
       name: "X",
-      link: "#",
+      link: "https://x.com/yoowifipr?mx=2",
       icon: () => <XIcon className="w-6 h-6 lg:w-8 lg:h-8" />
     },
   ]

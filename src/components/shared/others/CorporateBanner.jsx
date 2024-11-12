@@ -48,7 +48,7 @@ const CorporateBanner = ({
                                 <Button
                                     variant='secondary' size='lg'
                                     className="text-sm xl:text-xl font-normal hover:!bg-secondary-400 rounded-[30px] px-[14.52px] py-[8.47px]"
-                                    navigate={`#`}
+                                    onClick={() => navigate(path)}
                                 >
                                     View More
                                 </Button>
@@ -130,6 +130,9 @@ export default CorporateBanner;
 
 // reusable components
 const DescriptionButton = ({ descriptionCls, buttonCls, description }) => {
+
+    const navigate = useNavigate();
+
     return (
         <>
             <p className={cn(
@@ -141,7 +144,7 @@ const DescriptionButton = ({ descriptionCls, buttonCls, description }) => {
             <Button
                 variant='secondary'
                 className={`"!text-base hover:!bg-secondary-400 rounded-xl !font-semibold" ${buttonCls}`}
-                navigate={`/contact`}
+                onClick={() => navigate('/contact')}
             >
                 Contact Us
             </Button>
