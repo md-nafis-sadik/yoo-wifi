@@ -211,7 +211,7 @@ function CorporateNavbar() {
                 For Yoo
               </Link>
               <div className="flex flex-col xl:flex-row xl:items-center gap-3 w-full xl:w-auto flex-1 xl:flex-none justify-end xl:justify-center mt-6 xl:mt-0">
-                <div className="w-full relative">
+                <div className="w-full relative hidden xl:block">
                   <CountrySelect
                     onChange={(val) => handleCountryChange(val)}
                     name="country"

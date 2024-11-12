@@ -19,7 +19,6 @@ import { CountrySelect } from "react-country-state-city";
 import { Link, useNavigate } from "react-router-dom";
 import DesktopMegaMenu from "./DesktopMegaMenu";
 import MobileMegaMenu from "./MobileMegaMenu";
-import { setDownloadAppDialogOpen } from "@/store/module/shared/sharedSlice";
 
 const NavBarSecondary = () => {
   const { isScrolled, isRedBorder, isHome, isBlack, isBannerRoutes } =
@@ -119,25 +118,14 @@ const NavBarSecondary = () => {
                   onChange={(val) => handleCountryChange(val)}
                   name="country"
                   containerClassName={cn(
-                    "country-search bg-transparent",
-                    isRedBorder && !showMegaMenu
-                      ? "blackSearch"
-                      : isScrolled || (!isHome && !showMegaMenu)
-                      ? "blackSearch"
-                      : "whiteSearch"
+                    "country-search bg-transparent blackSearch"
                   )}
                   inputClassName="!border-none !outline-none bg-transparent"
                   placeHolder="Select Country"
                 />
                 <SearchIcon
                   className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
-                  color={
-                    isRedBorder
-                      ? "#757575"
-                      : isScrolled || (!isHome && !isBannerRoutes)
-                      ? "#757575"
-                      : "#FAFAFA"
-                  }
+                  color="#757575"
                 />
               </div>
               {showSearchbar ? (
@@ -157,16 +145,7 @@ const NavBarSecondary = () => {
                   className="border-none outline-none"
                   onClick={() => setShowSearchbar(true)}
                 >
-                  <SearchIcon
-                    className="w-6 h-6"
-                    color={
-                      isRedBorder
-                        ? "#757575"
-                        : isScrolled || !isHome
-                        ? "#757575"
-                        : "#FAFAFA"
-                    }
-                  />
+                  <SearchIcon className="w-6 h-6" color="#757575" />
                 </button>
               )}
             </div>
@@ -251,30 +230,19 @@ const NavBarSecondary = () => {
                 Corporate
               </Link>
               <div className="flex flex-col xl:flex-row xl:items-center gap-3 w-full xl:w-auto flex-1 xl:flex-none justify-end xl:justify-center mt-6 xl:mt-0">
-                <div className="w-full relative">
+                <div className="w-full relative hidden xl:block">
                   <CountrySelect
                     onChange={(val) => handleCountryChange(val)}
                     name="country"
                     containerClassName={cn(
-                      "country-search bg-transparent",
-                      isRedBorder && !showMegaMenu
-                        ? "blackSearch"
-                        : isScrolled || (!isHome && !showMegaMenu)
-                        ? "blackSearch"
-                        : "whiteSearch"
+                      "country-search bg-transparent blackSearch"
                     )}
                     inputClassName="!border-none !outline-none bg-transparent"
                     placeHolder="Select Country"
                   />
                   <SearchIcon
                     className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
-                    color={
-                      isRedBorder
-                        ? "#757575"
-                        : isScrolled || (!isHome && !isBannerRoutes)
-                        ? "#757575"
-                        : "#FAFAFA"
-                    }
+                    color="#757575"
                   />
                 </div>
                 <Button
