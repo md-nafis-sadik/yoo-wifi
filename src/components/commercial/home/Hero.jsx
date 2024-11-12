@@ -10,7 +10,6 @@ import HeroTravel from "./HeroTravel";
 
 function Hero() {
   const options = {
-    axis: "y",
     loop: true,
     watchDrag: false,
   };
@@ -31,7 +30,7 @@ function Hero() {
       <div className="overflow-hidden" ref={emblaRef}>
         <div
           className={cn(
-            "flex touch-pinch-zoom  flex-col",
+            "flex",
             selectedIndex == 0 &&
               "h-[740px] sm:h-[640px] md:h-[1190px] lg:h-[920px]",
             selectedIndex == 1 &&
