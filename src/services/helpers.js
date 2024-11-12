@@ -28,4 +28,36 @@ const validateEmail = (email) => {
   return emailRegex.test(email);
 };
 
-export { addZeroToNumber, validateCardDetails, validateEmail };
+const handleNumericInput = (e) => {
+  const maxLength = 15;
+  const allowedKeys = ["Backspace", "Delete", "ArrowLeft", "ArrowRight", "Tab"];
+
+  if (e.type === "keydown") {
+    // Allow essential keys, but only permit number keys if under max length and block spaces
+    if (
+      !allowedKeys.includes(e.key) && // Allow essential keys
+      (isNaN(e.key) || e.key === " " || e.target.value.length >= maxLength) // Block non-numeric, space, and enforce max length
+    ) {
+      e.preventDefault();
+    }
+  }
+
+  if (e.type === "paste") {
+    const pasteData = e.clipboardData.getData("Text");
+
+    // Check if pasted data is numeric, has no whitespace, and is within max length
+    if (
+      !/^\d+$/.test(pasteData) ||
+      e.target.value.length + pasteData.length > maxLength
+    ) {
+      e.preventDefault();
+    }
+  }
+};
+
+export {
+  addZeroToNumber,
+  validateCardDetails,
+  validateEmail,
+  handleNumericInput,
+};

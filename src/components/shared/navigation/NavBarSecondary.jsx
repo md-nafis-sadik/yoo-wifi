@@ -19,6 +19,7 @@ import { CountrySelect } from "react-country-state-city";
 import { Link, useNavigate } from "react-router-dom";
 import DesktopMegaMenu from "./DesktopMegaMenu";
 import MobileMegaMenu from "./MobileMegaMenu";
+import { setDownloadAppDialogOpen } from "@/store/module/shared/sharedSlice";
 
 const NavBarSecondary = () => {
   const { isScrolled, isRedBorder, isHome, isBlack, isBannerRoutes } =
@@ -26,7 +27,11 @@ const NavBarSecondary = () => {
   const [isShowMenu, setIsShowMenu] = useState(false);
   const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [showSearchbar, setShowSearchbar] = useState(false);
-  const { setIsAuthDialogOpen, setLoginRequiredDialogOpen } = useModal();
+  const {
+    setIsAuthDialogOpen,
+    setLoginRequiredDialogOpen,
+    setAppDownloadDialogOpen,
+  } = useModal();
   const navigate = useNavigate();
   const handleCountryChange = (country) => {
     navigate(
@@ -34,7 +39,6 @@ const NavBarSecondary = () => {
     );
   };
 
-  
   const commercialMenuItems = [
     {
       name: "Home",
@@ -73,6 +77,8 @@ const NavBarSecondary = () => {
   const handleModalOpen = (name = "auth", value) => {
     if (name == "auth") {
       setIsAuthDialogOpen(value);
+    } else if (name == "download") {
+      setAppDownloadDialogOpen(value);
     } else {
       setLoginRequiredDialogOpen(value);
     }
@@ -292,7 +298,7 @@ const NavBarSecondary = () => {
                   className={cn(
                     "px-6 md:py-3 rounded-[10px] w-full max-w-[320px] xl:w-auto bg-main-600 text-white"
                   )}
-                  onClick={() => handleModalOpen("login", true)}
+                  onClick={() => handleModalOpen("download", true)}
                 >
                   <CellphoneIcon color="#fff" className="w-5 h-5 shrink-0" />
                   <span>Download APP</span>

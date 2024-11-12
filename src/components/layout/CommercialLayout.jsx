@@ -12,7 +12,7 @@ function CommercialLayout() {
   useScrollToTop();
   const location = useLocation();
   const isHome = location.pathname === "/";
-  const { authModal, loginModal } = useModal();
+  const { authModal, loginModal, appDownloadModal } = useModal();
 
   return (
     <main>
@@ -23,6 +23,7 @@ function CommercialLayout() {
       <Footer />
       {authModal}
       {loginModal}
+      {appDownloadModal}
     </main>
   );
 }

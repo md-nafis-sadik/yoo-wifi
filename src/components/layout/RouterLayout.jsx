@@ -11,11 +11,12 @@ import {
 } from "../ui/accordion";
 import NavBarSecondary from "../shared/navigation/NavBarSecondary";
 import useModal from "@/hooks/useModal";
+import AppDownloadDialog from "../shared/navigation/AppDownloadDialog";
 
 function RouterLayout() {
   useSetLocalData("router");
   const { product } = useSelector((state) => state.router);
-  const { authModal, loginModal } = useModal();
+  const { authModal, loginModal, appDownloadModal } = useModal();
 
   return (
     <main>
@@ -46,6 +47,7 @@ function RouterLayout() {
       </div>
       {authModal}
       {loginModal}
+      {appDownloadModal}
     </main>
   );
 }

@@ -12,6 +12,7 @@ import { SuccessIcon, validateEmail } from "@/services";
 import { Fragment, useEffect, useState } from "react";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
+import { LogOutIcon, User2Icon, UserIcon } from "lucide-react";
 
 const DialogHeader = ({ title, text }) => {
   return (
@@ -84,7 +85,6 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
         name.firstName.length < 3 || name.lastName.length < 3
       );
     } else if (signUpStage === 2) {
-      console.log(validateEmail(email));
       setIsButtonDisabled(!validateEmail(email) || phone.length <= 5);
     }
   }, [signInStage, signUpStage, phone, otp, name, email]);
@@ -95,6 +95,8 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
       setSignInStage(2);
     } else if (signInStage === 2 && otp.length === 6) {
       setSignInStage(3);
+    } else if (signInStage === 3) {
+      setSignInStage(4);
     } else if (
       signUpStage === 1 &&
       name.firstName.length >= 3 &&
@@ -105,9 +107,22 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
       setSignUpStage(3);
     } else if (signUpStage === 3) {
       setSignUpStage(4);
+    } else if (signUpStage === 4) {
+      setSignUpStage(5);
     } else {
       setIsOpen(false);
     }
+  };
+
+  const logoutHandler = () => {
+    setIsButtonDisabled(false);
+    setSignInStage(1);
+    setSignUpStage(null);
+    setIsOpen(false);
+    setName({ firstName: "", lastName: "" });
+    setEmail("");
+    setPhone("");
+    setOtp("");
   };
 
   return (
@@ -165,6 +180,7 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
               <Input
                 placeholder="First Name"
                 name="firstName"
+                type="text"
                 onChange={(e) =>
                   setName({ ...name, firstName: e.target.value })
                 }
@@ -173,6 +189,7 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
               <Input
                 placeholder="Last Name"
                 name="lastName"
+                type="text"
                 onChange={(e) => setName({ ...name, lastName: e.target.value })}
                 required
               />
@@ -189,6 +206,7 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
               <Input
                 placeholder="Email"
                 name="email"
+                type="email"
                 onChange={(e) =>
                   setEmail(e.target.value.replace(/\s/g, "").toLowerCase())
                 }
@@ -227,53 +245,83 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
           </div>
         )}
 
+        {/* WHEN USER IS LOGGED IN */}
+        {(signInStage > 3 || signUpStage > 4) && (
+          <div className="flex flex-col items-center gap-6">
+            <div className="flex items-center justify-center">
+              <User2Icon
+                className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-main-500 rounded-full"
+                stroke="#fff"
+              />
+            </div>
+            <DialogHeader
+              title={`Hi ${name.firstName} ${name.lastName}!`}
+              text={
+                signInStage
+                  ? "Welcome back! Ready to continue?"
+                  : "Thank you for joining us! Your account is ready"
+              }
+            />
+            <Button
+              variant="secondary"
+              size="lg"
+              className=""
+              onClick={logoutHandler}
+            >
+              <LogOutIcon className="w-6 h-6" /> Logout
+            </Button>
+          </div>
+        )}
+
         {/* EVENT HANDLER BUTTON WITH BOTTOM TEXT AND NAVIGATION */}
-        <div className="w-full flex_center flex-col">
-          <Button
-            size="lg"
-            className={cn(
-              "h-11 md:h-[52px] text-base font-semibold !leading-[1.2] rounded-xl select-none",
-              isButtonDisabled && "bg-disabled",
-              signInStage === 3 || signUpStage === 4 ? "w-fit" : "w-full"
+        {signInStage <= 3 && signUpStage <= 4 && (
+          <div className="w-full flex_center flex-col">
+            <Button
+              size="lg"
+              className={cn(
+                "h-11 md:h-[52px] text-base font-semibold !leading-[1.2] rounded-xl select-none",
+                isButtonDisabled && "bg-disabled",
+                signInStage === 3 || signUpStage === 4 ? "w-fit" : "w-full"
+              )}
+              disabled={isButtonDisabled}
+              onClick={handleContinuePress}
+            >
+              {(signInStage === 1 || signUpStage === 2) && "Continue"}
+              {(signInStage === 2 || signUpStage === 3) && "Verify"}
+              {(signInStage === 3 || signUpStage === 4) && "Continue"}
+              {signUpStage === 1 && "Next"}
+            </Button>
+            {signInStage && signInStage === 1 && (
+              <BottomTextLink
+                text="Don't have an account?"
+                linkText="Register Now"
+                onClick={() => {
+                  setSignUpStage(1);
+                  setSignInStage(null);
+                }}
+              />
             )}
-            disabled={isButtonDisabled}
-            onClick={handleContinuePress}
-          >
-            {(signInStage === 1 || signUpStage === 2) && "Continue"}
-            {(signInStage === 2 || signUpStage === 3) && "Verify"}
-            {(signInStage === 3 || signUpStage === 4) && "Continue"}
-            {signUpStage === 1 && "Next"}
-          </Button>
-          {signInStage && signInStage === 1 && (
-            <BottomTextLink
-              text="Don't have an account?"
-              linkText="Register Now"
-              onClick={() => {
-                setSignUpStage(1);
-                setSignInStage(null);
-              }}
-            />
-          )}
-          {signUpStage && signUpStage <= 2 && (
-            <BottomTextLink
-              text="Already Have an account?"
-              linkText="Login"
-              onClick={() => {
-                setSignInStage(1);
-                setSignUpStage(null);
-              }}
-            />
-          )}
-          {(signInStage === 2 || signUpStage === 3) && (
-            <BottomTextLink
-              text="Didn't receive any OTP?"
-              linkText="Resend Code"
-              onClick={() => {
-                // Function to send otp
-              }}
-            />
-          )}
-        </div>
+            {signUpStage && signUpStage <= 2 && (
+              <BottomTextLink
+                text="Already Have an account?"
+                linkText="Login"
+                onClick={() => {
+                  setSignInStage(1);
+                  setSignUpStage(null);
+                }}
+              />
+            )}
+            {(signInStage === 2 || signUpStage === 3) && (
+              <BottomTextLink
+                text="Didn't receive any OTP?"
+                linkText="Resend Code"
+                onClick={() => {
+                  // Function to send otp
+                }}
+              />
+            )}
+          </div>
+        )}
       </DialogContent>
     </Dialog>
   );

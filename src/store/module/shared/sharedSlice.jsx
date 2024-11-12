@@ -71,6 +71,7 @@ const initialState = {
   selectedHeroIndex: 0,
   isAuthModalOpen: false,
   isLoginModalOpen: false,
+  downloadAppDialogOpen: false,
 };
 
 const sharedSlice = createSlice({
@@ -89,12 +90,16 @@ const sharedSlice = createSlice({
     setLoginModalStatus: (state, action) => {
       state.isLoginModalOpen = action.payload;
     },
+    setDownloadAppDialogOpen: (state, action) => {
+      state.downloadAppDialogOpen = action.payload;
+    },
   },
 });
 
 export const {
   setActivePath,
   setHeroIndex,
+  setDownloadAppDialogOpen,
   setAuthModalStatus,
   setLoginModalStatus,
 } = sharedSlice.actions;

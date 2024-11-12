@@ -60,7 +60,11 @@ function CorporateNavbar() {
   const [isShowMenu, setIsShowMenu] = useState(false);
   const [showSearchbar, setShowSearchbar] = useState(false);
   const menuItems = useActiveMenuItem(corporateMenuItems);
-  const { setIsAuthDialogOpen, setLoginRequiredDialogOpen } = useModal();
+  const {
+    setIsAuthDialogOpen,
+    setLoginRequiredDialogOpen,
+    setAppDownloadDialogOpen,
+  } = useModal();
 
   const navigate = useNavigate();
   const handleCountryChange = (country) => {
@@ -72,6 +76,8 @@ function CorporateNavbar() {
   const handleModalOpen = (name = "auth", value) => {
     if (name == "auth") {
       setIsAuthDialogOpen(value);
+    } else if (name == "download") {
+      setAppDownloadDialogOpen(value);
     } else {
       setLoginRequiredDialogOpen(value);
     }
@@ -241,7 +247,7 @@ function CorporateNavbar() {
                   className={cn(
                     "px-6 md:py-3 rounded-[10px] w-full max-w-[320px] xl:w-auto bg-main-600 text-white"
                   )}
-                  onClick={() => handleModalOpen("login", true)}
+                  onClick={() => handleModalOpen("download", true)}
                 >
                   <CellphoneIcon color="#fff" className="w-5 h-5 shrink-0" />
                   <span>Download APP</span>

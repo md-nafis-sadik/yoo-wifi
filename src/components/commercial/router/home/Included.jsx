@@ -12,12 +12,15 @@ function Included() {
           containerClassName="gap-4"
         />
         <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 md:gap-6  mt-6 sm:mt-10 md:mt-15">
-          <InfoCard wrapperClass="w-full" title="x1 Wifi Router">
+          <InfoCard wrapperClass="w-full bg-neutral-200" title="x1 Wifi Router">
             <div className="w-15 sm:w-20 aspect-square flex items-center justify-center bg-white rounded-xl">
               <RouterIcon className="w-10 sm:w-14" />
             </div>
           </InfoCard>
-          <InfoCard wrapperClass="w-full" title="x1 Power Adapter">
+          <InfoCard
+            wrapperClass="w-full bg-neutral-200"
+            title="x1 Power Adapter"
+          >
             <div className="w-15 sm:w-20 aspect-square flex items-center justify-center bg-white rounded-xl">
               <PowerAdapterIcon className="w-10 sm:w-14" />
             </div>

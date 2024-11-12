@@ -6,23 +6,27 @@ const ConnectCard = ({ item, containerClassName, ...props }) => {
   return (
     <div
       className={cn(
-        "rounded-2xl md:rounded-3xl bg-white py-6 md:py-10 px-4 md:px-6 shadow-card-secondary w-full border border-neutral-200",
+        "rounded-2xl md:rounded-3xl bg-white py-6 md:py-10 px-4 md:px-6 shadow-card-secondary w-full border border-neutral-200 flex flex-col justify-between",
         containerClassName
       )}
       {...props}
     >
-      <div className="h-14 md:h-20 w-14 md:w-20 rounded-xl md:rounded-[22px] bg-main-50 flex_center">
-        {item.icon}
+      <div className="">
+        <div className="h-14 md:h-20 w-14 md:w-20 rounded-xl md:rounded-[22px] bg-main-50 flex_center">
+          {item.icon}
+        </div>
+
+        <h2
+          className="text-black-700 text-[18px] md:text-2xl !leading-[1.4] mt-6 md:mt-12 lg:mt-[60px] font-bold line-clamp-1"
+          title={item.title}
+        >
+          {item.title}
+        </h2>
+
+        <p className="text-sm md:text-[18px] text-black-600 !leading-[1.4] mt-2 md:mt-3">
+          {item.description}
+        </p>
       </div>
-
-      <h2 className="text-black-700 text-[18px] md:text-2xl !leading-[1.4] mt-6 md:mt-12 lg:mt-[60px] font-bold line-clamp-1" title={item.title}>
-        {item.title}
-      </h2>
-
-      <p className="text-sm md:text-[18px] text-black-600 !leading-[1.4] mt-2 md:mt-3">
-        {item.description}
-      </p>
-
       <Link
         to={item.link}
         className={cn(
