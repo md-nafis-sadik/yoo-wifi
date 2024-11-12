@@ -24,16 +24,22 @@ const AppDownloadDialog = ({ isOpen, setIsOpen }) => {
             Advanced features for an effortless digital experience anytime,
             anywhere!
           </p>
-          <div className="mt-10 flex flex-col md:flex-row items-start lg:items-center gap-4 md:gap-10">
+          <div className="mt-10 flex flex-col md:flex-row items-center md:items-start lg:items-center gap-4 md:gap-10">
             <div className="flex flex-col gap-2 md:gap-4">
-              <a href="#" className="">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.netrocreative.flypers&hl=en"
+                className=""
+              >
                 <img
                   src={googlePlay}
                   alt="google play"
                   className="w-[113px] md:w-[210px] h-auto"
                 />
               </a>
-              <a href="#" className="">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.netrocreative.flypers&hl=en"
+                className=""
+              >
                 <img
                   src={appStore}
                   alt="google play"
