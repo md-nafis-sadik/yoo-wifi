@@ -1,9 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { images } from "@/services";
+import { commercialRoutes, images } from "@/services";
 import { servicesData } from "@/services/data";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useNavigate } from "react-router-dom";
 
 const WhyYoowifi = () => {
+
+  const navigate = useNavigate();
+
   return (
     <section className="sec_common_60 bg-white px-4 min-[1176px]:px-0">
       <div className="containerX flex flex-col-reverse md:flex-row gap-6 md:gap-10 lg:gap-[60px]">
@@ -33,7 +37,7 @@ const WhyYoowifi = () => {
             ))}
           </div>
 
-          <Button variant={"secondary"} size={"lg"} className={"md:h-[52px] !text-base"}>
+          <Button variant={"secondary"} size={"lg"} className={"md:h-[52px] !text-base"} onClick={() => navigate(commercialRoutes.aboutUs.path)}>
             About Us
           </Button>
         </div>
