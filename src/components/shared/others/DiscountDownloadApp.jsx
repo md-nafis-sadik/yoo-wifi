@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { DiscountBGIcon, PhoneIcon } from "@/services";
 import { qrcode } from "@/services/images";
+import { setDownloadAppDialogOpen } from "@/store/module/shared/sharedSlice";
+import { useDispatch } from "react-redux";
 
-function DiscountDownloadApp() {
+function DiscountDownloadApp({}) {
+  const dispatch = useDispatch();
+
   return (
     <div className="relative overflow-hidden rounded-2xl bg-main-600">
       <div className="px-8 py-10 text-white flex flex-col sm:flex-row md:flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 md:items-start lg:items-center justify-between relative z-10">
@@ -20,15 +24,19 @@ function DiscountDownloadApp() {
           <div className="w-20 h-20">
             <img src={qrcode} alt="" className="w-full h-full object-contain" />
           </div>
-          <Button variant="secondary" className="py-4">
+          <Button
+            variant="secondary"
+            className="py-4"
+            onClick={() => dispatch(setDownloadAppDialogOpen(true))}
+          >
             <PhoneIcon className="!w-5 !h-5" />
             <span>Download APP</span>
           </Button>
         </div>
       </div>
 
-      <div className='absolute right-0 top-0 z-0'>
-        <DiscountBGIcon className='xl:h-full lg:h-[350px] md:h-[400px] sm:h-full h-[400px]' />
+      <div className="absolute right-0 top-0 z-0">
+        <DiscountBGIcon className="xl:h-full lg:h-[350px] md:h-[400px] sm:h-full h-[400px]" />
       </div>
     </div>
   );

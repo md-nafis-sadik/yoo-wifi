@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 import NavBarSecondary from "../shared/navigation/NavBarSecondary";
+import AppDownloadDialog from "../shared/navigation/AppDownloadDialog";
 
 function PocketWifiLayout() {
   useSetLocalData("pocketWifi");
@@ -40,6 +41,8 @@ function PocketWifiLayout() {
           </div>
         </div>
       </div>
+
+      <AppDownloadDialog />
     </main>
   );
 }

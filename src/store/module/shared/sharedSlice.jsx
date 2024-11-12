@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   activePath: "",
+  downloadAppDialogOpen: false,
   packages: [{}],
   shippingOptions: [
     {
@@ -81,8 +82,12 @@ const sharedSlice = createSlice({
     setHeroIndex: (state, action) => {
       state.selectedHeroIndex = action.payload;
     },
+    setDownloadAppDialogOpen: (state, action) => {
+      state.downloadAppDialogOpen = action.payload;
+    },
   },
 });
 
-export const { setActivePath, setHeroIndex } = sharedSlice.actions;
+export const { setActivePath, setHeroIndex, setDownloadAppDialogOpen } =
+  sharedSlice.actions;
 export default sharedSlice.reducer;

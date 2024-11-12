@@ -28,6 +28,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import AuthDialog from "./AuthDialog";
 import LoginRequiredDialog from "./LoginRequiredDialog";
+import { setDownloadAppDialogOpen } from "@/store/module/shared/sharedSlice";
+import { useDispatch } from "react-redux";
 
 function NavBar() {
   const { isScrolled, isWhite, isRedBorder, isHome, isBlack, isBannerRoutes } =
@@ -37,6 +39,8 @@ function NavBar() {
   const [showSearchbar, setShowSearchbar] = useState(false);
   const [isAuthDialogOpen, setIsAuthDialogOpen] = useState(false);
   const [loginRequiredDialogOpen, setLoginRequiredDialogOpen] = useState(false);
+
+  const dispatch = useDispatch();
 
   const menuItems = [
     { name: "Home", path: commercialRoutes.home.path },
@@ -272,7 +276,7 @@ function NavBar() {
                       ? "bg-main-600 text-white xl:bg-white xl:text-black-900"
                       : "bg-main-600 text-white"
                   )}
-                  onClick={() => setLoginRequiredDialogOpen(true)}
+                  onClick={() => dispatch(setDownloadAppDialogOpen(true))}
                 >
                   <CellphoneIcon
                     color={

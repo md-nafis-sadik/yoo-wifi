@@ -6,6 +6,7 @@ import DevFAB from "../shared/others/DevFAB";
 import DownloadYoowifi from "../shared/others/DownloadYoowifi";
 import useScrollToTop from "@/hooks/useScrollToTop";
 import NavBarSecondary from "../shared/navigation/NavBarSecondary";
+import AppDownloadDialog from "../shared/navigation/AppDownloadDialog";
 
 function CommercialLayout() {
   useSetLocalData("commercialLayout");
@@ -20,6 +21,8 @@ function CommercialLayout() {
       <Outlet />
       <DownloadYoowifi />
       <Footer />
+
+      <AppDownloadDialog />
     </main>
   );
 }

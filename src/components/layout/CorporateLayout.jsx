@@ -4,6 +4,7 @@ import CorporateNavbar from "../shared/navigation/CorporateNavbar";
 import Footer from "../shared/navigation/Footer";
 import DevFAB from "../shared/others/DevFAB";
 import DownloadYoowifi from "../shared/others/DownloadYoowifi";
+import AppDownloadDialog from "../shared/navigation/AppDownloadDialog";
 
 function CorporateLayout() {
   useScrollToTop();
@@ -14,6 +15,8 @@ function CorporateLayout() {
       <Outlet />
       <DownloadYoowifi />
       <Footer />
+
+      <AppDownloadDialog />
     </main>
   );
 }

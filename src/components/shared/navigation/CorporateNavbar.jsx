@@ -16,6 +16,8 @@ import { Link, useLocation } from "react-router-dom";
 import AuthDialog from "./AuthDialog";
 import useActiveMenuItem from "@/hooks/useActiveMenuItem";
 import LoginRequiredDialog from "./LoginRequiredDialog";
+import { useDispatch } from "react-redux";
+import { setDownloadAppDialogOpen } from "@/store/module/shared/sharedSlice";
 
 export const corporateMenuItems = [
   {
@@ -64,6 +66,7 @@ function CorporateNavbar() {
   const [loginRequiredDialogOpen, setLoginRequiredDialogOpen] = useState(false);
 
   const menuItems = useActiveMenuItem(corporateMenuItems);
+  const dispatch = useDispatch();
 
   return (
     <header
@@ -227,7 +230,7 @@ function CorporateNavbar() {
                   className={cn(
                     "px-6 md:py-3 rounded-[10px] w-full max-w-[320px] xl:w-auto bg-main-600 text-white"
                   )}
-                  onClick={() => setLoginRequiredDialogOpen(true)}
+                  onClick={() => dispatch(setDownloadAppDialogOpen(true))}
                 >
                   <CellphoneIcon color="#fff" className="w-5 h-5 shrink-0" />
                   <span>Download APP</span>
