@@ -1039,6 +1039,94 @@ const initialState = {
                 "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
             ],
         },
+        {
+            _id: 7,
+            name: "Sweden - Pocket Wifi",
+            image: images.country6,
+            priceStart: 5.49,
+            priceEnd: 20.49,
+            region: 'europe',
+            country: "sweden",
+            type: "pocket-wifi",
+            plan: "20gb-20days",
+            details: [
+                {
+                    title: "Description",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+                {
+                    title: "Information",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+                {
+                    title: "Terms & Conditions",
+                    info: <>
+                        BASIC Daypass
+                        <ul className="list-disc list-inside">
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                        <br />
+                        ****************OR****************SUPER Daypass
+                        <br />
+                        <ul>
+                            <li>Enjoy Unlimited Data Freedom</li>
+                            <li>1GB on high-speed daily</li>
+                            <li>For as low as SGD$2.90/day</li>
+                        </ul>
+                    </>
+                },
+            ],
+            id: 6,
+            title: "Business Package",
+            features: [
+                "Keep Yoowifi Device",
+                "Top-up Plan only",
+                "365 Days Validity",
+                "Priority support",
+                "Covers 100 Countries",
+            ],
+            category: "volumn",
+            planCode: "plan_6",
+            dataSize: 5,
+            packPrice: 15,
+            validity: 7,
+            desc: "GB",
+            coverage: [
+                "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+            ],
+        },
     ]
 };
 

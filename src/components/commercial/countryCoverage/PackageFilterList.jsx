@@ -55,7 +55,7 @@ const PackageFilterList = ({ params }) => {
     });
 
     // Paginate the packages
-    const itemsPerPage = 5;
+    const itemsPerPage = 6;
     const totalPages = Math.ceil(filteredPackages.length / itemsPerPage);
     const paginatedPackages = filteredPackages.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
@@ -121,7 +121,7 @@ const PackageFilterList = ({ params }) => {
                             ))}
                         </div>
 
-                        <div className="mt-8  w-full">
+                        {(packages.length > itemsPerPage && totalPages > 1) && (<div className="mt-8 w-full">
                             <Pagination className="flex justify-end">
                                 <PaginationPrevious
                                     onClick={() => handlePageChange(currentPage - 1)}
@@ -146,7 +146,7 @@ const PackageFilterList = ({ params }) => {
                                     disabled={currentPage === totalPages}
                                 />
                             </Pagination>
-                        </div>
+                        </div>)}
 
                     </div>
                 </div>
