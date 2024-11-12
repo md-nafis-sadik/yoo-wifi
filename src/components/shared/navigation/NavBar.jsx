@@ -5,7 +5,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import useActiveMenuItem from "@/hooks/useActiveMenuItem";
 import useGteNavbarStatus from "@/hooks/useGteNavbarStatus";
+import useModal from "@/hooks/useModal";
 import { cn } from "@/lib/utils";
 import {
   ArrowDownIcon,
@@ -25,9 +27,7 @@ import {
 } from "@/services";
 import { MenuIcon } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import AuthDialog from "./AuthDialog";
-import LoginRequiredDialog from "./LoginRequiredDialog";
+import { Link, NavLink } from "react-router-dom";
 
 function NavBar() {
   const { isScrolled, isWhite, isRedBorder, isHome, isBlack, isBannerRoutes } =
@@ -35,17 +35,51 @@ function NavBar() {
   const [isShowMenu, setIsShowMenu] = useState(false);
   const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [showSearchbar, setShowSearchbar] = useState(false);
-  const [isAuthDialogOpen, setIsAuthDialogOpen] = useState(false);
-  const [loginRequiredDialogOpen, setLoginRequiredDialogOpen] = useState(false);
+  const { setIsAuthDialogOpen, setLoginRequiredDialogOpen } = useModal();
 
-  const menuItems = [
-    { name: "Home", path: commercialRoutes.home.path },
-    { name: "Pocket WIFI", path: commercialRoutes.pocketWifiHome.path },
-    { name: "Router", path: commercialRoutes.routerHome.path },
-    { name: "SIM/eSIM", path: commercialRoutes.simHome.path },
-    { name: "Contact Us", path: commercialRoutes.contact.path },
-    { name: "About Us", path: commercialRoutes.aboutUs.path },
+  const commercialMenuItems = [
+    {
+      name: "Home",
+      path: commercialRoutes.home.path,
+      activePath: commercialRoutes.home.activePath,
+    },
+    {
+      name: "Pocket WIFI",
+      path: commercialRoutes.pocketWifiHome.path,
+      activePath: commercialRoutes.pocketWifiHome.activePath,
+    },
+    {
+      name: "Router",
+      path: commercialRoutes.routerHome.path,
+      activePath: commercialRoutes.routerHome.activePath,
+    },
+    {
+      name: "SIM/eSIM",
+      path: commercialRoutes.simHome.path,
+      activePath: commercialRoutes.simHome.activePath,
+    },
+    {
+      name: "Contact Us",
+      path: commercialRoutes.contact.path,
+      activePath: commercialRoutes.contact.activePath,
+    },
+    {
+      name: "About Us",
+      path: commercialRoutes.aboutUs.path,
+      activePath: commercialRoutes.aboutUs.activePath,
+    },
   ];
+
+  const menuItems = useActiveMenuItem(commercialMenuItems);
+
+  const handleModalOpen = (name = "auth", value) => {
+    if (name == "auth") {
+      setIsAuthDialogOpen(value);
+    } else {
+      setLoginRequiredDialogOpen(value);
+    }
+    setIsShowMenu(false);
+  };
 
   return (
     <header
@@ -85,22 +119,17 @@ function NavBar() {
                   type="text"
                   className={cn(
                     "pr-3 pl-10 w-full text-sm py-2 border outline-none  bg-transparent rounded-lg",
-                    isRedBorder
-                      ? "border-neutral-800 placeholder:text-black-600"
-                      : isScrolled || !isHome
-                      ? "border-neutral-800 placeholder:text-black-600"
-                      : "border-neutral-50 placeholder:text-black-100"
+                    isRedBorder || isScrolled
+                      ? "border-neutral-800 placeholder:text-black-600 "
+                      : "border-neutral-50 placeholder:text-black-100 ",
+                    isWhite ? "text-black-900" : ""
                   )}
                   placeholder="Search country"
                 />
                 <SearchIcon
                   className="absolute h-5 w-5 top-1/2 -translate-y-1/2 left-3"
                   color={
-                    isRedBorder
-                      ? "#757575"
-                      : isScrolled || !isHome
-                      ? "#757575"
-                      : "#FAFAFA"
+                    isRedBorder ? "#757575" : isScrolled ? "#757575" : "#FAFAFA"
                   }
                 />
               </label>
@@ -115,7 +144,7 @@ function NavBar() {
                     color={
                       isRedBorder
                         ? "#757575"
-                        : isScrolled || !isHome
+                        : isScrolled
                         ? "#757575"
                         : "#FAFAFA"
                     }
@@ -132,7 +161,7 @@ function NavBar() {
                     color={
                       isRedBorder
                         ? "#757575"
-                        : isScrolled || !isHome
+                        : isScrolled
                         ? "#757575"
                         : "#FAFAFA"
                     }
@@ -167,16 +196,17 @@ function NavBar() {
                   <CloseIcon />
                 </button>
               </div>
-              <ul className="flex flex-col xl:flex-row xl:items-center gap-3">
+              <ul className="flex flex-col xl:flex-row xl:items-center gap-y-1 gap-x-2">
                 {menuItems.map((item, index) => (
                   <li key={index}>
                     <Link
                       className={cn(
-                        index === 0 && "menuItem",
-                        !isRedBorder && isHome
-                          ? "hover:after:bg-white after:bg-white after:scale-x-100"
-                          : "hover:after:bg-main-600 after:bg-main-600 after:scale-x-100"
+                        "menuItem hover:after:bg-main-600",
+                        item.isActive
+                          ? "after:scale-x-100 font-semibold after:bg-main-600 bg-main-600 xl:bg-transparent"
+                          : ""
                       )}
+                      onClick={() => setIsShowMenu(false)}
                       to={item.path}
                     >
                       {item.name}
@@ -206,7 +236,7 @@ function NavBar() {
                     />
                   </div>
                 </li>
-                <MobileMegaMenu />
+                <MobileMegaMenu setIsShowMenu={setIsShowMenu} />
               </ul>
               <Link
                 className={cn(
@@ -230,11 +260,12 @@ function NavBar() {
                     type="text"
                     className={cn(
                       "pr-3 pl-10  py-2 border outline-none  bg-transparent rounded-lg",
-                      isRedBorder
-                        ? "border-neutral-800 placeholder:text-black-600"
-                        : isScrolled || (!isHome && !isBannerRoutes)
-                        ? "border-neutral-800 placeholder:text-black-600"
-                        : "border-neutral-50 placeholder:text-black-100"
+                      isRedBorder && !showMegaMenu
+                        ? "border-neutral-800 placeholder:text-black-600 text-black-900"
+                        : isScrolled ||
+                          (!isHome && !isBannerRoutes && !showMegaMenu)
+                        ? "border-neutral-800 placeholder:text-black-600 text-black-900"
+                        : "border-neutral-50 placeholder:text-black-100 text-white"
                     )}
                     placeholder="Search country"
                   />
@@ -262,6 +293,7 @@ function NavBar() {
                   className={
                     "px-6 md:py-3 bg-transparent border-main-600 text-main-600 hover:bg-main-600 hover:text-white rounded-[10px] w-full max-w-[320px] xl:w-auto xl:hidden"
                   }
+                  onClick={() => handleModalOpen("auth", true)}
                 >
                   <span>Login</span>
                 </Button>
@@ -272,7 +304,7 @@ function NavBar() {
                       ? "bg-main-600 text-white xl:bg-white xl:text-black-900"
                       : "bg-main-600 text-white"
                   )}
-                  onClick={() => setLoginRequiredDialogOpen(true)}
+                  onClick={() => handleModalOpen("login", true)}
                 >
                   <CellphoneIcon
                     color={
@@ -289,7 +321,7 @@ function NavBar() {
                     "min-w-10 min-h-10 p-0 rounded-[10px] hidden xl:flex"
                   }
                   variant="secondary"
-                  onClick={() => setIsAuthDialogOpen(true)}
+                  onClick={() => handleModalOpen("auth", true)}
                 >
                   <PersonIcon className="!h-6 !w-6 shrink-0" />
                 </Button>
@@ -299,19 +331,13 @@ function NavBar() {
         </nav>
       </div>
       <DesktopMegaMenu isShow={showMegaMenu} />
-      <AuthDialog isOpen={isAuthDialogOpen} setIsOpen={setIsAuthDialogOpen} />
-      <LoginRequiredDialog
-        isOpen={loginRequiredDialogOpen}
-        setIsOpen={setLoginRequiredDialogOpen}
-        setIsAuthDialogOpen={setIsAuthDialogOpen}
-      />
     </header>
   );
 }
 
 export default NavBar;
 
-export const MobileMegaMenu = ({ isWhite = false }) => {
+export const MobileMegaMenu = ({ setIsShowMenu = () => {} }) => {
   return (
     <li className="xl:hidden">
       <Accordion
@@ -350,23 +376,33 @@ export const MobileMegaMenu = ({ isWhite = false }) => {
                     <span>Travel Data</span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="pl-9">
+                <AccordionContent className="pl-9 pt-0">
                   <ul>
                     <li>
-                      <Link
-                        className="text-white text-lg font-normal p-3 flex"
-                        to={commercialRoutes.pocketWifiDetails.path}
+                      <NavLink
+                        className={({ isActive }) =>
+                          ` text-lg font-normal p-3 flex ${
+                            isActive ? "text-main-600" : "text-white"
+                          }`
+                        }
+                        to={commercialRoutes.pocketWifiHome.path}
+                        onClick={() => setIsShowMenu(false)}
                       >
                         Pocket Wifi Details
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
-                        className="text-white text-lg font-normal p-3 flex"
-                        to={commercialRoutes.home.path}
+                      <NavLink
+                        className={({ isActive }) =>
+                          ` text-lg font-normal p-3 flex ${
+                            isActive ? "text-main-600" : "text-white"
+                          }`
+                        }
+                        to={commercialRoutes.simHome.path}
+                        onClick={() => setIsShowMenu(false)}
                       >
                         Sim/eSim Details
-                      </Link>
+                      </NavLink>
                     </li>
                   </ul>
                 </AccordionContent>
@@ -388,47 +424,72 @@ export const MobileMegaMenu = ({ isWhite = false }) => {
                     <span>Country Coverage</span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="pl-9">
+                <AccordionContent className="pl-9 pt-0">
                   <ul>
                     <li>
-                      <Link
-                        className="text-white text-lg font-normal p-3 flex"
-                        to={commercialRoutes.home.path}
+                      <NavLink
+                        className={({ isActive }) =>
+                          ` text-lg font-normal p-3 flex ${
+                            isActive ? "text-main-600" : "text-white"
+                          }`
+                        }
+                        to={`${commercialRoutes.countryCoverage.path}?region=asia`}
+                        onClick={() => setIsShowMenu(false)}
                       >
                         Asia
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
-                        className="text-white text-lg font-normal p-3 flex"
-                        to={commercialRoutes.home.path}
+                      <NavLink
+                        className={({ isActive }) =>
+                          ` text-lg font-normal p-3 flex ${
+                            isActive ? "text-main-600" : "text-white"
+                          }`
+                        }
+                        to={`${commercialRoutes.countryCoverage.path}?region=europe`}
+                        onClick={() => setIsShowMenu(false)}
                       >
                         Europe
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
-                        className="text-white text-lg font-normal p-3 flex"
-                        to={commercialRoutes.home.path}
+                      <NavLink
+                        className={({ isActive }) =>
+                          ` text-lg font-normal p-3 flex ${
+                            isActive ? "text-main-600" : "text-white"
+                          }`
+                        }
+                        to={`${commercialRoutes.countryCoverage.path}?region=america`}
+                        onClick={() => setIsShowMenu(false)}
                       >
                         America
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
-                        className="text-white text-lg font-normal p-3 flex"
-                        to={commercialRoutes.home.path}
+                      <NavLink
+                        className={({ isActive }) =>
+                          ` text-lg font-normal p-3 flex ${
+                            isActive ? "text-main-600" : "text-white"
+                          }`
+                        }
+                        to={`${commercialRoutes.countryCoverage.path}?region=australia`}
+                        onClick={() => setIsShowMenu(false)}
                       >
                         Australia
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
-                        className="text-white text-lg font-normal p-3 flex"
-                        to={commercialRoutes.home.path}
+                      <NavLink
+                        className={({ isActive }) =>
+                          ` text-lg font-normal p-3 flex ${
+                            isActive ? "text-main-600" : "text-white"
+                          }`
+                        }
+                        to={`${commercialRoutes.countryCoverage.path}?region=africa`}
+                        onClick={() => setIsShowMenu(false)}
                       >
                         Africa
-                      </Link>
+                      </NavLink>
                     </li>
                   </ul>
                 </AccordionContent>
@@ -450,23 +511,33 @@ export const MobileMegaMenu = ({ isWhite = false }) => {
                     <span>Pickup/Drop off Location</span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="pl-9">
+                <AccordionContent className="pl-9 pt-0">
                   <ul>
                     <li>
-                      <Link
-                        className="text-white text-lg font-normal p-3 flex"
-                        to={commercialRoutes.home.path}
+                      <NavLink
+                        className={({ isActive }) =>
+                          ` text-lg font-normal p-3 flex ${
+                            isActive ? "text-main-600" : "text-white"
+                          }`
+                        }
+                        to={commercialRoutes.pickDropLocation.path}
+                        onClick={() => setIsShowMenu(false)}
                       >
                         Pickup Location
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
-                        className="text-white text-lg font-normal p-3 flex"
-                        to={commercialRoutes.home.path}
+                      <NavLink
+                        className={({ isActive }) =>
+                          ` text-lg font-normal p-3 flex ${
+                            isActive ? "text-main-600" : "text-white"
+                          }`
+                        }
+                        to={commercialRoutes.pickDropLocation.path}
+                        onClick={() => setIsShowMenu(false)}
                       >
                         Drop off Location
-                      </Link>
+                      </NavLink>
                     </li>
                   </ul>
                 </AccordionContent>
@@ -488,31 +559,46 @@ export const MobileMegaMenu = ({ isWhite = false }) => {
                     <span>How It Works</span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="pl-9">
+                <AccordionContent className="pl-9 pt-0">
                   <ul>
                     <li>
-                      <Link
-                        className="text-white text-lg font-normal p-3 flex"
-                        to={commercialRoutes.home.path}
+                      <NavLink
+                        className={({ isActive }) =>
+                          ` text-lg font-normal p-3 flex ${
+                            isActive ? "text-main-600" : "text-white"
+                          }`
+                        }
+                        to={`${commercialRoutes.howItWorks.path}#rent`}
+                        onClick={() => setIsShowMenu(false)}
                       >
                         Rent Yoowifi Pocket WiFi
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
-                        className="text-white text-lg font-normal p-3 flex"
-                        to={commercialRoutes.home.path}
+                      <NavLink
+                        className={({ isActive }) =>
+                          ` text-lg font-normal p-3 flex ${
+                            isActive ? "text-main-600" : "text-white"
+                          }`
+                        }
+                        to={`${commercialRoutes.howItWorks.path}#self-rent`}
+                        onClick={() => setIsShowMenu(false)}
                       >
                         Simple Self-Return In less then a minute
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
-                        className="text-white text-lg font-normal p-3 flex"
-                        to={commercialRoutes.home.path}
+                      <NavLink
+                        className={({ isActive }) =>
+                          ` text-lg font-normal p-3 flex ${
+                            isActive ? "text-main-600" : "text-white"
+                          }`
+                        }
+                        to={`${commercialRoutes.howItWorks.path}#topup`}
+                        onClick={() => setIsShowMenu(false)}
                       >
                         Create New Trip or Top-up data
-                      </Link>
+                      </NavLink>
                     </li>
                   </ul>
                 </AccordionContent>
@@ -534,23 +620,33 @@ export const MobileMegaMenu = ({ isWhite = false }) => {
                     <span>Affiliate</span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="pl-9">
+                <AccordionContent className="pl-9 pt-0">
                   <ul>
                     <li>
-                      <Link
-                        className="text-white text-lg font-normal p-3 flex"
-                        to={commercialRoutes.home.path}
+                      <NavLink
+                        className={({ isActive }) =>
+                          ` text-lg font-normal p-3 flex ${
+                            isActive ? "text-main-600" : "text-white"
+                          }`
+                        }
+                        to={commercialRoutes.affiliate.path}
+                        onClick={() => setIsShowMenu(false)}
                       >
                         Join the Yoowifi Affiliate Yoo Wander Program
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
-                        className="text-white text-lg font-normal p-3 flex"
-                        to={commercialRoutes.home.path}
+                      <NavLink
+                        className={({ isActive }) =>
+                          ` text-lg font-normal p-3 flex ${
+                            isActive ? "text-main-600" : "text-white"
+                          }`
+                        }
+                        to={`${commercialRoutes.affiliate.path}#contact-us`}
+                        onClick={() => setIsShowMenu(false)}
                       >
                         Contact Us Now!
-                      </Link>
+                      </NavLink>
                     </li>
                   </ul>
                 </AccordionContent>
@@ -572,23 +668,33 @@ export const MobileMegaMenu = ({ isWhite = false }) => {
                     <span>How To</span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="pl-9">
+                <AccordionContent className="pl-9 pt-0">
                   <ul>
                     <li>
-                      <Link
-                        className="text-white text-lg font-normal p-3 flex"
-                        to={commercialRoutes.home.path}
+                      <NavLink
+                        className={({ isActive }) =>
+                          ` text-lg font-normal p-3 flex ${
+                            isActive ? "text-main-600" : "text-white"
+                          }`
+                        }
+                        to={commercialRoutes.howToSetupSim.path}
+                        onClick={() => setIsShowMenu(false)}
                       >
                         Set an eSIM
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
-                        className="text-white text-lg font-normal p-3 flex"
-                        to={commercialRoutes.home.path}
+                      <NavLink
+                        className={({ isActive }) =>
+                          ` text-lg font-normal p-3 flex ${
+                            isActive ? "text-main-600" : "text-white"
+                          }`
+                        }
+                        to={commercialRoutes.howToConnectPocketWifi.path}
+                        onClick={() => setIsShowMenu(false)}
                       >
                         How to connect Pocketwifi?
-                      </Link>
+                      </NavLink>
                     </li>
                   </ul>
                 </AccordionContent>
@@ -622,18 +728,26 @@ export const DesktopMegaMenu = ({ isShow = false }) => {
                   Travel Data
                 </span>
                 <div className="text-sm flex flex-col gap-3 mt-3">
-                  <Link
-                    to={commercialRoutes.pocketWifiDetails.path}
-                    className="hover:text-main-500 duration-300"
+                  <NavLink
+                    className={({ isActive }) =>
+                      ` hover:text-main-500 duration-300 ${
+                        isActive ? "text-main-600" : "text-white"
+                      }`
+                    }
+                    to={commercialRoutes.pocketWifiHome.path}
                   >
                     Pocket Wifi Details
-                  </Link>
-                  <Link
-                    to={commercialRoutes.home.path}
-                    className="hover:text-main-500 duration-300"
+                  </NavLink>
+                  <NavLink
+                    to={commercialRoutes.simHome.path}
+                    className={({ isActive }) =>
+                      ` hover:text-main-500 duration-300 ${
+                        isActive ? "text-main-600" : "text-white"
+                      }`
+                    }
                   >
                     Sim/eSim Details
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -647,36 +761,56 @@ export const DesktopMegaMenu = ({ isShow = false }) => {
                   Country Coverage
                 </span>
                 <div className="text-sm flex flex-col gap-3 mt-3">
-                  <Link
-                    to={commercialRoutes.countryCoverage.path}
-                    className="hover:text-main-500 duration-300"
+                  <NavLink
+                    to={`${commercialRoutes.countryCoverage.path}?region=asia`}
+                    className={({ isActive }) =>
+                      ` hover:text-main-500 duration-300 ${
+                        isActive ? "text-main-600" : "text-white"
+                      }`
+                    }
                   >
                     Asia
-                  </Link>
-                  <Link
-                    to={commercialRoutes.countryCoverage.path}
-                    className="hover:text-main-500 duration-300"
+                  </NavLink>
+                  <NavLink
+                    to={`${commercialRoutes.countryCoverage.path}?region=europe`}
+                    className={({ isActive }) =>
+                      ` hover:text-main-500 duration-300 ${
+                        isActive ? "text-main-600" : "text-white"
+                      }`
+                    }
                   >
                     Europe
-                  </Link>
-                  <Link
-                    to={commercialRoutes.countryCoverage.path}
-                    className="hover:text-main-500 duration-300"
+                  </NavLink>
+                  <NavLink
+                    to={`${commercialRoutes.countryCoverage.path}?region=america`}
+                    className={({ isActive }) =>
+                      ` hover:text-main-500 duration-300 ${
+                        isActive ? "text-main-600" : "text-white"
+                      }`
+                    }
                   >
                     America
-                  </Link>
-                  <Link
-                    to={commercialRoutes.countryCoverage.path}
-                    className="hover:text-main-500 duration-300"
+                  </NavLink>
+                  <NavLink
+                    to={`${commercialRoutes.countryCoverage.path}?region=australia`}
+                    className={({ isActive }) =>
+                      ` hover:text-main-500 duration-300 ${
+                        isActive ? "text-main-600" : "text-white"
+                      }`
+                    }
                   >
                     Australia
-                  </Link>
-                  <Link
-                    to={commercialRoutes.countryCoverage.path}
-                    className="hover:text-main-500 duration-300"
+                  </NavLink>
+                  <NavLink
+                    to={`${commercialRoutes.countryCoverage.path}?region=africa`}
+                    className={({ isActive }) =>
+                      ` hover:text-main-500 duration-300 ${
+                        isActive ? "text-main-600" : "text-white"
+                      }`
+                    }
                   >
                     Africa
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -690,18 +824,26 @@ export const DesktopMegaMenu = ({ isShow = false }) => {
                   Pickup/Drop off Location
                 </span>
                 <div className="text-sm flex flex-col gap-3 mt-3">
-                  <Link
-                    to={commercialRoutes.home.path}
-                    className="hover:text-main-500 duration-300"
+                  <NavLink
+                    to={commercialRoutes.pickDropLocation.path}
+                    className={({ isActive }) =>
+                      ` hover:text-main-500 duration-300 ${
+                        isActive ? "text-main-600" : "text-white"
+                      }`
+                    }
                   >
                     Pickup Location
-                  </Link>
-                  <Link
-                    to={commercialRoutes.home.path}
-                    className="hover:text-main-500 duration-300"
+                  </NavLink>
+                  <NavLink
+                    to={commercialRoutes.pickDropLocation.path}
+                    className={({ isActive }) =>
+                      ` hover:text-main-500 duration-300 ${
+                        isActive ? "text-main-600" : "text-white"
+                      }`
+                    }
                   >
                     Drop off Location
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -715,24 +857,36 @@ export const DesktopMegaMenu = ({ isShow = false }) => {
                   How It Works
                 </span>
                 <div className="text-sm flex flex-col gap-3 mt-3">
-                  <Link
-                    to={commercialRoutes.home.path}
-                    className="hover:text-main-500 duration-300"
+                  <NavLink
+                    to={`${commercialRoutes.howItWorks.path}#rent`}
+                    className={({ isActive }) =>
+                      ` hover:text-main-500 duration-300 ${
+                        isActive ? "text-main-600" : "text-white"
+                      }`
+                    }
                   >
                     Rent Yoowifi Pocket WiFi
-                  </Link>
-                  <Link
-                    to={commercialRoutes.home.path}
-                    className="hover:text-main-500 duration-300"
+                  </NavLink>
+                  <NavLink
+                    to={`${commercialRoutes.howItWorks.path}#self-rent`}
+                    className={({ isActive }) =>
+                      ` hover:text-main-500 duration-300 ${
+                        isActive ? "text-main-600" : "text-white"
+                      }`
+                    }
                   >
                     Simple Self-Return In less then a minute
-                  </Link>
-                  <Link
-                    to={commercialRoutes.home.path}
-                    className="hover:text-main-500 duration-300"
+                  </NavLink>
+                  <NavLink
+                    to={`${commercialRoutes.howItWorks.path}#topup`}
+                    className={({ isActive }) =>
+                      ` hover:text-main-500 duration-300 ${
+                        isActive ? "text-main-600" : "text-white"
+                      }`
+                    }
                   >
                     Create New Trip or Top-up data
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -746,18 +900,26 @@ export const DesktopMegaMenu = ({ isShow = false }) => {
                   Affiliate
                 </span>
                 <div className="text-sm flex flex-col gap-3 mt-3">
-                  <Link
-                    to={commercialRoutes.home.path}
-                    className="hover:text-main-500 duration-300"
+                  <NavLink
+                    to={commercialRoutes.affiliate.path}
+                    className={({ isActive }) =>
+                      ` hover:text-main-500 duration-300 ${
+                        isActive ? "text-main-600" : "text-white"
+                      }`
+                    }
                   >
                     Join the Yoowifi Affiliate Yoo Wander Program
-                  </Link>
-                  <Link
-                    to={commercialRoutes.home.path}
-                    className="hover:text-main-500 duration-300"
+                  </NavLink>
+                  <NavLink
+                    to={`${commercialRoutes.affiliate.path}#contact-us`}
+                    className={({ isActive }) =>
+                      ` hover:text-main-500 duration-300 ${
+                        isActive ? "text-main-600" : "text-white"
+                      }`
+                    }
                   >
                     Contact Us Now!
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -771,18 +933,26 @@ export const DesktopMegaMenu = ({ isShow = false }) => {
                   How To
                 </span>
                 <div className="text-sm flex flex-col gap-3 mt-3">
-                  <Link
-                    to={commercialRoutes.home.path}
-                    className="hover:text-main-500 duration-300"
+                  <NavLink
+                    to={commercialRoutes.howToSetupSim.path}
+                    className={({ isActive }) =>
+                      ` hover:text-main-500 duration-300 ${
+                        isActive ? "text-main-600" : "text-white"
+                      }`
+                    }
                   >
                     Set an eSIM
-                  </Link>
-                  <Link
-                    to={commercialRoutes.home.path}
-                    className="hover:text-main-500 duration-300"
+                  </NavLink>
+                  <NavLink
+                    to={commercialRoutes.howToConnectPocketWifi.path}
+                    className={({ isActive }) =>
+                      ` hover:text-main-500 duration-300 ${
+                        isActive ? "text-main-600" : "text-white"
+                      }`
+                    }
                   >
                     How to connect Pocketwifi?
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>
