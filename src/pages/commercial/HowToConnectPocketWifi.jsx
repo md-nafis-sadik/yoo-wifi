@@ -7,7 +7,7 @@ const HowToConnectPocketWifi = () => {
   return (
     <Fragment>
       <HowToConnect
-        link={{ to: "/pocketwifi/how-to-connect", text: "Buy Pocket Wifi" }}
+        link={{ to: "/product/pocket-wifi", text: "Buy Pocket Wifi" }}
       />
       <ReturnDevice />
       <TopUpPlan />

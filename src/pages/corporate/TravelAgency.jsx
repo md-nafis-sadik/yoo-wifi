@@ -3,7 +3,7 @@ import Products from '@/components/commercial/home/Products';
 import CollaborateMarquee from '@/components/shared/CollaborateMarquee';
 import CorporateBanner from '@/components/shared/others/CorporateBanner';
 import CustomerTestimonial from '@/components/shared/others/CustomerTestimonial';
-import React, { Fragment } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 
 const TravelAgency = () => {
@@ -18,7 +18,7 @@ const TravelAgency = () => {
                 featureList={[
                     "Size of Data", "Operator-specific", "Managing platform and Monitoring", "Single or Multiple Countries"
                 ]}
-                path='#'
+                path='/view-more'
             />
             <Products />
             <CustomerTestimonial />

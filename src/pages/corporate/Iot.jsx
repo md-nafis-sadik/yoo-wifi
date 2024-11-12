@@ -18,7 +18,7 @@ const Iot = () => {
                 featureList={[
                     "Size of Data", "Operator-specific", "Managing platform and Monitoring", "Single or Multiple Countries"
                 ]}
-                path='#'
+                path='/view-more'
             />
             <Products />
             <CustomerTestimonial />

@@ -265,21 +265,21 @@ export const rentServicesData = [
     title: "Local return mailer bag",
     description:
       "Simply pack the device and its accessories into the prepaid and return mailer bag any SingPost mailbox",
-    icon: () => <MailerBugIcon className="w-12 h-12 md:w-10 md:h-10" />,
+    icon: () => <MailerBugIcon className="w-12 h-12 md:w-15 md:h-15" />,
   },
   {
     _id: 2,
     title: "Self-Return",
     description:
       "Simply pack the device and its accessories and you may return at any pickup/Return location.",
-    icon: () => <MapLocatedIcon className="w-12 h-12 md:w-10 md:h-10" />,
+    icon: () => <MapLocatedIcon className="w-12 h-12 md:w-15 md:h-15" />,
   },
   {
     _id: 3,
     title: "International Courier",
     description:
       "Contact Local DHL to pickup device if you have a return mailer bag / arrange your own Courier",
-    icon: () => <GlobalRawIcon className="w-12 h-12 md:w-10 md:h-10" />,
+    icon: () => <GlobalRawIcon className="w-12 h-12 md:w-15 md:h-15" />,
   },
 ];
 

@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { BreadcrumbIcon, BreadcrumbSmallIcon, CheckIcon } from '@/services';
+import { BreadcrumbIcon, BreadcrumbSmallIcon, CheckIcon, YooWifiLogoIcon } from '@/services';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -48,7 +48,7 @@ const CorporateBanner = ({
                                 <Button
                                     variant='secondary' size='lg'
                                     className="text-sm xl:text-xl font-normal hover:!bg-secondary-400 rounded-[30px] px-[14.52px] py-[8.47px]"
-                                    navigate={`#`}
+                                    onClick={() => navigate(path)}
                                 >
                                     View More
                                 </Button>
@@ -85,8 +85,9 @@ const CorporateBanner = ({
                 </div>
 
                 <div className='absolute right-0 top-0 z-0'>
-                    <BreadcrumbIcon className='hidden lg:block' />
-                    <BreadcrumbSmallIcon className='block lg:hidden' />
+                    <YooWifiLogoIcon className='relative -right-20 -top-4 md:-right-36 lg:-top-20 lg:-right-44 w-[245px] h-[223px] md:w-[500px] lg:w-full lg:h-full' />
+                    {/* <BreadcrumbIcon className='hidden lg:block h-full' />
+                    <BreadcrumbSmallIcon className='block lg:hidden' /> */}
                 </div>
             </div>
 
@@ -130,6 +131,9 @@ export default CorporateBanner;
 
 // reusable components
 const DescriptionButton = ({ descriptionCls, buttonCls, description }) => {
+
+    const navigate = useNavigate();
+
     return (
         <>
             <p className={cn(
@@ -141,7 +145,7 @@ const DescriptionButton = ({ descriptionCls, buttonCls, description }) => {
             <Button
                 variant='secondary'
                 className={`"!text-base hover:!bg-secondary-400 rounded-xl !font-semibold" ${buttonCls}`}
-                navigate={`/contact`}
+                onClick={() => navigate('/contact')}
             >
                 Contact Us
             </Button>
