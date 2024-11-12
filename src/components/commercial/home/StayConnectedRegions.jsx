@@ -5,6 +5,7 @@ import { regionsData } from "@/services/data";
 import { useMemo } from "react";
 
 const StayConnectedRegions = () => {
+
   const regions = useMemo(() => regionsData(), []);
 
   return (
@@ -23,9 +24,9 @@ const StayConnectedRegions = () => {
               key={index}
               className={cn(
                 index > 2 &&
-                  "lg:col-span-3 last:col-span-full last:lg:col-span-3",
+                "lg:col-span-3 last:col-span-full last:lg:col-span-3",
                 index <= 2 &&
-                  "lg:col-span-2 last:col-span-full last:lg:col-span-2",
+                "lg:col-span-2 last:col-span-full last:lg:col-span-2",
                 "col-span-3"
               )}
             />

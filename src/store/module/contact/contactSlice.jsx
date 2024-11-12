@@ -9,6 +9,7 @@ const initialState = {
       text: "Whatsapp Us",
       value: "(+65) 6100 9998",
       image: images.whatsapp,
+      type: 'call'
     },
     {
       _id: 2,
@@ -16,6 +17,7 @@ const initialState = {
       text: "Email Address",
       value: "business@yoowifi.com",
       image: images.email,
+      type: 'email'
     },
   ],
   faqs: [

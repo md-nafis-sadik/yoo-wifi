@@ -1,14 +1,23 @@
 import SectionHeader from '@/components/shared/others/SectionHeader';
 import { cn } from '@/lib/utils';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const CountryList = () => {
+const CountryList = ({ query }) => {
 
     const { regionList, countries } = useSelector(state => state.country);
-
     const [currentRegion, setCurrentRegion] = useState(regionList[0]);
+
+    // Set current region based on query
+    useEffect(() => {
+        if (query) {
+            const region = regionList.find(region => region.value.toLowerCase() === query.toLowerCase());
+            if (region) {
+                setCurrentRegion(region);
+            }
+        }
+    }, [query])
 
     // Filter countries by region
     const filteredCountries = countries.filter(country => country.region.toLowerCase() === currentRegion.name.toLowerCase());

@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { ArrowUpRightIcon } from "@/services";
+import { ArrowUpRightIcon, commercialRoutes } from "@/services";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Link } from "react-router-dom";
 
 const DetailsCard = ({ item, titleClassName, descriptionClassName }) => {
   return (
@@ -18,7 +19,7 @@ const DetailsCard = ({ item, titleClassName, descriptionClassName }) => {
 
       <p
         className={cn(
-          "text-[28px] font-bold !leading-[1.1] text-black-900 mt-3 md:mt-4",
+          "text-lg md:text-[28px] font-semibold md:font-bold !leading-[1.1] text-black-900 mt-3 md:mt-4",
           titleClassName
         )}
       >
@@ -33,10 +34,13 @@ const DetailsCard = ({ item, titleClassName, descriptionClassName }) => {
         {item?.description}
       </p>
 
-      <Button className={"mt-3 md:mt-6 w-full md:w-fit h-11 md:h-[51px]"}>
-        <span>Explore Products</span>
-        <ArrowUpRightIcon className={"!h-6 !w-6 shrink-0"} />
-      </Button>
+      <Link to={commercialRoutes.countryCoverage.path} >
+        <Button className={"mt-3 md:mt-6 w-full md:w-fit h-11 md:h-[51px]"}>
+          <span>Explore Products</span>
+          <ArrowUpRightIcon className={"!h-6 !w-6 shrink-0"} />
+        </Button>
+      </Link>
+
     </div>
   );
 };
