@@ -14,7 +14,8 @@ import {
 } from "@/services";
 import { MenuIcon } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { CountrySelect } from "react-country-state-city";
+import { Link, useNavigate } from "react-router-dom";
 
 export const corporateMenuItems = [
   {
@@ -44,23 +45,30 @@ export const corporateMenuItems = [
   },
   {
     name: "About Us",
-    path: commercialRoutes.aboutUs.path,
-    activePath: commercialRoutes.aboutUs.activePath,
+    path: corporateRoutes.aboutUs.path,
+    activePath: corporateRoutes.aboutUs.activePath,
   },
   {
     name: "Commercial",
-    path: commercialRoutes.home.path,
-    activePath: commercialRoutes.home.activePath,
+    path: corporateRoutes.commercial.path,
+    activePath: corporateRoutes.commercial.activePath,
   },
 ];
 
 function CorporateNavbar() {
-  const { isScrolled, isRedBorder, isHome, isBlack, isBannerRoutes } =
-    useGteNavbarStatus();
+  const { isScrolled, isRedBorder, isHome } = useGteNavbarStatus();
   const [isShowMenu, setIsShowMenu] = useState(false);
   const [showSearchbar, setShowSearchbar] = useState(false);
   const menuItems = useActiveMenuItem(corporateMenuItems);
   const { setIsAuthDialogOpen, setLoginRequiredDialogOpen } = useModal();
+
+  const navigate = useNavigate();
+  const handleCountryChange = (country) => {
+    navigate(
+      `/country-coverage/filter?region=${country?.region?.toLowerCase()}&country=${country?.name?.toLowerCase()}`
+    );
+  };
+
   const handleModalOpen = (name = "auth", value) => {
     if (name == "auth") {
       setIsAuthDialogOpen(value);
@@ -91,28 +99,28 @@ function CorporateNavbar() {
               />
             </Link>
             <div className="w-full max-w-[200px] xs:max-w-full  items-center justify-end xs:gap-1 flex xl:hidden">
-              <label
-                htmlFor="search"
+              <div
                 className={cn(
-                  "overflow-hidden  w-full relative duration-300 origin-left",
-                  showSearchbar ? "max-w-[200px] xs:max-w-full" : "max-w-0"
+                  "w-full relative duration-300 origin-left",
+                  showSearchbar
+                    ? "max-w-[200px] xs:max-w-full"
+                    : "max-w-0 overflow-hidden "
                 )}
               >
-                <input
-                  type="text"
-                  className={cn(
-                    "pr-3 pl-10 w-full text-sm py-2 border outline-none  bg-transparent rounded-lg placeholder:text-black-600 font-normal",
-                    isScrolled
-                      ? "border-neutral-800 "
-                      : "border-neutral-200 text-black-900"
+                <CountrySelect
+                  onChange={(val) => handleCountryChange(val)}
+                  name="country"
+                  containerClassName={cn(
+                    "country-search bg-transparent blackSearch"
                   )}
-                  placeholder="Search country"
+                  inputClassName="!border-none !outline-none bg-transparent"
+                  placeHolder="Select Country"
                 />
                 <SearchIcon
-                  className="absolute h-5 w-5 top-1/2 -translate-y-1/2 left-3"
-                  color={isScrolled ? "#757575" : "#191919"}
+                  className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
+                  color="#757575"
                 />
-              </label>
+              </div>
               {showSearchbar ? (
                 <button
                   type="button"
@@ -153,7 +161,7 @@ function CorporateNavbar() {
           </div>
           <div
             className={cn(
-              "flex-1 xl:flex flex-col xl:flex-row xl:items-center xl:justify-between text-lg xl:text-sm font-semibold fixed xl:relative top-0 left-0 w-full bg-black h-screen xl:bg-transparent xl:h-auto p-4 xl:p-0 overflow-auto duration-100",
+              "flex-1 xl:flex flex-col xl:flex-row xl:items-center xl:justify-between text-lg xl:text-sm font-semibold fixed xl:relative top-0 left-0 w-full bg-black h-screen xl:bg-transparent xl:h-auto p-4 xl:p-0 overflow-auto xl:overflow-visible duration-100",
               isShowMenu ? "translate-x-0" : "translate-x-full xl:translate-x-0"
             )}
           >
@@ -192,28 +200,26 @@ function CorporateNavbar() {
                 className={cn(
                   "menuItem p-3 xl:p-0 text-white xl:text-main-600"
                 )}
-                to={corporateRoutes.home.path}
+                to={commercialRoutes.home.path}
               >
                 For Yoo
               </Link>
               <div className="flex flex-col xl:flex-row xl:items-center gap-3 w-full xl:w-auto flex-1 xl:flex-none justify-end xl:justify-center mt-6 xl:mt-0">
-                <label
-                  htmlFor="search"
-                  className="w-full hidden xl:block relative"
-                >
-                  <input
-                    type="text"
-                    className={cn(
-                      "pr-3 pl-10  py-2 border outline-none  bg-transparent rounded-lg placeholder:text-black-600 font-normal",
-                      isScrolled ? "border-neutral-800" : "border-neutral-200 "
+                <div className="w-full relative">
+                  <CountrySelect
+                    onChange={(val) => handleCountryChange(val)}
+                    name="country"
+                    containerClassName={cn(
+                      "country-search blackSearch bg-transparent"
                     )}
-                    placeholder="Search country"
+                    inputClassName="!border-none !outline-none bg-transparent"
+                    placeHolder="Select Country"
                   />
                   <SearchIcon
-                    className="absolute top-1/2 -translate-y-1/2 left-3"
-                    color={isScrolled ? "#757575" : "#191919"}
+                    className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
+                    color="#757575"
                   />
-                </label>
+                </div>
                 <Button
                   variant="secondary"
                   className={

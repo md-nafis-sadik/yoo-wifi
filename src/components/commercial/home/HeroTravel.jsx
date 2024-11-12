@@ -3,10 +3,21 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import HeroChildSlides from "./HeroChildSlides";
 import ProductRouteCard from "./ProductRouteCard";
+import useModal from "@/hooks/useModal";
 
 function HeroTravel() {
   const { products } = useSelector((state) => state.shared);
   const navigate = useNavigate();
+  const { setLoginRequiredDialogOpen } = useModal();
+
+  const handleNavigate = (path) => {
+    // if (auth?.token) {
+    //   navigate(path)
+    // }else{
+    // setLoginRequiredDialogOpen(true);
+    // }
+    setLoginRequiredDialogOpen(true);
+  };
   return (
     <div className="flex-full flex items-end min-h-0 bg-main-600 text-white pt-20 sm:pt-28 xl:pt-40 px-4 sm:px-10 md:px-16 overflow-hidden relative pb-6 sm:pb-12 ">
       <div className="w-full max-w-[1312px] mx-auto">
@@ -29,7 +40,7 @@ function HeroTravel() {
                 <ProductRouteCard
                   key={index}
                   item={item}
-                  onClick={() => navigate(item?.path)}
+                  onClick={() => handleNavigate(item?.path)}
                   wrapperClass="bg-white-rgb text-black-900"
                   simColor="#000"
                   routerColor="#000"

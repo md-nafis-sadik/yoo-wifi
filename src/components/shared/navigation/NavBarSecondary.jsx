@@ -15,8 +15,10 @@ import {
 } from "@/services";
 import { MenuIcon } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { DesktopMegaMenu, MobileMegaMenu } from "./NavBar";
+import { CountrySelect } from "react-country-state-city";
+import { Link, useNavigate } from "react-router-dom";
+import DesktopMegaMenu from "./DesktopMegaMenu";
+import MobileMegaMenu from "./MobileMegaMenu";
 
 const NavBarSecondary = () => {
   const { isScrolled, isRedBorder, isHome, isBlack, isBannerRoutes } =
@@ -25,7 +27,14 @@ const NavBarSecondary = () => {
   const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [showSearchbar, setShowSearchbar] = useState(false);
   const { setIsAuthDialogOpen, setLoginRequiredDialogOpen } = useModal();
+  const navigate = useNavigate();
+  const handleCountryChange = (country) => {
+    navigate(
+      `country-coverage/filter?region=${country?.region?.toLowerCase()}&country=${country?.name?.toLowerCase()}`
+    );
+  };
 
+  
   const commercialMenuItems = [
     {
       name: "Home",
@@ -77,7 +86,7 @@ const NavBarSecondary = () => {
         isScrolled ? "bg-black border-black-900" : ""
       )}
     >
-      <div className="w-full max-w-[1392px] mx-auto relative">
+      <div className="w-full max-w-[1392px] mx-auto">
         <nav
           className={cn(
             "w-full duration-300 flex items-center lg:gap-10 2xl:gap-15 justify-between px-4 py-2 sm:py-4",
@@ -92,28 +101,39 @@ const NavBarSecondary = () => {
               />
             </Link>
             <div className="w-full max-w-[200px] xs:max-w-full  items-center justify-end xs:gap-1 flex xl:hidden">
-              <label
-                htmlFor="search"
+              <div
                 className={cn(
-                  "overflow-hidden  w-full relative duration-300 origin-left",
-                  showSearchbar ? "max-w-[200px] xs:max-w-full" : "max-w-0"
+                  "w-full relative duration-300 origin-left",
+                  showSearchbar
+                    ? "max-w-[200px] xs:max-w-full"
+                    : "max-w-0 overflow-hidden "
                 )}
               >
-                <input
-                  type="text"
-                  className={cn(
-                    "pr-3 pl-10 w-full text-sm py-2 border outline-none  bg-transparent rounded-lg placeholder:text-black-600 font-normal",
-                    isScrolled
-                      ? "border-neutral-800"
-                      : "border-neutral-200 text-black-900"
+                <CountrySelect
+                  onChange={(val) => handleCountryChange(val)}
+                  name="country"
+                  containerClassName={cn(
+                    "country-search bg-transparent",
+                    isRedBorder && !showMegaMenu
+                      ? "blackSearch"
+                      : isScrolled || (!isHome && !showMegaMenu)
+                      ? "blackSearch"
+                      : "whiteSearch"
                   )}
-                  placeholder="Search country"
+                  inputClassName="!border-none !outline-none bg-transparent"
+                  placeHolder="Select Country"
                 />
                 <SearchIcon
-                  className="absolute h-5 w-5 top-1/2 -translate-y-1/2 left-3"
-                  color={isScrolled ? "#757575" : "#191919"}
+                  className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
+                  color={
+                    isRedBorder
+                      ? "#757575"
+                      : isScrolled || (!isHome && !isBannerRoutes)
+                      ? "#757575"
+                      : "#FAFAFA"
+                  }
                 />
-              </label>
+              </div>
               {showSearchbar ? (
                 <button
                   type="button"
@@ -154,8 +174,10 @@ const NavBarSecondary = () => {
           </div>
           <div
             className={cn(
-              "flex-1 xl:flex flex-col xl:flex-row xl:items-center xl:justify-between text-lg xl:text-sm font-semibold fixed xl:relative top-0 left-0 w-full bg-black h-screen xl:bg-transparent xl:h-auto p-4 xl:p-0 overflow-auto duration-100",
-              isShowMenu ? "translate-x-0" : "translate-x-full xl:translate-x-0"
+              "flex-1 xl:flex flex-col xl:flex-row xl:items-center xl:justify-between text-lg xl:text-sm font-semibold fixed xl:!static  top-0 left-0 w-full bg-black h-screen xl:bg-transparent xl:h-auto p-4 xl:p-0 overflow-auto xl:overflow-visible duration-500",
+              isShowMenu
+                ? "translate-x-0"
+                : "translate-x-full xl:translate-x-[auto]"
             )}
           >
             <div className="max-w-[360px] pt-10 xl:pt-0 xl:max-w-none mx-auto flex-1 xl:flex flex-col xl:flex-row xl:items-center xl:justify-between">
@@ -189,7 +211,11 @@ const NavBarSecondary = () => {
                   </li>
                 ))}
                 {/* mega menu  */}
-                <li className="hidden xl:block">
+                <li
+                  className="hidden xl:block"
+                  onMouseEnter={() => setShowMegaMenu(true)}
+                  onMouseLeave={() => setShowMegaMenu(false)}
+                >
                   <div
                     className="flex items-center justify-between xl:justify-start cursor-pointer w-full max-w-[320px] p-3 rounded-lg xl:rounded-none hover:bg-main-600 xl:w-auto xl:max-w-none xl:p-0 xl:hover:text-inherit xl:hover:bg-transparent hover:text-white"
                     onClick={() => setShowMegaMenu(!showMegaMenu)}
@@ -205,6 +231,7 @@ const NavBarSecondary = () => {
                       }
                     />
                   </div>
+                  <DesktopMegaMenu isShow={showMegaMenu} />
                 </li>
                 <MobileMegaMenu setIsShowMenu={setIsShowMenu} />
               </ul>
@@ -218,23 +245,32 @@ const NavBarSecondary = () => {
                 Corporate
               </Link>
               <div className="flex flex-col xl:flex-row xl:items-center gap-3 w-full xl:w-auto flex-1 xl:flex-none justify-end xl:justify-center mt-6 xl:mt-0">
-                <label
-                  htmlFor="search"
-                  className="w-full hidden xl:block relative"
-                >
-                  <input
-                    type="text"
-                    className={cn(
-                      "pr-3 pl-10  py-2 border outline-none  bg-transparent rounded-lg placeholder:text-black-600 font-normal",
-                      isScrolled ? "border-neutral-800" : "border-neutral-200 "
+                <div className="w-full relative">
+                  <CountrySelect
+                    onChange={(val) => handleCountryChange(val)}
+                    name="country"
+                    containerClassName={cn(
+                      "country-search bg-transparent",
+                      isRedBorder && !showMegaMenu
+                        ? "blackSearch"
+                        : isScrolled || (!isHome && !showMegaMenu)
+                        ? "blackSearch"
+                        : "whiteSearch"
                     )}
-                    placeholder="Search country"
+                    inputClassName="!border-none !outline-none bg-transparent"
+                    placeHolder="Select Country"
                   />
                   <SearchIcon
-                    className="absolute top-1/2 -translate-y-1/2 left-3"
-                    color={isScrolled ? "#757575" : "#191919"}
+                    className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
+                    color={
+                      isRedBorder
+                        ? "#757575"
+                        : isScrolled || (!isHome && !isBannerRoutes)
+                        ? "#757575"
+                        : "#FAFAFA"
+                    }
                   />
-                </label>
+                </div>
                 <Button
                   variant="secondary"
                   className={
@@ -275,8 +311,6 @@ const NavBarSecondary = () => {
           </div>
         </nav>
       </div>
-
-      <DesktopMegaMenu isShow={showMegaMenu} />
     </header>
   );
 };

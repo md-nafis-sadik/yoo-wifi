@@ -16,7 +16,7 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
   };
 
   return (
-    <div className="containerX xl:px-0">
+    <div className="containerX xl:px-0" id="lets-talk">
       <div className="sec_common_80 xl:px-0 flex flex-col lg:flex-row gap-4 md:gap-8 lg:gap-[60px]">
         {/* LEFT PORTION */}
         <div className="w-full lg:w-1/2 flex flex-col gap-4 md:gap-6 lg:gap-12">

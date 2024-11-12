@@ -3,8 +3,16 @@ import PocketWifiLayout from "@/components/layout/PocketWifiLayout";
 import RouterLayout from "@/components/layout/RouterLayout";
 import SimLayout from "@/components/layout/SimLayout";
 import AboutUs from "@/pages/commercial/AboutUs";
+import Affiliate from "@/pages/commercial/Affiliate";
 import Contact from "@/pages/commercial/Contact";
+import CountryCoverage from "@/pages/commercial/countryCoverage/CountryCoverage";
+import CountryCoverageFilter from "@/pages/commercial/countryCoverage/CountryCoverageFilter";
 import Home from "@/pages/commercial/Home";
+import HowItWorks from "@/pages/commercial/howItWorks/HowItWorks";
+import HowToConnectPocketWifi from "@/pages/commercial/HowToConnectPocketWifi";
+import HowToSetupSim from "@/pages/commercial/HowToSetupSim";
+import PackageDetails from "@/pages/commercial/PackageDetails";
+import PickDropLocation from "@/pages/commercial/PickDropLocation";
 import PocketWifiHome from "@/pages/commercial/pocketWifi/Home";
 import PocketWifiCartService from "@/pages/commercial/pocketWifi/PocketWifiCartService";
 import PocketWifiOrderSummery from "@/pages/commercial/pocketWifi/PocketWifiOrderSummery";
@@ -13,7 +21,7 @@ import PocketWifiPlanSummery from "@/pages/commercial/pocketWifi/PocketWifiPlanS
 import PocketWifiRegion from "@/pages/commercial/pocketWifi/PocketWifiRegion";
 import PocketWifiSelfPickup from "@/pages/commercial/pocketWifi/PocketWifiSelfPickup";
 import PocketWifiShippingOption from "@/pages/commercial/pocketWifi/PocketWifiShippingOption";
-import Commercial from "@/pages/corporate/Commercial";
+import PocketWifiDetails from "@/pages/commercial/PocketWifiDetails";
 import RouterHome from "@/pages/commercial/router/Home";
 import RouterCartService from "@/pages/commercial/router/RouterCartService";
 import RouterOrderSummery from "@/pages/commercial/router/RouterOrderSummery";
@@ -30,21 +38,15 @@ import SimPlanSummery from "@/pages/commercial/sim/SimPlanSummery";
 import SimRegion from "@/pages/commercial/sim/SimRegion";
 import SimSelfPickup from "@/pages/commercial/sim/SimSelfPickup";
 import SimShippingOption from "@/pages/commercial/sim/SimShippingOption";
+import AboutCorporate from "@/pages/corporate/AboutCorporate";
+import Commercial from "@/pages/corporate/Commercial";
 import CorporateHome from "@/pages/corporate/Home";
 import Hotel from "@/pages/corporate/Hotel";
 import Iot from "@/pages/corporate/Iot";
 import MaritimeInternet from "@/pages/corporate/MaritimeInternet";
 import Office from "@/pages/corporate/Office";
 import TravelAgency from "@/pages/corporate/TravelAgency";
-import CountryCoverage from "@/pages/commercial/countryCoverage/CountryCoverage";
-import PocketWifiDetails from "@/pages/commercial/PocketWifiDetails";
-import CountryCoverageFilter from "@/pages/commercial/countryCoverage/CountryCoverageFilter";
-import PackageDetails from "@/pages/commercial/PackageDetails";
-import HowItWorks from "@/pages/commercial/howItWorks/HowItWorks";
-import Affiliate from "@/pages/commercial/Affiliate";
-import PickDropLocation from "@/pages/commercial/PickDropLocation";
-import HowToSetupSim from "@/pages/commercial/HowToSetupSim";
-import HowToConnectPocketWifi from "@/pages/commercial/HowToConnectPocketWifi";
+import Faq from "@/pages/Faq";
 
 const commercialRoutes = {
   commercialLayout: {
@@ -310,6 +312,15 @@ const commercialRoutes = {
     activePath: "howToConnectPocketWifi",
     element: <HowToConnectPocketWifi />,
   },
+
+  // faq
+
+  faq: {
+    path: "/faq",
+    name: "FAQ",
+    activePath: "faq",
+    element: <Faq />,
+  },
 };
 
 const corporateRoutes = {
@@ -320,37 +331,43 @@ const corporateRoutes = {
     element: <CorporateHome />,
   },
   iot: {
-    path: "iot",
+    path: "/corporate/iot",
     name: "IOT",
     activePath: "iot",
     element: <Iot />,
   },
   hotel: {
-    path: "hotel",
+    path: "/corporate/hotel",
     name: "Hotel",
     activePath: "hotel",
     element: <Hotel />,
   },
   travelAgency: {
-    path: "travel-agency",
+    path: "/corporate/travel-agency",
     name: "Travel Agency",
     activePath: "travel-agency",
     element: <TravelAgency />,
   },
   maritimeInternet: {
-    path: "maritime-internet",
+    path: "/corporate/maritime-internet",
     name: "MARITIME INTERNET",
     activePath: "maritime-internet",
     element: <MaritimeInternet />,
   },
   office: {
-    path: "office",
+    path: "/corporate/office",
     name: "Office",
     activePath: "office",
     element: <Office />,
   },
+  aboutUs: {
+    path: "/corporate/about-us",
+    name: "About Us",
+    activePath: "about-us",
+    element: <AboutCorporate />,
+  },
   commercial: {
-    path: "commercial",
+    path: "/corporate/commercial",
     name: "Commercial",
     activePath: "commercial",
     element: <Commercial />,
