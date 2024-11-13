@@ -53,11 +53,11 @@ function Hero() {
               </div>
             </div>
             <Button
-              className="w-full sm:max-w-max text-base font-semibold leading-[120%] mt-5 sm:mt-7 md:mt-10"
+              className="w-full sm:max-w-[280px] text-base font-semibold leading-[120%] mt-6 lg:mt-12"
               type="button"
               onClick={() => navigate(commercialRoutes.simRegion.path)}
             >
-              View Plans
+              Get SIM/eSIM
             </Button>
           </div>
         </div>

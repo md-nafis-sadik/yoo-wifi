@@ -52,23 +52,13 @@ function Hero() {
                 </span>
               </div>
             </div>
-            <div className="flex flex-col md:items-end gap-4">
-              <div className="w-full mt-4 sm:mt-7 md:mt-12 flex flex-col  justify-end md:items-end gap-2">
-                <h4 className="text-sm sm:text-lg md:text-2xl text-black-900">
-                  From{" "}
-                  <span className="text-2xl sm:text-3xl md:text-5xl font-bold">
-                    {product?.price?.currency} {product?.price?.amount}
-                  </span>
-                </h4>
-                <Button
-                  className="w-full sm:max-w-max text-base font-semibold leading-[120%]"
-                  type="button"
-                  onClick={() => navigate(commercialRoutes.routerRegion.path)}
-                >
-                  View Plans
-                </Button>
-              </div>
-            </div>
+            <Button
+              className="w-full sm:max-w-[280px] text-base font-semibold leading-[120%] mt-6 lg:mt-12"
+              type="button"
+              onClick={() => navigate(commercialRoutes.routerRegion.path)}
+            >
+              Get Router
+            </Button>
           </div>
         </div>
       </div>

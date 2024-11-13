@@ -112,8 +112,21 @@ const initialState = {
       validity: 30,
       desc: "GB",
       coverage: [
-        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+        "Algeria",
+        "Anguilla",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Aruba",
+        "Azerbaijan",
+        "Bolivia",
+        "Brazil",
+        "British Virgin Islands",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
       ],
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
     {
       id: 2,
@@ -135,8 +148,21 @@ const initialState = {
       validity: 30,
       desc: "GB",
       coverage: [
-        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+        "Algeria",
+        "Anguilla",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Aruba",
+        "Azerbaijan",
+        "Bolivia",
+        "Brazil",
+        "British Virgin Islands",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
       ],
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
     {
       id: 3,
@@ -158,8 +184,21 @@ const initialState = {
       validity: 30,
       desc: "GB",
       coverage: [
-        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+        "Algeria",
+        "Anguilla",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Aruba",
+        "Azerbaijan",
+        "Bolivia",
+        "Brazil",
+        "British Virgin Islands",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
       ],
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
     {
       id: 4,
@@ -181,8 +220,21 @@ const initialState = {
       validity: 30,
       desc: "GB",
       coverage: [
-        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+        "Algeria",
+        "Anguilla",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Aruba",
+        "Azerbaijan",
+        "Bolivia",
+        "Brazil",
+        "British Virgin Islands",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
       ],
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
     {
       id: 5,
@@ -204,8 +256,21 @@ const initialState = {
       validity: 30,
       desc: "GB",
       coverage: [
-        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+        "Algeria",
+        "Anguilla",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Aruba",
+        "Azerbaijan",
+        "Bolivia",
+        "Brazil",
+        "British Virgin Islands",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
       ],
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
     {
       id: 6,
@@ -228,8 +293,21 @@ const initialState = {
       validity: 30,
       desc: "GB",
       coverage: [
-        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+        "Algeria",
+        "Anguilla",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Aruba",
+        "Azerbaijan",
+        "Bolivia",
+        "Brazil",
+        "British Virgin Islands",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
       ],
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
     {
       id: 7,
@@ -252,8 +330,21 @@ const initialState = {
       validity: 30,
       desc: "GB",
       coverage: [
-        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+        "Algeria",
+        "Anguilla",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Aruba",
+        "Azerbaijan",
+        "Bolivia",
+        "Brazil",
+        "British Virgin Islands",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
       ],
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
     {
       id: 8,
@@ -276,8 +367,21 @@ const initialState = {
       validity: 30,
       desc: "GB",
       coverage: [
-        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+        "Algeria",
+        "Anguilla",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Aruba",
+        "Azerbaijan",
+        "Bolivia",
+        "Brazil",
+        "British Virgin Islands",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
       ],
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
     {
       id: 9,
@@ -299,6 +403,8 @@ const initialState = {
       packPrice: 10,
       validity: 30,
       desc: "GB",
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
     {
       id: 10,
@@ -320,8 +426,21 @@ const initialState = {
       validity: 30,
       desc: "GB",
       coverage: [
-        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+        "Algeria",
+        "Anguilla",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Aruba",
+        "Azerbaijan",
+        "Bolivia",
+        "Brazil",
+        "British Virgin Islands",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
       ],
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
   ],
   features: [
@@ -384,20 +503,29 @@ const initialState = {
     {
       _id: 1,
       title: "Enterprise Solutions",
-      icon: () => <EmployeeIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
-      content: "Reliable, secure internet connectivity for businesses on-the-go, with scalable, efficient solutions that ensure seamless integration and smooth operations anywhere",
+      icon: () => (
+        <EmployeeIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />
+      ),
+      content:
+        "Reliable, secure internet connectivity for businesses on-the-go, with scalable, efficient solutions that ensure seamless integration and smooth operations anywhere",
     },
     {
       _id: 2,
       title: "Partnerships",
-      icon: () => <PartnershipIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
-      content: "Our partnerships are built on trust and collaboration, working together to drive innovation, expand opportunities, and create mutual success",
+      icon: () => (
+        <PartnershipIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />
+      ),
+      content:
+        "Our partnerships are built on trust and collaboration, working together to drive innovation, expand opportunities, and create mutual success",
     },
     {
       _id: 3,
       title: "Custom Solutions",
-      icon: () => <CustomSolutionIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />,
-      content: "Discover our custom solutions tailored to meet your unique needs. We work closely with you to design innovative, flexible services that drive success and enhance your business outcomes",
+      icon: () => (
+        <CustomSolutionIcon className="w-10 h-10 lg:w-[60px] lg:h-[60px]" />
+      ),
+      content:
+        "Discover our custom solutions tailored to meet your unique needs. We work closely with you to design innovative, flexible services that drive success and enhance your business outcomes",
     },
   ],
   services: [

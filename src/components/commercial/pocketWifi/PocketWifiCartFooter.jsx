@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 function PocketWifiCartFooter({
   isActive = false,
-  prevHandler = () => { },
-  nextHandler = () => { },
+  prevHandler = () => {},
+  nextHandler = () => {},
   ...props
 }) {
   const { product, cart } = useSelector((state) => state.pocketWifi);
@@ -27,7 +27,7 @@ function PocketWifiCartFooter({
           <h2 className="hidden  lg:block flex-1 sm:text-base md:text-2xml text-black-900 font-bold">
             {product?.name}
           </h2>
-          {product?.colors?.length > 0 && (
+          {/* {product?.colors?.length > 0 && (
             <div className="flex items-center gap-2 flex-1">
               <span className="text-base sm:text-lg md:text-2xl font-bold text-black-700">
                 Color
@@ -51,7 +51,7 @@ function PocketWifiCartFooter({
           )}
           <h3 className="text-black-900 text-base sm:text-lg md:text-2xml font-bold whitespace-nowrap">
             SGD {cart?.package?.packPrice || "0.00"}
-          </h3>
+          </h3> */}
         </div>
         <div className="w-full md:max-w-max">
           <div className="flex justify-between items-center gap-3 sm:gap-4 md:gap-5">

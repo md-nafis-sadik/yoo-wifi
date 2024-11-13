@@ -1,6 +1,11 @@
 import RouterCartFooter from "@/components/commercial/router/RouterCartFooter";
 import PackageCard from "@/components/shared/cards/PackageCard";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { commercialRoutes } from "@/services";
@@ -45,7 +50,9 @@ function RouterPlan() {
   return (
     <div className="w-full">
       <div className="w-full flex flex-col gap-5">
-        <h2>Select a Plan</h2>
+        <h2 className="text-base md:text-2xl !leading-[1.2] md:!leading-[1.4] font-semibold md:font-bold">
+          Select a Plan
+        </h2>
         <div ref={emblaRef} className="w-full max-w-full overflow-hidden">
           <div className="flex items-center gap-4">
             {tabs.map((tab) => (
@@ -90,8 +97,9 @@ function RouterPlan() {
         {/* packages */}
         {recomandedPackages?.filter(filterByCategory)?.map((item, index) => (
           <PackageCard
-            wrapperClass={`cursor-pointer ${cart?.package?.id == item?.id ? "border-main-600" : ""
-              }`}
+            wrapperClass={`cursor-pointer ${
+              cart?.package?.id == item?.id ? "border-main-600" : ""
+            }`}
             item={item}
             key={index}
             onClick={() => handleSelectPlan(item)}

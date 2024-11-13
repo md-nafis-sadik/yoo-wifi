@@ -55,46 +55,14 @@ function Hero() {
                 </span>
               </div>
             </div>
-            <div className="flex flex-col md:items-end gap-4">
-              <div className="w-full mt-4 sm:mt-7 md:mt-12 flex flex-col md:flex-row md:items-center justify-between gap-2">
-                <div className="flex md:flex-row gap-2 md:gap-4">
-                  <h3 className="text-2xl text-black-700 font-bold leading-[140%]">
-                    Color
-                  </h3>
-                  <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-                    {product?.colors?.map((item, index) => (
-                      <button
-                        type="button"
-                        className={cn(
-                          "w-7 aspect-square border rounded-full",
-                          activeColor?.hex == item.hex
-                            ? "border-secondary-500"
-                            : "border-transparent"
-                        )}
-                        style={{ background: item?.hex }}
-                        key={index}
-                        onClick={() => setActiveColor(item)}
-                      ></button>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h4 className="text-sm sm:text-lg md:text-2xl text-black-900">
-                    From{" "}
-                    <span className="text-2xl sm:text-3xl md:text-5xl font-bold">
-                      {product?.price?.currency} {product?.price?.amount}
-                    </span>
-                  </h4>
-                </div>
-              </div>
-              <Button
-                className="w-full sm:max-w-max text-base font-semibold leading-[120%]"
-                type="button"
-                onClick={() => navigate(commercialRoutes.pocketWifiRegion.path)}
-              >
-                View Plans
-              </Button>
-            </div>
+
+            <Button
+              className="w-full sm:max-w-[280px] text-base font-semibold leading-[120%] mt-6 lg:mt-12"
+              type="button"
+              onClick={() => navigate(commercialRoutes.pocketWifiRegion.path)}
+            >
+              Get Pocket Wifi
+            </Button>
           </div>
         </div>
       </div>
