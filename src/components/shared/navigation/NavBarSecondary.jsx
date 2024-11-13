@@ -125,7 +125,7 @@ const NavBarSecondary = () => {
                 />
                 <SearchIcon
                   className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
-                  color="#757575"
+                  color="#191919"
                 />
               </div>
               {showSearchbar ? (
@@ -235,14 +235,14 @@ const NavBarSecondary = () => {
                     onChange={(val) => handleCountryChange(val)}
                     name="country"
                     containerClassName={cn(
-                      "country-search bg-transparent blackSearch"
+                      "country-search bg-transparent nav-white"
                     )}
                     inputClassName="!border-none !outline-none bg-transparent"
                     placeHolder="Select Country"
                   />
                   <SearchIcon
                     className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
-                    color="#757575"
+                    color="#191919"
                   />
                 </div>
                 <Button

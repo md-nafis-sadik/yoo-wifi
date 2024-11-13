@@ -8,6 +8,11 @@ import {
   handleNextPocketWifiCart,
   setPocketWifiCartData,
 } from "@/store/module/pocketWifi/slice";
+import {
+  handleNextRouterCart,
+  setRouterCartData,
+} from "@/store/module/router/slice";
+import { handleNextSimCart, setSimCartData } from "@/store/module/sim/slice";
 import useEmblaCarousel from "embla-carousel-react";
 import { useState } from "react";
 import { CountrySelect } from "react-country-state-city";
@@ -37,23 +42,29 @@ function PocketWifiRegion() {
 
   const handleCountrySelect = (value) => {
     dispatch(setPocketWifiCartData({ productCountry: value }));
+    dispatch(setRouterCartData({ productCountry: value }));
+    dispatch(setSimCartData({ productCountry: value }));
   };
 
   const handleInputChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     dispatch(setPocketWifiCartData({ [name]: value }));
+    dispatch(setRouterCartData({ [name]: value }));
+    dispatch(setSimCartData({ [name]: value }));
   };
 
   const handleNext = () => {
     if (activeTab === "Pocket WIFI") {
       navigate(commercialRoutes.pocketWifiPlan.path);
+      dispatch(handleNextPocketWifiCart());
     } else if (activeTab === "SIM/eSIM") {
       navigate(commercialRoutes.simPlan.path);
+      dispatch(handleNextSimCart());
     } else if (activeTab === "Router") {
       navigate(commercialRoutes.routerPlan.path);
+      dispatch(handleNextRouterCart());
     }
-    dispatch(handleNextPocketWifiCart());
   };
 
   const handlePrev = () => {

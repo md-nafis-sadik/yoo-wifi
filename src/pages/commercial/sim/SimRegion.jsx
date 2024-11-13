@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { commercialRoutes } from "@/services";
+import { setPocketWifiCartData } from "@/store/module/pocketWifi/slice";
+import { setRouterCartData } from "@/store/module/router/slice";
 import { handleNextSimCart, setSimCartData } from "@/store/module/sim/slice";
 import useEmblaCarousel from "embla-carousel-react";
 import { useState } from "react";
@@ -32,12 +34,16 @@ function SimRegion() {
   const [emblaRef] = useEmblaCarousel(options);
 
   const handleCountrySelect = (value) => {
+    dispatch(setPocketWifiCartData({ productCountry: value }));
+    dispatch(setRouterCartData({ productCountry: value }));
     dispatch(setSimCartData({ productCountry: value }));
   };
 
   const handleInputChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
+    dispatch(setPocketWifiCartData({ [name]: value }));
+    dispatch(setRouterCartData({ [name]: value }));
     dispatch(setSimCartData({ [name]: value }));
   };
 
