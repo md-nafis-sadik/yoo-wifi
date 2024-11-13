@@ -1,6 +1,10 @@
-import RouterCartFooter from "@/components/commercial/router/RouterCartFooter";
 import PackageCard from "@/components/shared/cards/PackageCard";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { commercialRoutes } from "@/services";
@@ -9,8 +13,10 @@ import useEmblaCarousel from "embla-carousel-react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import SimCartService from "./SimCartService";
+import RouterCartFooter from "@/components/commercial/sim/RouterCartFooter";
 
-const tabs = ["all", "daily", "monthly", "volume"];
+const tabs = ["all", "daily", "monthly", "multi-country"];
 
 function SimPlan() {
   const { recomandedPackages, cart } = useSelector((state) => state.sim);
@@ -31,7 +37,7 @@ function SimPlan() {
   };
 
   const handleNext = () => {
-    navigate(commercialRoutes.simCartService.path);
+    navigate(commercialRoutes.simPlanSummery.path);
     dispatch(handleNextSimCart());
   };
 
@@ -40,7 +46,7 @@ function SimPlan() {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-auto">
       <div className="w-full flex flex-col gap-5">
         <h2 className="text-base sm:text-xl md:text-2xl font-semibold md:font-bold text-black-900">
           Select a Plan
@@ -89,8 +95,9 @@ function SimPlan() {
         {/* packages */}
         {recomandedPackages?.filter(filterByCategory)?.map((item, index) => (
           <PackageCard
-            wrapperClass={`cursor-pointer ${cart?.package?.id == item?.id ? "border-main-600" : ""
-              }`}
+            wrapperClass={`cursor-pointer ${
+              cart?.package?.id == item?.id ? "border-main-600" : ""
+            }`}
             item={item}
             key={index}
             onClick={() => handleSelectPlan(item)}
@@ -102,6 +109,13 @@ function SimPlan() {
         nextHandler={handleNext}
         isActive={isActive}
       />
+
+      {cart?.package?.dataSize && (
+        <SimCartService
+          multiCountry={activeTab === "multi-country"}
+          className="max-w-full mt-6 md:mt-12"
+        />
+      )}
     </div>
   );
 }

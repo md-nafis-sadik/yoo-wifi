@@ -1,16 +1,35 @@
 import RouterCartFooter from "@/components/commercial/sim/RouterCartFooter";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
 import { commercialRoutes } from "@/services";
 import { handleNextSimCart, setSimCartData } from "@/store/module/sim/slice";
+import useEmblaCarousel from "embla-carousel-react";
+import { useState } from "react";
 import { CountrySelect } from "react-country-state-city";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function SimRegion() {
+  const tabs = [
+    { name: "Pocket WIFI", route: commercialRoutes.pocketWifiRegion.path },
+    { name: "SIM/eSIM", route: commercialRoutes.simRegion.path },
+    { name: "Router", route: commercialRoutes.routerRegion.path },
+  ];
+
   const { cart } = useSelector((state) => state.sim);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const pathname = useLocation().pathname;
+
   const isActive = cart?.productCountry?.id ? true : false;
+
+  const [activeTab, setActiveTab] = useState(
+    tabs.find((tab) => tab.route === pathname)?.name
+  );
+
+  const options = { align: "start" };
+  const [emblaRef] = useEmblaCarousel(options);
 
   const handleCountrySelect = (value) => {
     dispatch(setSimCartData({ productCountry: value }));
@@ -23,7 +42,13 @@ function SimRegion() {
   };
 
   const handleNext = () => {
-    navigate(commercialRoutes.simPlan.path);
+    if (activeTab === "Pocket WIFI") {
+      navigate(commercialRoutes.pocketWifiPlan.path);
+    } else if (activeTab === "SIM/eSIM") {
+      navigate(commercialRoutes.simPlan.path);
+    } else if (activeTab === "Router") {
+      navigate(commercialRoutes.routerPlan.path);
+    }
     dispatch(handleNextSimCart());
   };
 
@@ -33,6 +58,29 @@ function SimRegion() {
 
   return (
     <div className="w-full flex flex-col gap-6 sm:gap-8 md:gap-12">
+      <div className="w-full flex flex-col gap-5">
+        <h2 className="text-base md:text-2xl !leading-[1.2] md:!leading-[1.4] font-semibold md:font-bold">
+          Select Product
+        </h2>
+        <div ref={emblaRef} className="w-full max-w-full overflow-hidden">
+          <div className="flex items-center gap-4">
+            {tabs.map(({ name }) => (
+              <Button
+                key={name}
+                className={cn(
+                  "w-full hover:bg-secondary-500",
+                  activeTab === name ? "text-black-900 font-semibold" : ""
+                )}
+                variant={activeTab === name ? "secondary" : "outline"}
+                onClick={() => setActiveTab(name)}
+              >
+                {name.charAt(0).toUpperCase() + name.slice(1)}
+              </Button>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <div className="w-full">
         <div className="w-full flex flex-col gap-4 sm:gap-6">
           <div className="flex flex-col gap-2">

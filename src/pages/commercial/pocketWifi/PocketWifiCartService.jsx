@@ -5,22 +5,24 @@ import PocketWifiCartFooter from "@/components/commercial/pocketWifi/PocketWifiC
 import CartQuantity from "@/components/shared/others/CartQuantity";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { commercialRoutes } from "@/services";
+import { commercialRoutes, PlusRoundedIcon } from "@/services";
 import {
   handleNextPocketWifiCart,
   setPocketWifiCartData,
 } from "@/store/module/pocketWifi/slice";
 import useEmblaCarousel from "embla-carousel-react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-function PocketWifiCartService() {
+function PocketWifiCartService({ className = "", multiCountry = false }) {
   const { cart } = useSelector((state) => state.pocketWifi);
   const dispatch = useDispatch();
   const options = { align: "start" };
   const [emblaRef] = useEmblaCarousel(options);
   const navigate = useNavigate();
 
+  const [addNewCountry, setAddNewCountry] = useState(false);
 
   const isActivePackage = Boolean(cart?.package?.id || cart?.topup?.planCode);
   const deviceSelect =
@@ -52,7 +54,7 @@ function PocketWifiCartService() {
   };
 
   return (
-    <div className="w-full flex flex-col gap-6">
+    <div className={cn("w-full flex flex-col gap-6", className)}>
       <div className="w-full flex flex-col gap-4">
         <h2 className="text-base font-semibold text-black-700">Service</h2>
         <div ref={emblaRef} className="w-full max-w-full overflow-hidden">
@@ -84,12 +86,35 @@ function PocketWifiCartService() {
       </div>
 
       {cart?.cartType == "rental" ? <DataSize /> : <WifiDevices />}
-      <ServiceDate />
-      <CartQuantity
-        max={10}
-        defaultValue={cart?.quantity}
-        setter={handleCartQuantity}
-      />
+      <ServiceDate multiCountry={multiCountry} />
+      {multiCountry && (
+        <div className="flex_center flex-col">
+          {addNewCountry ? (
+            <ServiceDate
+              multiCountry={multiCountry}
+              className={"w-full my-4 md:my-6"}
+              servicedateAdded
+            />
+          ) : (
+            <button
+              className="text-sm md:text-base !leading-normal font-medium flex items-center justify-center gap-3 md:gap-[14px] hover:opacity-75"
+              onClick={() => setAddNewCountry(true)}
+            >
+              <PlusRoundedIcon className="h-6 w-6 md:h-8 md:w-8" />
+              <span>Add a country</span>
+            </button>
+          )}
+        </div>
+      )}
+
+      <div>
+        <span className="label mb-2 md:mb-4">Country</span>
+        <CartQuantity
+          max={10}
+          defaultValue={cart?.quantity}
+          setter={handleCartQuantity}
+        />
+      </div>
       <PocketWifiCartFooter
         prevHandler={handlePrev}
         nextHandler={handleNext}

@@ -1869,6 +1869,32 @@ export const PaginationLeftChevronIcon = ({
   </svg>
 );
 
+export const PlusRoundedIcon = ({ className = "", color = "#343434" }) => (
+  <svg
+    width="32"
+    height="32"
+    viewBox="0 0 32 32"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" fill={color} />
+    <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke={color} />
+    <path
+      d="M16 10L16 22"
+      stroke="white"
+      stroke-width="2"
+      stroke-linecap="round"
+    />
+    <path
+      d="M22 16H10"
+      stroke="white"
+      stroke-width="2"
+      stroke-linecap="round"
+    />
+  </svg>
+);
+
 // components start with R
 
 export const RouterIcon = ({ className = "", color = "#D81F22" }) => (
