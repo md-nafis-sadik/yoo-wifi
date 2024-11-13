@@ -22,7 +22,20 @@ function SimPlan() {
   const { recomandedPackages, cart } = useSelector((state) => state.sim);
   const [activeTab, setActiveTab] = useState("all");
   const dispatch = useDispatch();
-  const isActive = cart?.package?.id ? true : false;
+  const isActivePackage = Boolean(cart?.package?.id || cart?.topup?.planCode);
+  const deviceSelect =
+    cart?.cartType === "topup" ? Boolean(cart?.device?.deviceId) : true;
+  const isCountryAvailable = Boolean(cart?.productCountry?.id);
+  const isStartDateAvailable = Boolean(cart?.startDate);
+
+  const isActivePlan =
+    isActivePackage &&
+    deviceSelect &&
+    isCountryAvailable &&
+    isStartDateAvailable
+      ? true
+      : false;
+  const isActive = cart?.package?.id && isActivePlan ? true : false;
   const options = { align: "start" };
   const [emblaRef] = useEmblaCarousel(options);
   const navigate = useNavigate();
