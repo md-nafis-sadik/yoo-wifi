@@ -4,12 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { commercialRoutes } from "@/services";
-import { setPocketWifiCartData } from "@/store/module/pocketWifi/slice";
+import {
+  handleNextPocketWifiCart,
+  setPocketWifiCartData,
+} from "@/store/module/pocketWifi/slice";
 import {
   handleNextRouterCart,
   setRouterCartData,
 } from "@/store/module/router/slice";
-import { setSimCartData } from "@/store/module/sim/slice";
+import { handleNextSimCart, setSimCartData } from "@/store/module/sim/slice";
 import useEmblaCarousel from "embla-carousel-react";
 import { useState } from "react";
 import { CountrySelect } from "react-country-state-city";
@@ -54,12 +57,14 @@ function RouterRegion() {
   const handleNext = () => {
     if (activeTab === "Pocket WIFI") {
       navigate(commercialRoutes.pocketWifiPlan.path);
+      dispatch(handleNextPocketWifiCart());
     } else if (activeTab === "SIM/eSIM") {
       navigate(commercialRoutes.simPlan.path);
+      dispatch(handleNextSimCart());
     } else if (activeTab === "Router") {
       navigate(commercialRoutes.routerPlan.path);
+      dispatch(handleNextRouterCart());
     }
-    dispatch(handleNextRouterCart());
   };
 
   const handlePrev = () => {
