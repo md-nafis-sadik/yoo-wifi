@@ -27,8 +27,20 @@ function PocketWifiPlan() {
   const { recomandedPackages, cart } = useSelector((state) => state.pocketWifi);
 
   const [activeTab, setActiveTab] = useState("all");
+  const isActivePackage = Boolean(cart?.package?.id || cart?.topup?.planCode);
+  const deviceSelect =
+    cart?.cartType === "topup" ? Boolean(cart?.device?.deviceId) : true;
+  const isCountryAvailable = Boolean(cart?.productCountry?.id);
+  const isStartDateAvailable = Boolean(cart?.startDate);
 
-  const isActive = cart?.package?.id ? true : false;
+  const isActivePlan =
+    isActivePackage &&
+    deviceSelect &&
+    isCountryAvailable &&
+    isStartDateAvailable
+      ? true
+      : false;
+  const isActive = cart?.package?.id && isActivePlan ? true : false;
   const options = { align: "start" };
   const [emblaRef] = useEmblaCarousel(options);
 
@@ -42,7 +54,7 @@ function PocketWifiPlan() {
   };
 
   const handleNext = () => {
-    navigate(commercialRoutes.pocketWifiCartService.path);
+    navigate(commercialRoutes.pocketWifiPlanSummery.path);
     dispatch(handleNextPocketWifiCart());
   };
 

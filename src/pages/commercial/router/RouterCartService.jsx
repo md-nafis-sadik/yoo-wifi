@@ -20,30 +20,8 @@ function RouterCartService({ className = "", multiCountry = false }) {
   const dispatch = useDispatch();
   const options = { align: "start" };
   const [emblaRef] = useEmblaCarousel(options);
-  const navigate = useNavigate();
 
   const [addNewCountry, setAddNewCountry] = useState(false);
-
-  const isActivePackage = Boolean(cart?.package?.id || cart?.topup?.planCode);
-  const deviceSelect =
-    cart?.cartType === "topup" ? Boolean(cart?.device?.deviceId) : true;
-  const isCountryAvailable = Boolean(cart?.productCountry?.id);
-  const isStartDateAvailable = Boolean(cart?.startDate);
-
-  const isActive =
-    isActivePackage &&
-    deviceSelect &&
-    isCountryAvailable &&
-    isStartDateAvailable;
-
-  const handleNext = () => {
-    navigate(commercialRoutes.routerPlanSummery.path);
-    dispatch(handleNextRouterCart());
-  };
-
-  const handlePrev = () => {
-    navigate(commercialRoutes.routerPlan.path);
-  };
 
   const handleTabSelect = (value) => {
     dispatch(setRouterCartData({ cartType: value }));
@@ -115,12 +93,6 @@ function RouterCartService({ className = "", multiCountry = false }) {
           setter={handleCartQuantity}
         />
       </div>
-
-      <RouterCartFooter
-        prevHandler={handlePrev}
-        nextHandler={handleNext}
-        isActive={isActive}
-      />
     </div>
   );
 }

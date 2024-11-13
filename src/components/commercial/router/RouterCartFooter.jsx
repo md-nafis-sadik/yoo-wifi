@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function RouterCartFooter({
   isActive = false,
@@ -32,6 +33,7 @@ function RouterCartFooter({
         <div className="w-full md:max-w-max">
           <div className="flex justify-between items-center gap-3 sm:gap-4 md:gap-5">
             <Button
+              type="button"
               variant="outline"
               className={"w-full min-w-[140px] font-semibold"}
               onClick={prevHandler}

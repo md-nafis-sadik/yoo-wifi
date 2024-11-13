@@ -20,30 +20,8 @@ function PocketWifiCartService({ className = "", multiCountry = false }) {
   const dispatch = useDispatch();
   const options = { align: "start" };
   const [emblaRef] = useEmblaCarousel(options);
-  const navigate = useNavigate();
 
   const [addNewCountry, setAddNewCountry] = useState(false);
-
-  const isActivePackage = Boolean(cart?.package?.id || cart?.topup?.planCode);
-  const deviceSelect =
-    cart?.cartType === "topup" ? Boolean(cart?.device?.deviceId) : true;
-  const isCountryAvailable = Boolean(cart?.productCountry?.id);
-  const isStartDateAvailable = Boolean(cart?.startDate);
-
-  const isActive =
-    isActivePackage &&
-    deviceSelect &&
-    isCountryAvailable &&
-    isStartDateAvailable;
-
-  const handleNext = () => {
-    navigate(commercialRoutes.pocketWifiPlanSummery.path);
-    dispatch(handleNextPocketWifiCart());
-  };
-
-  const handlePrev = () => {
-    navigate(commercialRoutes.pocketWifiPlan.path);
-  };
 
   const handleTabSelect = (value) => {
     dispatch(setPocketWifiCartData({ cartType: value }));
@@ -115,11 +93,6 @@ function PocketWifiCartService({ className = "", multiCountry = false }) {
           setter={handleCartQuantity}
         />
       </div>
-      <PocketWifiCartFooter
-        prevHandler={handlePrev}
-        nextHandler={handleNext}
-        isActive={isActive}
-      />
     </div>
   );
 }
