@@ -17,8 +17,9 @@ import useEmblaCarousel from "embla-carousel-react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import PocketWifiCartService from "./PocketWifiCartService";
 
-const tabs = ["all", "daily", "monthly", "volume"];
+const tabs = ["all", "daily", "monthly", "multi-country"];
 
 function PocketWifiPlan() {
   const navigate = useNavigate();
@@ -128,6 +129,13 @@ function PocketWifiPlan() {
         nextHandler={handleNext}
         isActive={isActive}
       />
+
+      {cart?.package?.dataSize && (
+        <PocketWifiCartService
+          multiCountry={activeTab === "multi-country"}
+          className="mt-6 md:mt-12"
+        />
+      )}
     </div>
   );
 }

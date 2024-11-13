@@ -17,8 +17,9 @@ import useEmblaCarousel from "embla-carousel-react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import RouterCartService from "./RouterCartService";
 
-const tabs = ["all", "daily", "monthly", "volume"];
+const tabs = ["all", "daily", "monthly", "multi-country"];
 
 function RouterPlan() {
   const { recomandedPackages, cart } = useSelector((state) => state.router);
@@ -94,6 +95,22 @@ function RouterPlan() {
           </AccordionItem>
         </Accordion>
 
+        {/* Information */}
+        <Accordion type="single" collapsible="true" defaultValue="item-1">
+          <AccordionItem value={`item-1`} className="">
+            <AccordionTrigger className="!text-sm md:!text-base !font-bold text-black-700">
+              Information
+            </AccordionTrigger>
+            <AccordionContent className="!text-xs md:!text-base !leading-[120%] md:!leading-[150%] text-black-700">
+              {cart && cart.package.information ? (
+                <span>{cart.package.information}</span>
+              ) : (
+                <span>*Select a package first</span>
+              )}
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+
         {/* packages */}
         {recomandedPackages?.filter(filterByCategory)?.map((item, index) => (
           <PackageCard
@@ -111,6 +128,13 @@ function RouterPlan() {
         nextHandler={handleNext}
         isActive={isActive}
       />
+
+      {cart?.package?.dataSize && (
+        <RouterCartService
+          multiCountry={activeTab === "multi-country"}
+          className="mt-6 md:mt-12"
+        />
+      )}
     </div>
   );
 }

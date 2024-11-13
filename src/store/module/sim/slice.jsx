@@ -62,7 +62,7 @@ const initialState = {
       ],
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
-      category: "daily",
+      category: "multi-country",
       planCode: "plan_1",
       dataSize: 1,
       packPrice: 10,
@@ -70,8 +70,21 @@ const initialState = {
       desc: "GB",
       tags: ["sim", "topup"],
       coverage: [
-        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+        "Algeria",
+        "Anguilla",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Aruba",
+        "Azerbaijan",
+        "Bolivia",
+        "Brazil",
+        "British Virgin Islands",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
       ],
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
     {
       id: 2,
@@ -94,8 +107,21 @@ const initialState = {
       desc: "GB",
       tags: ["topup", "esim", "sim"],
       coverage: [
-        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+        "Algeria",
+        "Anguilla",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Aruba",
+        "Azerbaijan",
+        "Bolivia",
+        "Brazil",
+        "British Virgin Islands",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
       ],
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
     {
       id: 3,
@@ -118,8 +144,21 @@ const initialState = {
       desc: "GB",
       tags: ["sim", "esim", "topup"],
       coverage: [
-        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+        "Algeria",
+        "Anguilla",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Aruba",
+        "Azerbaijan",
+        "Bolivia",
+        "Brazil",
+        "British Virgin Islands",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
       ],
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
     {
       id: 4,
@@ -142,8 +181,21 @@ const initialState = {
       desc: "GB",
       tags: ["sim", "esim", "topup"],
       coverage: [
-        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+        "Algeria",
+        "Anguilla",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Aruba",
+        "Azerbaijan",
+        "Bolivia",
+        "Brazil",
+        "British Virgin Islands",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
       ],
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
     {
       id: 5,
@@ -166,8 +218,21 @@ const initialState = {
       desc: "GB",
       tags: ["sim", "topup"],
       coverage: [
-        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+        "Algeria",
+        "Anguilla",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Aruba",
+        "Azerbaijan",
+        "Bolivia",
+        "Brazil",
+        "British Virgin Islands",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
       ],
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
     {
       id: 6,
@@ -191,8 +256,21 @@ const initialState = {
       desc: "GB",
       tags: ["topup", "esim", "sim"],
       coverage: [
-        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+        "Algeria",
+        "Anguilla",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Aruba",
+        "Azerbaijan",
+        "Bolivia",
+        "Brazil",
+        "British Virgin Islands",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
       ],
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
     {
       id: 7,
@@ -216,8 +294,21 @@ const initialState = {
       desc: "GB",
       tags: ["sim", "esim"],
       coverage: [
-        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+        "Algeria",
+        "Anguilla",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Aruba",
+        "Azerbaijan",
+        "Bolivia",
+        "Brazil",
+        "British Virgin Islands",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
       ],
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
     {
       id: 8,
@@ -241,8 +332,21 @@ const initialState = {
       desc: "GB",
       tags: ["sim", "esim"],
       coverage: [
-        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+        "Algeria",
+        "Anguilla",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Aruba",
+        "Azerbaijan",
+        "Bolivia",
+        "Brazil",
+        "British Virgin Islands",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
       ],
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
     {
       id: 9,
@@ -266,8 +370,21 @@ const initialState = {
       desc: "GB",
       tags: ["sim", "esim"],
       coverage: [
-        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+        "Algeria",
+        "Anguilla",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Aruba",
+        "Azerbaijan",
+        "Bolivia",
+        "Brazil",
+        "British Virgin Islands",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
       ],
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
     {
       id: 10,
@@ -290,8 +407,21 @@ const initialState = {
       desc: "GB",
       tags: ["sim", "esim"],
       coverage: [
-        "Algeria", "Anguilla", "Antigua and Barbuda", "Argentina", "Aruba", "Azerbaijan", "Bolivia", "Brazil", "British Virgin Islands", "Chile", "Colombia", "Costa Rica"
+        "Algeria",
+        "Anguilla",
+        "Antigua and Barbuda",
+        "Argentina",
+        "Aruba",
+        "Azerbaijan",
+        "Bolivia",
+        "Brazil",
+        "British Virgin Islands",
+        "Chile",
+        "Colombia",
+        "Costa Rica",
       ],
+      information:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt perspiciatis, eos distinctio totam repudiandae pariatur modi dignissimos velit ipsam rerum.",
     },
   ],
   features: [
@@ -728,6 +858,7 @@ const initialState = {
     promoCode: null,
     memberId: null,
     productCountry: null,
+    productCountrySecondary: null,
     package: {},
     topup: {},
     device: {},
@@ -735,6 +866,8 @@ const initialState = {
     quantity: 1,
     startDate: null,
     endDate: null,
+    startDateSecondary: null,
+    endDateSecondary: null,
     shipping: {},
     numberOfDays: 1,
     shippingAddress: {},

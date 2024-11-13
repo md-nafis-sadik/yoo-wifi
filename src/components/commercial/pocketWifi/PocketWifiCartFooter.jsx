@@ -48,10 +48,12 @@ function PocketWifiCartFooter({
                 ))}
               </div>
             </div>
+          )}*/}
+          {cart?.package?.packPrice && (
+            <h3 className="text-black-900 text-base sm:text-lg md:text-2xml font-bold whitespace-nowrap">
+              SGD {cart?.package?.packPrice || "0.00"}
+            </h3>
           )}
-          <h3 className="text-black-900 text-base sm:text-lg md:text-2xml font-bold whitespace-nowrap">
-            SGD {cart?.package?.packPrice || "0.00"}
-          </h3> */}
         </div>
         <div className="w-full md:max-w-max">
           <div className="flex justify-between items-center gap-3 sm:gap-4 md:gap-5">

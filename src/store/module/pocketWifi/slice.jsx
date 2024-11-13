@@ -177,7 +177,7 @@ const initialState = {
 
       image:
         "https://www.startech.com.bd/image/cache/catalog/router/tp-link/m7000/m7000-01-228x228.jpg",
-      category: "daily",
+      category: "multi-country",
       planCode: "plan_3",
       dataSize: 3,
       packPrice: 10,
@@ -486,6 +486,7 @@ const initialState = {
     promoCode: null,
     memberId: null,
     productCountry: null,
+    productCountrySecondary: null,
     package: {},
     topup: {},
     device: {},
@@ -493,6 +494,8 @@ const initialState = {
     quantity: 1,
     startDate: null,
     endDate: null,
+    startDateSecondary: null,
+    endDateSecondary: null,
     shipping: {},
     shippingAddress: {},
     pickupCountry: null,
