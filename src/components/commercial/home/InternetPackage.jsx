@@ -41,6 +41,7 @@ function InternetPackage() {
       pkg.country.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredPackages(results);
+    setDropdownSuggestions([]);
   };
 
   return (
@@ -86,11 +87,17 @@ function InternetPackage() {
             </div>
           )}
         </div>
-        <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-8">
-          {filteredPackages.slice(0, 6).map((data, index) => (
-            <InternetPackageCard key={index} data={data} />
-          ))}
-        </div>
+        {filteredPackages.length > 0 ? (
+          <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-8">
+            {filteredPackages.slice(0, 6).map((data, index) => (
+              <InternetPackageCard key={index} data={data} />
+            ))}
+          </div>
+        ) : (
+          <p className="p_common text-center w-full">
+            No package found for your search
+          </p>
+        )}
       </div>
     </div>
   );
