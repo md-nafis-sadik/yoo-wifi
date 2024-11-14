@@ -56,6 +56,23 @@ export const navBarData = () => ({
   ],
 });
 
+// l
+
+export const languageOptions = [
+  {
+    _id: 1,
+    label: "English",
+    value: "en",
+    flag: () => images.USFlag,
+  },
+  {
+    _id: 2,
+    label: "Japanese",
+    value: "jp",
+    flag: () => images.JapanFlag,
+  },
+];
+
 // p
 
 export const productsData = () => ({

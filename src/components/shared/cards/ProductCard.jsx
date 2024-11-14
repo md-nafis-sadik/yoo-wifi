@@ -3,9 +3,11 @@ import { cn } from "@/lib/utils";
 import { CallMadeIcon } from "@/services";
 import { Link } from "react-router-dom";
 import CountDown from "../others/CountDown";
+import { useTranslation } from "react-i18next";
 
 const ProductCard = ({
   item,
+  index,
   containerClassName = "",
   titleClassName = "",
   descriptionClassName = "",
@@ -14,6 +16,8 @@ const ProductCard = ({
   showCountDown,
   ...props
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div
       className={cn(
@@ -42,6 +46,7 @@ const ProductCard = ({
             titleClassName
           )}
         >
+          {t(`productsData.cardData.${index}.title`)}
           {item?.title}
         </h4>
 

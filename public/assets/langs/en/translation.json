@@ -1,0 +1,24 @@
+{
+  "test": "Stay connected on the go with our high-speed Pocket WIFI. Perfect for travel and remote work.",
+
+  "productsData": {
+    "cardData": [
+      {
+        "title": "Pocket WIFI",
+        "description": "Stay connected on the go with our high-speed Pocket WIFI. Perfect for travel and remote work.",
+        "offer": "50% OFF"
+      },
+      {
+        "title": "Router",
+        "description": "Experience seamless and reliable internet connectivity at home with our advanced routers.",
+        "offer": "30% OFF"
+      },
+      {
+        "title": "SIM/eSIM",
+        "description": "Get instant connectivity with our SIM and eSIM options, suitable for all your devices.",
+        "offer": "20% OFF"
+      }
+    ],
+    "test1": "OFF"
+  }
+}

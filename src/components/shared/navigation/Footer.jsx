@@ -1,4 +1,3 @@
-import { footerData } from "@/services/data";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -6,10 +5,22 @@ import {
   commercialRoutes,
   corporateRoutes,
   images,
+  languageOptions,
   validateEmail,
 } from "@/services";
 import { ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
+import Cookies from "js-cookie";
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 const Footer = () => {
   const footerData = {
@@ -79,6 +90,16 @@ const Footer = () => {
   };
   const [userEmail, setUserEmail] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+
+  const currentLanguage = Cookies.get("i18next");
+  const [lang, setLang] = useState(currentLanguage);
+  const { t } = useTranslation();
+  console.log(currentLanguage);
+
+  const handleLanguageChange = (language) => {
+    setLang(language);
+    i18next.changeLanguage(language);
+  };
 
   useEffect(() => {
     setIsButtonDisabled(!validateEmail(userEmail));
@@ -161,16 +182,40 @@ const Footer = () => {
           Reserved.
         </p>
 
-        <div className="flex gap-4 md:gap-8">
-          {footerData.legals.map((item, index) => (
-            <Link
-              key={index}
-              to={item.path}
-              className="text-sm md:text-base text-white !leading-[1.4] hover:opacity-70"
-            >
-              {item.title}
-            </Link>
-          ))}
+        <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center">
+          <Select onValueChange={handleLanguageChange} defaultValue={lang}>
+            <SelectTrigger className="w-[180px] bg-main-20">
+              <SelectValue placeholder="Select Language" />
+            </SelectTrigger>
+            <SelectContent>
+              {languageOptions.map(({ _id, label, value, flag }) => (
+                <SelectItem
+                  key={_id}
+                  value={value}
+                  className={"flex flex-row gap-1 items-center"}
+                >
+                  <img
+                    src={flag()}
+                    alt={label}
+                    className="w-8 h-auto inline-block"
+                  />{" "}
+                  <span>{label}</span>
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+
+          <div className="flex gap-4 md:gap-8">
+            {footerData.legals.map((item, index) => (
+              <Link
+                key={index}
+                to={item.path}
+                className="text-sm md:text-base text-white !leading-[1.4] hover:opacity-70"
+              >
+                {item.title}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
