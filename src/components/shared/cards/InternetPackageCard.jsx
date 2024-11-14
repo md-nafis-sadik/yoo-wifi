@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useNavigate } from "react-router-dom";
 
 const InternetPackageCard = ({ data, type = 1 }) => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <div className="bg-white rounded-[8px] md:rounded-3xl p-2 md:p-4 ring-[2px] ring-neutral-200 hover:ring-0 shadow-none hover:shadow-card-primary transition_common">
@@ -46,7 +48,9 @@ const InternetPackageCard = ({ data, type = 1 }) => {
             )
           }
         >
-          {type === 1 ? "Find Out More" : "See Details"}
+          {type === 1
+            ? t("buttonText.findOutMore")
+            : t("buttonText.seeDetails")}
         </Button>
       </div>
     </div>

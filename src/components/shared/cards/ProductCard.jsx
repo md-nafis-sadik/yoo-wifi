@@ -47,7 +47,6 @@ const ProductCard = ({
           )}
         >
           {t(`productsData.cardData.${index}.title`)}
-          {item?.title}
         </h4>
 
         <p
@@ -57,7 +56,7 @@ const ProductCard = ({
             descriptionClassName
           )}
         >
-          {item?.description}
+          {t(`productsData.cardData.${index}.description`)}
         </p>
       </div>
 
@@ -66,7 +65,7 @@ const ProductCard = ({
         <div className="flex flex-row min-[1176px]:flex-col items-center min-[1176px]:items-end justify-between min-[1176px]:justify-start gap-4 w-full min-[1176px]:w-1/3">
           {item?.offer && (
             <p className="text-black-900 text-base md:text-xl !leading-[1.4] font-bold italic w-fit flex flex-col min-[1176px]:flex-row min-[1176px]:whitespace-nowrap">
-              <span>{item?.offer}</span>
+              <span>{t(`productsData.cardData.${index}.offer`)}</span>
               {showCountDown && (
                 <>
                   <span className="hidden min-[1176px]:inline-block">
@@ -88,7 +87,7 @@ const ProductCard = ({
                 event.stopPropagation();
               }}
             >
-              Buy Now{" "}
+              {t(`buttonText.buyNow`)}{" "}
               <CallMadeIcon color="#FAFAFA" className={"!h-6 !w-6 shrink-0"} />
             </Button>
           </Link>

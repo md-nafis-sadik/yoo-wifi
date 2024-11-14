@@ -1,6 +1,14 @@
 {
-  "test": "Stay connected on the go with our high-speed Pocket WIFI. Perfect for travel and remote work.",
-
+  "buttonText": {
+    "buyNow": "Buy Now",
+    "findOutMore": "Find Out More",
+    "search": "Search",
+    "seeDetails": "See Details",
+    "aboutUs": "About Us"
+  },
+  "notFound": {
+    "noPackage": "No package found for your search"
+  },
   "productsData": {
     "cardData": [
       {
@@ -18,7 +26,303 @@
         "description": "Get instant connectivity with our SIM and eSIM options, suitable for all your devices.",
         "offer": "20% OFF"
       }
-    ],
-    "test1": "OFF"
+    ]
+  },
+  "internetPackages": {
+    "sectionHeading": "Internet Packages",
+    "sectionSubHeading": "Discover Our Internet Packages for Your Needs",
+    "searchPlaceholder": "Search country.."
+  },
+  "whyYooWifi": {
+    "sectionHeading": "Why Yoowifi?",
+    "servicesData": [
+      {
+        "title": "Stay Connected Anywhere"
+      },
+      {
+        "title": "Save BIG on International Roaming"
+      },
+      {
+        "title": "Unbeatable Pricing Guarantee"
+      }
+    ]
+  },
+  "stayConnectedRegions": {
+    "sectionHeading": "Stay Connected Everywhere",
+    "sectionSubHeading": "Choose Your Dream Destination and Perfect Package Now",
+    "regions": ["Asia", "America", "Africa", "Australia", "Europe"]
+  },
+  "customerTestimonial": {
+    "sectionHeading": "What Our Customers Say",
+    "sectionSubHeading": "Discover what our valued customers have to say about their experiences with our services",
+    "testimonials": [
+      {
+        "description": "Using this eSIM service for the past six months has completely transformed our approach to managing connectivity for our projects!",
+        "author": "Sarah Johnson",
+        "designation": "CEO, TechWave Solutions"
+      },
+      {
+        "description": "This platform has been a game-changer for our international projects, making it easier to stay connected without the usual hassles.",
+        "author": "Michael Lee",
+        "designation": "Project Manager, GlobalConnect"
+      },
+      {
+        "description": "The ease of use and flexibility offered by this service has allowed us to focus on what matters most—our work!",
+        "author": "Emily Davis",
+        "designation": "COO, Innovatech"
+      },
+      {
+        "description": "We've seen significant cost savings since switching to this eSIM solution. It's a smart choice for any business working globally.",
+        "author": "James Taylor",
+        "designation": "CFO, FinEdge"
+      },
+      {
+        "description": "Reliable connectivity is crucial for us, and this service has delivered beyond our expectations. Highly recommended!",
+        "author": "Sophia Martinez",
+        "designation": "Head of Operations, TransLogix"
+      }
+    ]
+  },
+  "country": {
+    "packages": [
+      {
+        "name": "Australia-Portable Hotspot",
+        "title": "Basic Package",
+        "details": [
+          {
+            "title": "Description",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          },
+          {
+            "title": "Information",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          },
+          {
+            "title": "Terms & Conditions",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          }
+        ],
+        "features": [
+          "Keep Yoowifi Device",
+          "Top-up Plan only",
+          "365 Days Validity",
+          "Covers 90 Countries"
+        ]
+      },
+      {
+        "name": "Albania-Portable Hotspot",
+        "title": "Traveler Package",
+        "details": [
+          {
+            "title": "Description",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          },
+          {
+            "title": "Information",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          },
+          {
+            "title": "Terms & Conditions",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          }
+        ],
+        "features": [
+          "Keep Yoowifi Device",
+          "Top-up Plan only",
+          "365 Days Validity",
+          "Covers 90 Countries"
+        ]
+      },
+      {
+        "name": "France - Pocket Wifi",
+        "title": "Extended Package",
+        "details": [
+          {
+            "title": "Description",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          },
+          {
+            "title": "Information",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          },
+          {
+            "title": "Terms & Conditions",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          }
+        ],
+        "features": [
+          "Keep Yoowifi Device",
+          "Top-up Plan only",
+          "365 Days Validity",
+          "Covers 90 Countries"
+        ]
+      },
+      {
+        "name": "Greece-Portable Hotspot",
+        "plan": "basic-daypass",
+        "title": "Unlimited Package",
+        "features": [
+          "Keep Yoowifi Device",
+          "Top-up Plan only",
+          "365 Days Validity",
+          "Covers 90 Countries"
+        ],
+        "category": "daily",
+        "desc": "GB",
+        "coverage": [
+          "Algeria",
+          "Anguilla",
+          "Antigua and Barbuda",
+          "Argentina",
+          "Aruba",
+          "Azerbaijan",
+          "Bolivia",
+          "Brazil",
+          "British Virgin Islands",
+          "Chile",
+          "Colombia",
+          "Costa Rica"
+        ],
+        "details": [
+          {
+            "title": "Description",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          },
+          {
+            "title": "Information",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          },
+          {
+            "title": "Terms & Conditions",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          }
+        ]
+      },
+      {
+        "name": "Ireland-Portable Hotspot",
+        "plan": "5gb-7days",
+        "title": "Lite Package",
+        "features": [
+          "Keep Yoowifi Device",
+          "Top-up Plan only",
+          "180 Days Validity",
+          "Covers 60 Countries"
+        ],
+        "category": "monthly",
+        "desc": "GB",
+        "coverage": [
+          "Algeria",
+          "Anguilla",
+          "Antigua and Barbuda",
+          "Argentina",
+          "Aruba",
+          "Azerbaijan",
+          "Bolivia",
+          "Brazil",
+          "British Virgin Islands",
+          "Chile",
+          "Colombia",
+          "Costa Rica"
+        ],
+        "details": [
+          {
+            "title": "Description",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          },
+          {
+            "title": "Information",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          },
+          {
+            "title": "Terms & Conditions",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          }
+        ]
+      },
+      {
+        "name": "Germany - Pocket Wifi",
+        "plan": "20gb-20days",
+        "title": "Business Package",
+        "features": [
+          "Keep Yoowifi Device",
+          "Top-up Plan only",
+          "365 Days Validity",
+          "Priority support",
+          "Covers 100 Countries"
+        ],
+        "category": "volumn",
+        "desc": "GB",
+        "coverage": [
+          "Algeria",
+          "Anguilla",
+          "Antigua and Barbuda",
+          "Argentina",
+          "Aruba",
+          "Azerbaijan",
+          "Bolivia",
+          "Brazil",
+          "British Virgin Islands",
+          "Chile",
+          "Colombia",
+          "Costa Rica"
+        ],
+        "details": [
+          {
+            "title": "Description",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          },
+          {
+            "title": "Information",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          },
+          {
+            "title": "Terms & Conditions",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          }
+        ]
+      },
+      {
+        "name": "Sweden - Pocket Wifi",
+        "plan": "20gb-20days",
+        "title": "Business Package",
+        "features": [
+          "Keep Yoowifi Device",
+          "Top-up Plan only",
+          "365 Days Validity",
+          "Priority support",
+          "Covers 100 Countries"
+        ],
+        "category": "volumn",
+        "desc": "GB",
+        "coverage": [
+          "Algeria",
+          "Anguilla",
+          "Antigua and Barbuda",
+          "Argentina",
+          "Aruba",
+          "Azerbaijan",
+          "Bolivia",
+          "Brazil",
+          "British Virgin Islands",
+          "Chile",
+          "Colombia",
+          "Costa Rica"
+        ],
+        "details": [
+          {
+            "title": "Description",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          },
+          {
+            "title": "Information",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          },
+          {
+            "title": "Terms & Conditions",
+            "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          }
+        ]
+      }
+    ]
   }
 }

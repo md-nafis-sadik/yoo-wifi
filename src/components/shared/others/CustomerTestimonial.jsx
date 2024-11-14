@@ -5,6 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import SectionHeader from "./SectionHeader";
+import { useTranslation } from "react-i18next";
 
 const CustomerTestimonial = () => {
   // STATES
@@ -14,6 +15,7 @@ const CustomerTestimonial = () => {
   const options = { align: "start", loop: false };
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()]);
   const { selectedIndex, scrollSnaps } = useEmblaCarouselDotButtons(emblaApi);
+  const { t } = useTranslation();
 
   // REDUX
   const testimonials = useSelector((state) => state.testimonials);
@@ -21,8 +23,8 @@ const CustomerTestimonial = () => {
   return (
     <section className="sec_common_60">
       <SectionHeader
-        heading="What Our Customers Say"
-        subHeading="Discover what our valued customers have to say about their experiences with our services"
+        heading={t("customerTestimonial.sectionHeading")}
+        subHeading={t("customerTestimonial.sectionSubHeading")}
       />
 
       {/* CAROUSEL */}
@@ -36,6 +38,7 @@ const CustomerTestimonial = () => {
                   "relative min-w-[272px] md:min-w-[573px] max-w-[573px]"
                 }
                 hovered={hoveredIndex === index}
+                index={index}
                 key={`customer_feedback_${index}`}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
