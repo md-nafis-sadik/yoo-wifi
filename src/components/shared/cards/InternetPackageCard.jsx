@@ -29,7 +29,7 @@ const InternetPackageCard = ({ data, type = 1 }) => {
       <div className="flex justify-between items-center gap-2 md:gap-4">
         <div className="flex flex-col">
           <p className="text-[10px] sm:text-sm md:text-base text-black-700 !leading-normal">
-            From
+            {t("extraText.from")}
           </p>
           <h2 className="text-[10px] sm:text-sm md:text-2xl lg:text-[28px] text-black-700 font-semibold md:font-bold !leading-[1.2] md:!leading-[1.1]">
             SGD {data?.priceStart}

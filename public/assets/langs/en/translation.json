@@ -6,6 +6,9 @@
     "seeDetails": "See Details",
     "aboutUs": "About Us"
   },
+  "extraText": {
+    "from": "From"
+  },
   "notFound": {
     "noPackage": "No package found for your search"
   },
@@ -80,6 +83,24 @@
         "description": "Reliable connectivity is crucial for us, and this service has delivered beyond our expectations. Highly recommended!",
         "author": "Sophia Martinez",
         "designation": "Head of Operations, TransLogix"
+      }
+    ]
+  },
+  "howItWorks": {
+    "sectionHeading": "Stay Connected Anywhere, Anytime",
+    "sectionSubHeading": "Discover what our valued customers have to say about their experiences with our services",
+    "howItWorksData": [
+      {
+        "title": "How To Rent",
+        "description": "Stay connected with Yoowifi in just 3 simple steps! Download the app, choose your destination, and select the package that fits your needs."
+      },
+      {
+        "title": "How To Return",
+        "description": "Choose easy returns with Singpost drop-off or visit locations islandwide for hassle-free service."
+      },
+      {
+        "title": "Pickup & Drop Off Locations",
+        "description": "With 20+ pick-up and drop-off locations, we make it easy for you to get your pocket wifi and stay connected hassle-free."
       }
     ]
   },
