@@ -1,6 +1,8 @@
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
-function PackageCard({ item = {}, wrapperClass = "", ...props }) {
+function PackageCard({ item = {}, index, wrapperClass = "", ...props }) {
+  const { t } = useTranslation();
   return (
     <div
       className={cn(
@@ -19,11 +21,16 @@ function PackageCard({ item = {}, wrapperClass = "", ...props }) {
       <div className="w-full flex items-end gap-2">
         <div className="w-full">
           <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black-700">
-            {item?.title}
+            {t(`pocketWifi.recommendedPackages.packageList.${index}.title`)}
           </h3>
-          {item?.features?.map((feature, index) => (
-            <p key={index} className="text-sm sm:text-base text-black-700">
-              {feature}
+          {item?.features?.map((_, featureIndex) => (
+            <p
+              key={featureIndex}
+              className="text-sm sm:text-base text-black-700"
+            >
+              {t(
+                `pocketWifi.recommendedPackages.packageList.${index}.features.${featureIndex}`
+              )}
             </p>
           ))}
         </div>

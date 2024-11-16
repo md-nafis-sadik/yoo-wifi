@@ -4,11 +4,13 @@ import { Button } from "@/components/ui/button";
 import { RefreshIcon } from "@/services";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 function RecomendedPackage() {
   const { recomandedPackages } = useSelector((state) => state.pocketWifi);
   const [isLoadMore, setIsLoadMore] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(4);
+  const { t } = useTranslation();
   const [packages, setPackages] = useState(
     recomandedPackages?.slice(0, currentIndex) || []
   );
@@ -28,13 +30,13 @@ function RecomendedPackage() {
     <section className="sec_common_60">
       <div className="containerX">
         <SectionHeader
-          heading="Recommended Package"
-          subHeading="Discover Our Recommended Packages for Your Needs"
+          heading={t("pocketWifi.recommendedPackages.heading")}
+          subHeading={t("pocketWifi.recommendedPackages.subHeading")}
           containerClassName="gap-4"
         />
         <div className="grid md:grid-cols-2 gap-3 sm:gap-4 md:gap-5 mt-6 sm:mt-8 md:mt-15 text-8xl">
           {packages?.map((item, index) => (
-            <PackageCard key={index} item={item} />
+            <PackageCard key={index} index={index} item={item} />
           ))}
         </div>
         <div className="mt-8 flex justify-center">
@@ -44,7 +46,7 @@ function RecomendedPackage() {
             variant="alert"
             type="button"
           >
-            <span>Load More</span>
+            <span>{t("buttonText.loadMore")}</span>
             <RefreshIcon className={isLoadMore ? "animate-spin" : ""} />
           </Button>
         </div>

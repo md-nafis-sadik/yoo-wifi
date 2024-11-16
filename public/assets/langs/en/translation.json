@@ -6,12 +6,14 @@
     "seeDetails": "See Details",
     "aboutUs": "About Us",
     "howItWorks": "How It Works",
-    "downloadApp": "Download APP"
+    "downloadApp": "Download APP",
+    "loadMore": "Load More"
   },
   "extraText": {
     "from": "From",
     "selectCountry": "Select Country",
-    "corporate": "Corporate"
+    "corporate": "Corporate",
+    "more": "more"
   },
   "notFound": {
     "noPackage": "No package found for your search"
@@ -455,6 +457,258 @@
         ]
       }
     ]
+  },
+  "pocketWifi": {
+    "product": {
+      "name": "Pocket Wifi",
+      "description": "The Yoowifi Pocket Wifi device offers fast and reliable internet access wherever you go. Perfect for travelers and remote workers, it allows you to connect up to 8 devices simultaneously. Yoowifi provides a variety of data plans tailored to your needs, whether you're heading out for a weekend or traveling for an extended period. With coverage in multiple countries, it's the ideal travel companion.",
+      "features": [
+        "Stay Connected Anywhere",
+        "Save BIG on International Roaming",
+        "Unbeatable Pricing Guarantee"
+      ],
+      "buttons": {
+        "text": "View Plans",
+        "text2": "Get Pocket Wifi"
+      },
+      "tabs": [
+        {
+          "title": "Description",
+          "content": "It is easy to use and boasts a sleek, minimalist design. Simply turn it on, connect your devices, and you’re good to go! No more worrying about complicated setup processes or bulky equipment. But that’s not all – our Pocket WiFi devices also offer strong and reliable connectivity, ensuring that you stay connected no matter where you are. Whether you’re on a business trip or a family vacation, you can enjoy high-speed internet without any interruptions."
+        },
+        {
+          "title": "Specifications",
+          "content": "CPU: SC8310LTE-FDD：Bands 1 / 2 / 3 / 4 / 5 / 7 / 8 / 12 / 13 / 17 / 18 / 20 / 25 / 26 /28 / 66\nLTE-TDD：Bands 34 / 38 / 39 / 40 / 41 (194M)\nWCDMA：Bands 1 / 2 / 4 / 5 / 8\nTD-SCDMA：NO CDMA：NO\nEVDO：NO\nGSM：850 / 900 / 1800 / 1900\nMax speed：Download 150Mbps / Upload 50Mbps\nWi-Fi：2.4GHz 802.11 b / g / n 1T1R\nMax WiFi Connection：8\nBattery：3000mAh\nPorts：Type-C USB\nInput：5V – 1A\nItem size：120mm x 64.6mm x 12mm\nItem weight：112g\nShell Material：Plastics"
+        },
+        {
+          "title": "What's Included",
+          "content": "50GB global data is applicable to 90 countries.\nSpeed of service is dependent on the mobile network partner.\nFor order cancellation, a charge of 10% of the order will apply.\nGeneral terms and conditions apply.\nYoowifi reserved the rights to make changes anytime."
+        },
+        {
+          "title": "Terms & Conditions",
+          "content": "Albania, Andorra, Armenia, Australia, Austria, Bahrain, Bangladesh, Belgium, Bosnia and Herzegovina, Brunei, Bulgaria, Cambodia, Canada, China, Croatia, Cyprus, Czech Republic, Denmark, Egypt, Estonia, Finland, France, Georgia, Germany, Gibraltar, Greece, Guernsey, Hong Kong, Hungary, Iceland, India, Indonesia, Ireland, Isle of Man, Israel, Italy, Japan, Jersey, Jordan, Kazakhstan, Kuwait, Laos, Latvia, Liechtenstein Lithuania, Luxembourg, Macau, Macedonia, Malaysia, Malta, Mexico, Monaco, Montenegro, Myanmar, Netherlands, New Zealand, Norway, Oman, Pakistan, Philippines, Poland, Portugal, Qatar, Reunion, Romania, Russia, San Marino, Saudi Arabia, Serbia, Slovakia, Slovenia, South Korea, Spain, Sri Lanka, Sweden, Switzerland, Taiwan, Thailand, Turkey, UAE, Ukraine, United Kingdom, USA, Uzbekistan, Vatican, Vietnam"
+        }
+      ]
+    },
+    "recommendedPackages": {
+      "heading": "Recommended Packages",
+      "subHeading": "Discover Our Recommended Packages for Your Needs",
+      "packageList": [
+        {
+          "title": "Basic Package",
+          "features": [
+            "Keep Yoowifi device",
+            "Top-up plans only",
+            "Valid for 365 days",
+            "Covers 90 countries"
+          ],
+          "information": "This package provides basic internet connectivity, ideal for travelers or light internet users."
+        },
+        {
+          "title": "Traveler Package",
+          "features": [
+            "Keep Yoowifi device",
+            "Top-up plans only",
+            "Valid for 365 days",
+            "Covers 90 countries"
+          ],
+          "information": "Perfect for frequent travelers, this package supports global internet connectivity."
+        },
+        {
+          "title": "Extended Package",
+          "features": [
+            "Keep Yoowifi device",
+            "Top-up plans only",
+            "Valid for 365 days",
+            "Covers 90 countries"
+          ],
+          "information": "Extends the features of the standard package, offering longer usage periods or additional data options."
+        },
+        {
+          "title": "Unlimited Package",
+          "features": [
+            "Keep Yoowifi device",
+            "Top-up plans only",
+            "Valid for 365 days",
+            "Covers 90 countries"
+          ],
+          "information": "Offers unlimited data for worry-free internet usage."
+        },
+        {
+          "title": "Light Package",
+          "features": [
+            "Keep Yoowifi device",
+            "Top-up plans only",
+            "Valid for 180 days",
+            "Covers 60 countries"
+          ],
+          "information": "A package designed for light users or short-term usage."
+        },
+        {
+          "title": "Business Package",
+          "features": [
+            "Keep Yoowifi device",
+            "Top-up plans only",
+            "Valid for 365 days",
+            "Priority support",
+            "Covers 100 countries"
+          ],
+          "information": "Tailored for business users on the move or frequent travelers for work."
+        },
+        {
+          "title": "Premium Package",
+          "features": [
+            "Keep Yoowifi device",
+            "Top-up plans only",
+            "Valid for 365 days",
+            "Unlimited data in specific countries",
+            "Covers 90 countries"
+          ],
+          "information": "Provides a premium connectivity experience with unlimited data in selected countries."
+        },
+        {
+          "title": "Family Package",
+          "features": [
+            "Keep Yoowifi device",
+            "Top-up plans only",
+            "Valid for 365 days",
+            "Connect up to 10 devices",
+            "Covers 90 countries"
+          ],
+          "information": "A family-oriented package allowing multiple devices to connect simultaneously."
+        },
+        {
+          "title": "Traveler Plus Package",
+          "features": [
+            "Keep Yoowifi device",
+            "Top-up plans only",
+            "Valid for 180 days",
+            "Enhanced data for heavy users",
+            "Covers 80 countries"
+          ],
+          "information": "An ideal option for travelers requiring more data capacity."
+        },
+        {
+          "title": "Global Unlimited Package",
+          "features": [
+            "Keep Yoowifi device",
+            "Top-up plans only",
+            "Valid for 365 days",
+            "Unlimited data globally",
+            "Covers 100 countries"
+          ],
+          "information": "The ultimate package offering unlimited data across the globe."
+        }
+      ]
+    },
+    "features": {
+      "heading": "Key Features",
+      "subHeading": "Don't let slow internet tie you down! Switch to our portable solutions to experience connectivity without boundaries.",
+      "featureList": [
+        "Up To 4G LTE Speed",
+        "Flexible Data Option",
+        "Cloud SIM Technology",
+        "Share Up To 8 Devices",
+        "12 Hour Battery Life"
+      ]
+    },
+    "stayConnectedYourWay": {
+      "heading": "Stay Connected Your Way",
+      "subHeading": "Purchase or rent a device with flexibility to match your connectivity needs. Choose between owning a long-term solution or renting for short-term use, ensuring you have reliable access whenever you need it.",
+      "ways": [
+        {
+          "title": "Buy Your Own Device",
+          "description": "Purchase a device for long-term, reliable connectivity whenever you need it."
+        },
+        {
+          "title": "Rental",
+          "description": "Access reliable connectivity when you need it with flexible, short-term device rental options—ideal for trips, events, or temporary use."
+        }
+      ]
+    },
+    "whatsIncluded": {
+      "heading": "What's Included",
+      "subHeading": "Everything You Need for Seamless Connectivity",
+      "includedList": {
+        "chargingCable": "x1 Charging Cable",
+        "devicePouch": "x1 Device Pouch",
+        "howToOperate": "How To Operate",
+        "powerOn": "Power On",
+        "powerOff": "Power Off",
+        "pressNote": "Press the power button for 3 seconds"
+      }
+    },
+    "ledIndicators": {
+      "heading": "Battery LED Indicators",
+      "subHeading": "Keep Track of Your Device's Power Status Easily",
+      "content": {
+        "capacity": {
+          "title": "The battery capacity is shown by different color",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typeset industry.Lorem Ipsum is simply"
+        },
+        "charging": {
+          "title": "Charging",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typeset industry.Lorem Ipsum is simply"
+        },
+        "support": "*Please contact our customer support at hello@yoowifi.com or WhatsApp us at (65) 6100 9998",
+        "systemUpdateNote": "**All indicators flashing means is under going system software update**"
+      }
+    },
+    "howToConnect": {
+      "heading": "How to connect Pocketwifi?",
+      "subHeading": "Effortlessly Connect to Your Pocket WiFi in Just a Few Simple Steps",
+      "steps": [
+        {
+          "title": "Turn On the Pocket WiFi",
+          "description": "Press the power button to turn it on and wait for it to connect to the network."
+        },
+        {
+          "title": "Find the WiFi Name",
+          "description": "Check the device's screen for the WiFi network name (SSID)."
+        },
+        {
+          "title": "Connect to WiFi",
+          "description": "On your smartphone, tablet, or laptop, open WiFi settings, select the SSID, enter the password displayed on the device, and you will be connected to the internet."
+        }
+      ]
+    },
+    "howToReturn": {
+      "heading": "How to Return Device?",
+      "subHeading": "Follow our easy steps to ensure a hassle-free return experience.",
+      "cardData": [
+        {
+          "title": "Singpost Drop-Off",
+          "description": "When you rent the device, a pre-paid return label will be included in the package. You can use this label to easily mail the device back. After returning it, you’ll likely receive an email confirmation once the return is processed.",
+          "buttonText": "View Locations"
+        },
+        {
+          "title": "Pickup Drop off Locations",
+          "description": "With Yoowifi, you can effortlessly pick up your device at any of our designated locations and return it at one of our 30+ convenient drop-off points across the island. This streamlined process guarantees a hassle-free experience, allowing you to stay connected wherever your travels take you!",
+          "buttonText": "View Locations"
+        }
+      ]
+    },
+    "planTopUp": {
+      "heading": "How to do a plan Top up",
+      "subHeading": "Easily Manage Your Data Needs with Yoowifi Top-Up",
+      "steps": [
+        {
+          "title": "Select Your Device",
+          "description": "Open the Yoowifi app, go to My Data, and select the device you want to top up."
+        },
+        {
+          "title": "Choose Your Plan",
+          "description": "Click on Add Data, select your desired country and plan, then set the start and end dates."
+        },
+        {
+          "title": "Proceed to Checkout",
+          "description": "Confirm your selections and proceed to checkout."
+        }
+      ]
+    },
+    "otherProducts": {
+      "title": "Other products you may like"
+    }
   },
   "footer": {
     "subscribeNewsLetter": "Subscribe newsletter!",
