@@ -104,6 +104,23 @@
       ]
     }
   },
+  "heroHome": {
+    "heroConnected": {
+      "stayConnected": "つながり続ける",
+      "anyTimeAnyWhere": "いつでも、どこでも",
+      "seamlessConnectivity": "シームレスな接続"
+    },
+    "heroTravel": {
+      "travelCompanion": "あなたの#1旅行仲間"
+    },
+    "heroDiscover": {
+      "discover": "私たちと一緒に世界を発見しよう"
+    },
+    "slides": {
+      "title": "ポータブルデバイス",
+      "description": "Lorem Ipsumは印刷業界のダミーテキストにすぎません。"
+    }
+  },
   "productsData": {
     "cardData": [
       {

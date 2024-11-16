@@ -98,6 +98,23 @@
       ]
     }
   },
+  "heroHome": {
+    "heroConnected": {
+      "stayConnected": "Stay Connected",
+      "anyTimeAnyWhere": "Anytime, Anywhere",
+      "seamlessConnectivity": "Seamless Connectivity"
+    },
+    "heroTravel": {
+      "travelCompanion": "YOOUR # 1 TRAVEL COMPANION"
+    },
+    "heroDiscover": {
+      "discover": "DISCOVER THE WORLD WITH US"
+    },
+    "slides": {
+      "title": "Portable Device",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    }
+  },
   "productsData": {
     "cardData": [
       {
