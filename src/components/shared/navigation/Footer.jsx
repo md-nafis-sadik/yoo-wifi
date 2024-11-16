@@ -88,6 +88,7 @@ const Footer = () => {
       },
     ],
   };
+
   const [userEmail, setUserEmail] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
@@ -120,13 +121,15 @@ const Footer = () => {
               key={index}
               className="flex items-center gap-1 mt-4 md:mt-6 text-base md:text-lg !leading-[1.4]"
             >
-              <span className="text-black-600">{type} :</span>
+              <span className="text-black-600">
+                {t(`footer.contact.${index}.type`)} :
+              </span>
               <span className="text-white font-semibold">{value}</span>
             </p>
           ))}
 
           <p className="text-lg md:text-2xl text-secondary-500 font-semibold !leading-[1.4] mt-5 md:mt-8">
-            Subscribe newsletter!
+            {t("footer.subscribeNewsLetter")}
           </p>
 
           <div className="flex items-center bg-neutral-900 rounded-[8px] md:rounded-[20px] p-2 shadow-md mt-3 md:mt-4 border border-neutral-800 max-w-[348px]">
@@ -154,21 +157,23 @@ const Footer = () => {
         </div>
 
         {/* ESSENTIAL LINKS */}
-        {footerData.menuData.map(({ title, links }, index) => (
+        {footerData.menuData.map(({ title, links }, menuIndex) => (
           <div
-            key={index}
+            key={menuIndex}
             className="col-span-1 md:col-span-5 min-[1320px]:col-span-2 shrink-0"
           >
             <h3 className="text-base md:text-lg text-main-600 font-bold uppercase !leading-[1.4]">
-              {title}
+              {t(`footer.menuData.${menuIndex}.title`)}
             </h3>
             <ul className="mt-4 md:mt-6">
-              {links.map(({ label, path }, index) => (
+              {links.map(({ path }, index) => (
                 <li
                   key={index}
                   className="text-sm md:text-base text-black-100 font-semibold !leading-[1.2] hover:opacity-70 mt-3 md:mt-6 lg:mt-8 whitespace-nowrap"
                 >
-                  <Link to={path}>{label}</Link>
+                  <Link to={path}>
+                    {t(`footer.menuData.${menuIndex}.links.${index}.label`)}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -178,8 +183,8 @@ const Footer = () => {
 
       <div className="container2X sec_common_40 lg:px-4 flex flex-col md:flex-row gap-2 justify-between md:items-center">
         <p className="text-sm md:text-base text-white !leading-[1.4]">
-          ©2024 <span className="font-semibold">Yoowifi</span>. All Rights
-          Reserved.
+          ©2024 <span className="font-semibold">Yoowifi</span>.{" "}
+          {t("footer.copyRightText")}
         </p>
 
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center">
@@ -212,7 +217,7 @@ const Footer = () => {
                 to={item.path}
                 className="text-sm md:text-base text-white !leading-[1.4] hover:opacity-70"
               >
-                {item.title}
+                {t(`footer.legals.${index}.title`)}
               </Link>
             ))}
           </div>

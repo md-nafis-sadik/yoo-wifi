@@ -25,7 +25,7 @@ const HowItWorks = () => {
 
       <Link to={commercialRoutes.howItWorks.path}>
         <Button size="lg" variant="secondary">
-          How it Works
+          {t("buttonText.howItWorks")}
         </Button>
       </Link>
     </section>

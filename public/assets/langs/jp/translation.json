@@ -4,7 +4,8 @@
     "findOutMore": "詳細を確認",
     "search": "検索",
     "seeDetails": "詳細を見る",
-    "aboutUs": "私たちについて"
+    "aboutUs": "私たちについて",
+    "howItWorks": "使い方"
   },
   "extraText": {
     "from": "から"
@@ -110,6 +111,13 @@
         "description": "20以上のピックアップ・ドロップオフ場所で、ポケットWiFiを簡単に受け取って、快適に接続を保つことができます。"
       }
     ]
+  },
+  "collaborateMarquee": {
+    "sectionHeading": "協力する通信事業者"
+  },
+  "downloadYooWifi": {
+    "downloadText": "ダウンロード",
+    "ctaText": "いつでもどこでも快適なデジタル体験を可能にする高度な機能！"
   },
   "country": {
     "packages": [
@@ -348,6 +356,94 @@
           {
             "title": "利用規約",
             "info": "BASICデイパス\n- 無制限データ自由\n- 毎日1GBの高速データ\n- 最低SGD$2.90/日\n\n****************または****************\nSUPERデイパス\n- 無制限データ自由\n- 毎日1GBの高速データ\n- 最低SGD$2.90/日"
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "subscribeNewsLetter": "ニュースレターを購読してください！",
+    "copyRightText": "無断転載を禁じます。",
+    "contact": [
+      {
+        "type": "電話"
+      },
+      {
+        "type": "メール"
+      }
+    ],
+    "legals": [
+      {
+        "title": "利用規約"
+      },
+      {
+        "title": "プライバシーポリシー"
+      }
+    ],
+    "menuData": [
+      {
+        "title": "YOOWIFI",
+        "links": [
+          {
+            "label": "私たちについて"
+          },
+          {
+            "label": "よくある質問"
+          },
+          {
+            "label": "アプリをダウンロード"
+          },
+          {
+            "label": "お問い合わせ"
+          },
+          {
+            "label": "利用規約"
+          },
+          {
+            "label": "プライバシーポリシー"
+          }
+        ]
+      },
+      {
+        "title": "FOR YOO",
+        "links": [
+          {
+            "label": "旅行データ"
+          },
+          {
+            "label": "対応エリア"
+          },
+          {
+            "label": "ローカルデータ"
+          },
+          {
+            "label": "ピックアップ/ドロップオフ場所"
+          },
+          {
+            "label": "製品"
+          },
+          {
+            "label": "仕組み"
+          }
+        ]
+      },
+      {
+        "title": "CORPORATE",
+        "links": [
+          {
+            "label": "IoT"
+          },
+          {
+            "label": "ホテル"
+          },
+          {
+            "label": "旅行代理店"
+          },
+          {
+            "label": "海事インターネット"
+          },
+          {
+            "label": "オフィス/ロードショー＆イベント"
           }
         ]
       }

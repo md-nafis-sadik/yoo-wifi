@@ -1,9 +1,11 @@
 import { images } from "@/services";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import Marquee from "@/components/ui/marquee";
+import { useTranslation } from "react-i18next";
 
 const CollaborateMarquee = () => {
-  const collaboaratros = [
+  const { t } = useTranslation();
+
+  const collaboarators = [
     { _id: 1, image: images.collaborator1, alt: "collaborator 1" },
     { _id: 2, image: images.collaborator2, alt: "collaborator 2" },
     { _id: 3, image: images.collaborator3, alt: "collaborator 3" },
@@ -19,11 +21,11 @@ const CollaborateMarquee = () => {
       id={"companies"}
     >
       <p className="text-center text-black-600 md:text-black-700 text-base md:text-2xl !leading-[1.4]">
-        Operators We Collaborate With
+        {t("collaborateMarquee.sectionHeading")}
       </p>
 
       <Marquee pauseOnHover className="[--duration:20s] mt-6 md:mt-7 lg:mt-8">
-        {collaboaratros.map(({ image, alt }, index) => (
+        {collaboarators.map(({ image, alt }, index) => (
           <img
             src={image}
             alt={alt}

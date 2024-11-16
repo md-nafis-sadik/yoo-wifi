@@ -4,7 +4,8 @@
     "findOutMore": "Find Out More",
     "search": "Search",
     "seeDetails": "See Details",
-    "aboutUs": "About Us"
+    "aboutUs": "About Us",
+    "howItWorks": "How It Works"
   },
   "extraText": {
     "from": "From"
@@ -103,6 +104,13 @@
         "description": "With 20+ pick-up and drop-off locations, we make it easy for you to get your pocket wifi and stay connected hassle-free."
       }
     ]
+  },
+  "collaborateMarquee": {
+    "sectionHeading": "Operators We Collaborate With"
+  },
+  "downloadYooWifi": {
+    "downloadText": "Download the",
+    "ctaText": "Advanced features for an effortless digital experience anytime, anywhere!"
   },
   "country": {
     "packages": [
@@ -341,6 +349,94 @@
           {
             "title": "Terms & Conditions",
             "info": "BASIC Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day\n\n****************OR****************\nSUPER Daypass\n- Enjoy Unlimited Data Freedom\n- 1GB on high-speed daily\n- For as low as SGD$2.90/day"
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "subscribeNewsLetter": "Subscribe newsletter!",
+    "copyRightText": "All Rights Reserved.",
+    "contact": [
+      {
+        "type": "Call"
+      },
+      {
+        "type": "Mail"
+      }
+    ],
+    "legals": [
+      {
+        "title": "Terms of use"
+      },
+      {
+        "title": "Privacy policy"
+      }
+    ],
+    "menuData": [
+      {
+        "title": "YOOWIFI",
+        "links": [
+          {
+            "label": "About Us"
+          },
+          {
+            "label": "FAQ"
+          },
+          {
+            "label": "Download the app"
+          },
+          {
+            "label": "Contact Us"
+          },
+          {
+            "label": "Terms of service"
+          },
+          {
+            "label": "Privacy Policy"
+          }
+        ]
+      },
+      {
+        "title": "FOR YOO",
+        "links": [
+          {
+            "label": "Travel Data"
+          },
+          {
+            "label": "Country Coverage"
+          },
+          {
+            "label": "Local Data"
+          },
+          {
+            "label": "Pickup /drop off locations"
+          },
+          {
+            "label": "Products"
+          },
+          {
+            "label": "How it works"
+          }
+        ]
+      },
+      {
+        "title": "CORPORATE",
+        "links": [
+          {
+            "label": "Iot"
+          },
+          {
+            "label": "Hotel"
+          },
+          {
+            "label": "Travel Agency"
+          },
+          {
+            "label": "Maritime Internet"
+          },
+          {
+            "label": "Offices/Roadshow&Event"
           }
         ]
       }
