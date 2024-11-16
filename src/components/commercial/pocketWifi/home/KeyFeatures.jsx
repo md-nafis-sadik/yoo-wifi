@@ -28,7 +28,7 @@ function KeyFeatures({ wrapperClass = "" }) {
               <FeatureCard
                 svg={item?.icon()}
                 index={index}
-                title={item?.title}
+                title={t(`pocketWifi.features.featureList.${index}`)}
                 key={index}
               />
             ))}

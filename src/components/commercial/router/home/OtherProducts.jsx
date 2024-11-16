@@ -19,6 +19,7 @@ function OtherProducts() {
             {newProducts?.map((item, index) => (
               <ProductCard
                 key={index}
+                index={index}
                 item={item}
                 eventHandler={() => setSelectedCard(index)}
                 selected={selectedCard === index}

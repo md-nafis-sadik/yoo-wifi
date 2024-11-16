@@ -490,117 +490,6 @@
         }
       ]
     },
-    "recommendedPackages": {
-      "heading": "Recommended Packages",
-      "subHeading": "Discover Our Recommended Packages for Your Needs",
-      "packageList": [
-        {
-          "title": "Basic Package",
-          "features": [
-            "Keep Yoowifi device",
-            "Top-up plans only",
-            "Valid for 365 days",
-            "Covers 90 countries"
-          ],
-          "information": "This package provides basic internet connectivity, ideal for travelers or light internet users."
-        },
-        {
-          "title": "Traveler Package",
-          "features": [
-            "Keep Yoowifi device",
-            "Top-up plans only",
-            "Valid for 365 days",
-            "Covers 90 countries"
-          ],
-          "information": "Perfect for frequent travelers, this package supports global internet connectivity."
-        },
-        {
-          "title": "Extended Package",
-          "features": [
-            "Keep Yoowifi device",
-            "Top-up plans only",
-            "Valid for 365 days",
-            "Covers 90 countries"
-          ],
-          "information": "Extends the features of the standard package, offering longer usage periods or additional data options."
-        },
-        {
-          "title": "Unlimited Package",
-          "features": [
-            "Keep Yoowifi device",
-            "Top-up plans only",
-            "Valid for 365 days",
-            "Covers 90 countries"
-          ],
-          "information": "Offers unlimited data for worry-free internet usage."
-        },
-        {
-          "title": "Light Package",
-          "features": [
-            "Keep Yoowifi device",
-            "Top-up plans only",
-            "Valid for 180 days",
-            "Covers 60 countries"
-          ],
-          "information": "A package designed for light users or short-term usage."
-        },
-        {
-          "title": "Business Package",
-          "features": [
-            "Keep Yoowifi device",
-            "Top-up plans only",
-            "Valid for 365 days",
-            "Priority support",
-            "Covers 100 countries"
-          ],
-          "information": "Tailored for business users on the move or frequent travelers for work."
-        },
-        {
-          "title": "Premium Package",
-          "features": [
-            "Keep Yoowifi device",
-            "Top-up plans only",
-            "Valid for 365 days",
-            "Unlimited data in specific countries",
-            "Covers 90 countries"
-          ],
-          "information": "Provides a premium connectivity experience with unlimited data in selected countries."
-        },
-        {
-          "title": "Family Package",
-          "features": [
-            "Keep Yoowifi device",
-            "Top-up plans only",
-            "Valid for 365 days",
-            "Connect up to 10 devices",
-            "Covers 90 countries"
-          ],
-          "information": "A family-oriented package allowing multiple devices to connect simultaneously."
-        },
-        {
-          "title": "Traveler Plus Package",
-          "features": [
-            "Keep Yoowifi device",
-            "Top-up plans only",
-            "Valid for 180 days",
-            "Enhanced data for heavy users",
-            "Covers 80 countries"
-          ],
-          "information": "An ideal option for travelers requiring more data capacity."
-        },
-        {
-          "title": "Global Unlimited Package",
-          "features": [
-            "Keep Yoowifi device",
-            "Top-up plans only",
-            "Valid for 365 days",
-            "Unlimited data globally",
-            "Covers 100 countries"
-          ],
-          "information": "The ultimate package offering unlimited data across the globe."
-        }
-      ]
-    },
     "features": {
       "heading": "Key Features",
       "subHeading": "Don't let slow internet tie you down! Switch to our portable solutions to experience connectivity without boundaries.",
@@ -709,6 +598,166 @@
     "otherProducts": {
       "title": "Other products you may like"
     }
+  },
+  "router": {
+    "product": {
+      "name": "Router",
+      "description": "The Yoowifi Router offers seamless and reliable internet connectivity at home or in the office. With advanced features and high-speed connectivity, it ensures that you stay connected without any interruptions. The router is easy to set up and use, making it the perfect solution for all your internet needs.",
+      "features": [
+        "Stay Connected Anywhere",
+        "Save BIG on International Roaming",
+        "Unbeatable Pricing Guarantee"
+      ],
+      "buttons": {
+        "text": "View Plans",
+        "text2": "Get Router"
+      },
+      "tabs": [
+        {
+          "title": "Description",
+          "content": "It is easy to use and boasts a sleek, minimalist design. Simply turn it on, connect your devices, and you’re good to go! No more worrying about complicated setup processes or bulky equipment. But that’s not all – our Pocket WiFi devices also offer strong and reliable connectivity, ensuring that you stay connected no matter where you are. Whether you’re on a business trip or a family vacation, you can enjoy high-speed internet without any interruptions."
+        },
+        {
+          "title": "Specifications",
+          "content": "CPU: SC8310LTE-FDD：Bands 1 / 2 / 3 / 4 / 5 / 7 / 8 / 12 / 13 / 17 / 18 / 20 / 25 / 26 /28 / 66\nLTE-TDD：Bands 34 / 38 / 39 / 40 / 41 (194M)\n WCDMA：Bands 1 / 2 / 4 / 5 / 8 \nTD-SCDMA：NO CDMA：NO\nEVDO：NO\nGSM：850 / 900 / 1800 / 1900 \nMax speed：Download 150Mbps  /  Upload 50Mbps \nWi-Fi：2.4GHz  802.11 b / g / n 1T1R \nMax WiFi Connection：8\nBattery：3000mAh \nPorts：Type-C  USB\nInput： 5V – 1A \nItem size：120mm x 64.6mm x 12mm\nItem weight：112g\nShell Material：Plastics"
+        },
+        {
+          "title": "What's Included",
+          "content": "50GB global data is applicable to 90 countries.\nSpeed of service is dependent on the mobile network partner.\nFor order cancellation, a charge of 10% of the order will apply.\nGeneral terms and conditions apply.\nYoowifi reserved the rights to make changes anytime."
+        },
+        {
+          "title": "Terms & Conditions",
+          "content": "Albania, Andorra, Armenia, Australia, Austria, Bahrain, Bangladesh, Belgium, Bosnia and Herzegovina, Brunei, Bulgaria, Cambodia, Canada, China, Croatia, Cyprus, Czech Republic, Denmark, Egypt, Estonia, Finland, France, Georgia, Germany, Gibraltar, Greece, Guernsey, Hong Kong, Hungary, Iceland, India, Indonesia, Ireland, Isle of Man, Israel, Italy, Japan, Jersey, Jordan, Kazakhstan, Kuwait, Laos, Latvia, Liechtenstein Lithuania, Luxembourg, Macau, Macedonia, Malaysia, Malta, Mexico, Monaco, Montenegro, Myanmar, Netherlands, New Zealand, Norway, Oman, Pakistan, Philippines, Poland, Portugal, Qatar, Reunion, Romania, Russia, San Marino, Saudi Arabia, Serbia, Slovakia, Slovenia, South Korea, Spain, Sri Lanka, Sweden, Switzerland, Taiwan, Thailand, Turkey, UAE, Ukraine, United Kingdom, USA, Uzbekistan, Vatican, Vietnam"
+        }
+      ]
+    },
+    "features": {
+      "heading": "Key Features",
+      "subHeading": "Don't let slow internet tie you down! Switch to our portable solutions to experience connectivity without boundaries.",
+      "featureList": [
+        "Up To 4G LTE Speed",
+        "Flexible Data option",
+        "Cloud SIM Technology",
+        "Share across multiple devices",
+        "Greater Coverage and Stability"
+      ]
+    },
+    "whatsIncluded": {
+      "heading": "What's included",
+      "subHeading": "Everything You Need for Seamless Connectivity",
+      "includedList": ["x1 Wifi Router", "x1 Power Adapter"]
+    }
+  },
+  "recommendedPackages": {
+    "heading": "Recommended Packages",
+    "subHeading": "Discover Our Recommended Packages for Your Needs",
+    "packageList": [
+      {
+        "title": "Basic Package",
+        "features": [
+          "Keep Yoowifi device",
+          "Top-up plans only",
+          "Valid for 365 days",
+          "Covers 90 countries"
+        ],
+        "information": "This package provides basic internet connectivity, ideal for travelers or light internet users."
+      },
+      {
+        "title": "Traveler Package",
+        "features": [
+          "Keep Yoowifi device",
+          "Top-up plans only",
+          "Valid for 365 days",
+          "Covers 90 countries"
+        ],
+        "information": "Perfect for frequent travelers, this package supports global internet connectivity."
+      },
+      {
+        "title": "Extended Package",
+        "features": [
+          "Keep Yoowifi device",
+          "Top-up plans only",
+          "Valid for 365 days",
+          "Covers 90 countries"
+        ],
+        "information": "Extends the features of the standard package, offering longer usage periods or additional data options."
+      },
+      {
+        "title": "Unlimited Package",
+        "features": [
+          "Keep Yoowifi device",
+          "Top-up plans only",
+          "Valid for 365 days",
+          "Covers 90 countries"
+        ],
+        "information": "Offers unlimited data for worry-free internet usage."
+      },
+      {
+        "title": "Light Package",
+        "features": [
+          "Keep Yoowifi device",
+          "Top-up plans only",
+          "Valid for 180 days",
+          "Covers 60 countries"
+        ],
+        "information": "A package designed for light users or short-term usage."
+      },
+      {
+        "title": "Business Package",
+        "features": [
+          "Keep Yoowifi device",
+          "Top-up plans only",
+          "Valid for 365 days",
+          "Priority support",
+          "Covers 100 countries"
+        ],
+        "information": "Tailored for business users on the move or frequent travelers for work."
+      },
+      {
+        "title": "Premium Package",
+        "features": [
+          "Keep Yoowifi device",
+          "Top-up plans only",
+          "Valid for 365 days",
+          "Unlimited data in specific countries",
+          "Covers 90 countries"
+        ],
+        "information": "Provides a premium connectivity experience with unlimited data in selected countries."
+      },
+      {
+        "title": "Family Package",
+        "features": [
+          "Keep Yoowifi device",
+          "Top-up plans only",
+          "Valid for 365 days",
+          "Connect up to 10 devices",
+          "Covers 90 countries"
+        ],
+        "information": "A family-oriented package allowing multiple devices to connect simultaneously."
+      },
+      {
+        "title": "Traveler Plus Package",
+        "features": [
+          "Keep Yoowifi device",
+          "Top-up plans only",
+          "Valid for 180 days",
+          "Enhanced data for heavy users",
+          "Covers 80 countries"
+        ],
+        "information": "An ideal option for travelers requiring more data capacity."
+      },
+      {
+        "title": "Global Unlimited Package",
+        "features": [
+          "Keep Yoowifi device",
+          "Top-up plans only",
+          "Valid for 365 days",
+          "Unlimited data globally",
+          "Covers 100 countries"
+        ],
+        "information": "The ultimate package offering unlimited data across the globe."
+      }
+    ]
   },
   "footer": {
     "subscribeNewsLetter": "Subscribe newsletter!",
