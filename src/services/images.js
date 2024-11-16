@@ -36,6 +36,8 @@ import ItalyFlag from "@/assets/images/country-coverage/Italy.png";
 import SpainFlag from "@/assets/images/country-coverage/Spain.png";
 import SwedenFlag from "@/assets/images/country-coverage/Sweden.png";
 import SwitzerlandFlag from "@/assets/images/country-coverage/Switzerland.png";
+import JapanFlag from "@/assets/images/country-coverage/japan.webp";
+import USFlag from "@/assets/images/country-coverage/us.webp";
 import dataPlan from "@/assets/images/data-plan.webp";
 import discount from "@/assets/images/discount.webp";
 import download from "@/assets/images/download.webp";
@@ -82,6 +84,8 @@ export {
   SpainFlag,
   SwedenFlag,
   SwitzerlandFlag,
+  USFlag,
+  JapanFlag,
   africaRegionBlack,
   airtelIndia,
   americaRegionBlack,

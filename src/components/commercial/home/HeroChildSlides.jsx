@@ -2,6 +2,7 @@ import useEmblaCarouselDotButtons from "@/hooks/useEmblaCarouselDotButtons";
 import { cn } from "@/lib/utils";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
+import { useTranslation } from "react-i18next";
 
 function HeroChildSlides({
   wrapperClass = "",
@@ -45,16 +46,19 @@ function HeroChildSlides({
 export default HeroChildSlides;
 
 export const SlideCard = ({ item }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="w-full shrink-0 flex items-center justify-center">
       <div className="w-full flex gap-4">
         <div className="font-meid whitespace-nowrap">
           <h5 className="text-3xl sm:text-4xl md:text-[2.5rem] ">50GB+</h5>
-          <h6 className="text-xs sm:text-sm  uppercase">Portable Device</h6>
+          <h6 className="text-xs sm:text-sm  uppercase">
+            {t("heroHome.slides.title")}
+          </h6>
         </div>
         <p className="text-xs sm:text-sm max-w-48">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
+          {t("heroHome.slides.description")}
         </p>
       </div>
     </div>

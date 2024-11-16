@@ -44,7 +44,7 @@ function Hero() {
           <HeroDiscover />
         </div>
       </div>
-      <div className="absolute md:right-16 md:bottom-24 z-50 hidden md:flex md:flex-col items-center gap-2.5">
+      <div className="absolute md:right-16 md:bottom-24 z-[38] hidden md:flex md:flex-col items-center gap-2.5">
         {scrollSnaps?.map((_, index) => (
           <div
             className={cn(

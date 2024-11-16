@@ -2,6 +2,7 @@ import ProductCard from "@/components/shared/cards/ProductCard";
 import { cn } from "@/lib/utils";
 import { productsData } from "@/services";
 import { useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Products = ({ showProductDeadline = false, className, ...props }) => {
@@ -20,6 +21,7 @@ const Products = ({ showProductDeadline = false, className, ...props }) => {
                 <ProductCard
                   key={index}
                   item={item}
+                  index={index}
                   eventHandler={() => setSelectedCard(index)}
                   selected={selectedCard === index}
                   showCountDown={showProductDeadline}

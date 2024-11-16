@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Gallery, Item } from "react-photoswipe-gallery";
 
 function ProductGallery({ items = [] }) {
   const [activeItem, setActiveItem] = useState(items[0]);
   const gallery = [...items]?.slice(1, 5);
+  const { t } = useTranslation();
   return (
     <div className="">
       <Gallery>
@@ -78,7 +80,7 @@ function ProductGallery({ items = [] }) {
                     ref={ref}
                     onClick={open}
                   >
-                    +{items?.length - 4} more
+                    +{items?.length - 4} {t("extraText.more")}
                   </div>
                 )}
               </Item>

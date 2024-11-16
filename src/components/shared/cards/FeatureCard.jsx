@@ -1,12 +1,16 @@
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
 function FeatureCard({
   icon,
   svg = null,
   title = "",
+  index,
   className = "",
   ...props
 }) {
+  const { t } = useTranslation();
+
   return (
     <div
       className={cn(
@@ -27,7 +31,7 @@ function FeatureCard({
         )}
       </div>
       <h3 className="text-black-900 text-base sm:text-lg font-semibold text-center sm:whitespace-pre-wrap">
-        {title}
+        {t(`pocketWifi.features.featureList.${index}`)}
       </h3>
     </div>
   );

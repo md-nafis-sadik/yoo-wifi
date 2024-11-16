@@ -4,11 +4,14 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import HeroChildSlides from "./HeroChildSlides";
 import ProductRouteCard from "./ProductRouteCard";
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 function HeroDiscover() {
   const { products } = useSelector((state) => state.shared);
   const navigate = useNavigate();
   const { setLoginRequiredDialogOpen } = useModal();
+  const { t } = useTranslation();
 
   const handleNavigate = (path) => {
     // if (auth?.token) {
@@ -22,7 +25,7 @@ function HeroDiscover() {
     <div className="flex-full flex items-end bg-yellow-400 text-black-900 pt-20 sm:pt-28 xl:pt-40 px-4 sm:px-10 md:px-16 overflow-hidden relative">
       <div className="w-full max-w-[1190px] mx-auto relative z-50">
         <h1 className="max-w-[686px] mx-auto lg:mx-0 text-3xl sm:text-5xl md:text-7xl xl:text-[7.5rem] leading-[115%] xl:!leading-[94px] font-sansPro uppercase font-extrabold text-center lg:text-left">
-          DISCOVER THE WORLD WITH US
+          {t("heroHome.heroDiscover.discover")}
         </h1>
 
         <div className="mt-10 md:mt-12 ">
@@ -32,6 +35,7 @@ function HeroDiscover() {
                 <ProductRouteCard
                   key={index}
                   item={item}
+                  index={index}
                   onClick={() => handleNavigate(item?.path)}
                   wrapperClass="bg-white-rgb"
                   simColor="#000"

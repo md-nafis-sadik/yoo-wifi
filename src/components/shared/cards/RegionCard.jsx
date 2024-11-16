@@ -1,8 +1,11 @@
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
 
 function RegionCard({ item = {}, index = 0, className, ...props }) {
+  const { t } = useTranslation();
+
   return (
     <Link
       to={item.link}
@@ -22,7 +25,7 @@ function RegionCard({ item = {}, index = 0, className, ...props }) {
       />
       <div className="mt-4 md:mt-6">
         <h2 className="text-xs sm:text-base md:text-2xl !leading-[1.4] text-center text-black-700 group-hover:font-bold font-normal tracking-normal">
-          {item?.title}
+          {t(`stayConnectedRegions.regions.${index}`)}
         </h2>
       </div>
     </Link>

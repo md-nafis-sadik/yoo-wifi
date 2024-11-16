@@ -1,8 +1,15 @@
 import { cn } from "@/lib/utils";
 import { CallMadeIcon } from "@/services";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
-const ConnectCard = ({ item, containerClassName, ...props }) => {
+const ConnectCard = ({
+  item,
+  index,
+  translate,
+  containerClassName,
+  ...props
+}) => {
   return (
     <div
       className={cn(
@@ -20,11 +27,11 @@ const ConnectCard = ({ item, containerClassName, ...props }) => {
           className="text-black-700 text-[18px] md:text-2xl !leading-[1.4] mt-6 md:mt-12 lg:mt-[60px] font-bold line-clamp-1"
           title={item.title}
         >
-          {item.title}
+          {translate(`howItWorks.howItWorksData.${index}.title`)}
         </h2>
 
         <p className="text-sm md:text-[18px] text-black-600 !leading-[1.4] mt-2 md:mt-3">
-          {item.description}
+          {translate(`howItWorks.howItWorksData.${index}.description`)}
         </p>
       </div>
       <Link
@@ -33,7 +40,7 @@ const ConnectCard = ({ item, containerClassName, ...props }) => {
           "text-sm md:text-base text-main-600 !leading-[1.2] mt-6 font-semibold flex items-center gap-2"
         )}
       >
-        <span>Find Out More</span>
+        <span>{translate(`buttonText.findOutMore`)}</span>
         <CallMadeIcon className={"h-5 w-5 md:h-6 md:w-6"} color="#D81F22" />
       </Link>
     </div>

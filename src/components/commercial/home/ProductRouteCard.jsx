@@ -1,6 +1,7 @@
 import useModal from "@/hooks/useModal";
 import { cn } from "@/lib/utils";
 import { ArrowUpRightIcon } from "@/services";
+import { useTranslation } from "react-i18next";
 
 function ProductRouteCard({
   item,
@@ -8,8 +9,10 @@ function ProductRouteCard({
   pocketWifiColor = "",
   routerColor = "",
   simColor = "",
+  index,
   ...props
 }) {
+  const { t } = useTranslation();
 
   return (
     <div
@@ -23,13 +26,13 @@ function ProductRouteCard({
         {item?.icon({ pocketWifiColor, routerColor, simColor })}
       </div>
       <h4 className="text-sm sm:text-base md:text-lg font-semibold leading-[140%]">
-        {item?.name}
+        {t(`productsData.cardData.${index}.title`)}
       </h4>
       <button
         type="button"
         className="outline-none flex items-center justify-center gap-1 xs:gap-2 text-main-600 text-xs xs:text-sm font-semibold"
       >
-        <span>Buy Now</span>
+        <span>{t("buttonText.buyNow")}</span>
         <ArrowUpRightIcon className="w-4 " color="#d81f22" />
       </button>
     </div>

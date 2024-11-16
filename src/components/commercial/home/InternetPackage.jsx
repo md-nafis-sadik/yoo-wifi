@@ -2,6 +2,7 @@ import InternetPackageCard from "@/components/shared/cards/InternetPackageCard";
 import SectionHeader from "@/components/shared/others/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 
 function InternetPackage() {
@@ -10,6 +11,8 @@ function InternetPackage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredPackages, setFilteredPackages] = useState(packages);
   const [dropdownSuggestions, setDropdownSuggestions] = useState([]);
+
+  const { t } = useTranslation();
 
   const handleInputChange = (e) => {
     const input = e.target.value;
@@ -47,8 +50,8 @@ function InternetPackage() {
   return (
     <div className="sec_common_80 px-4 min-[1176px]:px-0 bg-neutral-50">
       <SectionHeader
-        heading={"Perfect Internet Packages"}
-        subHeading={"Choose Your Dream Destination and Perfect Package Now"}
+        heading={t("internetPackages.sectionHeading")}
+        subHeading={t("internetPackages.sectionSubHeading")}
       />
       <div className="containerX flex_center flex-col">
         <div className="w-full max-w-[420px] bg-neutral-100 rounded-xl mt-6 lg:mt-10 mb-6 md:mb-8 ring-1 ring-neutral-300 relative">
@@ -61,7 +64,7 @@ function InternetPackage() {
               type="text"
               value={searchTerm}
               onChange={handleInputChange}
-              placeholder="Search country.."
+              placeholder={t("internetPackages.searchPlaceholder")}
               className="flex-1 h-full w-[100px] bg-transparent border-none outline-none text-sm md:text-base text-black placeholder:text-black-600"
             />
             <Button
@@ -69,7 +72,7 @@ function InternetPackage() {
               className={"font-medium text-sm max-h-8 md:max-h-9"}
               size={"sm"}
             >
-              Search
+              {t("buttonText.search")}
             </Button>
           </label>
 
@@ -95,7 +98,7 @@ function InternetPackage() {
           </div>
         ) : (
           <p className="p_common text-center w-full">
-            No package found for your search
+            {t("notFound.noPackage")}
           </p>
         )}
       </div>

@@ -4,11 +4,13 @@ import { useNavigate } from "react-router-dom";
 import HeroChildSlides from "./HeroChildSlides";
 import ProductRouteCard from "./ProductRouteCard";
 import useModal from "@/hooks/useModal";
+import { useTranslation } from "react-i18next";
 
 function HeroTravel() {
   const { products } = useSelector((state) => state.shared);
   const navigate = useNavigate();
   const { setLoginRequiredDialogOpen } = useModal();
+  const { t } = useTranslation();
 
   const handleNavigate = (path) => {
     // if (auth?.token) {
@@ -22,7 +24,7 @@ function HeroTravel() {
     <div className="flex-full flex items-end min-h-0 bg-main-600 text-white pt-20 sm:pt-28 xl:pt-40 px-4 sm:px-10 md:px-16 overflow-hidden relative pb-6 sm:pb-12 ">
       <div className="w-full max-w-[1312px] mx-auto">
         <h1 className="w-full max-w-[1000px] mx-auto text-3xl sm:text-5xl md:text-7xl xl:text-[7.5rem] leading-[115%] xl:!leading-[94px] font-sansPro uppercase font-extrabold text-center relative z-20">
-          YOOUR # 1 TRAVEL COMPANION
+          {t("heroHome.heroTravel.travelCompanion")}
         </h1>
 
         <div className="flex flex-col-reverse lg:flex-col gap-20 lg:gap-0">
@@ -40,6 +42,7 @@ function HeroTravel() {
                 <ProductRouteCard
                   key={index}
                   item={item}
+                  index={index}
                   onClick={() => handleNavigate(item?.path)}
                   wrapperClass="bg-white-rgb text-black-900"
                   simColor="#000"

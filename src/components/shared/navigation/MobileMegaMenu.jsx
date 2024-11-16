@@ -13,9 +13,12 @@ import {
   MapPickupIcon,
   TravelIcon,
 } from "@/services";
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 
 function MobileMegaMenu({ setIsShowMenu = () => {} }) {
+  const { t } = useTranslation();
+
   return (
     <li className="xl:hidden">
       <Accordion
@@ -29,7 +32,9 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
             iconClass="text-white w-5"
           >
             <div>
-              <span>Others</span>
+              <span>
+                <span>{t("navbar.megamenu.menuText")}</span>
+              </span>
             </div>
           </AccordionTrigger>
           <AccordionContent>
@@ -51,7 +56,7 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                     <div className="w-6 aspect-square flex items-center justify-center bg-main-600 rounded">
                       <TravelIcon className="shrink-0" />
                     </div>
-                    <span>Travel Data</span>
+                    <span>{t("navbar.megamenu.menuItems.0.title")}</span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="pl-9 pt-0">
@@ -66,7 +71,7 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                         to={commercialRoutes.pocketWifiDetails.path}
                         onClick={() => setIsShowMenu(false)}
                       >
-                        Pocket Wifi Details
+                        {t("navbar.megamenu.menuItems.0.items.0")}
                       </NavLink>
                     </li>
                     <li>
@@ -79,14 +84,14 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                         to={commercialRoutes.simHome.path}
                         onClick={() => setIsShowMenu(false)}
                       >
-                        Sim/eSim Details
+                        {t("navbar.megamenu.menuItems.0.items.1")}
                       </NavLink>
                     </li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
-              {/* Country Coverage  */}
 
+              {/* Country Coverage  */}
               <AccordionItem
                 value="item-2"
                 className="bg-transparent border-none"
@@ -99,7 +104,7 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                     <div className="w-6 aspect-square flex items-center justify-center bg-main-600 rounded">
                       <MapCoverageIcon className="shrink-0" />
                     </div>
-                    <span>Country Coverage</span>
+                    <span>{t("navbar.megamenu.menuItems.1.title")}</span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="pl-9 pt-0">
@@ -114,7 +119,7 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                         to={`${commercialRoutes.countryCoverage.path}?region=asia`}
                         onClick={() => setIsShowMenu(false)}
                       >
-                        Asia
+                        {t("navbar.megamenu.menuItems.1.items.0")}
                       </NavLink>
                     </li>
                     <li>
@@ -127,7 +132,7 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                         to={`${commercialRoutes.countryCoverage.path}?region=europe`}
                         onClick={() => setIsShowMenu(false)}
                       >
-                        Europe
+                        {t("navbar.megamenu.menuItems.1.items.1")}
                       </NavLink>
                     </li>
                     <li>
@@ -140,7 +145,7 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                         to={`${commercialRoutes.countryCoverage.path}?region=america`}
                         onClick={() => setIsShowMenu(false)}
                       >
-                        America
+                        {t("navbar.megamenu.menuItems.1.items.2")}
                       </NavLink>
                     </li>
                     <li>
@@ -153,7 +158,7 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                         to={`${commercialRoutes.countryCoverage.path}?region=australia`}
                         onClick={() => setIsShowMenu(false)}
                       >
-                        Australia
+                        {t("navbar.megamenu.menuItems.1.items.3")}
                       </NavLink>
                     </li>
                     <li>
@@ -166,14 +171,14 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                         to={`${commercialRoutes.countryCoverage.path}?region=africa`}
                         onClick={() => setIsShowMenu(false)}
                       >
-                        Africa
+                        {t("navbar.megamenu.menuItems.1.items.4")}
                       </NavLink>
                     </li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
-              {/* Pickup/Drop off Location  */}
 
+              {/* Pickup/Drop off Location  */}
               <AccordionItem
                 value="item-3"
                 className="bg-transparent border-none"
@@ -186,7 +191,7 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                     <div className="w-6 aspect-square flex items-center justify-center bg-main-600 rounded">
                       <MapPickupIcon className="shrink-0" />
                     </div>
-                    <span>Pickup/Drop off Location</span>
+                    <span>{t("navbar.megamenu.menuItems.2.title")}</span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="pl-9 pt-0">
@@ -201,7 +206,7 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                         to={commercialRoutes.pickDropLocation.path}
                         onClick={() => setIsShowMenu(false)}
                       >
-                        Pickup Location
+                        {t("navbar.megamenu.menuItems.2.items.0")}
                       </NavLink>
                     </li>
                     <li>
@@ -214,14 +219,14 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                         to={commercialRoutes.pickDropLocation.path}
                         onClick={() => setIsShowMenu(false)}
                       >
-                        Drop off Location
+                        {t("navbar.megamenu.menuItems.2.items.1")}
                       </NavLink>
                     </li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
-              {/* How It Works  */}
 
+              {/* How It Works  */}
               <AccordionItem
                 value="item-4"
                 className="bg-transparent border-none"
@@ -234,7 +239,7 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                     <div className="w-6 aspect-square flex items-center justify-center bg-main-600 rounded">
                       <CheckSlideIcon className="shrink-0" />
                     </div>
-                    <span>How It Works</span>
+                    <span> {t("navbar.megamenu.menuItems.3.title")}</span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="pl-9 pt-0">
@@ -249,7 +254,7 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                         to={`${commercialRoutes.howItWorks.path}#rent`}
                         onClick={() => setIsShowMenu(false)}
                       >
-                        Rent Yoowifi Pocket WiFi
+                        {t("navbar.megamenu.menuItems.3.items.0")}
                       </NavLink>
                     </li>
                     <li>
@@ -262,7 +267,7 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                         to={`${commercialRoutes.howItWorks.path}#self-return`}
                         onClick={() => setIsShowMenu(false)}
                       >
-                        Simple Self-Return In less then a minute
+                        {t("navbar.megamenu.menuItems.3.items.1")}
                       </NavLink>
                     </li>
                     <li>
@@ -275,14 +280,14 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                         to={`${commercialRoutes.howItWorks.path}#topup`}
                         onClick={() => setIsShowMenu(false)}
                       >
-                        Create New Trip or Top-up data
+                        {t("navbar.megamenu.menuItems.3.items.2")}
                       </NavLink>
                     </li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
-              {/* Affiliate  */}
 
+              {/* Affiliate  */}
               <AccordionItem
                 value="item-5"
                 className="bg-transparent border-none"
@@ -295,7 +300,7 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                     <div className="w-6 aspect-square flex items-center justify-center bg-main-600 rounded">
                       <GroupAffiliateIcon className="shrink-0" />
                     </div>
-                    <span>Affiliate</span>
+                    <span>{t("navbar.megamenu.menuItems.4.title")}</span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="pl-9 pt-0">
@@ -310,7 +315,7 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                         to={`${commercialRoutes.affiliate.path}/#join-affiliate`}
                         onClick={() => setIsShowMenu(false)}
                       >
-                        Join the Yoowifi Affiliate Yoo Wander Program
+                        {t("navbar.megamenu.menuItems.4.items.0")}
                       </NavLink>
                     </li>
                     <li>
@@ -323,14 +328,14 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                         to={`${commercialRoutes.affiliate.path}/#lets-talk`}
                         onClick={() => setIsShowMenu(false)}
                       >
-                        Contact Us Now!
+                        {t("navbar.megamenu.menuItems.4.items.1")}
                       </NavLink>
                     </li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
-              {/* How To  */}
 
+              {/* How To  */}
               <AccordionItem
                 value="item-6"
                 className="bg-transparent border-none"
@@ -343,7 +348,7 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                     <div className="w-6 aspect-square flex items-center justify-center bg-main-600 rounded">
                       <InfoIcon className="shrink-0" />
                     </div>
-                    <span>How To</span>
+                    <span>{t("navbar.megamenu.menuItems.5.title")}</span>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="pl-9 pt-0">
@@ -358,7 +363,7 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                         to={commercialRoutes.howToSetupSim.path}
                         onClick={() => setIsShowMenu(false)}
                       >
-                        Set an eSIM
+                        {t("navbar.megamenu.menuItems.5.items.0")}
                       </NavLink>
                     </li>
                     <li>
@@ -371,7 +376,7 @@ function MobileMegaMenu({ setIsShowMenu = () => {} }) {
                         to={commercialRoutes.howToConnectPocketWifi.path}
                         onClick={() => setIsShowMenu(false)}
                       >
-                        How to connect Pocketwifi?
+                        {t("navbar.megamenu.menuItems.5.items.1")}
                       </NavLink>
                     </li>
                   </ul>

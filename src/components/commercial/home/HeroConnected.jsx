@@ -4,11 +4,13 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import HeroChildSlides from "./HeroChildSlides";
 import ProductRouteCard from "./ProductRouteCard";
+import { useTranslation } from "react-i18next";
 
 function HeroConnected() {
   const { products } = useSelector((state) => state.shared);
   const navigate = useNavigate();
   const { setLoginRequiredDialogOpen } = useModal();
+  const { t } = useTranslation();
 
   const handleNavigate = (path) => {
     // if (auth?.token) {
@@ -23,18 +25,21 @@ function HeroConnected() {
     <div className="flex-full min-h-full flex items-end bg-black text-white pt-16 sm:pt-28 xl:pt-40 px-4 sm:px-10 md:px-16 overflow-hidden">
       <div className="w-full max-w-[1190px] mx-auto">
         <h1 className="text-3xl sm:text-5xl md:text-7xl xl:text-[7.5rem] leading-[115%] xl:!leading-[94px] font-sansPro uppercase font-extrabold text-center lg:text-left">
-          Stay Connected <br /> Anytime, Anywhere
+          {t("heroHome.heroConnected.stayConnected")} <br />{" "}
+          {t("heroHome.heroConnected.anyTimeAnyWhere")}
         </h1>
 
         <div className="mt-4 sm:mt-6 md:mt-7 ">
           <div className="flex flex-col gap-6 sm:gap-12 md:gap-14 w-full">
             <p className="text-sm sm:text-lg md:text-2xl text-black-200 text-center lg:text-left hidden sm:block">
-              Seamless Connectivity, Anytime, Anywhere
+              {t("heroHome.heroConnected.seamlessConnectivity")},{" "}
+              {t("heroHome.heroConnected.anyTimeAnyWhere")}
             </p>
             <div className="grid grid-cols-3 w-full max-w-[460px] mx-auto lg:mx-0 gap-2 sm:gap-3">
               {products?.map((item, index) => (
                 <ProductRouteCard
                   key={index}
+                  index={index}
                   item={item}
                   onClick={() => handleNavigate(item?.path)}
                 />

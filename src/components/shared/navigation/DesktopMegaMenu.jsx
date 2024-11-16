@@ -8,9 +8,12 @@ import {
   MapPickupIcon,
   TravelIcon,
 } from "@/services";
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 
 const DesktopMegaMenu = ({ isShow = false }) => {
+  const { t } = useTranslation();
+
   return (
     <div
       className={cn(
@@ -29,7 +32,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                 </div>
                 <div>
                   <span className="text-lg font-semibold leading-[140%]">
-                    Travel Data
+                    {t("navbar.megamenu.menuItems.0.title")}
                   </span>
                   <div className="text-sm flex flex-col gap-3 mt-3">
                     <NavLink
@@ -40,7 +43,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                       }
                       to={commercialRoutes.pocketWifiDetails.path}
                     >
-                      Pocket Wifi Details
+                      {t("navbar.megamenu.menuItems.0.items.0")}
                     </NavLink>
                     <NavLink
                       to={commercialRoutes.simHome.path}
@@ -50,7 +53,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                         }`
                       }
                     >
-                      Sim/eSim Details
+                      {t("navbar.megamenu.menuItems.0.items.1")}
                     </NavLink>
                   </div>
                 </div>
@@ -62,7 +65,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                 </div>
                 <div>
                   <span className="text-lg font-semibold leading-[140%]">
-                    Country Coverage
+                    {t("navbar.megamenu.menuItems.1.title")}
                   </span>
                   <div className="text-sm flex flex-col gap-3 mt-3">
                     <NavLink
@@ -73,7 +76,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                         }`
                       }
                     >
-                      Asia
+                      {t("navbar.megamenu.menuItems.1.items.0")}
                     </NavLink>
                     <NavLink
                       to={`${commercialRoutes.countryCoverage.path}?region=europe`}
@@ -83,7 +86,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                         }`
                       }
                     >
-                      Europe
+                      {t("navbar.megamenu.menuItems.1.items.1")}
                     </NavLink>
                     <NavLink
                       to={`${commercialRoutes.countryCoverage.path}?region=america`}
@@ -93,7 +96,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                         }`
                       }
                     >
-                      America
+                      {t("navbar.megamenu.menuItems.1.items.2")}
                     </NavLink>
                     <NavLink
                       to={`${commercialRoutes.countryCoverage.path}?region=australia`}
@@ -103,7 +106,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                         }`
                       }
                     >
-                      Australia
+                      {t("navbar.megamenu.menuItems.1.items.3")}
                     </NavLink>
                     <NavLink
                       to={`${commercialRoutes.countryCoverage.path}?region=africa`}
@@ -113,11 +116,12 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                         }`
                       }
                     >
-                      Africa
+                      {t("navbar.megamenu.menuItems.1.items.4")}
                     </NavLink>
                   </div>
                 </div>
               </div>
+
               {/* Pickup/Drop off Location */}
               <div className="flex items-start gap-3 flex-1 w-full">
                 <div className="w-8 aspect-square flex items-center justify-center bg-main-600 rounded shrink-0">
@@ -125,7 +129,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                 </div>
                 <div>
                   <span className="text-lg font-semibold leading-[140%]">
-                    Pickup/Drop off Location
+                    {t("navbar.megamenu.menuItems.2.title")}
                   </span>
                   <div className="text-sm flex flex-col gap-3 mt-3">
                     <NavLink
@@ -136,7 +140,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                         }`
                       }
                     >
-                      Pickup Location
+                      {t("navbar.megamenu.menuItems.2.items.0")}
                     </NavLink>
                     <NavLink
                       to={commercialRoutes.pickDropLocation.path}
@@ -146,11 +150,12 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                         }`
                       }
                     >
-                      Drop off Location
+                      {t("navbar.megamenu.menuItems.2.items.1")}
                     </NavLink>
                   </div>
                 </div>
               </div>
+
               {/* How It Works */}
               <div className="flex items-start gap-3 flex-1 w-full">
                 <div className="w-8 aspect-square flex items-center justify-center bg-main-600 rounded shrink-0">
@@ -158,7 +163,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                 </div>
                 <div>
                   <span className="text-lg font-semibold leading-[140%]">
-                    How It Works
+                    {t("navbar.megamenu.menuItems.3.title")}
                   </span>
                   <div className="text-sm flex flex-col gap-3 mt-3">
                     <NavLink
@@ -169,7 +174,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                         }`
                       }
                     >
-                      Rent Yoowifi Pocket WiFi
+                      {t("navbar.megamenu.menuItems.3.items.0")}
                     </NavLink>
                     <NavLink
                       to={`${commercialRoutes.howItWorks.path}/#self-return`}
@@ -179,7 +184,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                         }`
                       }
                     >
-                      Simple Self-Return In less then a minute
+                      {t("navbar.megamenu.menuItems.3.items.1")}
                     </NavLink>
                     <NavLink
                       to={`${commercialRoutes.howItWorks.path}/#topup`}
@@ -189,11 +194,12 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                         }`
                       }
                     >
-                      Create New Trip or Top-up data
+                      {t("navbar.megamenu.menuItems.3.items.2")}
                     </NavLink>
                   </div>
                 </div>
               </div>
+
               {/* Affiliate */}
               <div className="flex items-start gap-3 flex-1 w-full">
                 <div className="w-8 aspect-square flex items-center justify-center bg-main-600 rounded shrink-0">
@@ -201,7 +207,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                 </div>
                 <div>
                   <span className="text-lg font-semibold leading-[140%]">
-                    Affiliate
+                    {t("navbar.megamenu.menuItems.4.title")}
                   </span>
                   <div className="text-sm flex flex-col gap-3 mt-3">
                     <NavLink
@@ -212,7 +218,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                         }`
                       }
                     >
-                      Join the Yoowifi Affiliate Yoo Wander Program
+                      {t("navbar.megamenu.menuItems.4.items.0")}
                     </NavLink>
                     <NavLink
                       to={`${commercialRoutes.affiliate.path}/#lets-talk`}
@@ -222,7 +228,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                         }`
                       }
                     >
-                      Contact Us Now!
+                      {t("navbar.megamenu.menuItems.4.items.1")}
                     </NavLink>
                   </div>
                 </div>
@@ -234,7 +240,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                 </div>
                 <div>
                   <span className="text-lg font-semibold leading-[140%]">
-                    How To
+                    {t("navbar.megamenu.menuItems.5.title")}
                   </span>
                   <div className="text-sm flex flex-col gap-3 mt-3">
                     <NavLink
@@ -245,7 +251,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                         }`
                       }
                     >
-                      Set an eSIM
+                      {t("navbar.megamenu.menuItems.5.items.0")}
                     </NavLink>
                     <NavLink
                       to={commercialRoutes.howToConnectPocketWifi.path}
@@ -255,7 +261,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
                         }`
                       }
                     >
-                      How to connect Pocketwifi?
+                      {t("navbar.megamenu.menuItems.5.items.1")}
                     </NavLink>
                   </div>
                 </div>

@@ -124,7 +124,7 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
               name="text"
               value={text}
               onChange={(e) => setText(e.target.value)}
-              maxChars={maxChars}
+              maxLength={maxChars}
               className="resize-none"
             />
           </div>

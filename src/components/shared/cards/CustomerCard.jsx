@@ -1,13 +1,17 @@
 import { cn } from "@/lib/utils";
 import { InvertedQuotesIcon } from "@/services";
+import { useTranslation } from "react-i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const CustomerCard = ({
   item,
   hovered = false,
   containerClassName,
+  index,
   ...props
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div
       className={cn(
@@ -27,7 +31,7 @@ const CustomerCard = ({
       <p
         className={cn("text-sm md:text-2xl !leading-[1.4] mt-4 text-black-900")}
       >
-        {item?.description}
+        {t(`customerTestimonial.testimonials.${index}.description`)}
       </p>
 
       <hr className="h-[1px] w-full bg-[#d7d7d7] my-4 md:my-6" />
@@ -44,10 +48,10 @@ const CustomerCard = ({
         </div>
         <div className="">
           <p className="text-base md:text-xl font-medium tracking-[-0.5px]">
-            {item?.author}
+            {t(`customerTestimonial.testimonials.${index}.author`)}
           </p>
           <p className="text-xs md:text-base !leading-normal">
-            {item?.designation}
+            {t(`customerTestimonial.testimonials.${index}.designation`)}
           </p>
         </div>
       </div>
