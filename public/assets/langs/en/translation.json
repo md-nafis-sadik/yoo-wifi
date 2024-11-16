@@ -5,13 +5,98 @@
     "search": "Search",
     "seeDetails": "See Details",
     "aboutUs": "About Us",
-    "howItWorks": "How It Works"
+    "howItWorks": "How It Works",
+    "downloadApp": "Download APP"
   },
   "extraText": {
-    "from": "From"
+    "from": "From",
+    "selectCountry": "Select Country",
+    "corporate": "Corporate"
   },
   "notFound": {
     "noPackage": "No package found for your search"
+  },
+  "navbar": {
+    "forYoo": "For Yoo",
+    "commercial": [
+      {
+        "name": "Home"
+      },
+      {
+        "name": "Pocket WIFI"
+      },
+      {
+        "name": "Router"
+      },
+      {
+        "name": "SIM/eSIM"
+      },
+      {
+        "name": "Contact Us"
+      },
+      {
+        "name": "About Us"
+      }
+    ],
+    "corporate": [
+      {
+        "name": "Iot"
+      },
+      {
+        "name": "Hotel"
+      },
+      {
+        "name": "Travel Agency"
+      },
+      {
+        "name": "Maritime Internet"
+      },
+      {
+        "name": "Office/Roadshow Events"
+      },
+      {
+        "name": "About Us"
+      },
+      {
+        "name": "Commercial"
+      }
+    ],
+    "megamenu": {
+      "menuText": "Others",
+      "menuItems": [
+        {
+          "title": "Travel Data",
+          "items": ["Pocket Wifi Details", "Sim/eSim Details"]
+        },
+        {
+          "title": "Country Coverage",
+          "items": ["Asia", "Europe", "America", "Australia", "Africa"]
+        },
+        {
+          "title": "Pickup/Drop off Location",
+          "items": ["Pickup Location", "Drop off Location"]
+        },
+        {
+          "title": "How It Works",
+          "items": [
+            "Rent Yoowifi Pocket WiFi",
+            "Simple Self-Return In less then a minute",
+            "Create New Trip or Top-up data"
+          ]
+        },
+        {
+          "title": "Affiliate",
+          "items": [
+            "Join the Yoowifi Affiliate Yoo Wander Program",
+            "Contact Us Now!"
+          ]
+        },
+        {
+          "title": "How To",
+          "items": ["Set an eSIM", "How to connect Pocketwifi?"]
+        }
+      ]
+    }
   },
   "productsData": {
     "cardData": [

@@ -5,13 +5,104 @@
     "search": "検索",
     "seeDetails": "詳細を見る",
     "aboutUs": "私たちについて",
-    "howItWorks": "使い方"
+    "howItWorks": "使い方",
+    "downloadApp": "アプリをダウンロード"
   },
   "extraText": {
-    "from": "から"
+    "from": "から",
+    "selectCountry": "国を選択してください",
+    "corporate": "企業向け"
   },
   "notFound": {
     "noPackage": "検索に一致するパッケージが見つかりませんでした"
+  },
+  "navbar": {
+    "forYoo": "ユさんのために",
+    "commercial": [
+      {
+        "name": "ホーム"
+      },
+      {
+        "name": "ポケットWiFi"
+      },
+      {
+        "name": "ルーター"
+      },
+      {
+        "name": "SIM/eSIM"
+      },
+      {
+        "name": "お問い合わせ"
+      },
+      {
+        "name": "私たちについて"
+      }
+    ],
+    "corporate": [
+      {
+        "name": "Iot"
+      },
+      {
+        "name": "ホテル"
+      },
+      {
+        "name": "旅行代理店"
+      },
+      {
+        "name": "海上インターネット"
+      },
+      {
+        "name": "オフィス/ロードショーイベント"
+      },
+      {
+        "name": "会社概要"
+      },
+      {
+        "name": "商業"
+      }
+    ],
+    "megamenu": {
+      "menuText": "その他",
+      "menuItems": [
+        {
+          "title": "トラベルデータ",
+          "items": ["ポケットWiFi詳細", "SIM/eSIM詳細"]
+        },
+        {
+          "title": "国別カバレッジ",
+          "items": [
+            "アジア",
+            "ヨーロッパ",
+            "アメリカ",
+            "オーストラリア",
+            "アフリカ"
+          ]
+        },
+        {
+          "title": "受け取り/返却場所",
+          "items": ["受け取り場所", "返却場所"]
+        },
+        {
+          "title": "ご利用方法",
+          "items": [
+            "YoowifiポケットWiFiをレンタル",
+            "1分以内に簡単返却",
+            "新しい旅行を作成またはデータを追加"
+          ]
+        },
+        {
+          "title": "アフィリエイト",
+          "items": [
+            "YoowifiアフィリエイトYoo Wanderプログラムに参加",
+            "今すぐお問い合わせ！"
+          ]
+        },
+        {
+          "title": "使い方",
+          "items": ["eSIMを設定する", "ポケットWiFiに接続する方法？"]
+        }
+      ]
+    }
   },
   "productsData": {
     "cardData": [
@@ -32,7 +123,6 @@
       }
     ]
   },
-
   "internetPackages": {
     "sectionHeading": "インターネットパッケージ",
     "sectionSubHeading": "あなたのニーズに合わせたインターネットパッケージを見つけましょう",

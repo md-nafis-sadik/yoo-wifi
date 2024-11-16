@@ -19,6 +19,7 @@ import { CountrySelect } from "react-country-state-city";
 import { Link, useNavigate } from "react-router-dom";
 import DesktopMegaMenu from "./DesktopMegaMenu";
 import MobileMegaMenu from "./MobileMegaMenu";
+import { useTranslation } from "react-i18next";
 
 const NavBarSecondary = () => {
   const { isScrolled, isRedBorder, isHome, isBlack, isBannerRoutes } =
@@ -32,6 +33,7 @@ const NavBarSecondary = () => {
     setAppDownloadDialogOpen,
   } = useModal();
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const handleCountryChange = (country) => {
     navigate(
       `country-coverage/filter?region=${country?.region?.toLowerCase()}&country=${country?.name?.toLowerCase()}`
@@ -191,7 +193,7 @@ const NavBarSecondary = () => {
                       onClick={() => setIsShowMenu(false)}
                       to={item.path}
                     >
-                      {item.name}
+                      {t(`navbar.commercial.${index}.name`)}
                     </Link>
                   </li>
                 ))}
@@ -205,7 +207,7 @@ const NavBarSecondary = () => {
                     className="flex items-center justify-between xl:justify-start cursor-pointer w-full max-w-[320px] p-3 rounded-lg xl:rounded-none hover:bg-main-600 xl:w-auto xl:max-w-none xl:p-0 xl:hover:text-inherit xl:hover:bg-transparent hover:text-white"
                     onClick={() => setShowMegaMenu(!showMegaMenu)}
                   >
-                    <span>Others</span>
+                    <span>{t("navbar.megamenu.menuText")}</span>
                     <ArrowDownIcon
                       className={cn(
                         showMegaMenu ? "-rotate-180" : "-rotate-0",
@@ -227,7 +229,7 @@ const NavBarSecondary = () => {
                 )}
                 to={corporateRoutes.home.path}
               >
-                Corporate
+                {t("extraText.corporate")}
               </Link>
               <div className="flex flex-col xl:flex-row xl:items-center gap-3 w-full xl:w-auto flex-1 xl:flex-none justify-end xl:justify-center mt-6 xl:mt-0">
                 <div className="w-full relative hidden xl:block">
@@ -238,7 +240,7 @@ const NavBarSecondary = () => {
                       "country-search bg-transparent nav-white"
                     )}
                     inputClassName="!border-none !outline-none bg-transparent"
-                    placeHolder="Select Country"
+                    placeHolder={t("extraText.selectCountry")}
                   />
                   <SearchIcon
                     className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
@@ -269,7 +271,7 @@ const NavBarSecondary = () => {
                   onClick={() => handleModalOpen("download", true)}
                 >
                   <CellphoneIcon color="#fff" className="w-5 h-5 shrink-0" />
-                  <span>Download APP</span>
+                  <span>{t("buttonText.downloadApp")}</span>
                 </Button>
                 <Button
                   className={

@@ -19,6 +19,7 @@ import { CountrySelect } from "react-country-state-city";
 import { Link, useNavigate } from "react-router-dom";
 import DesktopMegaMenu from "./DesktopMegaMenu";
 import MobileMegaMenu from "./MobileMegaMenu";
+import { useTranslation } from "react-i18next";
 
 function NavBar() {
   const { isScrolled, isWhite, isRedBorder, isHome, isBlack, isBannerRoutes } =
@@ -32,6 +33,7 @@ function NavBar() {
     setAppDownloadDialogOpen,
   } = useModal();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const commercialMenuItems = [
     {
@@ -133,7 +135,7 @@ function NavBar() {
                     isWhite ? "whiteText" : ""
                   )}
                   inputClassName="!border-none !outline-none bg-transparent"
-                  placeHolder="Select Country"
+                  placeHolder={t("extraText.searchCountry")}
                 />
                 <SearchIcon
                   className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
@@ -183,7 +185,7 @@ function NavBar() {
               )}
             </div>
             <button
-              type="butotn"
+              type="button"
               className="outline-none border-none xl:hidden"
               onClick={() => setIsShowMenu(true)}
             >
@@ -224,7 +226,7 @@ function NavBar() {
                       onClick={() => setIsShowMenu(false)}
                       to={item.path}
                     >
-                      {item.name}
+                      {t(`navbar.commercial.${index}.name`)}
                     </Link>
                   </li>
                 ))}
@@ -236,7 +238,7 @@ function NavBar() {
                   onMouseLeave={() => setShowMegaMenu(false)}
                 >
                   <div className="flex items-center justify-between xl:justify-start cursor-pointer w-full max-w-[320px] p-3 rounded-lg xl:rounded-none hover:bg-main-600 xl:w-auto xl:max-w-none xl:p-0 xl:hover:text-inherit xl:hover:bg-transparent hover:text-white">
-                    <span>Others</span>
+                    <span>{t("navbar.megamenu.menuText")}</span>
                     <ArrowDownIcon
                       className={cn(
                         showMegaMenu ? "-rotate-180" : "-rotate-0",
@@ -266,7 +268,7 @@ function NavBar() {
                 )}
                 to={corporateRoutes.home.path}
               >
-                Corporate
+                {t("extraText.corporate")}
               </Link>
               <div className="flex flex-col xl:flex-row xl:items-center gap-3 w-full xl:w-auto flex-1 xl:flex-none justify-end xl:justify-center mt-6 xl:mt-0">
                 <div className="w-full relative hidden xl:block">
@@ -283,7 +285,7 @@ function NavBar() {
                       isWhite ? "whiteText" : ""
                     )}
                     inputClassName="!border-none !outline-none bg-transparent"
-                    placeHolder="Select Country"
+                    placeHolder={t("extraText.selectCountry")}
                   />
                   <SearchIcon
                     className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
@@ -330,7 +332,7 @@ function NavBar() {
                     }
                     className="w-5 h-5 shrink-0"
                   />
-                  <span>Download APP</span>
+                  <span>{t("buttonText.downloadApp")}</span>
                 </Button>
                 <Button
                   className={

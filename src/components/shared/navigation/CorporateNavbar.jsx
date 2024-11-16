@@ -15,6 +15,7 @@ import {
 import { MenuIcon } from "lucide-react";
 import { useState } from "react";
 import { CountrySelect } from "react-country-state-city";
+import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 
 export const corporateMenuItems = [
@@ -65,6 +66,7 @@ function CorporateNavbar() {
     setLoginRequiredDialogOpen,
     setAppDownloadDialogOpen,
   } = useModal();
+  const { t } = useTranslation();
 
   const navigate = useNavigate();
   const handleCountryChange = (country) => {
@@ -197,7 +199,7 @@ function CorporateNavbar() {
                       to={item.path}
                       onClick={() => setIsShowMenu(false)}
                     >
-                      {item.name}
+                      {t(`navbar.corporate.${index}.name`)}
                     </Link>
                   </li>
                 ))}
@@ -208,7 +210,7 @@ function CorporateNavbar() {
                 )}
                 to={commercialRoutes.home.path}
               >
-                For Yoo
+                {t("navbar.forYoo")}
               </Link>
               <div className="flex flex-col xl:flex-row xl:items-center gap-3 w-full xl:w-auto flex-1 xl:flex-none justify-end xl:justify-center mt-6 xl:mt-0">
                 <div className="w-full relative hidden xl:block">
@@ -219,7 +221,7 @@ function CorporateNavbar() {
                       "country-search bg-transparent nav-white"
                     )}
                     inputClassName="!border-none !outline-none bg-transparent"
-                    placeHolder="Select Country"
+                    placeHolder={t("extraText.selectCountry")}
                   />
                   <SearchIcon
                     className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
@@ -250,7 +252,7 @@ function CorporateNavbar() {
                   onClick={() => handleModalOpen("download", true)}
                 >
                   <CellphoneIcon color="#fff" className="w-5 h-5 shrink-0" />
-                  <span>Download APP</span>
+                  <span>{t("buttonText.downloadApp")}</span>
                 </Button>
                 <Button
                   className={
