@@ -9,8 +9,6 @@ function FeatureCard({
   className = "",
   ...props
 }) {
-  const { t } = useTranslation();
-
   return (
     <div
       className={cn(
@@ -31,7 +29,7 @@ function FeatureCard({
         )}
       </div>
       <h3 className="text-black-900 text-base sm:text-lg font-semibold text-center sm:whitespace-pre-wrap">
-        {t(`pocketWifi.features.featureList.${index}`)}
+        {title}
       </h3>
     </div>
   );

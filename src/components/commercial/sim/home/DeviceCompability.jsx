@@ -6,16 +6,19 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { ArrowDownIcon } from "@/services";
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 
 function DeviceCompability() {
   const { deviceCompatibilities } = useSelector((state) => state.sim);
+  const { t } = useTranslation();
+
   return (
     <section className="sec_common_60">
       <div className="containerX">
         <SectionHeader
-          heading="Check Device Compatibility"
-          subHeading="If you are using eSIM for the first time, you may need to check if your device supports eSlM. And we would like to help you With just that. Select your device brand and see if your models are listed. You can confirm further by checking the Settings page of your device."
+          heading={t("sim.deviceCompatibilities.heading")}
+          subHeading={t("sim.deviceCompatibilities.subHeading")}
           containerClassName="gap-4"
         />
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6 mt-6 sm:mt-10 md:mt-15">
@@ -26,7 +29,11 @@ function DeviceCompability() {
                   variant="black"
                   className="w-full justify-between text-lg sm:text-xl md:text-2xl font-semibold md:font-bold leading-[140%]"
                 >
-                  <span>{item?.title}</span>
+                  <span>
+                    {t(
+                      `sim.deviceCompatibilities.compatibilities.${index}.title`
+                    )}
+                  </span>
                   <ArrowDownIcon className="shrink-0 !w-6 !h-6" />
                 </Button>
               </PopoverTrigger>
@@ -36,11 +43,17 @@ function DeviceCompability() {
                     {item?.devices?.map((device, dIndx) => (
                       <div key={dIndx} className="flex flex-col gap-3">
                         <h4 className="text-base font-semibold">
-                          {device?.name}
+                          {t(
+                            `sim.deviceCompatibilities.compatibilities.${index}.devices.${dIndx}.name`
+                          )}
                         </h4>
                         <ul className="list-disc pl-5 text-base">
                           {device?.versions?.map((version, vIndx) => (
-                            <li key={vIndx}>{version}</li>
+                            <li key={vIndx}>
+                              {t(
+                                `sim.deviceCompatibilities.compatibilities.${index}.devices.${dIndx}.versions.${vIndx}`
+                              )}
+                            </li>
                           ))}
                         </ul>
                       </div>
@@ -48,7 +61,9 @@ function DeviceCompability() {
                     {item?.note && (
                       <p className="text-sm">
                         <span className="font-semibold">Note:</span>
-                        {item?.note}
+                        {t(
+                          `sim.deviceCompatibilities.compatibilities.${index}.note`
+                        )}
                       </p>
                     )}
                   </div>

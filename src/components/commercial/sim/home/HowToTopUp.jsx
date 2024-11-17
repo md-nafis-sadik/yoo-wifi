@@ -1,35 +1,38 @@
 import InfoCard from "@/components/shared/cards/InfoCard";
 import SectionHeader from "@/components/shared/others/SectionHeader";
+import { useTranslation } from "react-i18next";
 
 function HowToTopUp() {
+  const { t } = useTranslation();
+
   return (
     <section className="sec_common_60">
       <div className="containerX">
         <SectionHeader
-          heading="How to Top up SIM/eSIM"
-          subHeading="3 Simple Steps to Top Up Your SIM/eSIM"
+          heading={t("sim.howToTopUp.heading")}
+          subHeading={t("sim.howToTopUp.subHeading")}
           containerClassName="gap-4"
         />
         <div className="w-full flex flex-col gap-6 mt-15">
           <InfoCard
-            title="Open the Yoowifi App"
-            description="In the Yoowifi app, navigate to My Data and select the SIM or eSIM you want to top up."
+            title={t("sim.howToTopUp.steps.0.title")}
+            description={t("sim.howToTopUp.steps.0.description")}
           >
             <span className="text-5xl sm:text-6xl md:text-6xml font-bold text-main-600">
               1
             </span>
           </InfoCard>
           <InfoCard
-            title="Add Data"
-            description="Tap on Add Data, then choose your destination country, plan, data size, and select number of days."
+            title={t("sim.howToTopUp.steps.1.title")}
+            description={t("sim.howToTopUp.steps.1.description")}
           >
             <span className="text-5xl sm:text-6xl md:text-6xml font-bold text-main-600">
               2
             </span>
           </InfoCard>
           <InfoCard
-            title="Proceed to Checkout"
-            description="Confirm your selections and proceed to checkout."
+            title={t("sim.howToTopUp.steps.2.title")}
+            description={t("sim.howToTopUp.steps.2.description")}
           >
             <span className="text-5xl sm:text-6xl md:text-6xml font-bold text-main-600">
               3

@@ -1,6 +1,9 @@
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
-function ActiveSimCard({ item = {}, wrapperClass = "" }) {
+function ActiveSimCard({ item = {}, activeIndex, index, wrapperClass = "" }) {
+  const { t } = useTranslation();
+
   return (
     <div
       className={cn(
@@ -17,15 +20,21 @@ function ActiveSimCard({ item = {}, wrapperClass = "" }) {
       </div>
       <div className="w-full md:max-w-[520px]">
         <h3 className="uppercase text-sm sm:text-lg md:text-2xl font-light text-main-600">
-          {item?.title}
+          {t(
+            `sim.activateSteps.steps.${activeIndex}.deviceSteps.${index}.title`
+          )}
         </h3>
         <h4 className="text-lg sm:text-2xl lg:text-4xl font-bold text-black-900 mt-2 mb-4 leading-[140%]">
-          {item?.description}
+          {t(
+            `sim.activateSteps.steps.${activeIndex}.deviceSteps.${index}.description`
+          )}
         </h4>
         <ul className="list-decimal text-sm sm:text-base md:text-lg text-black-700 pl-3 sm:pl-4 leading-[140%]">
-          {item?.steps?.map((step, index) => (
-            <li className="" key={index}>
-              {step}
+          {item?.steps?.map((step, stepIndex) => (
+            <li className="" key={stepIndex}>
+              {t(
+                `sim.activateSteps.steps.${activeIndex}.deviceSteps.${index}.steps.${stepIndex}`
+              )}
             </li>
           ))}
         </ul>

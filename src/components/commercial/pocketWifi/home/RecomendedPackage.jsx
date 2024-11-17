@@ -30,8 +30,8 @@ function RecomendedPackage() {
     <section className="sec_common_60">
       <div className="containerX">
         <SectionHeader
-          heading={t("pocketWifi.recommendedPackages.heading")}
-          subHeading={t("pocketWifi.recommendedPackages.subHeading")}
+          heading={t("recommendedPackages.heading")}
+          subHeading={t("recommendedPackages.subHeading")}
           containerClassName="gap-4"
         />
         <div className="grid md:grid-cols-2 gap-3 sm:gap-4 md:gap-5 mt-6 sm:mt-8 md:mt-15 text-8xl">

@@ -3,6 +3,7 @@ import SectionHeader from "@/components/shared/others/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { RefreshIcon } from "@/services";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 
 function RecomendedPackage() {
@@ -12,6 +13,7 @@ function RecomendedPackage() {
   const [packages, setPackages] = useState(
     recomandedPackages?.slice(0, currentIndex) || []
   );
+  const { t } = useTranslation();
 
   const handleLoadMore = () => {
     if (currentIndex < recomandedPackages?.length) {
@@ -28,13 +30,13 @@ function RecomendedPackage() {
     <section className="sec_common_60">
       <div className="containerX">
         <SectionHeader
-          heading="Recommended Package"
-          subHeading="Discover Our Recommended Packages for Your Needs"
+          heading={t("recommendedPackages.heading")}
+          subHeading={t("recommendedPackages.subHeading")}
           containerClassName="gap-4"
         />
         <div className="grid md:grid-cols-2 gap-3 sm:gap-4 md:gap-5 mt-6 sm:mt-8 md:mt-15 text-8xl">
           {packages?.map((item, index) => (
-            <PackageCard key={index} item={item} />
+            <PackageCard key={index} index={index} item={item} />
           ))}
         </div>
         <div className="mt-8 flex justify-center">
@@ -44,7 +46,7 @@ function RecomendedPackage() {
             variant="alert"
             type="button"
           >
-            <span>Load More</span>
+            <span>{t("buttonText.loadMore")}</span>
             <RefreshIcon className={isLoadMore ? "animate-spin" : ""} />
           </Button>
         </div>

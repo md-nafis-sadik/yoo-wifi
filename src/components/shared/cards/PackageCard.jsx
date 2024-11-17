@@ -21,7 +21,7 @@ function PackageCard({ item = {}, index, wrapperClass = "", ...props }) {
       <div className="w-full flex items-end gap-2">
         <div className="w-full">
           <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black-700">
-            {t(`pocketWifi.recommendedPackages.packageList.${index}.title`)}
+            {t(`recommendedPackages.packageList.${index}.title`)}
           </h3>
           {item?.features?.map((_, featureIndex) => (
             <p
@@ -29,7 +29,7 @@ function PackageCard({ item = {}, index, wrapperClass = "", ...props }) {
               className="text-sm sm:text-base text-black-700"
             >
               {t(
-                `pocketWifi.recommendedPackages.packageList.${index}.features.${featureIndex}`
+                `recommendedPackages.packageList.${index}.features.${featureIndex}`
               )}
             </p>
           ))}

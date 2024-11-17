@@ -1,7 +1,10 @@
 import FeatureCard from "@/components/shared/cards/FeatureCard";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
 const KeyFeatures = ({ data = [], wrapperClass = "" }) => {
+  const { t } = useTranslation();
+
   return (
     <section className="sec_common_60 px-4">
       <div className="container3X sec_common_80 bg-transparent rounded-3xl lg:px-12 xl:px-15">
@@ -14,7 +17,7 @@ const KeyFeatures = ({ data = [], wrapperClass = "" }) => {
           {data?.map((item, index) => (
             <FeatureCard
               svg={item?.icon()}
-              title={item?.title}
+              title={t(`aboutUs.features.${index}`)}
               key={index}
               className="border border-main-600"
             />

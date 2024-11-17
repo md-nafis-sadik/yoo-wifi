@@ -4,6 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { handleNumericInput } from "@/services";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const LetsTalk = ({ data = [], socialLinks = [] }) => {
@@ -13,6 +14,8 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
   const [subject, setSubject] = useState("");
   const [text, setText] = useState("");
   const maxChars = 250;
+
+  const { t } = useTranslation();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,10 +32,9 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
       <div className="sec_common_80 xl:px-0 flex flex-col lg:flex-row gap-4 md:gap-8 lg:gap-[60px]">
         {/* LEFT PORTION */}
         <div className="w-full lg:w-1/2 flex flex-col gap-4 md:gap-6 lg:gap-12">
-          <h2 className="title text-start">Let's Talk</h2>
+          <h2 className="title text-start">{t("contact.letsTalk.heading")}</h2>
           <p className="p_common text-black-700">
-            If you have any questions or concerns, just fill out the form, and
-            we'll get back to you shortly!
+            {t("contact.letsTalk.subHeading")}
           </p>
 
           {data?.map((item, index) => (
@@ -51,7 +53,7 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
 
               <div className="flex flex-col gap-1">
                 <p className="p_common text-black-600 uppercase">
-                  {item?.text}
+                  {t(`contact.letsTalk.social.${index}.text`)}
                 </p>
                 <a
                   href={
@@ -83,16 +85,16 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
         <form className="w-full lg:w-1/2" onSubmit={handleSubmit}>
           <div className="w-full grid grid-cols-2 h-fit gap-x-[28px] gap-y-6">
             <Input
-              label="Name"
-              placeholder="Enter your name"
+              label={t(`contact.letsTalk.form.fields.0.label`)}
+              placeholder={t(`contact.letsTalk.form.fields.0.placeholder`)}
               name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               wrapperClass={"col-span-2 md:col-span-1"}
             />
             <Input
-              label="Phone Number"
-              placeholder="Enter phone number"
+              label={t(`contact.letsTalk.form.fields.1.label`)}
+              placeholder={t(`contact.letsTalk.form.fields.1.placeholder`)}
               name="phone"
               wrapperClass={"col-span-2 md:col-span-1"}
               className="no-spinner"
@@ -102,24 +104,24 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
               onPaste={handleNumericInput}
             />
             <Input
-              label="Email Address"
-              placeholder="Enter email address"
+              label={t(`contact.letsTalk.form.fields.2.label`)}
+              placeholder={t(`contact.letsTalk.form.fields.2.placeholder`)}
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               wrapperClass={"col-span-2"}
             />
             <Input
-              label="Subject"
-              placeholder="Write a subject"
+              label={t(`contact.letsTalk.form.fields.3.label`)}
+              placeholder={t(`contact.letsTalk.form.fields.3.placeholder`)}
               name="subject"
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               wrapperClass={"col-span-2"}
             />
             <Textarea
-              label="Message"
-              placeholder="Tell us about your queries.."
+              label={t(`contact.letsTalk.form.fields.4.label`)}
+              placeholder={t(`contact.letsTalk.form.fields.4.placeholder`)}
               wrapperClass={"col-span-2"}
               name="text"
               value={text}
@@ -130,7 +132,7 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
           </div>
 
           <Button type="submit" size={"lg"} className="mt-6">
-            Submit
+            {t("buttonText.submit")}
           </Button>
         </form>
       </div>

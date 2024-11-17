@@ -1,9 +1,12 @@
+import { useTranslation } from "react-i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const CompanyMission = ({ data = {} }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="container2X sec_common_60 xl:px-0">
-      <h2 className="title text-center">{data.title}</h2>
+      <h2 className="title text-center">{t("aboutUs.companyMission.title")}</h2>
 
       <div className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-10 mt-4 md:mt-6 lg:mt-12">
         <div className="w-full md:w-1/2 flex_center">
@@ -20,11 +23,11 @@ const CompanyMission = ({ data = {} }) => {
             {data.mission.year}
           </p> */}
           <p className="text-lg md:text-4xl font-semibold md:font-bold !leading-[1.4] mt-1 md:mt-6">
-            {data.mission.title}
+            {t("aboutUs.companyMission.mission.title")}
           </p>
           <hr className="w-full h-[1px] bg-neutral-200 my-3 md:my-4" />
           <p className="mt-4 md:mt-6 p_common whitespace-pre-wrap">
-            {data.mission.description}
+            {t("aboutUs.companyMission.mission.description")}
           </p>
         </div>
       </div>
