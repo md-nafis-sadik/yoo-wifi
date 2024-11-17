@@ -46,7 +46,7 @@ function RecomendedPackage() {
             variant="alert"
             type="button"
           >
-            <span>Load More</span>
+            <span>{t("buttonText.loadMore")}</span>
             <RefreshIcon className={isLoadMore ? "animate-spin" : ""} />
           </Button>
         </div>

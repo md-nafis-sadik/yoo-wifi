@@ -1,17 +1,20 @@
 import ActiveSimCard from "@/components/shared/cards/ActiveSimCard";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 
 function StepToActiveSim() {
   const [activeIndex, setActiveIndex] = useState(0);
   const { activateSteps } = useSelector((state) => state.sim);
+  const { t } = useTranslation();
+
   return (
     <section className="sec_common_60 bg-neutral-50">
       <div className="containerX">
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <h2 className="text-center sm:text-left text-2xml sm:text-3xl md:text-5xl font-bold text-black-900 flex-1 leading-[110%]">
-            Easy Steps to Activate Your eSIM
+            {t("sim.activateSteps.heading")}
           </h2>
           <div className="flex items-center gap-2">
             {[
@@ -36,6 +39,8 @@ function StepToActiveSim() {
               wrapperClass={
                 index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
               }
+              activeIndex={activeIndex}
+              index={index}
               item={item}
               key={index}
             />
