@@ -1,12 +1,15 @@
+import { useTranslation } from "react-i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const WhoWeAre = ({ data = {} }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="container2X sec_common_60 xl:px-0 flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-10">
       <div className="w-full lg:w-1/2">
-        <h2 className="title text-start">{data.title}</h2>
+        <h2 className="title text-start">{t("aboutUs.whoWeAre.title")}</h2>
         <p className="mt-4 md:mt-6 p_common whitespace-pre-wrap">
-          {data.description}
+          {t("aboutUs.whoWeAre.description")}
         </p>
       </div>
       <div className="w-full lg:w-1/2 flex_center">

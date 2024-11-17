@@ -1,13 +1,15 @@
 import { cn } from "@/lib/utils";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const AwardsAndAchievements = ({ data = {} }) => {
   const [selectedAward, setSelectedAward] = useState(0);
+  const { t } = useTranslation();
 
   return (
     <div className="containerX sec_common_60 xl:px-0 ">
-      <h2 className="title">Our Awards & Achievements</h2>
+      <h2 className="title">{t("aboutUs.awardsAndAchievements.header")}</h2>
 
       <div className="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-10 mt-4 md:mt-6 lg:mt-12">
         <div className="w-full lg:w-2/5 flex flex-col">
@@ -26,11 +28,13 @@ const AwardsAndAchievements = ({ data = {} }) => {
                   "text-lg md:text-2xl font-semibold md:font-bold text-start"
                 )}
               >
-                {item?.title}
+                {t(`aboutUs.awardsAndAchievements.details.${index}.title`)}
               </h2>
               {selectedAward === index && (
                 <p className="mt-4 md:mt-6 p_common whitespace-pre-wrap transition_common">
-                  {item?.description}
+                  {t(
+                    `aboutUs.awardsAndAchievements.details.${index}.description`
+                  )}
                 </p>
               )}
             </div>
