@@ -11,13 +11,17 @@
     "submit": "Submit",
     "getInTouch": "Get In Touch",
     "exploreProducts": "Explore Products",
-    "contactUs": "Contact Us"
+    "contactUs": "Contact Us",
+    "enquireNow": "Enquire Now",
+    "viewMore": "View More"
   },
   "extraText": {
     "from": "From",
     "selectCountry": "Select Country",
     "corporate": "Corporate",
-    "more": "more"
+    "more": "more",
+    "unlimitedData": "Unlimited Data",
+    "day": "day"
   },
   "notFound": {
     "noPackage": "No package found for your search"
@@ -122,6 +126,7 @@
     }
   },
   "productsData": {
+    "title": "Our Products",
     "cardData": [
       {
         "title": "Pocket WIFI",
@@ -1567,5 +1572,78 @@
   "corporateHero": {
     "heading": "Corporate",
     "subHeading": "UR Communications Pte Ltd, operating under the renowned brand name Yoowifi, introduces an advanced solution for effortless global connectivity via its intuitive mobile application. With a commitment to enriching travel journeys and fostering global communication, Yoowifi App delivers unmatched convenience, dependability, and cost-effectiveness."
+  },
+  "iot": {
+    "pageTitle": "IOT",
+    "description": "Stay connected to your home, your family, and your business at all times through a single device! They are also designed to meet your unique needs, whether you are an individual or a business.",
+    "featureList": [
+      "Size of Data",
+      "Operator-specific",
+      "Managing platform and Monitoring",
+      "Single or Multiple Countries"
+    ]
+  },
+  "hotel": {
+    "pageTitle": "HOTEL",
+    "description": "Turn your hotel into a home away from home with our top-speed internet connectivity! Your guests can remain productive no matter where they are, and your business can stand out from the competition.",
+    "featureList": [
+      "Stay connected when operation is disrupted",
+      "Fast deployment",
+      "Customized solution to keep your team globally connected"
+    ]
+  },
+  "travelAgency": {
+    "pageTitle": "TRAVEL AGENCY",
+    "description": "Draw up information for your clients at the speed of lightning through our WiFi solutions. Communicate effectively with partners and avoid the frustration of a weak connection or an unreliable signal strength.",
+    "featureList": [
+      "Size of Data",
+      "Operator-specific",
+      "Managing platform and Monitoring",
+      "Single or Multiple Countries"
+    ]
+  },
+  "maritimeInternet": {
+    "pageTitle": "MARITIME INTERNET",
+    "description": "Let us navigate your internet needs on the high seas. We can keep your crew connected and business afloat with our solutions. Therefore, no matter where the vessel roams, you can enjoy broadband without borders.",
+    "featureList": [
+      "Single or Multiple Countries",
+      "Fast deployment",
+      "Customized solution to keep your team globally connected"
+    ]
+  },
+  "office": {
+    "pageTitle": "OFFICE/ ROADSHOW EVENTS",
+    "description": "Wherever you go, stay connected with our WiFi solutions! Be it in the office or hosting a roadshow, enjoy seamless and lightning-quick access to the internet. Don’t let anything disrupt your workday with us at Yoowifi!",
+    "featureList": [
+      "Fast and reliable connectivity",
+      "Dedicated support",
+      "Reasonable cost or Sponsorship"
+    ]
+  },
+  "corporateSharedHero": {
+    "heading": "Travel Connected",
+    "items": ["Portable Hotspot", "eSim", "SIM card"]
+  },
+  "commercial": {
+    "pageTitle": "Commercial",
+    "description": "Take your productivity to the next level with our seamless connectivity! We provide a gateway to the digital world that will make your day as smooth as possible."
+  },
+  "benefits": {
+    "heading": "Benefits",
+    "subHeading": "Don’t let slow internet tie you down! Switch to our portable solutions to experience connectivity without boundaries.",
+    "benefitsData": [
+      {
+        "title": "Dedicated Application",
+        "content": "Take charge of your connectivity needs with our online management portal, empowering you with control for a smooth and effortless experience."
+      },
+      {
+        "title": "Cost Efficient",
+        "content": "Experience affordable and hassle-free connectivity with Yoowifi's vSIM technology, eliminating costly roaming charges for budget-friendly data services."
+      },
+      {
+        "title": "Customisable Data Plans",
+        "content": "Tailor your data package to meet your specific needs and scale as your business grows."
+      }
+    ]
   }
 }

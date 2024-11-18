@@ -14,9 +14,18 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import HttpApi from "i18next-http-backend";
 
+const localPath =
+  window.location.pathname.includes("/product") ||
+  window.location.pathname.includes("/corporate") ||
+  window.location.pathname.includes("/contact") ||
+  window.location.pathname.includes("/about-us");
+
 const getCurrentLoadPath = (language) => {
-  console.log("from main", language);
-  return `./assets/langs/${language}/translation.json`;
+  if (localPath) {
+    return `../assets/langs/${language}/translation.json`;
+  } else {
+    return `./assets/langs/${language}/translation.json`;
+  }
 };
 
 i18n
