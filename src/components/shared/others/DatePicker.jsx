@@ -8,6 +8,7 @@ import {
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 function DatePicker({
   wrapper = "",
@@ -16,6 +17,8 @@ function DatePicker({
   date,
   setDate,
 }) {
+  const { t } = useTranslation();
+
   return (
     <div className={cn("w-full flex items-center gap-2", wrapper)}>
       {label && (
@@ -34,7 +37,7 @@ function DatePicker({
           >
             <CalendarIcon />
             <span className="flex-1">
-              {date ? format(date, "PPP") : "Pick a date"}
+              {date ? format(date, "PPP") : t("form.pickADate")}
             </span>
           </Button>
         </PopoverTrigger>

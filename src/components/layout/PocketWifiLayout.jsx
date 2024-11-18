@@ -11,11 +11,13 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 import AppDownloadDialog from "../shared/navigation/AppDownloadDialog";
+import { useTranslation } from "react-i18next";
 
 function PocketWifiLayout() {
   useSetLocalData("pocketWifi");
   const { product } = useSelector((state) => state.pocketWifi);
   const { authModal, loginModal, appDownloadModal } = useModal();
+  const { t } = useTranslation();
 
   return (
     <main>
@@ -33,8 +35,12 @@ function PocketWifiLayout() {
                 >
                   {product.tabs.map((tab, index) => (
                     <AccordionItem value={`item-${index + 1}`} key={index}>
-                      <AccordionTrigger>{tab.title}</AccordionTrigger>
-                      <AccordionContent>{tab.content}</AccordionContent>
+                      <AccordionTrigger>
+                        {t(`pocketWifi.product.tabs.${index}.title`)}
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        {t(`pocketWifi.product.tabs.${index}.content`)}
+                      </AccordionContent>
                     </AccordionItem>
                   ))}
                 </Accordion>

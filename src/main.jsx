@@ -20,7 +20,8 @@ const localPath =
   window.location.pathname.includes("/contact") ||
   window.location.pathname.includes("/about-us") ||
   window.location.pathname.includes("/pocket-wifi-details") ||
-  window.location.pathname.includes("/package");
+  window.location.pathname.includes("/package") ||
+  window.location.pathname.includes("/pocket-wifi");
 
 const getCurrentLoadPath = (language) => {
   if (localPath) {

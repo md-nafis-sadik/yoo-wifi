@@ -15,7 +15,12 @@
     "enquireNow": "Enquire Now",
     "viewMore": "View More",
     "viewSimESim": "View SIM/eSIM",
-    "rentADeviceNow": "Rent a Device Now"
+    "rentADeviceNow": "Rent a Device Now",
+    "rental": "Rental",
+    "topUp": "Top Up",
+    "previous": "Previous",
+    "next": "Next",
+    "addACountry": "Add a country"
   },
   "extraText": {
     "from": "From",
@@ -24,7 +29,30 @@
     "more": "more",
     "unlimitedData": "Unlimited Data",
     "day": "day",
-    "endingIn": "Ending in"
+    "endingIn": "Ending in",
+    "countryCoverage": "Country Coverage",
+    "country": "Country",
+    "selectPackage": "*Select a package first",
+    "information": "Information",
+    "service": "Service",
+    "dataSize": "Data Size",
+    "selectDevice": "Select Device",
+    "selectDeviceToTopUp": "Select Device to Top Up",
+    "wifiDevices": "Wifi Devices",
+
+    "planSummary": "Plan Summary",
+    "chosenPlan": "Chosen Plan",
+    "dataAvailable": "Data Available",
+    "startDate": "Start Date",
+    "quantity": "Quantity",
+    "totalAmount": "Total Amount"
+  },
+  "form": {
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "pickADate": "Pick a Date",
+    "selectCountry": "Select Country",
+    "country": "Country"
   },
   "notFound": {
     "noPackage": "No package found for your search"
@@ -1688,5 +1716,38 @@
       ]
     },
     "regionalCountries": "*Europe: Albania, Armenia, Andorra, Austria, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Georgia, Gibraltar, Greece, Guernsey, Hungary, Iceland, Ireland, Isle of Man, Italy, Jersey, Latvia, Liechtenstein, Lithuania, Luxembourg, Macedonia, Malta, Monaco, Montenegro, Netherlands, Norway, Poland, Portugal, Romania, San Marino, Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, Ukraine, United Kingdom, Vatican"
+  },
+
+  "pocketWifiRegion": {
+    "tabs": ["Pocket WIFI", "SIM/eSIM", "Router"],
+    "header": {
+      "text": "Select Product"
+    },
+    "form": {
+      "fields": [
+        {
+          "label": "Country",
+          "placeholder": "Select Country"
+        },
+        {
+          "label": "Promo code",
+          "placeholder": "Promo code"
+        },
+        {
+          "label": "Member ID",
+          "placeholder": "Enter member id"
+        }
+      ]
+    }
+  },
+  "pocketWifiPlan": {
+    "heading": "Select a Plan",
+    "tabs": ["all", "daily", "monthly", "multi-country"]
+  },
+
+  "discountDownloadApp": {
+    "title": "On Mobile App",
+    "percentage": "8% Off",
+    "description": "Advanced features for an effortless digital experience anytime, anywhere!"
   }
 }

@@ -15,7 +15,12 @@
     "enquireNow": "今すぐお問い合わせ",
     "viewMore": "もっと見る",
     "viewSimESim": "SIM/eSIMを見る",
-    "rentADeviceNow": "デバイスを今すぐレンタル"
+    "rentADeviceNow": "デバイスを今すぐレンタル",
+    "rental": "レンタル",
+    "topUp": "トップアップ",
+    "previous": "前へ",
+    "next": "次へ",
+    "addACountry": "国を追加"
   },
   "extraText": {
     "from": "から",
@@ -24,7 +29,30 @@
     "more": "もっと",
     "unlimitedData": "無制限データ",
     "day": "日",
-    "endingIn": "まで"
+    "endingIn": "まで",
+    "countryCoverage": "国のカバレッジ",
+    "country": "国",
+    "selectPackage": "パッケージを選択",
+    "information": "情報",
+    "service": "サービス",
+    "dataSize": "データサイズ",
+    "selectDevice": "デバイスを選択",
+    "selectDeviceToTopUp": "トップアップするデバイスを選択",
+    "wifiDevices": "Wi-Fiデバイス",
+
+    "planSummary": "プランの概要",
+    "chosenPlan": "選択したプラン",
+    "dataAvailable": "利用可能なデータ",
+    "startDate": "開始日",
+    "quantity": "数量",
+    "totalAmount": "合計金額"
+  },
+  "form": {
+    "startDate": "開始日",
+    "endDate": "終了日",
+    "pickADate": "日付を選択",
+    "selectCountry": "国を選択",
+    "country": "国"
   },
   "notFound": {
     "noPackage": "検索に一致するパッケージが見つかりませんでした"
@@ -1682,5 +1710,42 @@
       ]
     },
     "regionalCountries": "*ヨーロッパ: アルバニア、アルメニア、アンドラ、オーストリア、ベルギー、ボスニア・ヘルツェゴビナ、ブルガリア、クロアチア、キプロス、チェコ共和国、デンマーク、エストニア、フィンランド、フランス、ドイツ、ジョージア、ジブラルタル、ギリシャ、ガーンジー、ハンガリー、アイスランド、アイルランド、マン島、イタリア、ジャージー、ラトビア、リヒテンシュタイン、リトアニア、ルクセンブルク、マケドニア、マルタ、モナコ、モンテネグロ、オランダ、ノルウェー、ポーランド、ポルトガル、ルーマニア、サンマリノ、セルビア、スロバキア、スロベニア、スペイン、スウェーデン、スイス、ウクライナ、イギリス、バチカン"
+  },
+
+  "pocketWifiRegion": {
+    "tabs": ["ポケットWiFi", "SIM/eSIM", "ルーター"],
+    "header": {
+      "text": "製品を選択"
+    },
+    "form": {
+      "fields": [
+        {
+          "label": "国",
+          "placeholder": "国を選択"
+        },
+        {
+          "label": "プロモコード",
+          "placeholder": "プロモコード"
+        },
+        {
+          "label": "メンバーID",
+          "placeholder": "メンバーIDを入力"
+        }
+      ]
+    }
+  },
+  "pocketWifiPlan": {
+    "heading": "プランを選択",
+    "tabs": ["すべて", "日別", "月別", "複数国"],
+    "countryCoverage": "カバレッジ地域",
+    "countryCoverageInfo": "*パッケージを選択してください",
+    "information": "情報",
+    "informationInfo": "*パッケージを選択してください"
+  },
+
+  "discountDownloadApp": {
+    "title": "モバイルアプリで",
+    "percentage": "8%オフ",
+    "description": "どこでも、いつでも、効果的なデジタル体験を提供する高度な機能！"
   }
 }

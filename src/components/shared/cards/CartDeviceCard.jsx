@@ -1,6 +1,12 @@
 import { cn } from "@/lib/utils";
 
-function CartDeviceCard({ item = {}, isActive = false, id = "ID:", ...props }) {
+function CartDeviceCard({
+  item = {},
+  translableName = "",
+  isActive = false,
+  id = "ID:",
+  ...props
+}) {
   return (
     <div
       className={cn(
@@ -9,7 +15,9 @@ function CartDeviceCard({ item = {}, isActive = false, id = "ID:", ...props }) {
       )}
       {...props}
     >
-      <p className="text-lg font-semibold text-black-700">{item?.name}</p>
+      <p className="text-lg font-semibold text-black-700">
+        {translableName || item?.name}
+      </p>
       <p className="text-lg font-semibold text-black-700">
         {id} {item?.deviceId}
       </p>
