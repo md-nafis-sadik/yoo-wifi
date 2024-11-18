@@ -20,7 +20,8 @@
     "topUp": "トップアップ",
     "previous": "前へ",
     "next": "次へ",
-    "addACountry": "国を追加"
+    "addACountry": "国を追加",
+    "viewLocations": "場所を見る"
   },
   "extraText": {
     "from": "から",
@@ -1747,5 +1748,9 @@
     "title": "モバイルアプリで",
     "percentage": "8%オフ",
     "description": "どこでも、いつでも、効果的なデジタル体験を提供する高度な機能！"
+  },
+
+  "pickDropLocation": {
+    "heroTitle": "受取および返却場所"
   }
 }

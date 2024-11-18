@@ -20,7 +20,8 @@
     "topUp": "Top Up",
     "previous": "Previous",
     "next": "Next",
-    "addACountry": "Add a country"
+    "addACountry": "Add a country",
+    "viewLocations": "View Locations"
   },
   "extraText": {
     "from": "From",
@@ -1749,5 +1750,9 @@
     "title": "On Mobile App",
     "percentage": "8% Off",
     "description": "Advanced features for an effortless digital experience anytime, anywhere!"
+  },
+
+  "pickDropLocation": {
+    "heroTitle": "Pickup & drop off locations"
   }
 }
