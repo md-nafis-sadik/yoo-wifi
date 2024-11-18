@@ -18,7 +18,9 @@ const localPath =
   window.location.pathname.includes("/product") ||
   window.location.pathname.includes("/corporate") ||
   window.location.pathname.includes("/contact") ||
-  window.location.pathname.includes("/about-us");
+  window.location.pathname.includes("/about-us") ||
+  window.location.pathname.includes("/pocket-wifi-details") ||
+  window.location.pathname.includes("/package");
 
 const getCurrentLoadPath = (language) => {
   if (localPath) {
