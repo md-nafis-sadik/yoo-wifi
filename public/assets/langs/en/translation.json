@@ -11,13 +11,49 @@
     "submit": "Submit",
     "getInTouch": "Get In Touch",
     "exploreProducts": "Explore Products",
-    "contactUs": "Contact Us"
+    "contactUs": "Contact Us",
+    "enquireNow": "Enquire Now",
+    "viewMore": "View More",
+    "viewSimESim": "View SIM/eSIM",
+    "rentADeviceNow": "Rent a Device Now",
+    "rental": "Rental",
+    "topUp": "Top Up",
+    "previous": "Previous",
+    "next": "Next",
+    "addACountry": "Add a country",
+    "viewLocations": "View Locations"
   },
   "extraText": {
     "from": "From",
     "selectCountry": "Select Country",
     "corporate": "Corporate",
-    "more": "more"
+    "more": "more",
+    "unlimitedData": "Unlimited Data",
+    "day": "day",
+    "endingIn": "Ending in",
+    "countryCoverage": "Country Coverage",
+    "country": "Country",
+    "selectPackage": "*Select a package first",
+    "information": "Information",
+    "service": "Service",
+    "dataSize": "Data Size",
+    "selectDevice": "Select Device",
+    "selectDeviceToTopUp": "Select Device to Top Up",
+    "wifiDevices": "Wifi Devices",
+
+    "planSummary": "Plan Summary",
+    "chosenPlan": "Chosen Plan",
+    "dataAvailable": "Data Available",
+    "startDate": "Start Date",
+    "quantity": "Quantity",
+    "totalAmount": "Total Amount"
+  },
+  "form": {
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "pickADate": "Pick a Date",
+    "selectCountry": "Select Country",
+    "country": "Country"
   },
   "notFound": {
     "noPackage": "No package found for your search"
@@ -122,6 +158,7 @@
     }
   },
   "productsData": {
+    "title": "Our Products",
     "cardData": [
       {
         "title": "Pocket WIFI",
@@ -1567,5 +1604,201 @@
   "corporateHero": {
     "heading": "Corporate",
     "subHeading": "UR Communications Pte Ltd, operating under the renowned brand name Yoowifi, introduces an advanced solution for effortless global connectivity via its intuitive mobile application. With a commitment to enriching travel journeys and fostering global communication, Yoowifi App delivers unmatched convenience, dependability, and cost-effectiveness."
+  },
+  "iot": {
+    "pageTitle": "IOT",
+    "description": "Stay connected to your home, your family, and your business at all times through a single device! They are also designed to meet your unique needs, whether you are an individual or a business.",
+    "featureList": [
+      "Size of Data",
+      "Operator-specific",
+      "Managing platform and Monitoring",
+      "Single or Multiple Countries"
+    ]
+  },
+  "hotel": {
+    "pageTitle": "HOTEL",
+    "description": "Turn your hotel into a home away from home with our top-speed internet connectivity! Your guests can remain productive no matter where they are, and your business can stand out from the competition.",
+    "featureList": [
+      "Stay connected when operation is disrupted",
+      "Fast deployment",
+      "Customized solution to keep your team globally connected"
+    ]
+  },
+  "travelAgency": {
+    "pageTitle": "TRAVEL AGENCY",
+    "description": "Draw up information for your clients at the speed of lightning through our WiFi solutions. Communicate effectively with partners and avoid the frustration of a weak connection or an unreliable signal strength.",
+    "featureList": [
+      "Size of Data",
+      "Operator-specific",
+      "Managing platform and Monitoring",
+      "Single or Multiple Countries"
+    ]
+  },
+  "maritimeInternet": {
+    "pageTitle": "MARITIME INTERNET",
+    "description": "Let us navigate your internet needs on the high seas. We can keep your crew connected and business afloat with our solutions. Therefore, no matter where the vessel roams, you can enjoy broadband without borders.",
+    "featureList": [
+      "Single or Multiple Countries",
+      "Fast deployment",
+      "Customized solution to keep your team globally connected"
+    ]
+  },
+  "office": {
+    "pageTitle": "OFFICE/ ROADSHOW EVENTS",
+    "description": "Wherever you go, stay connected with our WiFi solutions! Be it in the office or hosting a roadshow, enjoy seamless and lightning-quick access to the internet. Don’t let anything disrupt your workday with us at Yoowifi!",
+    "featureList": [
+      "Fast and reliable connectivity",
+      "Dedicated support",
+      "Reasonable cost or Sponsorship"
+    ]
+  },
+  "corporateSharedHero": {
+    "heading": "Travel Connected",
+    "items": ["Portable Hotspot", "eSim", "SIM card"]
+  },
+  "commercial": {
+    "pageTitle": "Commercial",
+    "description": "Take your productivity to the next level with our seamless connectivity! We provide a gateway to the digital world that will make your day as smooth as possible."
+  },
+  "benefits": {
+    "heading": "Benefits",
+    "subHeading": "Don’t let slow internet tie you down! Switch to our portable solutions to experience connectivity without boundaries.",
+    "benefitsData": [
+      {
+        "title": "Dedicated Application",
+        "content": "Take charge of your connectivity needs with our online management portal, empowering you with control for a smooth and effortless experience."
+      },
+      {
+        "title": "Cost Efficient",
+        "content": "Experience affordable and hassle-free connectivity with Yoowifi's vSIM technology, eliminating costly roaming charges for budget-friendly data services."
+      },
+      {
+        "title": "Customisable Data Plans",
+        "content": "Tailor your data package to meet your specific needs and scale as your business grows."
+      }
+    ]
+  },
+
+  "pocketWifiDetails": {
+    "pocketWifiDayPass": {
+      "headers": ["Pocket Wifi-Unlimited Daypass", "1GB/day", "5GB/day"],
+      "plans": [
+        "Hong Kong, Indonesia, Japan, Macau, Malaysia, Philippines, South Korea, Taiwan, Thailand, Vietnam 1 Day",
+        "Australia, Brunei, Canada, Cambodia, China (with VPN), Europe, Laos, Mexico, New Zealand, Turkey, USA 1 Day",
+        "Bahrain, Bangladesh, Egypt, India, Israel, Jordan, Kazakhstan, Kuwait, Oman, Pakistan, Qatar, Saudi Arabia, South Africa, Sri Lanka, UAE, Uzbekistan 1 Day"
+      ]
+    },
+    "restOfTheWorldDayPass": {
+      "headers": ["Rest of the World-Unlimited Daypass", "1GB/day", "5GB/day"],
+      "plan": "Algeria, Anguilla, Antigua and Barbuda, Argentina, Aruba, Azerbaijan, Bolivia, Brazil, British Virgin Islands, Chile, Colombia, Costa Rica, Dominican Republic, Ecuador, El Salvador, Fiji, French Antilles(Martinique), French Sint Maarten, Grenada, Guadeloupe, Guatemala, Guyana, Haiti, Jamaica, Kyrgyzstan, Maldives, Mongolia, Myanmar, Netherlands Antilles(Curacao), Nicaragua, Panama, Paraguay, Peru, Puerto Rico, Saint Vincent and the Grenadines, Suriname, Tahiti, Tajikistan, the CaymanIslands, Trinidad and Tobago Turks and Caicos Islands, Uruguay, Venezuela"
+    },
+    "sim": {
+      "heading": "SIM/eSIM",
+      "subHeading": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "description": {
+        "title": "Descriptions",
+        "content": "Our Sim/eSim is perfect for those who value convenience and ease of use. You can activate it within minutes and start enjoying all the benefits that come with it. Whether you're a student, a working professional, or anyone who needs a reliable telecommunications service, our Sim/E-Sim is the perfect solution for you. We offer competitive pricing, flexible plans, and excellent customer support to ensure that you get the best value for your money!"
+      }
+    },
+    "simDataPlan": {
+      "headers": [
+        "SIM/eSIM-Unlimited Data Plan",
+        "500MB/day",
+        "1GB/day",
+        "2GB/day"
+      ],
+      "plans": [
+        "Malaysia/ Thailand 1 day",
+        "China 1 Day",
+        "South Korea 3 Days",
+        "Japan 3 Days",
+        "Europe 5 Days",
+        "Australia 5 Days"
+      ]
+    },
+    "regionalCountries": "*Europe: Albania, Armenia, Andorra, Austria, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Georgia, Gibraltar, Greece, Guernsey, Hungary, Iceland, Ireland, Isle of Man, Italy, Jersey, Latvia, Liechtenstein, Lithuania, Luxembourg, Macedonia, Malta, Monaco, Montenegro, Netherlands, Norway, Poland, Portugal, Romania, San Marino, Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, Ukraine, United Kingdom, Vatican"
+  },
+
+  "pocketWifiRegion": {
+    "tabs": ["Pocket WIFI", "SIM/eSIM", "Router"],
+    "header": {
+      "text": "Select Product"
+    },
+    "form": {
+      "fields": [
+        {
+          "label": "Country",
+          "placeholder": "Select Country"
+        },
+        {
+          "label": "Promo code",
+          "placeholder": "Promo code"
+        },
+        {
+          "label": "Member ID",
+          "placeholder": "Enter member id"
+        }
+      ]
+    }
+  },
+  "pocketWifiPlan": {
+    "heading": "Select a Plan",
+    "tabs": ["all", "daily", "monthly", "multi-country"]
+  },
+
+  "discountDownloadApp": {
+    "title": "On Mobile App",
+    "percentage": "8% Off",
+    "description": "Advanced features for an effortless digital experience anytime, anywhere!"
+  },
+
+  "pickDropLocation": {
+    "heroTitle": "Pickup & drop off locations"
+  },
+
+  "routerRegion": {
+    "tabs": ["Pocket WIFI", "SIM/eSIM", "Router"],
+    "header": {
+      "text": "Select Product"
+    },
+    "form": {
+      "fields": [
+        {
+          "label": "Country",
+          "placeholder": "Select Country"
+        },
+        {
+          "label": "Promo code",
+          "placeholder": "Promo code"
+        },
+        {
+          "label": "Member ID",
+          "placeholder": "Enter member id"
+        }
+      ]
+    }
+  },
+
+  "simRegion": {
+    "tabs": ["Pocket WIFI", "SIM/eSIM", "Router"],
+    "header": {
+      "text": "Select Product"
+    },
+    "form": {
+      "fields": [
+        {
+          "label": "Country",
+          "placeholder": "Select Country"
+        },
+        {
+          "label": "Promo code",
+          "placeholder": "Promo code"
+        },
+        {
+          "label": "Member ID",
+          "placeholder": "Enter member id"
+        }
+      ]
+    }
   }
 }

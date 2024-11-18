@@ -11,11 +11,13 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 import AppDownloadDialog from "../shared/navigation/AppDownloadDialog";
+import { useTranslation } from "react-i18next";
 
 function SimLayout() {
   useSetLocalData("sim");
   const { product } = useSelector((state) => state.sim);
   const { authModal, loginModal, appDownloadModal } = useModal();
+  const { t } = useTranslation();
 
   return (
     <main>
@@ -33,8 +35,12 @@ function SimLayout() {
                 >
                   {product.tabs.map((tab, index) => (
                     <AccordionItem value={`item-${index + 1}`} key={index}>
-                      <AccordionTrigger>{tab.title}</AccordionTrigger>
-                      <AccordionContent>{tab.content}</AccordionContent>
+                      <AccordionTrigger>
+                        {t(`sim.product.tabs.${index}.title`)}
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        {t(`sim.product.tabs.${index}.content`)}
+                      </AccordionContent>
                     </AccordionItem>
                   ))}
                 </Accordion>

@@ -12,11 +12,13 @@ import {
 import NavBarSecondary from "../shared/navigation/NavBarSecondary";
 import useModal from "@/hooks/useModal";
 import AppDownloadDialog from "../shared/navigation/AppDownloadDialog";
+import { useTranslation } from "react-i18next";
 
 function RouterLayout() {
   useSetLocalData("router");
   const { product } = useSelector((state) => state.router);
   const { authModal, loginModal, appDownloadModal } = useModal();
+  const { t } = useTranslation();
 
   return (
     <main>
@@ -34,8 +36,12 @@ function RouterLayout() {
                 >
                   {product.tabs.map((tab, index) => (
                     <AccordionItem value={`item-${index + 1}`} key={index}>
-                      <AccordionTrigger>{tab.title}</AccordionTrigger>
-                      <AccordionContent>{tab.content}</AccordionContent>
+                      <AccordionTrigger>
+                        {t(`router.product.tabs.${index}.title`)}
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        {t(`router.product.tabs.${index}.content`)}
+                      </AccordionContent>
                     </AccordionItem>
                   ))}
                 </Accordion>

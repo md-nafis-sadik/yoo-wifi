@@ -2,11 +2,14 @@ import CountryWiseLocation from "@/components/commercial/pickDropLocation/Countr
 import ReturnDevice from "@/components/commercial/pickDropLocation/ReturnDevice";
 import HeroCommon from "@/components/shared/others/HeroCommon";
 import { Fragment } from "react";
+import { useTranslation } from "react-i18next";
 
 const PickDropLocation = () => {
+  const { t } = useTranslation();
+
   return (
     <Fragment>
-      <HeroCommon title={"Pickup & drop off locations"} />
+      <HeroCommon title={t("pickDropLocation.heroTitle")} />
       <ReturnDevice />
       <CountryWiseLocation />
     </Fragment>

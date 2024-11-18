@@ -9,7 +9,7 @@ import DownloadYoowifi from "../shared/others/DownloadYoowifi";
 
 function CommercialLayout() {
   useSetLocalData("commercialLayout");
-  // useScrollToTop();
+  useScrollToTop();
   const location = useLocation();
   const isHome = location.pathname === "/";
   const { authModal, loginModal, appDownloadModal } = useModal();

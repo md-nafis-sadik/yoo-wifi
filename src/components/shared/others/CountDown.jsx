@@ -1,7 +1,9 @@
 import { cn } from "@/lib/utils";
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const CountDown = ({ targetUnixTime, className }) => {
+  const { t } = useTranslation();
   // Convert the Unix timestamp to milliseconds if it's in seconds
   const targetDate = targetUnixTime * 1000; // Assuming targetUnixTime is in seconds
 
@@ -37,7 +39,7 @@ const CountDown = ({ targetUnixTime, className }) => {
 
   return (
     <span className={cn("inline text-xl", className)}>
-      Ending in
+      {t("extraText.endingIn")}
       <span className="ms-1">{days}d</span>:<span>{hours}h</span>:
       <span>{minutes}m</span>:<span>{seconds}s</span>
     </span>

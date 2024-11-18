@@ -18,10 +18,16 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import PocketWifiCartService from "./PocketWifiCartService";
-
-const tabs = ["all", "daily", "monthly", "multi-country"];
+import { useTranslation } from "react-i18next";
 
 function PocketWifiPlan() {
+  const { t } = useTranslation();
+  const tabs = [
+    { tab: "all", translableName: t("pocketWifiPlan.tabs.0") },
+    { tab: "daily", translableName: t("pocketWifiPlan.tabs.1") },
+    { tab: "monthly", translableName: t("pocketWifiPlan.tabs.2") },
+    { tab: "multi-country", translableName: t("pocketWifiPlan.tabs.3") },
+  ];
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { recomandedPackages, cart } = useSelector((state) => state.pocketWifi);
@@ -66,11 +72,11 @@ function PocketWifiPlan() {
     <div className="w-full">
       <div className="w-full flex flex-col gap-5">
         <h2 className="text-base md:text-2xl !leading-[1.2] md:!leading-[1.4] font-semibold md:font-bold">
-          Select a Plan
+          {t("pocketWifiPlan.heading")}
         </h2>
         <div ref={emblaRef} className="w-full max-w-full overflow-hidden">
           <div className="flex items-center gap-4">
-            {tabs.map((tab) => (
+            {tabs.map(({ tab, translableName }) => (
               <Button
                 key={tab}
                 className={cn(
@@ -80,7 +86,7 @@ function PocketWifiPlan() {
                 variant={activeTab === tab ? "secondary" : "outline"}
                 onClick={() => setActiveTab(tab)}
               >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                {translableName || tab.charAt(0).toUpperCase() + tab.slice(1)}
               </Button>
             ))}
           </div>
@@ -91,7 +97,7 @@ function PocketWifiPlan() {
         <Accordion type="single" collapsible="true" defaultValue="item-1">
           <AccordionItem value={`item-1`} className="">
             <AccordionTrigger className="!text-sm md:!text-base !font-bold text-black-700">
-              Country Coverage
+              {t("extraText.countryCoverage")}
             </AccordionTrigger>
             <AccordionContent className="!text-xs md:!text-base !leading-[120%] md:!leading-[150%] text-black-700">
               {cart && cart.package.coverage ? (
@@ -102,7 +108,7 @@ function PocketWifiPlan() {
                   </span>
                 ))
               ) : (
-                <span>*Select a package first</span>
+                <span>{t("extraText.selectPackage")}</span>
               )}
             </AccordionContent>
           </AccordionItem>
@@ -112,13 +118,13 @@ function PocketWifiPlan() {
         <Accordion type="single" collapsible="true" defaultValue="item-1">
           <AccordionItem value={`item-1`} className="">
             <AccordionTrigger className="!text-sm md:!text-base !font-bold text-black-700">
-              Information
+              {t("extraText.information")}
             </AccordionTrigger>
             <AccordionContent className="!text-xs md:!text-base !leading-[120%] md:!leading-[150%] text-black-700">
               {cart && cart.package.information ? (
                 <span>{cart.package.information}</span>
               ) : (
-                <span>*Select a package first</span>
+                <span>{t("extraText.selectPackage")}</span>
               )}
             </AccordionContent>
           </AccordionItem>
@@ -131,6 +137,7 @@ function PocketWifiPlan() {
               cart?.package?.id == item?.id ? "border-main-600" : ""
             }`}
             item={item}
+            index={index}
             key={index}
             onClick={() => handleSelectPlan(item)}
           />
