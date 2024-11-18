@@ -1752,5 +1752,50 @@
 
   "pickDropLocation": {
     "heroTitle": "受取および返却場所"
+  },
+
+  "routerRegion": {
+    "tabs": ["ポケットWiFi", "SIM/eSIM", "ルーター"],
+    "header": {
+      "text": "製品を選択"
+    },
+    "form": {
+      "fields": [
+        {
+          "label": "国",
+          "placeholder": "国を選択"
+        },
+        {
+          "label": "プロモコード",
+          "placeholder": "プロモコード"
+        },
+        {
+          "label": "メンバーID",
+          "placeholder": "メンバーIDを入力"
+        }
+      ]
+    }
+  },
+  "simRegion": {
+    "tabs": ["ポケットWiFi", "SIM/eSIM", "ルーター"],
+    "header": {
+      "text": "製品を選択"
+    },
+    "form": {
+      "fields": [
+        {
+          "label": "国",
+          "placeholder": "国を選択"
+        },
+        {
+          "label": "プロモコード",
+          "placeholder": "プロモコード"
+        },
+        {
+          "label": "メンバーID",
+          "placeholder": "メンバーIDを入力"
+        }
+      ]
+    }
   }
 }

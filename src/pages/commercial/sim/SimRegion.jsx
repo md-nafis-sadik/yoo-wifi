@@ -15,14 +15,29 @@ import { handleNextSimCart, setSimCartData } from "@/store/module/sim/slice";
 import useEmblaCarousel from "embla-carousel-react";
 import { useState } from "react";
 import { CountrySelect } from "react-country-state-city";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 
 function SimRegion() {
+  const { t } = useTranslation();
+
   const tabs = [
-    { name: "Pocket WIFI", route: commercialRoutes.pocketWifiRegion.path },
-    { name: "SIM/eSIM", route: commercialRoutes.simRegion.path },
-    { name: "Router", route: commercialRoutes.routerRegion.path },
+    {
+      name: "Pocket WIFI",
+      route: commercialRoutes.pocketWifiRegion.path,
+      translableName: t("simRegion.tabs.0"),
+    },
+    {
+      name: "SIM/eSIM",
+      route: commercialRoutes.simRegion.path,
+      translableName: t("simRegion.tabs.1"),
+    },
+    {
+      name: "Router",
+      route: commercialRoutes.routerRegion.path,
+      translableName: t("simRegion.tabs.2"),
+    },
   ];
 
   const { cart } = useSelector((state) => state.sim);
@@ -74,11 +89,11 @@ function SimRegion() {
     <div className="w-full flex flex-col gap-6 sm:gap-8 md:gap-12">
       <div className="w-full flex flex-col gap-5">
         <h2 className="text-base md:text-2xl !leading-[1.2] md:!leading-[1.4] font-semibold md:font-bold">
-          Select Product
+          {t("pocketWifiRegion.header.text")}
         </h2>
         <div ref={emblaRef} className="w-full max-w-full overflow-hidden">
           <div className="flex items-center gap-4">
-            {tabs.map(({ name }) => (
+            {tabs.map(({ name, translableName }) => (
               <Button
                 key={name}
                 className={cn(
@@ -88,7 +103,7 @@ function SimRegion() {
                 variant={activeTab === name ? "secondary" : "outline"}
                 onClick={() => setActiveTab(name)}
               >
-                {name.charAt(0).toUpperCase() + name.slice(1)}
+                {translableName || name.charAt(0).toUpperCase() + name.slice(1)}
               </Button>
             ))}
           </div>
@@ -98,28 +113,30 @@ function SimRegion() {
       <div className="w-full">
         <div className="w-full flex flex-col gap-4 sm:gap-6">
           <div className="flex flex-col gap-2">
-            <span className="label">Country</span>
+            <span className="label">
+              {t(`pocketWifiRegion.form.fields.0.label`)}
+            </span>
             <CountrySelect
               name="country"
               defaultValue={cart?.productCountry}
               onChange={(value) => handleCountrySelect(value)}
               containerClassName="country-select bg-neutral-50"
               inputClassName="!border-none !outline-none bg-transparent"
-              placeHolder="Select Country"
+              placeHolder={t(`pocketWifiRegion.form.fields.0.placeholder`)}
             />
           </div>
           <Input
             name="promoCode"
-            placeholder="Promo code"
-            label="Promo code"
+            placeholder={t(`pocketWifiRegion.form.fields.1.placeholder`)}
+            label={t(`pocketWifiRegion.form.fields.1.label`)}
             required
             onChange={handleInputChange}
             defaultValue={cart?.promoCode}
           />
           <Input
             name="memberId"
-            placeholder="Enter member id"
-            label="Member ID"
+            placeholder={t(`pocketWifiRegion.form.fields.2.placeholder`)}
+            label={t(`pocketWifiRegion.form.fields.2.label`)}
             required
             onChange={handleInputChange}
             defaultValue={cart?.memberId}

@@ -1754,5 +1754,51 @@
 
   "pickDropLocation": {
     "heroTitle": "Pickup & drop off locations"
+  },
+
+  "routerRegion": {
+    "tabs": ["Pocket WIFI", "SIM/eSIM", "Router"],
+    "header": {
+      "text": "Select Product"
+    },
+    "form": {
+      "fields": [
+        {
+          "label": "Country",
+          "placeholder": "Select Country"
+        },
+        {
+          "label": "Promo code",
+          "placeholder": "Promo code"
+        },
+        {
+          "label": "Member ID",
+          "placeholder": "Enter member id"
+        }
+      ]
+    }
+  },
+
+  "simRegion": {
+    "tabs": ["Pocket WIFI", "SIM/eSIM", "Router"],
+    "header": {
+      "text": "Select Product"
+    },
+    "form": {
+      "fields": [
+        {
+          "label": "Country",
+          "placeholder": "Select Country"
+        },
+        {
+          "label": "Promo code",
+          "placeholder": "Promo code"
+        },
+        {
+          "label": "Member ID",
+          "placeholder": "Enter member id"
+        }
+      ]
+    }
   }
 }
