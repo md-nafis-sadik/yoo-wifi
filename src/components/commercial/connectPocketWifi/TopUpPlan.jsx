@@ -1,5 +1,6 @@
 import InfoCard from "@/components/shared/cards/InfoCard";
 import SectionHeader from "@/components/shared/others/SectionHeader";
+import { useTranslation } from "react-i18next";
 
 const TopUpPlan = ({}) => {
   const setupSteps = [
@@ -22,17 +23,26 @@ const TopUpPlan = ({}) => {
     },
   ];
 
+  const { t } = useTranslation();
+
   return (
     <section className="sec_common_60">
       <div className="containerX">
         <SectionHeader
-          heading="How to do a plan Top up"
-          subHeading="Easily Manage Your Data Needs with Yoowifi Top-Up"
+          heading={t("pocketWifiTopUp.heading")}
+          subHeading={t("pocketWifiTopUp.subHeading")}
           containerClassName="gap-4"
         />
         <div className="w-full flex flex-col gap-6 mt-15">
           {setupSteps.map(({ step, title, description }, index) => (
-            <InfoCard key={index} title={title} description={description}>
+            <InfoCard
+              key={index}
+              title={t(`pocketWifiTopUp.setupSteps.${index}.title`) || title}
+              description={
+                t(`pocketWifiTopUp.setupSteps.${index}.description`) ||
+                description
+              }
+            >
               <span className="text-5xl sm:text-6xl md:text-6xml font-bold text-main-600">
                 {step}
               </span>

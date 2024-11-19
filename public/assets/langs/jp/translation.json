@@ -15,6 +15,7 @@
     "enquireNow": "今すぐお問い合わせ",
     "viewMore": "もっと見る",
     "viewSimESim": "SIM/eSIMを見る",
+    "viewSteps": "ステップを見る",
     "rentADeviceNow": "デバイスを今すぐレンタル",
     "rental": "レンタル",
     "topUp": "トップアップ",
@@ -26,7 +27,8 @@
     "eSim": "eSIM",
     "homeorAddress": "ホームまたは住所",
     "hotel": "ホテル",
-    "saveAddress": "住所を保存"
+    "saveAddress": "住所を保存",
+    "buyPocketWifi": "ポケットWi-Fiを購入"
   },
   "extraText": {
     "from": "から",
@@ -1925,5 +1927,66 @@
     "welcomeMessage": "またお会いできて嬉しいです。コースに入りましょう。",
     "continue": "続行",
     "simType": "SIMタイプ"
+  },
+
+  "setupPocketWifi": {
+    "heading": "ポケットWiFiの接続方法",
+    "subHeading": "簡単な手順でポケットWiFiに簡単に接続できます",
+    "setupSteps": [
+      {
+        "step": 1,
+        "title": "ポケットWiFiをオンにする",
+        "description": "電源ボタンを押して電源を入れ、ネットワークに接続されるのを待ちます。"
+      },
+      {
+        "step": 2,
+        "title": "WiFi名を確認する",
+        "description": "デバイスの画面でWiFiネットワーク名（SSID）を確認してください。"
+      },
+      {
+        "step": 3,
+        "title": "WiFiに接続する",
+        "description": "スマートフォン、タブレット、またはノートパソコンでWiFi設定を開き、SSIDを選択して、デバイスに表示されているパスワードを入力すると、インターネットに接続できます。"
+      }
+    ]
+  },
+
+  "returnDevicePocketWifi": {
+    "heading": "デバイスの返却方法",
+    "subHeading": "簡単な手順に従って、ストレスのない返却体験を確保しましょう。",
+    "cardData": [
+      {
+        "title": "Singpost ドロップオフ",
+        "description": "デバイスをレンタルすると、パッケージに前払いの返却ラベルが含まれています。このラベルを使用して簡単にデバイスを返送できます。返却後、返却処理が完了すると、メールで確認の通知を受け取ることがあります。",
+        "buttonText": "ロケーションを表示"
+      },
+      {
+        "title": "ピックアップドロップオフロケーション",
+        "description": "Yoowifiでは、指定されたロケーションのいずれかでデバイスを簡単に受け取り、島全体にある30以上の便利なドロップオフポイントで返却できます。このスムーズなプロセスにより、旅行先でも常に接続状態を保つことができます！",
+        "buttonText": "ロケーションを表示"
+      }
+    ]
+  },
+
+  "pocketWifiTopUp": {
+    "heading": "プランのトップアップ方法",
+    "subHeading": "Yoowifiトップアップでデータニーズを簡単に管理",
+    "setupSteps": [
+      {
+        "step": 1,
+        "title": "デバイスを選択",
+        "description": "Yoowifiアプリを開き、「マイデータ」に進み、トップアップするデバイスを選択します。"
+      },
+      {
+        "step": 2,
+        "title": "プランを選択",
+        "description": "「データ追加」をクリックし、希望の国とプランを選択し、開始日と終了日を設定します。"
+      },
+      {
+        "step": 3,
+        "title": "チェックアウトへ進む",
+        "description": "選択内容を確認し、チェックアウトに進みます。"
+      }
+    ]
   }
 }
