@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -10,6 +11,7 @@ function RouterCartFooter({
   ...props
 }) {
   const { product, cart } = useSelector((state) => state.router);
+  const { t } = useTranslation();
 
   return (
     <div
@@ -21,7 +23,7 @@ function RouterCartFooter({
       <div className="w-full max-w-[1312px] mx-auto flex flex-col md:flex-row gap-5 lg:gap-16 xl:gap-28 items-center">
         <div className="w-full flex items-center">
           <h2 className="hidden  lg:block flex-1 sm:text-base md:text-2xml text-black-900 font-bold">
-            {product?.name}
+            {t(`router.product.name`)}
           </h2>
 
           {cart?.package?.packPrice && (
@@ -38,7 +40,7 @@ function RouterCartFooter({
               className={"w-full min-w-[140px] font-semibold"}
               onClick={prevHandler}
             >
-              Previous
+              {t("buttonText.previous")}
             </Button>
             <Button
               type="button"
@@ -46,7 +48,7 @@ function RouterCartFooter({
               disabled={!isActive}
               onClick={nextHandler}
             >
-              Next
+              {t("buttonText.next")}
             </Button>
           </div>
         </div>

@@ -11,6 +11,7 @@ import { Switch } from "@/components/ui/switch";
 import { commercialRoutes, PlusIcon, SuccessIcon } from "@/services";
 import { setPocketWifiCartData } from "@/store/module/pocketWifi/slice";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -22,6 +23,7 @@ function PocketWifiOrderSummery() {
   const [isChecked, setIsChecked] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const dispatch = useDispatch();
+  const { t } = useTranslation();
   const isActive = isChecked && cart?.paymentCard?.id ? true : false;
 
   const handlePrev = () => {
@@ -45,14 +47,14 @@ function PocketWifiOrderSummery() {
     <div className="w-full">
       <div className="w-full  ">
         <h4 className="text-black-900 text-base sm:text-lg md:text-2xl font-bold">
-          Plan Summary
+          {t("orderSummary.orderSummary")}
         </h4>
-        <div className=" bg-neutral-100 rounded-2xl py-6 px-4 sm:p-8 md:p-10 divide-y divide-neutral-300">
+        <div className=" bg-neutral-100 rounded-2xl py-6 px-4 sm:p-8 md:p-10 divide-y divide-neutral-300 mt-4 sm:mt-6">
           {/*  */}
           <div className="pb-5 flex flex-col gap-4">
             <div className="flex items-center justify-between gap-3">
               <span className="text-base sm:text-lg text-black-700">
-                Plan Name
+                {t("orderSummary.planName")}
               </span>
               <span className="text-base sm:text-lg text-black-700">
                 {cart?.package?.title} {cart?.package?.dataSize}{" "}
@@ -64,7 +66,7 @@ function PocketWifiOrderSummery() {
           <div className="pb-5 flex flex-col gap-4  pt-5">
             <div className="flex items-center justify-between gap-3">
               <span className="text-base sm:text-lg text-black-700">
-                Minimum Charges
+                {t("orderSummary.minimumCharges")}
               </span>
               <span className="text-base sm:text-lg text-black-700">
                 SGD 79.00
@@ -72,7 +74,7 @@ function PocketWifiOrderSummery() {
             </div>
             <div className="flex items-center justify-between gap-3">
               <span className="text-base sm:text-lg text-black-700">
-                Deposit
+                {t("orderSummary.deposit")}
               </span>
               <span className="text-base sm:text-lg text-black-700">
                 SGD 00
@@ -80,7 +82,7 @@ function PocketWifiOrderSummery() {
             </div>
             <div className="flex items-center justify-between gap-3">
               <span className="text-base sm:text-lg text-black-700">
-                Sub-total
+                {t("orderSummary.subtotal")}
               </span>
               <span className="text-base sm:text-lg text-black-700">
                 SGD 79.00
@@ -88,7 +90,7 @@ function PocketWifiOrderSummery() {
             </div>
             <div className="flex items-center justify-between gap-3">
               <span className="text-base sm:text-lg text-black-700">
-                Quantity
+                {t("orderSummary.quantity")}
               </span>
               <span className="text-base sm:text-lg text-black-700">
                 {cart?.quantity}
@@ -99,19 +101,19 @@ function PocketWifiOrderSummery() {
           <div className="pb-5 flex flex-col gap-4  pt-5">
             <div className="flex items-center justify-between gap-3">
               <span className="text-base sm:text-lg text-black-700">
-                Self pick-up delivery fee
+                {t("orderSummary.selfPickupDeliveryFee")}
               </span>
               <span className="text-base sm:text-lg text-black-700">FREE</span>
             </div>
             <div className="flex items-center justify-between gap-3">
               <span className="text-base sm:text-lg text-black-700">
-                Return drop-off fee
+                {t("orderSummary.returnDropOffFee")}
               </span>
               <span className="text-base sm:text-lg text-black-700">FREE</span>
             </div>
             <div className="flex items-center justify-between gap-3">
               <span className="text-base sm:text-lg text-black-700">
-                Total Delivery Charges
+                {t("orderSummary.totalDeliveryCharges")}
               </span>
               <span className="text-base sm:text-lg text-black-700">
                 SGD 0.00
@@ -121,7 +123,7 @@ function PocketWifiOrderSummery() {
           {/*  */}
           <div className="flex items-center justify-between gap-3 pt-5">
             <span className="text-lg text-black-900 font-semibold">
-              Total Data Charges
+              {t("orderSummary.totalDataCharges")}
             </span>
             <span className="text-lg text-black-900 font-semibold">SGD 79</span>
           </div>
@@ -130,10 +132,10 @@ function PocketWifiOrderSummery() {
           {userPaymentCards?.length == 0 && (
             <div>
               <h5 className="text-black-900 text-base sm:text-lg md:text-2xl font-bold">
-                Payment Information
+                {t("orderSummary.paymentInformation")}
               </h5>
               <div className="px-10 py-6 rounded-2xl bg-neutral-100 text-sm sm:text-base md:text-lg text-black-600 mt-4 sm:mt-6">
-                No Card Added
+                {t("orderSummary.noCardAdded")}
               </div>
             </div>
           )}
@@ -156,21 +158,21 @@ function PocketWifiOrderSummery() {
                 onClick={() => setShowForm(true)}
               >
                 <PlusIcon />
-                <span>Add Card </span>
+                <span>{t("orderSummary.addCard")}</span>
               </button>
             </div>
           )}
           {userPaymentCards?.length == 0 && !showForm && (
             <div className="mt-4 sm:mt-6">
               <h4 className="text-black-900 text-base sm:text-lg md:text-2xl font-bold">
-                Add New Payment Method
+                {t("orderSummary.addNewPaymentMethod")}
               </h4>
               <button
                 type="button"
                 onClick={() => setShowForm(true)}
                 className="px-10 py-6 w-full rounded-2xl bg-neutral-100 flex items-center gap-2 text-sm sm:text-base md:text-lg text-black-900 font-semibold mt-6"
               >
-                <PlusIcon /> <span>Add Card </span>
+                <PlusIcon /> <span>{t("orderSummary.addCard")}</span>
               </button>
             </div>
           )}
@@ -181,9 +183,10 @@ function PocketWifiOrderSummery() {
               onCheckedChange={(ev) => setIsChecked(ev)}
             />
             <p className="text-black-700 text-base sm:text-lg">
-              I have read and agreed to the{" "}
+              {t("orderSummary.readAndAgree")}{" "}
               <span className="font-semibold">
-                Terms & Conditions & Privacy Policy.
+                {t("orderSummary.termsAndConditions")} &{" "}
+                {t("orderSummary.privacyPolicy")}.
               </span>
             </p>
           </div>
@@ -200,17 +203,17 @@ function PocketWifiOrderSummery() {
             </div>
             <div className="text-center flex flex-col gap-3 sm:gap-4">
               <DialogTitle className="text-2xl sm:text-3xl md:text-4xl font-bold text-black-700">
-                Order Confirmed!
+                {t("orderSummary.orderConfirmed")}
               </DialogTitle>
               <p className="text-base text-black-700">
-                Get ready for seamless connectivity wherever you go.
+                {t("orderSummary.welcomeMessage")}
               </p>
             </div>
             <DialogClose
               onClick={handleContinue}
               className="px-10 py-4 bg-main-600 text-white rounded-xl max-w-max mx-auto outline-none border-none"
             >
-              Continue
+              {t("orderSummary.continue")}
             </DialogClose>
           </div>
         </DialogContent>

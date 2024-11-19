@@ -1,5 +1,6 @@
 import RouterCartFooter from "@/components/commercial/router/RouterCartFooter";
 import { commercialRoutes } from "@/services";
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -8,9 +9,10 @@ function SimPlanSummery() {
   const { cart } = useSelector((state) => state.sim);
   const date = new Date(cart?.startDate);
   const formattedDate = date.toISOString().split("T")[0];
+  const { t } = useTranslation();
 
   const handlePrev = () => {
-    navigate(commercialRoutes.simCartService.path);
+    navigate(commercialRoutes.simPlan.path);
   };
 
   const handleNext = () => {
@@ -24,11 +26,13 @@ function SimPlanSummery() {
   return (
     <div className="w-full">
       <div className="w-full py-6 px-4 sm:p-8 md:p-10 bg-neutral-100 rounded-2xl">
-        <h4 className="text-black-900 text-2xl font-bold">Plan Summary</h4>
+        <h4 className="text-black-900 text-2xl font-bold">
+          {t("extraText.planSummary")}
+        </h4>
         <div className="mt-3 sm:mt-6 md:mt-12 pb-5 flex flex-col gap-4">
           <div className="flex items-center justify-between gap-3">
             <span className="text-base sm:text-lg text-black-700">
-              Chosen Plan
+              {t("extraText.chosenPlan")}
             </span>
             <span className="text-base sm:text-lg text-black-700">
               {cart?.package?.title} {cart?.package?.dataSize}{" "}
@@ -37,7 +41,7 @@ function SimPlanSummery() {
           </div>
           <div className="flex items-center justify-between gap-3">
             <span className="text-base sm:text-lg text-black-700">
-              Sim Type
+              {t("extraText.dataAvailable")}
             </span>
             <span className="text-base sm:text-lg text-black-700 uppercase">
               {cart?.cartType}
@@ -45,7 +49,7 @@ function SimPlanSummery() {
           </div>
           <div className="flex items-center justify-between gap-3">
             <span className="text-base sm:text-lg text-black-700">
-              Start Date
+              {t("extraText.startDate")}
             </span>
             <span className="text-base sm:text-lg text-black-700">
               {formattedDate}
@@ -53,7 +57,7 @@ function SimPlanSummery() {
           </div>
           <div className="flex items-center justify-between gap-3">
             <span className="text-base sm:text-lg text-black-700">
-              Quantity
+              {t("extraText.quantity")}
             </span>
             <span className="text-base sm:text-lg text-black-700">
               {cart?.quantity}
@@ -62,7 +66,7 @@ function SimPlanSummery() {
         </div>
         <div className="flex items-center justify-between gap-3 pt-5 border-t border-neutral-300">
           <span className="text-lg text-black-900 font-semibold">
-            Total Amount
+            {t("extraText.totalAmount")}
           </span>
           <span className="text-lg text-black-900 font-semibold">
             SGD {cart?.package?.packPrice}

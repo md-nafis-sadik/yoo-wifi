@@ -21,7 +21,12 @@
     "previous": "前へ",
     "next": "次へ",
     "addACountry": "国を追加",
-    "viewLocations": "場所を見る"
+    "viewLocations": "場所を見る",
+    "sim": "SIM",
+    "eSim": "eSIM",
+    "homeorAddress": "ホームまたは住所",
+    "hotel": "ホテル",
+    "saveAddress": "住所を保存"
   },
   "extraText": {
     "from": "から",
@@ -46,14 +51,47 @@
     "dataAvailable": "利用可能なデータ",
     "startDate": "開始日",
     "quantity": "数量",
-    "totalAmount": "合計金額"
+    "totalAmount": "合計金額",
+    "simType": "SIMタイプ",
+    "chooseNoOfDays": "日数を選択",
+    "noOfSimESim": "SIM/eSIMの数",
+    "selectShippingOption": "配送オプションを選択",
+    "selectLocation": "場所を選択",
+    "deliveryAddress": "配送先住所",
+    "addAddress": "住所を追加",
+    "addNewAddress": "新しい住所を追加",
+    "addressDetails": "住所の詳細"
   },
   "form": {
     "startDate": "開始日",
     "endDate": "終了日",
     "pickADate": "日付を選択",
     "selectCountry": "国を選択",
-    "country": "国"
+    "country": "国",
+    "fullName": "フルネーム",
+    "enterNameHere": "名前を入力してください",
+    "phoneNumber": "電話番号",
+    "enterNumber": "番号を入力してください",
+    "state": "州",
+    "selectState": "州を選択してください",
+    "address": "住所",
+    "enterFullAddress": "完全な住所を入力してください",
+    "apartment": "アパート/階/ユニット/スイートなど",
+    "enterApartmentDetails": "アパート/階/ユニット/スイートを入力してください",
+    "province": "県",
+    "enterProvince": "県を入力してください",
+    "postalCode": "郵便番号/ZIPコード",
+    "enterPostalCode": "郵便番号を入力してください",
+
+    "addCreditDebit": "クレジット/デビットを追加",
+    "cardholderName": "カード名義人*",
+    "cardholderNamePlaceholder": "フルネームを入力してください",
+    "cardNumber": "カード番号*",
+    "cardNumberPlaceholder": "番号を入力してください",
+    "cvcCvv": "CVC/CVV2*",
+    "cvcCvvPlaceholder": "CVCコードを入力してください",
+    "expiryDate": "有効期限",
+    "expiryDatePlaceholder": "MM/YY"
   },
   "notFound": {
     "noPackage": "検索に一致するパッケージが見つかりませんでした"
@@ -1776,6 +1814,15 @@
       ]
     }
   },
+  "routerPlan": {
+    "heading": "プランを選択",
+    "tabs": ["すべて", "日別", "月別", "複数国"],
+    "countryCoverage": "カバレッジ地域",
+    "countryCoverageInfo": "*パッケージを選択してください",
+    "information": "情報",
+    "informationInfo": "*パッケージを選択してください"
+  },
+
   "simRegion": {
     "tabs": ["ポケットWiFi", "SIM/eSIM", "ルーター"],
     "header": {
@@ -1797,5 +1844,86 @@
         }
       ]
     }
+  },
+  "simPlan": {
+    "heading": "プランを選択",
+    "tabs": ["すべて", "日別", "月別", "複数国"],
+    "countryCoverage": "カバレッジ地域",
+    "countryCoverageInfo": "*パッケージを選択してください",
+    "information": "情報",
+    "informationInfo": "*パッケージを選択してください"
+  },
+  "simInformation": {
+    "accordionData": {
+      "items": [
+        {
+          "title": "情報",
+          "content": "高速インターネットアクセスをお楽しみください。即時接続、最大Bデバイス対応。4Gインターネット速度。最大12時間のデバイスバッテリー。Ycxywifi 24時間年中無休のカスタマーサポート。ポケットWiFiデバイス、充電ケーブル、ポーチを含みます。日数を延長したり、プランをいつでも追加できます。"
+        },
+        {
+          "title": "対象国",
+          "content": "アルジェリア、アンギラ、アンティグア・バーブーダ、アルゼンチン、アルバ、アゼルバイジャン、ボリビア、ブラジル、英領バージン諸島、チリ、コロンビア、コスタリカ。"
+        },
+        {
+          "title": "利用方法",
+          "content": "50GBのグローバルデータは90か国で利用可能です。サービス速度はモバイルネットワークパートナーに依存します。注文キャンセルには、注文金額の10％の手数料がかかります。一般的な利用規約が適用されます。Yoowifiは、いつでも変更を行う権利を有します。"
+        },
+        {
+          "title": "互換性",
+          "content": [
+            "50GBのグローバルデータは90か国で利用可能です。",
+            "サービス速度はモバイルネットワークパートナーに依存します。",
+            "注文キャンセルには、注文金額の10％の手数料がかかります。",
+            "Yoowifiは、いつでも変更を行う権利を有します。"
+          ]
+        }
+      ]
+    }
+  },
+  "shippingOptions": [
+    {
+      "title": "セルフピックアップ",
+      "subtitle": "場所を選択してください",
+      "description": "旅行の5日前にデバイスを受け取る"
+    },
+    {
+      "title": "国内配送",
+      "subtitle": "",
+      "description": "旅行の5営業日前までに配送。返送用のバッグ付き。事前注文の場合、旅行の3日前までに配送"
+    },
+    {
+      "title": "国内エクスプレス",
+      "subtitle": "",
+      "description": "午後2時までの注文で、2営業日以内に返送用のバッグ付きで配送"
+    },
+    {
+      "title": "国内スーパエクスプレス",
+      "subtitle": "",
+      "description": "午後2時までの注文で、同営業日中に返送用のバッグ付きで配送"
+    }
+  ],
+
+  "orderSummary": {
+    "orderSummary": "注文概要",
+    "planName": "プラン名",
+    "minimumCharges": "最低料金",
+    "deposit": "デポジット",
+    "subtotal": "小計",
+    "quantity": "数量",
+    "selfPickupDeliveryFee": "自己受け取り配送料",
+    "returnDropOffFee": "返却ドロップオフ料金",
+    "totalDeliveryCharges": "合計配送料",
+    "totalDataCharges": "合計データ料金",
+    "paymentInformation": "支払い情報",
+    "noCardAdded": "カードが追加されていません",
+    "addCard": "カードを追加",
+    "addNewPaymentMethod": "新しい支払い方法を追加",
+    "termsAndConditions": "利用規約",
+    "privacyPolicy": "プライバシーポリシー",
+    "readAndAgree": "私は以下を読んで同意しました",
+    "orderConfirmed": "注文が確定しました！",
+    "welcomeMessage": "またお会いできて嬉しいです。コースに入りましょう。",
+    "continue": "続行",
+    "simType": "SIMタイプ"
   }
 }

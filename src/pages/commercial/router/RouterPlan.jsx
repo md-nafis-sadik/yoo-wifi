@@ -18,10 +18,16 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import RouterCartService from "./RouterCartService";
-
-const tabs = ["all", "daily", "monthly", "multi-country"];
+import { useTranslation } from "react-i18next";
 
 function RouterPlan() {
+  const { t } = useTranslation();
+  const tabs = [
+    { tab: "all", translableName: t("routerPlan.tabs.0") },
+    { tab: "daily", translableName: t("routerPlan.tabs.1") },
+    { tab: "monthly", translableName: t("routerPlan.tabs.2") },
+    { tab: "multi-country", translableName: t("routerPlan.tabs.3") },
+  ];
   const { recomandedPackages, cart } = useSelector((state) => state.router);
   const [activeTab, setActiveTab] = useState("all");
   const dispatch = useDispatch();
@@ -69,7 +75,7 @@ function RouterPlan() {
         </h2>
         <div ref={emblaRef} className="w-full max-w-full overflow-hidden">
           <div className="flex items-center gap-4">
-            {tabs.map((tab) => (
+            {tabs.map(({ tab, translableName }) => (
               <Button
                 key={tab}
                 className={cn(
@@ -79,7 +85,7 @@ function RouterPlan() {
                 variant={activeTab === tab ? "secondary" : "outline"}
                 onClick={() => setActiveTab(tab)}
               >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                {translableName || tab.charAt(0).toUpperCase() + tab.slice(1)}
               </Button>
             ))}
           </div>
@@ -131,6 +137,7 @@ function RouterPlan() {
               cart?.package?.id == item?.id ? "border-main-600" : ""
             }`}
             item={item}
+            index={index}
             key={index}
             onClick={() => handleSelectPlan(item)}
           />

@@ -12,6 +12,7 @@ import { Switch } from "@/components/ui/switch";
 import { commercialRoutes, PlusIcon, SuccessIcon } from "@/services";
 import { setSimCartData } from "@/store/module/sim/slice";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -23,6 +24,7 @@ function SimOrderSummery() {
   const [isChecked, setIsChecked] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const dispatch = useDispatch();
+  const { t } = useTranslation();
   const isActive = isChecked && cart?.paymentCard?.id ? true : false;
 
   const handlePrev = () => {
@@ -46,17 +48,17 @@ function SimOrderSummery() {
     <div className="w-full">
       <div className="w-full  ">
         <h4 className="text-black-900 text-base sm:text-lg md:text-2xl font-bold">
-          Order Summary
+          {t("orderSummary.orderSummary")}
         </h4>
         <div className=" bg-neutral-100 rounded-2xl py-6 px-4 sm:p-8 md:p-10 divide-y divide-neutral-300 mt-4 sm:mt-6">
           {/*  */}
           <div className="pb-5 flex flex-col gap-4">
             <OrderSingleItem
-              title="Plan Name"
+              title={t("orderSummary.planName")}
               description={`${cart?.package?.title} ${cart?.package?.dataSize} ${cart?.package?.desc}`}
             />
             <OrderSingleItem
-              title="SIM Type"
+              title={t("orderSummary.simType")}
               description={cart?.cartType}
               descriptionClass="uppercase"
             />
@@ -64,22 +66,22 @@ function SimOrderSummery() {
           {/*  */}
           <div className="pb-5 flex flex-col gap-4  pt-5">
             <OrderSingleItem
-              title="Minimum Charges"
+              title={t("orderSummary.minimumCharges")}
               description="SGD 79.00"
               descriptionClass="uppercase"
             />
             <OrderSingleItem
-              title="Deposit"
+              title={t("orderSummary.deposit")}
               description="SGD 00"
               descriptionClass="uppercase"
             />
             <OrderSingleItem
-              title="Sub-total"
+              title={t("orderSummary.subtotal")}
               description="SGD 79.00"
               descriptionClass="uppercase"
             />
             <OrderSingleItem
-              title="Quantity"
+              title={t("orderSummary.quantity")}
               description={cart?.quantity}
               descriptionClass="uppercase"
             />
@@ -87,19 +89,22 @@ function SimOrderSummery() {
           {/*  */}
           <div className="pb-5 flex flex-col gap-4  pt-5">
             <OrderSingleItem
-              title="Self pick-up delivery fee"
+              title={t("orderSummary.selfPickupDeliveryFee")}
               description="FREE"
             />
-            <OrderSingleItem title="Return drop-off fee" description="FREE" />
             <OrderSingleItem
-              title="Total Delivery Charges"
+              title={t("orderSummary.returnDropOffFee")}
+              description="FREE"
+            />
+            <OrderSingleItem
+              title={t("orderSummary.totalDeliveryCharges")}
               description="SGD 0.00"
             />
           </div>
           {/*  */}
           <div className="flex items-center justify-between gap-3 pt-5">
             <span className="text-lg text-black-900 font-semibold">
-              Total Data Charges
+              {t("orderSummary.totalDataCharges")}
             </span>
             <span className="text-lg text-black-900 font-semibold">SGD 79</span>
           </div>
@@ -108,10 +113,10 @@ function SimOrderSummery() {
           {userPaymentCards?.length == 0 && (
             <div>
               <h5 className="text-black-900 text-base sm:text-lg md:text-2xl font-bold">
-                Payment Information
+                {t("orderSummary.paymentInformation")}
               </h5>
               <div className="px-10 py-6 rounded-2xl bg-neutral-100 text-sm sm:text-base md:text-lg text-black-600 mt-4 sm:mt-6">
-                No Card Added
+                {t("orderSummary.noCardAdded")}
               </div>
             </div>
           )}
@@ -134,21 +139,21 @@ function SimOrderSummery() {
                 onClick={() => setShowForm(true)}
               >
                 <PlusIcon />
-                <span>Add Card </span>
+                <span>{t("orderSummary.addCard")}</span>
               </button>
             </div>
           )}
           {userPaymentCards?.length == 0 && !showForm && (
             <div className="mt-4 sm:mt-6">
               <h4 className="text-black-900 text-base sm:text-lg md:text-2xl font-bold">
-                Add New Payment Method
+                {t("orderSummary.addNewPaymentMethod")}
               </h4>
               <button
                 type="button"
                 onClick={() => setShowForm(true)}
                 className="px-10 py-6 w-full rounded-2xl bg-neutral-100 flex items-center gap-2 text-sm sm:text-base md:text-lg text-black-900 font-semibold mt-6"
               >
-                <PlusIcon /> <span>Add Card </span>
+                <PlusIcon /> <span>{t("orderSummary.addCard")}</span>
               </button>
             </div>
           )}
@@ -159,9 +164,10 @@ function SimOrderSummery() {
               onCheckedChange={(ev) => setIsChecked(ev)}
             />
             <p className="text-black-700 text-base sm:text-lg">
-              I have read and agreed to the{" "}
+              {t("orderSummary.readAndAgree")}{" "}
               <span className="font-semibold">
-                Terms & Conditions & Privacy Policy.
+                {t("orderSummary.termsAndConditions")} &{" "}
+                {t("orderSummary.privacyPolicy")}.
               </span>
             </p>
           </div>
@@ -178,17 +184,17 @@ function SimOrderSummery() {
             </div>
             <div className="text-center flex flex-col gap-3 sm:gap-4">
               <DialogTitle className="text-2xl sm:text-3xl md:text-4xl font-bold text-black-700">
-                Order Confirmed!
+                {t("orderSummary.orderConfirmed")}
               </DialogTitle>
               <p className="text-base text-black-700">
-                We're glad to see you again. Let's dive into your courses.
+                {t("orderSummary.welcomeMessage")}
               </p>
             </div>
             <DialogClose
               onClick={handleContinue}
               className="px-10 py-4 bg-main-600 text-white rounded-xl max-w-max mx-auto outline-none border-none"
             >
-              Continue
+              {t("orderSummary.continue")}
             </DialogClose>
           </div>
         </DialogContent>

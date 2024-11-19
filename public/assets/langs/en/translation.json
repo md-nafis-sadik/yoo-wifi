@@ -21,7 +21,12 @@
     "previous": "Previous",
     "next": "Next",
     "addACountry": "Add a country",
-    "viewLocations": "View Locations"
+    "viewLocations": "View Locations",
+    "sim": "SIM",
+    "eSim": "eSIM",
+    "homeorAddress": "Home/Address",
+    "hotel": "Hotel",
+    "saveAddress": "Save Address"
   },
   "extraText": {
     "from": "From",
@@ -46,14 +51,47 @@
     "dataAvailable": "Data Available",
     "startDate": "Start Date",
     "quantity": "Quantity",
-    "totalAmount": "Total Amount"
+    "totalAmount": "Total Amount",
+    "simType": "SIM Type",
+    "chooseNoOfDays": "Choose Number of Days",
+    "noOfSimESim": "No of SIM/eSIM",
+    "selectShippingOption": "Select Shipping Option",
+    "selectLocation": "Select Location",
+    "deliveryAddress": "Delivery Address",
+    "addAddress": "Add Address",
+    "addNewAddress": "Add New Address",
+    "addressDetails": "Address Details"
   },
   "form": {
     "startDate": "Start Date",
     "endDate": "End Date",
     "pickADate": "Pick a Date",
     "selectCountry": "Select Country",
-    "country": "Country"
+    "country": "Country",
+    "fullName": "Full Name",
+    "enterNameHere": "Enter name here",
+    "phoneNumber": "Phone Number",
+    "enterNumber": "Enter Number",
+    "state": "State",
+    "selectState": "Select Country",
+    "address": "Address",
+    "enterFullAddress": "Enter full address",
+    "apartment": "Apartment/Floor/Unit/Suite etc",
+    "enterApartmentDetails": "Enter your apartment/floor/unit/suite",
+    "province": "Province",
+    "enterProvince": "Enter province",
+    "postalCode": "Postal/Zip",
+    "enterPostalCode": "Enter postal code",
+
+    "addCreditDebit": "Add Credit/Debit",
+    "cardholderName": "Cardholder Name*",
+    "cardholderNamePlaceholder": "Enter full name",
+    "cardNumber": "Card No.*",
+    "cardNumberPlaceholder": "Enter Number",
+    "cvcCvv": "CVC/CVV2*",
+    "cvcCvvPlaceholder": "Enter CVC code",
+    "expiryDate": "Expiry Date",
+    "expiryDatePlaceholder": "MM/YY"
   },
   "notFound": {
     "noPackage": "No package found for your search"
@@ -1778,6 +1816,10 @@
       ]
     }
   },
+  "routerPlan": {
+    "heading": "Select a Plan",
+    "tabs": ["all", "daily", "monthly", "multi-country"]
+  },
 
   "simRegion": {
     "tabs": ["Pocket WIFI", "SIM/eSIM", "Router"],
@@ -1800,5 +1842,82 @@
         }
       ]
     }
+  },
+  "simPlan": {
+    "heading": "Select a Plan",
+    "tabs": ["all", "daily", "monthly", "multi-country"]
+  },
+  "simInformation": {
+    "accordionData": {
+      "items": [
+        {
+          "title": "Information",
+          "content": "Enjoy High-Speed Internet Access. Immediate Connect up to B Devices. 4G Internet Speed. Up to 12 hours of device battery. Ycxywifi 24/7 Customer Support. Includes Pocket Wifi Device, Charging Cable, Pouch. Extend the days or add plans anytime."
+        },
+        {
+          "title": "Countries Covered",
+          "content": "Algeria, Anguilla, Antigua and Barbuda, Argentina, Aruba, Azerbaijan, Bolivia, Brazil, British Virgin Islands, Chile, Colombia, Costa Rica."
+        },
+        {
+          "title": "How To",
+          "content": "50GB global data is applicable to 90 countries. Speed of service is dependent on the mobile network partner. For order cancellation, a charge of 10% of the order will apply. General terms and conditions apply. Yoowifi reserves the right to make changes anytime."
+        },
+        {
+          "title": "Compatibility",
+          "content": [
+            "50GB global data is applicable to 90 countries.",
+            "Speed of service is dependent on the mobile network partner.",
+            "For order cancellation, a charge of 10% of the order will apply.",
+            "Yoowifi reserves the right to make changes anytime."
+          ]
+        }
+      ]
+    }
+  },
+  "shippingOptions": [
+    {
+      "title": "Self Pickup",
+      "subtitle": "Choose your location",
+      "description": "Device Collection: 5 days before travel"
+    },
+    {
+      "title": "Domestic",
+      "subtitle": "",
+      "description": "Within 5 business days before trip for Dec with return mailer bag. For advance orders, delivery will be within 3 days before trip"
+    },
+    {
+      "title": "Domestic Express",
+      "subtitle": "",
+      "description": "Within 2 business days for orders before 2pm with return mailer bag"
+    },
+    {
+      "title": "Domestic Super Express",
+      "subtitle": "",
+      "description": "Same business day before 2pm with return mailer bag"
+    }
+  ],
+
+  "orderSummary": {
+    "orderSummary": "Order Summary",
+    "planName": "Plan Name",
+    "minimumCharges": "Minimum Charges",
+    "deposit": "Deposit",
+    "subtotal": "Sub-total",
+    "quantity": "Quantity",
+    "selfPickupDeliveryFee": "Self pick-up delivery fee",
+    "returnDropOffFee": "Return drop-off fee",
+    "totalDeliveryCharges": "Total Delivery Charges",
+    "totalDataCharges": "Total Data Charges",
+    "paymentInformation": "Payment Information",
+    "noCardAdded": "No Card Added",
+    "addCard": "Add Card",
+    "addNewPaymentMethod": "Add New Payment Method",
+    "termsAndConditions": "Terms & Conditions",
+    "privacyPolicy": "Privacy Policy",
+    "readAndAgree": "I have read and agreed to the",
+    "orderConfirmed": "Order Confirmed!",
+    "welcomeMessage": "We're glad to see you again. Let's dive into your courses.",
+    "continue": "Continue",
+    "simType": "SIM Type"
   }
 }

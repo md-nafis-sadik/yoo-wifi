@@ -25,8 +25,17 @@ const localPath =
   window.location.pathname.includes("/sim") ||
   window.location.pathname.includes("/pocket-wifi");
 
+const localPathThirdDepth =
+  window.location.pathname.includes(
+    "pocket-wifi/shipping-option/self-pickup"
+  ) ||
+  window.location.pathname.includes("router/shipping-option/self-pickup") ||
+  window.location.pathname.includes("sim/shipping-option/self-pickup");
+
 const getCurrentLoadPath = (language) => {
-  if (localPath) {
+  if (localPathThirdDepth) {
+    return `../../assets/langs/${language}/translation.json`;
+  } else if (localPath) {
     return `../assets/langs/${language}/translation.json`;
   } else {
     return `./assets/langs/${language}/translation.json`;

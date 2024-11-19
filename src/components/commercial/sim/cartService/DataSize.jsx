@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { setSimCartData } from "@/store/module/sim/slice";
 import useEmblaCarousel from "embla-carousel-react";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 
 function DataSize({}) {
@@ -9,6 +10,7 @@ function DataSize({}) {
   const [emblaRef] = useEmblaCarousel(options);
   const { cart, recomandedPackages } = useSelector((state) => state.sim);
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   const handlePackSelect = (item) => {
     dispatch(setSimCartData({ package: item }));
@@ -20,7 +22,9 @@ function DataSize({}) {
 
   return (
     <div className="w-full flex flex-col gap-4 overflow-hidden">
-      <h2 className="text-base font-semibold text-black-700">Data Size</h2>
+      <h2 className="text-base font-semibold text-black-700">
+        {t("extraText.dataSize")}
+      </h2>
       <div className="w-full">
         <div ref={emblaRef} className="max-w-full overflow-hidden ">
           <div className="flex  gap-4 ">

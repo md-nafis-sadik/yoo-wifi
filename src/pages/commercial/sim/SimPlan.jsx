@@ -15,10 +15,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import SimCartService from "./SimCartService";
 import RouterCartFooter from "@/components/commercial/sim/RouterCartFooter";
-
-const tabs = ["all", "daily", "monthly", "multi-country"];
+import { useTranslation } from "react-i18next";
 
 function SimPlan() {
+  const { t } = useTranslation();
+  const tabs = [
+    { tab: "all", translableName: t("simPlan.tabs.0") },
+    { tab: "daily", translableName: t("simPlan.tabs.1") },
+    { tab: "monthly", translableName: t("simPlan.tabs.2") },
+    { tab: "multi-country", translableName: t("simPlan.tabs.3") },
+  ];
+
   const { recomandedPackages, cart } = useSelector((state) => state.sim);
   const [activeTab, setActiveTab] = useState("all");
   const dispatch = useDispatch();
@@ -62,11 +69,11 @@ function SimPlan() {
     <div className="w-full overflow-auto">
       <div className="w-full flex flex-col gap-5">
         <h2 className="text-base sm:text-xl md:text-2xl font-semibold md:font-bold text-black-900">
-          Select a Plan
+          {t("simPlan.heading")}
         </h2>
         <div ref={emblaRef} className="w-full max-w-full overflow-hidden">
           <div className="flex items-center gap-4">
-            {tabs.map((tab) => (
+            {tabs.map(({ tab, translableName }) => (
               <Button
                 key={tab}
                 className={cn(
@@ -76,7 +83,7 @@ function SimPlan() {
                 variant={activeTab === tab ? "secondary" : "outline"}
                 onClick={() => setActiveTab(tab)}
               >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                {translableName || tab.charAt(0).toUpperCase() + tab.slice(1)}
               </Button>
             ))}
           </div>
@@ -88,7 +95,7 @@ function SimPlan() {
         <Accordion type="single" collapsible="true" defaultValue="item-1">
           <AccordionItem value={`item-1`} className="">
             <AccordionTrigger className="!text-sm md:!text-base !font-bold text-black-700">
-              Country Coverage
+              {t("extraText.countryCoverage")}
             </AccordionTrigger>
             <AccordionContent className="!text-xs md:!text-base !leading-[120%] md:!leading-[150%] text-black-700">
               {cart && cart.package.coverage ? (
@@ -99,7 +106,23 @@ function SimPlan() {
                   </span>
                 ))
               ) : (
-                <span>*Select a package first</span>
+                <span>{t("extraText.selectPackage")}</span>
+              )}
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+
+        {/* Information */}
+        <Accordion type="single" collapsible="true" defaultValue="item-1">
+          <AccordionItem value={`item-1`} className="">
+            <AccordionTrigger className="!text-sm md:!text-base !font-bold text-black-700">
+              {t("extraText.information")}
+            </AccordionTrigger>
+            <AccordionContent className="!text-xs md:!text-base !leading-[120%] md:!leading-[150%] text-black-700">
+              {cart && cart.package.information ? (
+                <span>{cart.package.information}</span>
+              ) : (
+                <span>{t("extraText.selectPackage")}</span>
               )}
             </AccordionContent>
           </AccordionItem>
@@ -112,6 +135,7 @@ function SimPlan() {
               cart?.package?.id == item?.id ? "border-main-600" : ""
             }`}
             item={item}
+            index={index}
             key={index}
             onClick={() => handleSelectPlan(item)}
           />
