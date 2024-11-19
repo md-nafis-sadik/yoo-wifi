@@ -28,7 +28,8 @@
     "homeorAddress": "Home/Address",
     "hotel": "Hotel",
     "saveAddress": "Save Address",
-    "buyPocketWifi": "Buy Pocket Wifi"
+    "buyPocketWifi": "Buy Pocket Wifi",
+    "dropOffLocations": "Drop Off Locations"
   },
   "extraText": {
     "from": "From",
@@ -2011,6 +2012,125 @@
         "midHeading": "Explore the World and Stay Connected!",
         "subHeading": "Are you a travel-loving influencer who values staying connected and sharing adventures with your followers? Join the Yoowifi Affiliate Yoo Wander program for an exciting partnership. We’re here to support your authentic travel content and keep you connected with FREE global data."
       }
+    }
+  },
+
+  "howItWorksPage": {
+    "rentWifiSection": {
+      "sectionHeader": {
+        "heading": "Rent Yoowifi Pocket WiFi in 3 Easy Steps!",
+        "subHeading": "Choose your plan, collect your device, and stay connected effortlessly wherever you go!"
+      },
+      "rentWifiData": [
+        {
+          "step": "Step-1",
+          "title": "Get Yoowifi App",
+          "description": "Download Yoowifi App (first Timer only)",
+          "buttonText": "Download Yoowifi",
+          "icon": "DownloadFillIcon"
+        },
+        {
+          "step": "Step-2",
+          "title": "Select Your Plan",
+          "description": "On the app, search for your destination country, choose the data size, and set your start and end dates."
+        },
+        {
+          "step": "Step-3",
+          "title": "Complete Your Booking",
+          "description": "Select your preferred shipping method and proceed to checkout."
+        }
+      ],
+      "links": [
+        {
+          "title": "Drop Off Locations"
+        },
+        {
+          "title": "Contact Us",
+          "variant": "secondary"
+        }
+      ]
+    },
+    "deliveryChargesSection": {
+      "sectionHeader": {
+        "heading": "Delivery Charges",
+        "subHeading": "Don’t let slow internet tie you down! Switch to our portable solutions to experience connectivity without boundaries."
+      },
+      "howItWorksData": [
+        {
+          "type": "Local",
+          "typeSuffix": "",
+          "duration": "3-4 Business day"
+        },
+        {
+          "type": "Express",
+          "typeSuffix": "(Order by 10am)",
+          "duration": "3-4 Business day"
+        },
+        {
+          "type": "Super Express",
+          "typeSuffix": "(Order by 10am)",
+          "duration": "3-4 Business day"
+        },
+        {
+          "type": "Standard International",
+          "typeSuffix": "",
+          "duration": "3-4 Business day"
+        }
+      ]
+    },
+    "rentServices": [
+      {
+        "title": "Local return mailer bag",
+        "description": "Simply pack the device and its accessories into the prepaid and return mailer bag any SingPost mailbox"
+      },
+      {
+        "title": "Self-Return",
+        "description": "Simply pack the device and its accessories and you may return at any pickup/Return location."
+      },
+      {
+        "title": "International Courier",
+        "description": "Contact Local DHL to pickup device if you have a return mailer bag / arrange your own Courier"
+      }
+    ],
+    "selfReturnSection": {
+      "sectionHeader": {
+        "heading": "Simple Self-Return In less than a minute",
+        "subHeading": "With Yoowifi, easily pick up your device at any designated location and return it at one of 20+ drop-off points across the island. Enjoy a hassle-free experience and stay connected wherever your travels take you!"
+      },
+      "selfReturnData": [
+        {
+          "title": "Login to Yoowifi App",
+          "description": "Start by visiting any of our 20+ pickup and return locations. On the app, go to 'My Data', select the device you wish to return, and tap on 'Return Device'."
+        },
+        {
+          "title": "Scan Location QR Code",
+          "description": "Next, scan the location QR code provided by the staff."
+        },
+        {
+          "title": "Scan Device QR Code",
+          "description": "Scan the QR code located at the back of the device to complete the return."
+        }
+      ]
+    },
+    "topUpSection": {
+      "sectionHeader": {
+        "heading": "Top Up Your Data in Just a Few Steps",
+        "subHeading": "Add data effortlessly with just a few taps, ensuring you stay connected"
+      },
+      "topUpData": [
+        {
+          "title": "Select Your Device",
+          "description": "Open the Yoowifi app, go to My Data, and select the device you want to top up."
+        },
+        {
+          "title": "Choose Your Plan",
+          "description": "Click on Add Data, select your desired country and plan, then set the start and end dates."
+        },
+        {
+          "title": "Proceed to Checkout",
+          "description": "Confirm your selections and proceed to checkout."
+        }
+      ]
     }
   }
 }

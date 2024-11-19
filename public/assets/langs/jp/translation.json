@@ -28,7 +28,8 @@
     "homeorAddress": "ホームまたは住所",
     "hotel": "ホテル",
     "saveAddress": "住所を保存",
-    "buyPocketWifi": "ポケットWi-Fiを購入"
+    "buyPocketWifi": "ポケットWi-Fiを購入",
+    "dropOffLocations": "ドロップオフ場所"
   },
   "extraText": {
     "from": "から",
@@ -2017,6 +2018,125 @@
         "midHeading": "世界を探求し、接続し続ける！",
         "subHeading": "旅行を愛するインフルエンサーで、フォロワーと冒険をシェアしながら接続状態を維持したい方へ。YoowifiアフィリエイトYooWanderプログラムに参加して、エキサイティングなパートナーシップを築きましょう。私たちは、あなたの本物の旅行コンテンツをサポートし、無料でグローバルデータを提供します。"
       }
+    }
+  },
+
+  "howItWorksPage": {
+    "rentWifiSection": {
+      "sectionHeader": {
+        "heading": "YoowifiポケットWiFiを3つの簡単なステップでレンタル！",
+        "subHeading": "プランを選び、デバイスを受け取り、どこでも簡単に接続して旅行を楽しもう！"
+      },
+      "rentWifiData": [
+        {
+          "step": "ステップ1",
+          "title": "Yoowifiアプリを取得",
+          "description": "Yoowifiアプリをダウンロード（初回のみ）",
+          "buttonText": "Yoowifiをダウンロード",
+          "icon": "DownloadFillIcon"
+        },
+        {
+          "step": "ステップ2",
+          "title": "プランを選択",
+          "description": "アプリで目的地の国を検索し、データサイズを選択、開始日と終了日を設定します。"
+        },
+        {
+          "step": "ステップ3",
+          "title": "予約を完了",
+          "description": "希望の配送方法を選択し、チェックアウトを進めます。"
+        }
+      ],
+      "links": [
+        {
+          "title": "ドロップオフ場所"
+        },
+        {
+          "title": "お問い合わせ",
+          "variant": "secondary"
+        }
+      ]
+    },
+    "deliveryChargesSection": {
+      "sectionHeader": {
+        "heading": "配送料",
+        "subHeading": "遅いインターネットに縛られないでください！ポータブルソリューションに切り替えて、制限のない接続を体験しましょう。"
+      },
+      "howItWorksData": [
+        {
+          "type": "ローカル",
+          "typeSuffix": "",
+          "duration": "3〜4営業日"
+        },
+        {
+          "type": "エクスプレス",
+          "typeSuffix": "(午前10時までに注文)",
+          "duration": "3〜4営業日"
+        },
+        {
+          "type": "スーパーエクスプレス",
+          "typeSuffix": "(午前10時までに注文)",
+          "duration": "3〜4営業日"
+        },
+        {
+          "type": "標準国際便",
+          "typeSuffix": "",
+          "duration": "3〜4営業日"
+        }
+      ]
+    },
+    "rentServices": [
+      {
+        "title": "ローカル返却用メールバッグ",
+        "description": "デバイスとそのアクセサリを、あらかじめ支払い済みの返却用メールバッグに入れ、任意のSingPost郵便ポストに返送してください。"
+      },
+      {
+        "title": "自己返却",
+        "description": "デバイスとそのアクセサリを梱包し、任意のピックアップ/返却場所に返却できます。"
+      },
+      {
+        "title": "国際宅配便",
+        "description": "返却用メールバッグがある場合は、ローカルDHLに連絡してデバイスを引き取ってもらうか、独自の宅配便を手配してください。"
+      }
+    ],
+    "selfReturnSection": {
+      "sectionHeader": {
+        "heading": "1分以内で簡単なセルフリターン",
+        "subHeading": "Yoowifiを使えば、指定されたどの場所でも簡単にデバイスを受け取り、島内の20か所以上のドロップオフポイントで返却できます。どこへ行っても接続を維持できる、手間のかからない体験をお楽しみください！"
+      },
+      "selfReturnData": [
+        {
+          "title": "Yoowifiアプリにログイン",
+          "description": "まず、20か所以上のピックアップおよび返却場所のいずれかに訪れます。アプリで「マイデータ」を開き、返却するデバイスを選択し、「デバイスを返却」をタップします。"
+        },
+        {
+          "title": "場所のQRコードをスキャン",
+          "description": "次に、スタッフが提供した場所のQRコードをスキャンします。"
+        },
+        {
+          "title": "デバイスのQRコードをスキャン",
+          "description": "デバイスの背面にあるQRコードをスキャンして、返却を完了します。"
+        }
+      ]
+    },
+    "topUpSection": {
+      "sectionHeader": {
+        "heading": "データを簡単に数ステップでトップアップ",
+        "subHeading": "数回のタップで簡単にデータを追加し、接続状態を維持できます"
+      },
+      "topUpData": [
+        {
+          "title": "デバイスを選択",
+          "description": "Yoowifiアプリを開き、「My Data」からトップアップしたいデバイスを選択します。"
+        },
+        {
+          "title": "プランを選択",
+          "description": "「Add Data」をクリックして、希望する国とプランを選び、開始日と終了日を設定します。"
+        },
+        {
+          "title": "チェックアウトへ進む",
+          "description": "選択内容を確認し、チェックアウトに進みます。"
+        }
+      ]
     }
   }
 }

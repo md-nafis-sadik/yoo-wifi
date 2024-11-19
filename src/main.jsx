@@ -24,6 +24,7 @@ const localPath =
   window.location.pathname.includes("/router") ||
   window.location.pathname.includes("/sim") ||
   window.location.pathname.includes("/affiliate") ||
+  window.location.pathname.includes("/how-it-works") ||
   window.location.pathname.includes("/pocket-wifi");
 
 const localPathThirdDepth =
