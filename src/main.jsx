@@ -25,6 +25,7 @@ const localPath =
   window.location.pathname.includes("/sim") ||
   window.location.pathname.includes("/affiliate") ||
   window.location.pathname.includes("/how-it-works") ||
+  window.location.pathname.includes("/country-coverage/filter") ||
   window.location.pathname.includes("/pocket-wifi");
 
 const localPathThirdDepth =
@@ -32,6 +33,7 @@ const localPathThirdDepth =
     "pocket-wifi/shipping-option/self-pickup"
   ) ||
   window.location.pathname.includes("router/shipping-option/self-pickup") ||
+  window.location.pathname.includes("/package/details/") ||
   window.location.pathname.includes("sim/shipping-option/self-pickup");
 
 const getCurrentLoadPath = (language) => {

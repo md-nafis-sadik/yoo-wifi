@@ -63,7 +63,10 @@
     "deliveryAddress": "配送先住所",
     "addAddress": "住所を追加",
     "addNewAddress": "新しい住所を追加",
-    "addressDetails": "住所の詳細"
+    "addressDetails": "住所の詳細",
+    "noCountriesFoundInThisRegion": "この地域には国が見つかりません",
+    "searchAnything": "何かを検索...",
+    "filters": "フィルター"
   },
   "form": {
     "startDate": "開始日",
@@ -2138,5 +2141,40 @@
         }
       ]
     }
+  },
+
+  "countryCoverage": {
+    "sectionHeader": {
+      "heading": "国別カバレッジ",
+      "subHeading": "自信を持って世界中を移動！どこでもいつでも接続可能でデータ準備完了！"
+    },
+    "regionList": [
+      {
+        "name": "アジア",
+        "value": "asia"
+      },
+      {
+        "name": "ヨーロッパ",
+        "value": "europe"
+      },
+      {
+        "name": "アメリカ",
+        "value": "america"
+      },
+      {
+        "name": "オーストラリア",
+        "value": "australia"
+      },
+      {
+        "name": "アフリカ",
+        "value": "africa"
+      }
+    ]
+  },
+
+  "stayConnectedCTA": {
+    "heading": "どこでも接続可能",
+    "subHeading": "140+カ国",
+    "description": "手のひらで世界中の心配いらないWiFiを。どこに行っても、旅行中でも、質の高いインターネットに接続できます。"
   }
 }

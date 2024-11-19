@@ -63,7 +63,10 @@
     "deliveryAddress": "Delivery Address",
     "addAddress": "Add Address",
     "addNewAddress": "Add New Address",
-    "addressDetails": "Address Details"
+    "addressDetails": "Address Details",
+    "noCountriesFoundInThisRegion": "No countries found in this region",
+    "searchAnything": "Search anything...",
+    "filters": "Filters"
   },
   "form": {
     "startDate": "Start Date",
@@ -2132,5 +2135,40 @@
         }
       ]
     }
+  },
+
+  "countryCoverage": {
+    "sectionHeader": {
+      "heading": "Country Coverage",
+      "subHeading": "Roam the world with confidence! Stay connected and data-ready, anytime, anywhere!"
+    },
+    "regionList": [
+      {
+        "name": "Asia",
+        "value": "asia"
+      },
+      {
+        "name": "Europe",
+        "value": "europe"
+      },
+      {
+        "name": "America",
+        "value": "america"
+      },
+      {
+        "name": "Australia",
+        "value": "australia"
+      },
+      {
+        "name": "Africa",
+        "value": "africa"
+      }
+    ]
+  },
+
+  "stayConnectedCTA": {
+    "heading": "Stay Connected Everywhere",
+    "subHeading": "140+ Countries",
+    "description": "A world of worry-free WiFi in the palm of your hand. Connect to quality internet when you travel—no matter where your journey takes you."
   }
 }
