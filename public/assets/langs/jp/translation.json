@@ -15,13 +15,25 @@
     "enquireNow": "今すぐお問い合わせ",
     "viewMore": "もっと見る",
     "viewSimESim": "SIM/eSIMを見る",
+    "viewSteps": "ステップを見る",
     "rentADeviceNow": "デバイスを今すぐレンタル",
     "rental": "レンタル",
     "topUp": "トップアップ",
     "previous": "前へ",
     "next": "次へ",
     "addACountry": "国を追加",
-    "viewLocations": "場所を見る"
+    "viewLocations": "場所を見る",
+    "sim": "SIM",
+    "eSim": "eSIM",
+    "homeorAddress": "ホームまたは住所",
+    "hotel": "ホテル",
+    "saveAddress": "住所を保存",
+    "buyPocketWifi": "ポケットWi-Fiを購入",
+    "dropOffLocations": "ドロップオフ場所",
+    "login": "ログイン",
+    "logout": "ログアウト",
+    "continue": "続行",
+    "verify": "確認"
   },
   "extraText": {
     "from": "から",
@@ -46,14 +58,50 @@
     "dataAvailable": "利用可能なデータ",
     "startDate": "開始日",
     "quantity": "数量",
-    "totalAmount": "合計金額"
+    "totalAmount": "合計金額",
+    "simType": "SIMタイプ",
+    "chooseNoOfDays": "日数を選択",
+    "noOfSimESim": "SIM/eSIMの数",
+    "selectShippingOption": "配送オプションを選択",
+    "selectLocation": "場所を選択",
+    "deliveryAddress": "配送先住所",
+    "addAddress": "住所を追加",
+    "addNewAddress": "新しい住所を追加",
+    "addressDetails": "住所の詳細",
+    "noCountriesFoundInThisRegion": "この地域には国が見つかりません",
+    "searchAnything": "何かを検索...",
+    "filters": "フィルター"
   },
   "form": {
     "startDate": "開始日",
     "endDate": "終了日",
     "pickADate": "日付を選択",
     "selectCountry": "国を選択",
-    "country": "国"
+    "country": "国",
+    "fullName": "フルネーム",
+    "enterNameHere": "名前を入力してください",
+    "phoneNumber": "電話番号",
+    "enterNumber": "番号を入力してください",
+    "state": "州",
+    "selectState": "州を選択してください",
+    "address": "住所",
+    "enterFullAddress": "完全な住所を入力してください",
+    "apartment": "アパート/階/ユニット/スイートなど",
+    "enterApartmentDetails": "アパート/階/ユニット/スイートを入力してください",
+    "province": "県",
+    "enterProvince": "県を入力してください",
+    "postalCode": "郵便番号/ZIPコード",
+    "enterPostalCode": "郵便番号を入力してください",
+
+    "addCreditDebit": "クレジット/デビットを追加",
+    "cardholderName": "カード名義人*",
+    "cardholderNamePlaceholder": "フルネームを入力してください",
+    "cardNumber": "カード番号*",
+    "cardNumberPlaceholder": "番号を入力してください",
+    "cvcCvv": "CVC/CVV2*",
+    "cvcCvvPlaceholder": "CVCコードを入力してください",
+    "expiryDate": "有効期限",
+    "expiryDatePlaceholder": "MM/YY"
   },
   "notFound": {
     "noPackage": "検索に一致するパッケージが見つかりませんでした"
@@ -1776,6 +1824,15 @@
       ]
     }
   },
+  "routerPlan": {
+    "heading": "プランを選択",
+    "tabs": ["すべて", "日別", "月別", "複数国"],
+    "countryCoverage": "カバレッジ地域",
+    "countryCoverageInfo": "*パッケージを選択してください",
+    "information": "情報",
+    "informationInfo": "*パッケージを選択してください"
+  },
+
   "simRegion": {
     "tabs": ["ポケットWiFi", "SIM/eSIM", "ルーター"],
     "header": {
@@ -1796,6 +1853,385 @@
           "placeholder": "メンバーIDを入力"
         }
       ]
+    }
+  },
+  "simPlan": {
+    "heading": "プランを選択",
+    "tabs": ["すべて", "日別", "月別", "複数国"],
+    "countryCoverage": "カバレッジ地域",
+    "countryCoverageInfo": "*パッケージを選択してください",
+    "information": "情報",
+    "informationInfo": "*パッケージを選択してください"
+  },
+  "simInformation": {
+    "accordionData": {
+      "items": [
+        {
+          "title": "情報",
+          "content": "高速インターネットアクセスをお楽しみください。即時接続、最大Bデバイス対応。4Gインターネット速度。最大12時間のデバイスバッテリー。Ycxywifi 24時間年中無休のカスタマーサポート。ポケットWiFiデバイス、充電ケーブル、ポーチを含みます。日数を延長したり、プランをいつでも追加できます。"
+        },
+        {
+          "title": "対象国",
+          "content": "アルジェリア、アンギラ、アンティグア・バーブーダ、アルゼンチン、アルバ、アゼルバイジャン、ボリビア、ブラジル、英領バージン諸島、チリ、コロンビア、コスタリカ。"
+        },
+        {
+          "title": "利用方法",
+          "content": "50GBのグローバルデータは90か国で利用可能です。サービス速度はモバイルネットワークパートナーに依存します。注文キャンセルには、注文金額の10％の手数料がかかります。一般的な利用規約が適用されます。Yoowifiは、いつでも変更を行う権利を有します。"
+        },
+        {
+          "title": "互換性",
+          "content": [
+            "50GBのグローバルデータは90か国で利用可能です。",
+            "サービス速度はモバイルネットワークパートナーに依存します。",
+            "注文キャンセルには、注文金額の10％の手数料がかかります。",
+            "Yoowifiは、いつでも変更を行う権利を有します。"
+          ]
+        }
+      ]
+    }
+  },
+  "shippingOptions": [
+    {
+      "title": "セルフピックアップ",
+      "subtitle": "場所を選択してください",
+      "description": "旅行の5日前にデバイスを受け取る"
+    },
+    {
+      "title": "国内配送",
+      "subtitle": "",
+      "description": "旅行の5営業日前までに配送。返送用のバッグ付き。事前注文の場合、旅行の3日前までに配送"
+    },
+    {
+      "title": "国内エクスプレス",
+      "subtitle": "",
+      "description": "午後2時までの注文で、2営業日以内に返送用のバッグ付きで配送"
+    },
+    {
+      "title": "国内スーパエクスプレス",
+      "subtitle": "",
+      "description": "午後2時までの注文で、同営業日中に返送用のバッグ付きで配送"
+    }
+  ],
+
+  "orderSummary": {
+    "orderSummary": "注文概要",
+    "planName": "プラン名",
+    "minimumCharges": "最低料金",
+    "deposit": "デポジット",
+    "subtotal": "小計",
+    "quantity": "数量",
+    "selfPickupDeliveryFee": "自己受け取り配送料",
+    "returnDropOffFee": "返却ドロップオフ料金",
+    "totalDeliveryCharges": "合計配送料",
+    "totalDataCharges": "合計データ料金",
+    "paymentInformation": "支払い情報",
+    "noCardAdded": "カードが追加されていません",
+    "addCard": "カードを追加",
+    "addNewPaymentMethod": "新しい支払い方法を追加",
+    "termsAndConditions": "利用規約",
+    "privacyPolicy": "プライバシーポリシー",
+    "readAndAgree": "私は以下を読んで同意しました",
+    "orderConfirmed": "注文が確定しました！",
+    "welcomeMessage": "またお会いできて嬉しいです。コースに入りましょう。",
+    "continue": "続行",
+    "simType": "SIMタイプ"
+  },
+
+  "setupPocketWifi": {
+    "heading": "ポケットWiFiの接続方法",
+    "subHeading": "簡単な手順でポケットWiFiに簡単に接続できます",
+    "setupSteps": [
+      {
+        "step": 1,
+        "title": "ポケットWiFiをオンにする",
+        "description": "電源ボタンを押して電源を入れ、ネットワークに接続されるのを待ちます。"
+      },
+      {
+        "step": 2,
+        "title": "WiFi名を確認する",
+        "description": "デバイスの画面でWiFiネットワーク名（SSID）を確認してください。"
+      },
+      {
+        "step": 3,
+        "title": "WiFiに接続する",
+        "description": "スマートフォン、タブレット、またはノートパソコンでWiFi設定を開き、SSIDを選択して、デバイスに表示されているパスワードを入力すると、インターネットに接続できます。"
+      }
+    ]
+  },
+
+  "returnDevicePocketWifi": {
+    "heading": "デバイスの返却方法",
+    "subHeading": "簡単な手順に従って、ストレスのない返却体験を確保しましょう。",
+    "cardData": [
+      {
+        "title": "Singpost ドロップオフ",
+        "description": "デバイスをレンタルすると、パッケージに前払いの返却ラベルが含まれています。このラベルを使用して簡単にデバイスを返送できます。返却後、返却処理が完了すると、メールで確認の通知を受け取ることがあります。",
+        "buttonText": "ロケーションを表示"
+      },
+      {
+        "title": "ピックアップドロップオフロケーション",
+        "description": "Yoowifiでは、指定されたロケーションのいずれかでデバイスを簡単に受け取り、島全体にある30以上の便利なドロップオフポイントで返却できます。このスムーズなプロセスにより、旅行先でも常に接続状態を保つことができます！",
+        "buttonText": "ロケーションを表示"
+      }
+    ]
+  },
+
+  "pocketWifiTopUp": {
+    "heading": "プランのトップアップ方法",
+    "subHeading": "Yoowifiトップアップでデータニーズを簡単に管理",
+    "setupSteps": [
+      {
+        "step": 1,
+        "title": "デバイスを選択",
+        "description": "Yoowifiアプリを開き、「マイデータ」に進み、トップアップするデバイスを選択します。"
+      },
+      {
+        "step": 2,
+        "title": "プランを選択",
+        "description": "「データ追加」をクリックし、希望の国とプランを選択し、開始日と終了日を設定します。"
+      },
+      {
+        "step": 3,
+        "title": "チェックアウトへ進む",
+        "description": "選択内容を確認し、チェックアウトに進みます。"
+      }
+    ]
+  },
+
+  "affiliate": {
+    "affiliateServiceData": [
+      {
+        "title": "デバイスを選択",
+        "description": "Yoowifiアプリを開き、「マイデータ」に移動し、トップアップしたいデバイスを選択します。"
+      },
+      {
+        "title": "プランを選択",
+        "description": "「データ追加」をクリックし、希望する国とプランを選択し、開始日と終了日を設定します。"
+      },
+      {
+        "title": "チェックアウトへ進む",
+        "description": "選択内容を確認し、チェックアウトに進みます。"
+      }
+    ],
+    "banner": {
+      "pageTitle": "アフィリエイト",
+      "description": "質問や疑問がある場合は、フォームに記入してください。すぐにご連絡いたします！"
+    },
+    "joinAffiliateSection": {
+      "sectionId": "join-affiliate",
+      "secCommon80Class": "sec_common_80 xl:!px-0",
+      "sectionHeader": {
+        "heading": "YooWanderプログラムに参加",
+        "midHeading": "世界を探求し、接続し続ける！",
+        "subHeading": "旅行を愛するインフルエンサーで、フォロワーと冒険をシェアしながら接続状態を維持したい方へ。YoowifiアフィリエイトYooWanderプログラムに参加して、エキサイティングなパートナーシップを築きましょう。私たちは、あなたの本物の旅行コンテンツをサポートし、無料でグローバルデータを提供します。"
+      }
+    }
+  },
+
+  "howItWorksPage": {
+    "rentWifiSection": {
+      "sectionHeader": {
+        "heading": "YoowifiポケットWiFiを3つの簡単なステップでレンタル！",
+        "subHeading": "プランを選び、デバイスを受け取り、どこでも簡単に接続して旅行を楽しもう！"
+      },
+      "rentWifiData": [
+        {
+          "step": "ステップ1",
+          "title": "Yoowifiアプリを取得",
+          "description": "Yoowifiアプリをダウンロード（初回のみ）",
+          "buttonText": "Yoowifiをダウンロード",
+          "icon": "DownloadFillIcon"
+        },
+        {
+          "step": "ステップ2",
+          "title": "プランを選択",
+          "description": "アプリで目的地の国を検索し、データサイズを選択、開始日と終了日を設定します。"
+        },
+        {
+          "step": "ステップ3",
+          "title": "予約を完了",
+          "description": "希望の配送方法を選択し、チェックアウトを進めます。"
+        }
+      ],
+      "links": [
+        {
+          "title": "ドロップオフ場所"
+        },
+        {
+          "title": "お問い合わせ",
+          "variant": "secondary"
+        }
+      ]
+    },
+    "deliveryChargesSection": {
+      "sectionHeader": {
+        "heading": "配送料",
+        "subHeading": "遅いインターネットに縛られないでください！ポータブルソリューションに切り替えて、制限のない接続を体験しましょう。"
+      },
+      "howItWorksData": [
+        {
+          "type": "ローカル",
+          "typeSuffix": "",
+          "duration": "3〜4営業日"
+        },
+        {
+          "type": "エクスプレス",
+          "typeSuffix": "(午前10時までに注文)",
+          "duration": "3〜4営業日"
+        },
+        {
+          "type": "スーパーエクスプレス",
+          "typeSuffix": "(午前10時までに注文)",
+          "duration": "3〜4営業日"
+        },
+        {
+          "type": "標準国際便",
+          "typeSuffix": "",
+          "duration": "3〜4営業日"
+        }
+      ]
+    },
+    "rentServices": [
+      {
+        "title": "ローカル返却用メールバッグ",
+        "description": "デバイスとそのアクセサリを、あらかじめ支払い済みの返却用メールバッグに入れ、任意のSingPost郵便ポストに返送してください。"
+      },
+      {
+        "title": "自己返却",
+        "description": "デバイスとそのアクセサリを梱包し、任意のピックアップ/返却場所に返却できます。"
+      },
+      {
+        "title": "国際宅配便",
+        "description": "返却用メールバッグがある場合は、ローカルDHLに連絡してデバイスを引き取ってもらうか、独自の宅配便を手配してください。"
+      }
+    ],
+    "selfReturnSection": {
+      "sectionHeader": {
+        "heading": "1分以内で簡単なセルフリターン",
+        "subHeading": "Yoowifiを使えば、指定されたどの場所でも簡単にデバイスを受け取り、島内の20か所以上のドロップオフポイントで返却できます。どこへ行っても接続を維持できる、手間のかからない体験をお楽しみください！"
+      },
+      "selfReturnData": [
+        {
+          "title": "Yoowifiアプリにログイン",
+          "description": "まず、20か所以上のピックアップおよび返却場所のいずれかに訪れます。アプリで「マイデータ」を開き、返却するデバイスを選択し、「デバイスを返却」をタップします。"
+        },
+        {
+          "title": "場所のQRコードをスキャン",
+          "description": "次に、スタッフが提供した場所のQRコードをスキャンします。"
+        },
+        {
+          "title": "デバイスのQRコードをスキャン",
+          "description": "デバイスの背面にあるQRコードをスキャンして、返却を完了します。"
+        }
+      ]
+    },
+    "topUpSection": {
+      "sectionHeader": {
+        "heading": "データを簡単に数ステップでトップアップ",
+        "subHeading": "数回のタップで簡単にデータを追加し、接続状態を維持できます"
+      },
+      "topUpData": [
+        {
+          "title": "デバイスを選択",
+          "description": "Yoowifiアプリを開き、「My Data」からトップアップしたいデバイスを選択します。"
+        },
+        {
+          "title": "プランを選択",
+          "description": "「Add Data」をクリックして、希望する国とプランを選び、開始日と終了日を設定します。"
+        },
+        {
+          "title": "チェックアウトへ進む",
+          "description": "選択内容を確認し、チェックアウトに進みます。"
+        }
+      ]
+    }
+  },
+
+  "countryCoverage": {
+    "sectionHeader": {
+      "heading": "国別カバレッジ",
+      "subHeading": "自信を持って世界中を移動！どこでもいつでも接続可能でデータ準備完了！"
+    },
+    "regionList": [
+      {
+        "name": "アジア",
+        "value": "asia"
+      },
+      {
+        "name": "ヨーロッパ",
+        "value": "europe"
+      },
+      {
+        "name": "アメリカ",
+        "value": "america"
+      },
+      {
+        "name": "オーストラリア",
+        "value": "australia"
+      },
+      {
+        "name": "アフリカ",
+        "value": "africa"
+      }
+    ]
+  },
+
+  "stayConnectedCTA": {
+    "heading": "どこでも接続可能",
+    "subHeading": "140+カ国",
+    "description": "手のひらで世界中の心配いらないWiFiを。どこに行っても、旅行中でも、質の高いインターネットに接続できます。"
+  },
+
+  "login": {
+    "title": "ログインが必要です！",
+    "text": "続行するにはログインしてください。"
+  },
+
+  "authModal": {
+    "authMessages": {
+      "welcomeBack": {
+        "title": "お帰りなさい！",
+        "text": "またお会いできて嬉しいです。コースを始めましょう。"
+      },
+      "verification": {
+        "title": "確認",
+        "text": "確認コードがメールと電話番号に送信されました。"
+      },
+      "signUp": {
+        "title": "サインアップ",
+        "text": "登録はとても簡単です。さあ始めましょう！"
+      },
+      "signUpSuccessful": {
+        "title": "サインアップ完了！",
+        "text": "ご登録ありがとうございます！アカウントの準備ができました。"
+      },
+      "loginSuccessful": {
+        "title": "ログイン成功！",
+        "text": "お帰りなさい！続ける準備はできていますか？"
+      },
+      "accountReady": {
+        "title": "アカウント準備完了！",
+        "text": "ご登録ありがとうございます！アカウントの準備ができました。"
+      }
+    },
+    "placeholders": {
+      "firstName": "名前",
+      "lastName": "苗字",
+      "email": "メールアドレス"
+    },
+    "prompts": {
+      "noAccount": {
+        "text": "アカウントをお持ちではありませんか？",
+        "linkText": "今すぐ登録"
+      },
+      "hasAccount": {
+        "text": "すでにアカウントをお持ちですか？",
+        "linkText": "ログイン"
+      },
+      "resendOTP": {
+        "text": "認証コードが届きませんでしたか？",
+        "linkText": "コードを再送"
+      }
     }
   }
 }

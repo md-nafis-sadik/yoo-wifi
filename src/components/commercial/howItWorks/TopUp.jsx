@@ -2,17 +2,19 @@ import SectionHeader from "@/components/shared/others/SectionHeader";
 import VideoPlayer from "@/components/shared/others/VideoPlayer";
 import { Button } from "@/components/ui/button";
 import { topUpData } from "@/services";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 const TopUp = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <section className="containerX" id="topup">
       <div className="sec_common_60">
         <SectionHeader
-          heading="Top Up Your Data in Just a Few Steps"
-          subHeading="Add data effortlessly with just a few taps, ensuring you stay connected"
+          heading={t("howItWorksPage.topUpSection.sectionHeader.heading")}
+          subHeading={t("howItWorksPage.topUpSection.sectionHeader.subHeading")}
         />
 
         <div className="mt-4 md:mt-10 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-10 xl:gap-[76px]">
@@ -28,11 +30,15 @@ const TopUp = () => {
                   </p>
 
                   <h5 className="text-[18px] md:text-2xl font-semibold md:font-bold text-black-900 leading-[140%]">
-                    {item.title}
+                    {t(
+                      `howItWorksPage.topUpSection.topUpData.${index}.title`
+                    ) || item.title}
                   </h5>
 
                   <p className="text-black-600 text-sm md:text-[18px] leading-[140%] mt-4 md:mt-1">
-                    {item.description}
+                    {t(
+                      `howItWorksPage.topUpSection.topUpData.${index}.description`
+                    ) || item.description}
                   </p>
                 </article>
               ))}
@@ -44,7 +50,7 @@ const TopUp = () => {
                 className="!h-11 md:!h-[51px] w-[211px]"
                 onClick={() => navigate("/contact")}
               >
-                Contact Us
+                {t("buttonText.contactUs")}
               </Button>
             </div>
           </div>

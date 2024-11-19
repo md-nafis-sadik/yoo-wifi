@@ -1,8 +1,11 @@
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 import { appStore, googlePlay, qrcode } from "@/services/images";
+import { useTranslation } from "react-i18next";
 
 const AppDownloadDialog = ({ isOpen, setIsOpen }) => {
+  const { t } = useTranslation();
+
   return (
     <Dialog open={isOpen} onOpenChange={() => setIsOpen(!isOpen)}>
       <DialogContent
@@ -15,14 +18,13 @@ const AppDownloadDialog = ({ isOpen, setIsOpen }) => {
 
         <div className="w-full max-w-[400px] md:max-w-[650px] mb-9 md:mb-0 px-0 relative z-[3]">
           <h2 className="text-xl md:text-3xl md:font-semibold text-status-alert leading-[120%] md:uppercase">
-            Download the
+            {t("downloadYooWifi.downloadText")}
           </h2>
           <h3 className="text-6xl md:text-[5rem] font-bold md:font-extrabold text-white mt-1 md:mt-4">
             Yoowifi
           </h3>
           <p className="text-base md:text-xl text-white">
-            Advanced features for an effortless digital experience anytime,
-            anywhere!
+            {t("downloadYooWifi.ctaText")}
           </p>
           <div className="mt-10 flex flex-row items-center md:items-start lg:items-center gap-4 md:gap-10">
             <div className="flex flex-col gap-2 md:gap-4">

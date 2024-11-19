@@ -6,16 +6,20 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import { commercialRoutes, rentWifiData } from "@/services";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const RentYooWifi = () => {
   const { setAppDownloadDialogOpen } = useModal();
+  const { t } = useTranslation();
 
   return (
     <section id="rent" className="containerX">
       <div className="sec_common_80 xl:!px-0">
         <SectionHeader
-          heading="Rent Yoowifi Pocket WiFi in 3 Easy Steps!"
-          subHeading="Choose your plan, collect your device, and stay connected effortlessly wherever you go!"
+          heading={t("howItWorksPage.rentWifiSection.sectionHeader.heading")}
+          subHeading={t(
+            "howItWorksPage.rentWifiSection.sectionHeader.subHeading"
+          )}
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-[76px] mt-10">
@@ -32,10 +36,14 @@ const RentYooWifi = () => {
                   <div className="flex items-start justify-between">
                     <div>
                       <p className="text-sm md:text-base font-semibold leading-[120%] text-main-600">
-                        {step}
+                        {t(
+                          `howItWorksPage.rentWifiSection.rentWifiData.${index}.step`
+                        ) || step}
                       </p>
                       <h5 className="text-[18px] md:text-2xl font-semibold md:font-bold leading-[140%] mt-2 md:mt-4">
-                        {title}
+                        {t(
+                          `howItWorksPage.rentWifiSection.rentWifiData.${index}.title`
+                        ) || title}
                       </h5>
                     </div>
                     {buttonText && (
@@ -43,14 +51,18 @@ const RentYooWifi = () => {
                         className="!w-[180px] !h-[40px] !text-sm !font-medium items-center gap-x-1 hidden md:flex"
                         onClick={() => setAppDownloadDialogOpen(true)}
                       >
-                        {buttonText}
+                        {t(
+                          `howItWorksPage.rentWifiSection.rentWifiData.${index}.buttonText`
+                        ) || buttonText}
                         {icon()}
                       </Button>
                     )}
                   </div>
 
                   <p className="text-black-600 text-[18px] leading-[140%] mt-4">
-                    {description}
+                    {t(
+                      `howItWorksPage.rentWifiSection.rentWifiData.${index}.description`
+                    ) || description}
                   </p>
 
                   {buttonText && (
@@ -58,7 +70,9 @@ const RentYooWifi = () => {
                       className="!w-[167px] !h-[32px] !text-sm !font-medium items-center gap-x-1 flex md:hidden mt-4"
                       onClick={() => setAppDownloadDialogOpen(true)}
                     >
-                      {buttonText}
+                      {t(
+                        `howItWorksPage.rentWifiSection.rentWifiData.${index}.buttonText`
+                      ) || buttonText}
                       {icon()}
                     </Button>
                   )}
@@ -72,7 +86,7 @@ const RentYooWifi = () => {
                 className="flex-1 w-full"
               >
                 <Button className="w-full h-11 md:h-[52px]">
-                  Drop Off Locations
+                  {t("howItWorksPage.rentWifiSection.links.0.title")}
                 </Button>
               </Link>
 
@@ -81,7 +95,7 @@ const RentYooWifi = () => {
                 className="flex-1 w-full"
               >
                 <Button className="w-full h-11 md:h-[52px]" variant="secondary">
-                  Contact Us
+                  {t("howItWorksPage.rentWifiSection.links.1.title")}
                 </Button>
               </Link>
             </div>

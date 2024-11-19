@@ -11,6 +11,7 @@ import { commercialRoutes, PlusRoundedIcon } from "@/services";
 import { handleNextSimCart, setSimCartData } from "@/store/module/sim/slice";
 import useEmblaCarousel from "embla-carousel-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -19,6 +20,7 @@ function SimCartService({ className = "", multiCountry = false }) {
   const dispatch = useDispatch();
   const options = { align: "start" };
   const [emblaRef] = useEmblaCarousel(options);
+  const { t } = useTranslation();
 
   const [addNewCountry, setAddNewCountry] = useState(false);
 
@@ -35,7 +37,9 @@ function SimCartService({ className = "", multiCountry = false }) {
       className={cn("w-full flex flex-col gap-6 overflow-hidden", className)}
     >
       <div className="w-full flex flex-col gap-4">
-        <h2 className="text-base font-semibold text-black-700">SIM Type</h2>
+        <h2 className="text-base font-semibold text-black-700">
+          {t("extraText.simType")}
+        </h2>
         <div ref={emblaRef} className="w-full max-w-full overflow-hidden">
           <div className="flex items-center gap-4">
             <Button
@@ -47,7 +51,7 @@ function SimCartService({ className = "", multiCountry = false }) {
               variant={cart?.cartType == "sim" ? "default" : "cancel"}
               onClick={() => handleTabSelect("sim")}
             >
-              SIM
+              {t("buttonText.sim")}
             </Button>
             <Button
               type="button"
@@ -58,7 +62,7 @@ function SimCartService({ className = "", multiCountry = false }) {
               variant={cart?.cartType == "esim" ? "default" : "cancel"}
               onClick={() => handleTabSelect("esim")}
             >
-              eSIM
+              {t("buttonText.eSim")}
             </Button>
             <Button
               type="button"
@@ -69,7 +73,7 @@ function SimCartService({ className = "", multiCountry = false }) {
               variant={cart?.cartType == "topup" ? "default" : "cancel"}
               onClick={() => handleTabSelect("topup")}
             >
-              Top Up
+              {t("buttonText.topUp")}
             </Button>
           </div>
         </div>
@@ -94,7 +98,7 @@ function SimCartService({ className = "", multiCountry = false }) {
               onClick={() => setAddNewCountry(true)}
             >
               <PlusRoundedIcon className="h-6 w-6 md:h-8 md:w-8" />
-              <span>Add a country</span>
+              <span>{t("buttonText.addACountry")}</span>
             </button>
           )}
         </div>
@@ -104,7 +108,7 @@ function SimCartService({ className = "", multiCountry = false }) {
         max={10}
         defaultValue={cart?.quantity}
         setter={handleCartQuantity}
-        label="No of SIM/eSIM:"
+        label={t("extraText.noOfSimESim") + ":"}
         labelClass="font-semibold"
       />
       <SimInformation />

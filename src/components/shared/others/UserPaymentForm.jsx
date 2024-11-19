@@ -2,11 +2,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { validateCardDetails } from "@/services";
 import { setUserPaymentCard } from "@/store/module/auth/slice";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 
 function UserPaymentForm({ handler = () => {} }) {
   const { userPaymentCards } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -44,39 +46,39 @@ function UserPaymentForm({ handler = () => {} }) {
         className="flex flex-col px-3 sm:p-6 border border-main-600 rounded-xl gap-6 mt-6"
       >
         <h4 className="text-lg text-black-900 font-semibold">
-          Add Credit/Debit
+          {t("form.addCreditDebit")}
         </h4>
         <div className="flex flex-col gap-2 sm:gap-4 ">
           <Input
-            label="Cardholder Name*"
-            placeholder="Enter full name"
+            label={t("form.cardholderName")}
+            placeholder={t("form.cardholderNamePlaceholder")}
             name="username"
             required
           />
           <Input
             type="number"
-            label="Card No.*"
-            placeholder="Enter Number"
+            label={t("form.cardNumber")}
+            placeholder={t("form.cardNumberPlaceholder")}
             name="cardNumber"
             className="appearance-none"
             required
           />
           <Input
             type="number"
-            label="CVC/CVV2*"
-            placeholder="Enter CVC code"
+            label={t("form.cvcCvv")}
+            placeholder={t("form.cvcCvvPlaceholder")}
             name="cvc"
             required
           />
           <Input
-            label="Expiry Date"
-            placeholder="MM/YY"
+            label={t("form.expiryDate")}
+            placeholder={t("form.expiryDatePlaceholder")}
             name="expireDate"
             required
           />
         </div>
         <div className="mt-4 sm:mt-6 flex justify-end">
-          <Button type="submit">Save Address</Button>
+          <Button type="submit">{t("buttonText.saveAddress")}</Button>
         </div>
       </form>
     </div>

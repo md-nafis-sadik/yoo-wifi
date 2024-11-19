@@ -15,13 +15,25 @@
     "enquireNow": "Enquire Now",
     "viewMore": "View More",
     "viewSimESim": "View SIM/eSIM",
+    "viewSteps": "View Steps",
     "rentADeviceNow": "Rent a Device Now",
     "rental": "Rental",
     "topUp": "Top Up",
     "previous": "Previous",
     "next": "Next",
     "addACountry": "Add a country",
-    "viewLocations": "View Locations"
+    "viewLocations": "View Locations",
+    "sim": "SIM",
+    "eSim": "eSIM",
+    "homeorAddress": "Home/Address",
+    "hotel": "Hotel",
+    "saveAddress": "Save Address",
+    "buyPocketWifi": "Buy Pocket Wifi",
+    "dropOffLocations": "Drop Off Locations",
+    "login": "Log In",
+    "logout": "Logout",
+    "continue": "Continue",
+    "verify": "Verify"
   },
   "extraText": {
     "from": "From",
@@ -46,14 +58,50 @@
     "dataAvailable": "Data Available",
     "startDate": "Start Date",
     "quantity": "Quantity",
-    "totalAmount": "Total Amount"
+    "totalAmount": "Total Amount",
+    "simType": "SIM Type",
+    "chooseNoOfDays": "Choose Number of Days",
+    "noOfSimESim": "No of SIM/eSIM",
+    "selectShippingOption": "Select Shipping Option",
+    "selectLocation": "Select Location",
+    "deliveryAddress": "Delivery Address",
+    "addAddress": "Add Address",
+    "addNewAddress": "Add New Address",
+    "addressDetails": "Address Details",
+    "noCountriesFoundInThisRegion": "No countries found in this region",
+    "searchAnything": "Search anything...",
+    "filters": "Filters"
   },
   "form": {
     "startDate": "Start Date",
     "endDate": "End Date",
     "pickADate": "Pick a Date",
     "selectCountry": "Select Country",
-    "country": "Country"
+    "country": "Country",
+    "fullName": "Full Name",
+    "enterNameHere": "Enter name here",
+    "phoneNumber": "Phone Number",
+    "enterNumber": "Enter Number",
+    "state": "State",
+    "selectState": "Select Country",
+    "address": "Address",
+    "enterFullAddress": "Enter full address",
+    "apartment": "Apartment/Floor/Unit/Suite etc",
+    "enterApartmentDetails": "Enter your apartment/floor/unit/suite",
+    "province": "Province",
+    "enterProvince": "Enter province",
+    "postalCode": "Postal/Zip",
+    "enterPostalCode": "Enter postal code",
+
+    "addCreditDebit": "Add Credit/Debit",
+    "cardholderName": "Cardholder Name*",
+    "cardholderNamePlaceholder": "Enter full name",
+    "cardNumber": "Card No.*",
+    "cardNumberPlaceholder": "Enter Number",
+    "cvcCvv": "CVC/CVV2*",
+    "cvcCvvPlaceholder": "Enter CVC code",
+    "expiryDate": "Expiry Date",
+    "expiryDatePlaceholder": "MM/YY"
   },
   "notFound": {
     "noPackage": "No package found for your search"
@@ -1778,6 +1826,10 @@
       ]
     }
   },
+  "routerPlan": {
+    "heading": "Select a Plan",
+    "tabs": ["all", "daily", "monthly", "multi-country"]
+  },
 
   "simRegion": {
     "tabs": ["Pocket WIFI", "SIM/eSIM", "Router"],
@@ -1799,6 +1851,381 @@
           "placeholder": "Enter member id"
         }
       ]
+    }
+  },
+  "simPlan": {
+    "heading": "Select a Plan",
+    "tabs": ["all", "daily", "monthly", "multi-country"]
+  },
+  "simInformation": {
+    "accordionData": {
+      "items": [
+        {
+          "title": "Information",
+          "content": "Enjoy High-Speed Internet Access. Immediate Connect up to B Devices. 4G Internet Speed. Up to 12 hours of device battery. Ycxywifi 24/7 Customer Support. Includes Pocket Wifi Device, Charging Cable, Pouch. Extend the days or add plans anytime."
+        },
+        {
+          "title": "Countries Covered",
+          "content": "Algeria, Anguilla, Antigua and Barbuda, Argentina, Aruba, Azerbaijan, Bolivia, Brazil, British Virgin Islands, Chile, Colombia, Costa Rica."
+        },
+        {
+          "title": "How To",
+          "content": "50GB global data is applicable to 90 countries. Speed of service is dependent on the mobile network partner. For order cancellation, a charge of 10% of the order will apply. General terms and conditions apply. Yoowifi reserves the right to make changes anytime."
+        },
+        {
+          "title": "Compatibility",
+          "content": [
+            "50GB global data is applicable to 90 countries.",
+            "Speed of service is dependent on the mobile network partner.",
+            "For order cancellation, a charge of 10% of the order will apply.",
+            "Yoowifi reserves the right to make changes anytime."
+          ]
+        }
+      ]
+    }
+  },
+  "shippingOptions": [
+    {
+      "title": "Self Pickup",
+      "subtitle": "Choose your location",
+      "description": "Device Collection: 5 days before travel"
+    },
+    {
+      "title": "Domestic",
+      "subtitle": "",
+      "description": "Within 5 business days before trip for Dec with return mailer bag. For advance orders, delivery will be within 3 days before trip"
+    },
+    {
+      "title": "Domestic Express",
+      "subtitle": "",
+      "description": "Within 2 business days for orders before 2pm with return mailer bag"
+    },
+    {
+      "title": "Domestic Super Express",
+      "subtitle": "",
+      "description": "Same business day before 2pm with return mailer bag"
+    }
+  ],
+
+  "orderSummary": {
+    "orderSummary": "Order Summary",
+    "planName": "Plan Name",
+    "minimumCharges": "Minimum Charges",
+    "deposit": "Deposit",
+    "subtotal": "Sub-total",
+    "quantity": "Quantity",
+    "selfPickupDeliveryFee": "Self pick-up delivery fee",
+    "returnDropOffFee": "Return drop-off fee",
+    "totalDeliveryCharges": "Total Delivery Charges",
+    "totalDataCharges": "Total Data Charges",
+    "paymentInformation": "Payment Information",
+    "noCardAdded": "No Card Added",
+    "addCard": "Add Card",
+    "addNewPaymentMethod": "Add New Payment Method",
+    "termsAndConditions": "Terms & Conditions",
+    "privacyPolicy": "Privacy Policy",
+    "readAndAgree": "I have read and agreed to the",
+    "orderConfirmed": "Order Confirmed!",
+    "welcomeMessage": "We're glad to see you again. Let's dive into your courses.",
+    "continue": "Continue",
+    "simType": "SIM Type"
+  },
+
+  "setupPocketWifi": {
+    "heading": "How to connect Pocketwifi?",
+    "subHeading": "Effortlessly Connect to Your Pocket WiFi in Just a Few Simple Steps",
+    "setupSteps": [
+      {
+        "step": 1,
+        "title": "Turn On the Pocket WiFi",
+        "description": "Press the power button to turn it on and wait for it to connect to the network."
+      },
+      {
+        "step": 2,
+        "title": "Find the WiFi Name",
+        "description": "Check the device's screen for the WiFi network name (SSID)."
+      },
+      {
+        "step": 3,
+        "title": "Connect to WiFi",
+        "description": "On your smartphone, tablet, or laptop, open WiFi settings, select the SSID, enter the password displayed on the device, and you will be connected to the internet."
+      }
+    ]
+  },
+
+  "returnDevicePocketWifi": {
+    "heading": "How to Return Device?",
+    "subHeading": "Follow our easy steps to ensure a hassle-free return experience.",
+    "cardData": [
+      {
+        "title": "Singpost Drop-Off",
+        "description": "When you rent the device, a pre-paid return label will be included in the package. You can use this label to easily mail the device back. After returning it, you’ll likely receive an email confirmation once the return is processed.",
+        "buttonText": "View Locations"
+      },
+      {
+        "title": "Pickup Drop off Locations",
+        "description": "With Yoowifi, you can effortlessly pick up your device at any of our designated locations and return it at one of our 30+ convenient drop-off points across the island. This streamlined process guarantees a hassle-free experience, allowing you to stay connected wherever your travels take you!",
+        "buttonText": "View Locations"
+      }
+    ]
+  },
+
+  "pocketWifiTopUp": {
+    "heading": "How to do a plan Top up",
+    "subHeading": "Easily Manage Your Data Needs with Yoowifi Top-Up",
+    "setupSteps": [
+      {
+        "step": 1,
+        "title": "Select Your Device",
+        "description": "Open the Yoowifi app, go to My Data, and select the device you want to top up."
+      },
+      {
+        "step": 2,
+        "title": "Choose Your Plan",
+        "description": "Click on Add Data, select your desired country and plan, then set the start and end dates."
+      },
+      {
+        "step": 3,
+        "title": "Proceed to Checkout",
+        "description": "Confirm your selections and proceed to checkout."
+      }
+    ]
+  },
+
+  "affiliate": {
+    "affiliateServiceData": [
+      {
+        "title": "Select Your Device",
+        "description": "Open the Yoowifi app, go to My Data, and select the device you want to top up."
+      },
+      {
+        "title": "Choose Your Plan",
+        "description": "Click on Add Data, select your desired country and plan, then set the start and end dates."
+      },
+      {
+        "title": "Proceed to Checkout",
+        "description": "Confirm your selections and proceed to checkout."
+      }
+    ],
+    "banner": {
+      "pageTitle": "AFFILIATE",
+      "description": "If you have a question or doubt, simply fill in the form and we will get back to you soon!"
+    },
+    "joinAffiliateSection": {
+      "sectionId": "join-affiliate",
+      "secCommon80Class": "sec_common_80 xl:!px-0",
+      "sectionHeader": {
+        "heading": "Join the YooWander Program",
+        "midHeading": "Explore the World and Stay Connected!",
+        "subHeading": "Are you a travel-loving influencer who values staying connected and sharing adventures with your followers? Join the Yoowifi Affiliate Yoo Wander program for an exciting partnership. We’re here to support your authentic travel content and keep you connected with FREE global data."
+      }
+    }
+  },
+
+  "howItWorksPage": {
+    "rentWifiSection": {
+      "sectionHeader": {
+        "heading": "Rent Yoowifi Pocket WiFi in 3 Easy Steps!",
+        "subHeading": "Choose your plan, collect your device, and stay connected effortlessly wherever you go!"
+      },
+      "rentWifiData": [
+        {
+          "step": "Step-1",
+          "title": "Get Yoowifi App",
+          "description": "Download Yoowifi App (first Timer only)",
+          "buttonText": "Download Yoowifi",
+          "icon": "DownloadFillIcon"
+        },
+        {
+          "step": "Step-2",
+          "title": "Select Your Plan",
+          "description": "On the app, search for your destination country, choose the data size, and set your start and end dates."
+        },
+        {
+          "step": "Step-3",
+          "title": "Complete Your Booking",
+          "description": "Select your preferred shipping method and proceed to checkout."
+        }
+      ],
+      "links": [
+        {
+          "title": "Drop Off Locations"
+        },
+        {
+          "title": "Contact Us",
+          "variant": "secondary"
+        }
+      ]
+    },
+    "deliveryChargesSection": {
+      "sectionHeader": {
+        "heading": "Delivery Charges",
+        "subHeading": "Don’t let slow internet tie you down! Switch to our portable solutions to experience connectivity without boundaries."
+      },
+      "howItWorksData": [
+        {
+          "type": "Local",
+          "typeSuffix": "",
+          "duration": "3-4 Business day"
+        },
+        {
+          "type": "Express",
+          "typeSuffix": "(Order by 10am)",
+          "duration": "3-4 Business day"
+        },
+        {
+          "type": "Super Express",
+          "typeSuffix": "(Order by 10am)",
+          "duration": "3-4 Business day"
+        },
+        {
+          "type": "Standard International",
+          "typeSuffix": "",
+          "duration": "3-4 Business day"
+        }
+      ]
+    },
+    "rentServices": [
+      {
+        "title": "Local return mailer bag",
+        "description": "Simply pack the device and its accessories into the prepaid and return mailer bag any SingPost mailbox"
+      },
+      {
+        "title": "Self-Return",
+        "description": "Simply pack the device and its accessories and you may return at any pickup/Return location."
+      },
+      {
+        "title": "International Courier",
+        "description": "Contact Local DHL to pickup device if you have a return mailer bag / arrange your own Courier"
+      }
+    ],
+    "selfReturnSection": {
+      "sectionHeader": {
+        "heading": "Simple Self-Return In less than a minute",
+        "subHeading": "With Yoowifi, easily pick up your device at any designated location and return it at one of 20+ drop-off points across the island. Enjoy a hassle-free experience and stay connected wherever your travels take you!"
+      },
+      "selfReturnData": [
+        {
+          "title": "Login to Yoowifi App",
+          "description": "Start by visiting any of our 20+ pickup and return locations. On the app, go to 'My Data', select the device you wish to return, and tap on 'Return Device'."
+        },
+        {
+          "title": "Scan Location QR Code",
+          "description": "Next, scan the location QR code provided by the staff."
+        },
+        {
+          "title": "Scan Device QR Code",
+          "description": "Scan the QR code located at the back of the device to complete the return."
+        }
+      ]
+    },
+    "topUpSection": {
+      "sectionHeader": {
+        "heading": "Top Up Your Data in Just a Few Steps",
+        "subHeading": "Add data effortlessly with just a few taps, ensuring you stay connected"
+      },
+      "topUpData": [
+        {
+          "title": "Select Your Device",
+          "description": "Open the Yoowifi app, go to My Data, and select the device you want to top up."
+        },
+        {
+          "title": "Choose Your Plan",
+          "description": "Click on Add Data, select your desired country and plan, then set the start and end dates."
+        },
+        {
+          "title": "Proceed to Checkout",
+          "description": "Confirm your selections and proceed to checkout."
+        }
+      ]
+    }
+  },
+
+  "countryCoverage": {
+    "sectionHeader": {
+      "heading": "Country Coverage",
+      "subHeading": "Roam the world with confidence! Stay connected and data-ready, anytime, anywhere!"
+    },
+    "regionList": [
+      {
+        "name": "Asia",
+        "value": "asia"
+      },
+      {
+        "name": "Europe",
+        "value": "europe"
+      },
+      {
+        "name": "America",
+        "value": "america"
+      },
+      {
+        "name": "Australia",
+        "value": "australia"
+      },
+      {
+        "name": "Africa",
+        "value": "africa"
+      }
+    ]
+  },
+
+  "stayConnectedCTA": {
+    "heading": "Stay Connected Everywhere",
+    "subHeading": "140+ Countries",
+    "description": "A world of worry-free WiFi in the palm of your hand. Connect to quality internet when you travel—no matter where your journey takes you."
+  },
+
+  "login": {
+    "title": "Log In Required!",
+    "text": "Please log in to proceed."
+  },
+
+  "authModal": {
+    "authMessages": {
+      "welcomeBack": {
+        "title": "Welcome Back!",
+        "text": "We're glad to see you again. Let's dive into your courses."
+      },
+      "verification": {
+        "title": "Verification",
+        "text": "A confirmation code has been sent to your email & phone number."
+      },
+      "signUp": {
+        "title": "Sign Up",
+        "text": "It's super fun to Register. Get started!"
+      },
+      "signUpSuccessful": {
+        "title": "Sign up Successful!",
+        "text": "Thank you for joining us! Your account is ready."
+      },
+      "loginSuccessful": {
+        "title": "Log In Successful!",
+        "text": "Welcome back! Ready to continue?"
+      },
+      "accountReady": {
+        "title": "Account Ready!",
+        "text": "Thank you for joining us! Your account is ready."
+      }
+    },
+    "placeholders": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email"
+    },
+    "prompts": {
+      "noAccount": {
+        "text": "Don't have an account?",
+        "linkText": "Register Now"
+      },
+      "hasAccount": {
+        "text": "Already have an account?",
+        "linkText": "Login"
+      },
+      "resendOTP": {
+        "text": "Didn't receive any OTP?",
+        "linkText": "Resend Code"
+      }
     }
   }
 }

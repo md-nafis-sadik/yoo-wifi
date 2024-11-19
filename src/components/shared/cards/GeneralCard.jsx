@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowUpRightIcon } from "@/services";
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 
 const GeneralCard = ({
@@ -8,12 +10,12 @@ const GeneralCard = ({
   description,
   buttonText = "View Locations",
   stepsButton,
-  onClick = () => { },
+  onClick = () => {},
   className = "",
 }) => {
-
   const location = useLocation();
   const pickDropPage = location?.pathname === "/pick-drop-location";
+  const { t } = useTranslation();
 
   return (
     <div
@@ -32,9 +34,13 @@ const GeneralCard = ({
       </div>
 
       <div className="flex items-center gap-4">
-        <Link to={
-          pickDropPage ? "#view-location" : `/pick-drop-location/#view-location`
-        }>
+        <Link
+          to={
+            pickDropPage
+              ? "#view-location"
+              : `/pick-drop-location/#view-location`
+          }
+        >
           <Button
             className="p-2.5 sm:px-4 md:px-6 sm:py-3 md:py-4 rounded sm:rounded-xl !text-xs md:!text-base"
             onClick={onClick}
@@ -46,14 +52,19 @@ const GeneralCard = ({
 
         {stepsButton && (
           <Link to={stepsButton.to}>
-            <Button variant="secondary" className={"p-2.5 py-[11px] sm:px-4 md:px-6 sm:py-[13px] md:py-4 lg:py-[17px] rounded sm:rounded-xl !text-xs md:!text-base"}>
-              {stepsButton.text}
+            <Button
+              variant="secondary"
+              className={
+                "p-2.5 py-[11px] sm:px-4 md:px-6 sm:py-[13px] md:py-4 lg:py-[17px] rounded sm:rounded-xl !text-xs md:!text-base"
+              }
+            >
+              {t(`buttonText.viewSteps`) || stepsButton.text}
             </Button>
           </Link>
         )}
       </div>
     </div>
-  )
+  );
 };
 
 export default GeneralCard;

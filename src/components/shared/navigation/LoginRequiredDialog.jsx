@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 import { WarningIcon } from "@/services";
+import { useTranslation } from "react-i18next";
 
 const DialogHeader = ({ title, text }) => {
   return (
@@ -17,6 +18,8 @@ const DialogHeader = ({ title, text }) => {
 };
 
 const LoginRequiredDialog = ({ isOpen, setIsOpen, setIsAuthDialogOpen }) => {
+  const { t } = useTranslation();
+
   return (
     <Dialog open={isOpen} onOpenChange={() => setIsOpen(!isOpen)}>
       <DialogContent
@@ -31,10 +34,7 @@ const LoginRequiredDialog = ({ isOpen, setIsOpen, setIsAuthDialogOpen }) => {
           <div className="flex items-center justify-center">
             <WarningIcon className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28" />
           </div>
-          <DialogHeader
-            title={"Log In Required!"}
-            text={"Please log in to proceed."}
-          />
+          <DialogHeader title={t(`login.title`)} text={t(`login.text`)} />
           <div className="flex_center">
             <Button
               onClick={() => {
@@ -42,7 +42,7 @@ const LoginRequiredDialog = ({ isOpen, setIsOpen, setIsAuthDialogOpen }) => {
                 setIsAuthDialogOpen(true);
               }}
             >
-              Log In
+              {t(`buttonText.login`)}
             </Button>
           </div>
         </div>

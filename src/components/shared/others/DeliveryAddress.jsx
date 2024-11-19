@@ -7,6 +7,7 @@ import { useState } from "react";
 import { CountrySelect, StateSelect } from "react-country-state-city";
 import { useDispatch, useSelector } from "react-redux";
 import UserLocationCard from "../cards/UserLocationCard";
+import { useTranslation } from "react-i18next";
 
 function DeliveryAddress({
   handleSelect = () => {},
@@ -19,6 +20,7 @@ function DeliveryAddress({
   const [country, setCountry] = useState(null);
   const [state, setState] = useState(null);
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -55,7 +57,9 @@ function DeliveryAddress({
 
   return (
     <div className="">
-      <h2 className="text-base sm:text-lg ">Delivery Address</h2>
+      <h2 className="text-base sm:text-lg ">
+        {t("extraText.deliveryAddress")}
+      </h2>
       <div
         className={cn(
           "flex flex-col gap-6",
@@ -84,7 +88,7 @@ function DeliveryAddress({
         >
           <div className="">
             <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black-900">
-              Add Address
+              {t("extraText.addAddress")}
             </h3>
             <div className="w-full flex gap-4 mt-5 mb-4 sm:mb-8 md:mb-12">
               <Button
@@ -93,7 +97,7 @@ function DeliveryAddress({
                 variant={activeTab === "home" ? "secondary" : "outline"}
                 onClick={() => setActiveTab("home")}
               >
-                Home/Address
+                {t("buttonText.homeorAddress")}
               </Button>
               <Button
                 className="w-full sm:max-w-[200px] text-sm font-semibold hover:bg-secondary-500 hover:text-black-900"
@@ -101,38 +105,38 @@ function DeliveryAddress({
                 variant={activeTab === "hotel" ? "secondary" : "outline"}
                 onClick={() => setActiveTab("hotel")}
               >
-                Hotel
+                {t("buttonText.hotel")}
               </Button>
             </div>
             <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black-900">
-              Address Details
+              {t("extraText.addressDetails")}
             </h3>
             <div className="flex flex-col gap-2 sm:gap-4 mt-2 sm:mt-6 md:mt-8">
               <Input
-                label="Full Name"
-                placeholder="Enter name here"
+                label={t("form.fullName")}
+                placeholder={t("form.enterNameHere")}
                 name="name"
                 required
               />
               <Input
-                label="Phone Number"
-                placeholder="Enter Number"
+                label={t("form.phoneNumber")}
+                placeholder={t("form.enterNumber")}
                 name="phoneNumber"
                 required
               />
               <div className="flex flex-col gap-2">
-                <span className="label">Country</span>
+                <span className="label">{t("form.country")}</span>
                 <CountrySelect
                   name="country"
                   defaultValue={country}
                   onChange={(value) => setCountry(value)}
                   containerClassName="country-select bg-neutral-50"
                   inputClassName="!border-none !outline-none bg-transparent"
-                  placeHolder="Select Country"
+                  placeHolder={t("form.selectCountry")}
                 />
               </div>
               <div className="flex flex-col gap-2">
-                <span className="label">State</span>
+                <span className="label">{t("form.state")}</span>
                 <StateSelect
                   name="country"
                   countryid={country?.id}
@@ -140,40 +144,40 @@ function DeliveryAddress({
                   onChange={(value) => setState(value)}
                   containerClassName="country-select bg-neutral-50"
                   inputClassName="!border-none !outline-none bg-transparent"
-                  placeHolder="Select Country"
+                  placeHolder={t("form.selectCountry")}
                 />
               </div>
               {activeTab === "home" && (
                 <>
                   <Input
-                    label="Address"
-                    placeholder="Enter full address"
+                    label={t("form.address")}
+                    placeholder={t("form.enterFullAddress")}
                     name="address"
                     required={activeTab == "home" ? true : false}
                   />
                   <Input
-                    label="Apartment/Floor/Unit/Suite etc"
-                    placeholder="Enter your apartment/floor/unit/suite"
+                    label={t("form.apartment")}
+                    placeholder={t("form.enterApartmentDetails")}
                     name="appartment"
                     required={activeTab == "home" ? true : false}
                   />
                 </>
               )}
               <Input
-                label="Province"
-                placeholder="Enter province"
+                label={t("form.province")}
+                placeholder={t("form.enterProvince")}
                 name="province"
                 required
               />
               <Input
-                label="Postal/Zip"
-                placeholder="Enter postal code"
+                label={t("form.postalCode")}
+                placeholder={t("form.enterPostalCode")}
                 name="postCode"
                 required
               />
             </div>
             <div className="mt-4 sm:mt-8 md:mt-12 flex justify-end">
-              <Button type="submit">Save Address</Button>
+              <Button type="submit">{t("buttonText.saveAddress")}</Button>
             </div>
           </div>
         </form>
@@ -185,7 +189,7 @@ function DeliveryAddress({
           onClick={() => setIsAddressNotAdded(false)}
         >
           <PlusIcon color="#D81F22" />
-          <span>Add New Address</span>
+          <span>{t("extraText.addNewAddress")}</span>
         </button>
       )}
     </div>

@@ -3,17 +3,21 @@ import VideoPlayer from "@/components/shared/others/VideoPlayer";
 import { Button } from "@/components/ui/button";
 import { commercialRoutes, selfReturnData } from "@/services";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 
 const SelfReturn = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <section className="containerX" id="self-return">
       <div className="sec_common_60">
         <SectionHeader
-          heading="Simple Self-Return In less than a minute"
-          subHeading="With Yoowifi, easily pick up your device at any designated location and return it at one of 20+ drop-off points across the island. Enjoy a hassle-free experience and stay connected wherever your travels take you!"
+          heading={t("howItWorksPage.selfReturnSection.sectionHeader.heading")}
+          subHeading={t(
+            "howItWorksPage.selfReturnSection.sectionHeader.subHeading"
+          )}
         />
 
         <div className="mt-4 md:mt-10 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-10 xl:gap-[76px]">
@@ -36,11 +40,15 @@ const SelfReturn = () => {
 
                   <div className="border border-neutral-300 rounded-xl md:rounded-3xl p-4 md:p-6 space-y-4 md:space-y-3 flex-1">
                     <h5 className="text-[18px] md:text-2xl font-semibold md:font-bold text-black-900 leading-[140%]">
-                      {item.title}
+                      {t(
+                        `howItWorksPage.selfReturnSection.selfReturnData.${index}.title`
+                      ) || item.title}
                     </h5>
 
                     <p className="text-black-600 text-sm md:text-[18px] leading-[140%]">
-                      {item.description}
+                      {t(
+                        `howItWorksPage.selfReturnSection.selfReturnData.${index}.description`
+                      ) || item.description}
                     </p>
                   </div>
                 </article>
@@ -48,18 +56,24 @@ const SelfReturn = () => {
             </div>
 
             <div className="mt-4 md:mt-8 flex gap-x-4 md:ml-[72px]">
-              <Link to={commercialRoutes.pickDropLocation.path} className="flex-1">
+              <Link
+                to={commercialRoutes.pickDropLocation.path}
+                className="flex-1"
+              >
                 <Button className="!h-11 md:!h-[52px] w-full">
-                  Drop Off Locations
+                  {t("buttonText.dropOffLocations")}
                 </Button>
               </Link>
-              <Link to={commercialRoutes.pickDropLocation.path} className="flex-1">
+              <Link
+                to={commercialRoutes.pickDropLocation.path}
+                className="flex-1"
+              >
                 <Button
                   variant="secondary"
                   className="!h-11 md:!h-[52px] w-full"
                   onClick={() => navigate("/contact")}
                 >
-                  Contact Us
+                  {t("buttonText.contactUs")}
                 </Button>
               </Link>
             </div>

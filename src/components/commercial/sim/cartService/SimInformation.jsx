@@ -4,47 +4,48 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 function SimInformation() {
+  const { t } = useTranslation();
+
   return (
     <Accordion type="single" className="flex flex-col gap-4" collapsible>
       <AccordionItem value="item-1">
-        <AccordionTrigger>Information</AccordionTrigger>
+        <AccordionTrigger>
+          {t(`simInformation.accordionData.items.0.title`)}
+        </AccordionTrigger>
         <AccordionContent>
-          Enjoy High-Speed Internet Access Immediate Connect up to B Devices 4G
-          Internet Speed Up to 12 hours of device battery Ycxywifi 24/7 Customer
-          Support Cornes Pocket Wifi Device, Charging Cable, Pouch Extend the
-          days or add plans anytime https-/&oowifi
+          {t(`simInformation.accordionData.items.0.content`)}
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
-        <AccordionTrigger>Countries Covered</AccordionTrigger>
+        <AccordionTrigger>
+          {t(`simInformation.accordionData.items.1.title`)}
+        </AccordionTrigger>
         <AccordionContent>
-          Algeria, Anguilla, Antigua and Barbuda, Argentina, Aruba, Azerbaijan,
-          Bolivia, Brazil, British Virgin Islands, Chile, Colombia, Costa Rica
+          {t(`simInformation.accordionData.items.1.content`)}
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
-        <AccordionTrigger>How To</AccordionTrigger>
+        <AccordionTrigger>
+          {t(`simInformation.accordionData.items.2.title`)}
+        </AccordionTrigger>
         <AccordionContent>
-          50GB global data is applicable to 90 countries. Speed of service is
-          dependent on the mobile network partner. For order cancellation, a
-          charge of 10% of the order will apply. General terms and conditions
-          apply. Yoowifi reserved the rights to make changes anytime.
+          {t(`simInformation.accordionData.items.2.content`)}
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
-        <AccordionTrigger>Compatibility</AccordionTrigger>
+        <AccordionTrigger>
+          {t(`simInformation.accordionData.items.3.title`)}
+        </AccordionTrigger>
         <AccordionContent>
           <ul className="list-disc pl-5">
-            <li>50GB global data is applicable to 90 countries.</li>
-            <li>
-              Speed of service is dependent on the mobile network partner.
-            </li>
-            <li>
-              For order cancellation, a charge of 10% of the order will apply.
-            </li>
-            <li>Yoowifi reserved the rights to make changes anytime.</li>
+            <li>{t(`simInformation.accordionData.items.3.content.0`)}</li>
+            <li>{t(`simInformation.accordionData.items.3.content.1`)}</li>
+            <li>{t(`simInformation.accordionData.items.3.content.2`)}</li>
+            <li>{t(`simInformation.accordionData.items.3.content.3`)}</li>
           </ul>
         </AccordionContent>
       </AccordionItem>
