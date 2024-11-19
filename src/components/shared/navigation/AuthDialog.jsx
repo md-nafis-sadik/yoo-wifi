@@ -13,6 +13,7 @@ import { Fragment, useEffect, useState } from "react";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { LogOutIcon, User2Icon, UserIcon } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const DialogHeader = ({ title, text }) => {
   return (
@@ -73,6 +74,8 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
   const [otp, setOtp] = useState("");
   const [name, setName] = useState({ firstName: "", lastName: "" });
   const [email, setEmail] = useState("");
+
+  const { t } = useTranslation();
 
   // SETS THE DISABLED STATE OF THE CONTINUE BUTTON BASED ON THE CURRENT STAGE
   useEffect(() => {
@@ -140,8 +143,8 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
         {signInStage === 1 && (
           <Fragment>
             <DialogHeader
-              title="Welcome Back!"
-              text="We're glad to see you again. Let's dive into your courses."
+              title={t("authModal.authMessages.welcomeBack.title")}
+              text={t("authModal.authMessages.welcomeBack.text")}
             />
 
             <PhoneInput
@@ -161,8 +164,8 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
         {(signInStage === 2 || signUpStage === 3) && (
           <Fragment>
             <DialogHeader
-              title="Verification"
-              text="A confirmation code has been sent to your email & phone number."
+              title={t(`authModal.authMessages.verification.title`)}
+              text={t(`authModal.authMessages.verification.text`)}
             />
 
             <OTPInput setOtp={setOtp} />
@@ -173,12 +176,12 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
         {signUpStage === 1 && (
           <Fragment>
             <DialogHeader
-              title="Sign Up"
-              text="Its super fun to Register. Get started!"
+              title={t(`authModal.authMessages.signUp.title`)}
+              text={t(`authModal.authMessages.signUp.text`)}
             />
             <div className="flex flex-col gap-2 md:gap-3 w-full">
               <Input
-                placeholder="First Name"
+                placeholder={t(`authModal.placeholders.firstName`)}
                 name="firstName"
                 type="text"
                 onChange={(e) =>
@@ -187,7 +190,7 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
                 required
               />
               <Input
-                placeholder="Last Name"
+                placeholder={t(`authModal.placeholders.lastName`)}
                 name="lastName"
                 type="text"
                 onChange={(e) => setName({ ...name, lastName: e.target.value })}
@@ -199,12 +202,12 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
         {signUpStage === 2 && (
           <Fragment>
             <DialogHeader
-              title="Sign Up"
-              text="Its super fun to Register. Get started!"
+              title={t(`authModal.authMessages.signUp.title`)}
+              text={t(`authModal.authMessages.signUp.text`)}
             />
             <div className="flex flex-col gap-2 md:gap-3 w-full">
               <Input
-                placeholder="Email"
+                placeholder={t(`authModal.placeholders.email`)}
                 name="email"
                 type="email"
                 onChange={(e) =>
@@ -235,11 +238,15 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
               <SuccessIcon className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28" />
             </div>
             <DialogHeader
-              title={signInStage ? "Log In Successful!" : "Sign up Successful!"}
+              title={
+                signInStage
+                  ? t(`authModal.authMessages.loginSuccessful.title`)
+                  : t(`authModal.authMessages.signUpSuccessful.title`)
+              }
               text={
                 signInStage
-                  ? "Welcome back! Ready to continue?"
-                  : "Thank you for joining us! Your account is ready"
+                  ? t(`authModal.authMessages.loginSuccessful.text`)
+                  : t(`authModal.authMessages.accountReady.text`)
               }
             />
           </div>
@@ -258,8 +265,8 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
               title={`Hi ${name.firstName} ${name.lastName}!`}
               text={
                 signInStage
-                  ? "Welcome back! Ready to continue?"
-                  : "Thank you for joining us! Your account is ready"
+                  ? t(`authModal.authMessages.loginSuccessful.text`)
+                  : t(`authModal.authMessages.accountReady.text`)
               }
             />
             <Button
@@ -268,7 +275,7 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
               className=""
               onClick={logoutHandler}
             >
-              <LogOutIcon className="w-6 h-6" /> Logout
+              <LogOutIcon className="w-6 h-6" /> {t(`buttonText.logout`)}
             </Button>
           </div>
         )}
@@ -286,15 +293,18 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
               disabled={isButtonDisabled}
               onClick={handleContinuePress}
             >
-              {(signInStage === 1 || signUpStage === 2) && "Continue"}
-              {(signInStage === 2 || signUpStage === 3) && "Verify"}
-              {(signInStage === 3 || signUpStage === 4) && "Continue"}
-              {signUpStage === 1 && "Next"}
+              {(signInStage === 1 || signUpStage === 2) &&
+                t(`buttonText.continue`)}
+              {(signInStage === 2 || signUpStage === 3) &&
+                t(`buttonText.verify`)}
+              {(signInStage === 3 || signUpStage === 4) &&
+                t(`buttonText.continue`)}
+              {signUpStage === 1 && t(`buttonText.next`)}
             </Button>
             {signInStage && signInStage === 1 && (
               <BottomTextLink
-                text="Don't have an account?"
-                linkText="Register Now"
+                text={t(`authModal.prompts.noAccount.text`)}
+                linkText={t(`authModal.prompts.noAccount.linkText`)}
                 onClick={() => {
                   setSignUpStage(1);
                   setSignInStage(null);
@@ -303,8 +313,8 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
             )}
             {signUpStage && signUpStage <= 2 && (
               <BottomTextLink
-                text="Already Have an account?"
-                linkText="Login"
+                text={t(`authModal.prompts.hasAccount.text`)}
+                linkText={t(`authModal.prompts.hasAccount.linkText`)}
                 onClick={() => {
                   setSignInStage(1);
                   setSignUpStage(null);
@@ -313,8 +323,8 @@ const AuthDialog = ({ isOpen, setIsOpen }) => {
             )}
             {(signInStage === 2 || signUpStage === 3) && (
               <BottomTextLink
-                text="Didn't receive any OTP?"
-                linkText="Resend Code"
+                text={t(`authModal.prompts.resendOTP.text`)}
+                linkText={t(`authModal.prompts.resendOTP.linkText`)}
                 onClick={() => {
                   // Function to send otp
                 }}

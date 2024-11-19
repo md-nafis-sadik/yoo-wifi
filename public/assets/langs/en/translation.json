@@ -29,7 +29,11 @@
     "hotel": "Hotel",
     "saveAddress": "Save Address",
     "buyPocketWifi": "Buy Pocket Wifi",
-    "dropOffLocations": "Drop Off Locations"
+    "dropOffLocations": "Drop Off Locations",
+    "login": "Log In",
+    "logout": "Logout",
+    "continue": "Continue",
+    "verify": "Verify"
   },
   "extraText": {
     "from": "From",
@@ -2170,5 +2174,58 @@
     "heading": "Stay Connected Everywhere",
     "subHeading": "140+ Countries",
     "description": "A world of worry-free WiFi in the palm of your hand. Connect to quality internet when you travel—no matter where your journey takes you."
+  },
+
+  "login": {
+    "title": "Log In Required!",
+    "text": "Please log in to proceed."
+  },
+
+  "authModal": {
+    "authMessages": {
+      "welcomeBack": {
+        "title": "Welcome Back!",
+        "text": "We're glad to see you again. Let's dive into your courses."
+      },
+      "verification": {
+        "title": "Verification",
+        "text": "A confirmation code has been sent to your email & phone number."
+      },
+      "signUp": {
+        "title": "Sign Up",
+        "text": "It's super fun to Register. Get started!"
+      },
+      "signUpSuccessful": {
+        "title": "Sign up Successful!",
+        "text": "Thank you for joining us! Your account is ready."
+      },
+      "loginSuccessful": {
+        "title": "Log In Successful!",
+        "text": "Welcome back! Ready to continue?"
+      },
+      "accountReady": {
+        "title": "Account Ready!",
+        "text": "Thank you for joining us! Your account is ready."
+      }
+    },
+    "placeholders": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email"
+    },
+    "prompts": {
+      "noAccount": {
+        "text": "Don't have an account?",
+        "linkText": "Register Now"
+      },
+      "hasAccount": {
+        "text": "Already have an account?",
+        "linkText": "Login"
+      },
+      "resendOTP": {
+        "text": "Didn't receive any OTP?",
+        "linkText": "Resend Code"
+      }
+    }
   }
 }

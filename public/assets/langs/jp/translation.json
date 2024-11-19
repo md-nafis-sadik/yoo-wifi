@@ -29,7 +29,11 @@
     "hotel": "ホテル",
     "saveAddress": "住所を保存",
     "buyPocketWifi": "ポケットWi-Fiを購入",
-    "dropOffLocations": "ドロップオフ場所"
+    "dropOffLocations": "ドロップオフ場所",
+    "login": "ログイン",
+    "logout": "ログアウト",
+    "continue": "続行",
+    "verify": "確認"
   },
   "extraText": {
     "from": "から",
@@ -2176,5 +2180,58 @@
     "heading": "どこでも接続可能",
     "subHeading": "140+カ国",
     "description": "手のひらで世界中の心配いらないWiFiを。どこに行っても、旅行中でも、質の高いインターネットに接続できます。"
+  },
+
+  "login": {
+    "title": "ログインが必要です！",
+    "text": "続行するにはログインしてください。"
+  },
+
+  "authModal": {
+    "authMessages": {
+      "welcomeBack": {
+        "title": "お帰りなさい！",
+        "text": "またお会いできて嬉しいです。コースを始めましょう。"
+      },
+      "verification": {
+        "title": "確認",
+        "text": "確認コードがメールと電話番号に送信されました。"
+      },
+      "signUp": {
+        "title": "サインアップ",
+        "text": "登録はとても簡単です。さあ始めましょう！"
+      },
+      "signUpSuccessful": {
+        "title": "サインアップ完了！",
+        "text": "ご登録ありがとうございます！アカウントの準備ができました。"
+      },
+      "loginSuccessful": {
+        "title": "ログイン成功！",
+        "text": "お帰りなさい！続ける準備はできていますか？"
+      },
+      "accountReady": {
+        "title": "アカウント準備完了！",
+        "text": "ご登録ありがとうございます！アカウントの準備ができました。"
+      }
+    },
+    "placeholders": {
+      "firstName": "名前",
+      "lastName": "苗字",
+      "email": "メールアドレス"
+    },
+    "prompts": {
+      "noAccount": {
+        "text": "アカウントをお持ちではありませんか？",
+        "linkText": "今すぐ登録"
+      },
+      "hasAccount": {
+        "text": "すでにアカウントをお持ちですか？",
+        "linkText": "ログイン"
+      },
+      "resendOTP": {
+        "text": "認証コードが届きませんでしたか？",
+        "linkText": "コードを再送"
+      }
+    }
   }
 }
