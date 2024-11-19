@@ -1982,5 +1982,35 @@
         "description": "Confirm your selections and proceed to checkout."
       }
     ]
+  },
+
+  "affiliate": {
+    "affiliateServiceData": [
+      {
+        "title": "Select Your Device",
+        "description": "Open the Yoowifi app, go to My Data, and select the device you want to top up."
+      },
+      {
+        "title": "Choose Your Plan",
+        "description": "Click on Add Data, select your desired country and plan, then set the start and end dates."
+      },
+      {
+        "title": "Proceed to Checkout",
+        "description": "Confirm your selections and proceed to checkout."
+      }
+    ],
+    "banner": {
+      "pageTitle": "AFFILIATE",
+      "description": "If you have a question or doubt, simply fill in the form and we will get back to you soon!"
+    },
+    "joinAffiliateSection": {
+      "sectionId": "join-affiliate",
+      "secCommon80Class": "sec_common_80 xl:!px-0",
+      "sectionHeader": {
+        "heading": "Join the YooWander Program",
+        "midHeading": "Explore the World and Stay Connected!",
+        "subHeading": "Are you a travel-loving influencer who values staying connected and sharing adventures with your followers? Join the Yoowifi Affiliate Yoo Wander program for an exciting partnership. We’re here to support your authentic travel content and keep you connected with FREE global data."
+      }
+    }
   }
 }

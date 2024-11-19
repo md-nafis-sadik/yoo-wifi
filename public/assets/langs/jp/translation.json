@@ -1988,5 +1988,35 @@
         "description": "選択内容を確認し、チェックアウトに進みます。"
       }
     ]
+  },
+
+  "affiliate": {
+    "affiliateServiceData": [
+      {
+        "title": "デバイスを選択",
+        "description": "Yoowifiアプリを開き、「マイデータ」に移動し、トップアップしたいデバイスを選択します。"
+      },
+      {
+        "title": "プランを選択",
+        "description": "「データ追加」をクリックし、希望する国とプランを選択し、開始日と終了日を設定します。"
+      },
+      {
+        "title": "チェックアウトへ進む",
+        "description": "選択内容を確認し、チェックアウトに進みます。"
+      }
+    ],
+    "banner": {
+      "pageTitle": "アフィリエイト",
+      "description": "質問や疑問がある場合は、フォームに記入してください。すぐにご連絡いたします！"
+    },
+    "joinAffiliateSection": {
+      "sectionId": "join-affiliate",
+      "secCommon80Class": "sec_common_80 xl:!px-0",
+      "sectionHeader": {
+        "heading": "YooWanderプログラムに参加",
+        "midHeading": "世界を探求し、接続し続ける！",
+        "subHeading": "旅行を愛するインフルエンサーで、フォロワーと冒険をシェアしながら接続状態を維持したい方へ。YoowifiアフィリエイトYooWanderプログラムに参加して、エキサイティングなパートナーシップを築きましょう。私たちは、あなたの本物の旅行コンテンツをサポートし、無料でグローバルデータを提供します。"
+      }
+    }
   }
 }
