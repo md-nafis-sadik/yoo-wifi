@@ -67,9 +67,51 @@ export const languageOptions = [
   },
   {
     _id: 2,
+    label: "Chinese (Simplified)",
+    value: "zhcn",
+    flag: () => images.ChinaFlag,
+  },
+  {
+    _id: 3,
+    label: "Chinese (Traditional)",
+    value: "zhhk",
+    flag: () => images.ChinaFlag,
+  },
+  {
+    _id: 4,
+    label: "Malaysian",
+    value: "ms",
+    flag: () => images.MalaysiaFlag,
+  },
+  {
+    _id: 5,
+    label: "Indonesian",
+    value: "id",
+    flag: () => images.IndonesiaFlag,
+  },
+  {
+    _id: 6,
     label: "Japanese",
     value: "jp",
     flag: () => images.JapanFlag,
+  },
+  {
+    _id: 10,
+    label: "Spanish",
+    value: "es",
+    flag: () => images.SpainFlag,
+  },
+  {
+    _id: 11,
+    label: "German",
+    value: "gm",
+    flag: () => images.GermanyFlag,
+  },
+  {
+    _id: 12,
+    label: "French",
+    value: "fr",
+    flag: () => images.FranceFlag,
   },
 ];
 
