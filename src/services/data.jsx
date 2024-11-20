@@ -96,6 +96,24 @@ export const languageOptions = [
     flag: () => images.JapanFlag,
   },
   {
+    _id: 7,
+    label: "Thai",
+    value: "th",
+    flag: () => images.ThailandFlag,
+  },
+  {
+    _id: 8,
+    label: "Vietnamese",
+    value: "vi",
+    flag: () => images.VietnamFlag,
+  },
+  {
+    _id: 9,
+    label: "Phillipino",
+    value: "ph",
+    flag: () => images.PhilippinesFlag,
+  },
+  {
     _id: 10,
     label: "Spanish",
     value: "es",

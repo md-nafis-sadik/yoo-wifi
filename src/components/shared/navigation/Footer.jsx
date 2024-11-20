@@ -169,7 +169,7 @@ const Footer = () => {
               {links.map(({ path }, index) => (
                 <li
                   key={index}
-                  className="text-sm md:text-base text-black-100 font-semibold !leading-[1.2] hover:opacity-70 mt-3 md:mt-6 lg:mt-8 whitespace-nowrap"
+                  className="text-sm md:text-base text-black-100 font-semibold !leading-[1.2] hover:opacity-70 mt-3 md:mt-6 lg:mt-8 whitespace-normal"
                 >
                   <Link to={path}>
                     {t(`footer.menuData.${menuIndex}.links.${index}.label`)}
