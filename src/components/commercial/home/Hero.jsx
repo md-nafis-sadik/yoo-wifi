@@ -11,10 +11,10 @@ import HeroTravel from "./HeroTravel";
 function Hero() {
   const options = {
     loop: true,
-    // watchDrag: false,
+    watchDrag: false,
   };
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
-    // Autoplay({ delay: 6000 }),
+    Autoplay({ delay: 6000 }),
   ]);
   const dispatch = useDispatch();
   const handleUpdateHeroSelectedIndex = (index) => {
