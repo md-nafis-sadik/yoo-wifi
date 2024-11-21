@@ -93,7 +93,7 @@ const NavBarSecondary = () => {
         isScrolled ? "bg-black border-black-900" : ""
       )}
     >
-      <div className="w-full max-w-[1392px] mx-auto">
+      <div className="w-full max-w-[1600px] mx-auto">
         <nav
           className={cn(
             "w-full duration-300 flex items-center lg:gap-10 2xl:gap-15 justify-between px-4 py-2 sm:py-4",
@@ -124,6 +124,7 @@ const NavBarSecondary = () => {
                   )}
                   inputClassName="!border-none !outline-none bg-transparent"
                   placeHolder="Select Country"
+                  autoComplete="off"
                 />
                 <SearchIcon
                   className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
@@ -241,6 +242,7 @@ const NavBarSecondary = () => {
                     )}
                     inputClassName="!border-none !outline-none bg-transparent"
                     placeHolder={t("extraText.selectCountry")}
+                    autoComplete="off"
                   />
                   <SearchIcon
                     className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"

@@ -12,9 +12,10 @@ import {
   handleNextRouterCart,
   setRouterCartData,
 } from "@/store/module/router/slice";
+import { setProductActiveTab } from "@/store/module/shared/sharedSlice";
 import { handleNextSimCart, setSimCartData } from "@/store/module/sim/slice";
 import useEmblaCarousel from "embla-carousel-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CountrySelect } from "react-country-state-city";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
@@ -45,12 +46,9 @@ function PocketWifiRegion() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const pathname = useLocation().pathname;
+  const { productTab } = useSelector((state) => state.shared);
 
   const isActive = cart?.productCountry?.id ? true : false;
-
-  const [activeTab, setActiveTab] = useState(
-    tabs.find((tab) => tab.route === pathname)?.name
-  );
 
   const options = { align: "start" };
   const [emblaRef] = useEmblaCarousel(options);
@@ -70,13 +68,13 @@ function PocketWifiRegion() {
   };
 
   const handleNext = () => {
-    if (activeTab === "Pocket WIFI") {
+    if (productTab.activeTab === "Pocket WIFI") {
       navigate(commercialRoutes.pocketWifiPlan.path);
       dispatch(handleNextPocketWifiCart());
-    } else if (activeTab === "SIM/eSIM") {
+    } else if (productTab.activeTab === "SIM/eSIM") {
       navigate(commercialRoutes.simPlan.path);
       dispatch(handleNextSimCart());
-    } else if (activeTab === "Router") {
+    } else if (productTab.activeTab === "Router") {
       navigate(commercialRoutes.routerPlan.path);
       dispatch(handleNextRouterCart());
     }
@@ -86,9 +84,15 @@ function PocketWifiRegion() {
     navigate(commercialRoutes.pocketWifiHome.path);
   };
 
+  useEffect(() => {
+    dispatch(
+      setProductActiveTab(tabs.find((tab) => tab.route === pathname)?.name)
+    );
+  }, [pathname]);
+
   return (
     <div className="w-full flex flex-col gap-6 sm:gap-8 md:gap-12">
-      <div className="w-full flex flex-col gap-5">
+      <div className="w-full hidden md:flex flex-col gap-5">
         <h2 className="text-base md:text-2xl !leading-[1.2] md:!leading-[1.4] font-semibold md:font-bold">
           {t("pocketWifiRegion.header.text")}
         </h2>
@@ -99,10 +103,14 @@ function PocketWifiRegion() {
                 key={name}
                 className={cn(
                   "w-full hover:bg-secondary-500",
-                  activeTab === name ? "text-black-900 font-semibold" : ""
+                  productTab.activeTab === name
+                    ? "text-black-900 font-semibold"
+                    : ""
                 )}
-                variant={activeTab === name ? "secondary" : "outline"}
-                onClick={() => setActiveTab(name)}
+                variant={
+                  productTab.activeTab === name ? "secondary" : "outline"
+                }
+                onClick={() => dispatch(setProductActiveTab(name))}
               >
                 {translableName || name.charAt(0).toUpperCase() + name.slice(1)}
               </Button>

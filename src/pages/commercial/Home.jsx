@@ -1,3 +1,4 @@
+import GetYourOwn from "@/components/commercial/home/GetYourOwn";
 import Hero from "@/components/commercial/home/Hero";
 import HowItWorks from "@/components/commercial/home/HowItWorks";
 import InternetPackage from "@/components/commercial/home/InternetPackage";
@@ -12,6 +13,7 @@ function Home() {
     <div className="overflow-hidden w-full">
       <Hero />
       <Products />
+      <GetYourOwn />
       <InternetPackage />
       <WhyYoowifi />
       <StayConnectedRegions />

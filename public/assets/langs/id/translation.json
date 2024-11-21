@@ -198,12 +198,25 @@
       "travelCompanion": "YOOUR # 1 TEMAN PERJALANAN"
     },
     "heroDiscover": {
-      "discover": "JELAJAHI DUNIA BERSAMA KAMI"
+      "discover": "MEMPERKENALKAN WIFI POCKET BARU KAMI"
     },
-    "slides": {
-      "title": "Perangkat Portabel",
-      "description": "Lorem Ipsum adalah teks dummy yang digunakan dalam industri percetakan dan penataan huruf."
-    }
+    "slides": [
+      {
+        "title": "LEBIH CEPAT",
+        "subTitle": "Konektivitas 5G",
+        "description": "Hingga konektivitas 5G di lebih dari 90 negara"
+      },
+      {
+        "title": "DIPERPANJANG",
+        "subTitle": "DAYA TAHAN BATERAI",
+        "description": "Daya tahan baterai diperpanjang hingga 20 jam."
+      },
+      {
+        "title": "MENYERTAKAN",
+        "subTitle": "LAYAR TAMPILAN",
+        "description": "Sekarang Anda dapat melacak penggunaan data, terhubung dengan mudah, dan mengakses informasi lebih lanjut tanpa repot."
+      }
+    ]
   },
   "productsData": {
     "title": "Produk Kami",

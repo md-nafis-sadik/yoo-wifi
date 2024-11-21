@@ -92,7 +92,7 @@ function CorporateNavbar() {
         isScrolled ? "bg-black border-black-900" : ""
       )}
     >
-      <div className="w-full max-w-[1392px] mx-auto relative">
+      <div className="w-full max-w-[1600px] mx-auto relative">
         <nav
           className={cn(
             "w-full duration-300 flex items-center lg:gap-10 justify-between px-4 py-2 sm:py-4",
@@ -123,6 +123,7 @@ function CorporateNavbar() {
                   )}
                   inputClassName="!border-none !outline-none bg-transparent"
                   placeHolder="Select Country"
+                  autoComplete="off"
                 />
                 <SearchIcon
                   className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
@@ -222,6 +223,7 @@ function CorporateNavbar() {
                     )}
                     inputClassName="!border-none !outline-none bg-transparent"
                     placeHolder={t("extraText.selectCountry")}
+                    autoComplete="off"
                   />
                   <SearchIcon
                     className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"

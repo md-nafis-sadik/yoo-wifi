@@ -193,12 +193,25 @@
       "travelCompanion": "YOOUR #1 旅行伴侶"
     },
     "heroDiscover": {
-      "discover": "與我們一起探索世界"
+      "discover": "介紹我們的新口袋WiFi"
     },
-    "slides": {
-      "title": "便攜設備",
-      "description": "Lorem Ipsum 是印刷和排版行業的假文本文字。"
-    }
+    "slides": [
+      {
+        "title": "更快",
+        "subTitle": "5G連接",
+        "description": "在90多個國家提供最高5G連接"
+      },
+      {
+        "title": "延長",
+        "subTitle": "電池壽命",
+        "description": "電池壽命延長至20小時。"
+      },
+      {
+        "title": "包含",
+        "subTitle": "螢幕顯示",
+        "description": "現在您可以追蹤數據使用情況，輕鬆連接，並無煩惱地訪問更多資訊。"
+      }
+    ]
   },
   "productsData": {
     "title": "我們的產品",

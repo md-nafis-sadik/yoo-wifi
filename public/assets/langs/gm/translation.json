@@ -196,12 +196,25 @@
       "travelCompanion": "IHR #1 REISEBEGLEITER"
     },
     "heroDiscover": {
-      "discover": "ENTDECKEN SIE DIE WELT MIT UNS"
+      "discover": "WIR STELLEN IHNEN UNSEREN NEUEN POCKET WIFI VOR"
     },
-    "slides": {
-      "title": "Tragbares Gerät",
-      "description": "Lorem Ipsum ist einfach Dummy-Text der Druck- und Satzindustrie."
-    }
+    "slides": [
+      {
+        "title": "SCHNELLER",
+        "subTitle": "5G-Konnektivität",
+        "description": "Bis zu 5G-Konnektivität in mehr als 90 Ländern"
+      },
+      {
+        "title": "VERLÄNGERT",
+        "subTitle": "BATTERIELAUFZEIT",
+        "description": "Verlängerte Batterielaufzeit von bis zu 20 Stunden."
+      },
+      {
+        "title": "ENTHÄLT",
+        "subTitle": "BILDSCHIRMANZEIGE",
+        "description": "Jetzt können Sie den Datenverbrauch verfolgen, sich mühelos verbinden und auf weitere Informationen problemlos zugreifen."
+      }
+    ]
   },
   "productsData": {
     "title": "Unsere Produkte",

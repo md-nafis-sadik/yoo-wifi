@@ -22,9 +22,9 @@ function HeroConnected() {
   };
 
   return (
-    <div className="flex-full min-h-full flex items-end bg-black text-white pt-16 sm:pt-28 xl:pt-40 px-4 sm:px-10 md:px-16 overflow-hidden">
+    <div className="flex-full min-h-full flex items-end bg-black text-white pt-16 sm:pt-28 px-4 sm:px-10 md:px-16 overflow-hidden">
       <div className="w-full max-w-[1190px] mx-auto">
-        <h1 className="text-3xl sm:text-5xl md:text-7xl xl:text-[7.5rem] leading-[115%] xl:!leading-[94px] font-sansPro uppercase font-extrabold text-center lg:text-left">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl leading-[115%] xl:!leading-none font-sansPro uppercase font-extrabold text-center lg:text-left">
           {t("heroHome.heroConnected.stayConnected")} <br />{" "}
           {t("heroHome.heroConnected.anyTimeAnyWhere")}
         </h1>
