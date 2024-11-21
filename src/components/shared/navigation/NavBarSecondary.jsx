@@ -124,6 +124,7 @@ const NavBarSecondary = () => {
                   )}
                   inputClassName="!border-none !outline-none bg-transparent"
                   placeHolder="Select Country"
+                  autoComplete="off"
                 />
                 <SearchIcon
                   className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
@@ -241,6 +242,7 @@ const NavBarSecondary = () => {
                     )}
                     inputClassName="!border-none !outline-none bg-transparent"
                     placeHolder={t("extraText.selectCountry")}
+                    autoComplete="off"
                   />
                   <SearchIcon
                     className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"

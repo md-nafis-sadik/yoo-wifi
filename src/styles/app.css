@@ -5,10 +5,19 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-/* 
-.country-select .stdropdown-container {
+
+.country-search .stdropdown-container {
   font-family: "DMSans" !important;
-} */
+}
+
+.country-search .stdropdown-container .stdropdown-menu .stdropdown-item {
+  display: flex;
+  gap: 8px;
+}
+
+.country-search .stdropdown-container span {
+  font-family: "Twemoji Mozilla", sans-serif !important;
+}
 
 .country-select .stdropdown-container {
   border-radius: 12px;

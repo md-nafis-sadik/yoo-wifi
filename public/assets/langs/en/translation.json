@@ -200,10 +200,23 @@
     "heroDiscover": {
       "discover": "DISCOVER THE WORLD WITH US"
     },
-    "slides": {
-      "title": "Portable Device",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-    }
+    "slides": [
+      {
+        "title": "FASTER",
+        "subTitle": "5G Connectivity",
+        "description": "Up to 5G Connectivity to more than 90 Countries"
+      },
+      {
+        "title": "EXTENDED",
+        "subTitle": "BATTERY LIFE",
+        "description": "Extended battery Life  up to 20 Hours battery."
+      },
+      {
+        "title": "INCLUDES",
+        "subTitle": "SCREEN DISPLAY",
+        "description": "Now you can track data usage, connect easily, and access more info hassle-free."
+      }
+    ]
   },
   "productsData": {
     "title": "Our Products",

@@ -2,6 +2,7 @@ import useEmblaCarouselDotButtons from "@/hooks/useEmblaCarouselDotButtons";
 import { cn } from "@/lib/utils";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
+import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 
 function HeroChildSlides({
@@ -14,18 +15,27 @@ function HeroChildSlides({
     Autoplay({ delay: 2000 }),
   ]);
   const { selectedIndex, scrollSnaps } = useEmblaCarouselDotButtons(emblaApi);
+  const { t } = useTranslation();
+
   return (
     <div
       className={cn(
-        "pt-10 sm:pt-12 lg:pt-20 xl:pt-40 pb-6 sm:pb-10 md:pb-16 w-full max-w-[448px]",
+        "pt-10 sm:pt-12 lg:pt-20 xl:pt-40 pb-6 sm:pb-10 md:pb-16 w-full max-w-[536px]",
         wrapperClass
       )}
     >
       <div className="w-full overflow-hidden cursor-default" ref={emblaRef}>
         <div className="flex w-full">
-          <SlideCard />
-          <SlideCard />
-          <SlideCard />
+          {Array(3)
+            .fill("")
+            .map((_, index) => (
+              <SlideCard
+                key={index}
+                title={t(`heroHome.slides.${index}.title`)}
+                subTitle={t(`heroHome.slides.${index}.subTitle`)}
+                description={t(`heroHome.slides.${index}.description`)}
+              />
+            ))}
         </div>
       </div>
       <div className="flex gap-1 mt-4">
@@ -45,21 +55,15 @@ function HeroChildSlides({
 
 export default HeroChildSlides;
 
-export const SlideCard = ({ item }) => {
-  const { t } = useTranslation();
-
+export const SlideCard = ({ title, subTitle, description }) => {
   return (
-    <div className="w-full shrink-0 flex items-center justify-center">
+    <div className="w-full shrink-0 flex items-end justify-center">
       <div className="w-full flex gap-4">
-        <div className="font-meid whitespace-nowrap">
-          <h5 className="text-3xl sm:text-4xl md:text-[2.5rem] ">50GB+</h5>
-          <h6 className="text-xs sm:text-sm  uppercase">
-            {t("heroHome.slides.title")}
-          </h6>
+        <div className="font-meid whitespace-pre-wrap flex flex-col justify-end">
+          <h5 className="text-3xl sm:text-4xl md:text-[2.5rem] ">{title}</h5>
+          <h6 className="text-xs sm:text-sm  uppercase">{subTitle}</h6>
         </div>
-        <p className="text-xs sm:text-sm max-w-48">
-          {t("heroHome.slides.description")}
-        </p>
+        <p className="text-xs sm:text-sm flex-grow">{description}</p>
       </div>
     </div>
   );
