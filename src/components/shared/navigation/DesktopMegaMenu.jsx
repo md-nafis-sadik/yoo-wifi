@@ -18,7 +18,7 @@ const DesktopMegaMenu = ({ isShow = false }) => {
     <div
       className={cn(
         " hidden xl:block overflow-hidden duration-300 absolute w-[100vw] left-0",
-        isShow ? "max-h-[280px]" : "max-h-0"
+        isShow ? "max-h-[320px]" : "max-h-0"
       )}
     >
       <div className="pt-6">

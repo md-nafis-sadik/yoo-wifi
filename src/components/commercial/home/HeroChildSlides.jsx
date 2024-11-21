@@ -62,7 +62,7 @@ export const SlideCard = ({ title, subTitle, description }) => {
         <div className="font-meid whitespace-pre-wrap flex flex-col justify-end">
           <h5
             className={cn(
-              "text-3xl sm:text-4xl md:text-[2.5rem]",
+              "text-3xl sm:text-4xl",
               title.length > 8 ? "break-all" : ""
             )}
           >

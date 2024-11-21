@@ -11,10 +11,10 @@ import HeroTravel from "./HeroTravel";
 function Hero() {
   const options = {
     loop: true,
-    watchDrag: false,
+    // watchDrag: false,
   };
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
-    Autoplay({ delay: 6000 }),
+    // Autoplay({ delay: 6000 }),
   ]);
   const dispatch = useDispatch();
   const handleUpdateHeroSelectedIndex = (index) => {
@@ -30,13 +30,13 @@ function Hero() {
       <div className="overflow-hidden" ref={emblaRef}>
         <div
           className={cn(
-            "flex",
-            selectedIndex == 0 &&
-              "h-[740px] sm:h-[640px] md:h-[1190px] lg:h-[920px]",
-            selectedIndex == 1 &&
-              "h-[740px] sm:h-[948px] md:h-[1008px] lg:h-[920px]",
-            selectedIndex == 2 &&
-              "h-[740px] sm:h-[760px] md:h-[960px] lg:h-[920px]"
+            "flex"
+            // selectedIndex == 0 &&
+            //   "h-[740px] sm:h-[640px] md:h-[1190px] lg:h-[920px]",
+            // selectedIndex == 1 &&
+            //   "h-[740px] sm:h-[948px] md:h-[1008px] lg:h-[920px]",
+            // selectedIndex == 2 &&
+            //   "h-[740px] sm:h-[760px] md:h-[960px] lg:h-[920px]"
           )}
         >
           <HeroConnected />

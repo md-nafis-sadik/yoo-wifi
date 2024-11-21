@@ -22,9 +22,9 @@ function HeroDiscover() {
     setLoginRequiredDialogOpen(true);
   };
   return (
-    <div className="flex-full flex items-end bg-yellow-400 text-black-900 pt-20 sm:pt-28 xl:pt-40 px-4 sm:px-10 md:px-16 overflow-hidden relative">
+    <div className="flex-full flex items-end bg-yellow-400 text-black-900 pt-20 sm:pt-28 px-4 sm:px-10 md:px-16 overflow-hidden relative">
       <div className="w-full max-w-[1190px] mx-auto relative z-50">
-        <h1 className="max-w-[686px] mx-auto lg:mx-0 text-3xl sm:text-5xl md:text-7xl xl:text-[7.5rem] leading-[115%] xl:!leading-none font-sansPro uppercase font-extrabold text-center lg:text-left">
+        <h1 className="max-w-[686px] mx-auto lg:mx-0 text-3xl sm:text-5xl md:text-7xl leading-[115%] xl:!leading-none font-sansPro uppercase font-extrabold text-center lg:text-left">
           {t("heroHome.heroDiscover.discover")}
         </h1>
 

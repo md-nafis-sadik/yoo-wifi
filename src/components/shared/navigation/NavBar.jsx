@@ -95,7 +95,7 @@ function NavBar() {
         !isHome && !isBannerRoutes ? "border-b border-neutral-200" : ""
       )}
     >
-      <div className="w-full max-w-[1392px] mx-auto">
+      <div className="w-full max-w-[1600px] mx-auto">
         <nav
           className={cn(
             "w-full duration-300 flex items-center lg:gap-10 2xl:gap-15 justify-between px-4 py-2 sm:py-4",
@@ -260,7 +260,7 @@ function NavBar() {
               </ul>
               <Link
                 className={cn(
-                  "menuItem p-3 xl:p-0 text-white ",
+                  "menuItem p-3 xl:p-0 text-white mx-2",
                   isRedBorder && !isBannerRoutes
                     ? "xl:text-main-600"
                     : isHome || isBannerRoutes
