@@ -68,6 +68,9 @@ const initialState = {
       },
     },
   ],
+  productTab: {
+    activeTab: null,
+  },
   selectedHeroIndex: 0,
   isAuthModalOpen: false,
   isLoginModalOpen: false,
@@ -93,6 +96,9 @@ const sharedSlice = createSlice({
     setDownloadAppDialogOpen: (state, action) => {
       state.downloadAppDialogOpen = action.payload;
     },
+    setProductActiveTab: (state, action) => {
+      state.productTab.activeTab = action.payload;
+    },
   },
 });
 
@@ -102,5 +108,6 @@ export const {
   setDownloadAppDialogOpen,
   setAuthModalStatus,
   setLoginModalStatus,
+  setProductActiveTab,
 } = sharedSlice.actions;
 export default sharedSlice.reducer;

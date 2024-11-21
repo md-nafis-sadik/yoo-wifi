@@ -154,27 +154,15 @@
       "menuItems": [
         {
           "title": "ข้อมูลการเดินทาง",
-          "items": [
-            "รายละเอียด Pocket Wifi",
-            "รายละเอียด Sim/eSim"
-          ]
+          "items": ["รายละเอียด Pocket Wifi", "รายละเอียด Sim/eSim"]
         },
         {
           "title": "ครอบคลุมประเทศ",
-          "items": [
-            "เอเชีย",
-            "ยุโรป",
-            "อเมริกา",
-            "ออสเตรเลีย",
-            "แอฟริกา"
-          ]
+          "items": ["เอเชีย", "ยุโรป", "อเมริกา", "ออสเตรเลีย", "แอฟริกา"]
         },
         {
           "title": "สถานที่รับ/ส่งคืน",
-          "items": [
-            "สถานที่รับ",
-            "สถานที่ส่งคืน"
-          ]
+          "items": ["สถานที่รับ", "สถานที่ส่งคืน"]
         },
         {
           "title": "วิธีการทำงาน",
@@ -193,10 +181,7 @@
         },
         {
           "title": "วิธีการ",
-          "items": [
-            "ตั้งค่า eSIM",
-            "วิธีการเชื่อมต่อ Pocketwifi?"
-          ]
+          "items": ["ตั้งค่า eSIM", "วิธีการเชื่อมต่อ Pocketwifi?"]
         }
       ]
     }
@@ -213,10 +198,23 @@
     "heroDiscover": {
       "discover": "ค้นพบโลกกับเรา"
     },
-    "slides": {
-      "title": "อุปกรณ์พกพา",
-      "description": "Lorem Ipsum เป็นเพียงข้อความจำลองของอุตสาหกรรมการพิมพ์และการเรียงพิมพ์"
-    }
+    "slides": [
+      {
+        "title": "เร็วขึ้น",
+        "subTitle": "การเชื่อมต่อ 5G",
+        "description": "การเชื่อมต่อ 5G สูงสุดในกว่า 90 ประเทศ"
+      },
+      {
+        "title": "ยาวนานขึ้น",
+        "subTitle": "อายุการใช้งานแบตเตอรี่",
+        "description": "อายุการใช้งานแบตเตอรี่ยาวนานสูงสุดถึง 20 ชั่วโมง"
+      },
+      {
+        "title": "รวมถึง",
+        "subTitle": "หน้าจอแสดงผล",
+        "description": "ตอนนี้คุณสามารถติดตามการใช้ข้อมูล เชื่อมต่อได้ง่าย และเข้าถึงข้อมูลเพิ่มเติมได้โดยไม่มีความยุ่งยาก"
+      }
+    ]
   },
   "productsData": {
     "title": "ผลิตภัณฑ์ของเรา",
@@ -260,13 +258,7 @@
   "stayConnectedRegions": {
     "sectionHeading": "เชื่อมต่อได้ทุกที่",
     "sectionSubHeading": "เลือกจุดหมายปลายทางในฝันและแพ็คเกจที่สมบูรณ์แบบของคุณตอนนี้",
-    "regions": [
-      "เอเชีย",
-      "อเมริกา",
-      "แอฟริกา",
-      "ออสเตรเลีย",
-      "ยุโรป"
-    ]
+    "regions": ["เอเชีย", "อเมริกา", "แอฟริกา", "ออสเตรเลีย", "ยุโรป"]
   },
   "customerTestimonial": {
     "sectionHeading": "สิ่งที่ลูกค้าของเราพูด",
@@ -834,10 +826,7 @@
     "whatsIncluded": {
       "heading": "สิ่งที่รวมอยู่",
       "subHeading": "ทุกสิ่งที่คุณต้องการสำหรับการเชื่อมต่อที่ราบรื่น",
-      "includedList": [
-        "เราเตอร์ WiFi x1",
-        "อะแดปเตอร์ไฟ x1"
-      ]
+      "includedList": ["เราเตอร์ WiFi x1", "อะแดปเตอร์ไฟ x1"]
     },
     "howToConnectRouter": {
       "heading": "วิธีเชื่อมต่อเราเตอร์?",
@@ -1050,10 +1039,7 @@
             },
             {
               "name": "Samsung Galaxy A Series",
-              "versions": [
-                "Galaxy A54 (2023)",
-                "Galaxy A53 (2022)"
-              ]
+              "versions": ["Galaxy A54 (2023)", "Galaxy A53 (2022)"]
             }
           ],
           "note": "ฟังก์ชัน eSIM อาจแตกต่างกันไปตามรุ่นและภูมิภาค โปรดติดต่อผู้ให้บริการในพื้นที่ของคุณเพื่อยืนยัน"
@@ -1063,49 +1049,27 @@
           "devices": [
             {
               "name": "Google Pixel 8 Series (2023)",
-              "versions": [
-                "Pixel 8",
-                "Pixel 8 Pro"
-              ]
+              "versions": ["Pixel 8", "Pixel 8 Pro"]
             },
             {
               "name": "Google Pixel 7 Series (2022)",
-              "versions": [
-                "Pixel 7",
-                "Pixel 7 Pro"
-              ]
+              "versions": ["Pixel 7", "Pixel 7 Pro"]
             },
             {
               "name": "Google Pixel 6 Series (2021)",
-              "versions": [
-                "Pixel 6",
-                "Pixel 6 Pro",
-                "Pixel 6a"
-              ]
+              "versions": ["Pixel 6", "Pixel 6 Pro", "Pixel 6a"]
             },
             {
               "name": "Google Pixel 5 Series (2020)",
-              "versions": [
-                "Pixel 5",
-                "Pixel 5a 5G"
-              ]
+              "versions": ["Pixel 5", "Pixel 5a 5G"]
             },
             {
               "name": "Google Pixel 4 Series (2019)",
-              "versions": [
-                "Pixel 4",
-                "Pixel 4 XL",
-                "Pixel 4a"
-              ]
+              "versions": ["Pixel 4", "Pixel 4 XL", "Pixel 4a"]
             },
             {
               "name": "Google Pixel 3 Series (2018)",
-              "versions": [
-                "Pixel 3",
-                "Pixel 3 XL",
-                "Pixel 3a",
-                "Pixel 3a XL"
-              ]
+              "versions": ["Pixel 3", "Pixel 3 XL", "Pixel 3a", "Pixel 3a XL"]
             }
           ],
           "note": "ฟังก์ชัน eSIM อาจแตกต่างกันไปตามรุ่นและภูมิภาค โปรดติดต่อผู้ให้บริการในพื้นที่ของคุณเพื่อยืนยัน"
@@ -1162,16 +1126,11 @@
             },
             {
               "name": "Oppo Reno Series",
-              "versions": [
-                "Oppo Reno8 Pro (2022)",
-                "Oppo Reno7 Pro 5G"
-              ]
+              "versions": ["Oppo Reno8 Pro (2022)", "Oppo Reno7 Pro 5G"]
             },
             {
               "name": "Oppo A Series",
-              "versions": [
-                "Oppo A55s 5G (2022)"
-              ]
+              "versions": ["Oppo A55s 5G (2022)"]
             }
           ],
           "note": "ฟังก์ชัน eSIM อาจแตกต่างกันไปตามรุ่นและภูมิภาค โปรดติดต่อผู้ให้บริการในพื้นที่ของคุณเพื่อยืนยัน"
@@ -1230,23 +1189,15 @@
             },
             {
               "name": "Honor 50 Series",
-              "versions": [
-                "Honor 50 (2021)",
-                "Honor 50 Pro (2021)"
-              ]
+              "versions": ["Honor 50 (2021)", "Honor 50 Pro (2021)"]
             },
             {
               "name": "Honor V Series",
-              "versions": [
-                "Honor V40 (2021)",
-                "Honor V30 (2019)"
-              ]
+              "versions": ["Honor V40 (2021)", "Honor V30 (2019)"]
             },
             {
               "name": "Honor 20 Series",
-              "versions": [
-                "Honor 20 Pro (2019)"
-              ]
+              "versions": ["Honor 20 Pro (2019)"]
             }
           ],
           "note": "ฟังก์ชัน eSIM อาจแตกต่างกันไปตามรุ่นและภูมิภาค โปรดติดต่อผู้ให้บริการในพื้นที่ของคุณเพื่อยืนยัน"
@@ -1265,16 +1216,11 @@
             },
             {
               "name": "Sony Xperia 1 III Series (2021)",
-              "versions": [
-                "Sony Xperia 1 III",
-                "Sony Xperia 5 III"
-              ]
+              "versions": ["Sony Xperia 1 III", "Sony Xperia 5 III"]
             },
             {
               "name": "Sony Xperia 10 Series",
-              "versions": [
-                "Sony Xperia 10 III (2021)"
-              ]
+              "versions": ["Sony Xperia 10 III (2021)"]
             }
           ],
           "note": "ฟังก์ชัน eSIM อาจแตกต่างกันไปตามรุ่นและภูมิภาค โปรดติดต่อผู้ให้บริการในพื้นที่ของคุณเพื่อยืนยัน"
@@ -1293,16 +1239,11 @@
             },
             {
               "name": "Motorola Razr (Foldable)",
-              "versions": [
-                "Motorola Razr 40 (2023)",
-                "Motorola Razr 2020"
-              ]
+              "versions": ["Motorola Razr 40 (2023)", "Motorola Razr 2020"]
             },
             {
               "name": "Motorola Moto G Series",
-              "versions": [
-                "Moto G72 (2022)"
-              ]
+              "versions": ["Moto G72 (2022)"]
             }
           ],
           "note": "ฟังก์ชัน eSIM อาจแตกต่างกันไปตามรุ่นและภูมิภาค โปรดติดต่อผู้ให้บริการในพื้นที่ของคุณเพื่อยืนยัน"
@@ -1771,11 +1712,7 @@
   },
   "corporateSharedHero": {
     "heading": "เชื่อมต่อการเดินทาง",
-    "items": [
-      "ฮอตสปอตแบบพกพา",
-      "eSim",
-      "ซิมการ์ด"
-    ]
+    "items": ["ฮอตสปอตแบบพกพา", "eSim", "ซิมการ์ด"]
   },
   "commercial": {
     "pageTitle": "เชิงพาณิชย์",
@@ -1801,11 +1738,7 @@
   },
   "pocketWifiDetails": {
     "pocketWifiDayPass": {
-      "headers": [
-        "Pocket Wifi-บัตรผ่านรายวันไม่จำกัด",
-        "1GB/วัน",
-        "5GB/วัน"
-      ],
+      "headers": ["Pocket Wifi-บัตรผ่านรายวันไม่จำกัด", "1GB/วัน", "5GB/วัน"],
       "plans": [
         "ฮ่องกง, อินโดนีเซีย, ญี่ปุ่น, มาเก๊า, มาเลเซีย, ฟิลิปปินส์, เกาหลีใต้, ไต้หวัน, ไทย, เวียดนาม 1 วัน",
         "ออสเตรเลีย, บรูไน, แคนาดา, กัมพูชา, จีน (พร้อม VPN), ยุโรป, ลาว, เม็กซิโก, นิวซีแลนด์, ตุรกี, สหรัฐอเมริกา 1 วัน",
@@ -1847,11 +1780,7 @@
     "regionalCountries": "*ยุโรป: แอลเบเนีย, อาร์เมเนีย, อันดอร์รา, ออสเตรีย, เบลเยียม, บอสเนียและเฮอร์เซโกวีนา, บัลแกเรีย, โครเอเชีย, ไซปรัส, สาธารณรัฐเช็ก, เดนมาร์ก, เอสโตเนีย, ฟินแลนด์, ฝรั่งเศส, เยอรมนี, จอร์เจีย, ยิบรอลตาร์, กรีซ, เกิร์นซีย์, ฮังการี, ไอซ์แลนด์, ไอร์แลนด์, เกาะแมน, อิตาลี, เจอร์ซีย์, ลัตเวีย, ลิกเตนสไตน์, ลิทัวเนีย, ลักเซมเบิร์ก, มาซิโดเนีย, มอลตา, โมนาโก, มอนเตเนโกร, เนเธอร์แลนด์, นอร์เวย์, โปแลนด์, โปรตุเกส, โรมาเนีย, ซานมารีโน, เซอร์เบีย, สโลวาเกีย, สโลวีเนีย, สเปน, สวีเดน, สวิตเซอร์แลนด์, ยูเครน, สหราชอาณาจักร, วาติกัน"
   },
   "pocketWifiRegion": {
-    "tabs": [
-      "Pocket WIFI",
-      "ซิม/eSIM",
-      "เราเตอร์"
-    ],
+    "tabs": ["Pocket WIFI", "ซิม/eSIM", "เราเตอร์"],
     "header": {
       "text": "เลือกผลิตภัณฑ์"
     },
@@ -1874,12 +1803,7 @@
   },
   "pocketWifiPlan": {
     "heading": "เลือกแผน",
-    "tabs": [
-      "ทั้งหมด",
-      "รายวัน",
-      "รายเดือน",
-      "หลายประเทศ"
-    ]
+    "tabs": ["ทั้งหมด", "รายวัน", "รายเดือน", "หลายประเทศ"]
   },
   "discountDownloadApp": {
     "title": "ในแอปมือถือ",
@@ -1890,11 +1814,7 @@
     "heroTitle": "สถานที่รับและส่งคืน"
   },
   "routerRegion": {
-    "tabs": [
-      "Pocket WIFI",
-      "ซิม/eSIM",
-      "เราเตอร์"
-    ],
+    "tabs": ["Pocket WIFI", "ซิม/eSIM", "เราเตอร์"],
     "header": {
       "text": "เลือกผลิตภัณฑ์"
     },
@@ -1917,19 +1837,10 @@
   },
   "routerPlan": {
     "heading": "เลือกแผน",
-    "tabs": [
-      "ทั้งหมด",
-      "รายวัน",
-      "รายเดือน",
-      "หลายประเทศ"
-    ]
+    "tabs": ["ทั้งหมด", "รายวัน", "รายเดือน", "หลายประเทศ"]
   },
   "simRegion": {
-    "tabs": [
-      "Pocket WIFI",
-      "SIM/eSIM",
-      "เราเตอร์"
-    ],
+    "tabs": ["Pocket WIFI", "SIM/eSIM", "เราเตอร์"],
     "header": {
       "text": "เลือกผลิตภัณฑ์"
     },
@@ -1952,12 +1863,7 @@
   },
   "simPlan": {
     "heading": "เลือกแผน",
-    "tabs": [
-      "ทั้งหมด",
-      "รายวัน",
-      "รายเดือน",
-      "หลายประเทศ"
-    ]
+    "tabs": ["ทั้งหมด", "รายวัน", "รายเดือน", "หลายประเทศ"]
   },
   "simInformation": {
     "accordionData": {

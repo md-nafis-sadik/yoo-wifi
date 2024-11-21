@@ -195,10 +195,23 @@
     "heroDiscover": {
       "discover": "与我们一起发现世界"
     },
-    "slides": {
-      "title": "便携设备",
-      "description": "Lorem Ipsum 是印刷和排版行业的虚拟文本。"
-    }
+    "slides": [
+      {
+        "title": "更快",
+        "subTitle": "5G连接",
+        "description": "在90多个国家提供最高5G连接"
+      },
+      {
+        "title": "延长",
+        "subTitle": "电池寿命",
+        "description": "电池寿命延长至20小时。"
+      },
+      {
+        "title": "包括",
+        "subTitle": "屏幕显示",
+        "description": "现在您可以跟踪数据使用情况，轻松连接，并无烦恼地访问更多信息。"
+      }
+    ]
   },
   "productsData": {
     "title": "我们的产品",

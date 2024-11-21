@@ -198,10 +198,23 @@
     "heroDiscover": {
       "discover": "DESCUBRE EL MUNDO CON NOSOTROS"
     },
-    "slides": {
-      "title": "Dispositivo Portátil",
-      "description": "Lorem Ipsum es simplemente texto ficticio de la industria de la impresión y la composición tipográfica."
-    }
+    "slides": [
+      {
+        "title": "MÁS RÁPIDO",
+        "subTitle": "Conectividad 5G",
+        "description": "Conectividad de hasta 5G en más de 90 países"
+      },
+      {
+        "title": "AMPLIADO",
+        "subTitle": "VIDA ÚTIL DE LA BATERÍA",
+        "description": "Batería ampliada de hasta 20 horas de duración."
+      },
+      {
+        "title": "INCLUYE",
+        "subTitle": "PANTALLA",
+        "description": "Ahora puedes rastrear el uso de datos, conectarte fácilmente y acceder a más información sin complicaciones."
+      }
+    ]
   },
   "productsData": {
     "title": "Nuestros Productos",

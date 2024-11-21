@@ -60,7 +60,14 @@ export const SlideCard = ({ title, subTitle, description }) => {
     <div className="w-full shrink-0 flex items-end justify-center">
       <div className="w-full flex gap-4">
         <div className="font-meid whitespace-pre-wrap flex flex-col justify-end">
-          <h5 className="text-3xl sm:text-4xl md:text-[2.5rem] ">{title}</h5>
+          <h5
+            className={cn(
+              "text-3xl sm:text-4xl md:text-[2.5rem]",
+              title.length > 8 ? "break-all" : ""
+            )}
+          >
+            {title}
+          </h5>
           <h6 className="text-xs sm:text-sm  uppercase">{subTitle}</h6>
         </div>
         <p className="text-xs sm:text-sm flex-grow">{description}</p>

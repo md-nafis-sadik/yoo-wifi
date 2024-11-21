@@ -198,10 +198,23 @@
     "heroDiscover": {
       "discover": "TEROKAI DUNIA BERSAMA KAMI"
     },
-    "slides": {
-      "title": "Peranti Mudah Alih",
-      "description": "Lorem Ipsum adalah teks rekaan yang biasa digunakan dalam industri percetakan dan penyetakan."
-    }
+    "slides": [
+      {
+        "title": "LEBIH LAJU",
+        "subTitle": "Ketersambungan 5G",
+        "description": "Hingga ketersambungan 5G di lebih daripada 90 negara"
+      },
+      {
+        "title": "DIPANJANGKAN",
+        "subTitle": "HAYAT BATERI",
+        "description": "Hayat bateri yang dipanjangkan hingga 20 jam."
+      },
+      {
+        "title": "TERMASUK",
+        "subTitle": "PAPARAN SKRIN",
+        "description": "Kini anda boleh menjejak penggunaan data, menyambung dengan mudah, dan mengakses lebih banyak maklumat tanpa kerumitan."
+      }
+    ]
   },
   "productsData": {
     "title": "Produk Kami",

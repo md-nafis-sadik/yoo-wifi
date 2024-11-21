@@ -206,10 +206,23 @@
     "heroDiscover": {
       "discover": "私たちと一緒に世界を発見しよう"
     },
-    "slides": {
-      "title": "ポータブルデバイス",
-      "description": "Lorem Ipsumは印刷業界のダミーテキストにすぎません。"
-    }
+    "slides": [
+      {
+        "title": "より速く",
+        "subTitle": "5G接続",
+        "description": "90か国以上で最大5G接続が可能"
+      },
+      {
+        "title": "延長",
+        "subTitle": "バッテリー寿命",
+        "description": "最大20時間のバッテリー寿命を実現。"
+      },
+      {
+        "title": "含まれる",
+        "subTitle": "画面表示",
+        "description": "データ使用量を追跡し、簡単に接続し、さらに多くの情報に手間なくアクセスできます。"
+      }
+    ]
   },
   "productsData": {
     "title": "私たちの製品",

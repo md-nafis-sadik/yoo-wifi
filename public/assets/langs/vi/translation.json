@@ -198,10 +198,23 @@
     "heroDiscover": {
       "discover": "KHÁM PHÁ THẾ GIỚI CÙNG CHÚNG TÔI"
     },
-    "slides": {
-      "title": "Thiết Bị Di Động",
-      "description": "Lorem Ipsum là văn bản giả của ngành in ấn và đánh máy."
-    }
+    "slides": [
+      {
+        "title": "NHANH HƠN",
+        "subTitle": "Kết nối 5G",
+        "description": "Kết nối 5G đến hơn 90 quốc gia"
+      },
+      {
+        "title": "KÉO DÀI",
+        "subTitle": "TUỔI THỌ PIN",
+        "description": "Tuổi thọ pin kéo dài lên đến 20 giờ."
+      },
+      {
+        "title": "BAO GỒM",
+        "subTitle": "MÀN HÌNH HIỂN THỊ",
+        "description": "Bây giờ bạn có thể theo dõi mức sử dụng dữ liệu, kết nối dễ dàng và truy cập thêm thông tin mà không gặp rắc rối."
+      }
+    ]
   },
   "productsData": {
     "title": "Sản Phẩm Của Chúng Tôi",
