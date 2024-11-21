@@ -422,3 +422,33 @@ export const affiliateServiceData = [
     icon: () => <YoutubeThumbnailIcon className="w-12 h-12 md:w-10 md:h-10" />,
   },
 ];
+
+// g
+export const getYourOwnData = () => ({
+  title: "Get your own Yoowifi Pocket WiFi",
+  features: [
+    {
+      icon: <SignalIcon className={"h-4 w-4 md:h-6 md:w-6"} />,
+      text: "Annual coverage in over 90 countries",
+    },
+    {
+      icon: <SignalIcon className={"h-4 w-4 md:h-6 md:w-6"} />,
+      text: "Share up to 8 Devices",
+    },
+    {
+      icon: <SignalIcon className={"h-4 w-4 md:h-6 md:w-6"} />,
+      text: "Up to 5G Connectivity",
+    },
+    {
+      icon: <SignalIcon className={"h-4 w-4 md:h-6 md:w-6"} />,
+      text: "Data Top up available",
+    },
+    {
+      icon: <SignalIcon className={"h-4 w-4 md:h-6 md:w-6"} />,
+      text: "Choose from 50GB, 100GB, or 200GB data plans",
+    },
+  ],
+  button: {
+    text: "Buy Now",
+  },
+});

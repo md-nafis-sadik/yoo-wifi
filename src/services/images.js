@@ -78,6 +78,7 @@ import sim1 from "@/assets/images/sim/sim-1.webp";
 import tour from "@/assets/images/tour.webp";
 import whatsapp from "@/assets/images/whatsapp.webp";
 import whoWeAre1 from "@/assets/images/who-we-are-1.webp";
+import blackPocketWifiEn from "@/assets/images/pocket-wifi/black-pocket-wifi-en.webp";
 
 export {
   BelgiumFlag,
@@ -160,4 +161,5 @@ export {
   tour,
   whatsapp,
   whoWeAre1,
+  blackPocketWifiEn,
 };

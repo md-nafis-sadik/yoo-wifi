@@ -238,6 +238,16 @@
       }
     ]
   },
+  "getYourOwn": {
+    "title": "Get your own Yoowifi Pocket WiFi",
+    "features": [
+      "Annual coverage in over 90 countries",
+      "Share up to 8 Devices",
+      "Up to 5G Connectivity",
+      "Data Top up available",
+      "Choose from 50GB, 100GB, or 200GB data plans"
+    ]
+  },
   "internetPackages": {
     "sectionHeading": "Internet Packages",
     "sectionSubHeading": "Discover Our Internet Packages for Your Needs",
