@@ -236,6 +236,16 @@
       }
     ]
   },
+  "getYourOwn": {
+    "title": "Nhận Yoowifi Pocket WiFi của riêng bạn",
+    "features": [
+      "Phủ sóng hàng năm ở hơn 90 quốc gia",
+      "Chia sẻ tối đa 8 thiết bị",
+      "Kết nối lên tới 5G",
+      "Có thể nạp thêm dữ liệu",
+      "Chọn từ các gói dữ liệu 50GB, 100GB hoặc 200GB"
+    ]
+  },
   "internetPackages": {
     "sectionHeading": "Gói Cước Internet",
     "sectionSubHeading": "Khám Phá Các Gói Cước Internet Phù Hợp Với Nhu Cầu Của Bạn",

@@ -244,6 +244,16 @@
       }
     ]
   },
+  "getYourOwn": {
+    "title": "自分専用のYoowifi Pocket WiFiを手に入れよう",
+    "features": [
+      "90カ国以上で年間カバレッジ",
+      "最大8台のデバイスと共有可能",
+      "最大5Gの接続",
+      "データのチャージが可能",
+      "50GB、100GB、または200GBのデータプランから選べる"
+    ]
+  },
   "internetPackages": {
     "sectionHeading": "インターネットパッケージ",
     "sectionSubHeading": "あなたのニーズに合わせたインターネットパッケージを見つけましょう",

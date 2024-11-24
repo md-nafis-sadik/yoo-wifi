@@ -236,6 +236,16 @@
       }
     ]
   },
+  "getYourOwn": {
+    "title": "Dapatkan Yoowifi Pocket WiFi Anda Sendiri",
+    "features": [
+      "Per coverage tahunan di lebih 90 negara",
+      "Kongsi sehingga 8 peranti",
+      "Konektiviti sehingga 5G",
+      "Tambah nilai data tersedia",
+      "Pilih daripada pelan data 50GB, 100GB, atau 200GB"
+    ]
+  },
   "internetPackages": {
     "sectionHeading": "Pakej Internet",
     "sectionSubHeading": "Temui Pakej Internet Kami Untuk Keperluan Anda",

@@ -238,6 +238,16 @@
       }
     ]
   },
+  "getYourOwn": {
+    "title": "Dapatkan Yoowifi Pocket WiFi Anda Sendiri",
+    "features": [
+      "Cakupan tahunan di lebih dari 90 negara",
+      "Bagikan hingga 8 perangkat",
+      "Konektivitas hingga 5G",
+      "Isi ulang data tersedia",
+      "Pilih dari paket data 50GB, 100GB, atau 200GB"
+    ]
+  },
   "internetPackages": {
     "sectionHeading": "Paket Internet",
     "sectionSubHeading": "Temukan Paket Internet Kami untuk Kebutuhan Anda",

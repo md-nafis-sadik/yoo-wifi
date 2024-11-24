@@ -233,6 +233,16 @@
       }
     ]
   },
+  "getYourOwn": {
+    "title": "获取您自己的 Yoowifi Pocket WiFi",
+    "features": [
+      "在90多个国家/地区提供年度覆盖",
+      "最多可共享8个设备",
+      "支持最高5G连接",
+      "可进行数据充值",
+      "可选择50GB、100GB或200GB数据套餐"
+    ]
+  },
   "internetPackages": {
     "sectionHeading": "互联网套餐",
     "sectionSubHeading": "发现适合您的互联网套餐",
