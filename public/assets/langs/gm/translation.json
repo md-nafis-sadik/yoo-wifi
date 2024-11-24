@@ -69,7 +69,8 @@
     "addressDetails": "Adressdetails",
     "noCountriesFoundInThisRegion": "Keine Länder in dieser Region gefunden",
     "searchAnything": "Alles durchsuchen...",
-    "filters": "Filter"
+    "filters": "Filter",
+    "noOfRentalDevices": "Anzahl der Mietgeräte"
   },
   "form": {
     "startDate": "Startdatum",

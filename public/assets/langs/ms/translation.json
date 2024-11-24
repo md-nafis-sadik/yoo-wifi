@@ -69,7 +69,8 @@
     "addressDetails": "Butiran Alamat",
     "noCountriesFoundInThisRegion": "Tiada negara dijumpai di rantau ini",
     "searchAnything": "Cari apa sahaja...",
-    "filters": "Penapis"
+    "filters": "Penapis",
+    "noOfRentalDevices": "Bilangan Peranti Sewaan"
   },
   "form": {
     "startDate": "Tarikh Mula",

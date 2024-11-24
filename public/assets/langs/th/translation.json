@@ -69,7 +69,8 @@
     "addressDetails": "รายละเอียดที่อยู่",
     "noCountriesFoundInThisRegion": "ไม่พบประเทศในภูมิภาคนี้",
     "searchAnything": "ค้นหาอะไรก็ได้...",
-    "filters": "ตัวกรอง"
+    "filters": "ตัวกรอง",
+    "noOfRentalDevices": "จำนวนอุปกรณ์เช่า"
   },
   "form": {
     "startDate": "วันที่เริ่มต้น",

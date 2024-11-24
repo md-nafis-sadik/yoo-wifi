@@ -69,7 +69,8 @@
     "addressDetails": "地址詳情",
     "noCountriesFoundInThisRegion": "此地區未找到國家",
     "searchAnything": "搜尋任何內容...",
-    "filters": "篩選"
+    "filters": "篩選",
+    "noOfRentalDevices": "租賃設備數量"
   },
   "form": {
     "startDate": "開始日期",

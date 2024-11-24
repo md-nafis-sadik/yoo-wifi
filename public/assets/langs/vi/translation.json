@@ -69,7 +69,8 @@
     "addressDetails": "Chi tiết địa chỉ",
     "noCountriesFoundInThisRegion": "Không tìm thấy quốc gia nào trong khu vực này",
     "searchAnything": "Tìm kiếm bất cứ thứ gì...",
-    "filters": "Bộ lọc"
+    "filters": "Bộ lọc",
+    "noOfRentalDevices": "Số lượng thiết bị thuê"
   },
   "form": {
     "startDate": "Ngày bắt đầu",

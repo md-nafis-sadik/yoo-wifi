@@ -90,7 +90,9 @@ function RouterCartService({ className = "", multiCountry = false }) {
       )}
 
       <div>
-        <span className="label mb-2 md:mb-4">{t("extraText.country")}</span>
+        <span className="label mb-2 md:mb-4">
+          {t("extraText.noOfRentalDevices")}
+        </span>
         <CartQuantity
           max={10}
           defaultValue={cart?.quantity}

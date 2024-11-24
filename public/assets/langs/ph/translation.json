@@ -69,7 +69,8 @@
     "addressDetails": "Mga Detalye ng Address",
     "noCountriesFoundInThisRegion": "Walang mga bansang natagpuan sa rehiyong ito",
     "searchAnything": "Maghanap ng anuman...",
-    "filters": "Mga Filter"
+    "filters": "Mga Filter",
+    "noOfRentalDevices": "Bilang ng mga Device na Inirenta"
   },
   "form": {
     "startDate": "Petsa ng Simula",

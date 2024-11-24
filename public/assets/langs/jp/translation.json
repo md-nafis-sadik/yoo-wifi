@@ -52,7 +52,6 @@
     "selectDevice": "デバイスを選択",
     "selectDeviceToTopUp": "トップアップするデバイスを選択",
     "wifiDevices": "Wi-Fiデバイス",
-
     "planSummary": "プランの概要",
     "chosenPlan": "選択したプラン",
     "dataAvailable": "利用可能なデータ",
@@ -70,7 +69,8 @@
     "addressDetails": "住所の詳細",
     "noCountriesFoundInThisRegion": "この地域には国が見つかりません",
     "searchAnything": "何かを検索...",
-    "filters": "フィルター"
+    "filters": "フィルター",
+    "noOfRentalDevices": "レンタルデバイスの数"
   },
   "form": {
     "startDate": "開始日",

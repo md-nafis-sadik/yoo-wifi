@@ -69,7 +69,8 @@
     "addressDetails": "Detalles de la Dirección",
     "noCountriesFoundInThisRegion": "No se encontraron países en esta región",
     "searchAnything": "Buscar cualquier cosa...",
-    "filters": "Filtros"
+    "filters": "Filtros",
+    "noOfRentalDevices": "Números de Dispositivos de Alquiler"
   },
   "form": {
     "startDate": "Fecha de Inicio",

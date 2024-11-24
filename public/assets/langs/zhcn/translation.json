@@ -69,7 +69,8 @@
     "addressDetails": "地址详情",
     "noCountriesFoundInThisRegion": "此区域没有找到国家",
     "searchAnything": "搜索任何内容...",
-    "filters": "筛选"
+    "filters": "筛选",
+    "noOfRentalDevices": "租赁设备数量"
   },
   "form": {
     "startDate": "开始日期",

@@ -52,7 +52,6 @@
     "selectDevice": "Pilih Perangkat",
     "selectDeviceToTopUp": "Pilih Perangkat untuk Isi Ulang",
     "wifiDevices": "Perangkat Wifi",
-
     "planSummary": "Ringkasan Paket",
     "chosenPlan": "Paket Terpilih",
     "dataAvailable": "Data Tersedia",
@@ -70,7 +69,8 @@
     "addressDetails": "Rincian Alamat",
     "noCountriesFoundInThisRegion": "Tidak ada negara ditemukan di wilayah ini",
     "searchAnything": "Cari apa saja...",
-    "filters": "Filter"
+    "filters": "Filter",
+    "noOfRentalDevices": "Jumlah Perangkat Sewa"
   },
   "form": {
     "startDate": "Tanggal Mulai",

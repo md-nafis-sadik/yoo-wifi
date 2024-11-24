@@ -69,7 +69,8 @@
     "addressDetails": "Détails de l'Adresse",
     "noCountriesFoundInThisRegion": "Aucun pays trouvé dans cette région",
     "searchAnything": "Rechercher n'importe quoi...",
-    "filters": "Filtres"
+    "filters": "Filtres",
+    "noOfRentalDevices": "Nombre de Dispositifs de Location"
   },
   "form": {
     "startDate": "Date de Début",

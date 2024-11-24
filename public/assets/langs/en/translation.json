@@ -52,7 +52,6 @@
     "selectDevice": "Select Device",
     "selectDeviceToTopUp": "Select Device to Top Up",
     "wifiDevices": "Wifi Devices",
-
     "planSummary": "Plan Summary",
     "chosenPlan": "Chosen Plan",
     "dataAvailable": "Data Available",
@@ -70,7 +69,8 @@
     "addressDetails": "Address Details",
     "noCountriesFoundInThisRegion": "No countries found in this region",
     "searchAnything": "Search anything...",
-    "filters": "Filters"
+    "filters": "Filters",
+    "noOfRentalDevices": "No of Rental device(s)"
   },
   "form": {
     "startDate": "Start Date",
