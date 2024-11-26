@@ -52,7 +52,6 @@
     "selectDevice": "Select Device",
     "selectDeviceToTopUp": "Select Device to Top Up",
     "wifiDevices": "Wifi Devices",
-
     "planSummary": "Plan Summary",
     "chosenPlan": "Chosen Plan",
     "dataAvailable": "Data Available",
@@ -70,7 +69,8 @@
     "addressDetails": "Address Details",
     "noCountriesFoundInThisRegion": "No countries found in this region",
     "searchAnything": "Search anything...",
-    "filters": "Filters"
+    "filters": "Filters",
+    "noOfRentalDevices": "No of Rental device(s)"
   },
   "form": {
     "startDate": "Start Date",
@@ -236,6 +236,16 @@
         "description": "Get instant connectivity with our SIM and eSIM options, suitable for all your devices.",
         "offer": "20% OFF"
       }
+    ]
+  },
+  "getYourOwn": {
+    "title": "Get your own Yoowifi Pocket WiFi",
+    "features": [
+      "Annual coverage in over 90 countries",
+      "Share up to 8 Devices",
+      "Up to 5G Connectivity",
+      "Data Top up available",
+      "Choose from 50GB, 100GB, or 200GB data plans"
     ]
   },
   "internetPackages": {

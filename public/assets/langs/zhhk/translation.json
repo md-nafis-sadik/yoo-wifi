@@ -69,7 +69,8 @@
     "addressDetails": "地址詳情",
     "noCountriesFoundInThisRegion": "此地區未找到國家",
     "searchAnything": "搜尋任何內容...",
-    "filters": "篩選"
+    "filters": "篩選",
+    "noOfRentalDevices": "租賃設備數量"
   },
   "form": {
     "startDate": "開始日期",
@@ -231,6 +232,16 @@
         "description": "獲得即時連接，提供適用於所有設備的SIM和eSIM選項。",
         "offer": "八折優惠"
       }
+    ]
+  },
+  "getYourOwn": {
+    "title": "獲取您自己的 Yoowifi Pocket WiFi",
+    "features": [
+      "在90多個國家/地區提供年度覆蓋",
+      "最多可共享8個設備",
+      "支持最高5G連接",
+      "可進行數據充值",
+      "可選擇50GB、100GB或200GB數據套餐"
     ]
   },
   "internetPackages": {

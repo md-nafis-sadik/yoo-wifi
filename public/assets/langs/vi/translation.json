@@ -69,7 +69,8 @@
     "addressDetails": "Chi tiết địa chỉ",
     "noCountriesFoundInThisRegion": "Không tìm thấy quốc gia nào trong khu vực này",
     "searchAnything": "Tìm kiếm bất cứ thứ gì...",
-    "filters": "Bộ lọc"
+    "filters": "Bộ lọc",
+    "noOfRentalDevices": "Số lượng thiết bị thuê"
   },
   "form": {
     "startDate": "Ngày bắt đầu",
@@ -234,6 +235,16 @@
         "description": "Nhận kết nối ngay lập tức với SIM và eSIM của chúng tôi, phù hợp với tất cả các thiết bị của bạn.",
         "offer": "GIẢM GIÁ 20%"
       }
+    ]
+  },
+  "getYourOwn": {
+    "title": "Nhận Yoowifi Pocket WiFi của riêng bạn",
+    "features": [
+      "Phủ sóng hàng năm ở hơn 90 quốc gia",
+      "Chia sẻ tối đa 8 thiết bị",
+      "Kết nối lên tới 5G",
+      "Có thể nạp thêm dữ liệu",
+      "Chọn từ các gói dữ liệu 50GB, 100GB hoặc 200GB"
     ]
   },
   "internetPackages": {

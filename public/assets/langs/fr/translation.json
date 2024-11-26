@@ -69,7 +69,8 @@
     "addressDetails": "Détails de l'Adresse",
     "noCountriesFoundInThisRegion": "Aucun pays trouvé dans cette région",
     "searchAnything": "Rechercher n'importe quoi...",
-    "filters": "Filtres"
+    "filters": "Filtres",
+    "noOfRentalDevices": "Nombre de Dispositifs de Location"
   },
   "form": {
     "startDate": "Date de Début",
@@ -234,6 +235,16 @@
         "description": "Obtenez une connectivité instantanée avec nos options SIM et eSIM, adaptées à tous vos appareils.",
         "offer": "20% DE RÉDUCTION"
       }
+    ]
+  },
+  "getYourOwn": {
+    "title": "Obtenez votre propre Yoowifi Pocket WiFi",
+    "features": [
+      "Couverture annuelle dans plus de 90 pays",
+      "Partagez jusqu'à 8 appareils",
+      "Connectivité jusqu'à la 5G",
+      "Recharge de données disponible",
+      "Choisissez parmi des forfaits de données de 50 Go, 100 Go ou 200 Go"
     ]
   },
   "internetPackages": {

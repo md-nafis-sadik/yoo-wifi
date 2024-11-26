@@ -69,7 +69,8 @@
     "addressDetails": "Mga Detalye ng Address",
     "noCountriesFoundInThisRegion": "Walang mga bansang natagpuan sa rehiyong ito",
     "searchAnything": "Maghanap ng anuman...",
-    "filters": "Mga Filter"
+    "filters": "Mga Filter",
+    "noOfRentalDevices": "Bilang ng mga Device na Inirenta"
   },
   "form": {
     "startDate": "Petsa ng Simula",
@@ -234,6 +235,16 @@
         "description": "Magkaroon ng instant na koneksyon gamit ang aming mga SIM at eSIM na mga opsyon, angkop para sa lahat ng iyong mga device.",
         "offer": "20% OFF"
       }
+    ]
+  },
+  "getYourOwn": {
+    "title": "Kunin ang Iyong Sariling Yoowifi Pocket WiFi",
+    "features": [
+      "Taunang coverage sa higit sa 90 bansa",
+      "Mag-share ng hanggang 8 na devices",
+      "Hanggang 5G Connectivity",
+      "Available ang Data Top-up",
+      "Pumili mula sa 50GB, 100GB, o 200GB na mga data plan"
     ]
   },
   "internetPackages": {

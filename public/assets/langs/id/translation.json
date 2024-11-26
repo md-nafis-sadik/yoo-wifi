@@ -52,7 +52,6 @@
     "selectDevice": "Pilih Perangkat",
     "selectDeviceToTopUp": "Pilih Perangkat untuk Isi Ulang",
     "wifiDevices": "Perangkat Wifi",
-
     "planSummary": "Ringkasan Paket",
     "chosenPlan": "Paket Terpilih",
     "dataAvailable": "Data Tersedia",
@@ -70,7 +69,8 @@
     "addressDetails": "Rincian Alamat",
     "noCountriesFoundInThisRegion": "Tidak ada negara ditemukan di wilayah ini",
     "searchAnything": "Cari apa saja...",
-    "filters": "Filter"
+    "filters": "Filter",
+    "noOfRentalDevices": "Jumlah Perangkat Sewa"
   },
   "form": {
     "startDate": "Tanggal Mulai",
@@ -236,6 +236,16 @@
         "description": "Dapatkan konektivitas instan dengan pilihan SIM dan eSIM kami, cocok untuk semua perangkat Anda.",
         "offer": "20% OFF"
       }
+    ]
+  },
+  "getYourOwn": {
+    "title": "Dapatkan Yoowifi Pocket WiFi Anda Sendiri",
+    "features": [
+      "Cakupan tahunan di lebih dari 90 negara",
+      "Bagikan hingga 8 perangkat",
+      "Konektivitas hingga 5G",
+      "Isi ulang data tersedia",
+      "Pilih dari paket data 50GB, 100GB, atau 200GB"
     ]
   },
   "internetPackages": {

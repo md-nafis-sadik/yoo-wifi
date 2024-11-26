@@ -62,7 +62,7 @@ const ProductCard = ({
 
       {/* 2 */}
       {selected && (
-        <div className="flex flex-row min-[1176px]:flex-col items-center min-[1176px]:items-end justify-between min-[1176px]:justify-start gap-4 w-full min-[1176px]:w-1/3">
+        <div className="min-w-fit flex flex-row min-[1176px]:flex-col items-center min-[1176px]:items-end justify-between min-[1176px]:justify-start gap-4 w-full min-[1176px]:w-1/3">
           {item?.offer && (
             <p className="text-black-900 text-base md:text-xl !leading-[1.4] font-bold italic w-fit flex flex-col min-[1176px]:flex-row min-[1176px]:whitespace-nowrap">
               {/* <span>{t(`productsData.cardData.${index}.offer`)}</span> */}

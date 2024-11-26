@@ -29,7 +29,7 @@ function CartQuantity({
   return (
     <div className="w-full flex flex-col gap-2 sm:gap-4">
       {label && <span className={cn("label", labelClass)}>{label}</span>}
-      <div className="flex items-stretch gap-4">
+      <div className="flex items-stretch gap-4 mt-2 md:mt-4">
         <button
           className="sm:min-w-[100px] py-3 sm:py-4 bg-neutral-100 flex items-center justify-center border border-neutral-300 rounded-xl"
           onClick={() => handleQuantity("decrement")}

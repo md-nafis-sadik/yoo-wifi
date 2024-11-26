@@ -30,7 +30,7 @@ function Hero() {
       <div className="overflow-hidden" ref={emblaRef}>
         <div
           className={cn(
-            "flex"
+            "flex select-none"
             // selectedIndex == 0 &&
             //   "h-[740px] sm:h-[640px] md:h-[1190px] lg:h-[920px]",
             // selectedIndex == 1 &&
