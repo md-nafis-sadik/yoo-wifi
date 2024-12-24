@@ -95,7 +95,7 @@ const Footer = () => {
   const currentLanguage = Cookies.get("i18next");
   const [lang, setLang] = useState(currentLanguage);
   const { t } = useTranslation();
-  console.log(currentLanguage);
+  // console.log(currentLanguage);
 
   const handleLanguageChange = (language) => {
     setLang(language);

@@ -49,7 +49,7 @@ const authApi = apiSlice.injectEndpoints({
             dispatch(saveAuthData(result?.data?.admin));
           }
         } catch (error) {
-          console.log(error);
+          // console.log(error);
         }
       },
     }),
