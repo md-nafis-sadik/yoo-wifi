@@ -19,7 +19,7 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Submit data", { name, phone, email, subject, text });
+    // console.log("Submit data", { name, phone, email, subject, text });
     setName("");
     setPhone("");
     setEmail("");
