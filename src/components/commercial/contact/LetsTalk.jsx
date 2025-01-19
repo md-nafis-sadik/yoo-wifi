@@ -34,6 +34,8 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
     setText("");
   };
 
+  const subjects = [];
+
   return (
     <div className="containerX xl:px-0" id="lets-talk">
       <div className="sec_common_80 xl:px-0 flex flex-col lg:flex-row gap-4 md:gap-8 lg:gap-[60px]">
@@ -118,31 +120,29 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
               onChange={(e) => setEmail(e.target.value)}
               wrapperClass={"col-span-2"}
             />
-            <Input
-              label={t(`contact.letsTalk.form.fields.3.label`)}
-              placeholder={t(`contact.letsTalk.form.fields.3.placeholder`)}
-              name="subject"
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
-              wrapperClass={"col-span-2"}
-            />
             <div className="relative flex flex-col gap-2 col-span-2">
               <span className="label">
                 {t(`contact.letsTalk.form.fields.3.label`)}
               </span>
-              <Select>
+              <Select value={subject} onValueChange={setSubject}>
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Theme" />
+                  <SelectValue
+                    placeholder={t(
+                      `contact.letsTalk.form.fields.3.placeholder`
+                    )}
+                  />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="light">Light</SelectItem>
-                  <SelectItem value="dark">Dark</SelectItem>
-                  <SelectItem value="system">System</SelectItem>
-                  <SelectItem value="system">System</SelectItem>
-                  <SelectItem value="system">System</SelectItem>
-                  <SelectItem value="system">System</SelectItem>
-                  <SelectItem value="system">System</SelectItem>
-                  <SelectItem value="system">System</SelectItem>
+                  {Array(8)
+                    .fill(8)
+                    ?.map((_, index) => (
+                      <SelectItem
+                        key={index}
+                        value={t(`form.contactSubjects.${index}`)}
+                      >
+                        {t(`form.contactSubjects.${index}`)}
+                      </SelectItem>
+                    ))}
                 </SelectContent>
               </Select>
             </div>

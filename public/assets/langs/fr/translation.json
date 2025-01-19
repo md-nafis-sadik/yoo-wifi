@@ -1542,7 +1542,7 @@
           },
           {
             "label": "Sujet",
-            "placeholder": "Écrivez un sujet"
+            "placeholder": "Sélectionner un sujet"
           },
           {
             "label": "Message",

@@ -104,6 +104,8 @@ const Footer = () => {
   const handleLanguageChange = (language) => {
     setLang(language);
     i18next.changeLanguage(language);
+    window.location.reload();
+    console.log("Language changed to", language);
   };
 
   useEffect(() => {

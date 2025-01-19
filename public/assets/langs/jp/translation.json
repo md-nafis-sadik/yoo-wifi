@@ -101,7 +101,17 @@
     "cvcCvv": "CVC/CVV2*",
     "cvcCvvPlaceholder": "CVCコードを入力してください",
     "expiryDate": "有効期限",
-    "expiryDatePlaceholder": "MM/YY"
+    "expiryDatePlaceholder": "MM/YY",
+    "contactSubjects": [
+      "製品情報",
+      "注文状況",
+      "請求および支払い",
+      "デバイスの回収/返品プロセス",
+      "アプリ関連",
+      "ビジネスに関する問い合わせ",
+      "フィードバックと提案",
+      "その他"
+    ]
   },
   "notFound": {
     "noPackage": "検索に一致するパッケージが見つかりませんでした"
@@ -1527,7 +1537,7 @@
           },
           {
             "label": "件名",
-            "placeholder": "件名を入力してください"
+            "placeholder": "件名を選択"
           },
           {
             "label": "メッセージ",

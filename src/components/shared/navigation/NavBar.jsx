@@ -16,10 +16,10 @@ import {
 import { MenuIcon } from "lucide-react";
 import { useState } from "react";
 import { CountrySelect } from "react-country-state-city";
+import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 import DesktopMegaMenu from "./DesktopMegaMenu";
 import MobileMegaMenu from "./MobileMegaMenu";
-import { useTranslation } from "react-i18next";
 
 function NavBar() {
   const { isScrolled, isWhite, isRedBorder, isHome, isBlack, isBannerRoutes } =
@@ -137,6 +137,7 @@ function NavBar() {
                   inputClassName="!border-none !outline-none bg-transparent"
                   placeHolder={t("extraText.searchCountry")}
                   autoComplete="off"
+                  lang="fr"
                 />
                 <SearchIcon
                   className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"

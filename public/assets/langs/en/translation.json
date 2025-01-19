@@ -1543,7 +1543,7 @@
           },
           {
             "label": "Subject",
-            "placeholder": "Write a subject"
+            "placeholder": "Select a subject"
           },
           {
             "label": "Message",

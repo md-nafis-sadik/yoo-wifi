@@ -100,7 +100,17 @@
     "cvcCvv": "CVC/CVV2*",
     "cvcCvvPlaceholder": "Nhập mã CVC",
     "expiryDate": "Ngày hết hạn",
-    "expiryDatePlaceholder": "MM/YY"
+    "expiryDatePlaceholder": "MM/YY",
+    "contactSubjects": [
+      "Thông tin sản phẩm",
+      "Tình trạng đơn hàng",
+      "Thanh toán và Hóa đơn",
+      "Quá trình thu thập/trả thiết bị",
+      "Liên quan đến ứng dụng",
+      "Yêu cầu kinh doanh",
+      "Phản hồi và Đề xuất",
+      "Khác"
+    ]
   },
   "notFound": {
     "noPackage": "Không tìm thấy gói cước cho tìm kiếm của bạn"
@@ -1520,7 +1530,7 @@
           },
           {
             "label": "Chủ đề",
-            "placeholder": "Viết một chủ đề"
+            "placeholder": "Chọn một chủ đề"
           },
           {
             "label": "Tin nhắn",
