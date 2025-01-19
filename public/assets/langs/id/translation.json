@@ -101,7 +101,17 @@
     "cvcCvv": "CVC/CVV2*",
     "cvcCvvPlaceholder": "Masukkan kode CVC",
     "expiryDate": "Tanggal Kedaluwarsa",
-    "expiryDatePlaceholder": "MM/YY"
+    "expiryDatePlaceholder": "MM/YY",
+    "contactSubjects": [
+      "Informasi Produk",
+      "Status Pesanan",
+      "Penagihan dan Pembayaran",
+      "Proses Pengumpulan/Pengembalian Perangkat",
+      "Terkait Aplikasi",
+      "Pertanyaan Bisnis",
+      "Umpan Balik dan Saran",
+      "Lainnya"
+    ]
   },
   "notFound": {
     "noPackage": "Tidak ada paket yang ditemukan untuk pencarian Anda"
@@ -1533,7 +1543,7 @@
           },
           {
             "label": "Subjek",
-            "placeholder": "Tuliskan subjek"
+            "placeholder": "Pilih subjek"
           },
           {
             "label": "Pesan",

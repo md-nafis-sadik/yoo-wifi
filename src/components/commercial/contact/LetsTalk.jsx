@@ -1,5 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { handleNumericInput } from "@/services";
@@ -26,6 +33,8 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
     setSubject("");
     setText("");
   };
+
+  const subjects = [];
 
   return (
     <div className="containerX xl:px-0" id="lets-talk">
@@ -111,14 +120,32 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
               onChange={(e) => setEmail(e.target.value)}
               wrapperClass={"col-span-2"}
             />
-            <Input
-              label={t(`contact.letsTalk.form.fields.3.label`)}
-              placeholder={t(`contact.letsTalk.form.fields.3.placeholder`)}
-              name="subject"
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
-              wrapperClass={"col-span-2"}
-            />
+            <div className="relative flex flex-col gap-2 col-span-2">
+              <span className="label">
+                {t(`contact.letsTalk.form.fields.3.label`)}
+              </span>
+              <Select value={subject} onValueChange={setSubject}>
+                <SelectTrigger className="w-full">
+                  <SelectValue
+                    placeholder={t(
+                      `contact.letsTalk.form.fields.3.placeholder`
+                    )}
+                  />
+                </SelectTrigger>
+                <SelectContent>
+                  {Array(8)
+                    .fill(8)
+                    ?.map((_, index) => (
+                      <SelectItem
+                        key={index}
+                        value={t(`form.contactSubjects.${index}`)}
+                      >
+                        {t(`form.contactSubjects.${index}`)}
+                      </SelectItem>
+                    ))}
+                </SelectContent>
+              </Select>
+            </div>
             <Textarea
               label={t(`contact.letsTalk.form.fields.4.label`)}
               placeholder={t(`contact.letsTalk.form.fields.4.placeholder`)}

@@ -100,7 +100,17 @@
     "cvcCvv": "CVC/CVV2*",
     "cvcCvvPlaceholder": "Entrez le code CVC",
     "expiryDate": "Date d'Expiration",
-    "expiryDatePlaceholder": "MM/AA"
+    "expiryDatePlaceholder": "MM/AA",
+    "contactSubjects": [
+      "Informations sur le Produit",
+      "Statut de la Commande",
+      "Facturation et Paiement",
+      "Processus de Collecte/Retour de l'Appareil",
+      "Lié à l'Application",
+      "Demandes Commerciales",
+      "Commentaires et Suggestions",
+      "Autres"
+    ]
   },
   "notFound": {
     "noPackage": "Aucun forfait trouvé pour votre recherche"
@@ -1532,7 +1542,7 @@
           },
           {
             "label": "Sujet",
-            "placeholder": "Écrivez un sujet"
+            "placeholder": "Sélectionner un sujet"
           },
           {
             "label": "Message",

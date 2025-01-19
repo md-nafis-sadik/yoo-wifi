@@ -100,7 +100,17 @@
     "cvcCvv": "CVC/CVV2*",
     "cvcCvvPlaceholder": "请输入CVC代码",
     "expiryDate": "有效期",
-    "expiryDatePlaceholder": "月/年"
+    "expiryDatePlaceholder": "月/年",
+    "contactSubjects": [
+      "产品信息",
+      "订单状态",
+      "账单与支付",
+      "设备收集/退还流程",
+      "与应用程序相关",
+      "商业查询",
+      "反馈与建议",
+      "其他"
+    ]
   },
   "notFound": {
     "noPackage": "未找到符合您搜索条件的套餐"
@@ -1527,7 +1537,7 @@
           },
           {
             "label": "主题",
-            "placeholder": "写下主题"
+            "placeholder": "选择一个主题"
           },
           {
             "label": "留言",

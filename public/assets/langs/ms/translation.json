@@ -100,7 +100,17 @@
     "cvcCvv": "CVC/CVV2*",
     "cvcCvvPlaceholder": "Masukkan kod CVC",
     "expiryDate": "Tarikh Luput",
-    "expiryDatePlaceholder": "MM/YY"
+    "expiryDatePlaceholder": "MM/YY",
+    "contactSubjects": [
+      "Maklumat Produk",
+      "Status Pesanan",
+      "Bil dan Pembayaran",
+      "Proses Pengambilan/Pulangan Peranti",
+      "Berkaitan Aplikasi",
+      "Pertanyaan Perniagaan",
+      "Maklum Balas dan Cadangan",
+      "Lain-lain"
+    ]
   },
   "notFound": {
     "noPackage": "Tiada pakej dijumpai untuk carian anda"
@@ -1533,7 +1543,7 @@
           },
           {
             "label": "Subjek",
-            "placeholder": "Tuliskan subjek"
+            "placeholder": "Pilih subjek"
           },
           {
             "label": "Mesej",

@@ -100,7 +100,17 @@
     "cvcCvv": "CVC/CVV2*",
     "cvcCvvPlaceholder": "輸入CVC代碼",
     "expiryDate": "到期日期",
-    "expiryDatePlaceholder": "MM/YY"
+    "expiryDatePlaceholder": "MM/YY",
+    "contactSubjects": [
+      "產品資訊",
+      "訂單狀態",
+      "帳單與付款",
+      "設備收集/退還流程",
+      "應用程式相關",
+      "商業查詢",
+      "反饋與建議",
+      "其他"
+    ]
   },
   "notFound": {
     "noPackage": "未找到您的搜索包裹"
@@ -1529,7 +1539,7 @@
           },
           {
             "label": "主題",
-            "placeholder": "寫下主題"
+            "placeholder": "選擇一個主題"
           },
           {
             "label": "訊息",

@@ -100,7 +100,17 @@
     "cvcCvv": "CVC/CVV2*",
     "cvcCvvPlaceholder": "CVC-Code eingeben",
     "expiryDate": "Ablaufdatum",
-    "expiryDatePlaceholder": "MM/JJ"
+    "expiryDatePlaceholder": "MM/JJ",
+    "contactSubjects": [
+      "Produktinformationen",
+      "Bestellstatus",
+      "Abrechnung und Zahlung",
+      "Prozess für die Sammlung/ Rücksendung von Geräten",
+      "App-bezogen",
+      "Geschäftsanfragen",
+      "Feedback und Vorschläge",
+      "Sonstiges"
+    ]
   },
   "notFound": {
     "noPackage": "Kein Paket für Ihre Suche gefunden"
@@ -1532,7 +1542,7 @@
           },
           {
             "label": "Betreff",
-            "placeholder": "Betreff schreiben"
+            "placeholder": "Wählen Sie ein Thema"
           },
           {
             "label": "Nachricht",

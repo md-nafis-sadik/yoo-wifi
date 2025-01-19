@@ -1,15 +1,3 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import {
-  commercialRoutes,
-  corporateRoutes,
-  images,
-  languageOptions,
-  validateEmail,
-} from "@/services";
-import { ChevronRight } from "lucide-react";
-import { cn } from "@/lib/utils";
 import {
   Select,
   SelectContent,
@@ -17,19 +5,35 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { cn } from "@/lib/utils";
+import {
+  commercialRoutes,
+  corporateRoutes,
+  images,
+  languageOptions,
+  validateEmail,
+} from "@/services";
+import { ChevronRight, MailIcon, Phone } from "lucide-react";
+import { useEffect, useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Link } from "react-router-dom";
 
+import i18next from "i18next";
 import Cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
-import i18next from "i18next";
 
 const Footer = () => {
   const footerData = {
     contact: [
       {
+        icon: images.whatsapp,
+        linkTo: "tel:1112223456",
         type: "Call",
         value: "111 222 3456",
       },
       {
+        icon: images.email,
+        linkTo: "mailto:info@demo.com",
         type: "Mail",
         value: "info@demo.com",
       },
@@ -100,6 +104,8 @@ const Footer = () => {
   const handleLanguageChange = (language) => {
     setLang(language);
     i18next.changeLanguage(language);
+    window.location.reload();
+    console.log("Language changed to", language);
   };
 
   useEffect(() => {
@@ -116,16 +122,24 @@ const Footer = () => {
             alt="logo"
             className="h-[71px] w-auto"
           />
-          {footerData.contact.map(({ type, value }, index) => (
-            <p
+          {footerData.contact.map(({ type, icon, linkTo, value }, index) => (
+            <div
               key={index}
               className="flex items-center gap-1 mt-4 md:mt-6 text-base md:text-lg !leading-[1.4]"
             >
               <span className="text-black-600">
                 {t(`footer.contact.${index}.type`)} :
               </span>
-              <span className="text-white font-semibold">{value}</span>
-            </p>
+
+              <a href={linkTo} className="inline-flex gap-1 items-center">
+                {type == "Call" ? (
+                  <Phone className="w-5 h-5 text-white/60" />
+                ) : (
+                  <MailIcon className="w-5 h-5 text-white/60" />
+                )}
+                <span className="text-white font-semibold">{value}</span>
+              </a>
+            </div>
           ))}
 
           <p className="text-lg md:text-2xl text-secondary-500 font-semibold !leading-[1.4] mt-5 md:mt-8">

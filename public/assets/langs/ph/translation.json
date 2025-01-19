@@ -100,7 +100,17 @@
     "cvcCvv": "CVC/CVV2*",
     "cvcCvvPlaceholder": "Ilagay ang CVC code",
     "expiryDate": "Petsa ng Pag-expire",
-    "expiryDatePlaceholder": "MM/YY"
+    "expiryDatePlaceholder": "MM/YY",
+    "contactSubjects": [
+      "Impormasyon ng Produkto",
+      "Katayuan ng Order",
+      "Pagsingil at Pagbabayad",
+      "Proseso ng Koleksyon/Pagbabalik ng Device",
+      "Kaugnay sa App",
+      "Mga Katanungan sa Negosyo",
+      "Puna at Mungkahi",
+      "Iba pa"
+    ]
   },
   "notFound": {
     "noPackage": "Walang package na natagpuan para sa iyong paghahanap"
@@ -1532,7 +1542,7 @@
           },
           {
             "label": "Paksa",
-            "placeholder": "Isulat ang paksa"
+            "placeholder": "Pumili ng paksa"
           },
           {
             "label": "Mensahe",
