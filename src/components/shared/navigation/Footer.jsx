@@ -1,16 +1,8 @@
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { cn } from "@/lib/utils";
 import {
   commercialRoutes,
   corporateRoutes,
   images,
-  languageOptions,
   validateEmail,
 } from "@/services";
 import { ChevronRight } from "lucide-react";
@@ -198,7 +190,7 @@ const Footer = () => {
         </p>
 
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center">
-          <Select onValueChange={handleLanguageChange} defaultValue={lang}>
+          {/* <Select onValueChange={handleLanguageChange} defaultValue={lang}>
             <SelectTrigger className="w-[180px] bg-main-20">
               <SelectValue placeholder="Select Language" />
             </SelectTrigger>
@@ -218,7 +210,7 @@ const Footer = () => {
                 </SelectItem>
               ))}
             </SelectContent>
-          </Select>
+          </Select> */}
 
           <div className="flex gap-4 md:gap-8">
             {footerData.legals.map((item, index) => (

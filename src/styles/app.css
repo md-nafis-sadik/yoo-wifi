@@ -128,6 +128,16 @@ html {
   color: #191919 !important;
 }
 
+.navbarLang .countryName {
+  display: none !important;
+}
+
+@media (max-width: 1280px) {
+  .navbarLang .countryName {
+    display: inline-block !important;
+  }
+}
+
 @media (max-width: 767px) {
   .react-international-phone-country-selector-button {
     padding: 12px !important;
@@ -140,4 +150,9 @@ html {
     font-size: 14px !important;
     line-height: 1.4 !important;
   }
+}
+
+body[data-scroll-locked="1"] .scrollLocked {
+  width: calc(100% - 17px);
+  transition-duration: 0ms;
 }
