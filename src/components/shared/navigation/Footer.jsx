@@ -13,7 +13,7 @@ import {
   languageOptions,
   validateEmail,
 } from "@/services";
-import { ChevronRight, MailIcon, Phone } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
@@ -27,9 +27,9 @@ const Footer = () => {
     contact: [
       {
         icon: images.whatsapp,
-        linkTo: "tel:1112223456",
+        linkTo: "https://wa.me/6561009998",
         type: "Call",
-        value: "111 222 3456",
+        value: "(+65) 6100 9998",
       },
       {
         icon: images.email,
@@ -122,21 +122,17 @@ const Footer = () => {
             alt="logo"
             className="h-[71px] w-auto"
           />
-          {footerData.contact.map(({ type, icon, linkTo, value }, index) => (
+          {footerData.contact.map(({ icon, linkTo, value }, index) => (
             <div
               key={index}
               className="flex items-center gap-1 mt-4 md:mt-6 text-base md:text-lg !leading-[1.4]"
             >
-              <span className="text-black-600">
-                {t(`footer.contact.${index}.type`)} :
-              </span>
-
-              <a href={linkTo} className="inline-flex gap-1 items-center">
-                {type == "Call" ? (
-                  <Phone className="w-5 h-5 text-white/60" />
-                ) : (
-                  <MailIcon className="w-5 h-5 text-white/60" />
-                )}
+              <a href={linkTo} className="inline-flex gap-2 items-center">
+                <LazyLoadImage
+                  src={icon}
+                  alt={value}
+                  className="w-5 aspect-square shrink-0 object-contain"
+                />
                 <span className="text-white font-semibold">{value}</span>
               </a>
             </div>
