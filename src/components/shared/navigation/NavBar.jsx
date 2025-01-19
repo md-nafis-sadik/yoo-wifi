@@ -18,6 +18,7 @@ import { useState } from "react";
 import { CountrySelect } from "react-country-state-city";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
+import LanguageSelect from "../others/LanguageChange";
 import DesktopMegaMenu from "./DesktopMegaMenu";
 import MobileMegaMenu from "./MobileMegaMenu";
 
@@ -90,8 +91,8 @@ function NavBar() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 w-full z-40 duration-300",
-        isScrolled || showMegaMenu ? "bg-black" : "",
+        "fixed top-0 left-0 w-full z-40 scrollLocked",
+        isScrolled || showMegaMenu ? "bg-black duration-300" : "",
         !isHome && !isBannerRoutes ? "border-b border-neutral-200" : ""
       )}
     >
@@ -337,6 +338,7 @@ function NavBar() {
                   />
                   <span>{t("buttonText.downloadApp")}</span>
                 </Button>
+                <LanguageSelect />
                 <Button
                   className={
                     "min-w-10 min-h-10 p-0 rounded-[10px] hidden xl:flex"

@@ -16,10 +16,11 @@ import {
 import { MenuIcon } from "lucide-react";
 import { useState } from "react";
 import { CountrySelect } from "react-country-state-city";
+import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
+import LanguageSelect from "../others/LanguageChange";
 import DesktopMegaMenu from "./DesktopMegaMenu";
 import MobileMegaMenu from "./MobileMegaMenu";
-import { useTranslation } from "react-i18next";
 
 const NavBarSecondary = () => {
   const { isScrolled, isRedBorder, isHome, isBlack, isBannerRoutes } =
@@ -128,7 +129,7 @@ const NavBarSecondary = () => {
                 />
                 <SearchIcon
                   className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
-                  color="#191919"
+                  color={isScrolled ? "#fafafa" : "#191919"}
                 />
               </div>
               {showSearchbar ? (
@@ -246,7 +247,7 @@ const NavBarSecondary = () => {
                   />
                   <SearchIcon
                     className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
-                    color="#191919"
+                    color={isScrolled ? "#757575" : "#191919"}
                   />
                 </div>
                 <Button
@@ -275,6 +276,7 @@ const NavBarSecondary = () => {
                   <CellphoneIcon color="#fff" className="w-5 h-5 shrink-0" />
                   <span>{t("buttonText.downloadApp")}</span>
                 </Button>
+                <LanguageSelect />
                 <Button
                   className={
                     "min-w-10 min-h-10 p-0 rounded-[10px] hidden xl:flex"
