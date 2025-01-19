@@ -39,7 +39,7 @@ const initialState = {
   products: [
     {
       name: "Pocket Wifi",
-      path: "/product/pocket-wifi",
+      path: "/product/pocket-wifi/region",
       icon: ({ pocketWifiColor = "", routerColor = "", simColor = "" }) => {
         return pocketWifiColor ? (
           <PocketWifiIcon color={pocketWifiColor} />
@@ -51,7 +51,7 @@ const initialState = {
 
     {
       name: "Router",
-      path: "/product/router",
+      path: "/product/router/region",
       icon: ({ pocketWifiColor = "", routerColor = "", simColor = "" }) => {
         return routerColor ? (
           <RouterMiniIcon color={routerColor} />
@@ -62,7 +62,7 @@ const initialState = {
     },
     {
       name: "SIM/eSIM",
-      path: "/product/sim",
+      path: "/product/sim/region",
       icon: ({ pocketWifiColor = "", routerColor = "", simColor = "" }) => {
         return simColor ? <SimMiniIcon color={simColor} /> : <SimMiniIcon />;
       },

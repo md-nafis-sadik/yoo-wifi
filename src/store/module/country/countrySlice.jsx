@@ -611,7 +611,7 @@ const initialState = {
             priceEnd: 20.49,
             region: 'europe',
             country: "italy",
-            type: "pocket-wifi",
+            type: "esim",
             plan: "5gb-7days",
             details: [
                 {
@@ -698,7 +698,7 @@ const initialState = {
             priceEnd: 20.49,
             region: 'europe',
             country: "france",
-            type: "pocket-wifi",
+            type: "esim",
             plan: "20gb-20days",
             details: [
                 {
@@ -785,7 +785,7 @@ const initialState = {
             priceEnd: 50.49,
             region: 'europe',
             country: "greece",
-            type: "pocket-wifi",
+            type: "router",
             plan: "basic-daypass",
             details: [
                 {
@@ -1041,13 +1041,13 @@ const initialState = {
         },
         {
             _id: 7,
-            name: "Sweden - Pocket Wifi",
+            name: "Sweden - Router",
             image: images.country6,
             priceStart: 5.49,
             priceEnd: 20.49,
             region: 'europe',
             country: "sweden",
-            type: "pocket-wifi",
+            type: "router",
             plan: "20gb-20days",
             details: [
                 {

@@ -1,10 +1,10 @@
 import useModal from "@/hooks/useModal";
 import { images } from "@/services";
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import HeroChildSlides from "./HeroChildSlides";
 import ProductRouteCard from "./ProductRouteCard";
-import { useTranslation } from "react-i18next";
 
 function HeroConnected() {
   const { products } = useSelector((state) => state.shared);
@@ -13,6 +13,7 @@ function HeroConnected() {
   const { t } = useTranslation();
 
   const handleNavigate = (path) => {
+    console.log("path", path);
     // if (auth?.token) {
     //   navigate(path)
     // }else{

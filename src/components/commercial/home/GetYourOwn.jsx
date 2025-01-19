@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { commercialRoutes, getYourOwnData, images } from "@/services";
-import { servicesData } from "@/services/data";
 import { useTranslation } from "react-i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useNavigate } from "react-router-dom";
@@ -47,7 +46,7 @@ const GetYourOwn = ({ className, ...props }) => {
             variant={"secondary"}
             size={"lg"}
             className={"h-11 md:h-[52px] !text-base"}
-            onClick={() => navigate(commercialRoutes.aboutUs.path)}
+            onClick={() => navigate(commercialRoutes.pocketWifiRegion.path)}
           >
             {t("buttonText.buyNow")}
           </Button>
