@@ -1,9 +1,9 @@
 import ProductGallery from "@/components/shared/others/ProductGallery";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import {
   commercialRoutes,
   DollarLabelIcon,
+  EyeIcon,
   GlobeIcon,
   WifiIcon,
 } from "@/services";
@@ -54,6 +54,14 @@ function Hero() {
                 </div>
                 <span className="text-sm sm:text-base">
                   {t("pocketWifi.product.features.2")}
+                </span>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-9 md:w-11 aspect-square bg-main-10 rounded-full flex items-center justify-center">
+                  <EyeIcon />
+                </div>
+                <span className="text-sm sm:text-base">
+                  {t("pocketWifi.product.features.3")}
                 </span>
               </div>
             </div>

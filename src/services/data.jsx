@@ -2,7 +2,6 @@ import {
   AddWalletIcon,
   commercialRoutes,
   Communications2Icon,
-  ConnectionsIcon,
   corporateRoutes,
   DollarLabelIcon,
   DownloadFillIcon,
@@ -152,7 +151,7 @@ export const productsData = () => ({
       description:
         "Stay connected on the go with our high-speed Pocket WIFI. Perfect for travel and remote work.",
       offer: "50% OFF",
-      link: commercialRoutes.pocketWifiHome.path,
+      link: commercialRoutes.pocketWifiRegion.path,
       deadline: Math.floor(Date.now() / 1000) + 3 * 24 * 60 * 60,
     },
     {
@@ -160,7 +159,7 @@ export const productsData = () => ({
       description:
         "Experience seamless and reliable internet connectivity at home with our advanced routers.",
       offer: "30% OFF",
-      link: commercialRoutes.routerHome.path,
+      link: commercialRoutes.routerRegion.path,
       deadline: Math.floor(Date.now() / 1000) + 3 * 24 * 60 * 60,
     },
     {
@@ -168,7 +167,7 @@ export const productsData = () => ({
       description:
         "Get instant connectivity with our SIM and eSIM options, suitable for all your devices.",
       offer: "20% OFF",
-      link: commercialRoutes.simHome.path,
+      link: commercialRoutes.simRegion.path,
       deadline: Math.floor(Date.now() / 1000) + 3 * 24 * 60 * 60,
     },
   ],

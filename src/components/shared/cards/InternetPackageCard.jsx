@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { commercialRoutes } from "@/services";
 import { useTranslation } from "react-i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +9,21 @@ const InternetPackageCard = ({ data, type = 1 }) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
+  const handleNavigate = () => {
+    switch (data?.type) {
+      case "router":
+        navigate(commercialRoutes.routerRegion.path);
+        break;
+      case "pocket-wifi":
+        navigate(commercialRoutes.pocketWifiRegion.path);
+        break;
+      case "esim":
+        navigate(commercialRoutes.simRegion.path);
+        break;
+      default:
+        navigate("/middle-east");
+    }
+  };
   return (
     <div className="bg-white rounded-[8px] md:rounded-3xl p-2 md:p-4 ring-[2px] ring-neutral-200 hover:ring-0 shadow-none hover:shadow-card-primary transition_common">
       <div className="w-full aspect-[1.06/1] relative overflow-hidden rounded-[4px] md:rounded-2xl">
@@ -42,15 +58,9 @@ const InternetPackageCard = ({ data, type = 1 }) => {
               : "text-base !px-2 !py-1 md:!px-6 md:!py-4",
             "text-[10px] md:text-base !leading-[1.2] rounded-sm md:rounded-xl"
           )}
-          onClick={() =>
-            navigate(
-              type === 1 ? `/country-coverage` : `/package/details/${data?._id}`
-            )
-          }
+          onClick={handleNavigate}
         >
-          {type === 1
-            ? t("buttonText.findOutMore")
-            : t("buttonText.seeDetails")}
+          {t("buttonText.buyNow")}
         </Button>
       </div>
     </div>
