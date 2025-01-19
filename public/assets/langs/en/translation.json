@@ -101,7 +101,17 @@
     "cvcCvv": "CVC/CVV2*",
     "cvcCvvPlaceholder": "Enter CVC code",
     "expiryDate": "Expiry Date",
-    "expiryDatePlaceholder": "MM/YY"
+    "expiryDatePlaceholder": "MM/YY",
+    "contactSubjects": [
+      "Product Information",
+      "Order Status",
+      "Billing and Payment",
+      "Device Collect/Return Process",
+      "App Related",
+      "Business Enquiries",
+      "Feedback and Suggestions",
+      "Others"
+    ]
   },
   "notFound": {
     "noPackage": "No package found for your search"

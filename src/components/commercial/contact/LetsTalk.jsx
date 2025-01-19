@@ -1,5 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { handleNumericInput } from "@/services";
@@ -119,6 +126,26 @@ const LetsTalk = ({ data = [], socialLinks = [] }) => {
               onChange={(e) => setSubject(e.target.value)}
               wrapperClass={"col-span-2"}
             />
+            <div className="relative flex flex-col gap-2 col-span-2">
+              <span className="label">
+                {t(`contact.letsTalk.form.fields.3.label`)}
+              </span>
+              <Select>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Theme" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="light">Light</SelectItem>
+                  <SelectItem value="dark">Dark</SelectItem>
+                  <SelectItem value="system">System</SelectItem>
+                  <SelectItem value="system">System</SelectItem>
+                  <SelectItem value="system">System</SelectItem>
+                  <SelectItem value="system">System</SelectItem>
+                  <SelectItem value="system">System</SelectItem>
+                  <SelectItem value="system">System</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
             <Textarea
               label={t(`contact.letsTalk.form.fields.4.label`)}
               placeholder={t(`contact.letsTalk.form.fields.4.placeholder`)}
