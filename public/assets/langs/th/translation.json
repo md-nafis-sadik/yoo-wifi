@@ -13,19 +13,19 @@
     { "label": "เยอรมัน" },
     { "label": "ฝรั่งเศส" }
   ],
-  "countryOptions": [
-    { "label": "อเมริกา" },
-    { "label": "จีน" },
-    { "label": "มาเลเซีย" },
-    { "label": "อินโดนีเซีย" },
-    { "label": "ญี่ปุ่น" },
-    { "label": "ไทย" },
-    { "label": "เวียดนาม" },
-    { "label": "ฟิลิปปินส์" },
-    { "label": "สเปน" },
-    { "label": "เยอรมนี" },
-    { "label": "ฝรั่งเศส" }
-  ],
+  "countryOptions": {
+    "America": "อเมริกา",
+    "China": "จีน",
+    "Malaysia": "มาเลเซีย",
+    "Indonesia": "อินโดนีเซีย",
+    "Japan": "ญี่ปุ่น",
+    "Thailand": "ไทย",
+    "Vietnam": "เวียดนาม",
+    "Phillipine": "ฟิลิปปินส์",
+    "Spain": "สเปน",
+    "Germany": "เยอรมนี",
+    "France": "ฝรั่งเศส"
+  },
   "buttonText": {
     "buyNow": "ซื้อเลย",
     "findOutMore": "ค้นหาข้อมูลเพิ่มเติม",
@@ -97,7 +97,8 @@
     "noCountriesFoundInThisRegion": "ไม่พบประเทศในภูมิภาคนี้",
     "searchAnything": "ค้นหาอะไรก็ได้...",
     "filters": "ตัวกรอง",
-    "noOfRentalDevices": "จำนวนอุปกรณ์เช่า"
+    "noOfRentalDevices": "จำนวนอุปกรณ์เช่า",
+    "noCountriesFound": "ไม่พบประเทศ"
   },
   "form": {
     "startDate": "วันที่เริ่มต้น",

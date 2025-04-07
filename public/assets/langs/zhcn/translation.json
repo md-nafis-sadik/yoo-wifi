@@ -13,19 +13,19 @@
     { "label": "德语" },
     { "label": "法语" }
   ],
-  "countryOptions": [
-    { "label": "美国" },
-    { "label": "中国" },
-    { "label": "马来西亚" },
-    { "label": "印度尼西亚" },
-    { "label": "日本" },
-    { "label": "泰国" },
-    { "label": "越南" },
-    { "label": "菲律宾" },
-    { "label": "西班牙" },
-    { "label": "德国" },
-    { "label": "法国" }
-  ],
+  "countryOptions": {
+    "America": "美国",
+    "China": "中国",
+    "Malaysia": "马来西亚",
+    "Indonesia": "印度尼西亚",
+    "Japan": "日本",
+    "Thailand": "泰国",
+    "Vietnam": "越南",
+    "Phillipine": "菲律宾",
+    "Spain": "西班牙",
+    "Germany": "德国",
+    "France": "法国"
+  },
   "buttonText": {
     "buyNow": "立即购买",
     "findOutMore": "了解更多",
@@ -97,7 +97,8 @@
     "noCountriesFoundInThisRegion": "此区域没有找到国家",
     "searchAnything": "搜索任何内容...",
     "filters": "筛选",
-    "noOfRentalDevices": "租赁设备数量"
+    "noOfRentalDevices": "租赁设备数量",
+    "noCountriesFound": "找不到国家"
   },
   "form": {
     "startDate": "开始日期",

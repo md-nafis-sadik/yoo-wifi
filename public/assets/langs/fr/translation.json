@@ -13,19 +13,19 @@
     { "label": "Allemand" },
     { "label": "Français" }
   ],
-  "countryOptions": [
-    { "label": "Amérique" },
-    { "label": "Chine" },
-    { "label": "Malaisie" },
-    { "label": "Indonésie" },
-    { "label": "Japon" },
-    { "label": "Thaïlande" },
-    { "label": "Vietnam" },
-    { "label": "Philippines" },
-    { "label": "Espagne" },
-    { "label": "Allemagne" },
-    { "label": "France" }
-  ],
+  "countryOptions": {
+    "America": "Amérique",
+    "China": "Chine",
+    "Malaysia": "Malaisie",
+    "Indonesia": "Indonésie",
+    "Japan": "Japon",
+    "Thailand": "Thaïlande",
+    "Vietnam": "Vietnam",
+    "Phillipine": "Philippines",
+    "Spain": "Espagne",
+    "Germany": "Allemagne",
+    "France": "France"
+  },
   "buttonText": {
     "buyNow": "Acheter Maintenant",
     "findOutMore": "En Savoir Plus",
@@ -97,7 +97,8 @@
     "noCountriesFoundInThisRegion": "Aucun pays trouvé dans cette région",
     "searchAnything": "Rechercher n'importe quoi...",
     "filters": "Filtres",
-    "noOfRentalDevices": "Nombre de Dispositifs de Location"
+    "noOfRentalDevices": "Nombre de Dispositifs de Location",
+    "noCountriesFound": "Aucun Pays Trouvé"
   },
   "form": {
     "startDate": "Date de Début",

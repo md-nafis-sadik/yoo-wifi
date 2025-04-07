@@ -13,19 +13,19 @@
     { "label": "ドイツ語" },
     { "label": "フランス語" }
   ],
-  "countryOptions": [
-    { "label": "アメリカ" },
-    { "label": "中国" },
-    { "label": "マレーシア" },
-    { "label": "インドネシア" },
-    { "label": "日本" },
-    { "label": "タイ" },
-    { "label": "ベトナム" },
-    { "label": "フィリピン" },
-    { "label": "スペイン" },
-    { "label": "ドイツ" },
-    { "label": "フランス" }
-  ],
+  "countryOptions": {
+    "America": "アメリカ",
+    "China": "中国",
+    "Malaysia": "マレーシア",
+    "Indonesia": "インドネシア",
+    "Japan": "日本",
+    "Thailand": "タイ",
+    "Vietnam": "ベトナム",
+    "Phillipine": "フィリピン",
+    "Spain": "スペイン",
+    "Germany": "ドイツ",
+    "France": "フランス"
+  },
   "buttonText": {
     "buyNow": "今すぐ購入",
     "findOutMore": "詳細を確認",
@@ -97,7 +97,8 @@
     "noCountriesFoundInThisRegion": "この地域には国が見つかりません",
     "searchAnything": "何かを検索...",
     "filters": "フィルター",
-    "noOfRentalDevices": "レンタルデバイスの数"
+    "noOfRentalDevices": "レンタルデバイスの数",
+    "noCountriesFound": "国が見つかりません"
   },
   "form": {
     "startDate": "開始日",

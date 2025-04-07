@@ -13,19 +13,19 @@
     { "label": "Tiếng Đức" },
     { "label": "Tiếng Pháp" }
   ],
-  "countryOptions": [
-    { "label": "Mỹ" },
-    { "label": "Trung Quốc" },
-    { "label": "Malaysia" },
-    { "label": "Indonesia" },
-    { "label": "Nhật Bản" },
-    { "label": "Thái Lan" },
-    { "label": "Việt Nam" },
-    { "label": "Philippines" },
-    { "label": "Tây Ban Nha" },
-    { "label": "Đức" },
-    { "label": "Pháp" }
-  ],
+  "countryOptions": {
+    "America": "Mỹ",
+    "China": "Trung Quốc",
+    "Malaysia": "Malaysia",
+    "Indonesia": "Indonesia",
+    "Japan": "Nhật Bản",
+    "Thailand": "Thái Lan",
+    "Vietnam": "Việt Nam",
+    "Phillipine": "Philippines",
+    "Spain": "Tây Ban Nha",
+    "Germany": "Đức",
+    "France": "Pháp"
+  },
   "buttonText": {
     "buyNow": "Mua ngay",
     "findOutMore": "Tìm hiểu thêm",
@@ -97,7 +97,8 @@
     "noCountriesFoundInThisRegion": "Không tìm thấy quốc gia nào trong khu vực này",
     "searchAnything": "Tìm kiếm bất cứ thứ gì...",
     "filters": "Bộ lọc",
-    "noOfRentalDevices": "Số lượng thiết bị thuê"
+    "noOfRentalDevices": "Số lượng thiết bị thuê",
+    "noCountriesFound": "Không tìm thấy quốc gia nào"
   },
   "form": {
     "startDate": "Ngày bắt đầu",

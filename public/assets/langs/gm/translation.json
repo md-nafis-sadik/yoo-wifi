@@ -13,19 +13,19 @@
     { "label": "Deutsch" },
     { "label": "Französisch" }
   ],
-  "countryOptions": [
-    { "label": "Amerika" },
-    { "label": "China" },
-    { "label": "Malaysia" },
-    { "label": "Indonesien" },
-    { "label": "Japan" },
-    { "label": "Thailand" },
-    { "label": "Vietnam" },
-    { "label": "Philippinen" },
-    { "label": "Spanien" },
-    { "label": "Deutschland" },
-    { "label": "Frankreich" }
-  ],
+  "countryOptions": {
+    "America": "Amerika",
+    "China": "China",
+    "Malaysia": "Malaysia",
+    "Indonesia": "Indonesien",
+    "Japan": "Japan",
+    "Thailand": "Thailand",
+    "Vietnam": "Vietnam",
+    "Phillipine": "Philippinen",
+    "Spain": "Spanien",
+    "Germany": "Deutschland",
+    "France": "Frankreich"
+  },
   "buttonText": {
     "buyNow": "Jetzt kaufen",
     "findOutMore": "Mehr erfahren",
@@ -97,7 +97,8 @@
     "noCountriesFoundInThisRegion": "Keine Länder in dieser Region gefunden",
     "searchAnything": "Alles durchsuchen...",
     "filters": "Filter",
-    "noOfRentalDevices": "Anzahl der Mietgeräte"
+    "noOfRentalDevices": "Anzahl der Mietgeräte",
+    "noCountriesFound": "Keine Länder gefunden"
   },
   "form": {
     "startDate": "Startdatum",

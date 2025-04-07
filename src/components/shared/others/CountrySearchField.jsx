@@ -9,6 +9,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { countryOptions } from "@/services";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const CountrySearchField = ({
   value,
@@ -20,12 +21,16 @@ const CountrySearchField = ({
   searchIconColor,
 }) => {
   const [open, setOpen] = useState(false);
-  const [searchValue, setSearchValue] = useState(value?.label || "");
+  const [searchValue, setSearchValue] = useState(
+    value?.label ? t(`countryOptions.${value.label}`) : ""
+  );
   const inputRef = useRef(null);
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const newValue = e.target.value;
+    console.log(newValue);
     setSearchValue(newValue);
     setOpen(true); // Keep the popover open when typing
 
@@ -36,16 +41,17 @@ const CountrySearchField = ({
   };
 
   const handleSelectCountry = (country) => {
-    setSearchValue(country.label);
+    setSearchValue(t(`countryOptions.${country.label}`)); // show translated label
     onChange(country);
     setOpen(false);
 
-    // Return focus to the input after selection
     setTimeout(() => {
-      if (inputRef.current) {
-        inputRef.current.focus();
-      }
+      inputRef.current?.focus();
     }, 0);
+
+    navigate(
+      `country-coverage/filter?region=${country?.region?.toLowerCase()}&country=${country?.label?.toLowerCase()}`
+    );
   };
 
   const handleKeyDown = (e) => {
@@ -55,7 +61,9 @@ const CountrySearchField = ({
 
   const filteredCountries = searchValue
     ? countryOptions.filter((country) =>
-        country.label.toLowerCase().includes(searchValue.toLowerCase())
+        t(`countryOptions.${country.label}`)
+          .toLowerCase()
+          .includes(searchValue.toLowerCase())
       )
     : countryOptions;
 
@@ -103,16 +111,18 @@ const CountrySearchField = ({
                 >
                   <img
                     src={country.flag()}
-                    alt={t(`countryOptions[${index}].label`)}
+                    alt={t(`countryOptions.${country.label}`, country.label)}
                     className="w-6 h-4 mr-2"
                   />
                   <span className="text-sm font-normal">
-                    {t(`countryOptions[${index}].label`)}
+                    {t(`countryOptions.${country.label}`, country.label)}
                   </span>
                 </div>
               ))
             ) : (
-              <div className="px-3 py-2 text-gray-500">No countries found</div>
+              <div className="px-3 py-2 text-gray-500">
+                {t("extraText.noCountriesFound")}
+              </div>
             )}
           </div>
         </PopoverContent>

@@ -13,19 +13,19 @@
     { "label": "Aleman" },
     { "label": "Pranses" }
   ],
-  "countryOptions": [
-    { "label": "America" },
-    { "label": "Tsina" },
-    { "label": "Malaysia" },
-    { "label": "Indonesya" },
-    { "label": "Hapon" },
-    { "label": "Thailand" },
-    { "label": "Vietnam" },
-    { "label": "Pilipinas" },
-    { "label": "Espanya" },
-    { "label": "Germany" },
-    { "label": "Pransya" }
-  ],
+  "countryOptions": {
+    "America": "Amerika",
+    "China": "Tsina",
+    "Malaysia": "Malaysia",
+    "Indonesia": "Indonesya",
+    "Japan": "Hapon",
+    "Thailand": "Thailand",
+    "Vietnam": "Vietnam",
+    "Phillipine": "Pilipinas",
+    "Spain": "Espanya",
+    "Germany": "Alemanya",
+    "France": "Pransya"
+  },
   "buttonText": {
     "buyNow": "Bumili Ngayon",
     "findOutMore": "Alamin Pa",
@@ -97,7 +97,8 @@
     "noCountriesFoundInThisRegion": "Walang mga bansang natagpuan sa rehiyong ito",
     "searchAnything": "Maghanap ng anuman...",
     "filters": "Mga Filter",
-    "noOfRentalDevices": "Bilang ng mga Device na Inirenta"
+    "noOfRentalDevices": "Bilang ng mga Device na Inirenta",
+    "noCountriesFound": "Walang mga bansang natagpuan"
   },
   "form": {
     "startDate": "Petsa ng Simula",

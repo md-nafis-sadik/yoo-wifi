@@ -37,12 +37,6 @@ const NavBarSecondary = () => {
   } = useModal();
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const handleCountryChange = (country) => {
-    setSelectedCountry(country);
-    navigate(
-      `country-coverage/filter?region=${country?.region?.toLowerCase()}&country=${country?.name?.toLowerCase()}`
-    );
-  };
 
   const commercialMenuItems = [
     {
@@ -88,6 +82,10 @@ const NavBarSecondary = () => {
       setLoginRequiredDialogOpen(value);
     }
     setIsShowMenu(false);
+  };
+
+  const handleCountryChange = (country) => {
+    setSelectedCountry(country);
   };
 
   return (

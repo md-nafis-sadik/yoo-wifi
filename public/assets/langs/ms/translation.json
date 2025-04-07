@@ -13,19 +13,19 @@
     { "label": "Jerman" },
     { "label": "Perancis" }
   ],
-  "countryOptions": [
-    { "label": "Amerika" },
-    { "label": "China" },
-    { "label": "Malaysia" },
-    { "label": "Indonesia" },
-    { "label": "Jepun" },
-    { "label": "Thailand" },
-    { "label": "Vietnam" },
-    { "label": "Filipina" },
-    { "label": "Sepanyol" },
-    { "label": "Jerman" },
-    { "label": "Perancis" }
-  ],
+  "countryOptions": {
+    "America": "Amerika",
+    "China": "China",
+    "Malaysia": "Malaysia",
+    "Indonesia": "Indonesia",
+    "Japan": "Jepun",
+    "Thailand": "Thailand",
+    "Vietnam": "Vietnam",
+    "Phillipine": "Filipina",
+    "Spain": "Sepanyol",
+    "Germany": "Jerman",
+    "France": "Perancis"
+  },
   "buttonText": {
     "buyNow": "Beli Sekarang",
     "findOutMore": "Ketahui Lebih Lanjut",
@@ -97,7 +97,8 @@
     "noCountriesFoundInThisRegion": "Tiada negara dijumpai di rantau ini",
     "searchAnything": "Cari apa sahaja...",
     "filters": "Penapis",
-    "noOfRentalDevices": "Bilangan Peranti Sewaan"
+    "noOfRentalDevices": "Bilangan Peranti Sewaan",
+    "noCountriesFound": "Tiada Negara Ditemui"
   },
   "form": {
     "startDate": "Tarikh Mula",

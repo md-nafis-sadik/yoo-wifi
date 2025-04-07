@@ -85,9 +85,6 @@ function NavBar() {
 
   const handleCountryChange = (country) => {
     setSelectedCountry(country);
-    navigate(
-      `country-coverage/filter?region=${country?.region?.toLowerCase()}&country=${country?.label?.toLowerCase()}`
-    );
   };
 
   return (

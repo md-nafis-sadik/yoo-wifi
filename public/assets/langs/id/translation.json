@@ -13,19 +13,19 @@
     { "label": "Jerman" },
     { "label": "Prancis" }
   ],
-  "countryOptions": [
-    { "label": "Amerika" },
-    { "label": "Tiongkok" },
-    { "label": "Malaysia" },
-    { "label": "Indonesia" },
-    { "label": "Jepang" },
-    { "label": "Thailand" },
-    { "label": "Vietnam" },
-    { "label": "Filipina" },
-    { "label": "Spanyol" },
-    { "label": "Jerman" },
-    { "label": "Prancis" }
-  ],
+  "countryOptions": {
+    "America": "Amerika",
+    "China": "Tiongkok",
+    "Malaysia": "Malaysia",
+    "Indonesia": "Indonesia",
+    "Japan": "Jepang",
+    "Thailand": "Thailand",
+    "Vietnam": "Vietnam",
+    "Phillipine": "Filipina",
+    "Spain": "Spanyol",
+    "Germany": "Jerman",
+    "France": "Prancis"
+  },
   "buttonText": {
     "buyNow": "Beli Sekarang",
     "findOutMore": "Cari Tahu Lebih Lanjut",
@@ -97,7 +97,8 @@
     "noCountriesFoundInThisRegion": "Tidak ada negara ditemukan di wilayah ini",
     "searchAnything": "Cari apa saja...",
     "filters": "Filter",
-    "noOfRentalDevices": "Jumlah Perangkat Sewa"
+    "noOfRentalDevices": "Jumlah Perangkat Sewa",
+    "noCountriesFound": "Tidak ada Negara Ditemukan"
   },
   "form": {
     "startDate": "Tanggal Mulai",

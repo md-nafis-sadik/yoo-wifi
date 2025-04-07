@@ -13,19 +13,19 @@
     { "label": "German" },
     { "label": "French" }
   ],
-  "countryOptions": [
-    { "label": "America" },
-    { "label": "China" },
-    { "label": "Malaysia" },
-    { "label": "Indonesia" },
-    { "label": "Japan" },
-    { "label": "Thailand" },
-    { "label": "Vietnam" },
-    { "label": "Phillipine" },
-    { "label": "Spain" },
-    { "label": "Germany" },
-    { "label": "France" }
-  ],
+  "countryOptions": {
+    "America": "America",
+    "China": "China",
+    "Malaysia": "Malaysia",
+    "Indonesia": "Indonesia",
+    "Japan": "Japan",
+    "Thailand": "Thailand",
+    "Vietnam": "Vietnam",
+    "Phillipine": "Philippines",
+    "Spain": "Spain",
+    "Germany": "Germany",
+    "France": "France"
+  },
   "buttonText": {
     "buyNow": "Buy Now",
     "findOutMore": "Find Out More",
@@ -97,7 +97,8 @@
     "noCountriesFoundInThisRegion": "No countries found in this region",
     "searchAnything": "Search anything...",
     "filters": "Filters",
-    "noOfRentalDevices": "No of Rental device(s)"
+    "noOfRentalDevices": "No of Rental device(s)",
+    "noCountriesFound": "No countries found"
   },
   "form": {
     "startDate": "Start Date",
