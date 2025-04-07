@@ -20,7 +20,6 @@ function LanguageSelect() {
     setLang(language);
     i18next.changeLanguage(language);
     window.location.reload();
-    console.log("Language changed to", language);
   };
   return (
     <Select onValueChange={handleLanguageChange} defaultValue={lang}>

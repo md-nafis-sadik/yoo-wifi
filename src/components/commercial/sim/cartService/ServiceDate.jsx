@@ -36,6 +36,8 @@ function ServiceDate({ multiCountry, className, servicedateAdded = false }) {
     );
   };
 
+  console.log(cart?.startDateSecondary, cart?.startDate.getMonth());
+
   return (
     <div className={cn("px-4 py-6 bg-neutral-100 rounded-xl", className)}>
       <div className="flex flex-col gap-6">

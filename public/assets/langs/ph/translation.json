@@ -26,6 +26,20 @@
     "Germany": "Alemanya",
     "France": "Pransya"
   },
+  "months": {
+    "January": "Enero",
+    "February": "Pebrero",
+    "March": "Marso",
+    "April": "Abril",
+    "May": "Mayo",
+    "June": "Hunyo",
+    "July": "Hulyo",
+    "August": "Agosto",
+    "September": "Setyembre",
+    "October": "Oktubre",
+    "November": "Nobyembre",
+    "December": "Disyembre"
+  },
   "buttonText": {
     "buyNow": "Bumili Ngayon",
     "findOutMore": "Alamin Pa",

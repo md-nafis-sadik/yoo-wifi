@@ -26,6 +26,20 @@
     "Germany": "เยอรมนี",
     "France": "ฝรั่งเศส"
   },
+  "months": {
+    "January": "มกราคม",
+    "February": "กุมภาพันธ์",
+    "March": "มีนาคม",
+    "April": "เมษายน",
+    "May": "พฤษภาคม",
+    "June": "มิถุนายน",
+    "July": "กรกฎาคม",
+    "August": "สิงหาคม",
+    "September": "กันยายน",
+    "October": "ตุลาคม",
+    "November": "พฤศจิกายน",
+    "December": "ธันวาคม"
+  },
   "buttonText": {
     "buyNow": "ซื้อเลย",
     "findOutMore": "ค้นหาข้อมูลเพิ่มเติม",

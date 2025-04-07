@@ -7,8 +7,23 @@ import {
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
+import Cookies from "js-cookie";
 import { CalendarIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import {
+  enUS,
+  es,
+  fr,
+  de,
+  id,
+  ja,
+  ms,
+  pl,
+  th,
+  vi,
+  zhCN,
+  zhHK,
+} from "date-fns/locale";
 
 function DatePicker({
   wrapper = "",
@@ -18,6 +33,49 @@ function DatePicker({
   setDate,
 }) {
   const { t } = useTranslation();
+  const currentLanguage = Cookies.get("i18next");
+  let locale = enUS;
+
+  switch (currentLanguage) {
+    case "en":
+      locale = enUS;
+      break;
+    case "es":
+      locale = es;
+      break;
+    case "fr":
+      locale = fr;
+      break;
+    case "gm":
+      locale = de;
+      break;
+    case "id":
+      locale = id;
+      break;
+    case "jp":
+      locale = ja;
+      break;
+    case "ms":
+      locale = ms;
+      break;
+    case "ph":
+      locale = pl;
+      break;
+    case "th":
+      locale = th;
+      break;
+    case "vi":
+      locale = vi;
+      break;
+    case "zhcn":
+      locale = zhCN;
+      break;
+    case "zhhk":
+      locale = zhHK;
+      break;
+    default:
+      locale = enUS; // Default to English if the selected language is not supported
+  }
 
   return (
     <div className={cn("w-full flex items-center gap-2", wrapper)}>
