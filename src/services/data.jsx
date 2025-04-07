@@ -20,6 +20,86 @@ import {
 
 // c
 
+export const countryOptions = [
+  {
+    _id: 1,
+    label: "America",
+    value: "america",
+    region: "america",
+    flag: () => images.USFlag,
+  },
+  {
+    _id: 2,
+    label: "China",
+    value: "china",
+    region: "asia",
+    flag: () => images.ChinaFlag,
+  },
+  {
+    _id: 3,
+    label: "Malaysia",
+    value: "malaysia",
+    region: "asia",
+    flag: () => images.MalaysiaFlag,
+  },
+  {
+    _id: 4,
+    label: "Indonesia",
+    value: "indonesia",
+    region: "asia",
+    flag: () => images.IndonesiaFlag,
+  },
+  {
+    _id: 5,
+    label: "Japan",
+    value: "japan",
+    region: "asia",
+    flag: () => images.JapanFlag,
+  },
+  {
+    _id: 6,
+    label: "Thailand",
+    value: "thailand",
+    region: "asia",
+    flag: () => images.ThailandFlag,
+  },
+  {
+    _id: 7,
+    label: "Vietnam",
+    value: "vietnam",
+    region: "asia",
+    flag: () => images.VietnamFlag,
+  },
+  {
+    _id: 8,
+    label: "Phillipine",
+    value: "phillipine",
+    region: "asia",
+    flag: () => images.PhilippinesFlag,
+  },
+  {
+    _id: 9,
+    label: "Spain",
+    value: "spain",
+    region: "europe",
+    flag: () => images.SpainFlag,
+  },
+  {
+    _id: 10,
+    label: "Germany",
+    value: "germany",
+    region: "europe",
+    flag: () => images.GermanyFlag,
+  },
+  {
+    _id: 11,
+    label: "France",
+    value: "france",
+    region: "europe",
+    flag: () => images.FranceFlag,
+  },
+];
+
 // h
 
 // n

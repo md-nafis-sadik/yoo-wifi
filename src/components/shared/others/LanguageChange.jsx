@@ -28,14 +28,20 @@ function LanguageSelect() {
         <SelectValue placeholder="Select Language" />
       </SelectTrigger>
       <SelectContent align="end" side="bottom">
-        {languageOptions?.map(({ _id, label, value, flag }) => (
+        {languageOptions?.map(({ _id, value, flag }, index) => (
           <SelectItem
             key={_id}
             value={value}
             className={"flex flex-row gap-1 items-center"}
           >
-            <img src={flag()} alt={label} className="w-6 h-auto inline-block" />{" "}
-            <span className="countryName">{label}</span>
+            <img
+              src={flag()}
+              alt={t(`languageOptions.${index}.label`)}
+              className="w-6 h-auto inline-block"
+            />{" "}
+            <span className="countryName">
+              {t(`languageOptions.${index}.label`)}
+            </span>
           </SelectItem>
         ))}
       </SelectContent>

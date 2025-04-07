@@ -15,12 +15,12 @@ import {
 } from "@/services";
 import { MenuIcon } from "lucide-react";
 import { useState } from "react";
-import { CountrySelect } from "react-country-state-city";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 import LanguageSelect from "../others/LanguageChange";
 import DesktopMegaMenu from "./DesktopMegaMenu";
 import MobileMegaMenu from "./MobileMegaMenu";
+import CountrySearchField from "../others/CountrySearchField";
 
 function NavBar() {
   const { isScrolled, isWhite, isRedBorder, isHome, isBlack, isBannerRoutes } =
@@ -70,6 +70,7 @@ function NavBar() {
   ];
 
   const menuItems = useActiveMenuItem(commercialMenuItems);
+  const [selectedCountry, setSelectedCountry] = useState(null);
 
   const handleModalOpen = (name = "auth", value) => {
     if (name == "auth") {
@@ -83,8 +84,9 @@ function NavBar() {
   };
 
   const handleCountryChange = (country) => {
+    setSelectedCountry(country);
     navigate(
-      `country-coverage/filter?region=${country?.region?.toLowerCase()}&country=${country?.name?.toLowerCase()}`
+      `country-coverage/filter?region=${country?.region?.toLowerCase()}&country=${country?.label?.toLowerCase()}`
     );
   };
 
@@ -123,32 +125,26 @@ function NavBar() {
                     : "max-w-0 overflow-hidden "
                 )}
               >
-                <CountrySelect
-                  onChange={(val) => handleCountryChange(val)}
+                <CountrySearchField
+                  value={selectedCountry}
+                  onChange={handleCountryChange}
                   name="country"
-                  containerClassName={cn(
-                    "country-search bg-transparent",
+                  placeHolder={t("extraText.selectCountry")}
+                  inputClassName={cn(
                     isRedBorder && !showMegaMenu
-                      ? "blackSearch"
+                      ? "border-black-500 text-black-600 placeholder:text-black-600"
                       : isScrolled || (!isHome && !showMegaMenu)
-                      ? "blackSearch"
-                      : "whiteSearch",
-                    isWhite ? "whiteText" : ""
+                      ? "border-black-500 text-black-500 placeholder:text-black-600"
+                      : "border-white text-white placeholder:text-white/80"
                   )}
-                  inputClassName="!border-none !outline-none bg-transparent"
-                  placeHolder={t("extraText.searchCountry")}
-                  autoComplete="off"
-                  lang="fr"
-                />
-                <SearchIcon
-                  className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
-                  color={
+                  searchIconColor={
                     isRedBorder
                       ? "#757575"
                       : isScrolled || (!isHome && !isBannerRoutes)
                       ? "#757575"
-                      : "#FAFAFA"
+                      : "#FFFFFF"
                   }
+                  isWhite={isWhite}
                 />
               </div>
               {showSearchbar ? (
@@ -275,31 +271,26 @@ function NavBar() {
               </Link>
               <div className="flex flex-col xl:flex-row xl:items-center gap-3 w-full xl:w-auto flex-1 xl:flex-none justify-end xl:justify-center mt-6 xl:mt-0">
                 <div className="w-full relative hidden xl:block max-w-[198px]">
-                  <CountrySelect
-                    onChange={(val) => handleCountryChange(val)}
+                  <CountrySearchField
+                    value={selectedCountry}
+                    onChange={handleCountryChange}
                     name="country"
-                    containerClassName={cn(
-                      "country-search bg-transparent",
-                      isRedBorder && !showMegaMenu
-                        ? "blackSearch"
-                        : isScrolled || (!isHome && !showMegaMenu)
-                        ? "blackSearch"
-                        : "whiteSearch",
-                      isWhite ? "whiteText" : ""
-                    )}
-                    inputClassName="!border-none !outline-none bg-transparent"
                     placeHolder={t("extraText.selectCountry")}
-                    autoComplete="off"
-                  />
-                  <SearchIcon
-                    className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
-                    color={
+                    inputClassName={cn(
+                      isRedBorder && !showMegaMenu
+                        ? "border-black-500 text-black-600 placeholder:text-black-600"
+                        : isScrolled || (!isHome && !showMegaMenu)
+                        ? "border-black-500 text-black-500 placeholder:text-black-600"
+                        : "border-white text-white placeholder:text-white/80"
+                    )}
+                    searchIconColor={
                       isRedBorder
                         ? "#757575"
                         : isScrolled || (!isHome && !isBannerRoutes)
                         ? "#757575"
-                        : "#FAFAFA"
+                        : "#FFFFFF"
                     }
+                    isWhite={isWhite}
                   />
                 </div>
                 <Button

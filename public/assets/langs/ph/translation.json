@@ -1,4 +1,31 @@
 {
+  "languageOptions": [
+    { "label": "Ingles" },
+    { "label": "Tsino (Pinasimple)" },
+    { "label": "Tsino (Tradisyonal)" },
+    { "label": "Malay" },
+    { "label": "Indonesian" },
+    { "label": "Hapones" },
+    { "label": "Thai" },
+    { "label": "Biyetnames" },
+    { "label": "Pilipino" },
+    { "label": "Espanyol" },
+    { "label": "Aleman" },
+    { "label": "Pranses" }
+  ],
+  "countryOptions": [
+    { "label": "America" },
+    { "label": "Tsina" },
+    { "label": "Malaysia" },
+    { "label": "Indonesya" },
+    { "label": "Hapon" },
+    { "label": "Thailand" },
+    { "label": "Vietnam" },
+    { "label": "Pilipinas" },
+    { "label": "Espanya" },
+    { "label": "Germany" },
+    { "label": "Pransya" }
+  ],
   "buttonText": {
     "buyNow": "Bumili Ngayon",
     "findOutMore": "Alamin Pa",

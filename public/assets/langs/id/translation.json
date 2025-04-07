@@ -1,4 +1,31 @@
 {
+  "languageOptions": [
+    { "label": "Inggris" },
+    { "label": "Cina (Sederhana)" },
+    { "label": "Cina (Tradisional)" },
+    { "label": "Melayu" },
+    { "label": "Indonesia" },
+    { "label": "Jepang" },
+    { "label": "Thailand" },
+    { "label": "Vietnam" },
+    { "label": "Filipina" },
+    { "label": "Spanyol" },
+    { "label": "Jerman" },
+    { "label": "Prancis" }
+  ],
+  "countryOptions": [
+    { "label": "Amerika" },
+    { "label": "Tiongkok" },
+    { "label": "Malaysia" },
+    { "label": "Indonesia" },
+    { "label": "Jepang" },
+    { "label": "Thailand" },
+    { "label": "Vietnam" },
+    { "label": "Filipina" },
+    { "label": "Spanyol" },
+    { "label": "Jerman" },
+    { "label": "Prancis" }
+  ],
   "buttonText": {
     "buyNow": "Beli Sekarang",
     "findOutMore": "Cari Tahu Lebih Lanjut",

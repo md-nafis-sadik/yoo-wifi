@@ -1,4 +1,31 @@
 {
+  "languageOptions": [
+    { "label": "英文" },
+    { "label": "中文（簡體）" },
+    { "label": "中文（繁體）" },
+    { "label": "馬來語" },
+    { "label": "印尼語" },
+    { "label": "日語" },
+    { "label": "泰語" },
+    { "label": "越南語" },
+    { "label": "菲律賓語" },
+    { "label": "西班牙語" },
+    { "label": "德語" },
+    { "label": "法語" }
+  ],
+  "countryOptions": [
+    { "label": "美國" },
+    { "label": "中國" },
+    { "label": "馬來西亞" },
+    { "label": "印尼" },
+    { "label": "日本" },
+    { "label": "泰國" },
+    { "label": "越南" },
+    { "label": "菲律賓" },
+    { "label": "西班牙" },
+    { "label": "德國" },
+    { "label": "法國" }
+  ],
   "buttonText": {
     "buyNow": "立即購買",
     "findOutMore": "了解更多",

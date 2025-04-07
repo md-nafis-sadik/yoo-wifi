@@ -1,4 +1,31 @@
 {
+  "languageOptions": [
+    { "label": "Tiếng Anh" },
+    { "label": "Tiếng Trung (Giản thể)" },
+    { "label": "Tiếng Trung (Phồn thể)" },
+    { "label": "Tiếng Mã Lai" },
+    { "label": "Tiếng Indonesia" },
+    { "label": "Tiếng Nhật" },
+    { "label": "Tiếng Thái" },
+    { "label": "Tiếng Việt" },
+    { "label": "Tiếng Philippines" },
+    { "label": "Tiếng Tây Ban Nha" },
+    { "label": "Tiếng Đức" },
+    { "label": "Tiếng Pháp" }
+  ],
+  "countryOptions": [
+    { "label": "Mỹ" },
+    { "label": "Trung Quốc" },
+    { "label": "Malaysia" },
+    { "label": "Indonesia" },
+    { "label": "Nhật Bản" },
+    { "label": "Thái Lan" },
+    { "label": "Việt Nam" },
+    { "label": "Philippines" },
+    { "label": "Tây Ban Nha" },
+    { "label": "Đức" },
+    { "label": "Pháp" }
+  ],
   "buttonText": {
     "buyNow": "Mua ngay",
     "findOutMore": "Tìm hiểu thêm",

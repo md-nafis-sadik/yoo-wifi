@@ -1,4 +1,31 @@
 {
+  "languageOptions": [
+    { "label": "英語" },
+    { "label": "中国語（簡体字）" },
+    { "label": "中国語（繁体字）" },
+    { "label": "マレー語" },
+    { "label": "インドネシア語" },
+    { "label": "日本語" },
+    { "label": "タイ語" },
+    { "label": "ベトナム語" },
+    { "label": "フィリピン語" },
+    { "label": "スペイン語" },
+    { "label": "ドイツ語" },
+    { "label": "フランス語" }
+  ],
+  "countryOptions": [
+    { "label": "アメリカ" },
+    { "label": "中国" },
+    { "label": "マレーシア" },
+    { "label": "インドネシア" },
+    { "label": "日本" },
+    { "label": "タイ" },
+    { "label": "ベトナム" },
+    { "label": "フィリピン" },
+    { "label": "スペイン" },
+    { "label": "ドイツ" },
+    { "label": "フランス" }
+  ],
   "buttonText": {
     "buyNow": "今すぐ購入",
     "findOutMore": "詳細を確認",

@@ -21,13 +21,15 @@ import { Link, useNavigate } from "react-router-dom";
 import LanguageSelect from "../others/LanguageChange";
 import DesktopMegaMenu from "./DesktopMegaMenu";
 import MobileMegaMenu from "./MobileMegaMenu";
+import CountrySearchField from "../others/CountrySearchField";
 
 const NavBarSecondary = () => {
-  const { isScrolled, isRedBorder, isHome, isBlack, isBannerRoutes } =
+  const { isScrolled, isRedBorder, isHome, isBlack, isWhite, isBannerRoutes } =
     useGteNavbarStatus();
   const [isShowMenu, setIsShowMenu] = useState(false);
   const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [showSearchbar, setShowSearchbar] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState(null);
   const {
     setIsAuthDialogOpen,
     setLoginRequiredDialogOpen,
@@ -36,6 +38,7 @@ const NavBarSecondary = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const handleCountryChange = (country) => {
+    setSelectedCountry(country);
     navigate(
       `country-coverage/filter?region=${country?.region?.toLowerCase()}&country=${country?.name?.toLowerCase()}`
     );
@@ -117,19 +120,17 @@ const NavBarSecondary = () => {
                     : "max-w-0 overflow-hidden "
                 )}
               >
-                <CountrySelect
-                  onChange={(val) => handleCountryChange(val)}
+                <CountrySearchField
+                  value={selectedCountry}
+                  onChange={handleCountryChange}
                   name="country"
-                  containerClassName={cn(
-                    "country-search bg-transparent blackSearch"
+                  placeHolder={t("extraText.selectCountry")}
+                  inputClassName={cn(
+                    isScrolled
+                      ? "bg-neutral-black text-white"
+                      : "bg-white text-neutral-black"
                   )}
-                  inputClassName="!border-none !outline-none bg-transparent"
-                  placeHolder="Select Country"
-                  autoComplete="off"
-                />
-                <SearchIcon
-                  className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
-                  color={isScrolled ? "#fafafa" : "#191919"}
+                  isScrolled={isScrolled}
                 />
               </div>
               {showSearchbar ? (
@@ -235,19 +236,17 @@ const NavBarSecondary = () => {
               </Link>
               <div className="flex flex-col xl:flex-row xl:items-center gap-3 w-full xl:w-auto flex-1 xl:flex-none justify-end xl:justify-center mt-6 xl:mt-0">
                 <div className="w-full relative hidden xl:block max-w-[198px]">
-                  <CountrySelect
-                    onChange={(val) => handleCountryChange(val)}
+                  <CountrySearchField
+                    value={selectedCountry}
+                    onChange={handleCountryChange}
                     name="country"
-                    containerClassName={cn(
-                      "country-search bg-transparent nav-white"
-                    )}
-                    inputClassName="!border-none !outline-none bg-transparent"
                     placeHolder={t("extraText.selectCountry")}
-                    autoComplete="off"
-                  />
-                  <SearchIcon
-                    className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
-                    color={isScrolled ? "#757575" : "#191919"}
+                    inputClassName={cn(
+                      isScrolled
+                        ? "bg-neutral-black text-white"
+                        : "bg-white text-neutral-black"
+                    )}
+                    isScrolled={isScrolled}
                   />
                 </div>
                 <Button

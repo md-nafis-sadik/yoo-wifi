@@ -1,4 +1,31 @@
 {
+  "languageOptions": [
+    { "label": "Inglés" },
+    { "label": "Chino (Simplificado)" },
+    { "label": "Chino (Tradicional)" },
+    { "label": "Malayo" },
+    { "label": "Indonesio" },
+    { "label": "Japonés" },
+    { "label": "Tailandés" },
+    { "label": "Vietnamita" },
+    { "label": "Filipino" },
+    { "label": "Español" },
+    { "label": "Alemán" },
+    { "label": "Francés" }
+  ],
+  "countryOptions": [
+    { "label": "América" },
+    { "label": "China" },
+    { "label": "Malasia" },
+    { "label": "Indonesia" },
+    { "label": "Japón" },
+    { "label": "Tailandia" },
+    { "label": "Vietnam" },
+    { "label": "Filipinas" },
+    { "label": "España" },
+    { "label": "Alemania" },
+    { "label": "Francia" }
+  ],
   "buttonText": {
     "buyNow": "Comprar Ahora",
     "findOutMore": "Saber Más",
