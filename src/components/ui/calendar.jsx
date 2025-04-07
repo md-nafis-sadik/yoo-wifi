@@ -1,13 +1,72 @@
 import { DayPicker } from "react-day-picker";
-
+import {
+  enUS,
+  es,
+  fr,
+  de,
+  id,
+  ja,
+  ms,
+  pl,
+  th,
+  vi,
+  zhCN,
+  zhHK,
+} from "date-fns/locale";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Cookies from "js-cookie";
 
 function Calendar({ className, classNames, showOutsideDays = true, ...props }) {
+  const currentLanguage = Cookies.get("i18next");
+  let locale = enUS;
+
+  switch (currentLanguage) {
+    case "en":
+      locale = enUS;
+      break;
+    case "es":
+      locale = es;
+      break;
+    case "fr":
+      locale = fr;
+      break;
+    case "gm":
+      locale = de;
+      break;
+    case "id":
+      locale = id;
+      break;
+    case "jp":
+      locale = ja;
+      break;
+    case "ms":
+      locale = ms;
+      break;
+    case "ph":
+      locale = pl;
+      break;
+    case "th":
+      locale = th;
+      break;
+    case "vi":
+      locale = vi;
+      break;
+    case "zhcn":
+      locale = zhCN;
+      break;
+    case "zhhk":
+      locale = zhHK;
+      break;
+    default:
+      locale = enUS; // Default to English if the selected language is not supported
+  }
+
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
+      locale={locale} //Multi Language Support
       className={cn("p-3", className)}
       classNames={{
         months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
