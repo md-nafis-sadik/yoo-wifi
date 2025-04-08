@@ -14,10 +14,10 @@ import {
 } from "@/services";
 import { MenuIcon } from "lucide-react";
 import { useState } from "react";
-import { CountrySelect } from "react-country-state-city";
 import { useTranslation } from "react-i18next";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import LanguageSelect from "../others/LanguageChange";
+import CountrySearchField from "../others/CountrySearchField";
 
 export const corporateMenuItems = [
   {
@@ -59,8 +59,6 @@ export const corporateMenuItems = [
 
 function CorporateNavbar() {
   const { isScrolled, isRedBorder, isHome } = useGteNavbarStatus();
-  const [isShowMenu, setIsShowMenu] = useState(false);
-  const [showSearchbar, setShowSearchbar] = useState(false);
   const menuItems = useActiveMenuItem(corporateMenuItems);
   const {
     setIsAuthDialogOpen,
@@ -69,12 +67,9 @@ function CorporateNavbar() {
   } = useModal();
   const { t } = useTranslation();
 
-  const navigate = useNavigate();
-  const handleCountryChange = (country) => {
-    navigate(
-      `/country-coverage/filter?region=${country?.region?.toLowerCase()}&country=${country?.name?.toLowerCase()}`
-    );
-  };
+  const [isShowMenu, setIsShowMenu] = useState(false);
+  const [showSearchbar, setShowSearchbar] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState(null);
 
   const handleModalOpen = (name = "auth", value) => {
     if (name == "auth") {
@@ -86,6 +81,11 @@ function CorporateNavbar() {
     }
     setIsShowMenu(false);
   };
+
+  const handleCountryChange = (country) => {
+    setSelectedCountry(country);
+  };
+
   return (
     <header
       className={cn(
@@ -116,19 +116,13 @@ function CorporateNavbar() {
                     : "max-w-0 overflow-hidden "
                 )}
               >
-                <CountrySelect
-                  onChange={(val) => handleCountryChange(val)}
+                <CountrySearchField
+                  value={selectedCountry}
+                  onChange={handleCountryChange}
                   name="country"
-                  containerClassName={cn(
-                    "country-search bg-transparent blackSearch"
-                  )}
-                  inputClassName="!border-none !outline-none bg-transparent"
-                  placeHolder="Select Country"
-                  autoComplete="off"
-                />
-                <SearchIcon
-                  className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
-                  color="#191919"
+                  placeHolder={t("extraText.selectCountry")}
+                  inputClassName="border-black-500 text-black-500 placeholder:text-black-600"
+                  searchIconColor={"#191919"}
                 />
               </div>
               {showSearchbar ? (
@@ -216,19 +210,13 @@ function CorporateNavbar() {
               </Link>
               <div className="flex flex-col xl:flex-row xl:items-center gap-3 w-full xl:w-auto flex-1 xl:flex-none justify-end xl:justify-center mt-6 xl:mt-0">
                 <div className="w-full relative hidden xl:block max-w-[198px]">
-                  <CountrySelect
-                    onChange={(val) => handleCountryChange(val)}
+                  <CountrySearchField
+                    value={selectedCountry}
+                    onChange={handleCountryChange}
                     name="country"
-                    containerClassName={cn(
-                      "country-search bg-transparent nav-white"
-                    )}
-                    inputClassName="!border-none !outline-none bg-transparent"
                     placeHolder={t("extraText.selectCountry")}
-                    autoComplete="off"
-                  />
-                  <SearchIcon
-                    className="absolute inset-y-0 top-1/2 -translate-y-1/2 left-3"
-                    color="#191919"
+                    inputClassName="border-neutral-300 text-black-500 placeholder:text-black-600"
+                    searchIconColor={"#191919"}
                   />
                 </div>
                 <Button

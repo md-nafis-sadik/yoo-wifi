@@ -5,6 +5,7 @@ import { images } from "@/services";
 import { useEffect, useState } from "react";
 import { setPocketWifiCartData } from "@/store/module/pocketWifi/slice";
 import { useTranslation } from "react-i18next";
+import CountrySelectField from "@/components/shared/others/CountrySelectField";
 
 const CountryWiseLocation = () => {
   const { pickupLocations, cart } = useSelector((state) => state.pocketWifi);
@@ -23,13 +24,11 @@ const CountryWiseLocation = () => {
     <div className="w-full containerX sec_common_60 xl:px-0" id="view-location">
       <div className="flex flex-col gap-2 relative z-10">
         <span className="label">{t("extraText.country")}</span>
-        <CountrySelect
-          name="country"
+        <CountrySelectField
           defaultValue={cart?.pickupCountry}
           onChange={(value) => handleCountrySelect(value)}
-          containerClassName="country-select bg-neutral-50 max-w-[418px]"
-          inputClassName="!border-none !outline-none bg-transparent"
-          placeHolder={t("form.selectCountry")}
+          selectTriggerClassName={"country-select bg-neutral-50 rounded-xl"}
+          placeholder={t("form.selectCountry")}
         />
       </div>
 

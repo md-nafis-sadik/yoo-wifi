@@ -1,3 +1,4 @@
+import CountrySelectField from "@/components/shared/others/CountrySelectField";
 import DatePicker from "@/components/shared/others/DatePicker";
 import { cn } from "@/lib/utils";
 import { setPocketWifiCartData } from "@/store/module/pocketWifi/slice";
@@ -41,17 +42,15 @@ function ServiceDate({ multiCountry, className, servicedateAdded = false }) {
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
           <span className="label">{t("form.country")}</span>
-          <CountrySelect
-            name="country"
+          <CountrySelectField
             defaultValue={
               servicedateAdded
                 ? cart?.productCountrySecondary
                 : cart?.productCountry
             }
             onChange={(value) => handleCountrySelect(value)}
-            containerClassName="country-select bg-neutral-50 rounded-xl"
-            inputClassName="!border-none !outline-none bg-transparent"
-            placeHolder={t("form.selectCountry")}
+            selectTriggerClassName={"country-select bg-neutral-50 rounded-xl"}
+            placeholder={t("form.selectCountry")}
           />
         </div>
         <div className="flex items-center gap-4">

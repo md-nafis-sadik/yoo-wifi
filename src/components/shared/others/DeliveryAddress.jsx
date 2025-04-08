@@ -8,6 +8,7 @@ import { CountrySelect, StateSelect } from "react-country-state-city";
 import { useDispatch, useSelector } from "react-redux";
 import UserLocationCard from "../cards/UserLocationCard";
 import { useTranslation } from "react-i18next";
+import CountrySelectField from "./CountrySelectField";
 
 function DeliveryAddress({
   handleSelect = () => {},
@@ -126,13 +127,13 @@ function DeliveryAddress({
               />
               <div className="flex flex-col gap-2">
                 <span className="label">{t("form.country")}</span>
-                <CountrySelect
-                  name="country"
+                <CountrySelectField
                   defaultValue={country}
                   onChange={(value) => setCountry(value)}
-                  containerClassName="country-select bg-neutral-50"
-                  inputClassName="!border-none !outline-none bg-transparent"
-                  placeHolder={t("form.selectCountry")}
+                  selectTriggerClassName={
+                    "country-select bg-neutral-50 rounded-xl"
+                  }
+                  placeholder={t("form.selectCountry")}
                 />
               </div>
               <div className="flex flex-col gap-2">

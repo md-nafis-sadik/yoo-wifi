@@ -95,7 +95,7 @@ function DatePicker({
           >
             <CalendarIcon />
             <span className="flex-1">
-              {date ? format(date, "PPP") : t("form.pickADate")}
+              {date ? format(date, "PPP", { locale }) : t("form.pickADate")}
             </span>
           </Button>
         </PopoverTrigger>

@@ -1,5 +1,6 @@
 import RouterCartFooter from "@/components/commercial/router/RouterCartFooter";
 import CartLocationCard from "@/components/shared/cards/CartLocationCard";
+import CountrySelectField from "@/components/shared/others/CountrySelectField";
 import {
   Accordion,
   AccordionContent,
@@ -44,13 +45,11 @@ function SimSelfPickup() {
       <div className="w-full flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <span className="label">{t("extraText.country")}</span>
-          <CountrySelect
-            name="country"
+          <CountrySelectField
             defaultValue={cart?.pickupCountry}
             onChange={(value) => handleCountrySelect(value)}
-            containerClassName="country-select bg-neutral-50"
-            inputClassName="!border-none !outline-none bg-transparent"
-            placeHolder={t("form.selectCountry")}
+            selectTriggerClassName={"country-select bg-neutral-50 rounded-xl"}
+            placeholder={t("form.selectCountry")}
           />
         </div>
         <Accordion type="single" className="flex flex-col gap-4" collapsible>

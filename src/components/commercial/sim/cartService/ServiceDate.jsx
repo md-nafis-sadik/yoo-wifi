@@ -1,3 +1,4 @@
+import CountrySelectField from "@/components/shared/others/CountrySelectField";
 import DatePicker from "@/components/shared/others/DatePicker";
 import { cn } from "@/lib/utils";
 import { setSimCartData } from "@/store/module/sim/slice";
@@ -36,20 +37,16 @@ function ServiceDate({ multiCountry, className, servicedateAdded = false }) {
     );
   };
 
-  console.log(cart?.startDateSecondary, cart?.startDate.getMonth());
-
   return (
     <div className={cn("px-4 py-6 bg-neutral-100 rounded-xl", className)}>
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
           <span className="label">{t("form.country")}</span>
-          <CountrySelect
-            name="country"
-            defaultValue={cart?.productCountry}
+          <CountrySelectField
+            defaultValue={cart?.productCountry?.name?.toLowerCase()}
             onChange={(value) => handleCountrySelect(value)}
-            containerClassName="country-select bg-neutral-50 rounded-xl"
-            inputClassName="!border-none !outline-none bg-transparent"
-            placeHolder={t("form.selectCountry")}
+            selectTriggerClassName={"country-select bg-neutral-50 rounded-xl"}
+            placeholder={t("form.selectCountry")}
           />
         </div>
 

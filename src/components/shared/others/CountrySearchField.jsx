@@ -20,13 +20,14 @@ const CountrySearchField = ({
   autoComplete = "off",
   searchIconColor,
 }) => {
+  const inputRef = useRef(null);
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+
   const [open, setOpen] = useState(false);
   const [searchValue, setSearchValue] = useState(
     value?.label ? t(`countryOptions.${value.label}`) : ""
   );
-  const inputRef = useRef(null);
-  const { t } = useTranslation();
-  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const newValue = e.target.value;
@@ -50,7 +51,7 @@ const CountrySearchField = ({
     }, 0);
 
     navigate(
-      `country-coverage/filter?region=${country?.region?.toLowerCase()}&country=${country?.label?.toLowerCase()}`
+      `/country-coverage/filter?region=${country?.region?.toLowerCase()}&country=${country?.label?.toLowerCase()}`
     );
   };
 

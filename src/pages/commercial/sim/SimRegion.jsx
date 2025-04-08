@@ -1,4 +1,5 @@
 import RouterCartFooter from "@/components/commercial/sim/RouterCartFooter";
+import CountrySelectField from "@/components/shared/others/CountrySelectField";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
@@ -123,13 +124,11 @@ function SimRegion() {
             <span className="label">
               {t(`pocketWifiRegion.form.fields.0.label`)}
             </span>
-            <CountrySelect
-              name="country"
-              defaultValue={cart?.productCountry}
+            <CountrySelectField
+              defaultValue={cart?.productCountry?.name?.toLowerCase()}
               onChange={(value) => handleCountrySelect(value)}
-              containerClassName="country-select bg-neutral-50"
-              inputClassName="!border-none !outline-none bg-transparent"
-              placeHolder={t(`pocketWifiRegion.form.fields.0.placeholder`)}
+              selectTriggerClassName={"country-select bg-neutral-50 rounded-xl"}
+              placeholder={t("form.selectCountry")}
             />
           </div>
           <Input
