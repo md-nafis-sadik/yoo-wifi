@@ -1,4 +1,11 @@
-import { FacebookIcon, images, InstagramIcon, LinkedInIcon, XIcon, YoutubeIcon } from "@/services";
+import {
+  FacebookIcon,
+  images,
+  InstagramIcon,
+  LinkedInIcon,
+  XIcon,
+  YoutubeIcon,
+} from "@/services";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -9,7 +16,7 @@ const initialState = {
       text: "Whatsapp Us",
       value: "(+65) 6100 9998",
       image: images.whatsapp,
-      type: 'call'
+      type: "call",
     },
     {
       _id: 2,
@@ -17,7 +24,7 @@ const initialState = {
       text: "Email Address",
       value: "business@yoowifi.com",
       image: images.email,
-      type: 'email'
+      type: "email",
     },
   ],
   faqs: [
@@ -60,38 +67,72 @@ const initialState = {
         "The number of devices you need depends on your travel itinerary. Typically, one device per region or country with specific data coverage would be recommended.",
     },
   ],
+  chinaWifiFaqs: [
+    {
+      question: "Does portable WIFI need a SIM card?",
+      answer:
+        "While traditional portable WiFi devices require a SIM card, Yoowifi’s pocket WiFi comes with cloud SIM technology, allowing it to connect automatically to the best available network, no physical SIM card or swapping needed for a trip to China.",
+    },
+
+    {
+      question: "Can I rent a pocket WiFi in China?",
+      answer:
+        "Yes, you can rent a pocket WiFi in China through providers like Yoowifi, which offers convenient pickup options at airports or delivery to your hotel. This allows you to stay connected without needing a local SIM card.",
+    },
+    {
+      question: "Can I install a VPN on the pocket WiFi?",
+      answer:
+        "No, Yoowifi’s pocket WiFi does not support VPN installation directly on the device. However, you can still use a VPN on your connected smartphone, laptop, or tablet to access restricted websites while in China.",
+    },
+    {
+      question: "Do I need a VPN if I’m using an eSIM in China?",
+      answer:
+        "Yes, if you want to access websites and services that are restricted in China (like Google, Facebook, or WhatsApp), you will still need a VPN even when using an eSIM. The eSIM only provides data connectivity but does not bypass the Great Firewall.",
+    },
+    {
+      question: "What if I lose the pocket WiFi device?",
+      answer:
+        "If you lose the Yoowifi pocket WiFi device, you should report it immediately to the rental provider. There may be a lost device fee, but some companies offer insurance or protection plans to minimize costs.",
+    },
+    {
+      question: "What’s the connection speed like in China?",
+      answer:
+        "Connection speeds in China vary by location and network. In major cities like Beijing and Shanghai, 4G/LTE speeds are generally fast, while rural areas may have slower connectivity. Yoowifi’s pocket WiFi automatically selects the best available network for optimal performance.",
+    },
+  ],
+
   socialLinks: [
     {
       _id: 1,
       name: "Facebook",
       link: "https://www.facebook.com/yoowifi/",
-      icon: () => <FacebookIcon className="w-6 h-6 lg:w-8 lg:h-8" />
+      icon: () => <FacebookIcon className="w-6 h-6 lg:w-8 lg:h-8" />,
     },
     {
       _id: 2,
       name: "Youtube",
       link: "https://youtube.com/@yoowifi",
-      icon: () => <YoutubeIcon className="w-6 h-6 lg:w-8 lg:h-8" />
+      icon: () => <YoutubeIcon className="w-6 h-6 lg:w-8 lg:h-8" />,
     },
     {
       _id: 3,
       name: "LinkedIn",
       link: "https://www.linkedin.com/company/yoowifi/?originalSubdomain=sg",
-      icon: () => <LinkedInIcon className="w-6 h-6 lg:w-8 lg:h-8" />
+      icon: () => <LinkedInIcon className="w-6 h-6 lg:w-8 lg:h-8" />,
     },
     {
       _id: 4,
       name: "Instagram",
       link: "https://www.instagram.com/yoowifi.co/?hl=en",
-      icon: () => <InstagramIcon className="w-6 h-6 lg:w-8 lg:h-8" />
+      icon: () => <InstagramIcon className="w-6 h-6 lg:w-8 lg:h-8" />,
     },
     {
       _id: 5,
       name: "X",
       link: "https://x.com/yoowifipr?mx=2",
-      icon: () => <XIcon className="w-6 h-6 lg:w-8 lg:h-8" />
+      icon: () => <XIcon className="w-6 h-6 lg:w-8 lg:h-8" />,
     },
-  ]
+  ],
 };
 
 const contactSlice = createSlice({

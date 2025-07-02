@@ -14,6 +14,10 @@ import HowToSetupSim from "@/pages/commercial/HowToSetupSim";
 import PackageDetails from "@/pages/commercial/PackageDetails";
 import PickDropLocation from "@/pages/commercial/PickDropLocation";
 import PocketWifiHome from "@/pages/commercial/pocketWifi/Home";
+import PocketWifiChinaHome from "@/pages/commercial/pocketWifiChina/Home";
+import ESimChinaHome from "@/pages/commercial/eSimChina/Home";
+import ESimThailandHome from "@/pages/commercial/eSimThailand/Home";
+import PocketWifiJapanHome from "@/pages/commercial/pocketWifiJapan/Home";
 import PocketWifiCartService from "@/pages/commercial/pocketWifi/PocketWifiCartService";
 import PocketWifiOrderSummery from "@/pages/commercial/pocketWifi/PocketWifiOrderSummery";
 import PocketWifiPlan from "@/pages/commercial/pocketWifi/PocketWifiPlan";
@@ -136,6 +140,18 @@ const commercialRoutes = {
     activePath: "pocketWifi",
     element: <PocketWifiDetails />,
   },
+  pocketWifiChina: {
+    path: "/pocket-wifi-china",
+    name: "Pocket wifi China",
+    activePath: "pocketWifi",
+    element: <PocketWifiChinaHome />,
+  },
+  pocketWifiJapan: {
+    path: "/pocket-wifi-japan",
+    name: "Pocket wifi Thailand",
+    activePath: "pocketWifi",
+    element: <PocketWifiJapanHome />,
+  },
 
   // router
   routerLayout: {
@@ -188,7 +204,7 @@ const commercialRoutes = {
     element: <RouterOrderSummery />,
   },
 
-  // router
+  // eSim
   simLayout: {
     path: "/sim",
     name: "Sim/eSim",
@@ -237,6 +253,18 @@ const commercialRoutes = {
     name: "Sim Order Summery",
     activePath: "sim",
     element: <SimOrderSummery />,
+  },
+  esimChina: {
+    path: "/esim-china",
+    name: "eSIM China",
+    activePath: "sim",
+    element: <ESimChinaHome />,
+  },
+  esimThailand: {
+    path: "/esim-thailand",
+    name: "eSIM Thailand",
+    activePath: "sim",
+    element: <ESimThailandHome />,
   },
 
   // about us

@@ -7,6 +7,7 @@ function InfoCard({
   titleClass="",
   description = "",
   children,
+  subtitle,
   ...props
 }) {
   return (
@@ -28,6 +29,16 @@ function InfoCard({
         <h3 className={cn("text-black-900 text-lg sm:text-xl md:text-2xl font-bold",titleClass)}>
           {title}
         </h3>
+        {subtitle && (
+          <p
+            className={cn(
+              "text-black-900 text-base sm:text-lg md:text-xl",
+              title ? "mt-2 sm:mt-4" : ""
+            )}
+          >
+            {subtitle}
+          </p>
+        )}
         {description && (
           <p
             className={cn(

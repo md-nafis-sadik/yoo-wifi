@@ -42,6 +42,10 @@ const {
   affiliate,
   pickDropLocation,
   faq,
+  esimChina,
+  esimThailand,
+  pocketWifiChina,
+  pocketWifiJapan,
 } = routes || {};
 
 export const comRoutes = [
@@ -112,6 +116,22 @@ export const comRoutes = [
       {
         path: faq.path,
         element: faq.element,
+      },
+      {
+        path: pocketWifiChina.path,
+        element: pocketWifiChina.element,
+      },
+      {
+        path: pocketWifiJapan.path,
+        element: pocketWifiJapan.element,
+      },
+      {
+        path: esimChina.path,
+        element: esimChina.element,
+      },
+      {
+        path: esimThailand.path,
+        element: esimThailand.element,
       },
     ],
   },

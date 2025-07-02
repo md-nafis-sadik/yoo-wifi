@@ -2294,5 +2294,276 @@
         "linkText": "Gửi lại mã"
       }
     }
+  },
+  "pocketWifiChina": {
+    "heading": "Pocket WiFi Trung Quốc",
+    "hero": {
+      "para1": "Giữ kết nối tại Trung Quốc rất quan trọng đối với khách du lịch và người đi công tác. Dù bạn đang di chuyển trong các thành phố nhộn nhịp hay đang điều phối các cuộc họp, truy cập internet ổn định là điều cần thiết. Tuy nhiên, chuyển vùng truyền thống hoặc SIM nội địa thường có nhiều hạn chế. Hãy quên đi cơn sốc với hóa đơn chuyển vùng đắt đỏ, việc tìm kiếm SIM địa phương phiền phức khi đến nơi, và các rào cản kỹ thuật số từ kiểm duyệt internet ở Trung Quốc.",
+      "para2": "Thiết bị pocket WiFi mang đến giải pháp liền mạch. Thiết bị nhỏ gọn, di động này cung cấp internet tốc độ cao, dữ liệu không giới hạn, hỗ trợ tất cả thiết bị của bạn. Tận hưởng kết nối internet đáng tin cậy, giá cả phải chăng mà không cần cài đặt phức tạp hay lo lắng về SIM. Chỉ cần thuê thiết bị trước chuyến đi đến Trung Quốc và bạn sẽ luôn được kết nối suốt hành trình."
+    },
+    "wifiPlan": {
+      "title": "Các gói Pocket WiFi từ Yoowifi",
+      "titlefollow": "Yoowifi cung cấp các gói pocket WiFi tiện lợi cho khách du lịch đến Trung Quốc. Các gói này được thiết kế để mang đến kết nối liền mạch mà không cần dùng SIM nội địa hoặc thiết lập phức tạp.",
+      "plans": [
+        {
+          "title": "Giá theo ngày",
+          "description": "Gói Pocket WiFi Monster theo ngày của chúng tôi bắt đầu từ chỉ S$2.50/ngày, với lựa chọn 3GB hoặc 10GB dữ liệu mỗi ngày, tốc độ lên đến 300Mbps."
+        },
+        {
+          "title": "Chính sách sử dụng hợp lý (FUP)",
+          "description": "Mỗi gói đều có giới hạn dữ liệu mỗi ngày. Khi vượt quá, tốc độ kết nối sẽ bị giảm."
+        },
+        {
+          "title": "Quy trình giao hàng & trả thiết bị",
+          "description": "Yoowifi có nhiều tùy chọn giao hàng và trả thiết bị linh hoạt. Bạn có thể tự đến lấy tại nhiều địa điểm hoặc nhận giao miễn phí trong vòng 5 ngày làm việc trước chuyến đi. Việc trả thiết bị cũng đơn giản — chỉ cần gửi trả tại hơn 20 điểm trên toàn đảo."
+        },
+        {
+          "title": "Chính sách hủy",
+          "description": "Nếu bạn cần hủy đặt hàng, chỉ cần liên hệ đội ngũ chăm sóc khách hàng của chúng tôi. Việc hủy sẽ tuân theo các điều khoản và điều kiện áp dụng."
+        }
+      ]
+    },
+    "wifiFeatures": {
+      "title": "Tính năng của Pocket WiFi từ Yoowifi dành cho Trung Quốc",
+      "titlefollow": "Dưới đây là các tính năng nổi bật giúp pocket WiFi của chúng tôi trở thành lựa chọn đáng tin cậy và tiện lợi để giữ kết nối trong chuyến đi đến Trung Quốc:",
+      "features": [
+        {
+          "title": "Gói cước giá rẻ",
+          "description": "Chỉ từ S$2.50/ngày, với lựa chọn 3GB hoặc 10GB dữ liệu mỗi ngày."
+        },
+        {
+          "title": "Kết nối tốc độ cao",
+          "description": "Tốc độ 4G LTE lên đến 300Mbps"
+        },
+        {
+          "title": "Dữ liệu không giới hạn",
+          "description": "Sau khi đạt giới hạn dữ liệu hàng ngày, bạn vẫn có thể sử dụng với tốc độ 3 Mbps không giới hạn."
+        },
+        {
+          "title": "Tùy chọn dữ liệu",
+          "description": "Chọn giữa gói thường hoặc gói nâng cao, thích hợp cho người dùng cần sử dụng nhiều (tối đa 200GB)."
+        },
+        {
+          "title": "Chia sẻ nhiều thiết bị",
+          "description": "Kết nối tối đa 10 thiết bị cùng lúc — lý tưởng cho gia đình hoặc nhóm làm việc."
+        },
+        {
+          "title": "Pin sử dụng lâu",
+          "description": "Dùng liên tục tới 12 tiếng khi sạc đầy (kết nối 1 thiết bị)."
+        },
+        {
+          "title": "Thiết kế sẵn sàng cho du lịch",
+          "description": "Nhỏ gọn, di động và nhẹ."
+        },
+        {
+          "title": "Sạc tiện lợi",
+          "description": "Sạc qua cổng USB hoặc ổ điện, bao gồm đầy đủ dây sạc."
+        },
+        {
+          "title": "Quản lý gói dễ dàng",
+          "description": "Có thể gia hạn hoặc nâng cấp gói bất kỳ lúc nào."
+        },
+        {
+          "title": "Thuê hoặc mua",
+          "description": "Chọn thuê ngắn hạn hoặc mua thiết bị để sử dụng lâu dài tại Trung Quốc."
+        },
+        {
+          "title": "Phủ sóng toàn quốc",
+          "description": "Hoạt động trên khắp Trung Quốc đại lục, bao gồm các thành phố lớn như Bắc Kinh, Thượng Hải và Thâm Quyến."
+        }
+      ]
+    },
+    "whyUse": {
+      "title": "Tại sao nên dùng Pocket WiFi",
+      "titlefollow": "Đây là lý do tại sao Pocket WiFi là lựa chọn thông minh để giữ kết nối trong chuyến đi đến Trung Quốc:",
+      "benifits": [
+        {
+          "title": "Tránh phí chuyển vùng",
+          "description": "Không cần trả phí cao cho nhà mạng Singapore, chỉ cần trả giá hợp lý mỗi ngày."
+        },
+        {
+          "title": "Kết nối ổn định",
+          "description": "Kết nối internet tại các thành phố lớn và cả vùng sâu vùng xa trên khắp Trung Quốc."
+        }
+      ],
+      "extraBenifits": [
+        {
+          "title": "Kết nối nhiều thiết bị:",
+          "description": "Dùng chung 1 thiết bị pocket WiFi ở Trung Quốc với điện thoại, máy tính bảng và laptop cùng lúc."
+        },
+        {
+          "title": "Không cần thay SIM:",
+          "description": "Không cần lo lắng về vấn đề tương thích — chỉ cần bật thiết bị và kết nối ngay lập tức."
+        },
+        {
+          "title": "Truy cập không giới hạn:",
+          "description": "Hỗ trợ khách hàng 24/7 — chúng tôi luôn sẵn sàng hỗ trợ bạn."
+        }
+      ]
+    },
+    "howToGet": {
+      "title": "Làm thế nào để có Pocket WiFi cho Trung Quốc?",
+      "titlefollow": "Dưới đây là hướng dẫn từng bước để đặt Pocket WiFi cho chuyến đi đến Trung Quốc của bạn:",
+      "steps": [
+        {
+          "title": "Tải ứng dụng Yoowifi hoặc truy cập yoowifi.com."
+        },
+        {
+          "title": "Chọn gói cước và loại dịch vụ: thuê hoặc nạp thêm."
+        },
+        {
+          "title": "Chọn dung lượng dữ liệu (ví dụ: 3GB hoặc 10GB/ngày)."
+        },
+        {
+          "title": "Chọn điểm đến của bạn (Trung Quốc)."
+        },
+        {
+          "title": "Chọn ngày đi và ngày về của bạn."
+        },
+        {
+          "title": "Nhập số lượng thiết bị, nhấn Tiếp theo để xem tóm tắt gói và tổng chi phí."
+        },
+        {
+          "title": "Chọn phương thức giao hàng hoặc nhận tại chỗ tùy thích."
+        },
+        {
+          "title": "Tiến hành thanh toán để hoàn tất đặt hàng."
+        }
+      ]
+    },
+    "deliveryOptions": {
+      "title": "Tùy chọn giao hàng",
+      "titlefollow": "Dễ dàng nhận thiết bị Pocket WiFi hoặc tự lấy với các tùy chọn linh hoạt và thân thiện với khách du lịch",
+      "plans": [
+        {
+          "title": "Tự lấy",
+          "description": "Bạn thích tự lấy thiết bị? Chọn từ nhiều điểm lấy thuận tiện trên khắp Singapore. Bạn có thể lấy thiết bị tối đa 5 ngày trước chuyến đi, rất phù hợp với những người thích lên kế hoạch trước."
+        },
+        {
+          "title": "Chính sách sử dụng công bằng (FUP)",
+          "description": "Giao hàng nội địa trong vòng 5 ngày làm việc trước khi bạn khởi hành với chi phí 1.99 đô Singapore. Bao gồm túi trả lại để bạn gửi trả dễ dàng. Đơn đặt hàng trước thường được giao trong vòng 3 ngày trước chuyến đi."
+        },
+        {
+          "title": "Giao hàng nhanh",
+          "description": "Cần nhận nhanh hơn? Chọn dịch vụ giao hàng nhanh với phí 10 đô Singapore để nhận thiết bị trong 2 ngày làm việc, miễn là bạn đặt hàng trước 2 giờ chiều. Bao gồm túi trả lại."
+        },
+        {
+          "title": "Giao hàng siêu nhanh",
+          "description": "Dịch vụ giao hàng trong ngày, chọn giao hàng siêu nhanh với phí 20 đô Singapore. Đặt hàng trước 2 giờ chiều và nhận thiết bị trong ngày làm việc đó, kèm theo túi trả lại."
+        }
+      ]
+    },
+    "conparision": {
+      "title": "So sánh Pocket WiFi và SIM/eSIM tại Trung Quốc",
+      "titlefollow": "Việc chọn giữa Pocket WiFi và SIM hoặc eSIM cho Trung Quốc phụ thuộc vào nhu cầu du lịch của bạn. Dưới đây là bảng so sánh nhanh giúp bạn quyết định lựa chọn nào phù hợp để duy trì kết nối tại Trung Quốc.",
+      "comparisionTable": {
+        "th": {
+          "1": "Tính năng",
+          "2": "Pocket WiFi",
+          "3": "SIM/eSIM"
+        },
+        "tr": [
+          {
+            "1": "Phù hợp cho",
+            "2": "Khách du lịch, nhân viên làm việc từ xa, gia đình và người yêu thích mạng xã hội",
+            "3": "Dữ liệu cá nhân hóa cho cá nhân, phù hợp với lưu trú ngắn hạn hoặc dài hạn"
+          },
+          {
+            "1": "Phủ sóng quốc gia",
+            "2": "Hơn 90 quốc gia",
+            "3": "Hơn 160 quốc gia trên toàn thế giới"
+          },
+          {
+            "1": "Tốc độ",
+            "2": "Lên đến 300Mbps",
+            "3": "Tốc độ lên đến 4G LTE"
+          },
+          {
+            "1": "Tùy chọn dữ liệu",
+            "2": "3GB/ngày đến 200GB/năm với khả năng nạp thêm",
+            "3": "500MB/ngày đến 30GB/tháng với các gói linh hoạt"
+          },
+          {
+            "1": "Cài đặt",
+            "2": "Dễ dàng cắm và dùng, không cần SIM",
+            "3": "Kích hoạt SIM/eSIM nhanh chóng qua mã QR hoặc hướng dẫn cài đặt"
+          },
+          {
+            "1": "Chia sẻ",
+            "2": "Chia sẻ kết nối với tối đa 10 thiết bị",
+            "3": "Giới hạn một thiết bị cho mỗi SIM/eSIM"
+          },
+          {
+            "1": "Gói cước",
+            "2": "Có gói hàng năm hoặc hàng ngày",
+            "3": "Gói linh hoạt từ 1 ngày đến 1 tháng"
+          },
+          {
+            "1": "Thời lượng pin",
+            "2": "Lên đến 12 giờ sử dụng liên tục",
+            "3": "Phụ thuộc vào thiết bị"
+          },
+          {
+            "1": "Quy trình kích hoạt",
+            "2": "Bật thiết bị, tìm tên WiFi và kết nối bằng mật khẩu",
+            "3": "Kích hoạt qua ứng dụng hoặc lắp SIM, bật dữ liệu roaming"
+          },
+          {
+            "1": "Chi phí",
+            "2": "Bắt đầu từ 2.50 đô Singapore mỗi ngày",
+            "3": "Giá thay đổi theo dung lượng dữ liệu và thời gian sử dụng"
+          },
+          {
+            "1": "Tính linh hoạt",
+            "2": "Thuê ngắn hạn hoặc mua dài hạn",
+            "3": "Mua SIM/eSIM để linh hoạt, nạp tiền bất cứ lúc nào"
+          }
+        ]
+      }
+    },
+    "ImportantConsiderations": {
+      "title": "Internet tại Trung Quốc – Những lưu ý quan trọng",
+      "titlefollow": "Khi đi du lịch đến Trung Quốc, hiểu rõ về môi trường internet địa phương là điều cần thiết để duy trì kết nối và truy cập thông tin bạn cần.",
+      "considerations": [
+        {
+          "title": "Hạn chế Mạng riêng ảo (VPN)",
+          "description": "Cần lưu ý rằng thiết bị Pocket WiFi không cung cấp chức năng VPN. Để truy cập nội dung bị chặn, bạn phải cài đặt VPN trên thiết bị trước khi đến Trung Quốc."
+        },
+        {
+          "title": "Chính sách sử dụng công bằng (FUP)",
+          "description": "Giao hàng nội địa trong vòng 5 ngày làm việc trước khi bạn khởi hành với phí 1.99 đô Singapore. Bao gồm túi trả lại giúp bạn dễ dàng gửi trả. Đơn đặt hàng trước thường được giao trong vòng 3 ngày trước chuyến đi."
+        },
+        {
+          "title": "Pocket WiFi + VPN",
+          "description": "Kết hợp thiết bị Pocket WiFi của chúng tôi với ứng dụng VPN của bạn là một giải pháp thực tế. Pocket WiFi đảm bảo truy cập internet ổn định trên toàn Trung Quốc, trong khi VPN cho phép bạn truy cập các trang web và dịch vụ bị hạn chế."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Thiết bị WiFi di động có cần SIM không?",
+        "answer": "Trong khi các thiết bị WiFi di động truyền thống cần SIM, Pocket WiFi của Yoowifi sử dụng công nghệ SIM đám mây, tự động kết nối mạng tốt nhất mà không cần SIM vật lý hoặc thay SIM khi đi Trung Quốc."
+      },
+      {
+        "question": "Tôi có thể thuê Pocket WiFi tại Trung Quốc không?",
+        "answer": "Có, bạn có thể thuê Pocket WiFi tại Trung Quốc qua các nhà cung cấp như Yoowifi, với lựa chọn lấy tại sân bay hoặc giao tận khách sạn. Điều này giúp bạn giữ kết nối mà không cần SIM địa phương."
+      },
+      {
+        "question": "Tôi có thể cài đặt VPN trên thiết bị Pocket WiFi không?",
+        "answer": "Không, Pocket WiFi của Yoowifi không hỗ trợ cài đặt VPN trực tiếp trên thiết bị. Tuy nhiên, bạn có thể sử dụng VPN trên điện thoại, laptop hoặc máy tính bảng kết nối với thiết bị để truy cập các trang web bị chặn khi ở Trung Quốc."
+      },
+      {
+        "question": "Nếu dùng eSIM thì tôi có cần VPN không?",
+        "answer": "Có, nếu bạn muốn truy cập các trang web và dịch vụ bị hạn chế ở Trung Quốc (như Google, Facebook hoặc WhatsApp), bạn vẫn cần VPN ngay cả khi dùng eSIM. eSIM chỉ cung cấp kết nối dữ liệu nhưng không vượt được Vạn Lý Tường Lửa."
+      },
+      {
+        "question": "Nếu tôi làm mất thiết bị Pocket WiFi thì sao?",
+        "answer": "Nếu làm mất thiết bị Pocket WiFi của Yoowifi, bạn nên báo ngay cho nhà cung cấp thuê thiết bị. Có thể sẽ có phí mất thiết bị, nhưng một số công ty có bảo hiểm hoặc kế hoạch bảo vệ để giảm chi phí."
+      },
+      {
+        "question": "Tốc độ kết nối ở Trung Quốc như thế nào?",
+        "answer": "Tốc độ kết nối tại Trung Quốc thay đổi theo vị trí và mạng. Ở các thành phố lớn như Bắc Kinh và Thượng Hải, tốc độ 4G/LTE thường nhanh, trong khi vùng nông thôn có thể chậm hơn. Pocket WiFi của Yoowifi tự động chọn mạng tốt nhất để tối ưu hiệu suất."
+      }
+    ]
   }
 }

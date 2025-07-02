@@ -84,6 +84,50 @@ const initialState = {
       ],
     },
   ],
+  chinaDataPlan: [
+    {
+      plan: "Malaysia/ Thailand 1 day",
+      data: [
+        { limit: "500MB/day", price: "S$ 1.20" },
+        { limit: "1GB/day", price: "S$ 1.80" },
+      ],
+    },
+    {
+      plan: "China 1 Day",
+      data: [
+        { limit: "500MB/day", price: "S$ 4.00" },
+        { limit: "1GB/day", price: "S$ 5.90" },
+      ],
+    },
+    {
+      plan: "South Korea 3 Days",
+      data: [
+        { limit: "500MB/day", price: "S$ 5.60" },
+        { limit: "1GB/day", price: "S$ 8.40" },
+      ],
+    },
+    {
+      plan: "Japan 3 Days",
+      data: [
+        { limit: "500MB/day", price: "S$ 5.80" },
+        { limit: "1GB/day", price: "S$ 8.70" },
+      ],
+    },
+    {
+      plan: "Europe 5 Days",
+      data: [
+        { limit: "500MB/day", price: "S$ 8.30" },
+        { limit: "1GB/day", price: "S$ 12.50" },
+      ],
+    },
+    {
+      plan: "Australia 5 Days",
+      data: [
+        { limit: "500MB/day", price: "S$ 11.00" },
+        { limit: "1GB/day", price: "S$ 12.50" },
+      ],
+    },
+  ],
   regionalCountries:
     "*Europe: Albania, Armenia, Andorra, Austria, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Georgia, Gibraltar, Greece, Guernsey, Hungary, Iceland, Ireland, Isle of Man, Italy, Jersey, Latvia, Liechtenstein, Lithuania, Luxembourg, Macedonia, Malta, Monaco, Montenegro, Netherlands, Norway, Poland, Portugal, Romania, San Marino, Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, Ukraine, United Kingdom, Vatican",
 };

@@ -78,7 +78,12 @@ import sim1 from "@/assets/images/sim/sim-1.webp";
 import tour from "@/assets/images/tour.webp";
 import whatsapp from "@/assets/images/whatsapp.webp";
 import whoWeAre1 from "@/assets/images/who-we-are-1.webp";
-import blackPocketWifiEn from "@/assets/images/pocket-wifi/black-pocket-wifi-en.webp";
+import pocketWifiChina from "@/assets/images/pocket-wifi-china.webp";
+import pocketWifiJapan from "@/assets/images/pocket-wifi-japan.webp";
+import eSimChina from "@/assets/images/esim-china.webp";
+import eSimThiland from "@/assets/images/esim-thailand.webp";
+import powerCable from "@/assets/images/power-cable.webp";
+import roamingFees from "@/assets/images/roaming-fees.webp";
 
 export {
   BelgiumFlag,
@@ -161,5 +166,10 @@ export {
   tour,
   whatsapp,
   whoWeAre1,
-  blackPocketWifiEn,
+  pocketWifiChina,
+  pocketWifiJapan,
+  eSimChina,
+  eSimThiland,
+  powerCable,
+  roamingFees,
 };

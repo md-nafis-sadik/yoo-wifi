@@ -1976,5 +1976,276 @@
         "linkText": "Reenviar Código"
       }
     }
+  },
+  "pocketWifiChina": {
+    "heading": "Pocket wifi China",
+    "hero": {
+      "para1": "Mantenerse conectado en China es vital para turistas y viajeros de negocios. Ya sea para moverse por ciudades bulliciosas o coordinar reuniones, el acceso a Internet fiable es esencial. Sin embargo, el roaming tradicional o las tarjetas SIM locales suelen tener limitaciones. Olvídate del susto de facturas de roaming exorbitantes, la frustrante búsqueda de SIM locales al llegar y los muros digitales de las restricciones de Internet en China.",
+      "para2": "Un dispositivo pocket WiFi ofrece una solución perfecta. Esta poderosa unidad portátil y compacta proporciona datos ilimitados y ultrarrápidos, compatible con todos tus dispositivos. Disfruta de Internet asequible, fiable y sin restricciones, todo sin complicados ajustes ni problemas con tarjetas SIM. Simplemente alquílalo antes de tu viaje a China y estarás listo para mantenerte conectado durante todo tu recorrido."
+    },
+    "wifiPlan": {
+      "title": "Planes de Pocket WiFi de Yoowifi",
+      "titlefollow": "Yoowifi ofrece planes de pocket WiFi convenientes para viajeros que van a China. Nuestros planes están diseñados para proporcionar conectividad sin complicaciones con SIM locales o configuraciones complejas.",
+      "plans": [
+        {
+          "title": "Tarifa diaria",
+          "description": "Nuestro Plan Diario Pocket WiFi Monster, desde solo S$2.50/día, ofrece una opción entre 3 GB o 10 GB de datos diarios, con velocidades de hasta 300 Mbps."
+        },
+        {
+          "title": "Política de uso justo (FUP)",
+          "description": "Cada plan incluye una cantidad específica de datos diarios y, una vez alcanzado este límite, la velocidad de conexión se reducirá."
+        },
+        {
+          "title": "Proceso de entrega y devolución",
+          "description": "Yoowifi ofrece opciones flexibles de entrega y devolución para que tu experiencia sea fluida. Puedes recogerlo tú mismo en múltiples ubicaciones o recibir tu dispositivo gratis dentro de los 5 días hábiles antes de tu viaje. La devolución es fácil: simplemente déjalo en cualquiera de las más de 20 ubicaciones en toda la isla."
+        },
+        {
+          "title": "Política de cancelación",
+          "description": "Si necesitas cancelar tu reserva, solo contacta a nuestro equipo de atención al cliente. Las cancelaciones están sujetas a nuestros términos y condiciones."
+        }
+      ]
+    },
+    "wifiFeatures": {
+      "title": "Características del Pocket WiFi de Yoowifi para China",
+      "titlefollow": "Aquí tienes un desglose de las características clave que hacen de nuestro dispositivo pocket WiFi una opción fiable y conveniente para mantenerte conectado durante tu viaje a China",
+      "features": [
+        {
+          "title": "Planes asequibles",
+          "description": "Desde solo S$2.50/día, con opciones de datos diarios de 3 GB o 10 GB."
+        },
+        {
+          "title": "Conectividad de alta velocidad",
+          "description": "Disfruta velocidades 4G LTE de hasta 300 Mbps"
+        },
+        {
+          "title": "Datos ilimitados",
+          "description": "Tras alcanzar el límite diario, continúa con datos ilimitados a 3 Mbps."
+        },
+        {
+          "title": "Opciones de datos",
+          "description": "Elige entre planes diarios estándar o ampliados, ideales para usuarios intensivos de datos (hasta 200 GB disponibles)."
+        },
+        {
+          "title": "Compartir entre varios dispositivos",
+          "description": "Conecta hasta 10 dispositivos simultáneamente, perfecto para familias o equipos."
+        },
+        {
+          "title": "Larga duración de batería",
+          "description": "Hasta 12 horas de uso continuo con una carga completa (con un dispositivo conectado)"
+        },
+        {
+          "title": "Diseño listo para viajar",
+          "description": "Compacto, portátil y ligero."
+        },
+        {
+          "title": "Carga conveniente",
+          "description": "Recarga por USB o toma de corriente, con todos los cables incluidos"
+        },
+        {
+          "title": "Gestión fácil del plan",
+          "description": "Extiende días o mejora planes cuando lo necesites."
+        },
+        {
+          "title": "Alquiler o compra",
+          "description": "Disfruta de opciones de alquiler flexibles para uso a corto plazo o compra tu dispositivo pocket WiFi para China para una conectividad fiable a largo plazo."
+        },
+        {
+          "title": "Cobertura nacional",
+          "description": "Funciona en toda China continental, incluidas ciudades principales como Pekín, Shanghái y Shenzhen."
+        }
+      ]
+    },
+    "whyUse": {
+      "title": "Por qué usar Pocket WiFi",
+      "titlefollow": "Aquí tienes por qué el pocket WiFi es la opción inteligente para mantenerte conectado durante tu viaje a China:",
+      "benifits": [
+        {
+          "title": "Evitar tarifas de roaming",
+          "description": "Evita los altos cargos de las operadoras de Singapur y disfruta de tarifas diarias asequibles."
+        },
+        {
+          "title": "Conectividad fiable",
+          "description": "Permanece en línea en ciudades grandes y zonas remotas de China"
+        }
+      ],
+      "extraBenifits": [
+        {
+          "title": "Conectar múltiples dispositivos:",
+          "description": "Comparte un pocket WiFi en China con teléfonos, tabletas y portátiles simultáneamente."
+        },
+        {
+          "title": "Sin necesidad de cambiar SIM:",
+          "description": "Olvida los problemas de compatibilidad, enciéndelo y conéctate al instante."
+        },
+        {
+          "title": "Acceso ilimitado:",
+          "description": "Atención al cliente 24/7 —siempre estamos aquí para ti."
+        }
+      ]
+    },
+    "howToGet": {
+      "title": "¿Cómo obtener Pocket WiFi para China?",
+      "titlefollow": "Aquí tienes una guía paso a paso para reservar tu pocket WiFi para tu viaje a China",
+      "steps": [
+        {
+          "title": "Descarga la app de Yoowifi o visita yoowifi.com."
+        },
+        {
+          "title": "Elige tu plan y selecciona el servicio: alquiler o recarga."
+        },
+        {
+          "title": "Elige el tamaño de datos (p. ej., 3 GB o 10 GB diarios)."
+        },
+        {
+          "title": "Selecciona tu destino (China)."
+        },
+        {
+          "title": "Elige tus fechas de viaje (inicio y fin)."
+        },
+        {
+          "title": "Añade el número de dispositivos y luego pulsa Siguiente para ver tu resumen y coste total."
+        },
+        {
+          "title": "Selecciona tu opción favorita de entrega o recogida."
+        },
+        {
+          "title": "Procede al pago y completa tu compra."
+        }
+      ]
+    },
+    "deliveryOptions": {
+      "title": "Opciones de entrega",
+      "titlefollow": "Recibe o recoge tu pocket WiFi con facilidad, con nuestras opciones flexibles y adaptadas a viajeros",
+      "plans": [
+        {
+          "title": "Recogida",
+          "description": "¿Prefieres recogerlo tú mismo? Elige entre múltiples ubicaciones convenientes en Singapur. Puedes recogerlo hasta 5 días antes de tu viaje, ideal para quienes planifican con anticipación."
+        },
+        {
+          "title": "Política de uso justo (FUP)",
+          "description": "Entrega nacional dentro de los 5 días hábiles antes de tu partida por S$1.99. Se incluye una bolsa para devolución sin complicaciones. Para pedidos anticipados, la entrega se programa típicamente 3 días antes del viaje."
+        },
+        {
+          "title": "Entrega exprés",
+          "description": "¿Lo necesitas más rápido? Selecciona nuestra entrega exprés por S$10 para recibir tu dispositivo dentro de 2 días hábiles, siempre que lo pidas antes de las 14:00. Se incluye bolsa de devolución."
+        },
+        {
+          "title": "Entrega súper exprés",
+          "description": "Para servicio el mismo día, elige entrega súper exprés por S$20. Haz tu pedido antes de las 14:00 y recibe tu dispositivo ese mismo día hábil, con bolsa de devolución incluida."
+        }
+      ]
+    },
+    "conparision": {
+      "title": "Pocket WiFi vs SIM/eSIM en China",
+      "titlefollow": "Elegir entre pocket WiFi y SIM o eSIM para China depende de tus necesidades de viaje. Aquí tienes una comparación rápida para ayudarte a decidir cuál opción es mejor para mantenerte conectado en China.",
+      "comparisionTable": {
+        "th": {
+          "1": "Característica",
+          "2": "Pocket WiFi",
+          "3": "SIM/eSIM"
+        },
+        "tr": [
+          {
+            "1": "Ideal para",
+            "2": "Viajeros, trabajadores remotos, familias y entusiastas de redes sociales",
+            "3": "Datos personalizados para individuos, ideal para estancias cortas o largas"
+          },
+          {
+            "1": "Cobertura de país",
+            "2": "Más de 90 países",
+            "3": "Más de 160 países en todo el mundo"
+          },
+          {
+            "1": "Velocidad",
+            "2": "Hasta 300 Mbps",
+            "3": "Hasta velocidad 4G LTE"
+          },
+          {
+            "1": "Opciones de datos",
+            "2": "3 GB/día a 200 GB/año con flexibilidad para recargar",
+            "3": "500 MB/día a 30 GB/mes con planes flexibles"
+          },
+          {
+            "1": "Configuración",
+            "2": "Fácil plug‑and‑play, sin SIM",
+            "3": "Activación rápida de SIM/eSIM con código QR o instrucciones"
+          },
+          {
+            "1": "Compartir",
+            "2": "Compartir conexión con hasta 10 dispositivos",
+            "3": "Limitado a un dispositivo por SIM/eSIM"
+          },
+          {
+            "1": "Planes",
+            "2": "Planes anuales o diarios disponibles",
+            "3": "Planes flexibles de 1 día a un mes"
+          },
+          {
+            "1": "Duración de batería",
+            "2": "Hasta 12 horas de uso continuo",
+            "3": "Depende del dispositivo"
+          },
+          {
+            "1": "Proceso de activación",
+            "2": "Enciende el dispositivo, busca el nombre WiFi y conéctate con la contraseña",
+            "3": "Activación a través de app o inserción de SIM y habilitación de datos en roaming"
+          },
+          {
+            "1": "Costos",
+            "2": "Desde S$2.50/día",
+            "3": "Los precios varían según tamaño de datos y duración"
+          },
+          {
+            "1": "Flexibilidad",
+            "2": "Alquila a corto plazo o compra para uso prolongado",
+            "3": "Compra una SIM/eSIM para flexibilidad, recarga en cualquier momento"
+          }
+        ]
+      }
+    },
+    "ImportantConsiderations": {
+      "title": "Internet en China – Consideraciones importantes",
+      "titlefollow": "Al viajar a China, entender el panorama local de internet es crucial para mantenerte conectado y acceder a la información que necesitas.",
+      "considerations": [
+        {
+          "title": "Limitaciones de VPN",
+          "description": "Es importante tener en cuenta que el dispositivo pocket WiFi no ofrece capacidades de VPN. Para acceder a contenido bloqueado, debes instalar una VPN en tu dispositivo antes de llegar a China."
+        },
+        {
+          "title": "Política de uso justo (FUP)",
+          "description": "Disfruta de entrega nacional dentro de los 5 días hábiles antes de tu salida por S$1.99. Se incluye una bolsa para devolución sin complicaciones. Para pedidos anticipados, la entrega se programa típicamente 3 días antes del viaje."
+        },
+        {
+          "title": "Pocket WiFi + VPN",
+          "description": "Combinar nuestro pocket WiFi con tu aplicación VPN es una solución práctica. El pocket WiFi garantiza acceso fiable a internet en toda China, mientras que las VPN permiten acceder a sitios y servicios restringidos."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "question": "¿Necesita el WIFI portátil una tarjeta SIM?",
+        "answer": "Mientras que los dispositivos tradicionales portátiles de WiFi requieren una tarjeta SIM, el pocket WiFi de Yoowifi cuenta con tecnología cloud SIM, lo que le permite conectarse automáticamente a la mejor red disponible, sin necesidad de tarjeta SIM física ni cambios durante el viaje a China."
+      },
+      {
+        "question": "¿Puedo alquilar un pocket WiFi en China?",
+        "answer": "Sí, puedes alquilar un pocket WiFi en China a través de proveedores como Yoowifi, que ofrece opciones de recogida convenientes en aeropuertos o entrega en tu hotel. Esto te permite permanecer conectado sin necesitar una SIM local."
+      },
+      {
+        "question": "¿Puedo instalar una VPN en el pocket WiFi?",
+        "answer": "No, el pocket WiFi de Yoowifi no admite la instalación de VPN directamente en el dispositivo. Sin embargo, puedes usar una VPN en tu smartphone, portátil o tableta conectados para acceder a sitios restringidos mientras estés en China."
+      },
+      {
+        "question": "¿Necesito una VPN si uso una eSIM en China?",
+        "answer": "Sí, si deseas acceder a sitios y servicios restringidos en China (como Google, Facebook o WhatsApp), aún necesitarás una VPN incluso usando una eSIM. La eSIM solo proporciona conectividad de datos pero no elude la Gran Muralla‑Firewall."
+      },
+      {
+        "question": "¿Qué pasa si pierdo el dispositivo pocket WiFi?",
+        "answer": "Si pierdes el dispositivo pocket WiFi de Yoowifi, debes informarlo inmediatamente al proveedor de alquiler. Puede haber una tarifa por dispositivo perdido, pero algunas empresas ofrecen seguros o planes de protección para minimizar los costes."
+      },
+      {
+        "question": "¿Cómo es la velocidad de conexión en China?",
+        "answer": "Las velocidades de conexión en China varían según la ubicación y la red. En ciudades principales como Pekín y Shanghái, las velocidades 4G/LTE suelen ser rápidas, mientras que en zonas rurales pueden ser más lentas. El pocket WiFi de Yoowifi selecciona automáticamente la mejor red disponible para un rendimiento óptimo."
+      }
+    ]
   }
 }

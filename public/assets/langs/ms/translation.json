@@ -2305,5 +2305,276 @@
         "linkText": "Hantar Semula Kod"
       }
     }
+  },
+  "pocketWifiChina": {
+    "heading": "Pocket WiFi China",
+    "hero": {
+      "para1": "Kekal berhubung di China adalah sangat penting bagi pelancong dan pengembara perniagaan. Sama ada untuk menavigasi bandar yang sibuk atau mengatur mesyuarat, akses internet yang boleh dipercayai adalah keperluan. Walau bagaimanapun, perayauan tradisional atau kad SIM tempatan selalunya mempunyai batasan. Lupakan bil perayauan yang mahal, pencarian SIM tempatan yang menyusahkan semasa ketibaan, dan sekatan internet di China.",
+      "para2": "Peranti pocket WiFi menawarkan penyelesaian yang lancar. Peranti mudah alih yang ringkas ini menyediakan internet berkelajuan tinggi tanpa had, menyokong semua peranti anda. Nikmati akses internet yang boleh dipercayai dan mampu milik tanpa tetapan rumit atau masalah kad SIM. Hanya sewa satu sebelum perjalanan anda ke China, dan anda bersedia untuk kekal berhubung sepanjang perjalanan."
+    },
+    "wifiPlan": {
+      "title": "Pelan Pocket WiFi Yoowifi",
+      "titlefollow": "Yoowifi menawarkan pelan pocket WiFi yang mudah untuk pelancong ke China. Pelan kami direka untuk menyediakan sambungan tanpa gangguan tanpa perlu tukar kad SIM tempatan atau tetapan yang rumit.",
+      "plans": [
+        {
+          "title": "Kadar harian",
+          "description": "Pelan Harian Pocket WiFi Monster kami bermula dari hanya S$2.50/hari, menawarkan pilihan 3GB atau 10GB data harian dengan kelajuan sehingga 300Mbps."
+        },
+        {
+          "title": "Polisi penggunaan adil (FUP)",
+          "description": "Setiap pelan termasuk had data harian yang ditetapkan, dan selepas had tersebut dicapai, kelajuan sambungan akan dikurangkan."
+        },
+        {
+          "title": "Proses penghantaran & pemulangan",
+          "description": "Yoowifi menawarkan pilihan penghantaran dan pemulangan yang fleksibel untuk memudahkan pengalaman anda. Anda boleh pilih pengambilan sendiri dari pelbagai lokasi atau penghantaran percuma dalam masa 5 hari bekerja sebelum perjalanan anda. Pemulangan juga mudah — hanya serahkan di mana-mana lebih 20 lokasi seluruh pulau."
+        },
+        {
+          "title": "Polisi pembatalan",
+          "description": "Jika anda perlu membatalkan tempahan, hubungi pasukan khidmat pelanggan kami. Pembatalan tertakluk kepada terma dan syarat kami."
+        }
+      ]
+    },
+    "wifiFeatures": {
+      "title": "Ciri-ciri Pocket WiFi Yoowifi untuk China",
+      "titlefollow": "Berikut adalah senarai ciri utama yang menjadikan peranti pocket WiFi kami pilihan yang boleh dipercayai dan praktikal semasa anda melancong ke China:",
+      "features": [
+        {
+          "title": "Pelan mampu milik",
+          "description": "Bermula dari hanya S$2.50/hari, dengan pilihan 3GB atau 10GB setiap hari."
+        },
+        {
+          "title": "Sambungan berkelajuan tinggi",
+          "description": "Nikmati kelajuan 4G LTE sehingga 300Mbps"
+        },
+        {
+          "title": "Data tanpa had",
+          "description": "Selepas mencapai had data harian, teruskan melayari dengan kelajuan 3 Mbps tanpa had."
+        },
+        {
+          "title": "Pilihan data",
+          "description": "Pilih pelan harian biasa atau bersaiz besar, sesuai untuk pengguna data berat (sehingga 200GB tersedia)."
+        },
+        {
+          "title": "Perkongsian berbilang peranti",
+          "description": "Sambungkan sehingga 10 peranti serentak — sesuai untuk keluarga atau pasukan."
+        },
+        {
+          "title": "Jangka hayat bateri lama",
+          "description": "Sehingga 12 jam penggunaan berterusan dengan sekali cas (dengan satu peranti disambungkan)."
+        },
+        {
+          "title": "Reka bentuk mesra perjalanan",
+          "description": "Kompak, mudah alih, dan ringan."
+        },
+        {
+          "title": "Pengecasan mudah",
+          "description": "Caj semula melalui USB atau soket dinding, semua kabel disediakan."
+        },
+        {
+          "title": "Pengurusan pelan yang mudah",
+          "description": "Lanjutkan hari atau naik taraf pelan pada bila-bila masa jika perlu."
+        },
+        {
+          "title": "Sewa atau miliki",
+          "description": "Nikmati pilihan sewa fleksibel untuk kegunaan jangka pendek atau beli peranti anda untuk sambungan jangka panjang di China."
+        },
+        {
+          "title": "Liputan seluruh negara",
+          "description": "Berfungsi di seluruh tanah besar China termasuk bandar utama seperti Beijing, Shanghai dan Shenzhen."
+        }
+      ]
+    },
+    "whyUse": {
+      "title": "Mengapa Guna Pocket WiFi",
+      "titlefollow": "Berikut sebab kenapa pocket WiFi adalah pilihan terbaik untuk kekal berhubung semasa anda ke China:",
+      "benifits": [
+        {
+          "title": "Elak caj perayauan",
+          "description": "Jimatkan caj tinggi dari syarikat telco Singapura dan nikmati kadar harian yang rendah."
+        },
+        {
+          "title": "Sambungan yang boleh dipercayai",
+          "description": "Kekal dalam talian di bandar besar dan kawasan luar bandar seluruh China"
+        }
+      ],
+      "extraBenifits": [
+        {
+          "title": "Sambungkan pelbagai peranti:",
+          "description": "Kongsi satu pocket WiFi di China dengan telefon, tablet dan komputer riba serentak."
+        },
+        {
+          "title": "Tiada pertukaran SIM diperlukan:",
+          "description": "Lupakan isu keserasian, hanya hidupkan dan sambung serta-merta."
+        },
+        {
+          "title": "Akses tanpa had:",
+          "description": "Sokongan pelanggan 24/7 — kami sentiasa sedia membantu anda."
+        }
+      ]
+    },
+    "howToGet": {
+      "title": "Bagaimana Dapatkan Pocket WiFi untuk China?",
+      "titlefollow": "Berikut adalah panduan langkah demi langkah untuk menempah pocket WiFi anda bagi perjalanan ke China:",
+      "steps": [
+        {
+          "title": "Muat turun aplikasi Yoowifi atau lawati yoowifi.com."
+        },
+        {
+          "title": "Pilih pelan dan perkhidmatan anda: sewaan atau tambah nilai."
+        },
+        {
+          "title": "Pilih saiz data anda (contoh: 3GB atau 10GB sehari)."
+        },
+        {
+          "title": "Pilih destinasi anda (China)."
+        },
+        {
+          "title": "Pilih tarikh perjalanan anda (mula dan akhir)."
+        },
+        {
+          "title": "Tambah bilangan peranti, kemudian tekan Seterusnya untuk lihat ringkasan pelan dan jumlah bayaran."
+        },
+        {
+          "title": "Pilih pilihan penghantaran atau pengambilan sendiri yang anda sukai."
+        },
+        {
+          "title": "Teruskan ke pembayaran dan lengkapkan transaksi anda."
+        }
+      ]
+    },
+    "deliveryOptions": {
+      "title": "Pilihan Penghantaran",
+      "titlefollow": "Dapatkan Pocket WiFi anda dihantar atau diambil dengan mudah melalui pilihan fleksibel dan mesra pelancong kami",
+      "plans": [
+        {
+          "title": "Pengambilan Sendiri",
+          "description": "Lebih suka ambil sendiri? Pilih dari beberapa lokasi pengambilan yang mudah di seluruh Singapura. Anda boleh mengambil peranti anda sehingga 5 hari sebelum perjalanan, sesuai untuk mereka yang suka merancang awal."
+        },
+        {
+          "title": "Dasar Penggunaan Adil (FUP)",
+          "description": "Nikmati penghantaran domestik dalam masa 5 hari bekerja sebelum berlepas dengan bayaran S$1.99. Beg pos pulang disediakan untuk pemulangan tanpa masalah. Untuk tempahan awal, penghantaran biasanya dijadualkan dalam 3 hari sebelum perjalanan anda."
+        },
+        {
+          "title": "Penghantaran Ekspres",
+          "description": "Perlu lebih cepat? Pilih perkhidmatan penghantaran ekspres kami dengan bayaran S$10 untuk menerima peranti anda dalam 2 hari bekerja, asalkan anda membuat tempahan sebelum jam 2 petang. Beg pos pulang juga disediakan."
+        },
+        {
+          "title": "Penghantaran Super Ekspres",
+          "description": "Untuk perkhidmatan hari yang sama, pilih penghantaran super ekspres dengan bayaran S$20. Buat pesanan sebelum jam 2 petang dan dapatkan peranti anda dihantar pada hari bekerja yang sama, lengkap dengan beg pos pulang."
+        }
+      ]
+    },
+    "conparision": {
+      "title": "Perbandingan Pocket WiFi dengan SIM/eSIM di China",
+      "titlefollow": "Memilih antara Pocket WiFi dan SIM atau eSIM untuk China bergantung pada keperluan perjalanan anda. Berikut adalah perbandingan ringkas untuk membantu anda memilih pilihan terbaik bagi kekal bersambung di China.",
+      "comparisionTable": {
+        "th": {
+          "1": "Ciri",
+          "2": "Pocket WiFi",
+          "3": "SIM/eSIM"
+        },
+        "tr": [
+          {
+            "1": "Sesuai Untuk",
+            "2": "Pelancong, pekerja jarak jauh, keluarga, dan peminat media sosial",
+            "3": "Data peribadi untuk individu, sesuai untuk penginapan jangka pendek atau panjang"
+          },
+          {
+            "1": "Liputan Negara",
+            "2": "90+ negara",
+            "3": "160+ negara di seluruh dunia"
+          },
+          {
+            "1": "Kelajuan",
+            "2": "Sehingga 300Mbps",
+            "3": "Sehingga kelajuan 4G LTE"
+          },
+          {
+            "1": "Pilihan Data",
+            "2": "3GB/hari hingga 200GB/tahun dengan fleksibiliti tambah nilai",
+            "3": "500MB/hari hingga 30GB/bulan dengan pelan fleksibel"
+          },
+          {
+            "1": "Persediaan",
+            "2": "Mudah plug-and-play, tiada SIM diperlukan",
+            "3": "Pengaktifan SIM/eSIM pantas dengan kod QR atau arahan pemasangan"
+          },
+          {
+            "1": "Perkongsian",
+            "2": "Berkongsi sambungan sehingga 10 peranti",
+            "3": "Terhad kepada satu peranti setiap SIM/eSIM"
+          },
+          {
+            "1": "Pelan",
+            "2": "Pelan tahunan atau harian tersedia",
+            "3": "Pelan fleksibel dari 1 hari hingga sebulan"
+          },
+          {
+            "1": "Jangka Hayat Bateri",
+            "2": "Sehingga 12 jam penggunaan berterusan",
+            "3": "Bergantung pada peranti"
+          },
+          {
+            "1": "Proses Pengaktifan",
+            "2": "Hidupkan peranti, cari nama WiFi, dan sambung menggunakan kata laluan",
+            "3": "Pengaktifan melalui aplikasi atau penyisipan SIM dan mengaktifkan data roaming"
+          },
+          {
+            "1": "Kos",
+            "2": "Bermula dari S$2.50/hari",
+            "3": "Harga bergantung pada saiz data dan tempoh"
+          },
+          {
+            "1": "Fleksibiliti",
+            "2": "Sewa untuk jangka pendek atau beli untuk jangka panjang",
+            "3": "Beli SIM/eSIM untuk fleksibiliti, tambah nilai bila-bila masa"
+          }
+        ]
+      }
+    },
+    "ImportantConsiderations": {
+      "title": "Internet di China – Pertimbangan Penting",
+      "titlefollow": "Apabila melancong ke China, memahami landskap internet tempatan adalah penting untuk kekal bersambung dan mengakses maklumat yang anda perlukan.",
+      "considerations": [
+        {
+          "title": "Had Rangkaian Peribadi Maya (VPN)",
+          "description": "Penting untuk diingat bahawa peranti pocket WiFi itu sendiri tidak menyediakan keupayaan VPN. Untuk mengakses kandungan yang disekat, anda mesti memasang VPN pada peranti anda sebelum tiba di China."
+        },
+        {
+          "title": "Dasar Penggunaan Adil (FUP)",
+          "description": "Nikmati penghantaran domestik dalam masa 5 hari bekerja sebelum berlepas dengan bayaran S$1.99. Beg pos pulang disediakan untuk pemulangan tanpa masalah. Untuk tempahan awal, penghantaran biasanya dijadualkan dalam 3 hari sebelum perjalanan anda."
+        },
+        {
+          "title": "Pocket WiFi + VPN",
+          "description": "Menggabungkan peranti pocket WiFi kami dengan aplikasi VPN anda adalah penyelesaian praktikal. Pocket WiFi memastikan akses internet yang boleh dipercayai di seluruh China, manakala VPN membolehkan anda mengakses laman web dan perkhidmatan yang terhad."
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Adakah WiFi mudah alih memerlukan kad SIM?",
+        "answer": "Walaupun peranti WiFi mudah alih tradisional memerlukan kad SIM, pocket WiFi Yoowifi menggunakan teknologi cloud SIM, membolehkannya menyambung secara automatik ke rangkaian terbaik yang tersedia, tanpa perlu kad SIM fizikal atau penukaran untuk perjalanan ke China."
+      },
+      {
+        "question": "Bolehkah saya menyewa pocket WiFi di China?",
+        "answer": "Ya, anda boleh menyewa pocket WiFi di China melalui penyedia seperti Yoowifi, yang menawarkan pilihan pengambilan yang mudah di lapangan terbang atau penghantaran ke hotel anda. Ini membolehkan anda kekal bersambung tanpa memerlukan kad SIM tempatan."
+      },
+      {
+        "question": "Bolehkah saya memasang VPN pada pocket WiFi?",
+        "answer": "Tidak, pocket WiFi Yoowifi tidak menyokong pemasangan VPN secara langsung pada peranti. Walau bagaimanapun, anda masih boleh menggunakan VPN pada telefon pintar, komputer riba, atau tablet yang disambungkan untuk mengakses laman web terhad semasa berada di China."
+      },
+      {
+        "question": "Adakah saya memerlukan VPN jika menggunakan eSIM di China?",
+        "answer": "Ya, jika anda ingin mengakses laman web dan perkhidmatan yang terhad di China (seperti Google, Facebook, atau WhatsApp), anda masih memerlukan VPN walaupun menggunakan eSIM. eSIM hanya menyediakan sambungan data tetapi tidak memintas Great Firewall."
+      },
+      {
+        "question": "Apa yang perlu saya lakukan jika hilang peranti pocket WiFi?",
+        "answer": "Jika anda kehilangan peranti pocket WiFi Yoowifi, anda harus segera melaporkannya kepada penyedia sewaan. Mungkin ada caj kehilangan peranti, tetapi beberapa syarikat menawarkan insurans atau pelan perlindungan untuk mengurangkan kos."
+      },
+      {
+        "question": "Bagaimana kelajuan sambungan di China?",
+        "answer": "Kelajuan sambungan di China berbeza mengikut lokasi dan rangkaian. Di bandar utama seperti Beijing dan Shanghai, kelajuan 4G/LTE biasanya pantas, manakala di kawasan luar bandar mungkin lebih perlahan. Pocket WiFi Yoowifi secara automatik memilih rangkaian terbaik yang tersedia untuk prestasi optimum."
+      }
+    ]
   }
 }
