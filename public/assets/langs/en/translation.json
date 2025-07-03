@@ -2994,8 +2994,8 @@
       ]
     },
     "thingsToKnow": {
-      "title": "How to Get Pocket WiFi for Japan?",
-      "titlefollow": "Here’s a simple step-by-step guide to booking your pocket WiFi for your trip to Japan",
+      "title": "Things to Know Before You Buy an eSIM for China",
+      "titlefollow": "Before you purchase an eSIM for China, here are some key things to keep in mind",
       "steps": [
         {
           "title": "eSIM Compatibility Check",
@@ -3012,28 +3012,6 @@
         {
           "title": "Speed and Coverage Expectations",
           "description": "Research the speed and coverage expectations of different providers. Yoowifi strives to provide high-speed connectivity, but coverage can vary in different areas."
-        }
-      ]
-    },
-    "deliveryOptions": {
-      "title": "Delivery Options",
-      "titlefollow": "Yoowifi offers several flexible delivery choices so that you can receive your pocket WiFi device on your terms:",
-      "plans": [
-        {
-          "title": "Self-pickup",
-          "description": "You can pick up your pocket WiFi from any of our convenient self-collection points across Singapore. Devices are available for pickup up to 5 days before your departure to Japan, giving you time to prepare and test before your flight."
-        },
-        {
-          "title": "Fair usage policy (FUP)",
-          "description": "Standard delivery typically occurs 3 to 5 business days before your departure date for S$1.99. It includes a prepaid return mailer to make returning the device after your trip fast and straightforward."
-        },
-        {
-          "title": "Express Delivery",
-          "description": "Our express option ensures your pocket WiFi arrives within 2 business days when you order before 2 PM. The return envelope is included for stress-free returns."
-        },
-        {
-          "title": "Super Express Delivery",
-          "description": "Need it urgently? Choose super express delivery for S$20. Place your order before 2 PM, and your device will be delivered the same business day."
         }
       ]
     },
@@ -3088,54 +3066,53 @@
       ]
     },
     "whatsBetter": {
-      "title": "eSIM vs. Physical SIM – What’s Better?",
+      "title": "eSIM vs Physical SIM – What’s Better?",
       "titlefollow": "Yoowifi gives you options because we know one size doesn’t fit all. Whether you’re a digital nomad or casual traveller, we’ve got you covered:",
       "esim": {
         "title": "eSIM",
         "points": {
           "1": "Fast activation via QR code—instant connection",
-          "2": "No SIM swapping needed",
-          "3": "Convenient for international travel",
-          "4": "Not all networks/phones support eSIM"
+          "2": "No SIM card swapping—keep your home SIM active while in Thailand",
+          "3": "Keep your primary number for important calls",
+          "4": "Activate before takeoff—arrive connected",
+          "5": "Only compatible with newer smartphones"
         }
       },
       "pocketWifi": {
         "title": "Physical SIM Card",
         "points": {
-          "1": "Works with most phones",
-          "2": "Easy to swap SIMs when changing devices",
-          "3": "Ideal for users who are not tech-savvy",
-          "4": "Requires physical delivery or pickup"
+          "1": "Works with literally ALL phone models",
+          "2": "Perfect for travelers who prefer simplicity",
+          "3": "Zero compatibility questions or concerns",
+          "4": "Widely available throughout Thailand",
+          "5": "Requires physical delivery or pickup"
         }
       }
     },
     "simFeatures": {
-      "title": "Why Choose Yoowifi for Connectivity in China",
-      "titlefollow": "Yoowifi is the go-to solution for Singaporean tourists needing reliable connectivity in China, and here are some of the reasons why",
+      "title": "Things to Know Before You Buy an eSIM for China",
+      "titlefollow": "Before you purchase an eSIM for China, here are some key things to keep in mind",
       "features": [
         {
-          "title": "Affordable Rates",
-          "description": "Get connected with our eSIM options, starting from just S$0.75 per day."
-        },
-        {
           "title": "High-Speed Connectivity",
-          "description": "No caps on usage, just high-speed data followed by continued access at reduced speed."
+          "description": "Lightning-fast 4G connectivity with coverage that follows you everywhere"
         },
         {
-          "title": "Flexible Options",
-          "description": "Whether you need a pocket WiFi, a traditional SIM card, or an eSIM for China, we’ve got all the options you need to get you connected."
+          "title": "Affordable Rates",
+          "description": "Unbelievably affordable rates start from just S$1/day."
         },
         {
           "title": "Multiple Device Support",
-          "description": "If you opt for our pocket WiFi for China , you can get support for up to 10 devices simultaneously."
+          "description": "Connect up to 10 devices simultaneously—share with friends and family."
         },
+        {
+          "title": "Flexible Options",
+          "description": "Flexible options for eSIM, SIM card, and pocket WiFi for your Thailand travel—your journey, your choice."
+        },
+
         {
           "title": "24/7 Support",
-          "description": "We offer round-the-clock customer support to assist you with your eSIM or any other inquiries."
-        },
-        {
-          "title": "Wide coverage",
-          "description": "Reliable signal in Tokyo, Kyoto, Osaka, Hokkaido, and even rural towns."
+          "description": "24/7 customer support—we’re always here for you."
         }
       ]
     },
@@ -3145,15 +3122,15 @@
       "steps": [
         {
           "title": "Standard Delivery",
-          "description": "Receive your order within three to four business days."
+          "description": "3 to 4 business days via J&T Express—perfect for planners"
         },
         {
           "title": "Express Delivery",
-          "description": "Need it fast? Opt for next business day delivery (cut-off time: 9 PM)."
+          "description": "Next business day delivery (order by 9 PM)—for those last-minute travel plans"
         },
         {
           "title": "Self-Collection",
-          "description": "For added flexibility, you can pick up your order from over 20 convenient location."
+          "description": "Pick up your device at any of our 30+ convenient locations across Singapore"
         }
       ]
     },
@@ -3193,71 +3170,49 @@
       ]
     },
     "thingsToKnow": {
-      "title": "How to Get Pocket WiFi for Japan?",
-      "titlefollow": "Here’s a simple step-by-step guide to booking your pocket WiFi for your trip to Japan",
+      "title": "Things to Know Before You Buy",
+      "titlefollow": "At Yoowifi, we believe in transparency and ensuring you have all the facts for a perfectly connected experience in Thailand.",
       "steps": [
         {
           "title": "eSIM Compatibility Check",
-          "description": "Ensure your device is compatible with eSIM technology because not all devices support it."
+          "description": "The latest eSIM-compatible phones include Apple’s iPhone 14–17, Samsung’s Galaxy S, A, Z, and XCover, Google’s Pixel 8–9, Sony’s Xperia 1–10, Xiaomi’s 15 series, Motorola’s Razr and Edge, OnePlus 13T and Open, Honor Magic 6 Pro and 90, and others like Vivo X100 Pro, Fairphone 5 and many more."
         },
         {
           "title": "Passport Requirements",
-          "description": "Be aware of any passport requirements for in-country SIM registration. Some providers may require passport details to activate your eSIM."
+          "description": "Purchasing local SIM cards for Thailand requires a passport ID"
         },
         {
           "title": "Roaming Costs",
-          "description": "Understand the potential roaming charges you might incur if you choose not to use an eSIM for China. These charges can be significant, so an eSIM can save you money."
+          "description": "Be aware of the potential charges your regular mobile plan might impose in Thailand if you don't opt for an eSIM. These fees can accumulate quickly, making an eSIM a cost-effective alternative."
         },
         {
           "title": "Speed and Coverage Expectations",
-          "description": "Research the speed and coverage expectations of different providers. Yoowifi strives to provide high-speed connectivity, but coverage can vary in different areas."
-        }
-      ]
-    },
-    "deliveryOptions": {
-      "title": "Delivery Options",
-      "titlefollow": "Yoowifi offers several flexible delivery choices so that you can receive your pocket WiFi device on your terms:",
-      "plans": [
-        {
-          "title": "Self-pickup",
-          "description": "You can pick up your pocket WiFi from any of our convenient self-collection points across Singapore. Devices are available for pickup up to 5 days before your departure to Japan, giving you time to prepare and test before your flight."
-        },
-        {
-          "title": "Fair usage policy (FUP)",
-          "description": "Standard delivery typically occurs 3 to 5 business days before your departure date for S$1.99. It includes a prepaid return mailer to make returning the device after your trip fast and straightforward."
-        },
-        {
-          "title": "Express Delivery",
-          "description": "Our express option ensures your pocket WiFi arrives within 2 business days when you order before 2 PM. The return envelope is included for stress-free returns."
-        },
-        {
-          "title": "Super Express Delivery",
-          "description": "Need it urgently? Choose super express delivery for S$20. Place your order before 2 PM, and your device will be delivered the same business day."
+          "description": "Investigate the expected internet speed and network reach of various providers in Thailand. While Yoowifi aims to deliver high-speed connectivity, signal strength can differ across regions."
         }
       ]
     },
     "faqs": {
-      "title": "Frequently Asked Questions About Our eSIM China",
+      "title": "Frequently Asked Questions About Our eSIM Thiland",
       "faqs": [
         {
           "question": "Is eSIM supported on my phone?",
-          "answer": "eSIM compatibility varies by device and carrier. Check your phone's specifications or your carrier's website to confirm if your device supports an eSIM for China."
+          "answer": "Most smartphones newer than 2018 are eSIM-ready. Check our compatibility tool to confirm your device in seconds."
         },
         {
-          "question": "What if I run out of data in China?",
+          "question": "What if I run out of data in Thailand?",
           "answer": "If you run out of data, you can easily top up or purchase an additional data plan through our website or app. Make sure to do this while connected to Wi-Fi."
         },
         {
-          "question": "How much is a tourist SIM card in China?",
-          "answer": "Tourist SIM cards in China can range from $10 to $50 USD depending on the data allowance and validity. However, our eSIM plans often offer more convenience and better value for short-term travelers."
+          "question": "How much is a tourist SIM card in Thailand?",
+          "answer": "Tourist SIM cards in Thailand can range from $10 to $50 USD depending on the data allowance and validity. However, our eSIM plans often offer more convenience and better value for short-term travelers."
         },
         {
-          "question": "Can I keep my Singapore number active while I’m using an eSIM for China?",
-          "answer": "Yes, if your phone supports dual SIM functionality (physical SIM + eSIM), you can keep your Singapore number active for calls and messages while using the eSIM for data in China."
+          "question": "Can I keep my Singapore number active while I’m using an eSIM for Thailand?",
+          "answer": "Yes, if your phone supports dual SIM functionality (physical SIM + eSIM), you can keep your Singapore number active for calls and messages while using the eSIM for data in Thailand."
         },
         {
-          "question": "Do I need a VPN if I’m using an eSIM in China?",
-          "answer": "Yes, many popular websites and apps are restricted in China. Using a VPN will help you access services like Google, WhatsApp, Instagram, and more while staying connected through your eSIM."
+          "question": "Do I need a VPN if I’m using an eSIM in Thailand?",
+          "answer": "Yes, many popular websites and apps are restricted in Thailand. Using a VPN will help you access services like Google, WhatsApp, Instagram, and more while staying connected through your eSIM."
         }
       ]
     }
