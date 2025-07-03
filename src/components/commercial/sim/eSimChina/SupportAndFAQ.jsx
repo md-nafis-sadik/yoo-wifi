@@ -5,25 +5,19 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { ArrowUpRightIcon } from "@/services";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-const SupportAndFAQ = ({ data }) => {
-  const [firstHalf, setFirstHalf] = useState([]);
-  const [secondHalf, setSecondHalf] = useState([]);
+const SupportAndFAQ = () => {
   const [openItem, setOpenItem] = useState(null);
+  const firstHalf = [0, 1, 2];
+  const secondHalf = [5, 6];
+  const fulldata = [0, 1, 2, 3, 4];
 
   const { t } = useTranslation();
 
-  const middleIndex = Math.ceil(data?.length / 2);
-
-  useEffect(() => {
-    setFirstHalf(data?.slice(0, middleIndex));
-    setSecondHalf(data?.slice(middleIndex));
-  }, []);
+  const middleIndex = Math.ceil(fulldata?.length / 2);
 
   const handleOpenChange = (value) => {
     setOpenItem(value === openItem ? null : value);
@@ -33,8 +27,7 @@ const SupportAndFAQ = ({ data }) => {
     <div className="px-4 2xl:px-0 sec_common_80">
       <div className="sec_common_60 pb-3 md:pb-10 lg:pb-20 container3X rounded-2xl md:rounded-3xl bg-neutral-100 px-3 md:px-6 min-[1320px]:px-0">
         <SectionHeader
-          heading={t("faqs.heading")}
-          subHeading={t("faqs.subHeading")}
+          heading={t("eSimChina.faqs.title")}
           headingClassName="text-4xl"
           containerClassName={"gap-4 md:gap-[18px]"}
         />
@@ -47,21 +40,21 @@ const SupportAndFAQ = ({ data }) => {
             onValueChange={handleOpenChange}
             className={cn("space-y-3 md:space-y-6 rounded-xl")}
           >
-            {firstHalf?.map((faq, index) => (
+            {firstHalf.map((faq, index) => (
               <AccordionItem
                 value={`item-${index + 1}`}
                 className="h-fit bg-white py-4"
                 key={index}
               >
                 <AccordionTrigger className="text-start text-black-900 text-base md:text-lg font-semibold !leading-[1.2] md:!leading-[1.4] px-4 md:px-6">
-                  {t(`pocketWifiChina.faqs.${index}.question`)}
+                  {t(`eSimChina.faqs.faqs.${index}.question`)}
                 </AccordionTrigger>
                 <AccordionContent
                   className={
                     "text-xs md:text-lg font-normal !leading-[1.2] md:!leading-[1.4] text-black-600 px-4 md:px-6"
                   }
                 >
-                  {t(`pocketWifiChina.faqs.${index}.answer`)}
+                  {t(`eSimChina.faqs.faqs.${index}.answer`)}
                 </AccordionContent>
               </AccordionItem>
             ))}
@@ -73,27 +66,28 @@ const SupportAndFAQ = ({ data }) => {
             onValueChange={handleOpenChange}
             className={cn("space-y-3 md:space-y-6 rounded-xl")}
           >
-            {secondHalf?.map((faq, index) => (
+            {secondHalf.map((faq, index) => (
               <AccordionItem
                 value={`item-${index + 1 + firstHalf.length}`}
                 className="h-fit bg-white py-4"
                 key={index}
               >
                 <AccordionTrigger className="text-start text-black-900 text-base md:text-lg font-semibold !leading-[1.2] md:!leading-[1.4] px-4 md:px-6">
-                  {t(`pocketWifiChina.faqs.${index + middleIndex}.question`)}
+                  {t(
+                    `eSimChina.faqs.faqs.${index + middleIndex}.question`
+                  )}
                 </AccordionTrigger>
                 <AccordionContent
                   className={
                     "text-xs md:text-lg font-normal !leading-[1.2] md:!leading-[1.4] text-black-600 px-4 md:px-6"
                   }
                 >
-                  {t(`pocketWifiChina.faqs.${index + middleIndex}.answer`)}
+                  {t(`eSimChina.faqs.faqs.${index + middleIndex}.answer`)}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
-
       </div>
     </div>
   );

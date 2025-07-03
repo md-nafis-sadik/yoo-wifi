@@ -9,7 +9,7 @@ const SectionHeader = ({
   midHeading,
 }) => {
   return (
-    <div className={cn(containerClassName, "flex flex-col gap-4 cursor-default")}>
+    <div className={cn(containerClassName, "flex flex-col items-center gap-4 cursor-default")}>
 
       <div>
         <h2 className={cn(headingClassName, "title")}>{heading}</h2>
@@ -22,7 +22,7 @@ const SectionHeader = ({
       <p
         className={cn(
           subHeadingClassName,
-          "text-xs md:text-lg !leading-[1.4] text-center text-black-600"
+          "text-xs md:text-lg !leading-[1.4] text-center text-black-600 max-w-5xl"
         )}
       >
         {subHeading}

@@ -4,14 +4,14 @@ import { useTranslation } from "react-i18next";
 
 function WifiFeatures() {
   const { t } = useTranslation();
-  const steps = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const steps = [0, 1, 2, 3, 4, 5];
 
   return (
     <section className="sec_common_60">
       <div className="containerX">
         <SectionHeader
-          heading={t("pocketWifiChina.wifiFeatures.title")}
-          subHeading={t("pocketWifiChina.wifiFeatures.titlefollow")}
+          heading={t("pocketWifiJapan.wifiFeatures.title")}
+          subHeading={t("pocketWifiJapan.wifiFeatures.titlefollow")}
           containerClassName="gap-4"
           headingClassName="text-4xl"
         />
@@ -19,9 +19,9 @@ function WifiFeatures() {
           {steps.map((step) => (
             <InfoCard
               key={step}
-              title={t(`pocketWifiChina.wifiFeatures.features.${step}.title`)}
+              title={t(`pocketWifiJapan.wifiFeatures.features.${step}.title`)}
               description={t(
-                `pocketWifiChina.wifiFeatures.features.${step}.description`
+                `pocketWifiJapan.wifiFeatures.features.${step}.description`
               )}
             >
               <span className="text-5xl sm:text-6xl md:text-6xml font-bold text-main-600">

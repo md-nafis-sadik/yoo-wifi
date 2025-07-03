@@ -1,33 +1,30 @@
-import WifiPlans from "@/components/commercial/pocketWifi/pocketWifiChina/WifiPlans";
-import DeliveryOptions from "@/components/commercial/pocketWifi/pocketWifiChina/DeliveryOptions";
-import Description from "@/components/commercial/pocketWifi/pocketWifiChina/Description";
-import WifiFeatures from "@/components/commercial/pocketWifi/pocketWifiChina/WifiFeatures";
-import WhyPocketWifi from "@/components/commercial/pocketWifi/pocketWifiChina/WhyPocketWifi";
-import GetWifi from "@/components/commercial/pocketWifi/pocketWifiChina/GetWifi";
-import Comparison from "@/components/commercial/pocketWifi/pocketWifiChina/pocketWifiDetails/Comparison";
-import SupportAndFAQ from "@/components/commercial/pocketWifi/pocketWifiChina/SupportAndFAQ";
+import HowToGet from "@/components/commercial/sim/eSimThailand/HowToGet";
+import Description from "@/components/commercial/sim/eSimThailand/Description";
+import SimFeatures from "@/components/commercial/sim/eSimThailand/SimFeatures";
+import ThingsToKnow from "@/components/commercial/sim/eSimThailand/ThingsToKnow";
+import SupportAndFAQ from "@/components/commercial/sim/eSimThailand/SupportAndFAQ";
 import HeroCommon from "@/components/shared/others/HeroCommon";
 import { useTranslation } from "react-i18next";
-import { useSelector } from "react-redux";
+import SimComparison from "@/components/commercial/sim/eSimThailand/SimComparison";
+import SetupActivationGuide from "@/components/commercial/sim/eSimThailand/SetupActivationGuide";
+import DeliveryPickup from "@/components/commercial/sim/eSimThailand/DeliveryPickup";
 
 function Home() {
-  const { chinaDataPlan } = useSelector((state) => state.dataPlan);
   const { t } = useTranslation();
-  const { chinaWifiFaqs } = useSelector((state) => state.contact);
   return (
     <section>
       <HeroCommon
-        title={t("pocketWifiChina.heading")}
+        title={t("eSimThailand.heading")}
         titleClassName="!normal-case"
       />
       <Description />
-      <WifiPlans />
-      <WifiFeatures />
-      <WhyPocketWifi />
-      <GetWifi />
-      <DeliveryOptions />
-      <Comparison chinaDataPlan={chinaDataPlan} />
-      <SupportAndFAQ data={chinaWifiFaqs} />
+      <HowToGet />
+      <SimComparison/>
+      <SimFeatures />
+      <DeliveryPickup/>
+      <SetupActivationGuide/>
+      <ThingsToKnow />
+      <SupportAndFAQ />
     </section>
   );
 }

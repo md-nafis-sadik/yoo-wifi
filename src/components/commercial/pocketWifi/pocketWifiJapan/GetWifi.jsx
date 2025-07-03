@@ -4,13 +4,13 @@ import { useTranslation } from "react-i18next";
 
 function GetWifi() {
   const { t } = useTranslation();
-const steps = [0, 1, 2, 3, 4, 5, 6, 7];
+const steps = [0, 1, 2, 3, 4, 5, 6];
   return (
     <section className="sec_common_60">
       <div className="containerX">
         <SectionHeader
-          heading={t("pocketWifiChina.howToGet.title")}
-          subHeading={t("pocketWifiChina.howToGet.titlefollow")}
+          heading={t("pocketWifiJapan.howToGet.title")}
+          subHeading={t("pocketWifiJapan.howToGet.titlefollow")}
           headingClassName="text-4xl"
           containerClassName="gap-4"
         />
@@ -20,7 +20,7 @@ const steps = [0, 1, 2, 3, 4, 5, 6, 7];
             <InfoCard
               key={step}
               subtitle={t(
-                `pocketWifiChina.howToGet.steps.${step}.title`
+                `pocketWifiJapan.howToGet.steps.${step}.title`
               )}
             >
               <span className="text-5xl sm:text-6xl md:text-6xml font-bold text-main-600">

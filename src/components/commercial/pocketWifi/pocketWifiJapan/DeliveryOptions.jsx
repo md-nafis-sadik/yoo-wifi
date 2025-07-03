@@ -29,8 +29,8 @@ function DeliveryOptions() {
     <section className="sec_common_60">
       <div className="containerX">
         <SectionHeader
-          heading={t(`pocketWifiChina.deliveryOptions.title`)}
-          subHeading={t(`pocketWifiChina.deliveryOptions.titlefollow`)}
+          heading={t(`pocketWifiJapan.deliveryOptions.title`)}
+          subHeading={t(`pocketWifiJapan.deliveryOptions.titlefollow`)}
           containerClassName="gap-4"
           headingClassName="text-4xl"
         />
@@ -38,10 +38,10 @@ function DeliveryOptions() {
           {data.map((_, index) => (
             <div className="p-4 sm:p-6 sm:pl-8 md:pl-10 rounded-xl sm:rounded-2xl border border-main-200 flex flex-col gap-2 sm:gap-4">
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-main-600">
-                {t(`pocketWifiChina.deliveryOptions.plans.${index}.title`)}
+                {t(`pocketWifiJapan.deliveryOptions.plans.${index}.title`)}
               </h3>
               <p className="text-sm sm:text-base md:text-lg text-black-600 leading-[140%]">
-                {t(`pocketWifiChina.deliveryOptions.plans.${index}.description`)}
+                {t(`pocketWifiJapan.deliveryOptions.plans.${index}.description`)}
               </p>
             </div>
           ))}

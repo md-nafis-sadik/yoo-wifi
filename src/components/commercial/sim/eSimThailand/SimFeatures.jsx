@@ -2,16 +2,16 @@ import InfoCard from "@/components/shared/cards/InfoCard";
 import SectionHeader from "@/components/shared/others/SectionHeader";
 import { useTranslation } from "react-i18next";
 
-function WifiFeatures() {
+function SimFeatures() {
   const { t } = useTranslation();
-  const steps = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const steps = [0, 1, 2, 3, 4];
 
   return (
-    <section className="sec_common_60">
+    <section className="sec_common_60 mt-6 xl:mt-15">
       <div className="containerX">
         <SectionHeader
-          heading={t("pocketWifiChina.wifiFeatures.title")}
-          subHeading={t("pocketWifiChina.wifiFeatures.titlefollow")}
+          heading={t("eSimThailand.simFeatures.title")}
+          subHeading={t("eSimThailand.simFeatures.titlefollow")}
           containerClassName="gap-4"
           headingClassName="text-4xl"
         />
@@ -19,9 +19,9 @@ function WifiFeatures() {
           {steps.map((step) => (
             <InfoCard
               key={step}
-              title={t(`pocketWifiChina.wifiFeatures.features.${step}.title`)}
+              title={t(`eSimThailand.simFeatures.features.${step}.title`)}
               description={t(
-                `pocketWifiChina.wifiFeatures.features.${step}.description`
+                `eSimThailand.simFeatures.features.${step}.description`
               )}
             >
               <span className="text-5xl sm:text-6xl md:text-6xml font-bold text-main-600">
@@ -35,4 +35,4 @@ function WifiFeatures() {
   );
 }
 
-export default WifiFeatures;
+export default SimFeatures;

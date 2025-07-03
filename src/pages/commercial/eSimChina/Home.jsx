@@ -1,33 +1,30 @@
-import WifiPlans from "@/components/commercial/sim/eSimChina/WifiPlans";
-import DeliveryOptions from "@/components/commercial/sim/eSimChina/DeliveryOptions";
+import HowToGet from "@/components/commercial/sim/eSimChina/HowToGet";
 import Description from "@/components/commercial/sim/eSimChina/Description";
-import WifiFeatures from "@/components/commercial/sim/eSimChina/WifiFeatures";
-import WhyPocketWifi from "@/components/commercial/sim/eSimChina/WhyPocketWifi";
-import GetWifi from "@/components/commercial/sim/eSimChina/GetWifi";
-import Comparison from "@/components/commercial/sim/eSimChina/pocketWifiDetails/Comparison";
+import SimFeatures from "@/components/commercial/sim/eSimChina/SimFeatures";
+import ThingsToKnow from "@/components/commercial/sim/eSimChina/ThingsToKnow";
 import SupportAndFAQ from "@/components/commercial/sim/eSimChina/SupportAndFAQ";
 import HeroCommon from "@/components/shared/others/HeroCommon";
 import { useTranslation } from "react-i18next";
-import { useSelector } from "react-redux";
+import SimComparison from "@/components/commercial/sim/eSimChina/SimComparison";
+import SetupActivationGuide from "@/components/commercial/sim/eSimChina/SetupActivationGuide";
+import DeliveryPickup from "@/components/commercial/sim/eSimChina/DeliveryPickup";
 
 function Home() {
-  const { chinaDataPlan } = useSelector((state) => state.dataPlan);
   const { t } = useTranslation();
-  const { chinaWifiFaqs } = useSelector((state) => state.contact);
   return (
     <section>
       <HeroCommon
-        title="eSIM China"
+        title={t("eSimChina.heading")}
         titleClassName="!normal-case"
       />
       <Description />
-      <WifiPlans />
-      <WifiFeatures />
-      <WhyPocketWifi />
-      <GetWifi />
-      <DeliveryOptions />
-      <Comparison chinaDataPlan={chinaDataPlan} />
-      <SupportAndFAQ data={chinaWifiFaqs} />
+      <HowToGet />
+      <SimComparison/>
+      <SimFeatures />
+      <DeliveryPickup/>
+      <SetupActivationGuide/>
+      <ThingsToKnow />
+      <SupportAndFAQ />
     </section>
   );
 }

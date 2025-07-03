@@ -1,7 +1,7 @@
 import SectionHeader from "@/components/shared/others/SectionHeader";
 import { t } from "i18next";
 
-function WifiPlans() {
+function HowToGet() {
   const data = [
     {
       title: "Daily rate",
@@ -13,24 +13,14 @@ function WifiPlans() {
       description:
         "Each plan includes a specified daily data allowance, and once this limit is reached, your connection speed will be reduced.",
     },
-    {
-      title: "Delivery & return process",
-      description:
-        "Yoowifi offers flexible delivery and return options to make your experience seamless. You can choose self-pickup from multiple locations or have your device delivered free within 5 business days before your trip. Returning your device is also easy. Simply drop it off at any of 20+ island-wide locations.",
-    },
-    {
-      title: "Cancellation policy",
-      description:
-        "If you need to cancel your booking, simply contact our customer service team. The cancellations are subject to our terms and conditions.",
-    },
   ];
 
   return (
-    <section className="sec_common_60">
+    <section className="sec_common_60 mb-6 xl:mb-15">
       <div className="containerX">
         <SectionHeader
-          heading={t(`pocketWifiChina.wifiPlan.title`)}
-          subHeading={t(`pocketWifiChina.wifiPlan.titlefollow`)}
+          heading={t(`eSimChina.getSim.title`)}
+          subHeading={t(`eSimChina.getSim.titlefollow`)}
           containerClassName="gap-4"
           headingClassName="text-4xl"
         />
@@ -38,10 +28,10 @@ function WifiPlans() {
           {data.map((_, index) => (
             <div className="p-4 sm:p-6 sm:pl-8 md:pl-10 rounded-xl sm:rounded-2xl border border-main-200 flex flex-col gap-2 sm:gap-4">
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-main-600">
-                {t(`pocketWifiChina.wifiPlan.plans.${index}.title`)}
+                {t(`eSimChina.getSim.plans.${index}.title`)}
               </h3>
               <p className="text-sm sm:text-base md:text-lg text-black-600 leading-[140%]">
-                {t(`pocketWifiChina.wifiPlan.plans.${index}.description`)}
+                {t(`eSimChina.getSim.plans.${index}.description`)}
               </p>
             </div>
           ))}
@@ -51,4 +41,4 @@ function WifiPlans() {
   );
 }
 
-export default WifiPlans;
+export default HowToGet;

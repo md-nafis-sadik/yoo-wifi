@@ -8,7 +8,7 @@ function WhyPocketWifi() {
 
   return (
     <section className="sec_common_60">
-      <div className="container3X rounded-3xl px-[100px] py-15 bg-neutral-100">
+      <div className="container3X rounded-3xl px-6 md:px-12 lg:px-24 py-6 md:py-10 lg:py-15 bg-neutral-100">
         <SectionHeader
           heading={t("pocketWifiChina.whyUse.title")}
           subHeading={t("pocketWifiChina.whyUse.titlefollow")}

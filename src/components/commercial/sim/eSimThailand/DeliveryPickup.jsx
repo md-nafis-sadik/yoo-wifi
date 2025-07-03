@@ -1,23 +1,26 @@
 import SectionHeader from "@/components/shared/others/SectionHeader";
-import { ChargerCable, Tiedbag } from "@/services";
+import {
+  BoxDelivery,
+  CarDelivery,
+  MotorDelivery,
+} from "@/services";
 import { useTranslation } from "react-i18next";
-import { useSelector } from "react-redux";
 
-const HowItWorks = () => {
+const DeliveryPickup = () => {
   const howItWorksData = [
     {
-      icon: <Tiedbag className={"h-10 w-10 md:h-[60px] md:w-[60px]"} />,
+      icon: <MotorDelivery className={"h-10 w-10 md:h-[60px] md:w-[60px]"} />,
       title: "How To Rent",
     },
     {
       _id: 2,
 
-      icon: <Tiedbag className={"h-10 w-10 md:h-[60px] md:w-[60px]"} />,
+      icon: <CarDelivery className={"h-10 w-10 md:h-[60px] md:w-[60px]"} />,
       title: "How To Return",
     },
     {
       _id: 3,
-      icon: <ChargerCable className={"h-10 w-10 md:h-[60px] md:w-[60px]"} />,
+      icon: <BoxDelivery className={"h-10 w-10 md:h-[60px] md:w-[60px]"} />,
       title: "Pickup & Drop Off Locations",
     },
   ];
@@ -26,8 +29,8 @@ const HowItWorks = () => {
   return (
     <section className="containerX sec_common_60 px-4 md:px-6 xl:px-0 flex flex-col items-center gap-6 md:gap-10 lg:gap-20">
       <SectionHeader
-        heading={t("pocketWifiJapan.whatToExpect.title")}
-        subHeading={t("pocketWifiJapan.whatToExpect.titlefollow")}
+        heading={t("eSimThailand.deliveryPickup.title")}
+        subHeading={t("eSimThailand.deliveryPickup.titlefollow")}
         headingClassName="text-4xl"
       />
 
@@ -43,15 +46,11 @@ const HowItWorks = () => {
                   className="text-black-700 text-[18px] md:text-2xl !leading-[1.4] mt-6 md:mt-12 lg:mt-[60px] font-bold line-clamp-1"
                   title={item.title}
                 >
-                  {t(
-                    `pocketWifiJapan.whatToExpect.expectations.${index}.title`
-                  )}
+                  {t(`eSimThailand.deliveryPickup.steps.${index}.title`)}
                 </h2>
 
                 <p className="text-sm md:text-[18px] text-black-600 !leading-[1.4] mt-2 md:mt-3">
-                  {t(
-                    `pocketWifiJapan.whatToExpect.expectations.${index}.description`
-                  )}
+                  {t(`eSimThailand.deliveryPickup.steps.${index}.description`)}
                 </p>
               </div>
             </div>
@@ -62,4 +61,4 @@ const HowItWorks = () => {
   );
 };
 
-export default HowItWorks;
+export default DeliveryPickup;
