@@ -2565,5 +2565,641 @@
         "answer": "Tốc độ kết nối tại Trung Quốc thay đổi theo vị trí và mạng. Ở các thành phố lớn như Bắc Kinh và Thượng Hải, tốc độ 4G/LTE thường nhanh, trong khi vùng nông thôn có thể chậm hơn. Pocket WiFi của Yoowifi tự động chọn mạng tốt nhất để tối ưu hiệu suất."
       }
     ]
+  },
+
+  "pocketWifiJapan": {
+    "heading": "Pocket wifi Nhật Bản",
+    "hero": {
+      "para1": "Mở khóa hành trình khám phá Nhật Bản của bạn với kết nối liền mạch. Dù bạn đang di chuyển trong hệ thống tàu điện ngầm phức tạp của Tokyo, dịch các biển báo ở Kyoto, hay sắp xếp các cuộc họp kinh doanh tại Osaka, internet ổn định là điều thiết yếu. Tránh phí roaming di động đắt đỏ từ các nhà cung cấp Singapore và phiền toái khi đăng ký SIM địa phương cũng như rắc rối về ngôn ngữ.",
+      "para2": "Trong những tình huống như vậy, một thiết bị pocket WiFi là lựa chọn tốt hơn. Với tốc độ 4G LTE nhanh, dung lượng dữ liệu không giới hạn, và hỗ trợ nhiều thiết bị, đây là cách dễ dàng và đáng tin cậy nhất để bạn luôn online suốt chuyến đi Nhật. Không rắc rối về kỹ thuật, không phải đổi SIM, chỉ cần kết nối internet ngay khi bạn đến nơi một cách an toàn."
+    },
+    "wifiPlan": {
+      "title": "Các gói Pocket WiFi của Yoowifi",
+      "titlefollow": "Yoowifi cung cấp các gói pocket WiFi tiện lợi cho khách du lịch tới Trung Quốc. Các gói của chúng tôi được thiết kế để mang lại kết nối liền mạch mà không cần SIM địa phương hay cài đặt phức tạp.",
+      "plans": [
+        {
+          "title": "Giá thuê theo ngày",
+          "description": "Giá thuê pocket WiFi của chúng tôi bắt đầu chỉ từ 2.50 SGD/ngày. Bạn có thể chọn giữa 3GB hoặc 10GB dữ liệu tốc độ cao hàng ngày tại Nhật Bản."
+        },
+        {
+          "title": "Chính sách sử dụng hợp lý (FUP)",
+          "description": "Khi bạn đã dùng hết giới hạn dữ liệu hàng ngày, bạn vẫn có thể sử dụng dữ liệu không giới hạn với tốc độ giảm xuống (tối đa 3 Mbps)."
+        },
+        {
+          "title": "Quy trình giao nhận & trả thiết bị",
+          "description": "Chúng tôi cung cấp giao hàng tiêu chuẩn miễn phí tại Singapore. Bạn cũng có thể tự đến lấy tại một trong các điểm nhận hàng của chúng tôi. Trả lại thiết bị tại bất kỳ ki-ốt Yoowifi nào hoặc sử dụng túi thư trả kèm theo."
+        },
+        {
+          "title": "Chính sách hủy",
+          "description": "Bạn có thể hủy gói bằng cách liên hệ đội hỗ trợ của chúng tôi và sẽ được xử lý theo các điều khoản và điều kiện."
+        }
+      ]
+    },
+    "wifiFeatures": {
+      "title": "Tính năng của Pocket WiFi Yoowifi cho Nhật Bản",
+      "titlefollow": "Đây là lý do tại sao pocket WiFi của Yoowifi là lựa chọn hàng đầu cho khách du lịch tới Nhật Bản",
+      "features": [
+        {
+          "title": "Tốc độ 4G LTE cao",
+          "description": "Lướt web, xem video, và điều hướng với tốc độ 4G LTE lên tới 300Mbps"
+        },
+        {
+          "title": "Dữ liệu không giới hạn",
+          "description": "Không giới hạn sử dụng, dữ liệu tốc độ cao và sau đó vẫn truy cập được với tốc độ giảm."
+        },
+        {
+          "title": "Hỗ trợ đa thiết bị",
+          "description": "Kết nối đồng thời lên tới 10 thiết bị, lý tưởng cho gia đình, bạn bè, hoặc nhóm làm việc."
+        },
+        {
+          "title": "Thiết kế nhỏ gọn",
+          "description": "Nhẹ, nhỏ gọn, dễ dàng để trong túi hoặc balo."
+        },
+        {
+          "title": "Pin sử dụng lâu",
+          "description": "Tận hưởng tới 12 giờ sử dụng liên tục sau mỗi lần sạc."
+        },
+        {
+          "title": "Phủ sóng rộng",
+          "description": "Tín hiệu ổn định ở Tokyo, Kyoto, Osaka, Hokkaido, và cả các thị trấn vùng nông thôn."
+        }
+      ]
+    },
+    "whyUse": {
+      "title": "Tại sao nên dùng Pocket WiFi",
+      "titlefollow": "Đây là lý do pocket WiFi là lựa chọn thông minh để duy trì kết nối trong chuyến đi Trung Quốc của bạn:",
+      "benifits": [
+        {
+          "title": "Tránh phí roaming",
+          "description": "Không còn phải lo hóa đơn phát sinh bất ngờ từ nhà cung cấp Singapore."
+        },
+        {
+          "title": "Kết nối internet ổn định",
+          "description": "Không như WiFi khách sạn hay công cộng không ổn định, pocket WiFi của chúng tôi giữ bạn kết nối xuyên suốt Nhật Bản."
+        }
+      ],
+      "extraBenifits": [
+        {
+          "title": "Kết nối nhiều thiết bị",
+          "description": "Một thiết bị cung cấp kết nối cho tới 10 thiết bị như điện thoại, máy tính bảng, laptop."
+        },
+        {
+          "title": "Không cần SIM",
+          "description": "Không lo về tương thích hay các quy định về SIM địa phương."
+        },
+        {
+          "title": "Lý tưởng cho nhóm",
+          "description": "Gia đình và nhóm doanh nghiệp có thể chia sẻ hotspot duy nhất một cách dễ dàng."
+        }
+      ]
+    },
+    "howToGet": {
+      "title": "Làm thế nào để lấy Pocket WiFi cho Nhật Bản?",
+      "titlefollow": "Dưới đây là hướng dẫn từng bước đơn giản để đặt pocket WiFi cho chuyến đi Nhật của bạn",
+      "steps": [
+        {
+          "title": "Bạn có thể đặt trên yoowifi.com hoặc tải app."
+        },
+        {
+          "title": "Chọn gói dữ liệu bạn thích và chọn dịch vụ thuê."
+        },
+        {
+          "title": "Chọn Nhật Bản là điểm đến."
+        },
+        {
+          "title": "Chọn ngày đi du lịch."
+        },
+        {
+          "title": "Thêm số lượng thiết bị và nhấn “Tiếp theo.”"
+        },
+        {
+          "title": "Chọn giao hàng hoặc tự lấy."
+        },
+        {
+          "title": "Sau đó thanh toán và hoàn tất đơn hàng."
+        }
+      ]
+    },
+    "deliveryOptions": {
+      "title": "Lựa chọn giao hàng",
+      "titlefollow": "Yoowifi cung cấp nhiều lựa chọn giao hàng linh hoạt để bạn nhận thiết bị pocket WiFi theo ý muốn:",
+      "plans": [
+        {
+          "title": "Tự lấy hàng",
+          "description": "Bạn có thể nhận thiết bị tại các điểm tự lấy trên khắp Singapore. Thiết bị có thể được nhận trước tối đa 5 ngày so với ngày bay sang Nhật, giúp bạn có thời gian chuẩn bị và kiểm tra trước chuyến đi."
+        },
+        {
+          "title": "Chính sách sử dụng hợp lý (FUP)",
+          "description": "Giao hàng tiêu chuẩn thường diễn ra trong 3-5 ngày làm việc trước ngày đi với phí 1.99 SGD. Bao gồm túi thư trả trước giúp việc trả thiết bị sau chuyến đi nhanh chóng và dễ dàng."
+        },
+        {
+          "title": "Giao hàng nhanh",
+          "description": "Tùy chọn giao hàng nhanh đảm bảo thiết bị đến trong 2 ngày làm việc nếu bạn đặt trước 2 giờ chiều. Bao gồm phong bì trả lại thuận tiện."
+        },
+        {
+          "title": "Giao hàng siêu nhanh",
+          "description": "Cần gấp? Chọn giao hàng siêu nhanh với giá 20 SGD. Đặt trước 2 giờ chiều và thiết bị sẽ được giao trong ngày làm việc."
+        }
+      ]
+    },
+    "whatToExpect": {
+      "title": "Nên mong đợi gì ở Nhật Bản?",
+      "titlefollow": "Nhật Bản nổi tiếng với hạ tầng di động tiên tiến, nhưng việc truy cập internet ổn định không phải lúc nào cũng đảm bảo ở mọi nơi",
+      "expectations": [
+        {
+          "title": "Tốc độ và độ tin cậy",
+          "description": "Các thành phố lớn như Tokyo, Osaka, và Kyoto có hạ tầng internet mạnh mẽ, nhưng vùng nông thôn có thể gặp khó khăn."
+        },
+        {
+          "title": "Các ứng dụng du lịch cần thiết",
+          "description": "Sử dụng Google Maps, Translate và các app gọi xe mà không bị gián đoạn."
+        },
+        {
+          "title": "WiFi công cộng hạn chế",
+          "description": "WiFi miễn phí có ở một số nơi như sân bay, ga tàu và quán cà phê. Do đó, thiết bị pocket WiFi của chúng tôi đảm bảo kết nối liên tục khắp Nhật Bản."
+        }
+      ]
+    },
+    "conparision": {
+      "title": "Pocket WiFi so với SIM/eSIM ở Nhật Bản",
+      "titlefollow": "Việc chọn giữa pocket WiFi và SIM hoặc eSIM cho Trung Quốc phụ thuộc vào nhu cầu đi lại của bạn. Dưới đây là bảng so sánh nhanh để giúp bạn quyết định lựa chọn tốt nhất để kết nối ở Nhật Bản.",
+      "comparisionTable": {
+        "th": {
+          "1": "Tính năng",
+          "2": "Pocket WiFi",
+          "3": "SIM/eSIM"
+        },
+        "tr": [
+          {
+            "1": "Phù hợp với",
+            "2": "Nhóm, gia đình, khách du lịch và nhân viên làm việc từ xa",
+            "3": "Khách du lịch một mình hoặc khách dài hạn"
+          },
+          {
+            "1": "Phủ sóng quốc gia",
+            "2": "Hơn 90 quốc gia",
+            "3": "Hơn 160 quốc gia"
+          },
+          {
+            "1": "Tốc độ",
+            "2": "Tối đa 300Mbps",
+            "3": "Tối đa tốc độ 4G LTE"
+          },
+          {
+            "1": "Tùy chọn dữ liệu",
+            "2": "3GB/ngày đến 200GB/năm",
+            "3": "500MB/ngày đến 30GB/tháng"
+          },
+          {
+            "1": "Cài đặt",
+            "2": "Dễ dàng cắm và dùng",
+            "3": "Kích hoạt nhanh qua mã QR"
+          },
+          {
+            "1": "Chia sẻ",
+            "2": "Kết nối tối đa 10 thiết bị",
+            "3": "Giới hạn một thiết bị cho mỗi SIM/eSIM"
+          },
+          {
+            "1": "Gói cước",
+            "2": "Gói linh hoạt",
+            "3": "Tối đa 12 giờ sử dụng mỗi lần sạc"
+          },
+          {
+            "1": "Thời lượng pin",
+            "2": "Tối đa 12 giờ sử dụng mỗi lần sạc",
+            "3": "Tùy thuộc vào thiết bị"
+          },
+          {
+            "1": "Quy trình kích hoạt",
+            "2": "Bật nguồn, tìm tên WiFi và kết nối bằng mật khẩu",
+            "3": "Kích hoạt qua app hoặc lắp SIM và bật dữ liệu roaming"
+          },
+          {
+            "1": "Chi phí",
+            "2": "Từ 2.50 SGD/ngày",
+            "3": "Giá thay đổi tùy theo dữ liệu và thời gian"
+          },
+          {
+            "1": "Tính linh hoạt",
+            "2": "Thuê ngắn hạn hoặc mua dài hạn",
+            "3": "Mua SIM/eSIM để linh hoạt, nạp thêm khi cần"
+          }
+        ]
+      }
+    },
+    "ImportantConsiderations": {
+      "title": "Internet ở Trung Quốc – Những điều cần lưu ý quan trọng",
+      "titlefollow": "Khi đi du lịch Trung Quốc, hiểu rõ về môi trường internet địa phương là rất quan trọng để duy trì kết nối và truy cập thông tin bạn cần.",
+      "considerations": [
+        {
+          "title": "Giới hạn mạng riêng ảo (VPN)",
+          "description": "Điều quan trọng cần lưu ý là thiết bị pocket WiFi không cung cấp chức năng VPN. Để truy cập nội dung bị chặn, bạn phải cài đặt VPN trên thiết bị trước khi đến Trung Quốc."
+        },
+        {
+          "title": "Chính sách sử dụng hợp lý (FUP)",
+          "description": "Tận hưởng giao hàng trong nước trong vòng 5 ngày làm việc trước khi bạn khởi hành với phí 1.99 SGD. Có bao gồm túi thư trả lại để việc trả thiết bị dễ dàng. Với đơn đặt hàng trước, giao hàng thường được sắp xếp trong vòng 3 ngày trước chuyến đi của bạn."
+        },
+        {
+          "title": "Pocket WiFi + VPN",
+          "description": "Kết hợp thiết bị pocket WiFi của chúng tôi với ứng dụng VPN của bạn là giải pháp thực tế. Pocket WiFi đảm bảo truy cập internet ổn định khắp Trung Quốc, trong khi VPN cho phép bạn truy cập các trang web và dịch vụ bị hạn chế."
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Câu hỏi thường gặp về Pocket WiFi cho Nhật Bản",
+      "faqs": [
+        {
+          "question": "WiFi di động có cần SIM không?",
+          "answer": "Không, WiFi di động của chúng tôi sử dụng công nghệ cloud SIM, kết nối với mạng địa phương tốt nhất tại Nhật Bản; không cần thẻ SIM vật lý."
+        },
+        {
+          "question": "Giá thuê pocket WiFi tại Nhật Bản là bao nhiêu?",
+          "answer": "Không quá đắt"
+        },
+        {
+          "question": "Nếu tôi làm mất thiết bị pocket WiFi thì sao?",
+          "answer": "Nếu bạn làm mất thiết bị Yoowifi pocket WiFi, bạn nên báo ngay với nhà cung cấp dịch vụ cho thuê. Có thể sẽ bị tính phí mất thiết bị, nhưng một số công ty có bảo hiểm hoặc gói bảo vệ để giảm chi phí."
+        },
+        {
+          "question": "Tốc độ kết nối tại Nhật Bản như thế nào?",
+          "answer": "Tốc độ kết nối tại Trung Quốc thay đổi tùy theo vị trí và mạng. Ở các thành phố lớn như Bắc Kinh và Thượng Hải, tốc độ 4G/LTE thường nhanh, trong khi vùng nông thôn có thể chậm hơn. Pocket WiFi của Yoowifi tự động chọn mạng tốt nhất để tối ưu hiệu suất."
+        },
+        {
+          "question": "Tôi có thể mua pocket WiFi ở sân bay Nhật Bản không?",
+          "answer": "Tùy trường hợp."
+        },
+        {
+          "question": "Tôi có thể thuê pocket WiFi ở Nhật Bản không?",
+          "answer": "Có, bạn có thể thuê pocket WiFi ở Trung Quốc qua các nhà cung cấp như Yoowifi, có các điểm nhận thuận tiện tại sân bay hoặc giao đến khách sạn. Điều này giúp bạn duy trì kết nối mà không cần SIM địa phương."
+        },
+        {
+          "question": "Pocket WiFi có bị giới hạn tốc độ không?",
+          "answer": "Không, pocket WiFi của Yoowifi không hỗ trợ cài đặt VPN trực tiếp trên thiết bị. Tuy nhiên, bạn vẫn có thể dùng VPN trên smartphone, laptop hoặc tablet được kết nối để truy cập các trang web bị hạn chế khi ở Trung Quốc."
+        },
+        {
+          "question": "Nếu dùng eSIM ở Trung Quốc thì có cần VPN không?",
+          "answer": "Có, nếu bạn muốn truy cập các trang web và dịch vụ bị hạn chế ở Trung Quốc (như Google, Facebook, hoặc WhatsApp), bạn vẫn cần dùng VPN ngay cả khi dùng eSIM. eSIM chỉ cung cấp kết nối dữ liệu nhưng không vượt qua được Vạn Lý Tường Lửa."
+        },
+        {
+          "question": "Tôi có thể dùng thiết bị này ở nhiều thành phố Nhật Bản không?",
+          "answer": "Có, nếu bạn muốn truy cập các trang web và dịch vụ bị hạn chế ở Trung Quốc (như Google, Facebook, hoặc WhatsApp), bạn vẫn cần dùng VPN ngay cả khi dùng eSIM. eSIM chỉ cung cấp kết nối dữ liệu nhưng không vượt qua được Vạn Lý Tường Lửa."
+        }
+      ]
+    }
+  },
+
+  "eSimChina": {
+    "heading": "eSim Trung Quốc",
+    "hero": {
+      "para1": "Giữ kết nối trong chuyến phiêu lưu đa dạng và năng động tại Trung Quốc của bạn. Dù bạn đang sử dụng Google Maps ở Bắc Kinh hay chia sẻ khoảnh khắc trên WeChat/TikTok từ Vạn Lý Trường Thành, internet đáng tin cậy là chìa khóa để trải nghiệm mượt mà và phong phú. Tránh các khoản phí roaming đắt đỏ và phiền toái khi tìm SIM địa phương khi đến nơi.",
+      "para2": "Đó chính là lúc eSIM của Yoowifi xuất hiện. Chúng tôi cung cấp kết nối liền mạch cần thiết cho hành trình khám phá Trung Quốc của bạn. Tự tin điều hướng và chia sẻ trải nghiệm, luôn được đảm bảo truy cập internet đáng tin cậy và giá cả phải chăng.",
+      "imageHeading": "Các gói Yoowifi cho Trung Quốc",
+      "para3": "Yoowifi cung cấp nhiều gói eSIM linh hoạt và giá cả phải chăng cho chuyến đi Trung Quốc của bạn. Bắt đầu chỉ từ S$0.75 mỗi ngày, các lựa chọn eSIM chỉ dữ liệu này cung cấp kết nối tốc độ cao lên tới 4G, đảm bảo bạn có thể duyệt web, xem video và điều hướng dễ dàng.",
+      "para4": "Hơn nữa, eSIM của chúng tôi cho Trung Quốc đi kèm với mã QR đơn giản và hướng dẫn cài đặt để kích hoạt nhanh chóng. Yoowifi cũng kết nối bạn với nhà mạng tốt nhất tại Trung Quốc, đảm bảo vùng phủ sóng và tốc độ tối ưu, và dữ liệu chỉ bắt đầu có hiệu lực khi bạn sử dụng lần đầu tiên tại quốc gia này.",
+      "para5": "Các gói đa dạng, từ 500MB mỗi ngày đến 30GB mỗi tháng, với thời gian sử dụng phù hợp cho mọi chuyến đi, từ chuyến đi trong ngày đến cuộc phiêu lưu dài một tháng."
+    },
+    "getSim": {
+      "title": "Cách nhận eSIM cho Trung Quốc",
+      "titlefollow": "Nhận eSIM cho Trung Quốc thật dễ dàng! Dưới đây là các bước đơn giản để bạn kết nối nhanh chóng",
+      "plans": [
+        {
+          "title": "Chọn gói và chi tiết chuyến đi",
+          "description": "Chọn lựa chọn eSIM phù hợp nhất với thời gian chuyến đi và nhu cầu dữ liệu dự kiến của bạn."
+        },
+        {
+          "title": "Kích hoạt eSIM Trung Quốc của bạn",
+          "description": "Sau khi hoàn tất mua hàng, bạn sẽ nhận được mã QR độc nhất cùng với hướng dẫn đơn giản. Chỉ cần quét mã bằng thiết bị tương thích để kích hoạt nhanh chóng ngay lập tức."
+        }
+      ]
+    },
+    "whatsBetter": {
+      "title": "eSIM và SIM Vật Lý – Cái nào tốt hơn?",
+      "titlefollow": "Yoowifi cung cấp cho bạn nhiều lựa chọn vì chúng tôi biết không phải ai cũng giống nhau. Dù bạn là người làm việc kỹ thuật số hay khách du lịch bình thường, chúng tôi đều có giải pháp cho bạn:",
+      "esim": {
+        "title": "eSIM",
+        "points": {
+          "1": "Kích hoạt nhanh qua mã QR — kết nối ngay lập tức",
+          "2": "Không cần thay SIM vật lý",
+          "3": "Tiện lợi cho du lịch quốc tế",
+          "4": "Không phải tất cả mạng/điện thoại đều hỗ trợ eSIM"
+        }
+      },
+      "pocketWifi": {
+        "title": "SIM Vật Lý",
+        "points": {
+          "1": "Hoạt động với hầu hết điện thoại",
+          "2": "Dễ dàng thay SIM khi đổi thiết bị",
+          "3": "Phù hợp với người dùng không rành công nghệ",
+          "4": "Cần giao hàng hoặc lấy trực tiếp"
+        }
+      }
+    },
+    "simFeatures": {
+      "title": "Tại sao chọn Yoowifi để kết nối tại Trung Quốc",
+      "titlefollow": "Yoowifi là lựa chọn hàng đầu của khách du lịch Singapore cần kết nối đáng tin cậy tại Trung Quốc, và đây là một số lý do tại sao",
+      "features": [
+        {
+          "title": "Giá cả phải chăng",
+          "description": "Kết nối với các lựa chọn eSIM của chúng tôi, bắt đầu từ chỉ S$0.75 mỗi ngày."
+        },
+        {
+          "title": "Kết nối tốc độ cao",
+          "description": "Không giới hạn sử dụng, chỉ có dữ liệu tốc độ cao tiếp theo là truy cập với tốc độ giảm."
+        },
+        {
+          "title": "Lựa chọn linh hoạt",
+          "description": "Dù bạn cần pocket WiFi, SIM truyền thống hay eSIM cho Trung Quốc, chúng tôi đều có các lựa chọn để bạn kết nối."
+        },
+        {
+          "title": "Hỗ trợ nhiều thiết bị",
+          "description": "Nếu bạn chọn pocket WiFi của chúng tôi cho Trung Quốc, bạn có thể hỗ trợ tới 10 thiết bị cùng lúc."
+        },
+        {
+          "title": "Hỗ trợ 24/7",
+          "description": "Chúng tôi cung cấp hỗ trợ khách hàng 24/7 để giúp bạn với eSIM hoặc bất kỳ thắc mắc nào."
+        },
+        {
+          "title": "Phủ sóng rộng",
+          "description": "Tín hiệu đáng tin cậy tại Tokyo, Kyoto, Osaka, Hokkaido và cả các thị trấn vùng sâu vùng xa."
+        }
+      ]
+    },
+    "deliveryPickup": {
+      "title": "Tùy chọn giao hàng và nhận hàng",
+      "titlefollow": "Nếu bạn chọn SIM truyền thống hoặc pocket WiFi, Yoowifi cung cấp các tùy chọn giao hàng và nhận hàng tiện lợi để đảm bảo bạn nhận đơn hàng dễ dàng",
+      "steps": [
+        {
+          "title": "Giao hàng tiêu chuẩn",
+          "description": "Nhận đơn hàng trong vòng ba đến bốn ngày làm việc."
+        },
+        {
+          "title": "Giao hàng nhanh",
+          "description": "Cần gấp? Chọn giao hàng vào ngày làm việc tiếp theo (giờ cắt đơn: 9 PM)."
+        },
+        {
+          "title": "Tự đến lấy",
+          "description": "Để linh hoạt hơn, bạn có thể nhận đơn hàng tại hơn 20 địa điểm thuận tiện."
+        }
+      ]
+    },
+    "setupActivation": {
+      "title": "Hướng dẫn cài đặt và kích hoạt",
+      "titlefollow": "Dù bạn nhận eSIM cho Thái Lan, Trung Quốc hay bất kỳ quốc gia nào khác, Yoowifi giúp bạn kết nối dễ dàng.",
+      "guides": [
+        {
+          "device": "iOS",
+          "steps": [
+            "Đi tới \"Settings.\"",
+            "Chọn \"Mobile Service\" hoặc \"Cellular.\"",
+            "Chọn \"Add eSIM\" hoặc \"Add Cellular Plan.\"",
+            "Chọn \"Use QR Code\" và quét mã QR eSIM.",
+            "Bật Data Roaming, và eSIM cho Thái Lan của bạn đã sẵn sàng."
+          ]
+        },
+        {
+          "device": "Samsung/Android",
+          "steps": [
+            "Đi tới \"Settings\" + \"Connections.\"",
+            "Chọn \"SIM manager.\"",
+            "Chọn \"Add eSIM.\"",
+            "Chọn \"Scan QR code\" hoặc \"Enter activation code.\"",
+            "Chọn \"Add\" hoặc \"Confirm\" để thêm eSIM vào thiết bị của bạn. eSIM cho Thái Lan của bạn hiện đã sẵn sàng sử dụng."
+          ]
+        },
+        {
+          "device": "Hướng dẫn cài đặt SIM vật lý",
+          "steps": [
+            "Tắt thiết bị của bạn",
+            "Lắp SIM vào.",
+            "Bật thiết bị.",
+            "Bật data roaming."
+          ]
+        }
+      ]
+    },
+    "thingsToKnow": {
+      "title": "Những điều cần biết trước khi mua eSIM cho Trung Quốc",
+      "titlefollow": "Trước khi mua eSIM cho Trung Quốc, đây là những điều quan trọng cần nhớ",
+      "steps": [
+        {
+          "title": "Kiểm tra khả năng tương thích của eSIM",
+          "description": "Đảm bảo thiết bị của bạn hỗ trợ công nghệ eSIM vì không phải thiết bị nào cũng hỗ trợ."
+        },
+        {
+          "title": "Yêu cầu hộ chiếu",
+          "description": "Biết các yêu cầu về hộ chiếu cho việc đăng ký SIM trong nước. Một số nhà cung cấp có thể yêu cầu thông tin hộ chiếu để kích hoạt eSIM."
+        },
+        {
+          "title": "Chi phí roaming",
+          "description": "Hiểu rõ các khoản phí roaming có thể phát sinh nếu bạn không sử dụng eSIM cho Trung Quốc. Các khoản phí này có thể đáng kể, vì vậy eSIM giúp bạn tiết kiệm chi phí."
+        },
+        {
+          "title": "Kỳ vọng về tốc độ và vùng phủ sóng",
+          "description": "Nghiên cứu tốc độ và vùng phủ sóng của các nhà cung cấp khác nhau. Yoowifi nỗ lực cung cấp kết nối tốc độ cao, nhưng vùng phủ sóng có thể thay đổi theo khu vực."
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Các câu hỏi thường gặp về eSIM Trung Quốc của chúng tôi",
+      "faqs": [
+        {
+          "question": "Điện thoại của tôi có hỗ trợ eSIM không?",
+          "answer": "Khả năng tương thích eSIM phụ thuộc vào thiết bị và nhà mạng. Kiểm tra thông số kỹ thuật điện thoại hoặc trang web nhà mạng để xác nhận thiết bị của bạn có hỗ trợ eSIM cho Trung Quốc không."
+        },
+        {
+          "question": "Nếu tôi hết dữ liệu ở Trung Quốc thì sao?",
+          "answer": "Nếu hết dữ liệu, bạn có thể dễ dàng nạp thêm hoặc mua gói dữ liệu bổ sung qua trang web hoặc ứng dụng của chúng tôi. Hãy đảm bảo bạn đang kết nối Wi-Fi khi thực hiện điều này."
+        },
+        {
+          "question": "Sim du lịch ở Trung Quốc giá bao nhiêu?",
+          "answer": "Sim du lịch ở Trung Quốc có giá từ 10 đến 50 USD tùy vào dung lượng dữ liệu và thời hạn sử dụng. Tuy nhiên, các gói eSIM của chúng tôi thường tiện lợi hơn và có giá trị tốt hơn cho du khách ngắn hạn."
+        },
+        {
+          "question": "Tôi có thể giữ số Singapore hoạt động trong khi dùng eSIM Trung Quốc không?",
+          "answer": "Có, nếu điện thoại của bạn hỗ trợ chức năng dual SIM (sim vật lý + eSIM), bạn có thể giữ số Singapore hoạt động cho cuộc gọi và tin nhắn trong khi sử dụng eSIM cho dữ liệu ở Trung Quốc."
+        },
+        {
+          "question": "Tôi có cần VPN khi dùng eSIM ở Trung Quốc không?",
+          "answer": "Có, nhiều website và ứng dụng phổ biến bị hạn chế tại Trung Quốc. Sử dụng VPN sẽ giúp bạn truy cập các dịch vụ như Google, WhatsApp, Instagram và nhiều hơn nữa trong khi vẫn giữ kết nối qua eSIM."
+        }
+      ]
+    }
+  },
+
+  "eSimThailand": {
+    "heading": "eSim Thái Lan",
+    "hero": {
+      "para1": "Giữ kết nối trong chuyến phiêu lưu tại Thái Lan của bạn. Cho dù bạn đang dùng Google Maps ở Bangkok hay đăng ảnh trên Instagram từ Phuket, truy cập internet đáng tin cậy chính là hộ chiếu cho hành trình không căng thẳng của bạn.",
+      "para2": "Yoowifi cung cấp các giải pháp kết nối cao cấp được các du khách tin tưởng — không gặp rắc rối về kết nối, chỉ có internet đáng tin cậy và giá cả phải chăng khắp Thái Lan.",
+      "imageHeading": "Các gói của Yoowifi dành cho Thái Lan",
+      "para3": "Mở khóa kết nối dễ dàng trên toàn Thái Lan với các lựa chọn eSIM linh hoạt và tiết kiệm của Yoowifi. Bắt đầu chỉ từ S$1 mỗi ngày, truy cập dữ liệu 4G tốc độ cao, đảm bảo duyệt web mượt mà và điều hướng dễ dàng suốt hành trình khám phá Thái Lan của bạn.",
+      "para4": "Khởi đầu thật dễ dàng: chỉ cần quét mã QR mà chúng tôi cung cấp — không cần đổi SIM, không cần đến cửa hàng. Làm theo các bước cài đặt đơn giản để kích hoạt nhanh chóng. Thêm vào đó, Yoowifi thông minh kết nối bạn với nhà mạng mạnh nhất có sẵn tại Thái Lan, đảm bảo phủ sóng và tốc độ tối ưu dù bạn đi đâu. Truy cập dữ liệu của bạn bắt đầu ngay khi bạn hạ cánh và bắt đầu sử dụng eSIM tại Thái Lan.",
+      "para5": "Khám phá các gói đa dạng của chúng tôi, được thiết kế phù hợp với mọi lịch trình — từ những chuyến khám phá nhanh trong thành phố đến các hành trình dài hơn trên Đất Nụ Cười. Chọn từ nhiều dung lượng dữ liệu và thời gian sử dụng để kết nối theo cách của bạn."
+    },
+    "getSim": {
+      "title": "Cách lấy eSIM cho Thái Lan",
+      "titlefollow": "Kết nối cực kỳ đơn giản với Yoowifi. Quy trình tinh gọn của chúng tôi giúp bạn online trước khi máy bay chạm đất tại Thái Lan.",
+      "plans": [
+        {
+          "title": "Chọn Gói và Chi Tiết Chuyến Đi",
+          "description": "Chọn tùy chọn eSIM phù hợp nhất với thời gian chuyến đi và nhu cầu dữ liệu dự kiến của bạn cho cuộc phiêu lưu tại Thái Lan."
+        },
+        {
+          "title": "Kích hoạt eSIM Thái Lan của bạn:",
+          "description": "Sau khi mua xong, bạn sẽ nhận được mã QR và hướng dẫn đơn giản. Chỉ cần quét mã bằng thiết bị tương thích để kích hoạt eSIM cho Thái Lan."
+        }
+      ]
+    },
+    "whatsBetter": {
+      "title": "eSIM so với SIM vật lý – Cái nào tốt hơn?",
+      "titlefollow": "Yoowifi cung cấp cho bạn nhiều lựa chọn vì chúng tôi biết không phải kiểu nào cũng phù hợp với tất cả. Dù bạn là dân du mục kỹ thuật số hay khách du lịch bình thường, chúng tôi đều có giải pháp cho bạn:",
+      "esim": {
+        "title": "eSIM",
+        "points": {
+          "1": "Kích hoạt nhanh qua mã QR — kết nối ngay lập tức",
+          "2": "Không cần đổi SIM — giữ SIM chính của bạn hoạt động khi ở Thái Lan",
+          "3": "Giữ số chính cho các cuộc gọi quan trọng",
+          "4": "Kích hoạt trước khi bay — đến nơi đã có kết nối",
+          "5": "Chỉ tương thích với điện thoại thông minh mới hơn"
+        }
+      },
+      "pocketWifi": {
+        "title": "SIM vật lý",
+        "points": {
+          "1": "Hoạt động với HẦU HẾT các mẫu điện thoại",
+          "2": "Hoàn hảo cho du khách thích sự đơn giản",
+          "3": "Không có câu hỏi hay lo ngại về tương thích",
+          "4": "Phân phối rộng rãi khắp Thái Lan",
+          "5": "Cần giao hàng hoặc tự lấy"
+        }
+      }
+    },
+    "simFeatures": {
+      "title": "Những điều cần biết trước khi mua eSIM cho Thái Lan",
+      "titlefollow": "Trước khi bạn mua eSIM cho Thái Lan, đây là những điểm quan trọng cần nhớ",
+      "features": [
+        {
+          "title": "Kết nối tốc độ cao",
+          "description": "Kết nối 4G siêu nhanh với vùng phủ sóng rộng khắp mọi nơi bạn đến"
+        },
+        {
+          "title": "Giá cả phải chăng",
+          "description": "Giá cực kỳ hợp lý bắt đầu chỉ từ S$1/ngày."
+        },
+        {
+          "title": "Hỗ trợ nhiều thiết bị",
+          "description": "Kết nối đồng thời lên đến 10 thiết bị — chia sẻ cùng bạn bè và gia đình."
+        },
+        {
+          "title": "Lựa chọn linh hoạt",
+          "description": "Lựa chọn linh hoạt cho eSIM, SIM vật lý, và pocket WiFi cho chuyến đi Thái Lan của bạn — hành trình của bạn, lựa chọn của bạn."
+        },
+        {
+          "title": "Hỗ trợ 24/7",
+          "description": "Hỗ trợ khách hàng 24/7 — chúng tôi luôn sẵn sàng giúp đỡ bạn."
+        }
+      ]
+    },
+    "deliveryPickup": {
+      "title": "Tùy chọn giao hàng & nhận hàng",
+      "titlefollow": "Nếu bạn chọn SIM truyền thống hoặc pocket WiFi, Yoowifi cung cấp các tùy chọn giao hàng và nhận hàng tiện lợi để đảm bảo bạn nhận được đơn hàng dễ dàng",
+      "steps": [
+        {
+          "title": "Giao hàng tiêu chuẩn",
+          "description": "3 đến 4 ngày làm việc qua J&T Express — hoàn hảo cho người lập kế hoạch trước"
+        },
+        {
+          "title": "Giao hàng nhanh",
+          "description": "Giao hàng vào ngày làm việc tiếp theo (đặt hàng trước 9 giờ tối) — dành cho kế hoạch du lịch phút chót"
+        },
+        {
+          "title": "Tự nhận hàng",
+          "description": "Nhận thiết bị của bạn tại hơn 30 địa điểm tiện lợi trên toàn Singapore"
+        }
+      ]
+    },
+    "setupActivation": {
+      "title": "Hướng dẫn cài đặt & kích hoạt",
+      "titlefollow": "Dù bạn lấy eSIM cho Thái Lan, Trung Quốc hay bất kỳ quốc gia nào khác, Yoowifi giúp bạn kết nối dễ dàng.",
+      "guides": [
+        {
+          "device": "iOS",
+          "steps": [
+            "Vào \"Cài đặt.\"",
+            "Chọn \"Dịch vụ di động\" hoặc \"Di động.\"",
+            "Chọn \"Thêm eSIM\" hoặc \"Thêm gói di động.\"",
+            "Chọn \"Sử dụng mã QR\" và quét mã QR eSIM.",
+            "Bật Data Roaming, eSIM Thái Lan của bạn đã sẵn sàng sử dụng."
+          ]
+        },
+        {
+          "device": "Samsung/Android",
+          "steps": [
+            "Vào \"Cài đặt\" + \"Kết nối.\"",
+            "Chọn \"Quản lý SIM.\"",
+            "Chọn \"Thêm eSIM.\"",
+            "Chọn \"Quét mã QR\" hoặc \"Nhập mã kích hoạt.\"",
+            "Chọn \"Thêm\" hoặc \"Xác nhận\" để thêm eSIM vào thiết bị. eSIM Thái Lan của bạn đã sẵn sàng sử dụng."
+          ]
+        },
+        {
+          "device": "Hướng dẫn lắp SIM vật lý",
+          "steps": [
+            "Tắt nguồn thiết bị",
+            "Lắp SIM vào.",
+            "Bật nguồn thiết bị.",
+            "Bật Data Roaming."
+          ]
+        }
+      ]
+    },
+    "thingsToKnow": {
+      "title": "Những điều cần biết trước khi mua",
+      "titlefollow": "Tại Yoowifi, chúng tôi tin vào sự minh bạch và đảm bảo bạn có tất cả thông tin cần thiết để có trải nghiệm kết nối hoàn hảo tại Thái Lan.",
+      "steps": [
+        {
+          "title": "Kiểm tra tương thích eSIM",
+          "description": "Các điện thoại mới nhất hỗ trợ eSIM bao gồm Apple iPhone 14–17, Samsung Galaxy S, A, Z và XCover, Google Pixel 8–9, Sony Xperia 1–10, Xiaomi dòng 15, Motorola Razr và Edge, OnePlus 13T và Open, Honor Magic 6 Pro và 90, cùng các mẫu khác như Vivo X100 Pro, Fairphone 5 và nhiều hơn nữa."
+        },
+        {
+          "title": "Yêu cầu hộ chiếu",
+          "description": "Mua SIM địa phương cho Thái Lan yêu cầu giấy tờ tùy thân hộ chiếu."
+        },
+        {
+          "title": "Chi phí roaming",
+          "description": "Hãy cẩn thận với các khoản phí có thể phát sinh từ gói di động thông thường khi bạn ở Thái Lan nếu không chọn eSIM. Các khoản phí này có thể tăng nhanh, khiến eSIM trở thành lựa chọn tiết kiệm chi phí hơn."
+        },
+        {
+          "title": "Kỳ vọng về tốc độ và vùng phủ sóng",
+          "description": "Tìm hiểu về tốc độ internet và phạm vi phủ sóng mạng dự kiến của các nhà cung cấp tại Thái Lan. Dù Yoowifi hướng tới cung cấp kết nối tốc độ cao, sức mạnh tín hiệu có thể khác nhau ở từng khu vực."
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Các câu hỏi thường gặp về eSIM Thái Lan của chúng tôi",
+      "faqs": [
+        {
+          "question": "Điện thoại của tôi có hỗ trợ eSIM không?",
+          "answer": "Hầu hết điện thoại thông minh sản xuất sau năm 2018 đều hỗ trợ eSIM. Kiểm tra công cụ tương thích của chúng tôi để xác nhận thiết bị của bạn trong vài giây."
+        },
+        {
+          "question": "Nếu hết dữ liệu ở Thái Lan thì sao?",
+          "answer": "Nếu hết dữ liệu, bạn có thể dễ dàng nạp thêm hoặc mua gói dữ liệu bổ sung qua website hoặc ứng dụng của chúng tôi. Hãy đảm bảo thực hiện điều này khi bạn đang kết nối Wi-Fi."
+        },
+        {
+          "question": "SIM du lịch ở Thái Lan giá bao nhiêu?",
+          "answer": "SIM du lịch ở Thái Lan có giá từ 10 đến 50 USD tùy thuộc vào dung lượng dữ liệu và thời gian sử dụng. Tuy nhiên, các gói eSIM của chúng tôi thường mang lại sự tiện lợi và giá trị tốt hơn cho khách du lịch ngắn hạn."
+        },
+        {
+          "question": "Tôi có thể giữ số Singapore hoạt động khi dùng eSIM Thái Lan không?",
+          "answer": "Có, nếu điện thoại của bạn hỗ trợ chức năng hai SIM (SIM vật lý + eSIM), bạn có thể giữ số Singapore hoạt động để gọi và nhắn tin trong khi dùng eSIM để truy cập dữ liệu ở Thái Lan."
+        },
+        {
+          "question": "Tôi có cần VPN khi dùng eSIM ở Thái Lan không?",
+          "answer": "Có, nhiều trang web và ứng dụng phổ biến bị hạn chế tại Thái Lan. Sử dụng VPN sẽ giúp bạn truy cập các dịch vụ như Google, WhatsApp, Instagram và nhiều hơn nữa trong khi vẫn kết nối qua eSIM."
+        }
+      ]
+    }
   }
 }

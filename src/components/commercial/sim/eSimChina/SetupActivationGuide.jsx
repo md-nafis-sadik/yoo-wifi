@@ -6,7 +6,7 @@ export default function SetupActivationGuide() {
   const { t } = useTranslation();
   
   return (
-    <section className="container3X sec_common_60 bg-neutral-100 rounded-3xl">
+    <section className="container3X sec_common_60 bg-neutral-100 rounded-3xl my-6 xl:my-15">
       <SectionHeader
         heading={t("eSimChina.setupActivation.title")}
         subHeading={t("eSimChina.setupActivation.titlefollow")}

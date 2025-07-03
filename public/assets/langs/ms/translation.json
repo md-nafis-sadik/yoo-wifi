@@ -2576,5 +2576,641 @@
         "answer": "Kelajuan sambungan di China berbeza mengikut lokasi dan rangkaian. Di bandar utama seperti Beijing dan Shanghai, kelajuan 4G/LTE biasanya pantas, manakala di kawasan luar bandar mungkin lebih perlahan. Pocket WiFi Yoowifi secara automatik memilih rangkaian terbaik yang tersedia untuk prestasi optimum."
       }
     ]
+  },
+
+  "pocketWifiJapan": {
+    "heading": "Pocket Wifi Jepun",
+    "hero": {
+      "para1": "Buka pengembaraan anda di Jepun dengan sambungan tanpa gangguan. Sama ada mengemudi sistem subway kompleks di Tokyo, menterjemah papan tanda di Kyoto, atau mengatur mesyuarat perniagaan di Osaka, internet yang boleh dipercayai adalah penting. Elakkan kos roaming mudah alih yang mahal daripada pembekal Singapura dan kesukaran pendaftaran SIM tempatan serta navigasi bahasa.",
+      "para2": "Dalam situasi seperti ini, pocket WiFi adalah pilihan yang lebih baik. Dengan kelajuan 4G LTE yang pantas, data tanpa had, dan sokongan untuk pelbagai peranti, ia adalah cara paling mudah dan boleh dipercayai untuk kekal dalam talian sepanjang perjalanan anda di Jepun. Tiada kesulitan teknologi, tiada pertukaran SIM, hanya internet segera dan selamat sebaik sahaja anda tiba."
+    },
+    "wifiPlan": {
+      "title": "Pelan Pocket WiFi Yoowifi",
+      "titlefollow": "Yoowifi menawarkan pelan pocket WiFi yang mudah untuk pelancong yang menuju ke China. Pelan kami direka untuk menyediakan sambungan tanpa gangguan tanpa kerumitan kad SIM tempatan atau pemasangan yang rumit.",
+      "plans": [
+        {
+          "title": "Kadar harian",
+          "description": "Harga sewaan pocket WiFi kami bermula dari hanya S$2.50/hari. Pilih antara 3GB atau 10GB data laju harian di Jepun."
+        },
+        {
+          "title": "Polisi penggunaan adil (FUP)",
+          "description": "Apabila had data harian anda dicapai, anda boleh terus menggunakan data tanpa had pada kelajuan yang dikurangkan (sehingga 3 Mbps)."
+        },
+        {
+          "title": "Proses penghantaran & pemulangan",
+          "description": "Kami menyediakan penghantaran standard percuma di Singapura. Anda juga boleh memilih pengambilan sendiri di salah satu daripada banyak titik pengambilan kami. Hantar balik di mana-mana kiosk Yoowifi atau gunakan beg pos yang disertakan untuk pemulangan."
+        },
+        {
+          "title": "Polisi pembatalan",
+          "description": "Pelan boleh dibatalkan dengan menghubungi pasukan sokongan kami dan akan diproses mengikut terma dan syarat kami."
+        }
+      ]
+    },
+    "wifiFeatures": {
+      "title": "Ciri-ciri Pocket WiFi Yoowifi untuk Jepun",
+      "titlefollow": "Ini sebab mengapa pocket WiFi Yoowifi adalah pilihan utama untuk pelancong ke Jepun",
+      "features": [
+        {
+          "title": "4G LTE berkelajuan tinggi",
+          "description": "Layari web, strim, dan navigasi dengan kelajuan 4G LTE sehingga 300Mbps"
+        },
+        {
+          "title": "Data tanpa had",
+          "description": "Tiada had penggunaan, hanya data berkelajuan tinggi diikuti dengan akses berterusan pada kelajuan yang dikurangkan."
+        },
+        {
+          "title": "Sokongan pelbagai peranti",
+          "description": "Sambungkan sehingga 10 peranti serentak, sesuai untuk keluarga, rakan-rakan, atau kumpulan kerja."
+        },
+        {
+          "title": "Reka bentuk mudah alih",
+          "description": "Ringan, padat, dan mudah dimasukkan ke dalam poket atau beg anda."
+        },
+        {
+          "title": "Jangka hayat bateri panjang",
+          "description": "Nikmati penggunaan berterusan sehingga 12 jam setiap pengecasan."
+        },
+        {
+          "title": "Liputan luas",
+          "description": "Isyarat boleh dipercayai di Tokyo, Kyoto, Osaka, Hokkaido, dan juga bandar luar bandar."
+        }
+      ]
+    },
+    "whyUse": {
+      "title": "Mengapa Menggunakan Pocket WiFi",
+      "titlefollow": "Ini sebab mengapa pocket WiFi adalah pilihan bijak untuk kekal bersambung semasa perjalanan anda ke China:",
+      "benifits": [
+        {
+          "title": "Elakkan yuran roaming",
+          "description": "Katakan selamat tinggal kepada bil mengejut daripada pembekal Singapura anda."
+        },
+        {
+          "title": "Akses internet konsisten",
+          "description": "Berbeza dengan WiFi hotel atau awam yang tidak stabil, pocket WiFi kami memastikan anda sentiasa bersambung di seluruh Jepun."
+        }
+      ],
+      "extraBenifits": [
+        {
+          "title": "Sambungan berbilang peranti",
+          "description": "Satu peranti boleh menyokong sehingga 10 gajet seperti telefon, tablet, laptop, dan lain-lain."
+        },
+        {
+          "title": "Tiada SIM diperlukan",
+          "description": "Tidak perlu risau tentang keserasian atau peraturan kad SIM tempatan."
+        },
+        {
+          "title": "Sesuai untuk kumpulan",
+          "description": "Keluarga dan pasukan perniagaan boleh berkongsi hotspot yang sama dengan lancar."
+        }
+      ]
+    },
+    "howToGet": {
+      "title": "Bagaimana Mendapatkan Pocket WiFi untuk Jepun?",
+      "titlefollow": "Berikut adalah panduan langkah demi langkah mudah untuk menempah pocket WiFi bagi perjalanan anda ke Jepun",
+      "steps": [
+        {
+          "title": "Anda boleh membuat pesanan di yoowifi.com atau muat turun aplikasi."
+        },
+        {
+          "title": "Pilih pelan data pilihan anda dan pilih servis sewaan."
+        },
+        {
+          "title": "Pilih Jepun sebagai destinasi anda."
+        },
+        {
+          "title": "Pilih tarikh perjalanan anda."
+        },
+        {
+          "title": "Tambah bilangan peranti dan ketik “Seterusnya.”"
+        },
+        {
+          "title": "Pilih penghantaran atau pengambilan sendiri."
+        },
+        {
+          "title": "Selepas itu, buat pembayaran untuk menamatkan tempahan."
+        }
+      ]
+    },
+    "deliveryOptions": {
+      "title": "Pilihan Penghantaran",
+      "titlefollow": "Yoowifi menawarkan beberapa pilihan penghantaran fleksibel supaya anda boleh menerima peranti pocket WiFi mengikut kehendak anda:",
+      "plans": [
+        {
+          "title": "Ambil sendiri",
+          "description": "Anda boleh mengambil pocket WiFi anda dari mana-mana titik pengambilan sendiri yang mudah di seluruh Singapura. Peranti tersedia untuk diambil sehingga 5 hari sebelum berlepas ke Jepun, memberikan anda masa untuk bersedia dan menguji sebelum penerbangan."
+        },
+        {
+          "title": "Polisi penggunaan adil (FUP)",
+          "description": "Penghantaran standard biasanya dilakukan 3 hingga 5 hari bekerja sebelum tarikh berlepas anda dengan kos S$1.99. Ia termasuk beg pos berbayar untuk memudahkan pemulangan peranti selepas perjalanan anda."
+        },
+        {
+          "title": "Penghantaran Ekspres",
+          "description": "Pilihan ekspres kami memastikan pocket WiFi anda sampai dalam masa 2 hari bekerja apabila anda membuat pesanan sebelum jam 2 petang. Sampul surat pemulangan disediakan untuk pemulangan tanpa stres."
+        },
+        {
+          "title": "Penghantaran Super Ekspres",
+          "description": "Perlukan dengan segera? Pilih penghantaran super ekspres dengan kos S$20. Buat pesanan sebelum jam 2 petang, dan peranti anda akan dihantar pada hari bekerja yang sama."
+        }
+      ]
+    },
+    "whatToExpect": {
+      "title": "Apa Yang Dijangka di Jepun?",
+      "titlefollow": "Jepun terkenal dengan infrastruktur mudah alih yang maju, tetapi akses internet yang konsisten tidak dijamin di semua tempat",
+      "expectations": [
+        {
+          "title": "Kelajuan dan kebolehpercayaan",
+          "description": "Walaupun bandar besar seperti Tokyo, Osaka, dan Kyoto menawarkan infrastruktur internet yang kukuh, kawasan luar bandar mungkin menghadapi cabaran."
+        },
+        {
+          "title": "Aplikasi perjalanan penting",
+          "description": "Gunakan Google Maps, Terjemahan, dan aplikasi pengangkutan tanpa gangguan."
+        },
+        {
+          "title": "WiFi awam terhad",
+          "description": "WiFi percuma tersedia di lokasi terpilih seperti lapangan terbang, stesen kereta api, dan kafe. Oleh itu, peranti pocket WiFi kami memastikan sambungan yang konsisten supaya anda boleh kekal bersambung di seluruh Jepun."
+        }
+      ]
+    },
+    "conparision": {
+      "title": "Pocket WiFi Vs SIM/eSIM di Jepun",
+      "titlefollow": "Memilih antara pocket WiFi dan SIM atau eSIM untuk China bergantung pada keperluan perjalanan anda. Berikut adalah perbandingan ringkas untuk membantu anda memilih pilihan terbaik untuk kekal bersambung di Jepun.",
+      "comparisionTable": {
+        "th": {
+          "1": "Ciri",
+          "2": "Pocket WiFi",
+          "3": "SIM/eSIM"
+        },
+        "tr": [
+          {
+            "1": "Sesuai untuk",
+            "2": "Kumpulan, keluarga, pelancong, dan pekerja jarak jauh",
+            "3": "Pelancong solo atau pengunjung jangka panjang"
+          },
+          {
+            "1": "Liputan negara",
+            "2": "Lebih 90 negara",
+            "3": "Lebih 160 negara"
+          },
+          {
+            "1": "Kelajuan",
+            "2": "Sehingga 300Mbps",
+            "3": "Sehingga kelajuan 4G LTE"
+          },
+          {
+            "1": "Pilihan data",
+            "2": "3GB/hari hingga 200GB/tahun",
+            "3": "500MB/hari hingga 30GB/bulan"
+          },
+          {
+            "1": "Persediaan",
+            "2": "Plug-and-play mudah",
+            "3": "Aktivasi cepat dengan kod QR"
+          },
+          {
+            "1": "Perkongsian",
+            "2": "Sambungkan sehingga 10 peranti",
+            "3": "Terhad kepada satu peranti setiap SIM/eSIM"
+          },
+          {
+            "1": "Pelan",
+            "2": "Pelan fleksibel",
+            "3": "Sehingga 12 jam setiap pengecasan"
+          },
+          {
+            "1": "Jangka hayat bateri",
+            "2": "Sehingga 12 jam setiap pengecasan",
+            "3": "Bergantung pada peranti"
+          },
+          {
+            "1": "Proses pengaktifan",
+            "2": "Hidupkan, cari nama wifi, dan sambung dengan kata laluan",
+            "3": "Aktifkan melalui aplikasi atau masukkan SIM dan hidupkan roaming data"
+          },
+          {
+            "1": "Kos",
+            "2": "Dari S$2.50/hari",
+            "3": "Harga bergantung pada data dan tempoh"
+          },
+          {
+            "1": "Fleksibiliti",
+            "2": "Sewa jangka pendek atau beli untuk kegunaan jangka panjang",
+            "3": "Beli SIM/eSIM untuk fleksibiliti, tambah nilai bila-bila masa"
+          }
+        ]
+      }
+    },
+    "ImportantConsiderations": {
+      "title": "Internet di China – Pertimbangan Penting",
+      "titlefollow": "Apabila melancong ke China, memahami landskap internet tempatan adalah penting untuk kekal bersambung dan mengakses maklumat yang anda perlukan.",
+      "considerations": [
+        {
+          "title": "Had Rangkaian Peribadi Maya (VPN)",
+          "description": "Adalah penting untuk ambil perhatian bahawa peranti pocket WiFi itu sendiri tidak menyediakan kemampuan VPN. Untuk mengakses kandungan yang disekat, anda mesti memasang VPN pada peranti anda sebelum tiba di China."
+        },
+        {
+          "title": "Polisi penggunaan adil (FUP)",
+          "description": "Nikmati penghantaran domestik dalam masa 5 hari bekerja sebelum anda berlepas dengan kos S$1.99. Beg pos untuk pemulangan disertakan untuk kemudahan pemulangan. Untuk pesanan awal, penghantaran biasanya dijadualkan dalam masa 3 hari sebelum perjalanan anda."
+        },
+        {
+          "title": "Pocket WiFi + VPN",
+          "description": "Menggabungkan peranti pocket WiFi kami dengan aplikasi VPN anda adalah penyelesaian praktikal. Pocket WiFi memastikan akses internet yang boleh dipercayai di seluruh China, manakala VPN membolehkan anda mengakses laman web dan perkhidmatan yang terhad."
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Soalan Lazim Mengenai Pocket WiFi untuk Jepun",
+      "faqs": [
+        {
+          "question": "Adakah pocket WiFi memerlukan kad SIM?",
+          "answer": "Tidak, pocket WiFi kami menggunakan teknologi cloud SIM yang bersambung ke rangkaian tempatan terbaik di Jepun; kad SIM fizikal tidak diperlukan."
+        },
+        {
+          "question": "Berapa kos pocket WiFi di Jepun?",
+          "answer": "Tidak mahal."
+        },
+        {
+          "question": "Apa yang perlu dilakukan jika saya kehilangan peranti pocket WiFi?",
+          "answer": "Jika anda kehilangan peranti pocket WiFi Yoowifi, anda harus melaporkannya segera kepada penyedia sewaan. Mungkin terdapat yuran kehilangan peranti, tetapi sesetengah syarikat menawarkan insurans atau pelan perlindungan untuk mengurangkan kos."
+        },
+        {
+          "question": "Bagaimana kelajuan sambungan di Jepun?",
+          "answer": "Kelajuan sambungan di China berbeza mengikut lokasi dan rangkaian. Di bandar besar seperti Beijing dan Shanghai, kelajuan 4G/LTE biasanya pantas, manakala kawasan luar bandar mungkin mempunyai sambungan yang lebih perlahan. Pocket WiFi Yoowifi secara automatik memilih rangkaian terbaik yang tersedia untuk prestasi optimum."
+        },
+        {
+          "question": "Bolehkah saya membeli pocket WiFi di lapangan terbang di Jepun?",
+          "answer": "Bergantung."
+        },
+        {
+          "question": "Bolehkah saya menyewa pocket WiFi di Jepun?",
+          "answer": "Ya, anda boleh menyewa pocket WiFi di China melalui penyedia seperti Yoowifi, yang menawarkan pilihan pengambilan di lapangan terbang atau penghantaran ke hotel anda. Ini membolehkan anda kekal bersambung tanpa perlu kad SIM tempatan."
+        },
+        {
+          "question": "Adakah terdapat had kelajuan pada pocket WiFi?",
+          "answer": "Tidak, pocket WiFi Yoowifi tidak menyokong pemasangan VPN terus pada peranti. Walau bagaimanapun, anda masih boleh menggunakan VPN pada telefon pintar, komputer riba, atau tablet yang disambungkan untuk mengakses laman web terhad semasa berada di China."
+        },
+        {
+          "question": "Adakah saya memerlukan VPN jika menggunakan eSIM di China?",
+          "answer": "Ya, jika anda ingin mengakses laman web dan perkhidmatan yang terhad di China (seperti Google, Facebook, atau WhatsApp), anda masih memerlukan VPN walaupun menggunakan eSIM. eSIM hanya menyediakan sambungan data tetapi tidak memintas Great Firewall."
+        },
+        {
+          "question": "Bolehkah saya menggunakannya di pelbagai bandar Jepun?",
+          "answer": "Ya, jika anda ingin mengakses laman web dan perkhidmatan yang terhad di China (seperti Google, Facebook, atau WhatsApp), anda masih memerlukan VPN walaupun menggunakan eSIM. eSIM hanya menyediakan sambungan data tetapi tidak memintas Great Firewall."
+        }
+      ]
+    }
+  },
+
+  "eSimChina": {
+    "heading": "eSim China",
+    "hero": {
+      "para1": "Sentiasa berhubung sepanjang pengembaraan anda yang pelbagai dan dinamik di China. Sama ada anda menggunakan Google Maps di Beijing atau berkongsi detik di WeChat/TikTok dari Tembok Besar, internet yang boleh dipercayai adalah kunci untuk pengalaman yang lancar dan bermakna. Elakkan caj roaming yang mahal dan kesulitan mencari kad SIM tempatan apabila tiba.",
+      "para2": "Di sinilah eSIM Yoowifi berperanan. Kami menyediakan sambungan tanpa gangguan yang penting untuk penerokaan anda di China. Jelajah dan kongsi pengalaman anda dengan yakin, sentiasa yakin dengan akses internet yang boleh dipercayai dan berpatutan.",
+      "imageHeading": "Pelan Yoowifi China",
+      "para3": "Yoowifi menawarkan pelbagai pelan eSIM yang fleksibel dan berpatutan untuk perjalanan anda di China. Bermula serendah S$0.75 sehari, pilihan eSIM data sahaja yang lancar ini menyediakan sambungan berkelajuan tinggi sehingga 4G, memastikan anda boleh melayari, menstrim dan menavigasi dengan mudah.",
+      "para4": "Lebih menarik, eSIM kami untuk China datang dengan kod QR mudah dan arahan pemasangan untuk pengaktifan cepat. Yoowifi juga menghubungkan anda kepada pengendali perkhidmatan terbaik yang tersedia di China, menjamin liputan dan kelajuan optimum, dan kesahihan data bermula hanya apabila anda mula menggunakannya di negara tersebut.",
+      "para5": "Pelan-pelan adalah pelbagai, bermula dari 500MB sehari hingga 30GB sebulan, dengan tempoh yang sesuai untuk sebarang perjalanan, dari perjalanan sehari yang singkat hingga pengembaraan sepanjang sebulan."
+    },
+    "getSim": {
+      "title": "Cara Mendapatkan eSIM untuk China",
+      "titlefollow": "Mendapatkan eSIM anda untuk China sangat mudah! Berikut adalah langkah mudah untuk membuat anda berhubung dengan cepat",
+      "plans": [
+        {
+          "title": "Pilih Pelan & Butiran Perjalanan Anda",
+          "description": "Pilih pilihan eSIM yang paling sesuai dengan tempoh perjalanan dan keperluan data yang dijangkakan."
+        },
+        {
+          "title": "Aktifkan eSIM China Anda",
+          "description": "Setelah pembelian selesai, anda akan menerima kod QR unik bersama arahan mudah. Cuma imbas kod tersebut dengan peranti yang serasi untuk pengaktifan pantas dan segera."
+        }
+      ]
+    },
+    "whatsBetter": {
+      "title": "eSIM vs. Kad SIM Fizikal – Mana Lebih Baik?",
+      "titlefollow": "Yoowifi memberikan anda pilihan kerana kami tahu saiz satu tidak sesuai untuk semua. Sama ada anda nomad digital atau pelancong kasual, kami sedia membantu anda:",
+      "esim": {
+        "title": "eSIM",
+        "points": {
+          "1": "Pengaktifan pantas melalui kod QR – sambungan segera",
+          "2": "Tiada pertukaran SIM diperlukan",
+          "3": "Mudah untuk perjalanan antarabangsa",
+          "4": "Tidak semua rangkaian/telefon menyokong eSIM"
+        }
+      },
+      "pocketWifi": {
+        "title": "Kad SIM Fizikal",
+        "points": {
+          "1": "Berfungsi dengan kebanyakan telefon",
+          "2": "Mudah untuk menukar SIM apabila menukar peranti",
+          "3": "Ideal untuk pengguna yang kurang mahir teknologi",
+          "4": "Memerlukan penghantaran atau pengambilan fizikal"
+        }
+      }
+    },
+    "simFeatures": {
+      "title": "Mengapa Pilih Yoowifi untuk Sambungan di China",
+      "titlefollow": "Yoowifi adalah penyelesaian utama untuk pelancong Singapura yang memerlukan sambungan boleh dipercayai di China, dan berikut adalah beberapa sebabnya",
+      "features": [
+        {
+          "title": "Kadar Berpatutan",
+          "description": "Berhubung dengan pilihan eSIM kami, bermula dari hanya S$0.75 sehari."
+        },
+        {
+          "title": "Sambungan Berkelajuan Tinggi",
+          "description": "Tiada had penggunaan, hanya data berkelajuan tinggi diikuti dengan akses berkelajuan rendah."
+        },
+        {
+          "title": "Pilihan Fleksibel",
+          "description": "Sama ada anda memerlukan pocket WiFi, kad SIM tradisional, atau eSIM untuk China, kami ada semua pilihan yang anda perlukan untuk berhubung."
+        },
+        {
+          "title": "Sokongan Pelbagai Peranti",
+          "description": "Jika anda memilih pocket WiFi kami untuk China, anda boleh mendapat sokongan untuk sehingga 10 peranti serentak."
+        },
+        {
+          "title": "Sokongan 24/7",
+          "description": "Kami menawarkan sokongan pelanggan sepanjang masa untuk membantu anda dengan eSIM atau pertanyaan lain."
+        },
+        {
+          "title": "Liputan Luas",
+          "description": "Isyarat yang boleh dipercayai di Tokyo, Kyoto, Osaka, Hokkaido, malah bandar luar bandar."
+        }
+      ]
+    },
+    "deliveryPickup": {
+      "title": "Pilihan Penghantaran & Pengambilan",
+      "titlefollow": "Jika anda memilih SIM tradisional atau pocket WiFi, Yoowifi menawarkan pilihan penghantaran dan pengambilan yang mudah untuk memastikan anda menerima pesanan anda dengan mudah",
+      "steps": [
+        {
+          "title": "Penghantaran Standard",
+          "description": "Terima pesanan anda dalam masa tiga hingga empat hari bekerja."
+        },
+        {
+          "title": "Penghantaran Ekspres",
+          "description": "Perlukan dengan cepat? Pilih penghantaran hari bekerja berikutnya (masa tutup: 9 malam)."
+        },
+        {
+          "title": "Pengambilan Sendiri",
+          "description": "Untuk fleksibiliti tambahan, anda boleh mengambil pesanan anda dari lebih 20 lokasi yang mudah."
+        }
+      ]
+    },
+    "setupActivation": {
+      "title": "Panduan Penyediaan & Pengaktifan",
+      "titlefollow": "Sama ada anda mendapatkan eSIM untuk Thailand, China, atau negara lain, Yoowifi memudahkan anda untuk berhubung.",
+      "guides": [
+        {
+          "device": "iOS",
+          "steps": [
+            "Pergi ke \"Tetapan.\"",
+            "Ketuk \"Perkhidmatan Mudah Alih\" atau \"Selular.\"",
+            "Ketuk \"Tambah eSIM\" atau \"Tambah Pelan Selular.\"",
+            "Ketuk \"Gunakan Kod QR\" dan imbas kod QR eSIM.",
+            "Hidupkan Data Roaming, dan eSIM anda untuk Thailand sudah siap."
+          ]
+        },
+        {
+          "device": "Samsung/Android",
+          "steps": [
+            "Pergi ke \"Tetapan\" + \"Sambungan.\"",
+            "Ketuk \"Pengurus SIM.\"",
+            "Ketuk \"Tambah eSIM.\"",
+            "Ketuk \"Imbas kod QR\" atau \"Masukkan kod pengaktifan.\"",
+            "Ketuk \"Tambah\" atau \"Sahkan\" untuk menambah eSIM ke peranti anda. eSIM anda untuk Thailand kini sudah siap digunakan."
+          ]
+        },
+        {
+          "device": "Panduan Pemasangan SIM Fizikal",
+          "steps": [
+            "Matikan peranti anda",
+            "Masukkan kad SIM.",
+            "Hidupkan peranti anda.",
+            "Hidupkan data roaming."
+          ]
+        }
+      ]
+    },
+    "thingsToKnow": {
+      "title": "Perkara yang Perlu Diketahui Sebelum Membeli eSIM untuk China",
+      "titlefollow": "Sebelum anda membeli eSIM untuk China, berikut adalah beberapa perkara penting untuk diingati",
+      "steps": [
+        {
+          "title": "Semak Keserasian eSIM",
+          "description": "Pastikan peranti anda serasi dengan teknologi eSIM kerana tidak semua peranti menyokongnya."
+        },
+        {
+          "title": "Keperluan Pasport",
+          "description": "Sedar akan sebarang keperluan pasport untuk pendaftaran SIM di dalam negara. Sesetengah penyedia mungkin memerlukan butiran pasport untuk mengaktifkan eSIM anda."
+        },
+        {
+          "title": "Kos Roaming",
+          "description": "Fahami potensi caj roaming yang mungkin anda tanggung jika anda memilih untuk tidak menggunakan eSIM untuk China. Caj ini boleh menjadi tinggi, jadi eSIM boleh menjimatkan wang anda."
+        },
+        {
+          "title": "Jangkaan Kelajuan dan Liputan",
+          "description": "Kaji jangkaan kelajuan dan liputan pelbagai penyedia. Yoowifi berusaha menyediakan sambungan berkelajuan tinggi, tetapi liputan boleh berbeza di kawasan yang berbeza."
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Soalan Lazim Mengenai eSIM China Kami",
+      "faqs": [
+        {
+          "question": "Adakah eSIM disokong pada telefon saya?",
+          "answer": "Keserasian eSIM berbeza mengikut peranti dan pembawa. Semak spesifikasi telefon anda atau laman web pembawa anda untuk mengesahkan sama ada peranti anda menyokong eSIM untuk China."
+        },
+        {
+          "question": "Apa yang berlaku jika saya kehabisan data di China?",
+          "answer": "Jika anda kehabisan data, anda boleh tambah nilai atau membeli pelan data tambahan melalui laman web atau aplikasi kami dengan mudah. Pastikan anda melakukannya semasa disambungkan ke Wi-Fi."
+        },
+        {
+          "question": "Berapa harga kad SIM pelancong di China?",
+          "answer": "Kad SIM pelancong di China boleh berharga antara $10 hingga $50 USD bergantung pada kuota data dan tempoh sah. Walau bagaimanapun, pelan eSIM kami sering menawarkan kemudahan dan nilai yang lebih baik untuk pelancong jangka pendek."
+        },
+        {
+          "question": "Bolehkah saya mengekalkan nombor Singapura saya aktif semasa menggunakan eSIM untuk China?",
+          "answer": "Ya, jika telefon anda menyokong fungsi dual SIM (SIM fizikal + eSIM), anda boleh mengekalkan nombor Singapura anda aktif untuk panggilan dan mesej semasa menggunakan eSIM untuk data di China."
+        },
+        {
+          "question": "Adakah saya perlu VPN jika menggunakan eSIM di China?",
+          "answer": "Ya, banyak laman web dan aplikasi popular dihadkan di China. Menggunakan VPN akan membantu anda mengakses perkhidmatan seperti Google, WhatsApp, Instagram, dan banyak lagi sambil kekal berhubung melalui eSIM anda."
+        }
+      ]
+    }
+  },
+
+  "eSimThailand": {
+    "heading": "eSim Thailand",
+    "hero": {
+      "para1": "Terus berhubung semasa pengembaraan anda di Thailand. Sama ada menggunakan Google Maps di Bangkok atau memuat naik ke Instagram dari Phuket, capaian internet yang boleh dipercayai adalah pasport anda untuk perjalanan tanpa tekanan.",
+      "para2": "Yoowifi menyediakan penyelesaian sambungan premium yang dipercayai oleh para pelancong—tiada masalah sambungan, hanya internet yang boleh dipercayai dan berpatutan di seluruh Thailand.",
+      "imageHeading": "Pelan Yoowifi untuk Thailand",
+      "para3": "Buka capaian tanpa usaha di seluruh Thailand dengan pelbagai pilihan eSIM Yoowifi yang fleksibel dan mesra bajet. Bermula dari hanya S$1 sehari, dapatkan akses kepada data 4G berkelajuan tinggi, memastikan pelayaran lancar dan navigasi mudah sepanjang pengembaraan anda di Thailand.",
+      "para4": "Memulakan adalah mudah: hanya imbas kod QR yang kami sediakan—tiada pertukaran SIM, tiada lawatan ke kedai. Ikuti langkah pemasangan yang mudah untuk pengaktifan pantas. Tambahan pula, Yoowifi secara bijak menghubungkan anda kepada pengendali rangkaian terkuat yang tersedia di Thailand, menjamin liputan dan kelajuan optimum di mana sahaja anda pergi. Akses data anda bermula sebaik sahaja anda tiba dan mula menggunakan eSIM anda di Thailand.",
+      "para5": "Terokai pelan kami yang pelbagai, disesuaikan untuk memenuhi sebarang jadual perjalanan—dari penerokaan bandar yang singkat hingga perjalanan panjang di Tanah Senyuman. Pilih dari pelbagai kuota data dan tempoh untuk kekal berhubung mengikut cara anda."
+    },
+    "getSim": {
+      "title": "Cara Mendapatkan eSIM untuk Thailand",
+      "titlefollow": "Menyambung dengan Yoowifi sangat mudah. Proses kami yang dipermudahkan membolehkan anda dalam talian sebelum pesawat anda mendarat di Thailand.",
+      "plans": [
+        {
+          "title": "Pilih Pelan & Butiran Perjalanan Anda",
+          "description": "Pilih pilihan eSIM yang paling sesuai dengan tempoh perjalanan dan keperluan data yang dijangka untuk pengembaraan anda di Thailand."
+        },
+        {
+          "title": "Aktifkan eSIM Thailand Anda:",
+          "description": "Setelah pembelian selesai, kod QR dan arahan mudah akan dihantar kepada anda. Hanya imbas kod tersebut dengan peranti yang serasi untuk mengaktifkan eSIM Thailand anda."
+        }
+      ]
+    },
+    "whatsBetter": {
+      "title": "eSIM vs Kad SIM Fizikal – Mana Lebih Baik?",
+      "titlefollow": "Yoowifi memberi anda pilihan kerana kami tahu satu saiz tidak sesuai untuk semua. Sama ada anda nomad digital atau pelancong santai, kami ada untuk anda:",
+      "esim": {
+        "title": "eSIM",
+        "points": {
+          "1": "Pengaktifan cepat melalui kod QR—sambungan segera",
+          "2": "Tiada pertukaran kad SIM—kekalkan SIM rumah anda aktif semasa di Thailand",
+          "3": "Simpan nombor utama anda untuk panggilan penting",
+          "4": "Aktifkan sebelum berlepas—sampai dalam keadaan berhubung",
+          "5": "Hanya serasi dengan telefon pintar yang lebih baru"
+        }
+      },
+      "pocketWifi": {
+        "title": "Kad SIM Fizikal",
+        "points": {
+          "1": "Boleh digunakan dengan SEMUA model telefon",
+          "2": "Sesuai untuk pelancong yang mengutamakan kesederhanaan",
+          "3": "Tiada soal atau kerisauan tentang keserasian",
+          "4": "Boleh didapati secara meluas di seluruh Thailand",
+          "5": "Memerlukan penghantaran fizikal atau pengambilan"
+        }
+      }
+    },
+    "simFeatures": {
+      "title": "Perkara yang Perlu Diketahui Sebelum Membeli eSIM untuk Thailand",
+      "titlefollow": "Sebelum anda membeli eSIM untuk Thailand, berikut adalah beberapa perkara penting yang perlu diingat",
+      "features": [
+        {
+          "title": "Sambungan Berkelajuan Tinggi",
+          "description": "Sambungan 4G berkelajuan tinggi yang mengikuti anda ke mana sahaja"
+        },
+        {
+          "title": "Kadar Berpatutan",
+          "description": "Kadar yang sangat berpatutan bermula dari hanya S$1/hari."
+        },
+        {
+          "title": "Sokongan Pelbagai Peranti",
+          "description": "Sambungkan sehingga 10 peranti serentak—kongsi dengan rakan dan keluarga."
+        },
+        {
+          "title": "Pilihan Fleksibel",
+          "description": "Pilihan fleksibel untuk eSIM, kad SIM, dan Pocket WiFi untuk perjalanan Thailand anda—perjalanan anda, pilihan anda."
+        },
+        {
+          "title": "Sokongan 24/7",
+          "description": "Sokongan pelanggan 24/7—kami sentiasa di sini untuk anda."
+        }
+      ]
+    },
+    "deliveryPickup": {
+      "title": "Pilihan Penghantaran & Pengambilan",
+      "titlefollow": "Jika anda memilih kad SIM tradisional atau Pocket WiFi, Yoowifi menawarkan pilihan penghantaran dan pengambilan yang mudah untuk memastikan anda menerima pesanan anda dengan mudah",
+      "steps": [
+        {
+          "title": "Penghantaran Standard",
+          "description": "3 hingga 4 hari bekerja melalui J&T Express—sesuai untuk perancang"
+        },
+        {
+          "title": "Penghantaran Ekspres",
+          "description": "Penghantaran hari bekerja berikutnya (pesanan sebelum 9 malam)—untuk rancangan perjalanan saat akhir"
+        },
+        {
+          "title": "Pengambilan Sendiri",
+          "description": "Ambil peranti anda di mana-mana daripada lebih 30 lokasi yang mudah di seluruh Singapura"
+        }
+      ]
+    },
+    "setupActivation": {
+      "title": "Panduan Persediaan & Pengaktifan",
+      "titlefollow": "Sama ada anda mendapatkan eSIM untuk Thailand, China, atau mana-mana negara lain, Yoowifi memudahkan anda untuk berhubung.",
+      "guides": [
+        {
+          "device": "iOS",
+          "steps": [
+            "Pergi ke \"Tetapan.\"",
+            "Ketuk \"Perkhidmatan Mudah Alih\" atau \"Selular.\"",
+            "Ketuk \"Tambah eSIM\" atau \"Tambah Pelan Selular.\"",
+            "Ketuk \"Gunakan Kod QR\" dan imbas kod QR eSIM.",
+            "Aktifkan Data Perayauan, dan eSIM Thailand anda sudah sedia."
+          ]
+        },
+        {
+          "device": "Samsung/Android",
+          "steps": [
+            "Pergi ke \"Tetapan\" + \"Sambungan.\"",
+            "Ketuk \"Pengurus SIM.\"",
+            "Ketuk \"Tambah eSIM.\"",
+            "Ketuk \"Imbas kod QR\" atau \"Masukkan kod pengaktifan.\"",
+            "Ketuk \"Tambah\" atau \"Sahkan\" untuk menambah eSIM ke peranti anda. eSIM Thailand anda kini sedia digunakan."
+          ]
+        },
+        {
+          "device": "Panduan Pemasangan Kad SIM Fizikal",
+          "steps": [
+            "Matikan peranti anda",
+            "Masukkan kad SIM.",
+            "Hidupkan peranti anda.",
+            "Aktifkan data perayauan."
+          ]
+        }
+      ]
+    },
+    "thingsToKnow": {
+      "title": "Perkara yang Perlu Diketahui Sebelum Membeli",
+      "titlefollow": "Di Yoowifi, kami percaya kepada ketelusan dan memastikan anda mempunyai semua fakta untuk pengalaman sambungan yang sempurna di Thailand.",
+      "steps": [
+        {
+          "title": "Semakan Keserasian eSIM",
+          "description": "Telefon eSIM terkini termasuk Apple iPhone 14–17, Samsung Galaxy S, A, Z dan XCover, Google Pixel 8–9, Sony Xperia 1–10, Xiaomi siri 15, Motorola Razr dan Edge, OnePlus 13T dan Open, Honor Magic 6 Pro dan 90, dan lain-lain seperti Vivo X100 Pro, Fairphone 5 dan banyak lagi."
+        },
+        {
+          "title": "Keperluan Pasport",
+          "description": "Pembelian kad SIM tempatan untuk Thailand memerlukan ID pasport."
+        },
+        {
+          "title": "Kos Perayauan",
+          "description": "Berwaspada dengan caj yang mungkin dikenakan oleh pelan mudah alih biasa anda di Thailand jika anda tidak memilih eSIM. Caj ini boleh bertambah dengan cepat, menjadikan eSIM alternatif yang berpatutan."
+        },
+        {
+          "title": "Jangkaan Kelajuan dan Liputan",
+          "description": "Selidik kelajuan internet yang dijangkakan dan liputan rangkaian penyedia yang berbeza di Thailand. Walaupun Yoowifi bertujuan menyediakan sambungan berkelajuan tinggi, kekuatan isyarat boleh berbeza mengikut kawasan."
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Soalan Lazim Tentang eSIM Thailand Kami",
+      "faqs": [
+        {
+          "question": "Adakah telefon saya menyokong eSIM?",
+          "answer": "Kebanyakan telefon pintar yang lebih baru daripada 2018 sudah menyokong eSIM. Gunakan alat keserasian kami untuk mengesahkan peranti anda dalam beberapa saat."
+        },
+        {
+          "question": "Apa yang berlaku jika saya kehabisan data di Thailand?",
+          "answer": "Jika anda kehabisan data, anda boleh menambah atau membeli pelan data tambahan dengan mudah melalui laman web atau aplikasi kami. Pastikan anda melakukannya semasa disambungkan ke Wi-Fi."
+        },
+        {
+          "question": "Berapa harga kad SIM pelancong di Thailand?",
+          "answer": "Kad SIM pelancong di Thailand boleh berharga antara $10 hingga $50 USD bergantung pada kuota data dan tempoh sah. Walau bagaimanapun, pelan eSIM kami sering menawarkan lebih banyak kemudahan dan nilai lebih baik untuk pelancong jangka pendek."
+        },
+        {
+          "question": "Bolehkah saya mengekalkan nombor Singapura saya aktif semasa menggunakan eSIM untuk Thailand?",
+          "answer": "Ya, jika telefon anda menyokong fungsi dual SIM (kad SIM fizikal + eSIM), anda boleh mengekalkan nombor Singapura anda aktif untuk panggilan dan mesej semasa menggunakan eSIM untuk data di Thailand."
+        },
+        {
+          "question": "Adakah saya memerlukan VPN jika menggunakan eSIM di Thailand?",
+          "answer": "Ya, banyak laman web dan aplikasi popular adalah terhad di Thailand. Menggunakan VPN akan membantu anda mengakses perkhidmatan seperti Google, WhatsApp, Instagram, dan banyak lagi semasa kekal berhubung melalui eSIM anda."
+        }
+      ]
+    }
   }
 }
